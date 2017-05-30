@@ -2,6 +2,8 @@
 
 [ICC 18 Release Notes](https://software.intel.com/en-us/articles/intel-c-compiler-180-for-linux-release-notes-for-intel-parallel-studio-xe-2018)
 
+* Includes an implementation of Parallel STL algorithms
+
 ## An Introduction to Reflection in C++
 
 [Blog post by Jackie Kay](http://jackieokay.com/2017/04/13/reflection1.html)
@@ -71,9 +73,8 @@ declare foo as pointer to function `(void)` returning pointer to array 3 of `int
     * ++it
     * NDC
 * Websites: [http://isocpp.org](http://isocpp.org), [http://cppreference.com](http://cppreference.com), C++ Core Guidelines, Stack Overflow C++ Documentation
-* 5 star
 
-C++ Core Guidelines - Modernize your C++ Code Base - Peter Sommerlad [ACCU 2017]
+## C++ Core Guidelines - Modernize your C++ Code Base - Peter Sommerlad [ACCU 2017]
 
 [Video](https://www.youtube.com/watch?v=fQ926v4ZzAM)
 
@@ -91,7 +92,6 @@ C++ Core Guidelines - Modernize your C++ Code Base - Peter Sommerlad [ACCU 2017]
 * Don't waste time or space
 * Prefer immutable data to mutable data
 * Encapsulate messy constructs rather than spreading them through the code
-* 5 star
 
 ## Quote
 
