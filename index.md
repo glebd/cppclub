@@ -16,3 +16,4 @@ Disclaimer: All opinions posted on this website are my own and not those of my e
 * [17 August 2017](2017-08-17)
 * [24 August 2017](2017-08-24)
 * [31 August 2017](2017-08-31)
+* [7 September 2017](2017-09-07)
