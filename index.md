@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not those of my employer.
 
+* [21 September 2017](2017-09-21)
 * [14 September 2017](2017-09-14)
 * [7 September 2017](2017-09-07)
 * [31 August 2017](2017-08-31)
