@@ -17,8 +17,6 @@ LOG := $(patsubst %.md,%.log,$(SOURCES))
 
 all: $(SLIDES)
 
-$(SLIDES): $(SOURCES)
-
 %.pdf: %.md $(HEADER)
 	pandoc $(PANDOC_FLAGS) $< -o $@
 
