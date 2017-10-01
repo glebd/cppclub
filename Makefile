@@ -4,7 +4,6 @@ HEADER = beameropt.tex
 PANDOC_FLAGS = -t beamer \
 	-s \
 	-H $(HEADER) \
-	--highlight-style=pygments \
 	--latex-engine=$(TEX)
 
 SOURCES := $(wildcard ????-??-??.md)
