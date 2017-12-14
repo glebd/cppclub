@@ -97,7 +97,6 @@ declare foo as pointer to function `(void)` returning pointer to array 3 of `int
 
 "If you think it’s simple, then you have misunderstood the problem." — Bjarne Stroustrup
 
-
 # Variadic CRTP by Steve Dewhurst
 
 [PDF](http://stevedewhurst.com/once_weakly/once-weakly20170328/once-weakly20170328.pdf)
