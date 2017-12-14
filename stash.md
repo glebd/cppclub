@@ -96,3 +96,27 @@ declare foo as pointer to function `(void)` returning pointer to array 3 of `int
 ## Quote
 
 "If you think it’s simple, then you have misunderstood the problem." — Bjarne Stroustrup
+
+
+# Variadic CRTP by Steve Dewhurst
+
+[PDF](http://stevedewhurst.com/once_weakly/once-weakly20170328/once-weakly20170328.pdf)
+
+# "Making new friends" idiom by Dan Saks
+
+[Wikibooks](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Making_New_Friends)
+
+> The goal is to simplify creation of friend functions for a class template.
+
+```cpp
+template<typename T>
+class Foo {
+   T value;
+public:
+   Foo(const T& t) { value = t; }
+   friend ostream& operator <<(ostream& os, const Foo<T>& b)
+   {
+      return os << b.value;
+   }
+};
+```
