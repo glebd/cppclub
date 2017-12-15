@@ -1,10 +1,10 @@
-## Intel C++ Compiler 18 released
+# Intel C++ Compiler 18 released
 
 [ICC 18 Release Notes](https://software.intel.com/en-us/articles/intel-c-compiler-180-for-linux-release-notes-for-intel-parallel-studio-xe-2018)
 
 * Includes an implementation of Parallel STL algorithms
 
-## An Introduction to Reflection in C++
+# An Introduction to Reflection in C++
 
 [Blog post by Jackie Kay](http://jackieokay.com/2017/04/13/reflection1.html)
 
@@ -21,7 +21,7 @@
 * "The fundamental design difference between these two papers is whether the result of the reflection operator is a value or a type."
 * "Concepts are design prerequisite for both of the reflection papers."
 
-## Static Duck Typing in C++
+# Static Duck Typing in C++
 
 [Blog post by Philippe Groarke
 ](https://philippegroarke.com/blog/2017/05/09/static-duck-typing-in-c/)
@@ -93,7 +93,7 @@ declare foo as pointer to function `(void)` returning pointer to array 3 of `int
 * Prefer immutable data to mutable data
 * Encapsulate messy constructs rather than spreading them through the code
 
-## Quote
+# Quote
 
 "If you think it’s simple, then you have misunderstood the problem." — Bjarne Stroustrup
 
