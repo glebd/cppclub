@@ -34,65 +34,6 @@
 * This should be solved by Concepts.
     * Aside: There are many tricks and problems in various articles lately that fall under “this will be solved by Concepts” category.
 
-## cdecl: C gibberish ↔ English
-
-[Website](https://cdecl.org)
-
-* `int (*(*foo)(void ))[3]` ⇒
-declare foo as pointer to function `(void)` returning pointer to array 3 of `int` — [permalink](https://cdecl.org/?q=int+%28*%28*foo%29%28void+%29%29%5B3%5D)
-* declare bar as volatile pointer to array 64 of `const int` ⇒
-`const int (* volatile bar)[64]` — [permalink](https://cdecl.org/?q=declare+bar+as+volatile+pointer+to+array+64+of+const+int)
-* cast `foo into block(int, long long)` returning `double` ⇒
-`(double (^)(int , long long ))foo` — [permalink](https://cdecl.org/?q=cast+foo+into+block%28int%2C+long+long%29+returning+double)
-
-## Learning (and teaching) modern C++ - Challenges and Resources - Arne Mertz [ACCU 2017]
-
-[Video](https://www.youtube.com/watch?v=dlh-UnmCARk)
-
-* “Template-intensive, generic code” — Alexandrescu
-* “Post-modern C++” — Odin Holmes
-* “Functional C++” — Phil Nash
-* Hypothetical book: “C++: The Good Parts”
-* An overview of different environments where C++ is used, including resource-constrained hardware
-* Instead of retelling own story just skip the obsolete parts (pointer arithmetic)
-* new/delete is advanced topic
-* “Stop teaching C” — Kate Gregory
-* “Dark matter developers” — don’t see them, just the code they produce (they don’t blog, don’t go to conferences)
-* Professors don’t update their materials ⇒ teach legacy C++
-* Books last long and get out of date
-* Some books are bad: “C/C++” books by Herb Schildt: “Not recommended” by ACCU [→](https://accu.org/index.php?func=search&module=bookreviews&q=schildt&stype=author)
-* Some blogs are also bad
-* Conferences and videos:
-    * Meeting C++
-    * CppCon
-    * ACCU
-    * emBO++
-    * BeC++
-    * C++Now
-    * code::dive
-    * ++it
-    * NDC
-* Websites: [http://isocpp.org](http://isocpp.org), [http://cppreference.com](http://cppreference.com), C++ Core Guidelines, Stack Overflow C++ Documentation
-
-## C++ Core Guidelines - Modernize your C++ Code Base - Peter Sommerlad [ACCU 2017]
-
-[Video](https://www.youtube.com/watch?v=fQ926v4ZzAM)
-
-* [Cevelop](https://www.cevelop.com) -- an Eclipse-based C++ IDE
-* [CUTE++ unit test framework with Eclipse plugin](http://cute-test.com) (LGPL3)
-* Pros/cons: ![](img/sommerlad-coreguidelines-procon.png)
-* Express ideas directly in code (not comments)
-* Write in ISO standard C++
-* Express intent
-* Ideally, a program should be statically type safe
-* Prefer compile-time checking to run-time checking
-* What cannot be checked at compile time should be checkable at run time
-* Catch run-time errors early
-* Don't leak any resources
-* Don't waste time or space
-* Prefer immutable data to mutable data
-* Encapsulate messy constructs rather than spreading them through the code
-
 # Quote
 
 "If you think it’s simple, then you have misunderstood the problem." — Bjarne Stroustrup
