@@ -173,6 +173,15 @@ void spanish_inquisition() noexcept
 }
 ```
 
+# Callbacks in C++
+
+[Article](https://sudomakeinstall.io/posts/2017/11/30/callbacks-in-cpp11/)
+
+* Function pointer
+* Pointer to member function
+* Functor
+* Lambda
+
 # Quote
 
 Kevlin Henney:
