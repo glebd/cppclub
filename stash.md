@@ -173,6 +173,10 @@ void spanish_inquisition() noexcept
 }
 ```
 
+# C++17 Review from PVS-Studio
+
+[Article](https://www.viva64.com/en/b/0533/)
+
 # Callbacks in C++
 
 [Article](https://sudomakeinstall.io/posts/2017/11/30/callbacks-in-cpp11/)
@@ -181,6 +185,33 @@ void spanish_inquisition() noexcept
 * Pointer to member function
 * Functor
 * Lambda
+
+# CLI11 1.3
+
+A powerful library for writing beautiful command line interfaces in C++11. No dependencies, header-only, BSD 3-Clause.
+
+* [Announcement](https://iscinumpy.gitlab.io/post/announcing-cli11-13/)
+* [GitHub](https://github.com/CLIUtils/CLI11)
+* [Docs](https://cliutils.gitlab.io/CLI11Tutorial/)
+
+# Pugixml
+
+Light-weight, simple and fast XML parser for C++ with XPath support
+
+* [Website](https://pugixml.org/)
+* [GitHub](https://github.com/zeux/pugixml) (MIT)
+
+# RapidJSON
+
+A fast JSON parser/generator for C++ with both SAX/DOM style API. Header-only, Unicode-friendly, BSD.
+
+* [Website](http://rapidjson.org/)
+* [GitHub](https://github.com/Tencent/rapidjson)
+
+# NLohmann/JSON: JSON for modern C++
+
+* [GitHub](https://github.com/nlohmann/json) (MIT)
+* [Docs](https://nlohmann.github.io/json/)
 
 # Quote
 
