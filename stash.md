@@ -213,6 +213,21 @@ A fast JSON parser/generator for C++ with both SAX/DOM style API. Header-only, U
 * [GitHub](https://github.com/nlohmann/json) (MIT)
 * [Docs](https://nlohmann.github.io/json/)
 
+# Boost 1.66 released
+
+[Release page](http://www.boost.org/users/history/version_1_66_0.html)
+
+# Cereal -- a C++11 serialization library
+
+[Website](https://uscilab.github.io/cereal/)
+
+* Header-only
+* Similar to Boost serialization, with easy transition
+* Formats: binary, XML, JSON, custom
+* No external dependencies
+* Supports `std::shared_ptr` and `std::unique_ptr`
+* BSD
+
 # Quote
 
 Kevlin Henney:
