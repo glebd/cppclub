@@ -122,6 +122,7 @@ result = foo()?;
 * [Video: Systematic Generation of Data and Types in C++](https://vimeo.com/247642986) -- this talk presents two classic techniques from the functional domain -- composable data generators and property-based testing -- implemented in C++14 for testing a generic serialization and deserialization library ([RefleX](http://rticommunity.github.io/rticonnextdds-reflex/)). The talk describes the laws of monoids, functors, applicative, and monads and how they are implemented in a simple to understand abstraction of data generators.
 * [Slides](https://www.slideshare.net/SumantTambe/systematic-generation-data-and-types-in-c)
 * [GitHub: cpp-generators](https://github.com/sutambe/cpp-generators)
+* See also: [DDS](https://en.wikipedia.org/wiki/Data_Distribution_Service)
 
 # CUTLASS by NVIDIA
 
