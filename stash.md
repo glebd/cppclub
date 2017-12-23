@@ -116,6 +116,13 @@ result = foo()?;
 * SYCL is used in machine learning. ComputeCpp, Codeplay's implementation of the SYCL standard can already be used to execute TensorFlow applications on SPIR OpenCL supported hardware.
 * An ARM release of ComputeCpp is also now available and allows developers to target a range of embedded processors using SYCL.
 
+# Ground Up Functional API Design in C++, by Sumant Tambe
+
+* [Article](https://cpptruths.blogspot.co.uk/2017/12/ground-up-functional-api-design-in-c.html)
+* [Video: Systematic Generation of Data and Types in C++](https://vimeo.com/247642986) -- this talk presents two classic techniques from the functional domain -- composable data generators and property-based testing -- implemented in C++14 for testing a generic serialization and deserialization library ([RefleX](http://rticommunity.github.io/rticonnextdds-reflex/)). The talk describes the laws of monoids, functors, applicative, and monads and how they are implemented in a simple to understand abstraction of data generators.
+* [Slides](https://www.slideshare.net/SumantTambe/systematic-generation-data-and-types-in-c)
+* [GitHub: cpp-generators](https://github.com/sutambe/cpp-generators)
+
 # CUTLASS by NVIDIA
 
 Today, we are introducing a preview of CUTLASS (CUDA Templates for Linear Algebra Subroutines), a collection of CUDA C++ templates and abstractions for implementing high-performance GEMM computations at all levels and scales within CUDA kernels.
