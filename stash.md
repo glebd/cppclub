@@ -241,3 +241,9 @@ A fast JSON parser/generator for C++ with both SAX/DOM style API. Header-only, U
 Kevlin Henney:
 
 > A common fallacy is to assume authors of incomprehensible code will be able to express themselves clearly in comments.
+
+# Quote
+
+Steve C. McConnell:
+
+> The problem with quick and dirty is that the dirty remains long after the quick has been forgotten.
