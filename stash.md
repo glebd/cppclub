@@ -61,14 +61,6 @@ public:
 };
 ```
 
-# Reddit: What are the weakest points of C++ in your opinion?
-
-[Thread](https://www.reddit.com/r/cpp/comments/7lvteh/what_are_the_weakest_points_of_c_in_your_opinion/)
-
-* Setting up a build environment, adding third party libraries, like pulling teeth. [#](https://www.reddit.com/r/cpp/comments/7lvteh/what_are_the_weakest_points_of_c_in_your_opinion/drpdoxp/)
-    - [Conan V1.0.0 beta](https://github.com/conan-io/conan/releases), [build2](https://build2.org/), [cppget](https://cppget.org/), [cget](https://github.com/pfultz2/cget) for CMake; Modules won't help here.
-* Unicode support [#](https://www.reddit.com/r/cpp/comments/7lvteh/what_are_the_weakest_points_of_c_in_your_opinion/drpckgi/)
-
 # Ground Up Functional API Design in C++, by Sumant Tambe
 
 * [Article](https://cpptruths.blogspot.co.uk/2017/12/ground-up-functional-api-design-in-c.html)
