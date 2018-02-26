@@ -29,6 +29,7 @@
 % \setmainfont{Palatino}
 % \setsansfont{IBM Plex Sans}
 \usepackage{listings}
+\usepackage{xcolor}
 \lstset{
     frame=lines,
     basicstyle=\ttfamily,
@@ -52,4 +53,8 @@
     linewidth=\textwidth,
     basewidth=0.5em,
 }
-\usepackage{xcolor}
+\usepackage{framed}
+\let\oldquote=\quote
+\let\endoldquote=\endquote
+\colorlet{shadecolor}{cyan!10}
+\renewenvironment{quote}{\begin{shaded*}\begin{oldquote}}{\end{oldquote}\end{shaded*}}
