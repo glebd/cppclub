@@ -3,6 +3,7 @@ HEADER = beameropt.tex
 
 PANDOC_FLAGS = -t beamer \
 	-s \
+	--listings \
 	-H $(HEADER) \
 	--latex-engine=$(TEX)
 
