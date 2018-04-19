@@ -21,7 +21,8 @@
 % \setsansfont{Fontin Sans}
 % \setsansfont{Karla}
 % \setsansfont{Zilla Slab}
-\usepackage{xcolor}
+% \usepackage[dvipsnames, svgnames, xcdraw, table]{xcolor}
+% \PassOptionsToPackage{svgnames}{xcolor}
 \hypersetup{colorlinks,urlcolor=cyan}
 % \setmainfont{Vollkorn}
 \setmainfont{Andada}
@@ -33,8 +34,8 @@
 % \setsansfont{IBM Plex Sans}
 \usepackage{listings}
 \lstset{
-    frame=lines,
-    rulecolor=\color{lightgray},
+    frame=leftline,
+    rulecolor=\color{magenta},
     basicstyle=\ttfamily,
     numbers=left,
     keywordstyle=\color[rgb]{0.13,0.29,0.53}\bfseries,
