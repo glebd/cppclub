@@ -36,3 +36,7 @@ public:
 # Variadic CRTP, by Steve Dewhurst
 
 [PDF](http://stevedewhurst.com/once_weakly/once-weakly20170328/once-weakly20170328.pdf)
+
+# C++ Templates Revised - Nicolai Josuttis [ACCU 2018]
+
+* [YouTube](https://www.youtube.com/watch?v=9PFMllbyaLM)
