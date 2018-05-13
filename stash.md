@@ -36,3 +36,7 @@ public:
 # Variadic CRTP, by Steve Dewhurst
 
 [PDF](http://stevedewhurst.com/once_weakly/once-weakly20170328/once-weakly20170328.pdf)
+
+# How to Adopt Modern C++17 into Your C++ Code, by Herb Sutter
+
+* [YouTube](https://www.youtube.com/watch?v=UsrHQAzSXkA)
