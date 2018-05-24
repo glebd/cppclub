@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fontspec}
 \usefonttheme{professionalfonts}
-\usefonttheme{serif}
+% \usefonttheme{serif}
 % \setmonofont{Iosevka}
 % \setmonofont[Contextuals={Alternate}]{PragmataPro}
 \setmonofont[Contextuals={Alternate}]{Inconsolata Code}
@@ -13,7 +13,7 @@
 % \setmonofont{Fira Code}
 % \setmonofont{Consolas}
 % \setmonofont{Courier}
-% \setsansfont{Proza Libre}
+\setsansfont{Proza Libre}
 % \setsansfont{Quebec}
 % \setsansfont{Input Sans Condensed}
 % \setsansfont{Input Sans Narrow}
@@ -29,7 +29,7 @@
 % \setmainfont{Caladea}
 % \setmainfont{Cormorant}
 % \setmainfont{Cormorant Infant}
-\setmainfont{Linux Libertine}
+% \setmainfont{Linux Libertine}
 % \setmainfont{IBM Plex Serif}
 % \setmainfont{Palatino}
 % \setsansfont{IBM Plex Sans}
@@ -37,12 +37,12 @@
 \lstset{
     frame=leftline,
     rulecolor=\color{magenta},
-    basicstyle=\ttfamily,
+    basicstyle=\ttfamily\small,
     numbers=left,
     keywordstyle=\color[rgb]{0.13,0.29,0.53}\bfseries,
     stringstyle=\color[rgb]{0.31,0.60,0.02},
     commentstyle=\color[rgb]{0.56,0.35,0.01}\itshape,
-    numberstyle=\footnotesize,
+    numberstyle=\ttfamily\tiny,
     stepnumber=1,
     numbersep=5pt,
     backgroundcolor=\color[RGB]{248,248,248},
@@ -56,7 +56,7 @@
     breakautoindent=true,
     escapeinside={\%*}{*)},
     linewidth=\textwidth,
-    basewidth=0.55em,
+    basewidth=0.6em,
 }
 % \usepackage{framed}
 % \let\oldquote=\quote
