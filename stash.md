@@ -41,347 +41,105 @@ public:
 
 * [YouTube](https://www.youtube.com/watch?v=UsrHQAzSXkA)
 
-# East const/Const west: Constant bikeshedding
+# From Algorithms to Coroutines
 
-* [Post](http://nosubstance.me/post/constant-bikeshedding/)
-* [Reddit thread](https://www.reddit.com/r/cpp/comments/8j7jwz/constant_bikeshedding_answer_to_the_east_const/)
+* [Post by Kenny Kerr](https://msdn.microsoft.com/en-us/magazine/mt826346)
 
-# Igor's C++ Grimoire
+# Type Erasure by Andrzej
 
-* [Link](http://knockknock.org.uk/igor.html)
-* [Reddit thread](https://www.reddit.com/r/cpp/comments/8j8ywa/igors_c_grimoire/)
+* [Part 1](https://akrzemi1.wordpress.com/2013/11/18/type-erasure-part-i/)
+* [Part 2](https://akrzemi1.wordpress.com/2013/12/06/type-erasure-part-ii/)
+* [Part 3](https://akrzemi1.wordpress.com/2013/12/11/type-erasure-part-iii/)
+* [Part 4](https://akrzemi1.wordpress.com/2014/01/13/type-erasure-part-iv/)
 
-# CppInsights
+# Type Erasure with Merged Concepts
 
-* [Link](https://cppinsights.io/)
-* [Source](https://github.com/andreasfertig/cppinsights)
+* [Post by Andreas Herrmann](https://aherrmann.github.io/programming/2014/10/19/type-erasure-with-merged-concepts/)
 
-# Namespace tricks
+# On the Tension Between Object-Oriented and Generic Programming in C++, and What Type Erasure Can Do About It
 
-* [The Old New Thing](https://blogs.msdn.microsoft.com/oldnewthing/20180516-00/?p=98765)
+* [Article by Thomas Becker](https://www.artima.com/cppsource/type_erasure.html)
 
-# The Incredible Shrinking Standard - Alisdair Meredith [ACCU 2018]
+# Coroutine Theory
 
-* [Video](https://www.youtube.com/watch?v=YTV2frD1W4Y)
+* [Intro](https://lewissbaker.github.io/2017/09/25/coroutine-theory)
+* [Operator `co_await`](https://lewissbaker.github.io/2017/11/17/understanding-operator-co-await)
 
-## Static Functions
+# Using metaprogramming for PIMPL idiom
 
-* Can't be used with templates in C++98 (internal linkage)
-    * C compatibility feature, deprecated in initial C++98 standard in favour of unnamed namespaces
-    * Un-deprecated in C++11 (all such functions must work with templates)
-* Modules: TBD
+* [Reddit](https://www.reddit.com/r/cpp/comments/7971ws/using_metaprogramming_for_pimpl_idiom/)
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+# A hidden gem: `inner_product`
 
-## Incrementing `bool`
+* [Article](https://marcoarena.wordpress.com/2017/11/14/a-hidden-gem-inner_product/)
 
-* `bool++` deprecated in original C++98
-* `++bool` deprecated in C++03
-* Added to C in C99
-* Both removed in C++17
+# Your own type predicate
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+* [Part 1](https://akrzemi1.wordpress.com/2017/12/02/your-own-type-predicate/)
+* [Part 2](https://akrzemi1.wordpress.com/2017/12/20/a-friendly-type-predicate/)
 
-## Incrementing `bool`
+# Tick: Trait introspection and concept creator for C++11
 
-### Was
+* [GitHub](https://github.com/pfultz2/Tick)
 
-```cpp
-void test(bool before, bool after) {
-    ++after;
-    if (after and before++) {...}
-}
-```
+# Using C++17 `std::optional`
 
-### Now
+* [Post](https://www.bfilipek.com/2018/05/using-optional.html)
+* [Reddit](https://www.reddit.com/r/programming/comments/8hnpk2/using_c17_stdoptional/)
 
-```cpp
-void test(bool before, bool after) {
-    after = true;
-    if (after and std::exchange(before, true)) {...}
-}
-```
+# Modern C++ Features – `std::variant` and `std::visit`
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+* [Post](https://arne-mertz.de/2018/05/modern-c-features-stdvariant-and-stdvisit/)
 
-## Decrementing `bool`?
+# Converting enum classes to strings and back in C++
 
-* Added to C99
-* Not in C++
-* Toggles the value
+* [Article](https://sheep.horse/2018/5/converting_enum_classes_to_strings_and_back_in_c++.html)
+* [Reddit](https://www.reddit.com/r/cpp/comments/8hwk91/converting_enum_classes_to_strings_and_back_in_c/)
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+# CppEurope
 
-## `export`
+* [YouTube](https://www.youtube.com/channel/UCZS60J7KcQOLf87H3P_PTlg/videos)
 
-* In original C++ Standard
-* The only implementation shipped with C++03
-* Many surprises due to 2-phase name lookup
-* Removed from C++11 without deprecation
-* Keyword reserved for future use
+# Unreal Engine Gameplay Framework Primer for C++
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+* [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
 
-## `auto`
+# {fmt} support for ranges, containers and types with tuple interface
 
-* C++98: a local variable in a function
-* Removed from C++11
+* [GitHub](https://github.com/Remotion/fmt_extension)
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+# Getting started with Meson in C++
 
-## `register`
+* [Part 1](https://medium.com/@germandiagogomez/getting-started-with-meson-build-system-and-c-83270f444bee)
+* [Part 2](https://medium.com/@germandiagogomez/getting-started-with-meson-in-c-part-2-58150354ff17)
 
-* A hint to compiler
-* No use other than C compatibility
-* Modern compilers ignore it
-* Deprecated in C++11
-* Removed from C++17
-* Keyword reserved for future use
+# Rvalues redefined
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+* [Post](https://akrzemi1.wordpress.com/2018/05/16/rvalues-redefined/)
 
-## Trigraphs
+# Overload: Build a Variant Visitor on the Fly
 
-* ??! --> #
-* Translated by preprocessor ==> expanded in literals and other surprising places
-* Attempted to deprecate in C++11, but national bodies objected
-* Removed in C++17
+* [Post](https://arne-mertz.de/2018/05/overload-build-a-variant-visitor-on-the-fly/)
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+# eventpp -- C++ library for event dispatcher and callback list
 
-## Digraphs
+* [GitHub](https://github.com/wqking/eventpp)
 
-* Alternative keywords, like `and` and `or`
-* Fully supported
+# function2
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+Improved and configurable drop-in replacement to std::function that supports move only types, multiple overloads and more.
 
-## Exception specification
+* [Website](http://naios.github.io/function2)
+* [Code](https://github.com/Naios/function2)
 
-* Feature of C++98
-* Deprecated in favour of `noexcept` in C++11
-* Removed in C++17 apart from `throw()`
-* Removing `throw()` from C++20
+# C++17 in libsigc++ : `invoke`, `apply`, and `constexpr if`
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+* [Post](https://www.murrayc.com/permalink/2018/04/15/c17-in-libsigc-invoke-apply-and-constexpr-if/)
 
-## Implicit copy operations
+# Multifunction: Generalization of `std::function` for any number of signatures
 
-* C++98 always declared copy ctor and copy assignment operator for a class (unless it had awkward bases/members)
-* Members are not declared in C++11 if a move ctor/assignment operator is declared
-* C++11 deprecates implicit declaration of the 2nd copy operation if just one is declared, or a dtor is declared
-* C++20: no changes
+* [Code](https://github.com/fgoujeon/multifunction)
 
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
+# How to Use Tag Dispatching In Your Code Effectively
 
-## `char*` for string literals
-
-* C++98 allows this
-* Plain `char*` binding was permitted for C compatibility, but deprecated in C++98
-* Removed in C++11
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Narrowing conversions
-
-* C++11: Use uniform initialization
-    * Narrowing conversions are ill-formed
-* Can break aggregate initialization in legacy code
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## PODs
-
-* What is it? Opinions differ
-* Removed in C++20
-* Removed the term from core language and deprecated `is_pod` trait
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `gets()`
-
-* No safe usage
-* Deprecated in C99, removed in C11
-* Removed from C++14
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Ref counted strings
-
-* C++98: `basic_string` supported CoW idiom
-    ** Can be surprising, like calling `begin()` invalidates iterators
-* CoW is a performance hazard in concurrent code ==> removed in C++11
-* Enabled SSO instead
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `auto_ptr`
-
-* Added in C++98
-* Deprecaated in C++11 in favour of `unique_ptr`
-* Removed in C++17
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `random_shuffle`
-
-* Uses poor-quality C library random function
-* Deprecated in C++14 (specify a random generator, or use `shuffle`)
-* Removed in C++17
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Adaptable functions
-
-* `bind1st`, `bind2nd`, `mem_fun_ref` etc.
-* Rely on protocol of nested typedefs
-* Superseded by `std::bind`, so deprecated in C++11
-* Removed in C++17
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Vacuous C++ headers
-
-* `<ccomplex>`, `<ciso646>`, `<cstdalign>`, `<cstdbool>`, `<ctgmath>`
-* Nothing but compatibility macros in C headers
-* To be removed in C++20
-* Last contention: `<version>`
-* Detect with `__has_include(<header>)`
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `strstreams`
-
-* Older form of string streams (more performant, but harder to use)
-* No templates, only supports `char`
-* Deprecated in C++98
-* No replacement yet
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `std::iterator`
-
-* A base class to provide typedefs for iterators
-* Problems with 2-phase lookup not finding typedefs in dependent base class (typical usage)
-* Library removed explicit dependency on this in C++11
-* Deprecated in C++17
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Temporary buffers
-
-* `get_temporary_buffer`: nobody used it
-* No RAII support
-* Deprecated in C++17
-* To be removed in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `raw_storage_iterator`
-
-* Constructs elements when assigned (useful with `copy` and `transform`)
-* No safe usage if ctor throws
-* Deprecated in C++17
-* To be removed in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Deducible members of `std::allocator`
-
-* Allocators should always be accessed via traits since C++11
-* Deprecated in C++17
-* To be removed in C++20
-* Un-deprecate `size_type` and `difference_type` in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `allocator<void>`
-
-* Mostly empty specialization, no `allocate` member
-* Less needed when usage is via `allocator_traits`
-* Explicit instantiation will fail due to `allocate`/`deallocate`
-* Deprecated in C++17
-* To be removed in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `is_literal`
-
-* Useless unless you know which ctors are `constexpr`
-* Deprecated in C++17
-* To be removed in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `result_of`
-
-* Introduced in Library TR1
-* Standardised in C++11 as a simple `decltype`
-* Could not support some use cases due to 'cute' syntax
-* Deprecated in C++17, use `invoke_result` instead
-* To be removed in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `uncaught_exception`
-
-* To detect an exception in-flight
-* Underspecified (such as when exception is in another thread, or a `try`/`catch` that doesn't escape dtor)
-* Deprecated in C++17, use `uncaught_exceptions`
-* To be removed in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Atomic API for `shared_ptr`
-
-* Free function API to use `shared_ptr` atomically without synchronisation
-* Easily misused (can't dereference, all operations must happen via this API)
-* Deprecated in C++20 in favour of `atomic<shared_ptr>`
-
-## `shared_ptr::unique`
-
-* Unreliable with multiple threads
-* Ignored `weak_ptr` in other threads (can become locked)
-* Deprecated in C++17
-* To be removed in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `basic_string::reserve()`
-
-* Prior to C++20 allows string to shrink
-* C++10 removes shrinking permission (for consistency with other containers)
-* Calling `reserve()` becomes a no-op unique to `basic_string` -- use `clear()` instead
-* Signature without parameters deprecated in C++20
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Namespace `relops`
-
-* Provides default implementations for comparison operators, assuming `operator==` and `operator<` are defined for a type
-* No tag class to derive from ==> can't be hooked with ADL
-* Requires `using namespace relops;` to activate which is not good in a header
-* Deprecated in C++20 in favour of the spaceship operator
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `<codecvt>`
-
-* Added for Unicode support in C++11
-* Underspecified and hard to use
-* Deprecated in C++17
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## `wstring_convert`
-
-* Widens/narrows strings using streams interface
-* Underspecified and awkward to use
-* Deprecated in C++17 without replacement
-
-# The Incredible Shrinking Standard - Alisdair Meredith (cont.)
-
-## Standard subsets
-
-* C++98 -> C++14
-* C++11 -> Latest
+* [Post](http://www.fluentcpp.com/2018/04/27/tag-dispatching/)
