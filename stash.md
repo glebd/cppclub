@@ -125,13 +125,6 @@ public:
 
 * [GitHub](https://github.com/wqking/eventpp)
 
-# function2
-
-Improved and configurable drop-in replacement to std::function that supports move only types, multiple overloads and more.
-
-* [Website](http://naios.github.io/function2)
-* [Code](https://github.com/Naios/function2)
-
 # C++17 in libsigc++ : `invoke`, `apply`, and `constexpr if`
 
 * [Post](https://www.murrayc.com/permalink/2018/04/15/c17-in-libsigc-invoke-apply-and-constexpr-if/)
