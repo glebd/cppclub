@@ -136,3 +136,7 @@ public:
 # How to Use Tag Dispatching In Your Code Effectively
 
 * [Post](http://www.fluentcpp.com/2018/04/27/tag-dispatching/)
+
+# Declarative Functional APIs – A.K.A. Abusing Lambda Parameters
+
+* [Post](https://philippegroarke.com/blog/2018/05/19/declarative-functional-apis-a-k-a-abusing-lambda-parameters/?utm_source=newsletter_mailer&utm_medium=email&utm_campaign=weekly)
