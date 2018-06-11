@@ -140,3 +140,10 @@ public:
 # Declarative Functional APIs – A.K.A. Abusing Lambda Parameters
 
 * [Post](https://philippegroarke.com/blog/2018/05/19/declarative-functional-apis-a-k-a-abusing-lambda-parameters/?utm_source=newsletter_mailer&utm_medium=email&utm_campaign=weekly)
+
+# Embracing Algorithms, by Dave Abrahams (WWDC2018)
+
+* [Video](https://developer.apple.com/videos/play/wwdc2018/223/)
+* [Reddit](https://www.reddit.com/r/cpp/comments/8pqtr1/dave_abrahams_on_embracing_algorithms_at_wwdc_2018/)
+
+> I guess most of you know who Dave Abrahams is and what he has done in the C++ community. He switched gears a little and is now working at Apple focusing mostly on the development of the Swift language and its library. However, yesterday he gave an excellent talk at their Developer Conference entitled Embracing Algorithms, which IMHO is general enough to be of interest for C++ developers as well. The link has a video of that 40 minutes long talk as well as the slides.
