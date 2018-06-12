@@ -104,15 +104,6 @@ public:
 
 * [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
 
-# {fmt} support for ranges, containers and types with tuple interface
-
-* [GitHub](https://github.com/Remotion/fmt_extension)
-
-# Getting started with Meson in C++
-
-* [Part 1](https://medium.com/@germandiagogomez/getting-started-with-meson-build-system-and-c-83270f444bee)
-* [Part 2](https://medium.com/@germandiagogomez/getting-started-with-meson-in-c-part-2-58150354ff17)
-
 # Rvalues redefined
 
 * [Post](https://akrzemi1.wordpress.com/2018/05/16/rvalues-redefined/)
