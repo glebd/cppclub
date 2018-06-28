@@ -33,9 +33,11 @@ public:
 
 [YouTube](https://www.youtube.com/watch?v=abdeAew3gmQ)
 
-# Variadic CRTP, by Steve Dewhurst
+# Variadic CRTP
 
-[PDF](http://stevedewhurst.com/once_weakly/once-weakly20170328/once-weakly20170328.pdf)
+* [Steve Dewhurst](http://stevedewhurst.com/once_weakly/once-weakly20170328/once-weakly20170328.pdf)
+* [Jonathan Boccara](https://www.fluentcpp.com/2018/06/22/variadic-crtp-opt-in-for-class-features-at-compile-time/)
+    * [Reddit thread](https://www.reddit.com/r/cpp/comments/8szpia/variadic_crtp_an_optin_for_class_features_at/)
 
 # How to Adopt Modern C++17 into Your C++ Code, by Herb Sutter
 
@@ -107,10 +109,6 @@ public:
 # Rvalues redefined
 
 * [Post](https://akrzemi1.wordpress.com/2018/05/16/rvalues-redefined/)
-
-# Overload: Build a Variant Visitor on the Fly
-
-* [Post](https://arne-mertz.de/2018/05/overload-build-a-variant-visitor-on-the-fly/)
 
 # eventpp -- C++ library for event dispatcher and callback list
 
