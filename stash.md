@@ -136,3 +136,20 @@ public:
 * [Reddit](https://www.reddit.com/r/cpp/comments/8pqtr1/dave_abrahams_on_embracing_algorithms_at_wwdc_2018/)
 
 > I guess most of you know who Dave Abrahams is and what he has done in the C++ community. He switched gears a little and is now working at Apple focusing mostly on the development of the Swift language and its library. However, yesterday he gave an excellent talk at their Developer Conference entitled Embracing Algorithms, which IMHO is general enough to be of interest for C++ developers as well. The link has a video of that 40 minutes long talk as well as the slides.
+
+# Book: The Modern C++ Challenge
+
+* [Review by Scott Meyers](https://scottmeyers.blogspot.com/2018/06/interesting-book-modern-c-challenge.html)
+* [Book page (Packt)](https://www.packtpub.com/application-development/modern-c-challenge)
+
+# Everything You Need to Know About std::any from C++17, by B. Filipek
+
+* [Post](https://www.bfilipek.com/2018/06/any.html)
+
+# C++17: std::string_view
+
+* [Post](http://www.nuonsoft.com/blog/2018/06/06/c17-stdstring_view/)
+
+# C++17: std::apply
+
+* [CppReference](http://en.cppreference.com/w/cpp/utility/apply)
