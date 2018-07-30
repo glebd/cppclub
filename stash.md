@@ -56,11 +56,6 @@ public:
 
 * [Article by Thomas Becker](https://www.artima.com/cppsource/type_erasure.html)
 
-# Coroutine Theory
-
-* [Intro](https://lewissbaker.github.io/2017/09/25/coroutine-theory)
-* [Operator `co_await`](https://lewissbaker.github.io/2017/11/17/understanding-operator-co-await)
-
 # Using metaprogramming for PIMPL idiom
 
 * [Reddit](https://www.reddit.com/r/cpp/comments/7971ws/using_metaprogramming_for_pimpl_idiom/)
@@ -77,15 +72,6 @@ public:
 # Tick: Trait introspection and concept creator for C++11
 
 * [GitHub](https://github.com/pfultz2/Tick)
-
-# Using C++17 `std::optional`
-
-* [Post](https://www.bfilipek.com/2018/05/using-optional.html)
-* [Reddit](https://www.reddit.com/r/programming/comments/8hnpk2/using_c17_stdoptional/)
-
-# Modern C++ Features – `std::variant` and `std::visit`
-
-* [Post](https://arne-mertz.de/2018/05/modern-c-features-stdvariant-and-stdvisit/)
 
 # Converting enum classes to strings and back in C++
 
