@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not those of my employer.
 
+* [9 August 2018](2018-08-09)
 * [2 August 2018](2018-08-02)
 * [26 July 2018](2018-07-26)
 * [12 July 2018](2018-07-12)
