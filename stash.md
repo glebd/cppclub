@@ -111,10 +111,6 @@ public:
 * [Jonathan Boccara](https://www.fluentcpp.com/2018/06/22/variadic-crtp-opt-in-for-class-features-at-compile-time/)
     * [Reddit thread](https://www.reddit.com/r/cpp/comments/8szpia/variadic_crtp_an_optin_for_class_features_at/)
 
-# C++ Cryptozoology, by Adi Shavit
-
-[Video](https://www.youtube.com/watch?v=cqZ-nQr-Q2M)
-
 # Matt Godbolt (2017-06-27) - Memory and Caches
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
