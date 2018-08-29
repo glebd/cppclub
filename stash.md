@@ -105,12 +105,6 @@ public:
 
 > I guess most of you know who Dave Abrahams is and what he has done in the C++ community. He switched gears a little and is now working at Apple focusing mostly on the development of the Swift language and its library. However, yesterday he gave an excellent talk at their Developer Conference entitled Embracing Algorithms, which IMHO is general enough to be of interest for C++ developers as well. The link has a video of that 40 minutes long talk as well as the slides.
 
-# Variadic CRTP
-
-* [Steve Dewhurst](http://stevedewhurst.com/once_weakly/once-weakly20170328/once-weakly20170328.pdf)
-* [Jonathan Boccara](https://www.fluentcpp.com/2018/06/22/variadic-crtp-opt-in-for-class-features-at-compile-time/)
-    * [Reddit thread](https://www.reddit.com/r/cpp/comments/8szpia/variadic_crtp_an_optin_for_class_features_at/)
-
 # Matt Godbolt (2017-06-27) - Memory and Caches
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
