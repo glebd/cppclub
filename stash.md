@@ -108,3 +108,7 @@ public:
 # Matt Godbolt (2017-06-27) - Memory and Caches
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
+
+# Quote
+
+> The 'S' in IoT stands for 'Security'.
