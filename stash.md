@@ -112,3 +112,7 @@ public:
 # Quote
 
 > The 'S' in IoT stands for 'Security'.
+
+# Florent Castelli: Introduction to CMake
+
+[Video](https://www.youtube.com/watch?v=jt3meXdP-QI)
