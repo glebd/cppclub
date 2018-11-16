@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not those of my employer.
 
+* [15 November 2018](2018-11-15)
 * [8 November 2018](2018-11-08)
 * [18 October 2018](2018-10-18)
 * [11 October 2018](2018-10-11)
