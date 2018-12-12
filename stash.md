@@ -116,3 +116,18 @@ public:
 # Florent Castelli: Introduction to CMake
 
 [Video](https://www.youtube.com/watch?v=jt3meXdP-QI)
+
+# The arrow operator
+
+Thanks to Martin Waplington:
+
+```cpp
+struct A { void foo(); };
+struct B { A* operator->(); };
+struct C { B operator->(); };
+struct D { C operator->(); };
+int main() {
+    D d;
+    d->foo();
+}
+```
