@@ -1,0 +1,22 @@
+----
+
+Oh DeaR
+-------
+
+* `Post by JeanHeyd Meneide`_
+* Reddit_
+
+.. _Post by JeanHeyd Meneide: https://thephd.github.io/oh-dear-odr-trap
+.. _Reddit: https://www.reddit.com/r/cpp/comments/a5rkfr/oh_dear/
+
+Proper way to iterate backwards in C++
+--------------------------------------
+
+.. code:: c++
+
+    for (size_t i = data.size() - 1; i >= 0; --i) {}
+
+The Sleep Constructor
+---------------------
+
+.. image:: img/the-sleep-ctor.png
