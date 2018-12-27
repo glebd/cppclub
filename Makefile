@@ -5,7 +5,7 @@ PANDOC_FLAGS = -t beamer \
 	-s \
 	--listings \
 	-H $(HEADER) \
-	--latex-engine=$(TEX)
+	--pdf-engine=$(TEX)
 
 SOURCES := $(wildcard ????-??-??.md)
 
