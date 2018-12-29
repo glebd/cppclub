@@ -7,6 +7,21 @@ mailing2018-11_
 
 .. _mailing2018-11: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/#mailing2018-11
 
+Ranges, Code Quality, and the Future of C++
+-------------------------------------------
+
+* Article_ by Jason Meisel
+* Reddit_
+
+    C++2a is going to be the best version of C++ yet, and a big reason for that is Eric’s Ranges library.
+
+    A range allows you to return the algorithm itself, rather than the data the algorithm generates. This way, you can combine it with other algorithms without modifying it directly.
+
+    Ranges are for utilizing algorithms and coroutines are for implementing algorithms.
+
+.. _Article: https://medium.com/@jasonmeisel/ranges-code-quality-and-the-future-of-c-99adc6199608
+.. _Reddit: https://www.reddit.com/r/cpp/comments/a9qb54/ranges_code_quality_and_the_future_of_c/
+
 Oh DeaR
 -------
 
