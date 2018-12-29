@@ -1,5 +1,12 @@
 ----
 
+Post-San Diego Mailing
+----------------------
+
+mailing2018-11_
+
+.. _mailing2018-11: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/#mailing2018-11
+
 Oh DeaR
 -------
 
@@ -8,6 +15,28 @@ Oh DeaR
 
 .. _Post by JeanHeyd Meneide: https://thephd.github.io/oh-dear-odr-trap
 .. _Reddit: https://www.reddit.com/r/cpp/comments/a5rkfr/oh_dear/
+
+Intel Contributes Its Parallel STL Implementation To LLVM
+---------------------------------------------------------
+
+* Article_
+* Announcement_
+* Code_
+* Reddit_
+
+.. _Article: https://www.phoronix.com/scan.php?page=news_item&px=Intel-Parallel-STL-Commit
+.. _Announcement: https://lists.llvm.org/pipermail/cfe-dev/2018-December/060606.html
+.. _Code: https://github.com/llvm-mirror/pstl/commits/master
+.. _Reddit: https://www.reddit.com/r/cpp/comments/a9n0gk/intel_contributes_its_parallel_stl_implementation/
+
+Cpp-Taskflow
+------------
+
+* Code_
+* Docs_
+
+.. _Code: https://github.com/cpp-taskflow/cpp-taskflow
+.. _Docs: https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/
 
 Proper way to iterate backwards in C++
 --------------------------------------
@@ -32,6 +61,36 @@ Reddit_
     }
 
 .. _Reddit: https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/
+
+A Perspective on C++ Standardization in 2018
+--------------------------------------------
+
+`Post by JeanHeyd Meneide`_
+
+.. _`Post by JeanHeyd Meneide`: https://thephd.github.io/perspective-standardization-in-2018
+
+    You can roll your fantastic thing in your engine / application / middleware / scientific package? Awesome!
+    Now write a specification for it.
+
+* The Rigor of Standardization
+* Surviving the Process (burnout)
+* The Composition of the C++ Standardization Committee
+
+LazyCode
+--------
+
+Making C++ cool again, bringing in those expressions from other languages that you wish you had; list comprehension
+style maps, filters, ranges, etc.
+
+* GitHub_
+
+.. code:: c++
+
+    int total = lz::read<int>(ifstream("test.txt")) | lz::limit(10) |
+                lz::filter([](int i) { return i % 2 == 0; }) |
+                lz::map([](int i) { return i * i; }) | lz::sum();
+
+.. _GitHub: https://github.com/SaadAttieh/lazyCode
 
 Better Enums
 ------------
