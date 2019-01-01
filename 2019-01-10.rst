@@ -131,6 +131,27 @@ Documentation_ | Code_
 .. _Documentation: https://aantron.github.io/better-enums/index.html
 .. _Code: https://github.com/aantron/better-enums
 
+How to refurbish legacy code into a maintainable state
+------------------------------------------------------
+
+Article_ by Jan Wilmans
+
+* Defensive programming
+* Owning raw pointers
+* Const correctness
+
+  - Use **override** to detect interface changes after adding **const**
+
+* Smart pointers and RAII
+
+  - Use custom destructor with **std::unique_ptr**
+
+* Tips and tricks
+
+  - Easy logging from anywhere
+
+.. _Article: http://nullptr.nl/2018/08/refurbish-legacy-code/
+
 The Sleep Constructor
 ---------------------
 
