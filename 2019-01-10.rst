@@ -1,11 +1,13 @@
 ----
 
-Post-San Diego Mailing
-----------------------
+Post-San Diego
+--------------
 
-mailing2018-11_
+* mailing2018-11_
+* `Aftermath, by JeanHeyd Meneide`_
 
 .. _mailing2018-11: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/#mailing2018-11
+.. _`Aftermath, by JeanHeyd Meneide`: https://thephd.github.io/san-diego-2018-c++-committee-trip-report
 
 Ranges, Code Quality, and the Future of C++
 -------------------------------------------
