@@ -4,87 +4,15 @@ Post-San Diego
 --------------
 
 * mailing2018-11_
-* `Aftermath, by JeanHeyd Meneide`_
+* Aftermath_ by JeanHeyd Meneide
 
 .. _mailing2018-11: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/#mailing2018-11
-.. _`Aftermath, by JeanHeyd Meneide`: https://thephd.github.io/san-diego-2018-c++-committee-trip-report
-
-Ranges, Code Quality, and the Future of C++
--------------------------------------------
-
-* Article_ by Jason Meisel
-* Reddit_
-
-    C++2a is going to be the best version of C++ yet, and a big reason for that is Eric’s Ranges library.
-
-    A range allows you to return the algorithm itself, rather than the data the algorithm generates. This way, you can combine it with other algorithms without modifying it directly.
-
-    Ranges are for utilizing algorithms and coroutines are for implementing algorithms.
-
-.. _Article: https://medium.com/@jasonmeisel/ranges-code-quality-and-the-future-of-c-99adc6199608
-.. _Reddit: https://www.reddit.com/r/cpp/comments/a9qb54/ranges_code_quality_and_the_future_of_c/
-
-Oh DeaR
--------
-
-* `Post by JeanHeyd Meneide`_
-* Reddit_
-
-.. _Post by JeanHeyd Meneide: https://thephd.github.io/oh-dear-odr-trap
-.. _Reddit: https://www.reddit.com/r/cpp/comments/a5rkfr/oh_dear/
-
-Intel Contributes Its Parallel STL Implementation To LLVM
----------------------------------------------------------
-
-* Article_
-* Announcement_
-* Code_
-* Reddit_
-
-.. _Article: https://www.phoronix.com/scan.php?page=news_item&px=Intel-Parallel-STL-Commit
-.. _Announcement: https://lists.llvm.org/pipermail/cfe-dev/2018-December/060606.html
-.. _Code: https://github.com/llvm-mirror/pstl/commits/master
-.. _Reddit: https://www.reddit.com/r/cpp/comments/a9n0gk/intel_contributes_its_parallel_stl_implementation/
-
-Cpp-Taskflow
-------------
-
-* Code_
-* Docs_
-
-.. _Code: https://github.com/cpp-taskflow/cpp-taskflow
-.. _Docs: https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/
-
-Proper way to iterate backwards in C++
---------------------------------------
-
-Reddit_
-
-.. code:: c++
-
-    for (size_t i = data.size() - 1; i >= 0; --i) { ... } // Doesn't work
-    for (size_t i = data.size(); i--;) { ... } // The C way
-
-    // C++17
-    std::vector<int> vec;
-    for (auto [value, idx] : reverse_index_adapter(vec)) {
-        // idx = n-1, n-2, ... 0
-    }
-
-    std::for_each(vec.rbegin(), vec.rend(), []() { ... }); // No index
-
-    for (auto it = data.rbegin(); it != data.rend(); ++it) {
-        auto i = std::distance(it, data.rend()) - 1;
-    }
-
-.. _Reddit: https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/
+.. _Aftermath: https://thephd.github.io/san-diego-2018-c++-committee-trip-report
 
 A Perspective on C++ Standardization in 2018
 --------------------------------------------
 
-`Post by JeanHeyd Meneide`_
-
-.. _`Post by JeanHeyd Meneide`: https://thephd.github.io/perspective-standardization-in-2018
+`A Perspective on C++ Standardization in 2018`_     by JeanHeyd Meneide
 
     You can roll your fantastic thing in your engine / application / middleware / scientific package? Awesome!
     Now write a specification for it.
@@ -93,13 +21,37 @@ A Perspective on C++ Standardization in 2018
 * Surviving the Process (burnout)
 * The Composition of the C++ Standardization Committee
 
+.. _`A Perspective on C++ Standardization in 2018`: https://thephd.github.io/perspective-standardization-in-2018
+
+Articles on Ranges
+------------------
+
+* `Ranges, Code Quality, and the Future of C++`_ by Jason Meisel
+  * Reddit: https://www.reddit.com/r/cpp/comments/a9qb54/ranges_code_quality_and_the_future_of_c/
+    * C++2a is going to be the best version of C++ yet, and a big reason for that is Eric’s Ranges library.
+    * A range allows you to return the algorithm itself, rather than the data the algorithm generates. This way, you can combine it with other algorithms without modifying it directly.
+    * Ranges are for utilizing algorithms and coroutines are for implementing algorithms.
+* `Ranges TS and signed sizes?`_
+* `A Prime Opportunity for Ranges`_ by Christopher Di Bella
+
+.. _`Ranges, Code Quality, and the Future of C++`: https://medium.com/@jasonmeisel/ranges-code-quality-and-the-future-of-c-99adc6199608
+.. _`Ranges TS and signed sizes?`: https://www.reddit.com/r/cpp/comments/a3gcdi/range_ts_and_signed_sizes/
+.. _`A Prime Opportunity for Ranges`: https://www.cjdb.com.au/a-prime-opportunity-for-ranges
+
+How to Initialize a String Member
+---------------------------------
+
+`How to Initialize a String Member`_ by B. Filipek
+
+.. _`How to Initialize a String Member`: https://www.bfilipek.com/2018/08/init-string-member.html
+
 LazyCode
 --------
 
 Making C++ cool again, bringing in those expressions from other languages that you wish you had; list comprehension
 style maps, filters, ranges, etc.
 
-* GitHub_
+* Code: https://github.com/SaadAttieh/lazyCode
 
 .. code:: c++
 
@@ -107,12 +59,11 @@ style maps, filters, ranges, etc.
                 lz::filter([](int i) { return i % 2 == 0; }) |
                 lz::map([](int i) { return i * i; }) | lz::sum();
 
-.. _GitHub: https://github.com/SaadAttieh/lazyCode
-
 Better Enums
 ------------
 
-Documentation_ | Code_
+* Docs: https://aantron.github.io/better-enums/index.html
+* Code: https://github.com/aantron/better-enums
 
 .. code:: c++
 
@@ -130,13 +81,10 @@ Documentation_ | Code_
         return 0;
     }
 
-.. _Documentation: https://aantron.github.io/better-enums/index.html
-.. _Code: https://github.com/aantron/better-enums
-
 How to refurbish legacy code into a maintainable state
 ------------------------------------------------------
 
-Article_ by Jan Wilmans
+`How to refurbish legacy code into a maintainable state`_ by Jan Wilmans
 
 * Defensive programming
 * Owning raw pointers
@@ -152,9 +100,59 @@ Article_ by Jan Wilmans
 
   - Easy logging from anywhere
 
-.. _Article: http://nullptr.nl/2018/08/refurbish-legacy-code/
+.. _`How to refurbish legacy code into a maintainable state`: http://nullptr.nl/2018/08/refurbish-legacy-code/
+
+C++, C# and Unity
+-----------------
+
+`C++, C# and Unity`_, by Lucas Meijer
+
+.. _`C++, C# and Unity`: http://lucasmeijer.com/posts/cpp_unity/
+
+SIMD Visualizer
+---------------
+
+* Code: https://github.com/piotte13/SIMD-Visualiser
+
+Python-Like **enumerate()** In C++17
+------------------------------------
+
+* `Python-Like enumerate() In C++17`_ by Nathan Reed
+
+Python:
+
+.. code:: python
+
+    for i, thing in enumerate(listOfThings):
+        print("The %dth thing is %s" % (i, thing))
+
+C++:
+
+.. code:: c++
+
+    std::vector<Thing> things;
+    ...
+    for (auto [i, thing] : enumerate(things))
+    {
+        // i gets the index and thing gets the Thing in each iteration
+    }
+
+* `Boost Counting Iterator`_
+
+.. _`Python-Like enumerate() In C++17`: http://reedbeta.com/blog/python-like-enumerate-in-cpp17/
+.. _`Boost Counting Iterator`: https://www.boost.org/doc/libs/1_69_0/libs/iterator/doc/counting_iterator.html
 
 The Sleep Constructor
 ---------------------
 
 .. image:: img/the-sleep-ctor.png
+
+Twitter
+-------
+
+.. image:: img/programming-like-writing-book.png
+
+Bjarne Meme
+-----------
+
+.. image:: img/bjarne-didnt-plan-for-this.png
