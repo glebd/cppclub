@@ -16,15 +16,20 @@ SOURCES_RST := $(wildcard ????-??-??.rst)
 SLIDES_RST := $(patsubst %.rst,%.pdf,$(SOURCES_RST))
 AUX_RST := $(patsubst %.rst,%.aux,$(SOURCES_RST))
 LOG_RST := $(patsubst %.rst,%.log,$(SOURCES_RST))
+SLIDES_HTML := $(patsubst %.rst,%.html,$(SOURCES_RST))
 
 .PHONY: all clean
 
-all: $(SLIDES_MD) $(SLIDES_RST)
+all: $(SLIDES_MD) $(SLIDES_RST) $(SLIDES_HTML)
 
 %.pdf: %.md $(HEADER)
 	pandoc $(PANDOC_FLAGS) $< -o $@
 
 %.pdf: %.rst $(HEADER)
+	python3 mkmeta.py $<
+	pandoc $(PANDOC_FLAGS) --metadata-file=$(basename $<).yaml $< -o $@
+
+%.html: %.rst $(HEADER)
 	python3 mkmeta.py $<
 	pandoc $(PANDOC_FLAGS) --metadata-file=$(basename $<).yaml $< -o $@
 
