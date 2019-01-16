@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gleb Dolgich" />
+  <meta name="dcterms.date" content="2019-01-17" />
+  <title>C++ Club Meeting Notes</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">C++ Club Meeting Notes</h1>
+<p class="author">Gleb Dolgich</p>
+<p class="date">2019-01-17</p>
+</header>
+<hr />
+<h1 id="intel-contributes-its-parallel-stl-implementation-to-llvm">Intel Contributes Its Parallel STL Implementation To LLVM</h1>
+<ul>
+<li><a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Intel-Parallel-STL-Commit">Intel Contributes Its Parallel STL Implementation To LLVM</a></li>
+<li>Announcement: <a href="https://lists.llvm.org/pipermail/cfe-dev/2018-December/060606.html">https://lists.llvm.org/pipermail/cfe-dev/2018-December/060606.html</a></li>
+<li>Code: <a href="https://github.com/llvm-mirror/pstl/commits/master">https://github.com/llvm-mirror/pstl/commits/master</a></li>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/a9n0gk/intel_contributes_its_parallel_stl_implementation/">https://www.reddit.com/r/cpp/comments/a9n0gk/intel_contributes_its_parallel_stl_implementation/</a></li>
+</ul>
+<h1 id="oh-dear">Oh DeaR</h1>
+<ul>
+<li><a href="https://thephd.github.io/oh-dear-odr-trap">Oh DeaR</a> by JeanHeyd Meneide</li>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/a5rkfr/oh_dear/">https://www.reddit.com/r/cpp/comments/a5rkfr/oh_dear/</a></li>
+</ul>
+<h1 id="rant-alert-c-error-handling">Rant alert: C++ error handling</h1>
+<p>Reddit: <a href="https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/">https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/</a></p>
+<blockquote>
+<p>I think the problem really stems from the places where exceptions don't work well. Otherwise I'd use them all the time. &lt;...&gt; E.g. im working on an app using actors which send messages back and forth. Throwing an exception in the message handler may mean something but it certainly isn't going to automatically make its way back to it's source.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>FYI <code>Outcome</code> and <code>std::expected&lt;T, E&gt;</code> have diverged by a fair bit &lt;...&gt;. They are now two differing interpretations of how best to implement exception-less failure handling. There is a third approach proposed for Boost as well, called <a href="https://zajo.github.io/leaf/">LEAF</a>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+</blockquote>
+<h1 id="game-programmers-and-the-c-collapse">Game Programmers and the C++ collapse</h1>
+<p><a href="http://www.alexisbreust.fr/2019-game-programmers-and-the-cpp-collapse.html">Game Programmers and the C++ collapse</a> by Alexis Breust</p>
+<blockquote>
+<p>Let's focus on why C++ is slowly digging his own grave.</p>
+<p>C++ is too slow to compile.</p>
+<p><em>Rainbow Six: Siege</em> (8 millions C++ LOC) in 3 minutes. That's extremely slow!</p>
+<p>Fact is Modern C++ is just growing up so much it will soon collapse under its own mess.</p>
+</blockquote>
+<h1 id="gamedev-c-coding-decisions-in-2014">Gamedev C++ coding decisions (in 2014)</h1>
+<p>Nicholas Fleury, CppCon 2014:</p>
+<ul>
+<li>No RTTI: you prefer to control the memory details yourself.</li>
+<li>No exceptions: they are simply slow because of the constraints of unwindable stack at any time.</li>
+<li>No STL containers: <code>std::vector</code> is slow, and complex template code takes time to compile.</li>
+<li>No Boost: surely the library is impressive, but it's never a good idea to use it in serious applications.</li>
+<li>Very small subset of templates: use it at mininum as it increases compile times significantly.</li>
+</ul>
+<p>New languages for gamedev:</p>
+<ul>
+<li><a href="http://www.mrphilgames.com/jai/">Jai</a> (a better C) by Jonathan Blow (still unreleased)</li>
+<li><a href="https://github.com/odin-lang/Odin">Odin</a> (based on Jai)</li>
+</ul>
+<h1 id="orthodox-c">Orthodox C++ (!)</h1>
+<ul>
+<li><p><a href="https://gist.github.com/bkaradzic/2e39896bc7d8c34e042b">Orthodox C++</a> by Branimir Karadzic</p>
+<blockquote>
+<p>Orthodox C++ (sometimes referred as C+) is minimal subset of C++ that improves C, but avoids all unnecessary things from so called Modern C++. It's exactly opposite of what Modern C++ is supposed to be.</p>
+</blockquote></li>
+</ul>
+<p>My brain hurts. - GD</p>
+<h1 id="cpp-taskflow">Cpp-Taskflow</h1>
+<ul>
+<li>Code: <a href="https://github.com/cpp-taskflow/cpp-taskflow">https://github.com/cpp-taskflow/cpp-taskflow</a></li>
+<li>Docs: <a href="https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/">https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/</a></li>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/">https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/</a></li>
+</ul>
+<h1 id="proper-way-to-iterate-backwards-in-c">Proper way to iterate backwards in C++</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/">https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">for</span> (<span class="dt">size_t</span> i = data.size() - <span class="dv">1</span>; i &gt;= <span class="dv">0</span>; --i) { ... } <span class="co">// Nope</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="cf">for</span> (<span class="dt">size_t</span> i = data.size(); i--;) { ... } <span class="co">// The C way</span></a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co">// C++17</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="bu">std::</span>vector&lt;<span class="dt">int</span>&gt; vec;</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="cf">for</span> (<span class="kw">auto</span> [value, idx] : reverse_index_adapter(vec)) {</a>
+<a class="sourceLine" id="cb1-7" title="7">    <span class="co">// idx = n-1, n-2, ... 0</span></a>
+<a class="sourceLine" id="cb1-8" title="8">}</a>
+<a class="sourceLine" id="cb1-9" title="9"></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="bu">std::</span>for_each(vec.rbegin(), vec.rend(), []() { ... }); <span class="co">// No index</span></a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="cf">for</span> (<span class="kw">auto</span> it = data.rbegin(); it != data.rend(); ++it) {</a>
+<a class="sourceLine" id="cb1-13" title="13">    <span class="kw">auto</span> i = <span class="bu">std::</span>distance(it, data.rend()) - <span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb1-14" title="14">}</a></code></pre></div>
+<h1 id="move-smart-pointers-in-and-out-functions-in-modern-c">Move smart pointers in and out functions in modern C++</h1>
+<ul>
+<li><a href="https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c">Move smart pointers in and out functions in modern C++</a>
+<ul>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/">https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/</a></li>
+</ul></li>
+</ul>
+<h1 id="quote">Quote</h1>
+<blockquote>
+<p>The 'S' in IoT stands for 'Security'.</p>
+</blockquote>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/edmnpez/">https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/edmnpez/</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/edmpcon/">https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/edmpcon/</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>

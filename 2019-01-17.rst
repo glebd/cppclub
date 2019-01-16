@@ -31,6 +31,51 @@ Reddit: https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standar
 .. [#] https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/edmnpez/
 .. [#] https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/edmpcon/
 
+Game Programmers and the C++ collapse
+-------------------------------------
+
+`Game Programmers and the C++ collapse`_ by Alexis Breust
+
+    Let's focus on why C++ is slowly digging his own grave.
+
+    C++ is too slow to compile.
+
+    *Rainbow Six: Siege* (8 millions C++ LOC) in 3 minutes. That's extremely slow!
+
+    Fact is Modern C++ is just growing up so much it will soon collapse under its own mess.
+
+.. _`Game Programmers and the C++ collapse`: http://www.alexisbreust.fr/2019-game-programmers-and-the-cpp-collapse.html
+
+Gamedev C++ coding decisions (in 2014)
+--------------------------------------
+
+Nicholas Fleury, CppCon 2014:
+
+* No RTTI: you prefer to control the memory details yourself.
+* No exceptions: they are simply slow because of the constraints of unwindable stack at any time.
+* No STL containers: ``std::vector`` is slow, and complex template code takes time to compile.
+* No Boost: surely the library is impressive, but it's never a good idea to use it in serious applications.
+* Very small subset of templates: use it at mininum as it increases compile times significantly.
+
+New languages for gamedev:
+
+* Jai_ (a better C) by Jonathan Blow (still unreleased)
+* Odin_ (based on Jai)
+
+.. _Jai: http://www.mrphilgames.com/jai/
+.. _Odin: https://github.com/odin-lang/Odin
+
+Orthodox C++ (!)
+----------------
+
+* `Orthodox C++`_ by Branimir Karadzic
+
+    Orthodox C++ (sometimes referred as C+) is minimal subset of C++ that improves C, but avoids all unnecessary things from so called Modern C++. It's exactly opposite of what Modern C++ is supposed to be.
+
+My brain hurts. - GD
+
+.. _`Orthodox C++`: https://gist.github.com/bkaradzic/2e39896bc7d8c34e042b
+
 Cpp-Taskflow
 ------------
 
