@@ -134,7 +134,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Orthodox C++ (sometimes referred as C+) is minimal subset of C++ that improves C, but avoids all unnecessary things from so called Modern C++. It's exactly opposite of what Modern C++ is supposed to be.</p>
 </blockquote></li>
 </ul>
-<p>My brain hurts. - GD</p>
+<h1 id="orthodox-c-what-should-i-use">Orthodox C++: what should I use?</h1>
+<ul>
+<li>Branimir Karadzic:
+<ul>
+<li>C-like C++ is good start, if code doesn't require more complexity don't add unnecessary C++ complexities. In general case code should be readable to anyone who is familiar with C language.</li>
+<li>The design rationale in Orthodox C++ should be "Quite simple, and it is usable. EOF".</li>
+<li>Don't use exceptions.</li>
+<li>Don't use RTTI.</li>
+<li>Don't use C++ runtime wrapper for C runtime includes (&lt;cstdio&gt;, &lt;cmath&gt;, etc.), use C runtime instead (&lt;stdio.h&gt;, &lt;math.h&gt;, etc.)</li>
+<li>Don't use stream (&lt;iostream&gt;, &lt;stringstream&gt;, etc.), use <code>printf</code> style functions instead.</li>
+<li>Don't use anything from STL that allocates memory, unless you don't care about memory management.</li>
+<li>Don't use metaprogramming excessively. Use it in moderation, only where necessary, and where it reduces code complexity.</li>
+<li>Wary of any features introduced in current standard C++, ideally wait for improvements of those feature in next iteration of standard. Example: <code>constexpr</code> from C++11 became usable in C++14 (Jason Turner)</li>
+</ul></li>
+</ul>
+<h1 id="orthodox-c-other-efforts">Orthodox C++: Other efforts</h1>
+<ul>
+<li><a href="https://archive.fo/2016.08.07-162105/https://namandixit.github.io/blog/nominal-c++/">Nominal C++</a> by Naman Dixit, 2016</li>
+<li><a href="https://archive.fo/2016.08.07-162220/http://flohofwoe.blogspot.nl/2013/06/sane-c.html#selection-1969.30-1969.52">Sane C++</a> by Andre "Floh" Weissflog, 2013</li>
+<li><a href="https://archive.fo/2017.03.19-055108/https://hacksoflife.blogspot.nl/2017/03/why-your-c-should-be-simple.html">Why Your C++ Should Be Simple</a> by Benjamin Supnik, 2017</li>
+</ul>
+<h1 id="why-i-dont-spend-time-with-modern-c-anymore">Why I don't spend time with Modern C++ anymore</h1>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/why-i-dont-spend-time-modern-c-anymore-henrique-bucher-phd/?trk=pulse-det-nav_art">Why I don't spend time with Modern C++ anymore</a> by Henrique Bucher, ED, JP Morgan (!) (<a href="http://www.vitorian.com/x1/archives/313">Original</a>)
+<ul>
+<li>Performance loss, optimization difficulties</li>
+<li>Slow build times</li>
+<li>Complexity and maintainability</li>
+</ul></li>
+<li>Quotes:
+<ul>
+<li>If you cannot figure out in one minute what a C++ file is doing, assume the code is incorrect.</li>
+<li>C++ today is like Fortran: it reached its limits.</li>
+<li>Today the “Modern Technologist” has to rely on a new set of languages: Verilog, VHDL.</li>
+<li>Vitorian LLC – we help businesses design, architect and build ultra-low-latency systems <em>(ka-ching!)</em></li>
+</ul></li>
+<li>Discussions:
+<ul>
+<li><a href="https://www.reddit.com/r/programming/comments/4jsaxb/why_i_dont_spend_time_with_modern_c_anymore/">https://www.reddit.com/r/programming/comments/4jsaxb/why_i_dont_spend_time_with_modern_c_anymore/</a></li>
+<li><a href="https://news.ycombinator.com/item?id=11720659">https://news.ycombinator.com/item?id=11720659</a></li>
+</ul></li>
+</ul>
 <h1 id="cpp-taskflow">Cpp-Taskflow</h1>
 <ul>
 <li>Code: <a href="https://github.com/cpp-taskflow/cpp-taskflow">https://github.com/cpp-taskflow/cpp-taskflow</a></li>

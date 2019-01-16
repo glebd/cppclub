@@ -72,9 +72,57 @@ Orthodox C++ (!)
 
     Orthodox C++ (sometimes referred as C+) is minimal subset of C++ that improves C, but avoids all unnecessary things from so called Modern C++. It's exactly opposite of what Modern C++ is supposed to be.
 
-My brain hurts. - GD
-
 .. _`Orthodox C++`: https://gist.github.com/bkaradzic/2e39896bc7d8c34e042b
+
+Orthodox C++: what should I use?
+--------------------------------
+
+* Branimir Karadzic:
+
+  - C-like C++ is good start, if code doesn't require more complexity don't add unnecessary C++ complexities. In general case code should be readable to anyone who is familiar with C language.
+  - The design rationale in Orthodox C++ should be "Quite simple, and it is usable. EOF".
+  - Don't use exceptions.
+  - Don't use RTTI.
+  - Don't use C++ runtime wrapper for C runtime includes (<cstdio>, <cmath>, etc.), use C runtime instead (<stdio.h>, <math.h>, etc.)
+  - Don't use stream (<iostream>, <stringstream>, etc.), use ``printf`` style functions instead.
+  - Don't use anything from STL that allocates memory, unless you don't care about memory management.
+  - Don't use metaprogramming excessively. Use it in moderation, only where necessary, and where it reduces code complexity.
+  - Wary of any features introduced in current standard C++, ideally wait for improvements of those feature in next iteration of standard. Example: ``constexpr`` from C++11 became usable in C++14 (Jason Turner)
+
+Orthodox C++: Other efforts
+---------------------------
+
+* `Nominal C++`_ by Naman Dixit, 2016
+* `Sane C++`_ by Andre "Floh" Weissflog, 2013
+* `Why Your C++ Should Be Simple`_ by Benjamin Supnik, 2017
+
+.. _`Nominal C++`: https://archive.fo/2016.08.07-162105/https://namandixit.github.io/blog/nominal-c++/
+.. _`Sane C++`: https://archive.fo/2016.08.07-162220/http://flohofwoe.blogspot.nl/2013/06/sane-c.html#selection-1969.30-1969.52
+.. _`Why Your C++ Should Be Simple`: https://archive.fo/2017.03.19-055108/https://hacksoflife.blogspot.nl/2017/03/why-your-c-should-be-simple.html
+
+Why I don't spend time with Modern C++ anymore
+----------------------------------------------
+
+* `Why I don't spend time with Modern C++ anymore`_ by Henrique Bucher, ED, JP Morgan (!) (Original_)
+
+  - Performance loss, optimization difficulties
+  - Slow build times
+  - Complexity and maintainability
+
+* Quotes:
+
+  - If you cannot figure out in one minute what a C++ file is doing, assume the code is incorrect.
+  - C++ today is like Fortran: it reached its limits.
+  - Today the “Modern Technologist” has to rely on a new set of languages: Verilog, VHDL.
+  - Vitorian LLC – we help businesses design, architect and build ultra-low-latency systems *(ka-ching!)*
+
+* Discussions:
+
+  - https://www.reddit.com/r/programming/comments/4jsaxb/why_i_dont_spend_time_with_modern_c_anymore/
+  - https://news.ycombinator.com/item?id=11720659
+
+.. _`Why I don't spend time with Modern C++ anymore`: https://www.linkedin.com/pulse/why-i-dont-spend-time-modern-c-anymore-henrique-bucher-phd/?trk=pulse-det-nav_art
+.. _Original: http://www.vitorian.com/x1/archives/313
 
 Cpp-Taskflow
 ------------
