@@ -124,44 +124,91 @@ Why I don't spend time with Modern C++ anymore
 .. _`Why I don't spend time with Modern C++ anymore`: https://www.linkedin.com/pulse/why-i-dont-spend-time-modern-c-anymore-henrique-bucher-phd/?trk=pulse-det-nav_art
 .. _Original: http://www.vitorian.com/x1/archives/313
 
-Cpp-Taskflow
-------------
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
 
-* Code: https://github.com/cpp-taskflow/cpp-taskflow
-* Docs: https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/
-* Reddit: https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/
+* `Stephan T. Lavavej - Class Template Argument Deduction for Everyone`_
 
-Proper way to iterate backwards in C++
---------------------------------------
+  - Slides: https://github.com/CppCon/CppCon2018/blob/master/Presentations/class_template_argument_deduction_for_everyone/class_template_argument_deduction_for_everyone__stephan_t_lavavej__cppcon_2018.pdf
+  - Reddit: https://www.reddit.com/r/cpp/comments/9newpl/how_to_use_class_template_argument_deduction/
 
-https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/
+* `How to Use Class Template Argument Deduction`_ blog post by STL
+* CppReference: https://en.cppreference.com/w/cpp/language/class_template_argument_deduction
 
-.. code:: c++
+.. _`Stephan T. Lavavej - Class Template Argument Deduction for Everyone`: https://www.youtube.com/watch?v=-H-ut6j1BYU
+.. _`How to Use Class Template Argument Deduction`: https://blogs.msdn.microsoft.com/vcblog/2018/10/11/how-to-use-class-template-argument-deduction/
 
-    for (size_t i = data.size() - 1; i >= 0; --i) { ... } // Nope
-    for (size_t i = data.size(); i--;) { ... } // The C way
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
 
-    // C++17
-    std::vector<int> vec;
-    for (auto [value, idx] : reverse_index_adapter(vec)) {
-        // idx = n-1, n-2, ... 0
-    }
+.. image:: img/stl-ctad-1.png
 
-    std::for_each(vec.rbegin(), vec.rend(), []() { ... }); // No index
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
 
-    for (auto it = data.rbegin(); it != data.rend(); ++it) {
-        auto i = std::distance(it, data.rend()) - 1;
-    }
+.. image:: img/stl-ctad-2.png
 
-Move smart pointers in and out functions in modern C++
-------------------------------------------------------
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
 
-* `Move smart pointers in and out functions in modern C++`_
-  * Reddit: https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/
+.. image:: img/stl-ctad-3.png
 
-.. _`Move smart pointers in and out functions in modern C++`: https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-4.png
+
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-5.png
+
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-6.png
+
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-7.png
+
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-8.png
+
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-9.png
+
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-10.png
+
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-11.png
+
+CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
+--------------------------------------------------------------------------------
+
+.. image:: img/stl-ctad-12.png
+
+Returning values in parentheses
+-------------------------------
+
+.. image:: img/return-paren.png
 
 Quote
 -----
 
     The 'S' in IoT stands for 'Security'.
+
+Twitter
+-------
+
+.. image:: img/undefined-solo.png

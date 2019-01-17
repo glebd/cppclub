@@ -1,3 +1,86 @@
 =====
 Stash
 =====
+
+Deducing your intentions
+------------------------
+
+`Deducing your intentions`_ by Andrzej Krzemieński
+
+    In this post we will briefly describe what class template argument deduction is, and why it works differently than what people often expect.
+
+* Class template argument deduction (CTAD) in C++17: P0091R2_
+
+.. code:: c++
+
+    auto q = std::make_optional(std::optional<int>{});
+    // q is optional<optional<int>>
+    std::optional q (std::optional<int>{});
+    // q is optional<int> !
+
+.. _`Deducing your intentions`: https://akrzemi1.wordpress.com/2018/12/09/deducing-your-intentions/
+.. _P0091R2: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html
+
+Contra CTAD
+-----------
+
+`Contra CTAD`_ by Arthur O'Dwyer
+
+    “I like features that work 100% of the time. I hate features that work 99% of the time. Working 99% of the time is much worse than working 50% of the time.” And CTAD is the poster child for a feature that works 99% of the time. That is, it works 100% of the time… until it doesn’t.
+
+.. _`Contra CTAD`: https://quuxplusone.github.io/blog/2018/12/09/wctad/
+
+Stop with the CTAD FUD!
+-----------------------
+
+`Stop with the CTAD FUD!`_
+
+.. code:: c++
+
+    std::optional maybe_string{"Hello!"s}; // optional<string>
+    std::optional other_thing{maybe_string}; // optional<string>
+
+    // Deduction guides:
+    // [1] Explicit
+    template <typename T> auto __deduce(T) -> optional<T>;
+    // [2] Implicit from std::optional copy ctor
+    template <typename T> auto __deduce(const optional<T>&) -> optional<T>;
+
+.. _`Stop with the CTAD FUD!`: https://vector-of-bool.github.io/2018/12/11/enough-ctad-fud.html
+
+Cpp-Taskflow
+------------
+
+* Code: https://github.com/cpp-taskflow/cpp-taskflow
+* Docs: https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/
+* Reddit: https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/
+
+Proper way to iterate backwards in C++
+--------------------------------------
+
+https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/
+
+.. code:: c++
+
+    for (size_t i = data.size() - 1; i >= 0; --i) { ... } // Nope
+    for (size_t i = data.size(); i--;) { ... } // The C way
+
+    // C++17
+    std::vector<int> vec;
+    for (auto [value, idx] : reverse_index_adapter(vec)) {
+        // idx = n-1, n-2, ... 0
+    }
+
+    std::for_each(vec.rbegin(), vec.rend(), []() { ... }); // No index
+
+    for (auto it = data.rbegin(); it != data.rend(); ++it) {
+        auto i = std::distance(it, data.rend()) - 1;
+    }
+
+Move smart pointers in and out functions in modern C++
+------------------------------------------------------
+
+* `Move smart pointers in and out functions in modern C++`_
+  * Reddit: https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/
+
+.. _`Move smart pointers in and out functions in modern C++`: https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c

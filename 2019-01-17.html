@@ -13,69 +13,6 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -176,39 +113,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://news.ycombinator.com/item?id=11720659">https://news.ycombinator.com/item?id=11720659</a></li>
 </ul></li>
 </ul>
-<h1 id="cpp-taskflow">Cpp-Taskflow</h1>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
 <ul>
-<li>Code: <a href="https://github.com/cpp-taskflow/cpp-taskflow">https://github.com/cpp-taskflow/cpp-taskflow</a></li>
-<li>Docs: <a href="https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/">https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/</a></li>
-<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/">https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/</a></li>
-</ul>
-<h1 id="proper-way-to-iterate-backwards-in-c">Proper way to iterate backwards in C++</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/">https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">for</span> (<span class="dt">size_t</span> i = data.size() - <span class="dv">1</span>; i &gt;= <span class="dv">0</span>; --i) { ... } <span class="co">// Nope</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="cf">for</span> (<span class="dt">size_t</span> i = data.size(); i--;) { ... } <span class="co">// The C way</span></a>
-<a class="sourceLine" id="cb1-3" title="3"></a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="co">// C++17</span></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="bu">std::</span>vector&lt;<span class="dt">int</span>&gt; vec;</a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="cf">for</span> (<span class="kw">auto</span> [value, idx] : reverse_index_adapter(vec)) {</a>
-<a class="sourceLine" id="cb1-7" title="7">    <span class="co">// idx = n-1, n-2, ... 0</span></a>
-<a class="sourceLine" id="cb1-8" title="8">}</a>
-<a class="sourceLine" id="cb1-9" title="9"></a>
-<a class="sourceLine" id="cb1-10" title="10"><span class="bu">std::</span>for_each(vec.rbegin(), vec.rend(), []() { ... }); <span class="co">// No index</span></a>
-<a class="sourceLine" id="cb1-11" title="11"></a>
-<a class="sourceLine" id="cb1-12" title="12"><span class="cf">for</span> (<span class="kw">auto</span> it = data.rbegin(); it != data.rend(); ++it) {</a>
-<a class="sourceLine" id="cb1-13" title="13">    <span class="kw">auto</span> i = <span class="bu">std::</span>distance(it, data.rend()) - <span class="dv">1</span>;</a>
-<a class="sourceLine" id="cb1-14" title="14">}</a></code></pre></div>
-<h1 id="move-smart-pointers-in-and-out-functions-in-modern-c">Move smart pointers in and out functions in modern C++</h1>
+<li><a href="https://www.youtube.com/watch?v=-H-ut6j1BYU">Stephan T. Lavavej - Class Template Argument Deduction for Everyone</a>
 <ul>
-<li><a href="https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c">Move smart pointers in and out functions in modern C++</a>
-<ul>
-<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/">https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/</a></li>
+<li>Slides: <a href="https://github.com/CppCon/CppCon2018/blob/master/Presentations/class_template_argument_deduction_for_everyone/class_template_argument_deduction_for_everyone__stephan_t_lavavej__cppcon_2018.pdf">https://github.com/CppCon/CppCon2018/blob/master/Presentations/class_template_argument_deduction_for_everyone/class_template_argument_deduction_for_everyone__stephan_t_lavavej__cppcon_2018.pdf</a></li>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/9newpl/how_to_use_class_template_argument_deduction/">https://www.reddit.com/r/cpp/comments/9newpl/how_to_use_class_template_argument_deduction/</a></li>
 </ul></li>
+<li><a href="https://blogs.msdn.microsoft.com/vcblog/2018/10/11/how-to-use-class-template-argument-deduction/">How to Use Class Template Argument Deduction</a> blog post by STL</li>
+<li>CppReference: <a href="https://en.cppreference.com/w/cpp/language/class_template_argument_deduction">https://en.cppreference.com/w/cpp/language/class_template_argument_deduction</a></li>
 </ul>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-1">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-1.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-2">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-2.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-3">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-3.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-4">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-4.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-5">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-5.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-6">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-6.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-7">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-7.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-8">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-8.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-9">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-9.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-10">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-10.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-11">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-11.png" alt="image" /></p>
+<h1 id="cppcon-2018-stephan-t.-lavavej-class-template-argument-deduction-for-everyone-12">CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”</h1>
+<p><img src="img/stl-ctad-12.png" alt="image" /></p>
+<h1 id="returning-values-in-parentheses">Returning values in parentheses</h1>
+<p><img src="img/return-paren.png" alt="image" /></p>
 <h1 id="quote">Quote</h1>
 <blockquote>
 <p>The 'S' in IoT stands for 'Security'.</p>
 </blockquote>
+<h1 id="twitter">Twitter</h1>
+<p><img src="img/undefined-solo.png" alt="image" /></p>
 <section class="footnotes">
 <hr />
 <ol>
