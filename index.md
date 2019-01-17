@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not those of my employer.
 
+* [17 January 2019](2019-01-17.html)
 * [10 January 2019](2019-01-10.html)
 * [20 December 2018](2018-12-20)
 * [13 December 2018](2018-12-13)

@@ -2,36 +2,51 @@
 Stash
 =====
 
-Oh DeaR
--------
+Deducing your intentions
+------------------------
 
-* `Oh DeaR`_ by JeanHeyd Meneide
-* Reddit: https://www.reddit.com/r/cpp/comments/a5rkfr/oh_dear/
+`Deducing your intentions`_ by Andrzej Krzemieński
 
-.. _`Oh DeaR`: https://thephd.github.io/oh-dear-odr-trap
+    In this post we will briefly describe what class template argument deduction is, and why it works differently than what people often expect.
 
-Intel Contributes Its Parallel STL Implementation To LLVM
----------------------------------------------------------
+* Class template argument deduction (CTAD) in C++17: P0091R2_
 
-* `Intel Contributes Its Parallel STL Implementation To LLVM`_
-* Announcement: https://lists.llvm.org/pipermail/cfe-dev/2018-December/060606.html
-* Code: https://github.com/llvm-mirror/pstl/commits/master
-* Reddit: https://www.reddit.com/r/cpp/comments/a9n0gk/intel_contributes_its_parallel_stl_implementation/
+.. code:: c++
 
-.. _`Intel Contributes Its Parallel STL Implementation To LLVM`: https://www.phoronix.com/scan.php?page=news_item&px=Intel-Parallel-STL-Commit
+    auto q = std::make_optional(std::optional<int>{});
+    // q is optional<optional<int>>
+    std::optional q (std::optional<int>{});
+    // q is optional<int> !
 
-Rant alert: C++ error handling
-------------------------------
+.. _`Deducing your intentions`: https://akrzemi1.wordpress.com/2018/12/09/deducing-your-intentions/
+.. _P0091R2: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html
 
-Reddit: https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/
+Contra CTAD
+-----------
 
-    I think the problem really stems from the places where exceptions don't work well. Otherwise I'd use them all the time. <...> E.g. im working on an app using actors which send messages back and forth. Throwing an exception in the message handler may mean something but it certainly isn't going to automatically make its way back to it's source. [#]_
+`Contra CTAD`_ by Arthur O'Dwyer
 
-    FYI ``Outcome`` and ``std::expected<T, E>`` have diverged by a fair bit <...>. They are now two differing interpretations of how best to implement exception-less failure handling. There is a third approach proposed for Boost as well, called LEAF_. [#]_
+    “I like features that work 100% of the time. I hate features that work 99% of the time. Working 99% of the time is much worse than working 50% of the time.” And CTAD is the poster child for a feature that works 99% of the time. That is, it works 100% of the time… until it doesn’t.
 
-.. _LEAF: https://zajo.github.io/leaf/
-.. [#] https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/edmnpez/
-.. [#] https://www.reddit.com/r/cpp/comments/ae60nb/decades_have_passed_standard_c_has_no_agreed_and/edmpcon/
+.. _`Contra CTAD`: https://quuxplusone.github.io/blog/2018/12/09/wctad/
+
+Stop with the CTAD FUD!
+-----------------------
+
+`Stop with the CTAD FUD!`_
+
+.. code:: c++
+
+    std::optional maybe_string{"Hello!"s}; // optional<string>
+    std::optional other_thing{maybe_string}; // optional<string>
+
+    // Deduction guides:
+    // [1] Explicit
+    template <typename T> auto __deduce(T) -> optional<T>;
+    // [2] Implicit from std::optional copy ctor
+    template <typename T> auto __deduce(const optional<T>&) -> optional<T>;
+
+.. _`Stop with the CTAD FUD!`: https://vector-of-bool.github.io/2018/12/11/enough-ctad-fud.html
 
 Cpp-Taskflow
 ------------
