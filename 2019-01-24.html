@@ -114,34 +114,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb2-6" title="6"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt; <span class="kw">auto</span> __deduce(T) -&gt; optional&lt;T&gt;;</a>
 <a class="sourceLine" id="cb2-7" title="7"><span class="co">// [2] Implicit from std::optional copy ctor</span></a>
 <a class="sourceLine" id="cb2-8" title="8"><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt; <span class="kw">auto</span> __deduce(<span class="at">const</span> optional&lt;T&gt;&amp;) -&gt; optional&lt;T&gt;;</a></code></pre></div>
+<h1 id="modern-c-lamentations">"Modern" C++ Lamentations</h1>
+<p><a href="http://aras-p.info/blog/2018/12/28/Modern-C-Lamentations/">"Modern" C++ Lamentations</a> by Aras Pranckevičius (Unity)</p>
+<blockquote>
+<p>C++ compilation times have been a source of pain in every non-trivial-size codebase I’ve worked on. &lt;...&gt; Yet it feels like the C++ community at large pretends that is not an issue, with each revision of the language putting even more stuff into header files, and even more stuff into templated code that has to live in header files.</p>
+<p>Some of the “all feedback will be ignored unless it comes in form of a paper presented at a C++ committee meeting” replies that I’ve seen in the past few days sound to me like a not very productive approach.</p>
+</blockquote>
+<ul>
+<li>Reddit: <a href="https://www.reddit.com/r/programming/comments/aac4hg/modern_c_lamentations/">https://www.reddit.com/r/programming/comments/aac4hg/modern_c_lamentations/</a>
+<ul>
+<li><a href="https://www.reddit.com/r/programming/comments/aac4hg/modern_c_lamentations/ecrwgep/">https://www.reddit.com/r/programming/comments/aac4hg/modern_c_lamentations/ecrwgep/</a></li>
+</ul></li>
+</ul>
+<h1 id="thoughts-on-modern-c-and-game-dev">Thoughts on Modern C++ and Game Dev</h1>
+<p><a href="http://www.elbeno.com/blog/?p=1598">Thoughts on Modern C++ and Game Dev</a> by Ben Deane</p>
+<blockquote>
+<p>TL;DR: The C++ committee isn’t following some sort of agenda to ignore the needs of game programmers, and “modern” C++ isn’t going to become undebuggable.</p>
+<p>I think it’s a shame that the STL is so strongly identified with its containers. They tend to be what gets taught first, so when we say “the STL” we often first think of <code>std::vector</code> when we should really be thinking of <code>std::find_if</code>.</p>
+</blockquote>
+<ul>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/abnoke/thoughts_on_modern_c_and_game_dev/">https://www.reddit.com/r/cpp/comments/abnoke/thoughts_on_modern_c_and_game_dev/</a></li>
+</ul>
+<h1 id="gamedev-introduction-to-modern-c">Gamedev introduction to 'Modern' C++</h1>
+<p><a href="https://mropert.github.io/2019/01/02/gamedev_intro_to_modern_cpp/">Gamedev introduction to 'Modern' C++</a> by Mathieu Ropert</p>
+<ul>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/abvw6c/gamedev_introduction_to_modern_c/">https://www.reddit.com/r/cpp/comments/abvw6c/gamedev_introduction_to_modern_c/</a></li>
+</ul>
+<h1 id="modern-c-ruminations">"Modern" C++ Ruminations</h1>
+<p><a href="https://sean-parent.stlab.cc/2018/12/30/cpp-ruminations.html">"Modern" C++ Ruminations</a> by Sean Parent</p>
+<blockquote>
+<p>Programming is a profession. It is an ethical obligation to work to improve our profession. The more senior and talented you are, the more you owe to the community. Giving back can take many forms; mentoring, lecturing, publishing, serving on committees and furthering open source projects. Part of that obligation is to continue to study, to read papers and work through books.</p>
+</blockquote>
+<ul>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/ac3ntu/modern_c_ruminations/">https://www.reddit.com/r/cpp/comments/ac3ntu/modern_c_ruminations/</a></li>
+</ul>
+<h1 id="another-cool-msvc-flag-d1reporttime">Another cool MSVC flag: /d1reportTime</h1>
+<ul>
+<li><a href="http://aras-p.info/blog/2019/01/21/Another-cool-MSVC-flag-d1reportTime/">Another cool MSVC flag: /d1reportTime</a> by Aras Pranckevičius
+<ul>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/aij9h4/another_cool_msvc_flag_d1reporttime/">https://www.reddit.com/r/cpp/comments/aij9h4/another_cool_msvc_flag_d1reporttime/</a></li>
+</ul></li>
+<li><a href="https://lectem.github.io/msvc/reverse-engineering/build/2019/01/21/MSVC-hidden-flags.html">Complete list of MSVC flags</a></li>
+</ul>
+<h1 id="compile-time-binary-size-reductions-and-cs-future-for-sol3">Compile Time, Binary Size Reductions and C++'s future for sol3</h1>
+<p><a href="https://thephd.github.io/sol3-compile-times-binary-sizes">Compile Time, Binary Size Reductions and C++'s future for sol3</a> by ThePhD</p>
 <h1 id="cpp-taskflow">Cpp-Taskflow</h1>
 <ul>
 <li>Code: <a href="https://github.com/cpp-taskflow/cpp-taskflow">https://github.com/cpp-taskflow/cpp-taskflow</a></li>
 <li>Docs: <a href="https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/">https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/</a></li>
 <li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/">https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/</a></li>
 </ul>
-<h1 id="proper-way-to-iterate-backwards-in-c">Proper way to iterate backwards in C++</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/">https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/</a></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="cf">for</span> (<span class="dt">size_t</span> i = data.size() - <span class="dv">1</span>; i &gt;= <span class="dv">0</span>; --i) { ... } <span class="co">// Nope</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="cf">for</span> (<span class="dt">size_t</span> i = data.size(); i--;) { ... } <span class="co">// The C way</span></a>
-<a class="sourceLine" id="cb3-3" title="3"></a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="co">// C++17</span></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="bu">std::</span>vector&lt;<span class="dt">int</span>&gt; vec;</a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="cf">for</span> (<span class="kw">auto</span> [value, idx] : reverse_index_adapter(vec)) {</a>
-<a class="sourceLine" id="cb3-7" title="7">    <span class="co">// idx = n-1, n-2, ... 0</span></a>
-<a class="sourceLine" id="cb3-8" title="8">}</a>
-<a class="sourceLine" id="cb3-9" title="9"></a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="bu">std::</span>for_each(vec.rbegin(), vec.rend(), []() { ... }); <span class="co">// No index</span></a>
-<a class="sourceLine" id="cb3-11" title="11"></a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="cf">for</span> (<span class="kw">auto</span> it = data.rbegin(); it != data.rend(); ++it) {</a>
-<a class="sourceLine" id="cb3-13" title="13">    <span class="kw">auto</span> i = <span class="bu">std::</span>distance(it, data.rend()) - <span class="dv">1</span>;</a>
-<a class="sourceLine" id="cb3-14" title="14">}</a></code></pre></div>
-<h1 id="move-smart-pointers-in-and-out-functions-in-modern-c">Move smart pointers in and out functions in modern C++</h1>
-<ul>
-<li><a href="https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c">Move smart pointers in and out functions in modern C++</a>
-<ul>
-<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/">https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/</a></li>
-</ul></li>
-</ul>
+<h1 id="quote">Quote</h1>
+<p>Eagleson's Law:</p>
+<blockquote>
+<p>Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.</p>
+</blockquote>
 </body>
 </html>
