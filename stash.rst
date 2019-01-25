@@ -2,58 +2,99 @@
 Stash
 =====
 
-Deducing your intentions
-------------------------
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-`Deducing your intentions`_ by Andrzej Krzemieński
+* `CppCon 2018 - Arthur O'Dwyer - RVO: Harder Than It Looks`_
+* `Trivially Relocatable FAQ`_
 
-    In this post we will briefly describe what class template argument deduction is, and why it works differently than what people often expect.
+.. _`CppCon 2018 - Arthur O'Dwyer - RVO: Harder Than It Looks`: https://youtu.be/hA1WNtNyNbo
+.. _`Trivially Relocatable FAQ`: https://quuxplusone.github.io/blog/2018/10/04/trivially-relocatable-faq/
 
-* Class template argument deduction (CTAD) in C++17: P0091R2_
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-.. code:: c++
+.. image:: img/odwyer-rvo-1.png
 
-    auto q = std::make_optional(std::optional<int>{});
-    // q is optional<optional<int>>
-    std::optional q (std::optional<int>{});
-    // q is optional<int> !
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-.. _`Deducing your intentions`: https://akrzemi1.wordpress.com/2018/12/09/deducing-your-intentions/
-.. _P0091R2: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html
+.. image:: img/odwyer-rvo-2.png
 
-Contra CTAD
------------
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-`Contra CTAD`_ by Arthur O'Dwyer
+.. image:: img/odwyer-rvo-3.png
 
-    “I like features that work 100% of the time. I hate features that work 99% of the time. Working 99% of the time is much worse than working 50% of the time.” And CTAD is the poster child for a feature that works 99% of the time. That is, it works 100% of the time… until it doesn’t.
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-.. _`Contra CTAD`: https://quuxplusone.github.io/blog/2018/12/09/wctad/
+.. image:: img/odwyer-rvo-4.png
 
-Stop with the CTAD FUD!
------------------------
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-`Stop with the CTAD FUD!`_
+.. image:: img/odwyer-rvo-5.png
 
-.. code:: c++
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-    std::optional maybe_string{"Hello!"s}; // optional<string>
-    std::optional other_thing{maybe_string}; // optional<string>
+.. image:: img/odwyer-rvo-6.png
 
-    // Deduction guides:
-    // [1] Explicit
-    template <typename T> auto __deduce(T) -> optional<T>;
-    // [2] Implicit from std::optional copy ctor
-    template <typename T> auto __deduce(const optional<T>&) -> optional<T>;
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-.. _`Stop with the CTAD FUD!`: https://vector-of-bool.github.io/2018/12/11/enough-ctad-fud.html
+.. image:: img/odwyer-rvo-7.png
 
-Cpp-Taskflow
-------------
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
 
-* Code: https://github.com/cpp-taskflow/cpp-taskflow
-* Docs: https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/
-* Reddit: https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/
+.. image:: img/odwyer-rvo-8.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-9.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-10.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-11.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-12.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-13.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-14.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-15.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-16.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-17.png
 
 Proper way to iterate backwards in C++
 --------------------------------------
