@@ -1,0 +1,175 @@
+----
+
+Pre-Kona Papers
+---------------
+
+mailing2019-01_
+
+* P1408R0_ Abandon ``observer_ptr`` (Bjarne Stroustrup), Reddit: https://www.reddit.com/r/cpp/comments/ak0vfg/abandon_observer_ptr_bjarne_stroustrup/
+* P1329R0_ On the Coroutines TS (Oppose merging of Coroutines TS into the Standard -- prefer Core Coroutines or an alternative where coroutines are "first-class citizens of the language".)
+  * P1430R0_ First-class symmetric coroutines in C++
+* P0843R3_ ``static_vector``
+* P1021R3_ Filling holes in CTAD (aggregates, alias templates, inherited constructors)
+* P1132R3_ ``out_ptr``
+* P1337R0_ Aliasing the standard library as a means to save C++ (attempt at humour, waste of time)
+
+.. _mailing2019-01: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/
+.. _P1408R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1408r0.pdf
+.. _P1329R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1329r0.pdf
+.. _P1430R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1430r0.pdf
+.. _P0843R3: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0843r3.html
+.. _P1021R3: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1021r3.html
+.. _P1132R3: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1132r3.html
+.. _P1337R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1337r0.pdf
+
+Pre-Kona Papers
+---------------
+
+mailing2019-01_
+
+* P1392R0_ Differences Between Functions and Function Templates (informational)
+* P1426R0_ Pull the Plug on Contracts? (wow)
+* P1427R0_ Concerns about module toolability
+* P1433R0_ Compile Time Regular Expressions
+* P1446R0_ Reconsider the Networking TS for inclusion in C++20
+* P1371R0_ Pattern matching
+
+.. _P1392R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1392r0.html
+.. _P1426R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1426r0.md
+.. _P1427R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1427r0.pdf
+.. _P1433R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1433r0.pdf
+.. _P1446R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1446r0.html
+.. _P1371R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1371r0.pdf
+
+C++ Modules Might Be Dead-on-Arrival
+------------------------------------
+
+* `C++ Modules Might Be Dead-on-Arrival`_
+
+  * Reddit: https://www.reddit.com/r/cpp/comments/akihlv/c_modules_might_be_deadonarrival/
+
+.. _`C++ Modules Might Be Dead-on-Arrival`: https://vector-of-bool.github.io/2019/01/27/modules-doa.html
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+* `CppCon 2018 - Arthur O'Dwyer - RVO: Harder Than It Looks`_
+* `Trivially Relocatable FAQ`_
+
+.. _`CppCon 2018 - Arthur O'Dwyer - RVO: Harder Than It Looks`: https://youtu.be/hA1WNtNyNbo
+.. _`Trivially Relocatable FAQ`: https://quuxplusone.github.io/blog/2018/10/04/trivially-relocatable-faq/
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-1.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-2.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-3.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-4.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-5.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-6.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-7.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-8.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-9.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-10.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-11.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-12.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-13.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-14.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-15.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-16.png
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+.. image:: img/odwyer-rvo-17.png
+
+Proper way to iterate backwards in C++
+--------------------------------------
+
+https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/
+
+.. code:: c++
+
+    for (size_t i = data.size() - 1; i >= 0; --i) { ... } // Nope
+    for (size_t i = data.size(); i--;) { ... } // The C way
+
+    // C++17
+    std::vector<int> vec;
+    for (auto [value, idx] : reverse_index_adapter(vec)) {
+        // idx = n-1, n-2, ... 0
+    }
+
+    std::for_each(vec.rbegin(), vec.rend(), []() { ... }); // No index
+
+    for (auto it = data.rbegin(); it != data.rend(); ++it) {
+        auto i = std::distance(it, data.rend()) - 1;
+    }
+
+Move smart pointers in and out functions in modern C++
+------------------------------------------------------
+
+* `Move smart pointers in and out functions in modern C++`_
+  * Reddit: https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/
+
+.. _`Move smart pointers in and out functions in modern C++`: https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c
