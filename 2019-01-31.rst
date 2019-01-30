@@ -5,7 +5,8 @@ Pre-Kona Papers
 
 mailing2019-01_
 
-* P1408R0_ Abandon ``observer_ptr`` (Bjarne Stroustrup), Reddit: https://www.reddit.com/r/cpp/comments/ak0vfg/abandon_observer_ptr_bjarne_stroustrup/
+* P1408R0_ Abandon ``observer_ptr`` (Bjarne Stroustrup)
+  * Reddit: https://www.reddit.com/r/cpp/comments/ak0vfg/abandon_observer_ptr_bjarne_stroustrup/
 * P1329R0_ On the Coroutines TS (Oppose merging of Coroutines TS into the Standard -- prefer Core Coroutines or an alternative where coroutines are "first-class citizens of the language".)
   * P1430R0_ First-class symmetric coroutines in C++
 * P0843R3_ ``static_vector``
@@ -29,14 +30,12 @@ mailing2019-01_
 
 * P1392R0_ Differences Between Functions and Function Templates (informational)
 * P1426R0_ Pull the Plug on Contracts? (wow)
-* P1427R0_ Concerns about module toolability
 * P1433R0_ Compile Time Regular Expressions
 * P1446R0_ Reconsider the Networking TS for inclusion in C++20
 * P1371R0_ Pattern matching
 
 .. _P1392R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1392r0.html
 .. _P1426R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1426r0.md
-.. _P1427R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1427r0.pdf
 .. _P1433R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1433r0.pdf
 .. _P1446R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1446r0.html
 .. _P1371R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1371r0.pdf
@@ -45,10 +44,13 @@ C++ Modules Might Be Dead-on-Arrival
 ------------------------------------
 
 * `C++ Modules Might Be Dead-on-Arrival`_
-
   * Reddit: https://www.reddit.com/r/cpp/comments/akihlv/c_modules_might_be_deadonarrival/
+* P1300_ Remember the FORTRAN
+* P1427R0_ Concerns about module toolability
 
 .. _`C++ Modules Might Be Dead-on-Arrival`: https://vector-of-bool.github.io/2019/01/27/modules-doa.html
+.. _P1300: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1300r0.pdf
+.. _P1427R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1427r0.pdf
 
 CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
 -------------------------------------------------------
@@ -173,3 +175,12 @@ Move smart pointers in and out functions in modern C++
   * Reddit: https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/
 
 .. _`Move smart pointers in and out functions in modern C++`: https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c
+
+C vs. C++ ``for`` scope
+-----------------------
+
+.. image:: img/c-cpp-for-scope.png
+   :width: 1242 px
+   :height: 1174 px
+   :scale: 25 %
+   :align: center
