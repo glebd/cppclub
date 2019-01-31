@@ -184,3 +184,8 @@ C vs. C++ ``for`` scope
    :height: 1174 px
    :scale: 25 %
    :align: center
+
+Twitter
+-------
+
+.. image:: img/software-dev-tools.png
