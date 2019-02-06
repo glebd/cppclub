@@ -239,3 +239,12 @@ Twitter
    :height: 780 px
    :scale: 25 %
    :align: center
+
+Twitter
+-------
+
+.. image:: img/whynotjust.png
+   :width: 1242 px
+   :height: 982 px
+   :scale: 25 %
+   :align: center
