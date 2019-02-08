@@ -7,13 +7,13 @@
   <meta name="author" content="Gleb Dolgich" />
   <meta name="dcterms.date" content="2019-02-07" />
   <title>C++ Club Meeting Notes</title>
-  <style type="text/css">
+  <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style type="text/css">
+  <style>
 a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; }
@@ -171,37 +171,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="img/turner-surprises-lifetime-18.png" alt="image" /></p>
 <h1 id="cppcon-2018-jason-turner-surprises-in-object-lifetime-20">CppCon 2018: Jason Turner "Surprises in Object Lifetime"</h1>
 <p><img src="img/turner-surprises-lifetime-19.png" alt="image" /></p>
-<h1 id="proper-way-to-iterate-backwards-in-c">Proper way to iterate backwards in C++</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/">https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">for</span> (<span class="dt">size_t</span> i = data.size() - <span class="dv">1</span>; i &gt;= <span class="dv">0</span>; --i) { ... } <span class="co">// Nope</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="cf">for</span> (<span class="dt">size_t</span> i = data.size(); i--;) { ... } <span class="co">// The C way</span></a>
-<a class="sourceLine" id="cb1-3" title="3"></a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="co">// C++17</span></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="bu">std::</span>vector&lt;<span class="dt">int</span>&gt; vec;</a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="cf">for</span> (<span class="kw">auto</span> [value, idx] : reverse_index_adapter(vec)) {</a>
-<a class="sourceLine" id="cb1-7" title="7">    <span class="co">// idx = n-1, n-2, ... 0</span></a>
-<a class="sourceLine" id="cb1-8" title="8">}</a>
-<a class="sourceLine" id="cb1-9" title="9"></a>
-<a class="sourceLine" id="cb1-10" title="10"><span class="bu">std::</span>for_each(vec.rbegin(), vec.rend(), []() { ... }); <span class="co">// No index</span></a>
-<a class="sourceLine" id="cb1-11" title="11"></a>
-<a class="sourceLine" id="cb1-12" title="12"><span class="cf">for</span> (<span class="kw">auto</span> it = data.rbegin(); it != data.rend(); ++it) {</a>
-<a class="sourceLine" id="cb1-13" title="13">    <span class="kw">auto</span> i = <span class="bu">std::</span>distance(it, data.rend()) - <span class="dv">1</span>;</a>
-<a class="sourceLine" id="cb1-14" title="14">}</a></code></pre></div>
-<h1 id="move-smart-pointers-in-and-out-functions-in-modern-c">Move smart pointers in and out functions in modern C++</h1>
-<ul>
-<li><a href="https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c">Move smart pointers in and out functions in modern C++</a>
-<ul>
-<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/">https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/</a></li>
-</ul></li>
-</ul>
 <h1 id="arthur-odwyer-feature-that-always-works">Arthur O'Dwyer: Feature that Always Works</h1>
 <ul>
 <li><a href="https://quuxplusone.github.io/blog/2018/12/15/autorefref-always-works/">for (auto&amp;&amp; elt : range) Always Works</a></li>
 <li><a href="https://quuxplusone.github.io/blog/2018/12/27/autorefref-still-always-works/">for (auto&amp;&amp; elt : range) Still Always Works</a></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="cf">for</span> (<span class="kw">auto</span>&amp;&amp; elt : range) {</a>
-<a class="sourceLine" id="cb2-2" title="2">    do_something_with(elt);</a>
-<a class="sourceLine" id="cb2-3" title="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">for</span> (<span class="kw">auto</span>&amp;&amp; elt : range) {</a>
+<a class="sourceLine" id="cb1-2" title="2">    do_something_with(elt);</a>
+<a class="sourceLine" id="cb1-3" title="3">}</a></code></pre></div>
 <h1 id="twitter">Twitter</h1>
 <p><img src="img/hanselman-whydontyoujust.png" alt="image" class="align-center" width="310" height="195" /></p>
 <h1 id="twitter-1">Twitter</h1>
