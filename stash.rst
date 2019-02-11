@@ -1,33 +1,3 @@
 =====
 Stash
 =====
-
-Proper way to iterate backwards in C++
---------------------------------------
-
-https://www.reddit.com/r/cpp/comments/947a1z/proper_way_to_do_backward_iteration_in_c/
-
-.. code:: c++
-
-    for (size_t i = data.size() - 1; i >= 0; --i) { ... } // Nope
-    for (size_t i = data.size(); i--;) { ... } // The C way
-
-    // C++17
-    std::vector<int> vec;
-    for (auto [value, idx] : reverse_index_adapter(vec)) {
-        // idx = n-1, n-2, ... 0
-    }
-
-    std::for_each(vec.rbegin(), vec.rend(), []() { ... }); // No index
-
-    for (auto it = data.rbegin(); it != data.rend(); ++it) {
-        auto i = std::distance(it, data.rend()) - 1;
-    }
-
-Move smart pointers in and out functions in modern C++
-------------------------------------------------------
-
-* `Move smart pointers in and out functions in modern C++`_
-  * Reddit: https://www.reddit.com/r/cpp/comments/aaux96/move_smart_pointers_in_and_out_functions_in/
-
-.. _`Move smart pointers in and out functions in modern C++`: https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c
