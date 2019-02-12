@@ -30,6 +30,53 @@ Move smart pointers in and out functions in modern C++
 
 .. _`Move smart pointers in and out functions in modern C++`: https://www.internalpointers.com/post/move-smart-pointers-and-out-functions-modern-c
 
+CppCon 2018 - Andreas Weis - Fixing Two-Phase Initialisation
+------------------------------------------------------------
+
+https://youtu.be/S7I66lZX_zM
+
+Inverse two-phase initialisation
+
+.. code:: c++
+
+    class Foo
+    {
+        static expected<construction_token>
+        preconstruct(Arg n_arg) noexcept
+        {
+            construction_token t;
+            t.state = make_unique_nothrow(n_arg);
+            if (!t.state) return unexpected(my_errc::error);
+            return t;
+        }
+
+        Foo(construction_token&& t) noexcept
+        : m_state(std::move(t.state)) {}
+    };
+
+CppCon 2018 - Andreas Weis - Fixing Two-Phase Initialisation
+------------------------------------------------------------
+
+https://youtu.be/S7I66lZX_zM
+
+Inverse two-phase initialisation: usage
+
+.. code:: c++
+
+    // 1
+    expected<Foo::construction_token> t1 = Foo::preconstruct(args);
+    if (!t1.has_value()) { /* get out */ }
+    Foo obj(std::move(*t1));
+
+    // 2
+    auto t2 = Foo::preconstruct(args);
+    auto obj_ptr = std::make_shared<Foo>(std::move(*t2));
+
+    // 3
+    auto t3 = Foo::preconstruct(args);
+    std::vector<Foo> objects;
+    objects.emplace_back(std::move(*t3));
+
 Twitter
 -------
 
