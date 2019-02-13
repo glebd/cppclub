@@ -77,6 +77,111 @@ Inverse two-phase initialisation: usage
     std::vector<Foo> objects;
     objects.emplace_back(std::move(*t3));
 
+CppCon 2018 - Timur Doumler - I can has grammar?
+------------------------------------------------
+
+https://youtu.be/tsG95Y-C14k
+
+.. code:: c++
+
+    // MSVC rejects, GCC accepts, Clang accepts
+    extern extern "C++" extern "C" extern "C++" int x;
+
+    // MSVC accepts, GCC rejects, Clang accepts
+    extern "C++" extern "C" extern "C++" extern int x;
+
+CppCon 2018 - Timur Doumler - I can has grammar?
+------------------------------------------------
+
+https://youtu.be/tsG95Y-C14k
+
+| *selection-statement:*
+|     ``if constexpr``:sub:`opt` ( *init-statement*:sub:`opt` *condition* ) *statement*
+
+.. code:: c++
+
+    if (class foo; !ret.second) /* ... */;
+
+    if (false; true) /* ... */;
+
+    if (; true) /* ... */;
+
+CppCon 2018 - Timur Doumler - I can has grammar?
+------------------------------------------------
+
+https://youtu.be/tsG95Y-C14k
+
+Declare and initialise a variable of type "function pointer":
+
+.. code:: c++
+
+    auto (*fp)() -> int(&f);
+
+CppCon 2018 - Timur Doumler - I can has grammar?
+------------------------------------------------
+
+https://youtu.be/tsG95Y-C14k
+
+.. code:: c++
+
+    struct foo;
+    void bar(foo foo);
+    void bar(foo(foo)); // vexing parse
+    void bar(foo((foo))); // more vexing parse
+
+CppCon 2018 - Timur Doumler - I can has grammar?
+------------------------------------------------
+
+https://youtu.be/tsG95Y-C14k
+
+.. code:: c++
+
+    class bar {};
+    int bar;     // OK
+    bar b;       // error
+    class bar b; // OK
+    class std::vector<class bar> bars; // OK
+
+    // also acts as a forward declaration
+    void foo(struct S* x);
+
+    // weird scoping rules
+    class C { void foo(struct S* x); };
+    S* s;
+
+CppCon 2018 - Timur Doumler - I can has grammar?
+------------------------------------------------
+
+https://youtu.be/tsG95Y-C14k
+
+*pseudo-destructor-name*
+
+.. code:: c++
+
+    int i;
+    i.~int(); // error: int is not type-name but type-specifier
+    using foo = int;
+    i.~foo(); // OK
+    ~int();   // OK (not a destructor!)
+
+
+CppCon 2018 - Timur Doumler - I can has grammar?
+------------------------------------------------
+
+https://youtu.be/tsG95Y-C14k
+
+Alternative tokens
+
+.. code:: c++
+
+    struct Foo
+    {
+        Foo();
+        compl Foo();
+        Foo(const Foo bitand);
+        Foo(Foo and);
+    };
+
 Twitter
 -------
 

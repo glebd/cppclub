@@ -143,6 +143,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb3-11" title="11"><span class="kw">auto</span> t3 = Foo::preconstruct(args);</a>
 <a class="sourceLine" id="cb3-12" title="12"><span class="bu">std::</span>vector&lt;Foo&gt; objects;</a>
 <a class="sourceLine" id="cb3-13" title="13">objects.emplace_back(<span class="bu">std::</span>move(*t3));</a></code></pre></div>
+<h1 id="cppcon-2018---timur-doumler---i-can-has-grammar">CppCon 2018 - Timur Doumler - I can has grammar?</h1>
+<p><a href="https://youtu.be/tsG95Y-C14k">https://youtu.be/tsG95Y-C14k</a></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="co">// MSVC rejects, GCC accepts, Clang accepts</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="at">extern</span> <span class="at">extern</span> <span class="st">&quot;C++&quot;</span> <span class="at">extern</span> <span class="st">&quot;C&quot;</span> <span class="at">extern</span> <span class="st">&quot;C++&quot;</span> <span class="dt">int</span> x;</a>
+<a class="sourceLine" id="cb4-3" title="3"></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="co">// MSVC accepts, GCC rejects, Clang accepts</span></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="at">extern</span> <span class="st">&quot;C++&quot;</span> <span class="at">extern</span> <span class="st">&quot;C&quot;</span> <span class="at">extern</span> <span class="st">&quot;C++&quot;</span> <span class="at">extern</span> <span class="dt">int</span> x;</a></code></pre></div>
+<h1 id="cppcon-2018---timur-doumler---i-can-has-grammar-1">CppCon 2018 - Timur Doumler - I can has grammar?</h1>
+<p><a href="https://youtu.be/tsG95Y-C14k">https://youtu.be/tsG95Y-C14k</a></p>
+<div class="line-block"><em>selection-statement:</em><br />
+    <code>if constexpr</code><sub>opt</sub> ( <em>init-statement</em><sub>opt</sub> <em>condition</em> ) <em>statement</em></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="cf">if</span> (<span class="kw">class</span> foo; !ret.second) <span class="co">/* ... */</span>;</a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="cf">if</span> (<span class="kw">false</span>; <span class="kw">true</span>) <span class="co">/* ... */</span>;</a>
+<a class="sourceLine" id="cb5-4" title="4"></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="cf">if</span> (; <span class="kw">true</span>) <span class="co">/* ... */</span>;</a></code></pre></div>
+<h1 id="cppcon-2018---timur-doumler---i-can-has-grammar-2">CppCon 2018 - Timur Doumler - I can has grammar?</h1>
+<p><a href="https://youtu.be/tsG95Y-C14k">https://youtu.be/tsG95Y-C14k</a></p>
+<p>Declare and initialise a variable of type "function pointer":</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">auto</span> (*fp)() -&gt; <span class="dt">int</span>(&amp;f);</a></code></pre></div>
+<h1 id="cppcon-2018---timur-doumler---i-can-has-grammar-3">CppCon 2018 - Timur Doumler - I can has grammar?</h1>
+<p><a href="https://youtu.be/tsG95Y-C14k">https://youtu.be/tsG95Y-C14k</a></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">struct</span> foo;</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="dt">void</span> bar(foo foo);</a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="dt">void</span> bar(foo(foo)); <span class="co">// vexing parse</span></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="dt">void</span> bar(foo((foo))); <span class="co">// more vexing parse</span></a></code></pre></div>
+<h1 id="cppcon-2018---timur-doumler---i-can-has-grammar-4">CppCon 2018 - Timur Doumler - I can has grammar?</h1>
+<p><a href="https://youtu.be/tsG95Y-C14k">https://youtu.be/tsG95Y-C14k</a></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">class</span> bar {};</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="dt">int</span> bar;     <span class="co">// OK</span></a>
+<a class="sourceLine" id="cb8-3" title="3">bar b;       <span class="co">// error</span></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="kw">class</span> bar b; <span class="co">// OK</span></a>
+<a class="sourceLine" id="cb8-5" title="5"><span class="kw">class</span> <span class="bu">std::</span>vector&lt;<span class="kw">class</span> bar&gt; bars; <span class="co">// OK</span></a>
+<a class="sourceLine" id="cb8-6" title="6"></a>
+<a class="sourceLine" id="cb8-7" title="7"><span class="co">// also acts as a forward declaration</span></a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="dt">void</span> foo(<span class="kw">struct</span> S* x);</a>
+<a class="sourceLine" id="cb8-9" title="9"></a>
+<a class="sourceLine" id="cb8-10" title="10"><span class="co">// weird scoping rules</span></a>
+<a class="sourceLine" id="cb8-11" title="11"><span class="kw">class</span> C { <span class="dt">void</span> foo(<span class="kw">struct</span> S* x); };</a>
+<a class="sourceLine" id="cb8-12" title="12">S* s;</a></code></pre></div>
+<h1 id="cppcon-2018---timur-doumler---i-can-has-grammar-5">CppCon 2018 - Timur Doumler - I can has grammar?</h1>
+<p><a href="https://youtu.be/tsG95Y-C14k">https://youtu.be/tsG95Y-C14k</a></p>
+<p><em>pseudo-destructor-name</em></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">int</span> i;</a>
+<a class="sourceLine" id="cb9-2" title="2">i.~<span class="dt">int</span>(); <span class="co">// error: int is not type-name but type-specifier</span></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="kw">using</span> foo = <span class="dt">int</span>;</a>
+<a class="sourceLine" id="cb9-4" title="4">i.~foo(); <span class="co">// OK</span></a>
+<a class="sourceLine" id="cb9-5" title="5">~<span class="dt">int</span>();   <span class="co">// OK (not a destructor!)</span></a></code></pre></div>
+<h1 id="cppcon-2018---timur-doumler---i-can-has-grammar-6">CppCon 2018 - Timur Doumler - I can has grammar?</h1>
+<p><a href="https://youtu.be/tsG95Y-C14k">https://youtu.be/tsG95Y-C14k</a></p>
+<p>Alternative tokens</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">struct</span> Foo</a>
+<a class="sourceLine" id="cb10-2" title="2">{</a>
+<a class="sourceLine" id="cb10-3" title="3">    Foo();</a>
+<a class="sourceLine" id="cb10-4" title="4">    <span class="kw">compl</span> Foo();</a>
+<a class="sourceLine" id="cb10-5" title="5">    Foo(<span class="at">const</span> Foo <span class="kw">bitand</span>);</a>
+<a class="sourceLine" id="cb10-6" title="6">    Foo(Foo <span class="kw">and</span>);</a>
+<a class="sourceLine" id="cb10-7" title="7">};</a></code></pre></div>
 <h1 id="twitter">Twitter</h1>
 <p><img src="img/js-increment.png" alt="image" /></p>
 </body>
