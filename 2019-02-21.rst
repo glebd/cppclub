@@ -1,0 +1,8 @@
+----
+
+Fast_ber: ASN.1 BER serialization library
+-----------------------------------------
+
+* https://github.com/Samuel-Tyler/fast_ber
+* https://www.reddit.com/r/cpp/comments/anwlrs/fast_ber_asn1_ber_serialization_library_written/
+* https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One
