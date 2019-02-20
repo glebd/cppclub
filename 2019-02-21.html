@@ -97,7 +97,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="moving-iterators-in-c">Moving iterators in C++</h1>
 <p><a href="https://cukic.co/2019/02/09/moving-iterators-in-cxx/">https://cukic.co/2019/02/09/moving-iterators-in-cxx/</a></p>
 <blockquote>
-<p><code>std::move_iterator</code> is an iterator adaptor which behaves exactly like the underlying iterator, except that dereferencing converts the value returned by the underlying iterator into an rvalue. (<a href="https://en.cppreference.com/w/cpp/iterator/move_iterator">https://en.cppreference.com/w/cpp/iterator/move_iterator</a>)</p>
+<p><code>std::move_iterator</code> is an iterator adaptor which behaves exactly like the underlying iterator, except that dereferencing converts the value returned by the underlying iterator into an <em>rvalue</em>. (<a href="https://en.cppreference.com/w/cpp/iterator/move_iterator">https://en.cppreference.com/w/cpp/iterator/move_iterator</a>)</p>
 </blockquote>
 <div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">std::</span>vector&lt;fs::directory_entry&gt; results;</a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="kw">auto</span> dir_items = files_in_dir(...);</a>
@@ -105,6 +105,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="low-cost-deterministic-c-exceptions-for-embedded-systems">Low-cost Deterministic C++ Exceptions for Embedded Systems</h1>
 <p><a href="https://www.research.ed.ac.uk/portal/files/78829292/low_cost_deterministic_C_exceptions_for_embedded_systems.pdf">https://www.research.ed.ac.uk/portal/files/78829292/low_cost_deterministic_C_exceptions_for_embedded_systems.pdf</a></p>
 <p>James Renwick, Tom Spink, Björn Franke (University of Edinburgh)</p>
+<blockquote>
+<p>In our novel C++ exception implementation we make use of a stack-allocated object that records the necessary run-time information for throwing an exception, such as the type and size of the exception object. This state is allocated in a single place and is passed between functions via an implicit function parameter injected into functions which support exceptions. The state is initialised by <code>throw</code> expressions, and is re-used to enable re-throwing. <code>catch</code> statements use the state in order to determine whether they can handle the exception. After a call to a function which may throw exceptions, a run-time check is inserted to test whether the state containsan active exception.</p>
+</blockquote>
 <h1 id="fast_ber-asn.1-ber-serialization-library">Fast_ber: ASN.1 BER serialization library</h1>
 <ul>
 <li><a href="https://github.com/Samuel-Tyler/fast_ber">https://github.com/Samuel-Tyler/fast_ber</a></li>
