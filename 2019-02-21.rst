@@ -7,10 +7,46 @@ Bryce Lelbach's Kona Twitter Poll
 
 https://www.reddit.com/r/cpp/comments/aq8rxf/bryce_lelbach_on_twitter_what_proposed_c20/
 
-Five Awesome C++ Papers For Kona 2019 ISO Meeting
--------------------------------------------------
+Twitter
+-------
 
-https://www.bfilipek.com/2019/02/papers-kona.html
+.. image:: img/ewg-ransom.png
+
+Kona Trip Reports
+-----------------
+
+* Modules! Coroutines! Contracts! Ranges! Constexpr! Spaceships! Calendars! Time zones!
+* Bryce Lelbach https://www.reddit.com/r/cpp/comments/au0c4x/201902_kona_iso_c_committee_trip_report_c20/
+  * The reports of modules being dead on arrival have been greatly exaggerated. https://www.reddit.com/r/cpp/comments/au0c4x/201902_kona_iso_c_committee_trip_report_c20/eh4stfg/
+  * More Reddit https://www.reddit.com/r/programming/comments/au1ie3/201902_kona_iso_c_committee_trip_report_c20/
+  * Hacker News https://news.ycombinator.com/item?id=19235702
+* Herb Sutter https://herbsutter.com/2019/02/23/trip-report-winter-iso-c-standards-meeting-kona/
+  * Reddit https://www.reddit.com/r/cpp/comments/au1skl/herbs_kona_trip_report_winter_iso_c_standards/
+
+    At our next meeting in July, we expect to formally adopt a few additional features that were design-approved at this meeting but didn’t complete full wording specification review this week <...> (formatting, ``flat_map`` etc.)
+
+C++20
+-----
+
+Bryce Lelbach:
+
+    TL;DR: C++20 may well be as big a release as C++11.
+
+.. image:: img/epic_win.jpg
+   :width: 912 px
+   :height: 967 px
+   :scale: 25 %
+
+Eigen + MTS + Google Ceres Solver = core dump
+---------------------------------------------
+
+* Eigen http://eigen.tuxfamily.org/index.php?title=Main_Page
+* MTS http://www.desy.de/user/projects/C++/products/mts.html
+* Ceres Solver http://ceres-solver.org/
+
+.. code:: c++
+
+    bool aligned = ((unsigned long)p % 16) == 0;
 
 C++ Binary Compatibility and Pain-Free Upgrades to Visual Studio 2019
 ---------------------------------------------------------------------
@@ -54,4 +90,4 @@ Twitter
 Twitter
 -------
 
-.. image:: img/ewg-ransom.png
+.. image:: img/load-bearing-bug.png
