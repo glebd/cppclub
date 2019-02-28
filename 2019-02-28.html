@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gleb Dolgich" />
-  <meta name="dcterms.date" content="2019-02-21" />
+  <meta name="dcterms.date" content="2019-02-28" />
   <title>C++ Club Meeting Notes</title>
   <style>
       code{white-space: pre-wrap;}
@@ -84,7 +84,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header">
 <h1 class="title">C++ Club Meeting Notes</h1>
 <p class="author">Gleb Dolgich</p>
-<p class="date">2019-02-21</p>
+<p class="date">2019-02-28</p>
 </header>
 <hr />
 <h1 id="bryce-lelbachs-kona-twitter-poll">Bryce Lelbach's Kona Twitter Poll</h1>
@@ -113,6 +113,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>TL;DR: C++20 may well be as big a release as C++11.</p>
 </blockquote>
 <p><img src="img/epic_win.jpg" alt="image" width="228" height="242" /></p>
+<h1 id="api-design-iterator-based-vs.-container-based">API design: iterator-based vs. container-based</h1>
+<p>Pros:</p>
+<ul>
+<li>Iterator-based API is more flexible
+<ul>
+<li>works with different containers</li>
+<li>works with types that expose differently-named <strong>begin</strong> and <strong>end</strong> member functions</li>
+<li>works on ranges of data instead of the entire container</li>
+</ul></li>
+<li>Protobuf APIs are iterator-based</li>
+<li>Flatbuffers are iterator-based</li>
+<li>Standard and Boost algorithms are iterator-based</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Not as readable as container-based API</li>
+</ul>
 <h1 id="eigen-mts-google-ceres-solver-segfault">Eigen + MTS + Google Ceres Solver = SEGFAULT</h1>
 <ul>
 <li>Eigen <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">http://eigen.tuxfamily.org/index.php?title=Main_Page</a></li>
@@ -134,46 +151,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>C++ On Sea is definitely the best conference I have ever been to.</p>
 <p>The opener was titled “Hello, World”, there was a “main()” plenary hall and session rooms titled “const west”, “east const”, and “unsigned”. The latter was the smallest of the session rooms and had an overflow problem a few times, but luckily that did not lead to undefined behavior, because C++ conference attendees seem to be very nice people in general.</p>
 </blockquote>
-<h1 id="cppcon-2018---mark-elendt---dangling-in-french-and-english">CppCon 2018 - Mark Elendt - Dangling in French and English</h1>
-<p><a href="https://youtu.be/jieYLTcmTS0">https://youtu.be/jieYLTcmTS0</a></p>
-<p><img src="img/elendt-dangling-1.png" alt="image" /></p>
-<h1 id="cppcon-2018---mark-elendt---dangling-in-french-and-english-1">CppCon 2018 - Mark Elendt - Dangling in French and English</h1>
-<p><a href="https://youtu.be/jieYLTcmTS0">https://youtu.be/jieYLTcmTS0</a></p>
-<p><img src="img/elendt-dangling-2.png" alt="image" /></p>
 <h1 id="c-binary-compatibility-and-pain-free-upgrades-to-visual-studio-2019">C++ Binary Compatibility and Pain-Free Upgrades to Visual Studio 2019</h1>
 <p><a href="https://blogs.msdn.microsoft.com/vcblog/2019/01/31/cpp-binary-compatibility-and-pain-free-upgrades-to-visual-studio-2019/">https://blogs.msdn.microsoft.com/vcblog/2019/01/31/cpp-binary-compatibility-and-pain-free-upgrades-to-visual-studio-2019/</a></p>
 <h1 id="visual-studio-2019-release-candidate-rc-now-available">Visual Studio 2019 Release Candidate (RC) now available</h1>
 <p><a href="https://devblogs.microsoft.com/visualstudio/visual-studio-2019-release-candidate-rc-now-available/">https://devblogs.microsoft.com/visualstudio/visual-studio-2019-release-candidate-rc-now-available/</a></p>
-<h1 id="moving-iterators-in-c">Moving iterators in C++</h1>
-<p><a href="https://cukic.co/2019/02/09/moving-iterators-in-cxx/">https://cukic.co/2019/02/09/moving-iterators-in-cxx/</a></p>
-<blockquote>
-<p><code>std::move_iterator</code> is an iterator adaptor which behaves exactly like the underlying iterator, except that dereferencing converts the value returned by the underlying iterator into an <em>rvalue</em>. (<a href="https://en.cppreference.com/w/cpp/iterator/move_iterator">https://en.cppreference.com/w/cpp/iterator/move_iterator</a>)</p>
-</blockquote>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="bu">std::</span>vector&lt;fs::directory_entry&gt; results;</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="kw">auto</span> dir_items = files_in_dir(...);</a>
-<a class="sourceLine" id="cb2-3" title="3">results.insert(results.end(), dir_items.cbegin(), dir_items.cend());</a></code></pre></div>
-<h1 id="low-cost-deterministic-c-exceptions-for-embedded-systems">Low-cost Deterministic C++ Exceptions for Embedded Systems</h1>
-<p><a href="https://www.research.ed.ac.uk/portal/files/78829292/low_cost_deterministic_C_exceptions_for_embedded_systems.pdf">https://www.research.ed.ac.uk/portal/files/78829292/low_cost_deterministic_C_exceptions_for_embedded_systems.pdf</a></p>
-<p>James Renwick, Tom Spink, Björn Franke (University of Edinburgh)</p>
-<blockquote>
-<p>In our novel C++ exception implementation we make use of a stack-allocated object that records the necessary run-time information for throwing an exception, such as the type and size of the exception object. This state is allocated in a single place and is passed between functions via an implicit function parameter injected into functions which support exceptions. The state is initialised by <code>throw</code> expressions, and is re-used to enable re-throwing. <code>catch</code> statements use the state in order to determine whether they can handle the exception. After a call to a function which may throw exceptions, a run-time check is inserted to test whether the state containsan active exception.</p>
-</blockquote>
-<h1 id="fast_ber-asn.1-ber-serialization-library">Fast_ber: ASN.1 BER serialization library</h1>
-<ul>
-<li><a href="https://github.com/Samuel-Tyler/fast_ber">https://github.com/Samuel-Tyler/fast_ber</a></li>
-<li><a href="https://www.reddit.com/r/cpp/comments/anwlrs/fast_ber_asn1_ber_serialization_library_written/">https://www.reddit.com/r/cpp/comments/anwlrs/fast_ber_asn1_ber_serialization_library_written/</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One">https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One</a></li>
-</ul>
-<h1 id="c-its-not-you.-its-me.">C++, it’s not you. It’s me.</h1>
-<ul>
-<li>Blog post: <a href="https://c0de517e.blogspot.com/2019/02/c-its-not-you-its-me.html">https://c0de517e.blogspot.com/2019/02/c-its-not-you-its-me.html</a>
-<ul>
-<li><a href="https://www.reddit.com/r/cpp/comments/av8mmz/c_its_not_you_its_me/">Reddit</a></li>
-</ul></li>
-</ul>
-<div class="line-block">If you follow the twitter-verse (ok, and you happen to be in the same small circle of grumpy gamedevs that forms my bubble) you might have noticed lately a rise of rage and sarcasm against C++ and the direction it's taking.<br />
-<br />
-I don't want to post all the relevant bits, but the crux of the issue, for the lucky among you who don't do social media, is the growing disconnect between people woking on big, complex, performance-sensitive and often monolithic and legacy-ridden codebases that we find in game development, and the ideas of "modernity” of the C++ standard community.</div>
 <h1 id="twitter-1">Twitter</h1>
 <p><img src="img/cmake-cats.png" alt="image" /></p>
 <h1 id="twitter-2">Twitter</h1>
