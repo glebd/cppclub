@@ -42,8 +42,9 @@ Eigen + MTS + Google Ceres Solver = SEGFAULT
 
 * Eigen http://eigen.tuxfamily.org/index.php?title=Main_Page
 * Ceres Solver http://ceres-solver.org/
-* Memory managers 
+* Memory managers:
   * MTS http://www.desy.de/user/projects/C++/products/mts.html
+    - for every 10000 allocations 13 to 17 were unaligned
   * TCMalloc (Google) http://goog-perftools.sourceforge.net/doc/tcmalloc.html
   * Jemalloc (FreeBSD, Facebook) http://jemalloc.net/
 
@@ -103,6 +104,16 @@ Fast_ber: ASN.1 BER serialization library
 * https://github.com/Samuel-Tyler/fast_ber
 * https://www.reddit.com/r/cpp/comments/anwlrs/fast_ber_asn1_ber_serialization_library_written/
 * https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One
+
+C++, it’s not you. It’s me.
+---------------------------
+
+* Blog post: https://c0de517e.blogspot.com/2019/02/c-its-not-you-its-me.html
+  * `Reddit <https://www.reddit.com/r/cpp/comments/av8mmz/c_its_not_you_its_me/>`_
+
+| If you follow the twitter-verse (ok, and you happen to be in the same small circle of grumpy gamedevs that forms my bubble) you might have noticed lately a rise of rage and sarcasm against C++ and the direction it's taking.
+|
+| I don't want to post all the relevant bits, but the crux of the issue, for the lucky among you who don't do social media, is the growing disconnect between people woking on big, complex, performance-sensitive and often monolithic and legacy-ridden codebases that we find in game development, and the ideas of "modernity” of the C++ standard community.
 
 Twitter
 -------
