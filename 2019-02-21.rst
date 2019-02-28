@@ -37,21 +37,43 @@ Bryce Lelbach:
    :height: 967 px
    :scale: 25 %
 
-Eigen + MTS + Google Ceres Solver = core dump
----------------------------------------------
+Eigen + MTS + Google Ceres Solver = SEGFAULT
+--------------------------------------------
 
 * Eigen http://eigen.tuxfamily.org/index.php?title=Main_Page
-* MTS http://www.desy.de/user/projects/C++/products/mts.html
 * Ceres Solver http://ceres-solver.org/
+* Memory managers 
+  * MTS http://www.desy.de/user/projects/C++/products/mts.html
+  * TCMalloc (Google) http://goog-perftools.sourceforge.net/doc/tcmalloc.html
+  * Jemalloc (FreeBSD, Facebook) http://jemalloc.net/
 
 .. code:: c++
 
     bool aligned = ((unsigned long)p % 16) == 0;
 
+CppCon 2018 - Mark Elendt - Dangling in French and English
+----------------------------------------------------------
+
+https://youtu.be/jieYLTcmTS0
+
+.. image:: img/elendt-dangling-1.png
+
+CppCon 2018 - Mark Elendt - Dangling in French and English
+----------------------------------------------------------
+
+https://youtu.be/jieYLTcmTS0
+
+.. image:: img/elendt-dangling-2.png
+
 C++ Binary Compatibility and Pain-Free Upgrades to Visual Studio 2019
 ---------------------------------------------------------------------
 
 https://blogs.msdn.microsoft.com/vcblog/2019/01/31/cpp-binary-compatibility-and-pain-free-upgrades-to-visual-studio-2019/
+
+Visual Studio 2019 Release Candidate (RC) now available
+-------------------------------------------------------
+
+https://devblogs.microsoft.com/visualstudio/visual-studio-2019-release-candidate-rc-now-available/
 
 Moving iterators in C++
 -----------------------

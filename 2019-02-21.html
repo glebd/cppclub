@@ -113,15 +113,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>TL;DR: C++20 may well be as big a release as C++11.</p>
 </blockquote>
 <p><img src="img/epic_win.jpg" alt="image" width="228" height="242" /></p>
-<h1 id="eigen-mts-google-ceres-solver-core-dump">Eigen + MTS + Google Ceres Solver = core dump</h1>
+<h1 id="eigen-mts-google-ceres-solver-segfault">Eigen + MTS + Google Ceres Solver = SEGFAULT</h1>
 <ul>
 <li>Eigen <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">http://eigen.tuxfamily.org/index.php?title=Main_Page</a></li>
-<li>MTS <a href="http://www.desy.de/user/projects/C++/products/mts.html">http://www.desy.de/user/projects/C++/products/mts.html</a></li>
 <li>Ceres Solver <a href="http://ceres-solver.org/">http://ceres-solver.org/</a></li>
+<li>Memory managers
+<ul>
+<li>MTS <a href="http://www.desy.de/user/projects/C++/products/mts.html">http://www.desy.de/user/projects/C++/products/mts.html</a></li>
+<li>TCMalloc (Google) <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html">http://goog-perftools.sourceforge.net/doc/tcmalloc.html</a></li>
+<li>Jemalloc (FreeBSD, Facebook) <a href="http://jemalloc.net/">http://jemalloc.net/</a></li>
+</ul></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">bool</span> aligned = ((<span class="dt">unsigned</span> <span class="dt">long</span>)p % <span class="dv">16</span>) == <span class="dv">0</span>;</a></code></pre></div>
+<h1 id="cppcon-2018---mark-elendt---dangling-in-french-and-english">CppCon 2018 - Mark Elendt - Dangling in French and English</h1>
+<p><a href="https://youtu.be/jieYLTcmTS0">https://youtu.be/jieYLTcmTS0</a></p>
+<p><img src="img/elendt-dangling-1.png" alt="image" /></p>
+<h1 id="cppcon-2018---mark-elendt---dangling-in-french-and-english-1">CppCon 2018 - Mark Elendt - Dangling in French and English</h1>
+<p><a href="https://youtu.be/jieYLTcmTS0">https://youtu.be/jieYLTcmTS0</a></p>
+<p><img src="img/elendt-dangling-2.png" alt="image" /></p>
 <h1 id="c-binary-compatibility-and-pain-free-upgrades-to-visual-studio-2019">C++ Binary Compatibility and Pain-Free Upgrades to Visual Studio 2019</h1>
 <p><a href="https://blogs.msdn.microsoft.com/vcblog/2019/01/31/cpp-binary-compatibility-and-pain-free-upgrades-to-visual-studio-2019/">https://blogs.msdn.microsoft.com/vcblog/2019/01/31/cpp-binary-compatibility-and-pain-free-upgrades-to-visual-studio-2019/</a></p>
+<h1 id="visual-studio-2019-release-candidate-rc-now-available">Visual Studio 2019 Release Candidate (RC) now available</h1>
+<p><a href="https://devblogs.microsoft.com/visualstudio/visual-studio-2019-release-candidate-rc-now-available/">https://devblogs.microsoft.com/visualstudio/visual-studio-2019-release-candidate-rc-now-available/</a></p>
 <h1 id="moving-iterators-in-c">Moving iterators in C++</h1>
 <p><a href="https://cukic.co/2019/02/09/moving-iterators-in-cxx/">https://cukic.co/2019/02/09/moving-iterators-in-cxx/</a></p>
 <blockquote>
