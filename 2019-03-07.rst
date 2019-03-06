@@ -5,7 +5,13 @@ Kona Trip Reports
 
 * `CppCast: Kona Trip Report with Peter Bindels <http://cppcast.com/2019/02/peter-bindels/>`_
 * `Timur Doumler <http://timur.audio/trip-report-february-2019-iso-c-committee-meeting-kona-hawaii>`_
-* `Corentin Jabot <https://cor3ntin.github.io/posts/kona2019/>`_
+* `Corentin Jabot <https://cor3ntin.github.io/posts/kona2019/>`_ (`Reddit <https://www.reddit.com/r/cpp/comments/aw3x67/kona_a_trip_report/>`_)
+  - 177 papers, 144 never seen before
+  - One contention point of the Coroutines TS is that it always heap-allocate the type-erased coroutine frame and relies on impressive optimization techniques to make these allocations disappear when the frame does not outlive the caller’s context. The Core Coroutine proposal offered deterministic stack allocations of coroutines frames. The issue with having the coroutine frame allocated on the stack is that it can not be optimized away without black magic. That black magic now has a name: Deferred layout. (Deemed very complex to implement by compiler vendors.)
+  - https://github.com/lewissbaker/cppcoro
+  - https://github.com/luncliff/coroutine
+  - There will be a paper in the post-mailling which offer a great way to use ``await`` and ``yield`` as keyword without breaking any existing code.
+  - Voted against Modules.
 
 CppCon 2018 - Mark Elendt - Dangling in French and English
 ----------------------------------------------------------
@@ -20,6 +26,209 @@ CppCon 2018 - Mark Elendt - Dangling in French and English
 https://youtu.be/jieYLTcmTS0
 
 .. image:: img/elendt-dangling-2.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-1.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-2.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-3.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-4.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-5.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-6.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-7.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-8.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-9.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-10.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-11.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-12.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-13.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-14.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-15.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-16.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-17.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-18.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-19.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-20.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-21.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-22.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-23.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-24.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-25.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-26.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-27.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-28.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-29.png
 
 What is the Strict Aliasing Rule and Why do we care?
 ----------------------------------------------------
