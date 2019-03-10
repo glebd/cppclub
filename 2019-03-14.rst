@@ -1,0 +1,234 @@
+----
+
+C++, it’s not you. It’s me.
+---------------------------
+
+Blog post: https://c0de517e.blogspot.com/2019/02/c-its-not-you-its-me.html
+
+    The crux of the issue <...> is the growing disconnect between people working on big, complex, performance-sensitive and often monolithic and legacy-ridden codebases that we find in game development, and the ideas of "modernity” of the C++ standard community.
+
+`Reddit <https://www.reddit.com/r/cpp/comments/av8mmz/c_its_not_you_its_me/>`_
+
+    I'm just going to throw it out there: I'm tired of reading this kind of stuff from game devs.
+
+    Acting like they are the only ones with performance issues. The only ones with complex codebases. The only ones who actually ship code. The ones who are just solving more unique and difficult problems than anyone else, for which C++ falls short by more.
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-1.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-2.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-3.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-4.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-5.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-6.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-7.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-8.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-9.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-10.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-11.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-12.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-13.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-14.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-15.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-16.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-17.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-18.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-19.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-20.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-21.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-22.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-23.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-24.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-25.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-26.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-27.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-28.png
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: img/brown-fn-templ-29.png
+
+RxCpp and Executors with Kirk Shoop
+-----------------------------------
+
+http://cppcast.com/2019/03/kirk-shoop/
+
+* Ranges deal with objects distributed in space, Rx deals with objects distributed in time
+* Executors need to be compatible with tasks and observables
+* Works at Facebook with Eric Niebler and Lewis Baker on making ranges work with coroutines and executors
+* Rx was developed for a garbage-collected object lifetime, but with C++ it's more complicated
+
+Quote
+-----
+
+Unknown:
+
+    Weeks of coding can save you hours of planning.
