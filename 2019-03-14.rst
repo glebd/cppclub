@@ -226,6 +226,35 @@ http://cppcast.com/2019/03/kirk-shoop/
 * Works at Facebook with Eric Niebler and Lewis Baker on making ranges work with coroutines and executors
 * Rx was developed for a garbage-collected object lifetime, but with C++ it's more complicated
 
+Stackless vs. Stackful Coroutines
+---------------------------------
+
+`Article by Varun Ramesh, 18 August 2017 <https://blog.varunramesh.net/posts/stackless-vs-stackful-coroutines/>`_
+
+Announcing the Open Sourcing of Windows Calculator
+--------------------------------------------------
+
+* `Blog post <https://blogs.windows.com/buildingapps/2019/03/06/announcing-the-open-sourcing-of-windows-calculator/>`_
+* https://github.com/Microsoft/calculator
+* https://www.reddit.com/r/programming/comments/ay2aq6/announcing_the_open_sourcing_of_windows/
+
+**clamp_cast** -- A saturating arithmetic cast
+----------------------------------------------
+
+https://github.com/p-groarke/clamp_cast
+
+A narrowing cast that does the right thing. clamp_cast will saturate output values at min or max if the input value would overflow / underflow.
+
+.. code:: c++
+
+    double ld = -42.0;
+    unsigned char uc = clamp_cast<unsigned char>(ld);
+    // uc == 0
+
+    float f = 500000.f;
+    char c = clamp_cast<char>(f);
+    // c == 127
+
 Quote
 -----
 
