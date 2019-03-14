@@ -1,5 +1,14 @@
 ----
 
+Making C++ Exception Handling Smaller On x64
+--------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/making-cpp-exception-handling-smaller-x64/
+
+    Visual Studio 2019 Preview 3 introduces a new feature to reduce the binary size of C++ exception handling (``try``/``catch`` and automatic destructors) on x64. Dubbed **FH4** (for ``__CxxFrameHandler4``, see below), I developed new formatting and processing for data used for C++ exception handling that is ~60% smaller than the existing implementation, resulting in overall binary reduction of up to 20% for programs with heavy usage of C++ exception handling.
+
+https://www.reddit.com/r/cpp/comments/ayeg0b/making_c_exception_handling_smaller_on_x64/
+
 C++, it’s not you. It’s me.
 ---------------------------
 
@@ -226,6 +235,60 @@ http://cppcast.com/2019/03/kirk-shoop/
 * Works at Facebook with Eric Niebler and Lewis Baker on making ranges work with coroutines and executors
 * Rx was developed for a garbage-collected object lifetime, but with C++ it's more complicated
 
+Same function parameters with different return type in C++17/C++20
+------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
+
+Before:
+
+.. code:: c++
+
+    template<typename R>
+    R foo(int i)
+    { ... }
+
+    foo<string>(1);
+
+Same function parameters with different return type in C++17/C++20
+------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
+
+After:
+
+.. code:: c++
+
+    template<class F> struct Auto : F {
+        // conversion operator
+        template<class T> operator T() {
+            return F::template operator()<T>();
+        }
+    };
+
+    template<class F> Auto(F) -> Auto<F>; // deduction guide
+
+Same function parameters with different return type in C++17/C++20
+------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
+
+After:
+
+.. code:: c++
+
+    template<class... A>
+    auto fooWrapper(A&&... a) {
+        return Auto{[&]<class T>() { return foo<T>(std::forward<A>(a)...); }};
+    };
+
+    template<class... A>
+    auto fooWrapper(int i) {
+        return Auto{[=]<class T>() { return foo<T>(i); }};
+    };
+
+    double d = fooWrapper(42);
+
 Stackless vs. Stackful Coroutines
 ---------------------------------
 
@@ -237,6 +300,7 @@ Announcing the Open Sourcing of Windows Calculator
 * `Blog post <https://blogs.windows.com/buildingapps/2019/03/06/announcing-the-open-sourcing-of-windows-calculator/>`_
 * https://github.com/Microsoft/calculator
 * https://www.reddit.com/r/programming/comments/ay2aq6/announcing_the_open_sourcing_of_windows/
+* `Counting Bugs in Windows Calculator <https://www.viva64.com/en/b/0615/>`_
 
 **clamp_cast** -- A saturating arithmetic cast
 ----------------------------------------------
