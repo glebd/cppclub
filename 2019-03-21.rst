@@ -1,0 +1,38 @@
+----
+
+Little-known C++: function-try-block
+------------------------------------
+
+https://mariusbancila.ro/blog/2019/03/13/little-known-cpp-function-try-block/
+
+.. code:: c++
+
+    int foo() { throw std::runtime_error("oops..."); }
+
+    int main() try {
+       foo();
+       return 0;
+    } catch (...) {
+       return -1;
+    }
+
+Little-known C++: function-try-block
+------------------------------------
+
+https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/
+
+.. code:: c++
+
+    int foo() { throw std::runtime_error("oops..."); }
+
+    struct bar {
+        bar()
+        try : data(foo()) {}
+        catch (std::exception const & e) { std::cout << e.what() << '\n'; }
+    private:
+       int data;
+    };
+
+    int main() {
+       bar b;
+    }
