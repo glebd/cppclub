@@ -36,3 +36,28 @@ https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/
     int main() {
        bar b;
     }
+
+libfacedetection
+----------------
+
+An open source library for face detection in images. The face detection speed can reach 1500FPS. The work is partly supported by the Science Foundation of Shenzhen (Government grant).
+
+* https://github.com/ShiqiYu/libfacedetection
+* https://www.reddit.com/r/programming/comments/b1ffbp/libfacedetection_an_open_source_library_for_face/
+* https://pjreddie.com/darknet/yolo/ -- Real-Time Object Detection
+
+Your favorite C++ code?
+-----------------------
+
+https://www.reddit.com/r/cpp/comments/abcgci/your_favorite_c_code/
+
+* Niels Lohmann's JSON library https://github.com/nlohmann/json (also Milo Yip's RapidJSON https://github.com/Tencent/rapidjson)
+* Sol 2 - Lua bindings https://github.com/ThePhD/sol2
+* effolkronium/random https://github.com/effolkronium/random
+* cereal - Serialization https://uscilab.github.io/cereal/
+* ranges-v3, fmtlib, pybind11
+* modm: a barebone embedded library generator https://modm.io/
+* amgcl: C++ library for solving large sparse linear systems with algebraic multigrid method https://github.com/ddemidov/amgcl
+* Blaze linear algebra library https://bitbucket.org/blaze-lib/blaze/wiki/Home
+* CTRE https://github.com/hanickadot/compile-time-regular-expressions
+* Crow: a C++ micro web framework inspired by Python Flask https://github.com/ipkn/crow
