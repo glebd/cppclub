@@ -1,7 +1,31 @@
 ----
 
-Little-known C++: function-try-block
-------------------------------------
+Post-Kona mailing
+-----------------
+
+Links
+~~~~~
+
+* http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-03
+* https://www.reddit.com/r/cpp/comments/b31y0p/c_standards_committee_papers_201903_postkona/
+
+Select papers
+~~~~~~~~~~~~~
+
+* http://wg21.link/p1103r3 Merging modules
+* http://wg21.link/p1485r0 Better keywords for the Coroutines TS
+* http://wg21.link/P0052R10 Generic Scope Guard and RAII Wrapper for the Standard Library
+* http://wg21.link/P1024r3 Usability Enhancements for ``std::span``
+* http://wg21.link/P1344R1 Pre/Post vs. Enspects/Exsures
+
+Kona trip report
+----------------
+
+* https://botondballo.wordpress.com/2019/03/20/trip-report-c-standards-meeting-in-kona-february-2019/
+  - https://www.reddit.com/r/cpp/comments/b3gcp8/trip_report_c_standards_meeting_in_kona_february/
+
+Little-known C++: function-try-block (1/2)
+------------------------------------------
 
 https://mariusbancila.ro/blog/2019/03/13/little-known-cpp-function-try-block/
 
@@ -16,8 +40,8 @@ https://mariusbancila.ro/blog/2019/03/13/little-known-cpp-function-try-block/
        return -1;
     }
 
-Little-known C++: function-try-block
-------------------------------------
+Little-known C++: function-try-block (2/2)
+------------------------------------------
 
 https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/
 
@@ -40,7 +64,8 @@ https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/
 libfacedetection
 ----------------
 
-An open source library for face detection in images. The face detection speed can reach 1500FPS. The work is partly supported by the Science Foundation of Shenzhen (Government grant).
+An open source library for face detection in images. The face detection speed can reach 1500FPS.
+The work is partly supported by the Science Foundation of Shenzhen (Government grant).
 
 * https://github.com/ShiqiYu/libfacedetection
 * https://www.reddit.com/r/programming/comments/b1ffbp/libfacedetection_an_open_source_library_for_face/
@@ -61,3 +86,67 @@ https://www.reddit.com/r/cpp/comments/abcgci/your_favorite_c_code/
 * Blaze linear algebra library https://bitbucket.org/blaze-lib/blaze/wiki/Home
 * CTRE https://github.com/hanickadot/compile-time-regular-expressions
 * Crow: a C++ micro web framework inspired by Python Flask https://github.com/ipkn/crow
+
+Micro-benchmarks
+----------------
+
+https://vorbrodt.blog/2019/03/18/micro-benchmarks/
+
+* Google Benchmark https://github.com/google/benchmark
+* Catch2 https://github.com/catchorg/Catch2
+* Hayai https://github.com/nickbruun/hayai
+* Celero https://github.com/DigitalInBlue/Celero
+* Nonius https://github.com/libnonius/nonius
+
+C++ iostreams: Unexpected but legal multithreaded behaviour
+-----------------------------------------------------------
+
+* https://ds9a.nl/articles/posts/iostreams-unexpected/
+* https://www.reddit.com/r/cpp/comments/b28zc2/c_iostreams_unexpected_but_legal_multithreaded/
+
+Microsoft SEAL
+--------------
+
+Microsoft SEAL is an easy-to-use and powerful homomorphic encryption library.
+
+* Project page: https://www.microsoft.com/en-us/research/project/microsoft-seal
+* Code: https://github.com/Microsoft/SEAL (MIT)
+
+   `Homomorphic Encryption <https://www.microsoft.com/en-us/research/project/homomorphic-encryption/>`_
+   refers to a new type of encryption technology that allows computation to be directly on encrypted data,
+   without requiring any decryption in the process. The results of the computations are encrypted, and
+   can be revealed only by the owner of the secret key.
+
+Quirks in Class Template Argument Deduction
+-------------------------------------------
+
+Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
+
+.. code:: c++
+
+    std::tuple<int> foo();
+
+    std::tuple x = foo();
+    auto y = foo();
+
+C++ Logging Libraries
+---------------------
+
+https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/
+
+* Spdlog https://github.com/gabime/spdlog
+* Loguru https://github.com/emilk/loguru
+* EasyLogging https://github.com/zuhd-org/easyloggingpp
+* Plog https://github.com/SergiusTheBest/plog
+* Google Log https://github.com/google/glog
+* P7 http://baical.net/p7.html
+
+Twitter
+-------
+
+.. image:: img/mov.png
+
+Twitter
+-------
+
+.. image:: img/bitcoin.png
