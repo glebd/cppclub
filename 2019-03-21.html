@@ -106,9 +106,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://botondballo.wordpress.com/2019/03/20/trip-report-c-standards-meeting-in-kona-february-2019/">https://botondballo.wordpress.com/2019/03/20/trip-report-c-standards-meeting-in-kona-february-2019/</a>
 <ul>
 <li><a href="https://www.reddit.com/r/cpp/comments/b3gcp8/trip_report_c_standards_meeting_in_kona_february/">https://www.reddit.com/r/cpp/comments/b3gcp8/trip_report_c_standards_meeting_in_kona_february/</a></li>
+<li>Status of the papers <a href="https://github.com/jensmaurer/papers/issues">https://github.com/jensmaurer/papers/issues</a></li>
 </ul></li>
 </ul>
-<h1 id="little-known-c-function-try-block">Little-known C++: function-try-block</h1>
+<h1 id="little-known-c-function-try-block-12">Little-known C++: function-try-block (1/2)</h1>
 <p><a href="https://mariusbancila.ro/blog/2019/03/13/little-known-cpp-function-try-block/">https://mariusbancila.ro/blog/2019/03/13/little-known-cpp-function-try-block/</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">int</span> foo() { <span class="cf">throw</span> <span class="bu">std::</span>runtime_error(<span class="st">&quot;oops...&quot;</span>); }</a>
 <a class="sourceLine" id="cb1-2" title="2"></a>
@@ -118,7 +119,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb1-6" title="6">} <span class="cf">catch</span> (...) {</a>
 <a class="sourceLine" id="cb1-7" title="7">   <span class="cf">return</span> -<span class="dv">1</span>;</a>
 <a class="sourceLine" id="cb1-8" title="8">}</a></code></pre></div>
-<h1 id="little-known-c-function-try-block-1">Little-known C++: function-try-block</h1>
+<h1 id="little-known-c-function-try-block-22">Little-known C++: function-try-block (2/2)</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/">https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/</a></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">int</span> foo() { <span class="cf">throw</span> <span class="bu">std::</span>runtime_error(<span class="st">&quot;oops...&quot;</span>); }</a>
 <a class="sourceLine" id="cb2-2" title="2"></a>
@@ -183,6 +184,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb3-2" title="2"></a>
 <a class="sourceLine" id="cb3-3" title="3"><span class="bu">std::</span>tuple x = foo();</a>
 <a class="sourceLine" id="cb3-4" title="4"><span class="kw">auto</span> y = foo();</a></code></pre></div>
+<h1 id="c-logging-libraries">C++ Logging Libraries</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/">https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/</a></p>
+<ul>
+<li>Spdlog <a href="https://github.com/gabime/spdlog">https://github.com/gabime/spdlog</a></li>
+<li>Loguru <a href="https://github.com/emilk/loguru">https://github.com/emilk/loguru</a></li>
+<li>EasyLogging <a href="https://github.com/zuhd-org/easyloggingpp">https://github.com/zuhd-org/easyloggingpp</a></li>
+<li>Plog <a href="https://github.com/SergiusTheBest/plog">https://github.com/SergiusTheBest/plog</a></li>
+<li>Google Log <a href="https://github.com/google/glog">https://github.com/google/glog</a></li>
+<li>P7 <a href="http://baical.net/p7.html">http://baical.net/p7.html</a></li>
+</ul>
+<h1 id="little-known-c-operator-auto">Little-known C++: <strong>operator auto</strong></h1>
+<p><a href="https://mariusbancila.ro/blog/2019/03/18/little-known-cpp-operator-auto/">https://mariusbancila.ro/blog/2019/03/18/little-known-cpp-operator-auto/</a></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">struct</span> foo {</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">public</span>:</a>
+<a class="sourceLine" id="cb4-3" title="3">   foo(<span class="dt">int</span> <span class="at">const</span> d) : data{d} {}</a>
+<a class="sourceLine" id="cb4-4" title="4">   <span class="kw">operator</span> <span class="kw">auto</span>() {<span class="cf">return</span> data;} <span class="co">// there can be only one</span></a>
+<a class="sourceLine" id="cb4-5" title="5">   <span class="kw">operator</span> <span class="dt">double</span>() {<span class="cf">return</span> <span class="kw">static_cast</span>&lt;<span class="dt">double</span>&gt;(data);}</a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="kw">private</span>:</a>
+<a class="sourceLine" id="cb4-7" title="7">   <span class="dt">int</span> data;</a>
+<a class="sourceLine" id="cb4-8" title="8">};</a>
+<a class="sourceLine" id="cb4-9" title="9"></a>
+<a class="sourceLine" id="cb4-10" title="10">foo f{<span class="dv">1</span>};</a>
+<a class="sourceLine" id="cb4-11" title="11"><span class="dt">int</span> n = f;</a>
+<a class="sourceLine" id="cb4-12" title="12"><span class="dt">double</span> d = f;</a></code></pre></div>
 <h1 id="twitter">Twitter</h1>
 <p><img src="img/mov.png" alt="image" /></p>
 <h1 id="twitter-1">Twitter</h1>

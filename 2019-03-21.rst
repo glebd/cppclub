@@ -23,6 +23,7 @@ Kona trip report
 
 * https://botondballo.wordpress.com/2019/03/20/trip-report-c-standards-meeting-in-kona-february-2019/
   - https://www.reddit.com/r/cpp/comments/b3gcp8/trip_report_c_standards_meeting_in_kona_february/
+  - Status of the papers https://github.com/jensmaurer/papers/issues
 
 Little-known C++: function-try-block (1/2)
 ------------------------------------------
@@ -64,8 +65,9 @@ https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/
 libfacedetection
 ----------------
 
-An open source library for face detection in images. The face detection speed can reach 1500FPS.
-The work is partly supported by the Science Foundation of Shenzhen (Government grant).
+An open source library for face detection in images. The face detection
+speed can reach 1500FPS. The work is partly supported by the Science
+Foundation of Shenzhen (Government grant).
 
 * https://github.com/ShiqiYu/libfacedetection
 * https://www.reddit.com/r/programming/comments/b1ffbp/libfacedetection_an_open_source_library_for_face/
@@ -112,10 +114,11 @@ Microsoft SEAL is an easy-to-use and powerful homomorphic encryption library.
 * Project page: https://www.microsoft.com/en-us/research/project/microsoft-seal
 * Code: https://github.com/Microsoft/SEAL (MIT)
 
-   `Homomorphic Encryption <https://www.microsoft.com/en-us/research/project/homomorphic-encryption/>`_
-   refers to a new type of encryption technology that allows computation to be directly on encrypted data,
-   without requiring any decryption in the process. The results of the computations are encrypted, and
-   can be revealed only by the owner of the secret key.
+    `Homomorphic Encryption <https://www.microsoft.com/en-us/research/project/homomorphic-encryption/>`_
+    refers to a new type of encryption technology that allows computation to be
+    directly on encrypted data, without requiring any decryption in the
+    process. The results of the computations are encrypted, and can be revealed
+    only by the owner of the secret key.
 
 Quirks in Class Template Argument Deduction
 -------------------------------------------
@@ -140,6 +143,26 @@ https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/
 * Plog https://github.com/SergiusTheBest/plog
 * Google Log https://github.com/google/glog
 * P7 http://baical.net/p7.html
+
+Little-known C++: **operator auto**
+-----------------------------------
+
+https://mariusbancila.ro/blog/2019/03/18/little-known-cpp-operator-auto/
+
+.. code:: c++
+
+   struct foo {
+   public:
+      foo(int const d) : data{d} {}
+      operator auto() {return data;} // there can be only one
+      operator double() {return static_cast<double>(data);}
+   private:
+      int data;
+   };
+
+   foo f{1};
+   int n = f;
+   double d = f;
 
 Twitter
 -------
