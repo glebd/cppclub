@@ -233,7 +233,11 @@ A pretty big list of C++ GUI libraries
 
 Philippe M. Groarke: https://philippegroarke.com/posts/2018/c++_ui_solutions/
 
-Reddit: https://www.reddit.com/r/cpp/comments/babfl5/a_pretty_big_list_of_c_gui_libraries/
+Reddit:
+
+* https://www.reddit.com/r/cpp/comments/babfl5/a_pretty_big_list_of_c_gui_libraries/
+* https://www.reddit.com/r/cpp/comments/9njw5n/is_there_an_easytouse_gui_library/
+* https://www.reddit.com/r/cpp/comments/9q07bu/any_library_as_small_as_wxwidgets_but_as_powerful/
 
 Modern UI in C++ https://www.reddit.com/r/cpp/comments/b3s2zq/modern_ui_in_c/
 

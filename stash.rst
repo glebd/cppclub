@@ -202,3 +202,245 @@ Uniform initialization is not broken
 ------------------------------------
 
 https://www.reddit.com/r/cpp/comments/as8pu1/uniform_initialization_is_not_broken/
+
+Are Headers Really the Problem?
+-------------------------------
+
+https://buckaroo.pm/posts/are-headers-really-the-problem/
+https://www.reddit.com/r/cpp/comments/auyl07/are_headers_really_the_problem/
+
+Error Handling in C++ or: Why You Should Use Eithers in Favor of Exceptions and Error-codes
+-------------------------------------------------------------------------------------------
+
+https://buckaroo.pm/posts/error-handling-in-cpp/
+https://www.reddit.com/r/cpp/comments/aqir7n/error_handling_in_c_eithers_vs_exceptions_vs/
+
+Boost.Outcome ready for Boost 1.70 release
+------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aqidl6/boostoutcome_ready_for_boost_170_release/
+
+What is Type Erasure?
+---------------------
+
+https://quuxplusone.github.io/blog/2019/03/18/what-is-type-erasure/
+
+Networking TS + Beast
+---------------------
+
+https://www.reddit.com/r/cpp/comments/b12iob/networking_ts_beast_new_tutorials_read_this_to/
+
+What is the Strict Aliasing Rule and Why do we care?
+----------------------------------------------------
+
+https://gist.github.com/shafik/848ae25ee209f698763cffee272a58f8
+
+C++ Special Member Function Guidelines
+--------------------------------------
+
+https://foonathan.net/special-member
+https://www.reddit.com/r/cpp/comments/avbscv/c_special_member_function_guidelines/
+
+Template meta-programming: Some testing and debugging tricks
+------------------------------------------------------------
+
+https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/
+
+Getting in trouble with mixed comparisons
+-----------------------------------------
+
+https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/
+
+span: the best span
+-------------------
+
+https://brevzin.github.io/c++/2018/12/03/span-best-span/
+https://www.reddit.com/r/cpp/comments/a3c1yd/span_the_best_span/
+
+C Weekly - Ep 144 - Pure Functions in C++
+-----------------------------------------
+
+https://www.reddit.com/r/cpp/comments/a2qzsv/c_weekly_ep_144_pure_functions_in_c/
+
+How to optimize C and C++ code in 2018
+--------------------------------------
+
+https://medium.com/@aka.rider/how-to-optimize-c-and-c-code-in-2018-bd4f90a72c2b
+
+Makefiles, Best Practices
+-------------------------
+
+https://danyspin97.org/blog/makefiles-best-practices/
+
+Behavior Trees
+--------------
+
+https://github.com/BehaviorTree/BehaviorTree.CPP/
+
+Cross-platform (C99/C++11) process library
+------------------------------------------
+
+https://github.com/DaanDeMeyer/reproc
+
+Do CPP users want/need a cross platform framework for plugin management?
+------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/9c9kqz/do_cpp_users_wantneed_a_cross_platform_framework/
+https://doc.qt.io/qt-5/plugins-howto.html
+https://www.boost.org/doc/libs/1_70_0/doc/html/boost_dll.html
+
+A new take on polymorphism in C++
+---------------------------------
+
+https://github.com/iboB/dynamix
+
+C++ Coroutines: Understanding the promise type
+----------------------------------------------
+
+https://lewissbaker.github.io/2018/09/05/understanding-the-promise-type
+
+C++ Coroutines: Understanding operator co_await
+-----------------------------------------------
+
+https://lewissbaker.github.io/2017/11/17/understanding-operator-co-await
+
+Coroutine Theory
+----------------
+
+https://lewissbaker.github.io/2017/09/25/coroutine-theory
+
+Shared Static Variable for All Template Class Instances
+-------------------------------------------------------
+
+https://hackernoon.com/shared-static-variable-for-all-template-class-instances-eaed385f332b
+
+C++ Telltales Series
+--------------------
+
+https://hackernoon.com/c-telltales-series-3a8c74a31629
+
+Reflection in C++, the way of EnTT
+----------------------------------
+
+https://www.reddit.com/r/cpp/comments/9gljxi/reflection_in_c_the_way_of_entt/
+https://github.com/skypjack/entt
+
+Modern Qt Development: The Top 10 Tools You Should Be Using
+-----------------------------------------------------------
+
+https://blog.qt.io/blog/2018/10/12/modern-qt-development-top-10-tools-using/
+https://www.reddit.com/r/cpp/comments/9njw5n/is_there_an_easytouse_gui_library/
+
+Real-life production functional style code in C++
+-------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/9ohsc0/reallife_production_functional_style_code_in_c/
+
+A Great Old-Timey Game-Programming Hack
+---------------------------------------
+
+http://blog.moertel.com/posts/2013-12-14-great-old-timey-game-programming-hack.html
+https://www.reddit.com/r/programming/comments/1t05uy/a_great_oldtimey_gameprogramming_hack/
+https://news.ycombinator.com/item?id=6913467
+
+Unaligned accesses in C/C++: what, why and solutions to do it properly
+----------------------------------------------------------------------
+
+https://blog.quarkslab.com/unaligned-accesses-in-cc-what-why-and-solutions-to-do-it-properly.html
+
+Declarations using Concepts
+---------------------------
+
+https://brevzin.github.io/c++/2018/10/20/concepts-declarations/
+
+Zero Overhead Deterministic Exceptions: throwing objects
+--------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/9r1pnb/zero_overhead_deterministic_exceptions_throwing/
+
+C++ Experts, what advice would you give to a new C++ developer?
+---------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/
+
+**fgl::signal**, a fast, multi-signature C++17 signal library (v0.1.0, proof of concept stage)
+----------------------------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/9sifhw/fglsignal_a_fast_multisignature_c17_signal/
+
+Polymorphism: function lists versus abstract interfaces
+-------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/9sfwml/polymorphism_function_lists_versus_abstract/
+
+Introducing Conduit for C++: Lazy Sequences Using the Coroutine TS
+------------------------------------------------------------------
+
+https://medium.com/@buckaroo.pm/introducing-conduit-lazy-sequences-using-the-coroutine-ts-b7e87dd85fcf
+
+C++ Operator Signatures
+-----------------------
+
+https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393
+
+Single file utilities for C++
+-----------------------------
+
+https://github.com/acdemiralp/acd
+
+Introduction to High-Performance Scientific Computing
+-----------------------------------------------------
+
+http://pages.tacc.utexas.edu/~eijkhout/istc/istc.html
+
+Deprecating and Deleting Functions in C++
+-----------------------------------------
+
+https://www.fluentcpp.com/2018/11/20/deprecating-and-deleting-functions-in-cpp/
+
+reproc 2.0.0 released!
+----------------------
+
+https://www.reddit.com/r/cpp/comments/9yxlge/reproc_200_released/
+
+Having fun in life!
+-------------------
+
+http://thiagocafe.com/view/20170910_Having_fun_in_life
+
+OutOfLine – A Memory-Locality Pattern for High Performance C++
+--------------------------------------------------------------
+
+https://blog.headlandstech.com/2018/08/15/outofline-a-memory-locality-pattern-for-high-performance-c/
+https://www.reddit.com/r/cpp/comments/984b3c/outofline_a_memorylocality_pattern_for_high/
+
+Units
+-----
+
+https://github.com/nholthaus/units
+
+Async Result Type for Coroutine TS
+----------------------------------
+
+https://github.com/jamboree/art
+
+CMake it modern using C++ and Qt
+--------------------------------
+
+https://www.cleanqt.io/blog/cmake-it-modern-using-c%2B%2B-and-qt,-part-1
+
+Mathematics behind Comparison #1: Equality and Equivalence Relations
+--------------------------------------------------------------------
+
+https://foonathan.net/blog/2018/06/20/equivalence-relations.html
+
+**std::string_view**: The Duct Tape of String Types
+---------------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/stdstring_view-the-duct-tape-of-string-types/
+https://www.reddit.com/r/cpp/comments/99b5mb/stdstring_view_the_duct_tape_of_string_types/
+
+The Knightmare of Initialization in C++
+---------------------------------------
+
+https://quuxplusone.github.io/blog/2019/02/18/knightmare-of-initialization/
