@@ -444,3 +444,17 @@ The Knightmare of Initialization in C++
 ---------------------------------------
 
 https://quuxplusone.github.io/blog/2019/02/18/knightmare-of-initialization/
+
+C++17 parser-combinator library, CppCmb
+---------------------------------------
+
+Cpp>>=Cmb
+
+* https://github.com/LPeter1997/CppCmb
+* https://www.reddit.com/r/cpp/comments/bemqaq/my_c17_parsercombinator_library_cppcmb_got_a_huge/
+
+What is unified function call syntax anyway?
+--------------------------------------------
+
+* https://brevzin.github.io/c++/2019/04/13/ufcs-history/
+* https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/
