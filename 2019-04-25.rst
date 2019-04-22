@@ -1,0 +1,23 @@
+----
+
+C++17/20 Features and Fixes in Visual Studio 2019
+-------------------------------------------------
+
+* https://devblogs.microsoft.com/cppblog/cpp17-20-features-and-fixes-in-vs-2019/
+* https://www.reddit.com/r/cpp/comments/bf3fmk/c1720_features_and_fixes_in_visual_studio_2019/
+
+Microsoft BlingFire - A lightning fast Finite State machine and REgular expression manipulation library
+-------------------------------------------------------------------------------------------------------
+
+* https://github.com/Microsoft/BlingFire (MIT)
+* https://www.reddit.com/r/programming/comments/bf6ks4/microsoft_bing_fire_tokenizer_10x_faster_than_nltk/
+* https://news.ycombinator.com/item?id=19687549
+
+On resolving the type vs member conflict in C++: The Color Color problem
+------------------------------------------------------------------------
+
+    In C++, there are ambiguities when a member function has the same name as a type.
+
+* https://devblogs.microsoft.com/oldnewthing/20190419-00/?p=102431
+* https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/
+* https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition
