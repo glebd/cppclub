@@ -71,24 +71,6 @@ After:
 
     double d = fooWrapper(42);
 
-**clamp_cast** -- A saturating arithmetic cast
-----------------------------------------------
-
-https://github.com/p-groarke/clamp_cast
-
-A narrowing cast that does the right thing. clamp_cast will saturate output values at min or max if the input value would overflow / underflow.
-
-.. code:: c++
-
-    double ld = -42.0;
-    unsigned char uc = clamp_cast<unsigned char>(ld);
-    // uc == 0
-
-    float f = 500000.f;
-    char c = clamp_cast<char>(f);
-    // c == 127
-
-
 Exception safe assignment
 -------------------------
 
@@ -163,11 +145,6 @@ Understanding when not to **std::move** in C++
 
 https://developers.redhat.com/blog/2019/04/12/understanding-when-not-to-stdmove-in-c/
 
-Micro-benchmarks
-----------------
-
-https://vorbrodt.blog/2019/03/18/micro-benchmarks/
-
 PhysicsFS vs **std::filesystem**
 --------------------------------
 
@@ -230,11 +207,6 @@ Networking TS + Beast
 
 https://www.reddit.com/r/cpp/comments/b12iob/networking_ts_beast_new_tutorials_read_this_to/
 
-What is the Strict Aliasing Rule and Why do we care?
-----------------------------------------------------
-
-https://gist.github.com/shafik/848ae25ee209f698763cffee272a58f8
-
 C++ Special Member Function Guidelines
 --------------------------------------
 
@@ -257,8 +229,8 @@ span: the best span
 https://brevzin.github.io/c++/2018/12/03/span-best-span/
 https://www.reddit.com/r/cpp/comments/a3c1yd/span_the_best_span/
 
-C Weekly - Ep 144 - Pure Functions in C++
------------------------------------------
+C++ Weekly - Ep 144 - Pure Functions in C++
+-------------------------------------------
 
 https://www.reddit.com/r/cpp/comments/a2qzsv/c_weekly_ep_144_pure_functions_in_c/
 
@@ -459,39 +431,6 @@ What is unified function call syntax anyway?
 * https://brevzin.github.io/c++/2019/04/13/ufcs-history/
 * https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/
 
-Quirks in Class Template Argument Deduction (1/2)
--------------------------------------------------
-
-Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
-
-.. code:: c++
-
-    std::tuple<int> foo();
-
-    std::tuple x = foo(); // tuple<tuple<int>>?
-    auto y = foo();       // tuple<int>
-
-What is the intent behind the declaration of variable ``x``?
-Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
-as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
-
-Quirks in Class Template Argument Deduction (2/2)
--------------------------------------------------
-
-A clearer example:
-
-.. code:: c++
-
-    // The tuple case
-    // unquestionably, tuple<int>
-    std::tuple a(1);
-
-    // unquestionably, tuple<tuple<int>,tuple<int>>
-    std::tuple b(a, a);
-
-    // ??
-    std::tuple c(a);
-
 C++ Logging Libraries
 ---------------------
 
@@ -527,104 +466,3 @@ Now:
     {
         int x;
     };
-
-A pretty big list of C++ GUI libraries
---------------------------------------
-
-Philippe M. Groarke: https://philippegroarke.com/posts/2018/c++_ui_solutions/
-
-Reddit:
-
-* https://www.reddit.com/r/cpp/comments/babfl5/a_pretty_big_list_of_c_gui_libraries/
-* https://www.reddit.com/r/cpp/comments/9njw5n/is_there_an_easytouse_gui_library/
-* https://www.reddit.com/r/cpp/comments/9q07bu/any_library_as_small_as_wxwidgets_but_as_powerful/
-
-Modern UI in C++ https://www.reddit.com/r/cpp/comments/b3s2zq/modern_ui_in_c/
-
-Modern Enums
-------------
-
-https://www.reddit.com/r/cpp/comments/b9xb3n/its_2019_we_have_the_power_of_constexpr_and/
-
-* Static Enum https://github.com/KonanM/static_enum
-* Magic Enum: Enum-to-String and String-to-Enum functions for modern C++ https://github.com/Neargye/magic_enum
-* Better Enums http://aantron.github.io/better-enums/
-* Wise Enum https://github.com/quicknir/wise_enum
-* Meta Enum https://github.com/therocode/meta_enum
-
-Nameof operator for modern C++
-------------------------------
-
-https://github.com/Neargye/nameof
-
-See also: CTTI https://github.com/Manu343726/ctti
-
-Xmake
------
-
-Xmake is a cross-platform build utility based on Lua.
-
-https://github.com/xmake-io/xmake
-
-Reddit: https://www.reddit.com/r/cpp/comments/bb46xi/github_xmakeioxmake_a_modern_cc_build_utility/
-
-Exhaustive and Composable Error Handling in C++ (1/3)
------------------------------------------------------
-
-`Fabian Kosmale <https://fkosmale.bitbucket.io/posts/exhaustive-and-composable-error-handling-in-c%2B%2B/#composable-error-handling>`_
-
-    TL;DR: You can emulate OCaml polymorphic sum type error handling in C++17.
-
-Code: https://bitbucket.org/fkosmale/composableresult/src/master
-Reddit: https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/
-
-    Some people also take exception to the fact that exception handling tables can bloat binaries, or to some <...> slow-down due to exceptions. While one might disagree on the severity of this issue <...>, this issue is important enough for all major compilers to provide a no-exceptions flag, which disables exception support. This makes exceptions a bad idea for library writers who want their libraries to work in as many contexts as possible.
-
-Exhaustive and Composable Error Handling in C++ (2/3)
------------------------------------------------------
-
-.. code:: c++
-
-    class AST;
-    struct SyntaxError {int line; int column;};
-    struct GrammarError {int line; int column; std::string explanation;};
-    auto parse(std::string input) -> Result<AST, SyntaxError, GrammarError>;
-
-    struct LengthError {int length;};
-    struct HeightError {int height;};
-    auto validate(AST ast) -> Result<AST, LengthError, HeightError>
-
-    struct DisplayError {std::string explanation;}
-    auto display(AST ast) -> void;
-
-Exhaustive and Composable Error Handling in C++ (3/3)
------------------------------------------------------
-
-.. code:: c++
-
-    auto result = parse(my_input)
-      .then(validate)
-      .then(display);
-    Switch(result)
-      .Case<SyntaxError>([](auto err){
-        report_error("Invalid syntax at line", e.line, ":", e.column);})
-      .Case<GrammarError>([](auto err){
-        report_error(e.explanation, "at ", e.line, ":", e.column);})
-      .Case<LengthError>([](auto err){
-        report_errror("illegal length: ", e.length);})
-      .Case<DisplayError>([](auto err){
-        report_error(e.explanation);})
-      | ESAC;
-    // Triggers static_assert as HeightError is unhandled
-
-Twitter
--------
-
-.. image:: img/co2-meeting-room.png
-
-Twitter
--------
-
-Greg Ferro:
-
-    An engineer who works remotely should be called an 'engifar'
