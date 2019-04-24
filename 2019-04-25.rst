@@ -173,6 +173,19 @@ Awesome Parallel Computing Resources
 
 https://github.com/cpp-taskflow/cpp-taskflow/blob/master/awesome-parallel-computing.md
 
+What are some things commonly taught in C++ that are really bad practice?
+-------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/
+
+* Using inheritance for code reuse. After a couple of years you have an unmaintainable spaghetti that goes 5 levels deep. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elka68o?utm_source=share&utm_medium=web2x>`_
+* Raw pointers/new/delete without RAII, improper use of raw (C) strings and arrays `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk6q6a?utm_source=share&utm_medium=web2x>`_
+* Trust the programmer. I trusted myself once, and it didn’t end well. Never again making that mistake. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk23m0?utm_source=share&utm_medium=web2x>`_
+* ``using namespace std;`` `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elkfyls?utm_source=share&utm_medium=web2x>`_
+* Abuse of ``protected``. Where author of base class assumes you will correctly fiddle with protected members. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk97j4?utm_source=share&utm_medium=web2x>`_
+* Single entry, single exit. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/ells0vz?utm_source=share&utm_medium=web2x>`_
+* Throwing exceptions (!) `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk7qdu?utm_source=share&utm_medium=web2x>`_
+
 Twitter
 -------
 
