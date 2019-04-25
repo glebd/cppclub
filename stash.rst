@@ -71,24 +71,6 @@ After:
 
     double d = fooWrapper(42);
 
-**clamp_cast** -- A saturating arithmetic cast
-----------------------------------------------
-
-https://github.com/p-groarke/clamp_cast
-
-A narrowing cast that does the right thing. clamp_cast will saturate output values at min or max if the input value would overflow / underflow.
-
-.. code:: c++
-
-    double ld = -42.0;
-    unsigned char uc = clamp_cast<unsigned char>(ld);
-    // uc == 0
-
-    float f = 500000.f;
-    char c = clamp_cast<char>(f);
-    // c == 127
-
-
 Exception safe assignment
 -------------------------
 
@@ -163,11 +145,6 @@ Understanding when not to **std::move** in C++
 
 https://developers.redhat.com/blog/2019/04/12/understanding-when-not-to-stdmove-in-c/
 
-Micro-benchmarks
-----------------
-
-https://vorbrodt.blog/2019/03/18/micro-benchmarks/
-
 PhysicsFS vs **std::filesystem**
 --------------------------------
 
@@ -230,11 +207,6 @@ Networking TS + Beast
 
 https://www.reddit.com/r/cpp/comments/b12iob/networking_ts_beast_new_tutorials_read_this_to/
 
-What is the Strict Aliasing Rule and Why do we care?
-----------------------------------------------------
-
-https://gist.github.com/shafik/848ae25ee209f698763cffee272a58f8
-
 C++ Special Member Function Guidelines
 --------------------------------------
 
@@ -257,8 +229,8 @@ span: the best span
 https://brevzin.github.io/c++/2018/12/03/span-best-span/
 https://www.reddit.com/r/cpp/comments/a3c1yd/span_the_best_span/
 
-C Weekly - Ep 144 - Pure Functions in C++
------------------------------------------
+C++ Weekly - Ep 144 - Pure Functions in C++
+-------------------------------------------
 
 https://www.reddit.com/r/cpp/comments/a2qzsv/c_weekly_ep_144_pure_functions_in_c/
 
@@ -459,39 +431,6 @@ What is unified function call syntax anyway?
 * https://brevzin.github.io/c++/2019/04/13/ufcs-history/
 * https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/
 
-Quirks in Class Template Argument Deduction (1/2)
--------------------------------------------------
-
-Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
-
-.. code:: c++
-
-    std::tuple<int> foo();
-
-    std::tuple x = foo(); // tuple<tuple<int>>?
-    auto y = foo();       // tuple<int>
-
-What is the intent behind the declaration of variable ``x``?
-Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
-as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
-
-Quirks in Class Template Argument Deduction (2/2)
--------------------------------------------------
-
-A clearer example:
-
-.. code:: c++
-
-    // The tuple case
-    // unquestionably, tuple<int>
-    std::tuple a(1);
-
-    // unquestionably, tuple<tuple<int>,tuple<int>>
-    std::tuple b(a, a);
-
-    // ??
-    std::tuple c(a);
-
 C++ Logging Libraries
 ---------------------
 
@@ -527,6 +466,85 @@ Now:
     {
         int x;
     };
+
+What are some things commonly taught in C++ that are really bad practice?
+-------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/
+
+* Using inheritance for code reuse. After a couple of years you have an unmaintainable spaghetti that goes 5 levels deep. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elka68o?utm_source=share&utm_medium=web2x>`_
+* Raw pointers/new/delete without RAII, improper use of raw (C) strings and arrays `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk6q6a?utm_source=share&utm_medium=web2x>`_
+* Trust the programmer. I trusted myself once, and it didn’t end well. Never again making that mistake. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk23m0?utm_source=share&utm_medium=web2x>`_
+* ``using namespace std;`` `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elkfyls?utm_source=share&utm_medium=web2x>`_
+* Abuse of ``protected``. Where author of base class assumes you will correctly fiddle with protected members. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk97j4?utm_source=share&utm_medium=web2x>`_
+* Single entry, single exit. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/ells0vz?utm_source=share&utm_medium=web2x>`_
+* Throwing exceptions (!) `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk7qdu?utm_source=share&utm_medium=web2x>`_
+
+Microsoft BlingFire - A lightning fast Finite State machine and REgular expression manipulation library
+-------------------------------------------------------------------------------------------------------
+
+* https://github.com/Microsoft/BlingFire (MIT)
+* https://www.reddit.com/r/programming/comments/bf6ks4/microsoft_bing_fire_tokenizer_10x_faster_than_nltk/
+* https://news.ycombinator.com/item?id=19687549
+
+On resolving the type vs member conflict in C++: The Color Color problem
+------------------------------------------------------------------------
+
+    In C++, there are ambiguities when a member function has the same name as a type.
+
+* https://devblogs.microsoft.com/oldnewthing/20190419-00/?p=102431
+* https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/
+* https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition
+
+**clamp_cast** -- A saturating arithmetic cast
+----------------------------------------------
+
+https://github.com/p-groarke/clamp_cast
+
+A narrowing cast that does the right thing. clamp_cast will saturate output values at min or max if the input value would overflow / underflow.
+
+.. code:: c++
+
+    double ld = -42.0;
+    unsigned char uc = clamp_cast<unsigned char>(ld);
+    // uc == 0
+
+    float f = 500000.f;
+    char c = clamp_cast<char>(f);
+    // c == 127
+
+Quirks in Class Template Argument Deduction (1/2)
+-------------------------------------------------
+
+Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
+
+.. code:: c++
+
+    std::tuple<int> foo();
+
+    std::tuple x = foo(); // tuple<tuple<int>>?
+    auto y = foo();       // tuple<int>
+
+What is the intent behind the declaration of variable ``x``?
+Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
+as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
+
+Quirks in Class Template Argument Deduction (2/2)
+-------------------------------------------------
+
+A clearer example:
+
+.. code:: c++
+
+    // The tuple case
+    // unquestionably, tuple<int>
+    std::tuple a(1);
+
+    // unquestionably, tuple<tuple<int>,tuple<int>>
+    std::tuple b(a, a);
+
+    // ??
+    std::tuple c(a);
 
 A pretty big list of C++ GUI libraries
 --------------------------------------
@@ -617,14 +635,14 @@ Exhaustive and Composable Error Handling in C++ (3/3)
       | ESAC;
     // Triggers static_assert as HeightError is unhandled
 
-Twitter
--------
+ClangJIT: Enhancing C++ with Just-in-Time Compilation
+-----------------------------------------------------
 
-.. image:: img/co2-meeting-room.png
+https://arxiv.org/abs/1904.08555#
 
-Twitter
--------
+    C++ programmers use templates to specialize algorithms <...> This capability has been limited to those specializations that can be identified when the application is compiled, and in many critical cases, compiling all potentially-relevant specializations is not practical. ClangJIT provides a well-integrated C++ language extension allowing template-based specialization to occur during program execution. This capability has been implemented for use in large-scale applications, and we demonstrate that just-in-time-compilation-based dynamic specialization can be integrated into applications, often requiring minimal changes (or no changes) to the applications themselves, providing significant performance improvements, programmer-productivity improvements, and decreased compilation time.
 
-Greg Ferro:
+Awesome Parallel Computing Resources
+------------------------------------
 
-    An engineer who works remotely should be called an 'engifar'
+https://github.com/cpp-taskflow/cpp-taskflow/blob/master/awesome-parallel-computing.md

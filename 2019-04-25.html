@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gleb Dolgich" />
+  <meta name="dcterms.date" content="2019-04-25" />
+  <title>C++ Club Meeting Notes</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">C++ Club Meeting Notes</h1>
+<p class="author">Gleb Dolgich</p>
+<p class="date">2019-04-25</p>
+</header>
+<hr />
+<h1 id="accu-2019">ACCU 2019</h1>
+<ul>
+<li><a href="https://www.justsoftwaresolutions.co.uk/news/accu-2019-report.html">ACCU 2019 Slides and Trip Report by Anthony Williams</a></li>
+<li><a href="https://oribenshir.github.io/afternoon_rusting/blog/ACCU-Summary">Trip report by Ori Ben-Shir</a> (a Rust developer)</li>
+</ul>
+<h1 id="c1720-features-and-fixes-in-visual-studio-2019">C++17/20 Features and Fixes in Visual Studio 2019</h1>
+<ul>
+<li><a href="https://devblogs.microsoft.com/cppblog/cpp17-20-features-and-fixes-in-vs-2019/">https://devblogs.microsoft.com/cppblog/cpp17-20-features-and-fixes-in-vs-2019/</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/bf3fmk/c1720_features_and_fixes_in_visual_studio_2019/">https://www.reddit.com/r/cpp/comments/bf3fmk/c1720_features_and_fixes_in_visual_studio_2019/</a></li>
+</ul>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-19">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (1/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>How have you seen the embedded systems industry change over the last 20 years?</p>
+<blockquote>
+<p>The ubiquity of embedded systems (in 2008!)</p>
+</blockquote>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-29">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (2/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>What would you say is the most difficult aspect of your work with C++?</p>
+<blockquote>
+<p>Combining flexibility with performance is hard, especially when you have to remain backward compatible.</p>
+<p>C++ had $5000 over 3 years of advertisement budget.</p>
+</blockquote>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-39">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (3/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>If you were starting off in the industry today, what would you want to invent, and why?</p>
+<blockquote>
+<p>Better support for hard realtime constraints, reliability, concurrency. A combination of language and tools, compilation and execution techniques. Perhaps a subset of a general-purpose language, or a subset of C++ (1/10 in size).</p>
+</blockquote>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-49">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (4/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>Are there any aspects of C++ that you wish you could change?</p>
+<ul>
+<li>C++ syntax is baroque (some decisions were made because the C compiler had to fit in 48K memory)</li>
+<li>Inside C++ there is a smaller language (1/10 in size)</li>
+<li>Scope, RAII</li>
+<li>Classes, templates would still be there</li>
+</ul>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-59">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (5/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>Did you ever imagine that C++ would become so important?</p>
+<blockquote>
+<p>Performance still matters.</p>
+</blockquote>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-69">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (6/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>Is there any reason for a competent programmer to use C when a C++ compiler of comparable quality is available for a target platform?</p>
+<blockquote>
+<p>No.</p>
+</blockquote>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-79">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (7/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>What's your opinion on the embedded C++ subset?</p>
+<ul>
+<li>A bad idea. No templates (?!)</li>
+<li>Need rules specific for the area.</li>
+<li>Start with a superset (language + libraries), then cut off unnecessary things.
+<ul>
+<li><em>JSF was mentioned!</em></li>
+</ul></li>
+<li>In a hard realtime environment:
+<ul>
+<li>Don't rely on a general-purpose free store manager</li>
+<li>Be very careful with C pointers</li>
+</ul></li>
+</ul>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-89">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (8/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>What's next after C++?</p>
+<blockquote>
+<p>C++ will be around as a major factor for another 20 years at least. Next generation (C++0x) will be finished in a couple of years. It will be a significant improvement.</p>
+<p>Teaching, writing a book for beginners. Researching tools and techniques.</p>
+<p>Work on C++0x will wind down over the next few years. (!!)</p>
+</blockquote>
+<h1 id="bjarne-stroustrup-2008-interview-for-embedded-systems-conference-keynote-99">Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (9/9)</h1>
+<p><a href="https://youtu.be/HBuIBaOEqYQ">https://youtu.be/HBuIBaOEqYQ</a></p>
+<p>Which programming techniques and language features are the most important?</p>
+<blockquote>
+<p>With C++ you combine different techniques and features to solve the problem. This will improve with C++0x.</p>
+<p>With hard realtime constraints we shouldn't use free store or exceptions ("I'm very sad"), given the tools we have today.</p>
+</blockquote>
+<h1 id="interactive-c-meet-jupyter-cling---neil-horlock-accu-2019">Interactive C++: Meet Jupyter / Cling - Neil Horlock [ACCU 2019]</h1>
+<p><a href="https://youtu.be/UzfYG8GdB3I">https://youtu.be/UzfYG8GdB3I</a></p>
+<h1 id="so-whats-exactly-wrong-with-c">So, what's exactly wrong with C++?</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/bfia2h/so_whats_exactly_wrong_with_c/">https://www.reddit.com/r/cpp/comments/bfia2h/so_whats_exactly_wrong_with_c/</a></p>
+<h1 id="why-is-stdmove-not-nodiscard-in-c20">Why is <code>std::move</code> not <code>[[nodiscard]]</code> in C++20?</h1>
+<p><a href="https://stackoverflow.com/questions/55772424/why-is-stdmove-not-nodiscard-in-c20">https://stackoverflow.com/questions/55772424/why-is-stdmove-not-nodiscard-in-c20</a></p>
+<h1 id="twitter">Twitter</h1>
+<p><img src="img/co2-meeting-room.png" alt="image" /></p>
+<h1 id="twitter-1">Twitter</h1>
+<p>Greg Ferro:</p>
+<blockquote>
+<p>An engineer who works remotely should be called an 'engifar'</p>
+</blockquote>
+<h1 id="twitter-2">Twitter</h1>
+<p><img src="img/strongly-typed.png" alt="image" /></p>
+</body>
+</html>

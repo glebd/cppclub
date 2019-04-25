@@ -1,0 +1,147 @@
+----
+
+ACCU 2019
+---------
+
+* `ACCU 2019 Slides and Trip Report by Anthony Williams <https://www.justsoftwaresolutions.co.uk/news/accu-2019-report.html>`_
+* `Trip report by Ori Ben-Shir <https://oribenshir.github.io/afternoon_rusting/blog/ACCU-Summary>`_ (a Rust developer)
+
+C++17/20 Features and Fixes in Visual Studio 2019
+-------------------------------------------------
+
+* https://devblogs.microsoft.com/cppblog/cpp17-20-features-and-fixes-in-vs-2019/
+* https://www.reddit.com/r/cpp/comments/bf3fmk/c1720_features_and_fixes_in_visual_studio_2019/
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (1/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+How have you seen the embedded systems industry change over the last 20 years?
+
+  The ubiquity of embedded systems (in 2008!)
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (2/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+What would you say is the most difficult aspect of your work with C++?
+
+  Combining flexibility with performance is hard, especially when you have to remain backward compatible.
+
+  C++ had $5000 over 3 years of advertisement budget.
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (3/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+If you were starting off in the industry today, what would you want to invent, and why?
+
+  Better support for hard realtime constraints, reliability, concurrency.
+  A combination of language and tools, compilation and execution techniques.
+  Perhaps a subset of a general-purpose language, or a subset of C++ (1/10 in size).
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (4/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+Are there any aspects of C++ that you wish you could change?
+
+* C++ syntax is baroque (some decisions were made because the C compiler had to fit in 48K memory)
+* Inside C++ there is a smaller language (1/10 in size)
+* Scope, RAII
+* Classes, templates would still be there
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (5/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+Did you ever imagine that C++ would become so important?
+
+  Performance still matters.
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (6/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+Is there any reason for a competent programmer to use C when a C++ compiler of comparable quality is available for a target platform?
+
+  No.
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (7/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+What's your opinion on the embedded C++ subset?
+
+* A bad idea. No templates (?!)
+* Need rules specific for the area.
+* Start with a superset (language + libraries), then cut off unnecessary things.
+  * *JSF was mentioned!*
+* In a hard realtime environment:
+  * Don't rely on a general-purpose free store manager
+  * Be very careful with C pointers
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (8/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+What's next after C++?
+
+  C++ will be around as a major factor for another 20 years at least.
+  Next generation (C++0x) will be finished in a couple of years.
+  It will be a significant improvement.
+
+  Teaching, writing a book for beginners. Researching tools and techniques.
+
+  Work on C++0x will wind down over the next few years. (!!)
+
+Bjarne Stroustrup 2008 interview for Embedded Systems Conference keynote (9/9)
+------------------------------------------------------------------------------
+
+https://youtu.be/HBuIBaOEqYQ
+
+Which programming techniques and language features are the most important?
+
+  With C++ you combine different techniques and features to solve the problem. This will improve with C++0x.
+
+  With hard realtime constraints we shouldn't use free store or exceptions ("I'm very sad"), given the tools we have today.
+
+Interactive C++: Meet Jupyter / Cling - Neil Horlock [ACCU 2019]
+----------------------------------------------------------------
+
+https://youtu.be/UzfYG8GdB3I
+
+So, what's exactly wrong with C++?
+----------------------------------
+
+https://www.reddit.com/r/cpp/comments/bfia2h/so_whats_exactly_wrong_with_c/
+
+Why is ``std::move`` not ``[[nodiscard]]`` in C++20?
+----------------------------------------------------
+
+https://stackoverflow.com/questions/55772424/why-is-stdmove-not-nodiscard-in-c20
+
+Twitter
+-------
+
+.. image:: img/co2-meeting-room.png
+
+Twitter
+-------
+
+Greg Ferro:
+
+    An engineer who works remotely should be called an 'engifar'
+
+Twitter
+-------
+
+.. image:: img/strongly-typed.png
