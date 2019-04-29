@@ -20,6 +20,56 @@ https://www.youtube.com/watch?v=os7cqJ5qlzo
 
 https://www.reddit.com/r/cpp/comments/bifsdx/herb_sutter_accu_2019_defragmenting_c_making/
 
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-1.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-2.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-3.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-4.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-5.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-6.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-7.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-8.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-9.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-10.png
+
 Same function parameters with different return type in C++17/C++20 (1/3)
 ------------------------------------------------------------------------
 
