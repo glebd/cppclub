@@ -13,6 +13,13 @@ Book: Martin Reddy - API Design for C++
 
 https://www.reddit.com/r/cpp/comments/bh5b75/top_25_c_api_design_mistakes_and_how_to_avoid_them/
 
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=os7cqJ5qlzo
+
+https://www.reddit.com/r/cpp/comments/bifsdx/herb_sutter_accu_2019_defragmenting_c_making/
+
 Same function parameters with different return type in C++17/C++20 (1/3)
 ------------------------------------------------------------------------
 

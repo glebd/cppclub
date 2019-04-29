@@ -351,3 +351,13 @@ What is unified function call syntax anyway?
 
 * https://brevzin.github.io/c++/2019/04/13/ufcs-history/
 * https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/
+
+Here’s my number; call me, maybe. Callbacks in a multithreaded world - Anthony Williams [ACCU 2019]
+---------------------------------------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=7hkqG8i0QaU
+
+Ranges for distributed and asynchronous systems - Ivan Čukić [ACCU 2019]
+------------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=eelpmWo2fuU
