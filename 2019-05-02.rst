@@ -1,0 +1,92 @@
+----
+
+Second Annual C++ Foundation Developer Survey “Lite”
+----------------------------------------------------
+
+https://isocpp.org/blog/2019/04/second-annual-cpp-foundation-developer-survey-lite
+
+https://www.surveymonkey.com/r/NCMCJDZ
+
+Top 25 C++ API design mistakes and how to avoid them
+----------------------------------------------------
+
+https://www.acodersjourney.com/top-25-cplusplus-api-design-mistakes-and-how-to-avoid-them/
+
+Book: Martin Reddy - API Design for C++
+
+* `Amazon US <https://www.amazon.com/API-Design-C-Martin-Reddy/dp/0123850037>`_
+* `Amazon UK <https://www.amazon.co.uk/API-Design-C-Martin-Reddy/dp/0123850037>`_
+* `Safari Books Online <https://learning.oreilly.com/library/view/api-design-for/9780123850034/>`_
+
+https://www.reddit.com/r/cpp/comments/bh5b75/top_25_c_api_design_mistakes_and_how_to_avoid_them/
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=os7cqJ5qlzo
+
+https://www.reddit.com/r/cpp/comments/bifsdx/herb_sutter_accu_2019_defragmenting_c_making/
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-1.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-2.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-3.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-4.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-5.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-6.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-7.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-8.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-9.png
+
+Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable
+----------------------------------------------------------------------------------------
+
+.. image:: img/sutter-accu19-10.png
+
+Error Codes and Error Handling
+------------------------------
+
+https://www.randygaul.net/2019/04/26/error-codes-and-error-handling/
+
+  Error codes are better.
+
+https://www.reddit.com/r/cpp/comments/bhysup/error_codes_and_error_handling/
+
+Twitter
+-------
+
+.. image:: img/array-of-hedgehogs.png

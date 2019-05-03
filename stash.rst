@@ -17,71 +17,10 @@ https://gist.github.com/shafik/848ae25ee209f698763cffee272a58f8
 
 In C and C++ aliasing has to do with what expression types we are allowed to access stored values through. In both C and C++ the standard specifies which expression types are allowed to alias which types. The compiler and optimizer are allowed to assume we follow the aliasing rules strictly, hence the term strict aliasing rule. If we attempt to access a value using a type not allowed it is classified as `undefined behavior (UB) <https://en.cppreference.com/w/cpp/language/ub>`_. Once we have undefined behavior all bets are off, the results of our program are no longer reliable.
 
-Same function parameters with different return type in C++17/C++20
-------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
-
-Before:
-
-.. code:: c++
-
-    template<typename R>
-    R foo(int i)
-    { ... }
-
-    foo<string>(1);
-
-Same function parameters with different return type in C++17/C++20
-------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
-
-After:
-
-.. code:: c++
-
-    template<class F> struct Auto : F {
-        // conversion operator
-        template<class T> operator T() {
-            return F::template operator()<T>();
-        }
-    };
-
-    template<class F> Auto(F) -> Auto<F>; // deduction guide
-
-Same function parameters with different return type in C++17/C++20
-------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
-
-After:
-
-.. code:: c++
-
-    template<class... A>
-    auto fooWrapper(A&&... a) {
-        return Auto{[&]<class T>() { return foo<T>(std::forward<A>(a)...); }};
-    };
-
-    template<class... A>
-    auto fooWrapper(int i) {
-        return Auto{[=]<class T>() { return foo<T>(i); }};
-    };
-
-    double d = fooWrapper(42);
-
 Exception safe assignment
 -------------------------
 
 https://vorbrodt.blog/2019/04/08/exception-safe-assignment/
-
-uvw v1.15.0 (header-only libuv wrapper in modern C++) is out
-------------------------------------------------------------
-
-Code: https://github.com/skypjack/uvw (C++14, MIT)
-
-Reddit: https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/
 
 10 differences between static and dynamic libraries every C++ developer should know
 -----------------------------------------------------------------------------------
@@ -192,11 +131,6 @@ Error Handling in C++ or: Why You Should Use Eithers in Favor of Exceptions and 
 https://buckaroo.pm/posts/error-handling-in-cpp/
 https://www.reddit.com/r/cpp/comments/aqir7n/error_handling_in_c_eithers_vs_exceptions_vs/
 
-Boost.Outcome ready for Boost 1.70 release
-------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aqidl6/boostoutcome_ready_for_boost_170_release/
-
 What is Type Erasure?
 ---------------------
 
@@ -217,11 +151,6 @@ Template meta-programming: Some testing and debugging tricks
 ------------------------------------------------------------
 
 https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/
-
-Getting in trouble with mixed comparisons
------------------------------------------
-
-https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/
 
 span: the best span
 -------------------
@@ -417,19 +346,92 @@ The Knightmare of Initialization in C++
 
 https://quuxplusone.github.io/blog/2019/02/18/knightmare-of-initialization/
 
-C++17 parser-combinator library, CppCmb
----------------------------------------
-
-Cpp>>=Cmb
-
-* https://github.com/LPeter1997/CppCmb
-* https://www.reddit.com/r/cpp/comments/bemqaq/my_c17_parsercombinator_library_cppcmb_got_a_huge/
-
 What is unified function call syntax anyway?
 --------------------------------------------
 
 * https://brevzin.github.io/c++/2019/04/13/ufcs-history/
 * https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/
+
+Here’s my number; call me, maybe. Callbacks in a multithreaded world - Anthony Williams [ACCU 2019]
+---------------------------------------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=7hkqG8i0QaU
+
+Ranges for distributed and asynchronous systems - Ivan Čukić [ACCU 2019]
+------------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=eelpmWo2fuU
+
+Same function parameters with different return type in C++17/C++20 (1/3)
+------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
+
+Before:
+
+.. code:: c++
+
+    template<typename R>
+    R foo(int i)
+    { ... }
+
+    foo<string>(1);
+
+Same function parameters with different return type in C++17/C++20 (2/3)
+------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
+
+After:
+
+.. code:: c++
+
+    template<class F> struct Auto : F {
+        // conversion operator
+        template<class T> operator T() {
+            return F::template operator()<T>();
+        }
+    };
+
+    template<class F> Auto(F) -> Auto<F>; // deduction guide
+
+Same function parameters with different return type in C++17/C++20 (3/3)
+------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
+
+After:
+
+.. code:: c++
+
+    template<class... A>
+    auto fooWrapper(A&&... a) {
+        return Auto{[&]<class T>() { return foo<T>(std::forward<A>(a)...); }};
+    };
+
+    template<class... A>
+    auto fooWrapper(int i) {
+        return Auto{[=]<class T>() { return foo<T>(i); }};
+    };
+
+    double d = fooWrapper(42);
+
+uvw (header-only libuv wrapper in modern C++)
+---------------------------------------------
+
+Code: https://github.com/skypjack/uvw (C++14, MIT)
+
+Reddit: https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/
+
+Boost.Outcome ready for Boost 1.70 release
+------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aqidl6/boostoutcome_ready_for_boost_170_release/
+
+Getting in trouble with mixed comparisons
+-----------------------------------------
+
+https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/
 
 C++ Logging Libraries
 ---------------------
@@ -480,22 +482,6 @@ https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taugh
 * Single entry, single exit. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/ells0vz?utm_source=share&utm_medium=web2x>`_
 * Throwing exceptions (!) `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk7qdu?utm_source=share&utm_medium=web2x>`_
 
-Microsoft BlingFire - A lightning fast Finite State machine and REgular expression manipulation library
--------------------------------------------------------------------------------------------------------
-
-* https://github.com/Microsoft/BlingFire (MIT)
-* https://www.reddit.com/r/programming/comments/bf6ks4/microsoft_bing_fire_tokenizer_10x_faster_than_nltk/
-* https://news.ycombinator.com/item?id=19687549
-
-On resolving the type vs member conflict in C++: The Color Color problem
-------------------------------------------------------------------------
-
-    In C++, there are ambiguities when a member function has the same name as a type.
-
-* https://devblogs.microsoft.com/oldnewthing/20190419-00/?p=102431
-* https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/
-* https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition
-
 **clamp_cast** -- A saturating arithmetic cast
 ----------------------------------------------
 
@@ -512,39 +498,6 @@ A narrowing cast that does the right thing. clamp_cast will saturate output valu
     float f = 500000.f;
     char c = clamp_cast<char>(f);
     // c == 127
-
-Quirks in Class Template Argument Deduction (1/2)
--------------------------------------------------
-
-Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
-
-.. code:: c++
-
-    std::tuple<int> foo();
-
-    std::tuple x = foo(); // tuple<tuple<int>>?
-    auto y = foo();       // tuple<int>
-
-What is the intent behind the declaration of variable ``x``?
-Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
-as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
-
-Quirks in Class Template Argument Deduction (2/2)
--------------------------------------------------
-
-A clearer example:
-
-.. code:: c++
-
-    // The tuple case
-    // unquestionably, tuple<int>
-    std::tuple a(1);
-
-    // unquestionably, tuple<tuple<int>,tuple<int>>
-    std::tuple b(a, a);
-
-    // ??
-    std::tuple c(a);
 
 A pretty big list of C++ GUI libraries
 --------------------------------------
@@ -576,15 +529,6 @@ Nameof operator for modern C++
 https://github.com/Neargye/nameof
 
 See also: CTTI https://github.com/Manu343726/ctti
-
-Xmake
------
-
-Xmake is a cross-platform build utility based on Lua.
-
-https://github.com/xmake-io/xmake
-
-Reddit: https://www.reddit.com/r/cpp/comments/bb46xi/github_xmakeioxmake_a_modern_cc_build_utility/
 
 Exhaustive and Composable Error Handling in C++ (1/3)
 -----------------------------------------------------
@@ -635,14 +579,64 @@ Exhaustive and Composable Error Handling in C++ (3/3)
       | ESAC;
     // Triggers static_assert as HeightError is unhandled
 
-ClangJIT: Enhancing C++ with Just-in-Time Compilation
------------------------------------------------------
-
-https://arxiv.org/abs/1904.08555#
-
-    C++ programmers use templates to specialize algorithms <...> This capability has been limited to those specializations that can be identified when the application is compiled, and in many critical cases, compiling all potentially-relevant specializations is not practical. ClangJIT provides a well-integrated C++ language extension allowing template-based specialization to occur during program execution. This capability has been implemented for use in large-scale applications, and we demonstrate that just-in-time-compilation-based dynamic specialization can be integrated into applications, often requiring minimal changes (or no changes) to the applications themselves, providing significant performance improvements, programmer-productivity improvements, and decreased compilation time.
-
 Awesome Parallel Computing Resources
 ------------------------------------
 
 https://github.com/cpp-taskflow/cpp-taskflow/blob/master/awesome-parallel-computing.md
+
+Quirks in Class Template Argument Deduction (1/2)
+-------------------------------------------------
+
+Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
+
+.. code:: c++
+
+    std::tuple<int> foo();
+
+    std::tuple x = foo(); // tuple<tuple<int>>?
+    auto y = foo();       // tuple<int>
+
+What is the intent behind the declaration of variable ``x``?
+Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
+as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
+
+Quirks in Class Template Argument Deduction (2/2)
+-------------------------------------------------
+
+A clearer example:
+
+.. code:: c++
+
+    // The tuple case
+    // unquestionably, tuple<int>
+    std::tuple a(1);
+
+    // unquestionably, tuple<tuple<int>,tuple<int>>
+    std::tuple b(a, a);
+
+    // ??
+    std::tuple c(a);
+
+On resolving the type vs member conflict in C++: The Color Color problem
+------------------------------------------------------------------------
+
+    In C++, there are ambiguities when a member function has the same name as a type.
+
+* https://devblogs.microsoft.com/oldnewthing/20190419-00/?p=102431
+* https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/
+* https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition
+
+Microsoft BlingFire - A lightning fast Finite State machine and REgular expression manipulation library
+-------------------------------------------------------------------------------------------------------
+
+* https://github.com/Microsoft/BlingFire (MIT)
+* https://www.reddit.com/r/programming/comments/bf6ks4/microsoft_bing_fire_tokenizer_10x_faster_than_nltk/
+* https://news.ycombinator.com/item?id=19687549
+
+C++17 parser-combinator library, CppCmb
+---------------------------------------
+
+Cpp>>=Cmb
+
+* https://github.com/LPeter1997/CppCmb
+* https://www.reddit.com/r/cpp/comments/bemqaq/my_c17_parsercombinator_library_cppcmb_got_a_huge/
