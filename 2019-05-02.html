@@ -13,69 +13,6 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style>
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -87,6 +24,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="date">2019-05-02</p>
 </header>
 <hr />
+<h1 id="second-annual-c-foundation-developer-survey-lite">Second Annual C++ Foundation Developer Survey “Lite”</h1>
+<p><a href="https://isocpp.org/blog/2019/04/second-annual-cpp-foundation-developer-survey-lite">https://isocpp.org/blog/2019/04/second-annual-cpp-foundation-developer-survey-lite</a></p>
+<p><a href="https://www.surveymonkey.com/r/NCMCJDZ">https://www.surveymonkey.com/r/NCMCJDZ</a></p>
 <h1 id="top-25-c-api-design-mistakes-and-how-to-avoid-them">Top 25 C++ API design mistakes and how to avoid them</h1>
 <p><a href="https://www.acodersjourney.com/top-25-cplusplus-api-design-mistakes-and-how-to-avoid-them/">https://www.acodersjourney.com/top-25-cplusplus-api-design-mistakes-and-how-to-avoid-them/</a></p>
 <p>Book: Martin Reddy - API Design for C++</p>
@@ -119,187 +59,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="img/sutter-accu19-9.png" alt="image" /></p>
 <h1 id="herb-sutter-accu-2019-de-fragmenting-c-making-exceptions-more-affordable-and-usable-10">Herb Sutter [ACCU 2019] De-fragmenting C++: Making exceptions more affordable and usable</h1>
 <p><img src="img/sutter-accu19-10.png" alt="image" /></p>
-<h1 id="same-function-parameters-with-different-return-type-in-c17c20-13">Same function parameters with different return type in C++17/C++20 (1/3)</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/">https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/</a></p>
-<p>Before:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">template</span>&lt;<span class="kw">typename</span> R&gt;</a>
-<a class="sourceLine" id="cb1-2" title="2">R foo(<span class="dt">int</span> i)</a>
-<a class="sourceLine" id="cb1-3" title="3">{ ... }</a>
-<a class="sourceLine" id="cb1-4" title="4"></a>
-<a class="sourceLine" id="cb1-5" title="5">foo&lt;string&gt;(<span class="dv">1</span>);</a></code></pre></div>
-<h1 id="same-function-parameters-with-different-return-type-in-c17c20-23">Same function parameters with different return type in C++17/C++20 (2/3)</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/">https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/</a></p>
-<p>After:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">template</span>&lt;<span class="kw">class</span> F&gt; <span class="kw">struct</span> Auto : F {</a>
-<a class="sourceLine" id="cb2-2" title="2">    <span class="co">// conversion operator</span></a>
-<a class="sourceLine" id="cb2-3" title="3">    <span class="kw">template</span>&lt;<span class="kw">class</span> T&gt; <span class="kw">operator</span> T() {</a>
-<a class="sourceLine" id="cb2-4" title="4">        <span class="cf">return</span> F::<span class="kw">template</span> <span class="kw">operator</span>()&lt;T&gt;();</a>
-<a class="sourceLine" id="cb2-5" title="5">    }</a>
-<a class="sourceLine" id="cb2-6" title="6">};</a>
-<a class="sourceLine" id="cb2-7" title="7"></a>
-<a class="sourceLine" id="cb2-8" title="8"><span class="kw">template</span>&lt;<span class="kw">class</span> F&gt; Auto(F) -&gt; Auto&lt;F&gt;; <span class="co">// deduction guide</span></a></code></pre></div>
-<h1 id="same-function-parameters-with-different-return-type-in-c17c20-33">Same function parameters with different return type in C++17/C++20 (3/3)</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/">https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/</a></p>
-<p>After:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">template</span>&lt;<span class="kw">class</span>... A&gt;</a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="kw">auto</span> fooWrapper(A&amp;&amp;... a) {</a>
-<a class="sourceLine" id="cb3-3" title="3">    <span class="cf">return</span> Auto{[&amp;]&lt;<span class="kw">class</span> T&gt;() { <span class="cf">return</span> foo&lt;T&gt;(<span class="bu">std::</span>forward&lt;A&gt;(a)...); }};</a>
-<a class="sourceLine" id="cb3-4" title="4">};</a>
-<a class="sourceLine" id="cb3-5" title="5"></a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="kw">template</span>&lt;<span class="kw">class</span>... A&gt;</a>
-<a class="sourceLine" id="cb3-7" title="7"><span class="kw">auto</span> fooWrapper(<span class="dt">int</span> i) {</a>
-<a class="sourceLine" id="cb3-8" title="8">    <span class="cf">return</span> Auto{[=]&lt;<span class="kw">class</span> T&gt;() { <span class="cf">return</span> foo&lt;T&gt;(i); }};</a>
-<a class="sourceLine" id="cb3-9" title="9">};</a>
-<a class="sourceLine" id="cb3-10" title="10"></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="dt">double</span> d = fooWrapper(<span class="dv">42</span>);</a></code></pre></div>
-<h1 id="uvw-header-only-libuv-wrapper-in-modern-c">uvw (header-only libuv wrapper in modern C++)</h1>
-<p>Code: <a href="https://github.com/skypjack/uvw">https://github.com/skypjack/uvw</a> (C++14, MIT)</p>
-<p>Reddit: <a href="https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/">https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/</a></p>
-<h1 id="boost.outcome-ready-for-boost-1.70-release">Boost.Outcome ready for Boost 1.70 release</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/aqidl6/boostoutcome_ready_for_boost_170_release/">https://www.reddit.com/r/cpp/comments/aqidl6/boostoutcome_ready_for_boost_170_release/</a></p>
-<h1 id="getting-in-trouble-with-mixed-comparisons">Getting in trouble with mixed comparisons</h1>
-<p><a href="https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/">https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/</a></p>
-<h1 id="c-logging-libraries">C++ Logging Libraries</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/">https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/</a></p>
-<ul>
-<li>Spdlog <a href="https://github.com/gabime/spdlog">https://github.com/gabime/spdlog</a></li>
-<li>Loguru <a href="https://github.com/emilk/loguru">https://github.com/emilk/loguru</a></li>
-<li>EasyLogging <a href="https://github.com/zuhd-org/easyloggingpp">https://github.com/zuhd-org/easyloggingpp</a></li>
-<li>Plog <a href="https://github.com/SergiusTheBest/plog">https://github.com/SergiusTheBest/plog</a></li>
-<li>Google Log <a href="https://github.com/google/glog">https://github.com/google/glog</a></li>
-<li>P7 <a href="http://baical.net/p7.html">http://baical.net/p7.html</a></li>
-</ul>
-<h1 id="data-alignment-the-c-way">Data alignment the C++ way</h1>
-<p><a href="https://vorbrodt.blog/2019/04/06/data-alignment-the-c-way/">https://vorbrodt.blog/2019/04/06/data-alignment-the-c-way/</a></p>
-<p>Before modern C++:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">struct</span> Old</a>
-<a class="sourceLine" id="cb4-2" title="2">{</a>
-<a class="sourceLine" id="cb4-3" title="3">    <span class="dt">int</span> x;</a>
-<a class="sourceLine" id="cb4-4" title="4">    <span class="dt">char</span> padding[<span class="dv">16</span> - <span class="kw">sizeof</span>(<span class="dt">int</span>)];</a>
-<a class="sourceLine" id="cb4-5" title="5">};</a></code></pre></div>
-<p>Now:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">struct</span> <span class="kw">alignas</span>(<span class="dv">16</span>) New</a>
-<a class="sourceLine" id="cb5-2" title="2">{</a>
-<a class="sourceLine" id="cb5-3" title="3">    <span class="dt">int</span> x;</a>
-<a class="sourceLine" id="cb5-4" title="4">};</a></code></pre></div>
-<h1 id="what-are-some-things-commonly-taught-in-c-that-are-really-bad-practice">What are some things commonly taught in C++ that are really bad practice?</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/">https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/</a></p>
-<ul>
-<li>Using inheritance for code reuse. After a couple of years you have an unmaintainable spaghetti that goes 5 levels deep. <a href="https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elka68o?utm_source=share&amp;utm_medium=web2x">#</a></li>
-<li>Raw pointers/new/delete without RAII, improper use of raw (C) strings and arrays <a href="https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk6q6a?utm_source=share&amp;utm_medium=web2x">#</a></li>
-<li>Trust the programmer. I trusted myself once, and it didn’t end well. Never again making that mistake. <a href="https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk23m0?utm_source=share&amp;utm_medium=web2x">#</a></li>
-<li><code>using namespace std;</code> <a href="https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elkfyls?utm_source=share&amp;utm_medium=web2x">#</a></li>
-<li>Abuse of <code>protected</code>. Where author of base class assumes you will correctly fiddle with protected members. <a href="https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk97j4?utm_source=share&amp;utm_medium=web2x">#</a></li>
-<li>Single entry, single exit. <a href="https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/ells0vz?utm_source=share&amp;utm_medium=web2x">#</a></li>
-<li>Throwing exceptions (!) <a href="https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk7qdu?utm_source=share&amp;utm_medium=web2x">#</a></li>
-</ul>
-<h1 id="clamp_cast----a-saturating-arithmetic-cast"><strong>clamp_cast</strong> -- A saturating arithmetic cast</h1>
-<p><a href="https://github.com/p-groarke/clamp_cast">https://github.com/p-groarke/clamp_cast</a></p>
-<p>A narrowing cast that does the right thing. clamp_cast will saturate output values at min or max if the input value would overflow / underflow.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">double</span> ld = -<span class="fl">42.0</span>;</a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="dt">unsigned</span> <span class="dt">char</span> uc = clamp_cast&lt;<span class="dt">unsigned</span> <span class="dt">char</span>&gt;(ld);</a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="co">// uc == 0</span></a>
-<a class="sourceLine" id="cb6-4" title="4"></a>
-<a class="sourceLine" id="cb6-5" title="5"><span class="dt">float</span> f = <span class="fl">500000.</span><span class="bu">f</span>;</a>
-<a class="sourceLine" id="cb6-6" title="6"><span class="dt">char</span> c = clamp_cast&lt;<span class="dt">char</span>&gt;(f);</a>
-<a class="sourceLine" id="cb6-7" title="7"><span class="co">// c == 127</span></a></code></pre></div>
-<h1 id="a-pretty-big-list-of-c-gui-libraries">A pretty big list of C++ GUI libraries</h1>
-<p>Philippe M. Groarke: <a href="https://philippegroarke.com/posts/2018/c++_ui_solutions/">https://philippegroarke.com/posts/2018/c++_ui_solutions/</a></p>
-<p>Reddit:</p>
-<ul>
-<li><a href="https://www.reddit.com/r/cpp/comments/babfl5/a_pretty_big_list_of_c_gui_libraries/">https://www.reddit.com/r/cpp/comments/babfl5/a_pretty_big_list_of_c_gui_libraries/</a></li>
-<li><a href="https://www.reddit.com/r/cpp/comments/9njw5n/is_there_an_easytouse_gui_library/">https://www.reddit.com/r/cpp/comments/9njw5n/is_there_an_easytouse_gui_library/</a></li>
-<li><a href="https://www.reddit.com/r/cpp/comments/9q07bu/any_library_as_small_as_wxwidgets_but_as_powerful/">https://www.reddit.com/r/cpp/comments/9q07bu/any_library_as_small_as_wxwidgets_but_as_powerful/</a></li>
-</ul>
-<p>Modern UI in C++ <a href="https://www.reddit.com/r/cpp/comments/b3s2zq/modern_ui_in_c/">https://www.reddit.com/r/cpp/comments/b3s2zq/modern_ui_in_c/</a></p>
-<h1 id="modern-enums">Modern Enums</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/b9xb3n/its_2019_we_have_the_power_of_constexpr_and/">https://www.reddit.com/r/cpp/comments/b9xb3n/its_2019_we_have_the_power_of_constexpr_and/</a></p>
-<ul>
-<li>Static Enum <a href="https://github.com/KonanM/static_enum">https://github.com/KonanM/static_enum</a></li>
-<li>Magic Enum: Enum-to-String and String-to-Enum functions for modern C++ <a href="https://github.com/Neargye/magic_enum">https://github.com/Neargye/magic_enum</a></li>
-<li>Better Enums <a href="http://aantron.github.io/better-enums/">http://aantron.github.io/better-enums/</a></li>
-<li>Wise Enum <a href="https://github.com/quicknir/wise_enum">https://github.com/quicknir/wise_enum</a></li>
-<li>Meta Enum <a href="https://github.com/therocode/meta_enum">https://github.com/therocode/meta_enum</a></li>
-</ul>
-<h1 id="nameof-operator-for-modern-c">Nameof operator for modern C++</h1>
-<p><a href="https://github.com/Neargye/nameof">https://github.com/Neargye/nameof</a></p>
-<p>See also: CTTI <a href="https://github.com/Manu343726/ctti">https://github.com/Manu343726/ctti</a></p>
-<h1 id="exhaustive-and-composable-error-handling-in-c-13">Exhaustive and Composable Error Handling in C++ (1/3)</h1>
-<p><a href="https://fkosmale.bitbucket.io/posts/exhaustive-and-composable-error-handling-in-c%2B%2B/#composable-error-handling">Fabian Kosmale</a></p>
+<h1 id="error-codes-and-error-handling">Error Codes and Error Handling</h1>
+<p><a href="https://www.randygaul.net/2019/04/26/error-codes-and-error-handling/">https://www.randygaul.net/2019/04/26/error-codes-and-error-handling/</a></p>
 <blockquote>
-<p>TL;DR: You can emulate OCaml polymorphic sum type error handling in C++17.</p>
+<p>Error codes are better.</p>
 </blockquote>
-<p>Code: <a href="https://bitbucket.org/fkosmale/composableresult/src/master">https://bitbucket.org/fkosmale/composableresult/src/master</a> Reddit: <a href="https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/">https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/</a></p>
-<blockquote>
-<p>Some people also take exception to the fact that exception handling tables can bloat binaries, or to some &lt;...&gt; slow-down due to exceptions. While one might disagree on the severity of this issue &lt;...&gt;, this issue is important enough for all major compilers to provide a no-exceptions flag, which disables exception support. This makes exceptions a bad idea for library writers who want their libraries to work in as many contexts as possible.</p>
-</blockquote>
-<h1 id="exhaustive-and-composable-error-handling-in-c-23">Exhaustive and Composable Error Handling in C++ (2/3)</h1>
-<div class="sourceCode" id="cb7"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">class</span> AST;</a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="kw">struct</span> SyntaxError {<span class="dt">int</span> line; <span class="dt">int</span> column;};</a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="kw">struct</span> GrammarError {<span class="dt">int</span> line; <span class="dt">int</span> column; <span class="bu">std::</span>string explanation;};</a>
-<a class="sourceLine" id="cb7-4" title="4"><span class="kw">auto</span> parse(<span class="bu">std::</span>string input) -&gt; Result&lt;AST, SyntaxError, GrammarError&gt;;</a>
-<a class="sourceLine" id="cb7-5" title="5"></a>
-<a class="sourceLine" id="cb7-6" title="6"><span class="kw">struct</span> LengthError {<span class="dt">int</span> length;};</a>
-<a class="sourceLine" id="cb7-7" title="7"><span class="kw">struct</span> HeightError {<span class="dt">int</span> height;};</a>
-<a class="sourceLine" id="cb7-8" title="8"><span class="kw">auto</span> validate(AST ast) -&gt; Result&lt;AST, LengthError, HeightError&gt;</a>
-<a class="sourceLine" id="cb7-9" title="9"></a>
-<a class="sourceLine" id="cb7-10" title="10"><span class="kw">struct</span> DisplayError {<span class="bu">std::</span>string explanation;}</a>
-<a class="sourceLine" id="cb7-11" title="11"><span class="kw">auto</span> display(AST ast) -&gt; <span class="dt">void</span>;</a></code></pre></div>
-<h1 id="exhaustive-and-composable-error-handling-in-c-33">Exhaustive and Composable Error Handling in C++ (3/3)</h1>
-<div class="sourceCode" id="cb8"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">auto</span> result = parse(my_input)</a>
-<a class="sourceLine" id="cb8-2" title="2">  .then(validate)</a>
-<a class="sourceLine" id="cb8-3" title="3">  .then(display);</a>
-<a class="sourceLine" id="cb8-4" title="4">Switch(result)</a>
-<a class="sourceLine" id="cb8-5" title="5">  .Case&lt;SyntaxError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb8-6" title="6">    report_error(<span class="st">&quot;Invalid syntax at line&quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
-<a class="sourceLine" id="cb8-7" title="7">  .Case&lt;GrammarError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb8-8" title="8">    report_error(e.explanation, <span class="st">&quot;at &quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
-<a class="sourceLine" id="cb8-9" title="9">  .Case&lt;LengthError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb8-10" title="10">    report_errror(<span class="st">&quot;illegal length: &quot;</span>, e.length);})</a>
-<a class="sourceLine" id="cb8-11" title="11">  .Case&lt;DisplayError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb8-12" title="12">    report_error(e.explanation);})</a>
-<a class="sourceLine" id="cb8-13" title="13">  | ESAC;</a>
-<a class="sourceLine" id="cb8-14" title="14"><span class="co">// Triggers static_assert as HeightError is unhandled</span></a></code></pre></div>
-<h1 id="awesome-parallel-computing-resources">Awesome Parallel Computing Resources</h1>
-<p><a href="https://github.com/cpp-taskflow/cpp-taskflow/blob/master/awesome-parallel-computing.md">https://github.com/cpp-taskflow/cpp-taskflow/blob/master/awesome-parallel-computing.md</a></p>
-<h1 id="quirks-in-class-template-argument-deduction-12">Quirks in Class Template Argument Deduction (1/2)</h1>
-<p>Barry Revzin: <a href="https://brevzin.github.io/c++/2018/09/01/quirks-ctad/">https://brevzin.github.io/c++/2018/09/01/quirks-ctad/</a></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb9-1" title="1"><span class="bu">std::</span>tuple&lt;<span class="dt">int</span>&gt; foo();</a>
-<a class="sourceLine" id="cb9-2" title="2"></a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="bu">std::</span>tuple x = foo(); <span class="co">// tuple&lt;tuple&lt;int&gt;&gt;?</span></a>
-<a class="sourceLine" id="cb9-4" title="4"><span class="kw">auto</span> y = foo();       <span class="co">// tuple&lt;int&gt;</span></a></code></pre></div>
-<p>What is the intent behind the declaration of variable <code>x</code>? Are we constructing a new thing (the CTAD goal) or are we using <code>std::tuple</code> as annotation to ensure that <code>x</code> is in fact a <code>tuple</code> (the Concepts goal)?</p>
-<h1 id="quirks-in-class-template-argument-deduction-22">Quirks in Class Template Argument Deduction (2/2)</h1>
-<p>A clearer example:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb10-1" title="1"><span class="co">// The tuple case</span></a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="co">// unquestionably, tuple&lt;int&gt;</span></a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="bu">std::</span>tuple a(<span class="dv">1</span>);</a>
-<a class="sourceLine" id="cb10-4" title="4"></a>
-<a class="sourceLine" id="cb10-5" title="5"><span class="co">// unquestionably, tuple&lt;tuple&lt;int&gt;,tuple&lt;int&gt;&gt;</span></a>
-<a class="sourceLine" id="cb10-6" title="6"><span class="bu">std::</span>tuple b(a, a);</a>
-<a class="sourceLine" id="cb10-7" title="7"></a>
-<a class="sourceLine" id="cb10-8" title="8"><span class="co">// ??</span></a>
-<a class="sourceLine" id="cb10-9" title="9"><span class="bu">std::</span>tuple c(a);</a></code></pre></div>
-<h1 id="on-resolving-the-type-vs-member-conflict-in-c-the-color-color-problem">On resolving the type vs member conflict in C++: The Color Color problem</h1>
-<blockquote>
-<p>In C++, there are ambiguities when a member function has the same name as a type.</p>
-</blockquote>
-<ul>
-<li><a href="https://devblogs.microsoft.com/oldnewthing/20190419-00/?p=102431">https://devblogs.microsoft.com/oldnewthing/20190419-00/?p=102431</a></li>
-<li><a href="https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/">https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/</a></li>
-<li><a href="https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition">https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition</a></li>
-</ul>
-<h1 id="microsoft-blingfire---a-lightning-fast-finite-state-machine-and-regular-expression-manipulation-library">Microsoft BlingFire - A lightning fast Finite State machine and REgular expression manipulation library</h1>
-<ul>
-<li><a href="https://github.com/Microsoft/BlingFire">https://github.com/Microsoft/BlingFire</a> (MIT)</li>
-<li><a href="https://www.reddit.com/r/programming/comments/bf6ks4/microsoft_bing_fire_tokenizer_10x_faster_than_nltk/">https://www.reddit.com/r/programming/comments/bf6ks4/microsoft_bing_fire_tokenizer_10x_faster_than_nltk/</a></li>
-<li><a href="https://news.ycombinator.com/item?id=19687549">https://news.ycombinator.com/item?id=19687549</a></li>
-</ul>
-<h1 id="c17-parser-combinator-library-cppcmb">C++17 parser-combinator library, CppCmb</h1>
-<p>Cpp&gt;&gt;=Cmb</p>
-<ul>
-<li><a href="https://github.com/LPeter1997/CppCmb">https://github.com/LPeter1997/CppCmb</a></li>
-<li><a href="https://www.reddit.com/r/cpp/comments/bemqaq/my_c17_parsercombinator_library_cppcmb_got_a_huge/">https://www.reddit.com/r/cpp/comments/bemqaq/my_c17_parsercombinator_library_cppcmb_got_a_huge/</a></li>
-</ul>
+<p><a href="https://www.reddit.com/r/cpp/comments/bhysup/error_codes_and_error_handling/">https://www.reddit.com/r/cpp/comments/bhysup/error_codes_and_error_handling/</a></p>
+<h1 id="twitter">Twitter</h1>
+<p><img src="img/array-of-hedgehogs.png" alt="image" /></p>
 </body>
 </html>
