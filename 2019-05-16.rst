@@ -1,0 +1,40 @@
+----
+
+ACCU 2019 Trip Reports
+----------------------
+
+* `Kate Gregory <http://www.gregcons.com/KateBlog/ACCUTripReport.aspx>`_
+
+GCC 9.1 Released
+----------------
+
+* Announcement https://lwn.net/Articles/787385/
+  * C++17 fully implemented
+  * OpenMP 5.0 partially supported
+* Reddit https://www.reddit.com/r/cpp/comments/bk7uha/gcc_91_released/
+* GCC 9: Link-time and inter-procedural optimization improvements
+  http://hubicka.blogspot.com/2019/05/gcc-9-link-time-and-inter-procedural.html
+* Usability improvements in GCC 9
+  https://developers.redhat.com/blog/2019/03/08/usability-improvements-in-gcc-9/
+
+flat.hpp
+--------
+
+A library of flat vector-like based associative containers.
+
+* https://blackmatov.github.io/flat.hpp/
+* https://github.com/BlackMATov/flat.hpp C++14, MIT
+* https://www.reddit.com/r/cpp/comments/bkq9qn/new_c_minilibrary_library_of_flat_vectorlike/
+
+Blue Oak License
+----------------
+
+https://blueoakcouncil.org/license/1.0.0
+
+    Blue Oak Council’s model license demonstrates all the techniques that licenses can use to make software free and
+    simple for everyone to use and build on, in everyday language that everyone can understand.
+
+https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html
+
+    MIT and BSD open source licenses are well known, popular, and legally deprecated. They served long and well, but
+    they’re older than many open source software developers, and haven’t been maintained.
