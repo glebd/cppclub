@@ -337,3 +337,12 @@ C++ Operator Signatures
 -----------------------
 
 https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393
+
+`Local copy <https://glebd.github.io/cppclub/3rd/C++%20normal%20operators.md>`_
+
+Quote
+-----
+
+Nicooll Hunt:
+
+    The first step of any project is to grossly underestimate its complexity and difficulty.
