@@ -340,6 +340,16 @@ https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393
 
 `Local copy <https://glebd.github.io/cppclub/3rd/C++%20normal%20operators.md>`_
 
+https://github.com/glebd/cppclub/blob/next/3rd/C%2B%2B%2520normal%2520operators.md
+
+Hedley
+------
+
+Hedley: A C/C++ header to help move ``#ifdef``s out of your code
+
+* Home page: https://nemequ.github.io/hedley/
+* Reddit: https://www.reddit.com/r/cpp/comments/bm2xyk/hedley_a_cc_header_to_help_move_ifdefs_out_of/
+
 Quote
 -----
 
