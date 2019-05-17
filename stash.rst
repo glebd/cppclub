@@ -279,11 +279,6 @@ Introducing Conduit for C++: Lazy Sequences Using the Coroutine TS
 
 https://medium.com/@buckaroo.pm/introducing-conduit-lazy-sequences-using-the-coroutine-ts-b7e87dd85fcf
 
-C++ Operator Signatures
------------------------
-
-https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393
-
 Single file utilities for C++
 -----------------------------
 
@@ -304,21 +299,11 @@ reproc 2.0.0 released!
 
 https://www.reddit.com/r/cpp/comments/9yxlge/reproc_200_released/
 
-Having fun in life!
--------------------
-
-http://thiagocafe.com/view/20170910_Having_fun_in_life
-
 OutOfLine – A Memory-Locality Pattern for High Performance C++
 --------------------------------------------------------------
 
 https://blog.headlandstech.com/2018/08/15/outofline-a-memory-locality-pattern-for-high-performance-c/
 https://www.reddit.com/r/cpp/comments/984b3c/outofline_a_memorylocality_pattern_for_high/
-
-Units
------
-
-https://github.com/nholthaus/units
 
 Async Result Type for Coroutine TS
 ----------------------------------
@@ -361,6 +346,39 @@ Ranges for distributed and asynchronous systems - Ivan Čukić [ACCU 2019]
 ------------------------------------------------------------------------
 
 https://www.youtube.com/watch?v=eelpmWo2fuU
+
+Quirks in Class Template Argument Deduction (1/2)
+-------------------------------------------------
+
+Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
+
+.. code:: c++
+
+    std::tuple<int> foo();
+
+    std::tuple x = foo(); // tuple<tuple<int>>?
+    auto y = foo();       // tuple<int>
+
+What is the intent behind the declaration of variable ``x``?
+Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
+as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
+
+Quirks in Class Template Argument Deduction (2/2)
+-------------------------------------------------
+
+A clearer example:
+
+.. code:: c++
+
+    // The tuple case
+    // unquestionably, tuple<int>
+    std::tuple a(1);
+
+    // unquestionably, tuple<tuple<int>,tuple<int>>
+    std::tuple b(a, a);
+
+    // ??
+    std::tuple c(a);
 
 Same function parameters with different return type in C++17/C++20 (1/3)
 ------------------------------------------------------------------------
@@ -422,11 +440,6 @@ uvw (header-only libuv wrapper in modern C++)
 Code: https://github.com/skypjack/uvw (C++14, MIT)
 
 Reddit: https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/
-
-Boost.Outcome ready for Boost 1.70 release
-------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aqidl6/boostoutcome_ready_for_boost_170_release/
 
 Getting in trouble with mixed comparisons
 -----------------------------------------
@@ -537,10 +550,7 @@ Exhaustive and Composable Error Handling in C++ (1/3)
 
     TL;DR: You can emulate OCaml polymorphic sum type error handling in C++17.
 
-Code: https://bitbucket.org/fkosmale/composableresult/src/master
-Reddit: https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/
-
-    Some people also take exception to the fact that exception handling tables can bloat binaries, or to some <...> slow-down due to exceptions. While one might disagree on the severity of this issue <...>, this issue is important enough for all major compilers to provide a no-exceptions flag, which disables exception support. This makes exceptions a bad idea for library writers who want their libraries to work in as many contexts as possible.
+`Code <https://bitbucket.org/fkosmale/composableresult/src/master>`_ :: `Reddit <https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/>`_
 
 Exhaustive and Composable Error Handling in C++ (2/3)
 -----------------------------------------------------
@@ -579,64 +589,48 @@ Exhaustive and Composable Error Handling in C++ (3/3)
       | ESAC;
     // Triggers static_assert as HeightError is unhandled
 
-Awesome Parallel Computing Resources
-------------------------------------
+Units
+-----
 
-https://github.com/cpp-taskflow/cpp-taskflow/blob/master/awesome-parallel-computing.md
+https://github.com/nholthaus/units
 
-Quirks in Class Template Argument Deduction (1/2)
--------------------------------------------------
+Having fun in life!
+-------------------
 
-Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
+http://thiagocafe.com/view/20170910_Having_fun_in_life
 
-.. code:: c++
+C++ Operator Signatures
+-----------------------
 
-    std::tuple<int> foo();
+https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393
 
-    std::tuple x = foo(); // tuple<tuple<int>>?
-    auto y = foo();       // tuple<int>
+`Local copy <https://glebd.github.io/cppclub/3rd/C++%20normal%20operators.md>`_
 
-What is the intent behind the declaration of variable ``x``?
-Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
-as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
+https://github.com/glebd/cppclub/blob/next/3rd/C%2B%2B%2520normal%2520operators.md
 
-Quirks in Class Template Argument Deduction (2/2)
--------------------------------------------------
+Hedley
+------
 
-A clearer example:
+Hedley: A C/C++ header to help move ``#ifdef``s out of your code
 
-.. code:: c++
+* Home page: https://nemequ.github.io/hedley/
+* Reddit: https://www.reddit.com/r/cpp/comments/bm2xyk/hedley_a_cc_header_to_help_move_ifdefs_out_of/
 
-    // The tuple case
-    // unquestionably, tuple<int>
-    std::tuple a(1);
+STXXL
+-----
 
-    // unquestionably, tuple<tuple<int>,tuple<int>>
-    std::tuple b(a, a);
+STXXL: Standard Template Library for Extra Large Data Sets.
 
-    // ??
-    std::tuple c(a);
+The core of STXXL is an implementation of the C++ standard template library for external memory (out-of-core) computations, i. e., STXXL implements containers and algorithms that can process huge volumes of data that only fit on disks. While the closeness to the STL supports ease of use and compatibility with existing applications, another design priority is high performance.
 
-On resolving the type vs member conflict in C++: The Color Color problem
-------------------------------------------------------------------------
+* Home: http://stxxl.org/
+* Code: https://github.com/stxxl/stxxl (Boost Software License)
+* Video: http://panthema.net/2014/0622-Talk-STXXL-1.4.0-and-Beyond/
 
-    In C++, there are ambiguities when a member function has the same name as a type.
+Is Microsoft/GSL still being maintained?
+----------------------------------------
 
-* https://devblogs.microsoft.com/oldnewthing/20190419-00/?p=102431
-* https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/
-* https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition
+    It is used by the brand new Terminal App. That alone is an indication of effort.
 
-Microsoft BlingFire - A lightning fast Finite State machine and REgular expression manipulation library
--------------------------------------------------------------------------------------------------------
-
-* https://github.com/Microsoft/BlingFire (MIT)
-* https://www.reddit.com/r/programming/comments/bf6ks4/microsoft_bing_fire_tokenizer_10x_faster_than_nltk/
-* https://news.ycombinator.com/item?id=19687549
-
-C++17 parser-combinator library, CppCmb
----------------------------------------
-
-Cpp>>=Cmb
-
-* https://github.com/LPeter1997/CppCmb
-* https://www.reddit.com/r/cpp/comments/bemqaq/my_c17_parsercombinator_library_cppcmb_got_a_huge/
+* Code: https://github.com/microsoft/GSL
+* Reddit: https://www.reddit.com/r/cpp/comments/bmmplo/is_microsoftgsl_still_being_maintained/
