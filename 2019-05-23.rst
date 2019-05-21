@@ -1,0 +1,15 @@
+----
+
+C++ Experts, what advice would you give to a new C++ developer?
+---------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/
+
+* Exceptions don't work with MPI `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8lswhe?utm_source=share&utm_medium=web2x>`_
+* `Prefer composition over inheritance <https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance>`_
+* "Don't overuse exceptions" may not be so clear cut `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8mabti?utm_source=share&utm_medium=web2x>`_ [`Measuring execution performance of C++ exceptions vs error codes <http://nibblestew.blogspot.com/2017/01/measuring-execution-performance-of-c.html>`_]
+* Write unit tests for public API `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8lz3ss?utm_source=share&utm_medium=web2x>`_ `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8m6sr8?utm_source=share&utm_medium=web2x>`_
+* Not everything needs to be a class `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8m0ppp?utm_source=share&utm_medium=web2x>`_
+* Consider data-oriented design `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8rb8ae?utm_source=share&utm_medium=web2x>`_
+* A bunch of useful tips `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8mkvgs?utm_source=share&utm_medium=web2x>`_
+* "Rust is a good choice!" `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8s0kta?utm_source=share&utm_medium=web2x>`_ `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8nq1md?utm_source=share&utm_medium=web2x>`_ *(there's always one or two)*

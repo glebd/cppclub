@@ -259,11 +259,6 @@ Zero Overhead Deterministic Exceptions: throwing objects
 
 https://www.reddit.com/r/cpp/comments/9r1pnb/zero_overhead_deterministic_exceptions_throwing/
 
-C++ Experts, what advice would you give to a new C++ developer?
----------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/
-
 **fgl::signal**, a fast, multi-signature C++17 signal library (v0.1.0, proof of concept stage)
 ----------------------------------------------------------------------------------------------
 
@@ -634,3 +629,8 @@ Is Microsoft/GSL still being maintained?
 
 * Code: https://github.com/microsoft/GSL
 * Reddit: https://www.reddit.com/r/cpp/comments/bmmplo/is_microsoftgsl_still_being_maintained/
+
+What was your latest discovery about C++?
+-----------------------------------------
+
+https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/
