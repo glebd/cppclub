@@ -1,5 +1,15 @@
 ----
 
+PyTorch and C++
+---------------
+
+* Peter Goldsborough (Facebook Research)
+  * `CppCon 2017: A Tour of Deep Learning With C++ <https://www.youtube.com/watch?v=Lo1rXJdAJ7w>`_
+  * `CppCon 2018: Machine Learning in C++ with PyTorch <https://www.youtube.com/watch?v=auRPXMMHJzc>`_
+  * Code https://github.com/goldsborough?tab=repositories
+* PyTorch docs https://pytorch.org/cppdocs
+* PyTorch code https://github.com/pytorch/pytorch
+
 Quirks in Class Template Argument Deduction (1/2)
 -------------------------------------------------
 
