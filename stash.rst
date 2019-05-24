@@ -259,11 +259,6 @@ Zero Overhead Deterministic Exceptions: throwing objects
 
 https://www.reddit.com/r/cpp/comments/9r1pnb/zero_overhead_deterministic_exceptions_throwing/
 
-C++ Experts, what advice would you give to a new C++ developer?
----------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/
-
 **fgl::signal**, a fast, multi-signature C++17 signal library (v0.1.0, proof of concept stage)
 ----------------------------------------------------------------------------------------------
 
@@ -347,93 +342,6 @@ Ranges for distributed and asynchronous systems - Ivan Čukić [ACCU 2019]
 
 https://www.youtube.com/watch?v=eelpmWo2fuU
 
-Quirks in Class Template Argument Deduction (1/2)
--------------------------------------------------
-
-Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
-
-.. code:: c++
-
-    std::tuple<int> foo();
-
-    std::tuple x = foo(); // tuple<tuple<int>>?
-    auto y = foo();       // tuple<int>
-
-What is the intent behind the declaration of variable ``x``?
-Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
-as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
-
-Quirks in Class Template Argument Deduction (2/2)
--------------------------------------------------
-
-A clearer example:
-
-.. code:: c++
-
-    // The tuple case
-    // unquestionably, tuple<int>
-    std::tuple a(1);
-
-    // unquestionably, tuple<tuple<int>,tuple<int>>
-    std::tuple b(a, a);
-
-    // ??
-    std::tuple c(a);
-
-Same function parameters with different return type in C++17/C++20 (1/3)
-------------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
-
-Before:
-
-.. code:: c++
-
-    template<typename R>
-    R foo(int i)
-    { ... }
-
-    foo<string>(1);
-
-Same function parameters with different return type in C++17/C++20 (2/3)
-------------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
-
-After:
-
-.. code:: c++
-
-    template<class F> struct Auto : F {
-        // conversion operator
-        template<class T> operator T() {
-            return F::template operator()<T>();
-        }
-    };
-
-    template<class F> Auto(F) -> Auto<F>; // deduction guide
-
-Same function parameters with different return type in C++17/C++20 (3/3)
-------------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
-
-After:
-
-.. code:: c++
-
-    template<class... A>
-    auto fooWrapper(A&&... a) {
-        return Auto{[&]<class T>() { return foo<T>(std::forward<A>(a)...); }};
-    };
-
-    template<class... A>
-    auto fooWrapper(int i) {
-        return Auto{[=]<class T>() { return foo<T>(i); }};
-    };
-
-    double d = fooWrapper(42);
-
 uvw (header-only libuv wrapper in modern C++)
 ---------------------------------------------
 
@@ -446,6 +354,11 @@ Getting in trouble with mixed comparisons
 
 https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/
 
+What was your latest discovery about C++?
+-----------------------------------------
+
+https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/
+
 C++ Logging Libraries
 ---------------------
 
@@ -457,91 +370,6 @@ https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/
 * Plog https://github.com/SergiusTheBest/plog
 * Google Log https://github.com/google/glog
 * P7 http://baical.net/p7.html
-
-Data alignment the C++ way
---------------------------
-
-https://vorbrodt.blog/2019/04/06/data-alignment-the-c-way/
-
-Before modern C++:
-
-.. code:: c++
-
-    struct Old
-    {
-        int x;
-        char padding[16 - sizeof(int)];
-    };
-
-Now:
-
-.. code:: c++
-
-    struct alignas(16) New
-    {
-        int x;
-    };
-
-What are some things commonly taught in C++ that are really bad practice?
--------------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/
-
-* Using inheritance for code reuse. After a couple of years you have an unmaintainable spaghetti that goes 5 levels deep. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elka68o?utm_source=share&utm_medium=web2x>`_
-* Raw pointers/new/delete without RAII, improper use of raw (C) strings and arrays `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk6q6a?utm_source=share&utm_medium=web2x>`_
-* Trust the programmer. I trusted myself once, and it didn’t end well. Never again making that mistake. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk23m0?utm_source=share&utm_medium=web2x>`_
-* ``using namespace std;`` `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elkfyls?utm_source=share&utm_medium=web2x>`_
-* Abuse of ``protected``. Where author of base class assumes you will correctly fiddle with protected members. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk97j4?utm_source=share&utm_medium=web2x>`_
-* Single entry, single exit. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/ells0vz?utm_source=share&utm_medium=web2x>`_
-* Throwing exceptions (!) `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk7qdu?utm_source=share&utm_medium=web2x>`_
-
-**clamp_cast** -- A saturating arithmetic cast
-----------------------------------------------
-
-https://github.com/p-groarke/clamp_cast
-
-A narrowing cast that does the right thing. clamp_cast will saturate output values at min or max if the input value would overflow / underflow.
-
-.. code:: c++
-
-    double ld = -42.0;
-    unsigned char uc = clamp_cast<unsigned char>(ld);
-    // uc == 0
-
-    float f = 500000.f;
-    char c = clamp_cast<char>(f);
-    // c == 127
-
-A pretty big list of C++ GUI libraries
---------------------------------------
-
-Philippe M. Groarke: https://philippegroarke.com/posts/2018/c++_ui_solutions/
-
-Reddit:
-
-* https://www.reddit.com/r/cpp/comments/babfl5/a_pretty_big_list_of_c_gui_libraries/
-* https://www.reddit.com/r/cpp/comments/9njw5n/is_there_an_easytouse_gui_library/
-* https://www.reddit.com/r/cpp/comments/9q07bu/any_library_as_small_as_wxwidgets_but_as_powerful/
-
-Modern UI in C++ https://www.reddit.com/r/cpp/comments/b3s2zq/modern_ui_in_c/
-
-Modern Enums
-------------
-
-https://www.reddit.com/r/cpp/comments/b9xb3n/its_2019_we_have_the_power_of_constexpr_and/
-
-* Static Enum https://github.com/KonanM/static_enum
-* Magic Enum: Enum-to-String and String-to-Enum functions for modern C++ https://github.com/Neargye/magic_enum
-* Better Enums http://aantron.github.io/better-enums/
-* Wise Enum https://github.com/quicknir/wise_enum
-* Meta Enum https://github.com/therocode/meta_enum
-
-Nameof operator for modern C++
-------------------------------
-
-https://github.com/Neargye/nameof
-
-See also: CTTI https://github.com/Manu343726/ctti
 
 Exhaustive and Composable Error Handling in C++ (1/3)
 -----------------------------------------------------
@@ -626,11 +454,3 @@ The core of STXXL is an implementation of the C++ standard template library for 
 * Home: http://stxxl.org/
 * Code: https://github.com/stxxl/stxxl (Boost Software License)
 * Video: http://panthema.net/2014/0622-Talk-STXXL-1.4.0-and-Beyond/
-
-Is Microsoft/GSL still being maintained?
-----------------------------------------
-
-    It is used by the brand new Terminal App. That alone is an indication of effort.
-
-* Code: https://github.com/microsoft/GSL
-* Reddit: https://www.reddit.com/r/cpp/comments/bmmplo/is_microsoftgsl_still_being_maintained/
