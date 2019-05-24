@@ -358,3 +358,99 @@ What was your latest discovery about C++?
 -----------------------------------------
 
 https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/
+
+C++ Logging Libraries
+---------------------
+
+https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/
+
+* Spdlog https://github.com/gabime/spdlog
+* Loguru https://github.com/emilk/loguru
+* EasyLogging https://github.com/zuhd-org/easyloggingpp
+* Plog https://github.com/SergiusTheBest/plog
+* Google Log https://github.com/google/glog
+* P7 http://baical.net/p7.html
+
+Exhaustive and Composable Error Handling in C++ (1/3)
+-----------------------------------------------------
+
+`Fabian Kosmale <https://fkosmale.bitbucket.io/posts/exhaustive-and-composable-error-handling-in-c%2B%2B/#composable-error-handling>`_
+
+    TL;DR: You can emulate OCaml polymorphic sum type error handling in C++17.
+
+`Code <https://bitbucket.org/fkosmale/composableresult/src/master>`_ :: `Reddit <https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/>`_
+
+Exhaustive and Composable Error Handling in C++ (2/3)
+-----------------------------------------------------
+
+.. code:: c++
+
+    class AST;
+    struct SyntaxError {int line; int column;};
+    struct GrammarError {int line; int column; std::string explanation;};
+    auto parse(std::string input) -> Result<AST, SyntaxError, GrammarError>;
+
+    struct LengthError {int length;};
+    struct HeightError {int height;};
+    auto validate(AST ast) -> Result<AST, LengthError, HeightError>
+
+    struct DisplayError {std::string explanation;}
+    auto display(AST ast) -> void;
+
+Exhaustive and Composable Error Handling in C++ (3/3)
+-----------------------------------------------------
+
+.. code:: c++
+
+    auto result = parse(my_input)
+      .then(validate)
+      .then(display);
+    Switch(result)
+      .Case<SyntaxError>([](auto err){
+        report_error("Invalid syntax at line", e.line, ":", e.column);})
+      .Case<GrammarError>([](auto err){
+        report_error(e.explanation, "at ", e.line, ":", e.column);})
+      .Case<LengthError>([](auto err){
+        report_errror("illegal length: ", e.length);})
+      .Case<DisplayError>([](auto err){
+        report_error(e.explanation);})
+      | ESAC;
+    // Triggers static_assert as HeightError is unhandled
+
+Units
+-----
+
+https://github.com/nholthaus/units
+
+Having fun in life!
+-------------------
+
+http://thiagocafe.com/view/20170910_Having_fun_in_life
+
+C++ Operator Signatures
+-----------------------
+
+https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393
+
+`Local copy <https://glebd.github.io/cppclub/3rd/C++%20normal%20operators.md>`_
+
+https://github.com/glebd/cppclub/blob/next/3rd/C%2B%2B%2520normal%2520operators.md
+
+Hedley
+------
+
+Hedley: A C/C++ header to help move ``#ifdef``s out of your code
+
+* Home page: https://nemequ.github.io/hedley/
+* Reddit: https://www.reddit.com/r/cpp/comments/bm2xyk/hedley_a_cc_header_to_help_move_ifdefs_out_of/
+
+STXXL
+-----
+
+STXXL: Standard Template Library for Extra Large Data Sets.
+
+The core of STXXL is an implementation of the C++ standard template library for external memory (out-of-core) computations, i. e., STXXL implements containers and algorithms that can process huge volumes of data that only fit on disks. While the closeness to the STL supports ease of use and compatibility with existing applications, another design priority is high performance.
+
+* Home: http://stxxl.org/
+* Code: https://github.com/stxxl/stxxl (Boost Software License)
+* Video: http://panthema.net/2014/0622-Talk-STXXL-1.4.0-and-Beyond/
