@@ -108,18 +108,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>C++ is popular: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrz3bk?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
 </ul>
 <h1 id="what-was-your-latest-discovery-about-c-cont.-1">What was your latest discovery about C++? (cont.)</h1>
-<p>The "arrow operator" (<a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/ems982b?utm_source=share&amp;utm_medium=web2x">Reddit</a>)</p>
+<ul>
+<li>The "arrow operator" (<a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/ems982b?utm_source=share&amp;utm_medium=web2x">Reddit</a>)</li>
+</ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">int</span> x = <span class="dv">10</span>;</a>
 <a class="sourceLine" id="cb2-2" title="2"><span class="cf">while</span> (x --&gt; <span class="dv">0</span>) <span class="co">// x goes to 0</span></a>
 <a class="sourceLine" id="cb2-3" title="3">{</a>
 <a class="sourceLine" id="cb2-4" title="4">    printf(<span class="st">&quot;</span><span class="sc">%d</span><span class="st"> &quot;</span>, x);</a>
 <a class="sourceLine" id="cb2-5" title="5">}</a></code></pre></div>
+<ul>
+<li>Non-void function surprises: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrwkxb?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Alternative tokens: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emt2cdx?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Void functions can return result of other void function: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emt6kvw?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+</ul>
+<h1 id="what-was-your-latest-discovery-about-c-cont.-2">What was your latest discovery about C++? (cont.)</h1>
+<ul>
+<li>CRTP: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emt4jcj?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Unary plus to force a lambda-to-function-pointer conversion: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emto27r?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"></code></pre></div>
+<p>+[]{}</p>
+<blockquote>
+<p>For every type <code>T</code> the unary <code>operator+(T*)</code> is considered to exist which returns the given pointer as is. Here, <code>T</code> is not restricted to object types but includes function types. A lambda object that didn't capture anything has a conversion operator to a function pointer. The unary <code>+</code> triggers this conversion.</p>
+</blockquote>
+<ul>
+<li>C++11 implicitly adds <code>noexcept</code> to destructors (but only if there are no data members or base classes that have a throwing destructor): <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emt0we3?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Reserved identifiers: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emt9o8c?utm_source=share&amp;utm_medium=web2x">Reddit</a> | <a href="https://en.cppreference.com/w/c/language/identifier#Reserved_identifiers">CppReference</a></li>
+</ul>
+<h1 id="initialisation-in-c17-the-matrix">Initialisation in C++17 – the matrix</h1>
+<p><a href="http://timur.audio/initialisation-in-c17-the-matrix">http://timur.audio/initialisation-in-c17-the-matrix</a></p>
 <h1 id="c-weekly---ep-144---pure-functions-in-c">C++ Weekly - Ep 144 - Pure Functions in C++</h1>
 <p><a href="https://youtu.be/8ZxGABHcu40">https://youtu.be/8ZxGABHcu40</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/a2qzsv/c_weekly_ep_144_pure_functions_in_c/">https://www.reddit.com/r/cpp/comments/a2qzsv/c_weekly_ep_144_pure_functions_in_c/</a></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">int</span> square(<span class="dt">int</span> value) __attribute__((pure));</a>
-<a class="sourceLine" id="cb3-2" title="2">[[<span class="ex">gnu::pure</span>]] <span class="dt">int</span> square2(<span class="dt">int</span> value);</a>
-<a class="sourceLine" id="cb3-3" title="3">[[<span class="ex">gnu::const</span>]] <span class="dt">int</span> square3(<span class="dt">int</span> value);</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="dt">int</span> square(<span class="dt">int</span> value) __attribute__((pure));</a>
+<a class="sourceLine" id="cb4-2" title="2">[[<span class="ex">gnu::pure</span>]] <span class="dt">int</span> square2(<span class="dt">int</span> value);</a>
+<a class="sourceLine" id="cb4-3" title="3">[[<span class="ex">gnu::const</span>]] <span class="dt">int</span> square3(<span class="dt">int</span> value);</a></code></pre></div>
 <h1 id="c-logging-libraries">C++ Logging Libraries</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/">https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/</a></p>
 <ul>
@@ -143,52 +166,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p><a href="https://bitbucket.org/fkosmale/composableresult/src/master">Code</a> :: <a href="https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/">Reddit</a></p>
 <h1 id="exhaustive-and-composable-error-handling-in-c-23">Exhaustive and Composable Error Handling in C++ (2/3)</h1>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">class</span> AST;</a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="kw">struct</span> SyntaxError {<span class="dt">int</span> line; <span class="dt">int</span> column;};</a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="kw">struct</span> GrammarError {<span class="dt">int</span> line; <span class="dt">int</span> column; <span class="bu">std::</span>string explanation;};</a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="kw">auto</span> parse(<span class="bu">std::</span>string input) -&gt; Result&lt;AST, SyntaxError, GrammarError&gt;;</a>
-<a class="sourceLine" id="cb4-5" title="5"></a>
-<a class="sourceLine" id="cb4-6" title="6"><span class="kw">struct</span> LengthError {<span class="dt">int</span> length;};</a>
-<a class="sourceLine" id="cb4-7" title="7"><span class="kw">struct</span> HeightError {<span class="dt">int</span> height;};</a>
-<a class="sourceLine" id="cb4-8" title="8"><span class="kw">auto</span> validate(AST ast) -&gt; Result&lt;AST, LengthError, HeightError&gt;;</a>
-<a class="sourceLine" id="cb4-9" title="9"></a>
-<a class="sourceLine" id="cb4-10" title="10"><span class="kw">struct</span> DisplayError {<span class="bu">std::</span>string explanation;};</a>
-<a class="sourceLine" id="cb4-11" title="11"><span class="kw">auto</span> display(AST ast) -&gt; <span class="dt">void</span>;</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">class</span> AST;</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">struct</span> SyntaxError {<span class="dt">int</span> line; <span class="dt">int</span> column;};</a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="kw">struct</span> GrammarError {<span class="dt">int</span> line; <span class="dt">int</span> column; <span class="bu">std::</span>string explanation;};</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="kw">auto</span> parse(<span class="bu">std::</span>string input) -&gt; Result&lt;AST, SyntaxError, GrammarError&gt;;</a>
+<a class="sourceLine" id="cb5-5" title="5"></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="kw">struct</span> LengthError {<span class="dt">int</span> length;};</a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="kw">struct</span> HeightError {<span class="dt">int</span> height;};</a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="kw">auto</span> validate(AST ast) -&gt; Result&lt;AST, LengthError, HeightError&gt;;</a>
+<a class="sourceLine" id="cb5-9" title="9"></a>
+<a class="sourceLine" id="cb5-10" title="10"><span class="kw">struct</span> DisplayError {<span class="bu">std::</span>string explanation;};</a>
+<a class="sourceLine" id="cb5-11" title="11"><span class="kw">auto</span> display(AST ast) -&gt; <span class="dt">void</span>;</a></code></pre></div>
 <h1 id="exhaustive-and-composable-error-handling-in-c-33">Exhaustive and Composable Error Handling in C++ (3/3)</h1>
-<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">auto</span> result = parse(my_input)</a>
-<a class="sourceLine" id="cb5-2" title="2">  .then(validate)</a>
-<a class="sourceLine" id="cb5-3" title="3">  .then(display);</a>
-<a class="sourceLine" id="cb5-4" title="4">Switch(result)</a>
-<a class="sourceLine" id="cb5-5" title="5">  .Case&lt;SyntaxError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb5-6" title="6">    report_error(<span class="st">&quot;Invalid syntax at line&quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
-<a class="sourceLine" id="cb5-7" title="7">  .Case&lt;GrammarError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb5-8" title="8">    report_error(e.explanation, <span class="st">&quot;at &quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
-<a class="sourceLine" id="cb5-9" title="9">  .Case&lt;LengthError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb5-10" title="10">    report_errror(<span class="st">&quot;illegal length: &quot;</span>, e.length);})</a>
-<a class="sourceLine" id="cb5-11" title="11">  .Case&lt;DisplayError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb5-12" title="12">    report_error(e.explanation);})</a>
-<a class="sourceLine" id="cb5-13" title="13">  | ESAC;</a>
-<a class="sourceLine" id="cb5-14" title="14"><span class="co">// Triggers static_assert as HeightError is unhandled</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">auto</span> result = parse(my_input)</a>
+<a class="sourceLine" id="cb6-2" title="2">  .then(validate)</a>
+<a class="sourceLine" id="cb6-3" title="3">  .then(display);</a>
+<a class="sourceLine" id="cb6-4" title="4">Switch(result)</a>
+<a class="sourceLine" id="cb6-5" title="5">  .Case&lt;SyntaxError&gt;([](<span class="kw">auto</span> err){</a>
+<a class="sourceLine" id="cb6-6" title="6">    report_error(<span class="st">&quot;Invalid syntax at line&quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
+<a class="sourceLine" id="cb6-7" title="7">  .Case&lt;GrammarError&gt;([](<span class="kw">auto</span> err){</a>
+<a class="sourceLine" id="cb6-8" title="8">    report_error(e.explanation, <span class="st">&quot;at &quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
+<a class="sourceLine" id="cb6-9" title="9">  .Case&lt;LengthError&gt;([](<span class="kw">auto</span> err){</a>
+<a class="sourceLine" id="cb6-10" title="10">    report_errror(<span class="st">&quot;illegal length: &quot;</span>, e.length);})</a>
+<a class="sourceLine" id="cb6-11" title="11">  .Case&lt;DisplayError&gt;([](<span class="kw">auto</span> err){</a>
+<a class="sourceLine" id="cb6-12" title="12">    report_error(e.explanation);})</a>
+<a class="sourceLine" id="cb6-13" title="13">  | ESAC;</a>
+<a class="sourceLine" id="cb6-14" title="14"><span class="co">// Triggers static_assert as HeightError is unhandled</span></a></code></pre></div>
 <h1 id="units">Units</h1>
 <p><a href="https://github.com/nholthaus/units">https://github.com/nholthaus/units</a></p>
 <h1 id="having-fun-in-life">Having fun in life!</h1>
 <p><a href="http://thiagocafe.com/view/20170910_Having_fun_in_life">http://thiagocafe.com/view/20170910_Having_fun_in_life</a></p>
-<h1 id="c-operator-signatures">C++ Operator Signatures</h1>
-<p><a href="https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393">https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393</a></p>
-<p><a href="https://github.com/glebd/cppclub/blob/next/3rd/C%2B%2B%2520normal%2520operators.md">https://github.com/glebd/cppclub/blob/next/3rd/C%2B%2B%2520normal%2520operators.md</a></p>
-<h1 id="hedley">Hedley</h1>
-<p>Hedley: A C/C++ header to help move <code>#ifdef</code>s out of your code</p>
-<ul>
-<li>Home page: <a href="https://nemequ.github.io/hedley/">https://nemequ.github.io/hedley/</a></li>
-<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/bm2xyk/hedley_a_cc_header_to_help_move_ifdefs_out_of/">https://www.reddit.com/r/cpp/comments/bm2xyk/hedley_a_cc_header_to_help_move_ifdefs_out_of/</a></li>
-</ul>
-<h1 id="stxxl">STXXL</h1>
-<p>STXXL: Standard Template Library for Extra Large Data Sets.</p>
-<p>The core of STXXL is an implementation of the C++ standard template library for external memory (out-of-core) computations, i. e., STXXL implements containers and algorithms that can process huge volumes of data that only fit on disks. While the closeness to the STL supports ease of use and compatibility with existing applications, another design priority is high performance.</p>
-<ul>
-<li>Home: <a href="http://stxxl.org/">http://stxxl.org/</a></li>
-<li>Code: <a href="https://github.com/stxxl/stxxl">https://github.com/stxxl/stxxl</a> (Boost Software License)</li>
-<li>Video: <a href="http://panthema.net/2014/0622-Talk-STXXL-1.4.0-and-Beyond/">http://panthema.net/2014/0622-Talk-STXXL-1.4.0-and-Beyond/</a></li>
-</ul>
+<h1 id="twitter">Twitter</h1>
+<p><img src="img/js-programmers.png" alt="image" /></p>
+<h1 id="quote">Quote</h1>
+<p>Elizabeth Zwicky:</p>
+<blockquote>
+<p>The only thing more frightening than a programmer with a screwdriver or a hardware engineer with a program is a user with a pair of wire cutters and the root password.</p>
+</blockquote>
 </body>
 </html>
