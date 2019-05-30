@@ -87,9 +87,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="date">2019-05-30</p>
 </header>
 <hr />
+<h1 id="what-was-your-latest-discovery-about-c">What was your latest discovery about C++?</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/">https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrlwk1?utm_source=share&amp;utm_medium=web2x">URLs in code are legal</a></p>
+<pre class=""><code>void fn() {
+    https://www.google.com
+    cout &lt;&lt; &quot;Everything is fine.\n&quot;
+}</code></pre>
+<h1 id="what-was-your-latest-discovery-about-c-cont.">What was your latest discovery about C++? (cont.)</h1>
+<ul>
+<li>Using <code>template</code> to disambiguate dependent names: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrjntl?utm_source=share&amp;utm_medium=web2x">Reddit</a> | <a href="https://en.cppreference.com/w/cpp/language/dependent_name">CppReference</a> | <a href="https://stackoverflow.com/a/51799617/10154">SO</a></li>
+<li>Type covariance for virtual functions: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrwtqb?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Switch statement discoveries: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrgq5b?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Function-level <code>try/catch</code>: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrkku1?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li><code>delete this</code>: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emryqxl?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Fun with nested classes: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrn53p?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Unique object address: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/ems14qm?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>A class can have a static member of incomplete class type: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrsv5y?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>Namespaces can recursively refer to themselves: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emt3p6h?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+<li>C++ is popular: <a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/emrz3bk?utm_source=share&amp;utm_medium=web2x">Reddit</a></li>
+</ul>
+<h1 id="what-was-your-latest-discovery-about-c-cont.-1">What was your latest discovery about C++? (cont.)</h1>
+<p>The "arrow operator" (<a href="https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/ems982b?utm_source=share&amp;utm_medium=web2x">Reddit</a>)</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">int</span> x = <span class="dv">10</span>;</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="cf">while</span> (x --&gt; <span class="dv">0</span>) <span class="co">// x goes to 0</span></a>
+<a class="sourceLine" id="cb2-3" title="3">{</a>
+<a class="sourceLine" id="cb2-4" title="4">    printf(<span class="st">&quot;</span><span class="sc">%d</span><span class="st"> &quot;</span>, x);</a>
+<a class="sourceLine" id="cb2-5" title="5">}</a></code></pre></div>
 <h1 id="c-weekly---ep-144---pure-functions-in-c">C++ Weekly - Ep 144 - Pure Functions in C++</h1>
 <p><a href="https://youtu.be/8ZxGABHcu40">https://youtu.be/8ZxGABHcu40</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/a2qzsv/c_weekly_ep_144_pure_functions_in_c/">https://www.reddit.com/r/cpp/comments/a2qzsv/c_weekly_ep_144_pure_functions_in_c/</a></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1"><span class="dt">int</span> square(<span class="dt">int</span> value) __attribute__((pure));</a>
+<a class="sourceLine" id="cb3-2" title="2">[[<span class="ex">gnu::pure</span>]] <span class="dt">int</span> square2(<span class="dt">int</span> value);</a>
+<a class="sourceLine" id="cb3-3" title="3">[[<span class="ex">gnu::const</span>]] <span class="dt">int</span> square3(<span class="dt">int</span> value);</a></code></pre></div>
 <h1 id="c-logging-libraries">C++ Logging Libraries</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/">https://www.reddit.com/r/cpp/comments/a3gp0s/best_logging_libraries/</a></p>
 <ul>
@@ -100,6 +130,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Google Log <a href="https://github.com/google/glog">https://github.com/google/glog</a></li>
 <li>P7 <a href="http://baical.net/p7.html">http://baical.net/p7.html</a></li>
 </ul>
+<h1 id="sol3-is-released">sol3 is Released</h1>
+<p><a href="https://thephd.github.io/sol3-released">https://thephd.github.io/sol3-released</a></p>
+<p><a href="https://sol2.readthedocs.io/en/latest/">https://sol2.readthedocs.io/en/latest/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/bs0piq/sol3_a_modern_luac_binding_is_released/">https://www.reddit.com/r/cpp/comments/bs0piq/sol3_a_modern_luac_binding_is_released/</a></p>
+<h1 id="vexing-exceptions">Vexing exceptions</h1>
+<p><a href="https://blogs.msdn.microsoft.com/ericlippert/2008/09/10/vexing-exceptions/">https://blogs.msdn.microsoft.com/ericlippert/2008/09/10/vexing-exceptions/</a></p>
 <h1 id="exhaustive-and-composable-error-handling-in-c-13">Exhaustive and Composable Error Handling in C++ (1/3)</h1>
 <p><a href="https://fkosmale.bitbucket.io/posts/exhaustive-and-composable-error-handling-in-c%2B%2B/#composable-error-handling">Fabian Kosmale</a></p>
 <blockquote>
@@ -107,32 +143,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p><a href="https://bitbucket.org/fkosmale/composableresult/src/master">Code</a> :: <a href="https://www.reddit.com/r/cpp/comments/b3wkbf/exhaustive_and_composable_error_handling_in_c/">Reddit</a></p>
 <h1 id="exhaustive-and-composable-error-handling-in-c-23">Exhaustive and Composable Error Handling in C++ (2/3)</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">class</span> AST;</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="kw">struct</span> SyntaxError {<span class="dt">int</span> line; <span class="dt">int</span> column;};</a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="kw">struct</span> GrammarError {<span class="dt">int</span> line; <span class="dt">int</span> column; <span class="bu">std::</span>string explanation;};</a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="kw">auto</span> parse(<span class="bu">std::</span>string input) -&gt; Result&lt;AST, SyntaxError, GrammarError&gt;;</a>
-<a class="sourceLine" id="cb1-5" title="5"></a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="kw">struct</span> LengthError {<span class="dt">int</span> length;};</a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="kw">struct</span> HeightError {<span class="dt">int</span> height;};</a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="kw">auto</span> validate(AST ast) -&gt; Result&lt;AST, LengthError, HeightError&gt;</a>
-<a class="sourceLine" id="cb1-9" title="9"></a>
-<a class="sourceLine" id="cb1-10" title="10"><span class="kw">struct</span> DisplayError {<span class="bu">std::</span>string explanation;}</a>
-<a class="sourceLine" id="cb1-11" title="11"><span class="kw">auto</span> display(AST ast) -&gt; <span class="dt">void</span>;</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">class</span> AST;</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">struct</span> SyntaxError {<span class="dt">int</span> line; <span class="dt">int</span> column;};</a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="kw">struct</span> GrammarError {<span class="dt">int</span> line; <span class="dt">int</span> column; <span class="bu">std::</span>string explanation;};</a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="kw">auto</span> parse(<span class="bu">std::</span>string input) -&gt; Result&lt;AST, SyntaxError, GrammarError&gt;;</a>
+<a class="sourceLine" id="cb4-5" title="5"></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="kw">struct</span> LengthError {<span class="dt">int</span> length;};</a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="kw">struct</span> HeightError {<span class="dt">int</span> height;};</a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="kw">auto</span> validate(AST ast) -&gt; Result&lt;AST, LengthError, HeightError&gt;;</a>
+<a class="sourceLine" id="cb4-9" title="9"></a>
+<a class="sourceLine" id="cb4-10" title="10"><span class="kw">struct</span> DisplayError {<span class="bu">std::</span>string explanation;};</a>
+<a class="sourceLine" id="cb4-11" title="11"><span class="kw">auto</span> display(AST ast) -&gt; <span class="dt">void</span>;</a></code></pre></div>
 <h1 id="exhaustive-and-composable-error-handling-in-c-33">Exhaustive and Composable Error Handling in C++ (3/3)</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">auto</span> result = parse(my_input)</a>
-<a class="sourceLine" id="cb2-2" title="2">  .then(validate)</a>
-<a class="sourceLine" id="cb2-3" title="3">  .then(display);</a>
-<a class="sourceLine" id="cb2-4" title="4">Switch(result)</a>
-<a class="sourceLine" id="cb2-5" title="5">  .Case&lt;SyntaxError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb2-6" title="6">    report_error(<span class="st">&quot;Invalid syntax at line&quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
-<a class="sourceLine" id="cb2-7" title="7">  .Case&lt;GrammarError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb2-8" title="8">    report_error(e.explanation, <span class="st">&quot;at &quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
-<a class="sourceLine" id="cb2-9" title="9">  .Case&lt;LengthError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb2-10" title="10">    report_errror(<span class="st">&quot;illegal length: &quot;</span>, e.length);})</a>
-<a class="sourceLine" id="cb2-11" title="11">  .Case&lt;DisplayError&gt;([](<span class="kw">auto</span> err){</a>
-<a class="sourceLine" id="cb2-12" title="12">    report_error(e.explanation);})</a>
-<a class="sourceLine" id="cb2-13" title="13">  | ESAC;</a>
-<a class="sourceLine" id="cb2-14" title="14"><span class="co">// Triggers static_assert as HeightError is unhandled</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">auto</span> result = parse(my_input)</a>
+<a class="sourceLine" id="cb5-2" title="2">  .then(validate)</a>
+<a class="sourceLine" id="cb5-3" title="3">  .then(display);</a>
+<a class="sourceLine" id="cb5-4" title="4">Switch(result)</a>
+<a class="sourceLine" id="cb5-5" title="5">  .Case&lt;SyntaxError&gt;([](<span class="kw">auto</span> err){</a>
+<a class="sourceLine" id="cb5-6" title="6">    report_error(<span class="st">&quot;Invalid syntax at line&quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
+<a class="sourceLine" id="cb5-7" title="7">  .Case&lt;GrammarError&gt;([](<span class="kw">auto</span> err){</a>
+<a class="sourceLine" id="cb5-8" title="8">    report_error(e.explanation, <span class="st">&quot;at &quot;</span>, e.line, <span class="st">&quot;:&quot;</span>, e.column);})</a>
+<a class="sourceLine" id="cb5-9" title="9">  .Case&lt;LengthError&gt;([](<span class="kw">auto</span> err){</a>
+<a class="sourceLine" id="cb5-10" title="10">    report_errror(<span class="st">&quot;illegal length: &quot;</span>, e.length);})</a>
+<a class="sourceLine" id="cb5-11" title="11">  .Case&lt;DisplayError&gt;([](<span class="kw">auto</span> err){</a>
+<a class="sourceLine" id="cb5-12" title="12">    report_error(e.explanation);})</a>
+<a class="sourceLine" id="cb5-13" title="13">  | ESAC;</a>
+<a class="sourceLine" id="cb5-14" title="14"><span class="co">// Triggers static_assert as HeightError is unhandled</span></a></code></pre></div>
 <h1 id="units">Units</h1>
 <p><a href="https://github.com/nholthaus/units">https://github.com/nholthaus/units</a></p>
 <h1 id="having-fun-in-life">Having fun in life!</h1>

@@ -348,8 +348,3 @@ Getting in trouble with mixed comparisons
 -----------------------------------------
 
 https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/
-
-What was your latest discovery about C++?
------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/blu0a4/what_was_your_latest_discovery_about_c/
