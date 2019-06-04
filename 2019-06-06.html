@@ -13,6 +13,69 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
+  <style>
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -24,5 +87,38 @@
 <p class="date">2019-06-06</p>
 </header>
 <hr />
+<h1 id="awesome-modern-c">Awesome Modern C++</h1>
+<p><a href="https://awesomecpp.com/">https://awesomecpp.com/</a></p>
+<h1 id="c-operator-signatures">C++ Operator Signatures</h1>
+<p><a href="https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393">https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393</a></p>
+<p><a href="https://github.com/glebd/cppclub/blob/next/3rd/C%2B%2B%2520normal%2520operators.md">https://github.com/glebd/cppclub/blob/next/3rd/C%2B%2B%2520normal%2520operators.md</a></p>
+<h1 id="hedley">Hedley</h1>
+<p>Hedley: A C/C++ header to help move <code>#ifdef</code>s out of your code</p>
+<ul>
+<li>Home page: <a href="https://nemequ.github.io/hedley/">https://nemequ.github.io/hedley/</a></li>
+<li>Reddit: <a href="https://www.reddit.com/r/cpp/comments/bm2xyk/hedley_a_cc_header_to_help_move_ifdefs_out_of/">https://www.reddit.com/r/cpp/comments/bm2xyk/hedley_a_cc_header_to_help_move_ifdefs_out_of/</a></li>
+</ul>
+<h1 id="stxxl">STXXL</h1>
+<p>STXXL: Standard Template Library for Extra Large Data Sets.</p>
+<p>The core of STXXL is an implementation of the C++ standard template library for external memory (out-of-core) computations, i. e., STXXL implements containers and algorithms that can process huge volumes of data that only fit on disks. While the closeness to the STL supports ease of use and compatibility with existing applications, another design priority is high performance.</p>
+<ul>
+<li>Home: <a href="http://stxxl.org/">http://stxxl.org/</a></li>
+<li>Code: <a href="https://github.com/stxxl/stxxl">https://github.com/stxxl/stxxl</a> (Boost Software License)</li>
+<li>Video: <a href="http://panthema.net/2014/0622-Talk-STXXL-1.4.0-and-Beyond/">http://panthema.net/2014/0622-Talk-STXXL-1.4.0-and-Beyond/</a></li>
+</ul>
+<h1 id="function-poisoning-in-c">Function Poisoning in C++</h1>
+<p><a href="https://www.fluentcpp.com/2018/09/04/function-poisoning-in-cpp/">https://www.fluentcpp.com/2018/09/04/function-poisoning-in-cpp/</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#pragma GCC poison puts</span></a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="dt">int</span> main() {</a>
+<a class="sourceLine" id="cb1-5" title="5">    puts(<span class="st">&quot;a&quot;</span>);</a>
+<a class="sourceLine" id="cb1-6" title="6">}</a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="co">// error: attempt to use poisoned &quot;puts&quot;</span></a></code></pre></div>
+<h1 id="deprecating-and-deleting-functions-in-c">Deprecating and Deleting Functions in C++</h1>
+<p><a href="https://www.fluentcpp.com/2018/11/20/deprecating-and-deleting-functions-in-cpp/">https://www.fluentcpp.com/2018/11/20/deprecating-and-deleting-functions-in-cpp/</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1">[[<span class="at">deprecated</span>(<span class="st">&quot;Replaced by fillmem, which has an improved interface&quot;</span>)]]</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="dt">void</span>* memset(<span class="dt">void</span>*, <span class="dt">int</span>, <span class="dt">size_t</span>);</a></code></pre></div>
 </body>
 </html>
