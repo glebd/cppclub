@@ -1,5 +1,20 @@
 ----
 
+Apple SwiftUI and C++
+---------------------
+
+.. image:: img/swift-ui-cpp.png
+
+Myths about C++
+---------------
+
+https://www.reddit.com/r/cpp/comments/bvf78q/myths/
+
+See also
+~~~~~~~~
+
+* `Bjarne Stroustrup - Five Popular Myths about C++ <http://www.stroustrup.com/Myths-final.pdf>`_
+
 Awesome Modern C++
 ------------------
 
@@ -56,3 +71,15 @@ https://www.fluentcpp.com/2018/11/20/deprecating-and-deleting-functions-in-cpp/
 
     [[deprecated("Replaced by fillmem, which has an improved interface")]]
     void* memset(void*, int, size_t);
+
+Clear, Functional C++ Documentation with Sphinx + Breathe + Doxygen + CMake
+---------------------------------------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/
+
+See also
+~~~~~~~~
+
+* `CppCon 2017: Robert Ramey “How to Write Effective Documentation for C++ Libraries...” <https://youtu.be/YxmdCxX9dMk>`_
+* `Eli Bendersky - reStructuredText vs. Markdown for technical documentation <https://eli.thegreenplace.net/2017/restructuredtext-vs-markdown-for-technical-documentation/>`_
+* `Viktor Zverovich - reStructuredText vs Markdown for documentation <http://www.zverovich.net/2016/06/16/rst-vs-markdown.html>`_
