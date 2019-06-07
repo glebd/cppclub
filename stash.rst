@@ -279,11 +279,6 @@ Introduction to High-Performance Scientific Computing
 
 http://pages.tacc.utexas.edu/~eijkhout/istc/istc.html
 
-Deprecating and Deleting Functions in C++
------------------------------------------
-
-https://www.fluentcpp.com/2018/11/20/deprecating-and-deleting-functions-in-cpp/
-
 reproc 2.0.0 released!
 ----------------------
 
@@ -348,29 +343,3 @@ Getting in trouble with mixed comparisons
 -----------------------------------------
 
 https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/
-
-C++ Operator Signatures
------------------------
-
-https://gist.github.com/beached/38a4ae52fcadfab68cb6de05403fa393
-
-https://github.com/glebd/cppclub/blob/next/3rd/C%2B%2B%2520normal%2520operators.md
-
-Hedley
-------
-
-Hedley: A C/C++ header to help move ``#ifdef``s out of your code
-
-* Home page: https://nemequ.github.io/hedley/
-* Reddit: https://www.reddit.com/r/cpp/comments/bm2xyk/hedley_a_cc_header_to_help_move_ifdefs_out_of/
-
-STXXL
------
-
-STXXL: Standard Template Library for Extra Large Data Sets.
-
-The core of STXXL is an implementation of the C++ standard template library for external memory (out-of-core) computations, i. e., STXXL implements containers and algorithms that can process huge volumes of data that only fit on disks. While the closeness to the STL supports ease of use and compatibility with existing applications, another design priority is high performance.
-
-* Home: http://stxxl.org/
-* Code: https://github.com/stxxl/stxxl (Boost Software License)
-* Video: http://panthema.net/2014/0622-Talk-STXXL-1.4.0-and-Beyond/
