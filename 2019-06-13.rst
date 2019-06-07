@@ -1,0 +1,12 @@
+----
+
+Roman numerals in C++
+---------------------
+
+https://github.com/tcbrindle/numeris_romanis
+
+https://www.reddit.com/r/cpp/comments/bxiqmm/numeris_romanis_roman_numeral_support_for_c17/
+
+Unrelated: `What are the rules about using an underscore in a C++ identifier? <https://stackoverflow.com/questions/228783/what-are-the-rules-about-using-an-underscore-in-a-c-identifier>`_
+
+* Each name that begins with an underscore is reserved to the implementation for use as a name in the global namespace.
