@@ -15,6 +15,65 @@ See also
 
 * `Bjarne Stroustrup - Five Popular Myths about C++ <http://www.stroustrup.com/Myths-final.pdf>`_
 
+CppCon 2018: Jason Turner - Applied Best Practices
+--------------------------------------------------
+
+* Video: https://youtu.be/DHOlsEd0eDE
+* Slides: https://github.com/CppCon/CppCon2018/blob/master/Presentations/applied_best_practices/applied_best_practices__jason_turner__cppcon_2018.pdf
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-1.png
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-2.png
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-3.png
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-4.png
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-5.png
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-6.png
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-7.png
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-8.png
+
+CppCon 2018: Jason Turner - Applied Best Practices (cont.)
+----------------------------------------------------------
+
+.. image:: img/turner-applied-best-practices-9.png
+
+Simplifying C++ with Herb Sutter
+--------------------------------
+
+* CppCast http://cppcast.com/2019/05/herb-sutter/
+  * Reddit https://www.reddit.com/r/cpp/comments/bv3bc9/cppcast_simplifying_c_with_herb_sutter/
+* A theme: Simplifying C++ (& CppCast podcast) https://herbsutter.com/2019/06/01/a-theme-simplifying-c-cppcast-podcast/
+  * Reddit https://www.reddit.com/r/cpp/comments/bvukm6/a_theme_simplifying_c_cppcast_podcast/
+
 Awesome Modern C++
 ------------------
 
@@ -83,3 +142,15 @@ See also
 * `CppCon 2017: Robert Ramey “How to Write Effective Documentation for C++ Libraries...” <https://youtu.be/YxmdCxX9dMk>`_
 * `Eli Bendersky - reStructuredText vs. Markdown for technical documentation <https://eli.thegreenplace.net/2017/restructuredtext-vs-markdown-for-technical-documentation/>`_
 * `Viktor Zverovich - reStructuredText vs Markdown for documentation <http://www.zverovich.net/2016/06/16/rst-vs-markdown.html>`_
+
+Twitter
+-------
+
+.. image:: img/pronounce-tuple.png
+
+Quote
+-----
+
+Cedric Guillemet ``@skaven_``:
+
+    Any sufficiently advanced C++ codebase contains a Utils.cpp/h
