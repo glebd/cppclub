@@ -126,6 +126,13 @@ Reddit:
 
 Also: https://osgameclones.com/
 
+Heterogeneous Lookup in Ordered Containers in C++14
+---------------------------------------------------
+
+https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html
+
+https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/
+
 Quote
 -----
 
