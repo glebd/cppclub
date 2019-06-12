@@ -13,6 +13,69 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
+  <style>
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -24,12 +87,80 @@
 <p class="date">2019-06-13</p>
 </header>
 <hr />
+<h1 id="p0976r0-bjarne-stroustrup---the-evils-of-paradigms">P0976r0: Bjarne Stroustrup - The Evils of Paradigms</h1>
+<p><a href="http://wg21.link/p0976r0">http://wg21.link/p0976r0</a></p>
+<blockquote>
+<p>In programming, some people deem imperative, object-oriented, and functional programming different paradigms. I think the very notion of a paradigm does harm to use and to design because people all too easily fall into the trap of considering only one paradigm “good” and then try to fit everything into it, discarding all aspects of alternative “paradigms” as wrong or inferior (aka “If your only tool is a hammer, everything looks like a nail”).</p>
+</blockquote>
+<h1 id="the-story-bloomberg-senior-developer-elliot-goodrich">The Story: Bloomberg senior developer Elliot Goodrich</h1>
+<p><a href="https://www.client-server.com/blog/2019/06/the-story-bloomberg-senior-developer-elliot-goodrich">https://www.client-server.com/blog/2019/06/the-story-bloomberg-senior-developer-elliot-goodrich</a></p>
+<blockquote>
+<p>I don't think C++ is dying by any stretch of the imagination.</p>
+</blockquote>
+<p><a href="https://www.reddit.com/r/cpp/comments/bw8fyu/interesting_interview_on_client_servers_blog_with/">https://www.reddit.com/r/cpp/comments/bw8fyu/interesting_interview_on_client_servers_blog_with/</a></p>
+<h1 id="modern-c---authors-and-books">Modern C++ - authors and books</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/by60wx/modern_c_authors_and_books/">https://www.reddit.com/r/cpp/comments/by60wx/modern_c_authors_and_books/</a></p>
 <h1 id="roman-numerals-in-c">Roman numerals in C++</h1>
 <p><a href="https://github.com/tcbrindle/numeris_romanis">https://github.com/tcbrindle/numeris_romanis</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/bxiqmm/numeris_romanis_roman_numeral_support_for_c17/">https://www.reddit.com/r/cpp/comments/bxiqmm/numeris_romanis_roman_numeral_support_for_c17/</a></p>
 <p>Unrelated: <a href="https://stackoverflow.com/questions/228783/what-are-the-rules-about-using-an-underscore-in-a-c-identifier">What are the rules about using an underscore in a C++ identifier?</a></p>
+<blockquote>
+<p>Each name that begins with an underscore is reserved to the implementation for use as a name in the global namespace.</p>
+</blockquote>
+<h1 id="understanding-when-not-to-stdmove-in-c">Understanding when not to <strong>std::move</strong> in C++</h1>
+<p><a href="https://developers.redhat.com/blog/2019/04/12/understanding-when-not-to-stdmove-in-c/">https://developers.redhat.com/blog/2019/04/12/understanding-when-not-to-stdmove-in-c/</a></p>
+<p>GCC 9:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">-Wall</span> -Wpessimizing-move</a></code></pre></div>
+<p>Example:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1">T fn() {</a>
+<a class="sourceLine" id="cb2-2" title="2">  T t;</a>
+<a class="sourceLine" id="cb2-3" title="3">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Prevents NRVO: returned expression must be a name</span></a>
+<a class="sourceLine" id="cb2-4" title="4">}</a></code></pre></div>
+<h1 id="understanding-when-not-to-stdmove-in-c-cont.">Understanding when not to <strong>std::move</strong> in C++ (cont.)</h1>
+<p>GCC 9:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">-Wextra</span> -Wredundant-move</a></code></pre></div>
+<p>Example:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">struct</span> T {</a>
+<a class="sourceLine" id="cb4-2" title="2">  T(<span class="at">const</span> T&amp;) = <span class="kw">delete</span>;</a>
+<a class="sourceLine" id="cb4-3" title="3">  T(T&amp;&amp;);</a>
+<a class="sourceLine" id="cb4-4" title="4">};</a>
+<a class="sourceLine" id="cb4-5" title="5"></a>
+<a class="sourceLine" id="cb4-6" title="6">T fn(T t) {</a>
+<a class="sourceLine" id="cb4-7" title="7">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Redundant: move used implicitly</span></a>
+<a class="sourceLine" id="cb4-8" title="8">}</a></code></pre></div>
+<h1 id="understanding-when-not-to-stdmove-in-c-cont.-1">Understanding when not to <strong>std::move</strong> in C++ (cont.)</h1>
+<p>When <code>std::move</code> makes sense:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">struct</span> U {};</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">struct</span> T : U {};</a>
+<a class="sourceLine" id="cb5-3" title="3"></a>
+<a class="sourceLine" id="cb5-4" title="4">U f() {</a>
+<a class="sourceLine" id="cb5-5" title="5">  T t;</a>
+<a class="sourceLine" id="cb5-6" title="6">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Necessary</span></a>
+<a class="sourceLine" id="cb5-7" title="7">}</a></code></pre></div>
+<p>Explanation:</p>
+<blockquote>
+<p>When a function returns an object whose type is a class derived from the class type the function returns. In that case, overload resolution is performed a second time, this time treating the object as an <em>lvalue</em>.</p>
+</blockquote>
+<h1 id="building-better-software-with-better-tools-sanitizers-versus-valgrind">Building better software with better tools: sanitizers versus valgrind</h1>
+<p><a href="https://lemire.me/blog/2019/05/16/building-better-software-with-better-tools-sanitizers-versus-valgrind/">https://lemire.me/blog/2019/05/16/building-better-software-with-better-tools-sanitizers-versus-valgrind/</a></p>
+<p>Also: <a href="https://lemire.me/blog/2016/04/20/no-more-leaks-with-sanitize-flags-in-gcc-and-clang/">No more leaks with sanitize flags in gcc and clang</a></p>
+<h1 id="variadic_future"><strong>variadic_future</strong></h1>
+<p>A variadic, completion-based future class for C++17</p>
+<p><a href="https://github.com/FrancoisChabot/variadic_future">https://github.com/FrancoisChabot/variadic_future</a> (Apache 2.0)</p>
+<h1 id="re-implementing-an-old-dos-game-in-c17">Re-implementing an old DOS game in C++17</h1>
+<p><a href="https://lethalguitar.wordpress.com/2019/05/28/re-implementing-an-old-dos-game-in-c-17/">https://lethalguitar.wordpress.com/2019/05/28/re-implementing-an-old-dos-game-in-c-17/</a></p>
+<p>Code: <a href="https://github.com/lethal-guitar/RigelEngine">https://github.com/lethal-guitar/RigelEngine</a></p>
+<p>Duke Nukem II: <a href="https://en.wikipedia.org/wiki/Duke_Nukem_II">https://en.wikipedia.org/wiki/Duke_Nukem_II</a></p>
+<p>Reddit:</p>
 <ul>
-<li>Each name that begins with an underscore is reserved to the implementation for use as a name in the global namespace.</li>
+<li><a href="https://www.reddit.com/r/cpp/comments/bubyrn/reimplementing_an_old_dos_game_in_c_17/">https://www.reddit.com/r/cpp/comments/bubyrn/reimplementing_an_old_dos_game_in_c_17/</a></li>
+<li><a href="https://www.reddit.com/r/programming/comments/buc3u4/reimplementing_an_old_dos_game_in_c_17/">https://www.reddit.com/r/programming/comments/buc3u4/reimplementing_an_old_dos_game_in_c_17/</a></li>
 </ul>
+<p>Also: <a href="https://osgameclones.com/">https://osgameclones.com/</a></p>
+<h1 id="quote">Quote</h1>
+<p>Melinda Varian:</p>
+<blockquote>
+<p>The best programs are the ones written when the programmer is supposed to be working on something else.</p>
+</blockquote>
 </body>
 </html>

@@ -79,11 +79,6 @@ https://github.com/daniele77/cli
 
 https://www.reddit.com/r/cpp/comments/ar4ghs/stdpair_disappointing_performance/
 
-Understanding when not to **std::move** in C++
-----------------------------------------------
-
-https://developers.redhat.com/blog/2019/04/12/understanding-when-not-to-stdmove-in-c/
-
 PhysicsFS vs **std::filesystem**
 --------------------------------
 
