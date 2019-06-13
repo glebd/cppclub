@@ -10,6 +10,13 @@ http://wg21.link/p0976r0
     of considering only one paradigm “good” and then try to fit everything into it, discarding all aspects of
     alternative “paradigms” as wrong or inferior (aka “If your only tool is a hammer, everything looks like a nail”).
 
+CppCast: Pattern Matching with Michael Park
+-------------------------------------------
+
+http://cppcast.com/2019/06/michael-park/
+
+P1371: Pattern Matching http://wg21.link/p1371r0
+
 The Story: Bloomberg senior developer Elliot Goodrich
 -----------------------------------------------------
 
@@ -23,6 +30,25 @@ Modern C++ - authors and books
 ------------------------------
 
 https://www.reddit.com/r/cpp/comments/by60wx/modern_c_authors_and_books/
+
+.. image:: img/cpp-data-structures-book-2019.png
+
+Enum template parameters
+------------------------
+
+.. code:: c++
+
+    enum Foo {FooBar, FooBaz};
+
+    template<Foo foo>
+    struct Test {
+        Kind kind{foo};
+    };
+
+    int main() {
+        Test<FooBar> fooBar;
+        assert(fooBar.kind==FooBar);
+    }
 
 Roman numerals in C++
 ---------------------
@@ -126,13 +152,6 @@ Reddit:
 
 Also: https://osgameclones.com/
 
-Heterogeneous Lookup in Ordered Containers in C++14
----------------------------------------------------
-
-https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html
-
-https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/
-
 Using **main** is undefined behaviour
 -------------------------------------
 
@@ -173,15 +192,6 @@ GitHub: https://github.com/intel/tbb (Apache 2.0)
     Since 2018 U5 TBB binary packages include Parallel STL as a high-level component.
 
 Parallel STL: https://github.com/intel/parallelstl (Apache 2.0)
-
-Professional, zero-cost setup for C++ projects
-----------------------------------------------
-
-Part 1: https://awfulcode.io/2019/04/13/professional-zero-cost-setup-for-c-projects-part-1-of-n/
-
-Part 2: https://awfulcode.io/2019/04/26/professional-zero-cost-setup-for-c-projects-part-2-of-n/
-
-Reddit: https://www.reddit.com/r/cpp/comments/bhqcjh/professional_zerocost_setup_for_c_projects_part_2/
 
 Quote
 -----

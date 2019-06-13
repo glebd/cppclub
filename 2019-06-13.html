@@ -92,6 +92,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote>
 <p>In programming, some people deem imperative, object-oriented, and functional programming different paradigms. I think the very notion of a paradigm does harm to use and to design because people all too easily fall into the trap of considering only one paradigm “good” and then try to fit everything into it, discarding all aspects of alternative “paradigms” as wrong or inferior (aka “If your only tool is a hammer, everything looks like a nail”).</p>
 </blockquote>
+<h1 id="cppcast-pattern-matching-with-michael-park">CppCast: Pattern Matching with Michael Park</h1>
+<p><a href="http://cppcast.com/2019/06/michael-park/">http://cppcast.com/2019/06/michael-park/</a></p>
+<p>P1371: Pattern Matching <a href="http://wg21.link/p1371r0">http://wg21.link/p1371r0</a></p>
 <h1 id="the-story-bloomberg-senior-developer-elliot-goodrich">The Story: Bloomberg senior developer Elliot Goodrich</h1>
 <p><a href="https://www.client-server.com/blog/2019/06/the-story-bloomberg-senior-developer-elliot-goodrich">https://www.client-server.com/blog/2019/06/the-story-bloomberg-senior-developer-elliot-goodrich</a></p>
 <blockquote>
@@ -100,6 +103,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="https://www.reddit.com/r/cpp/comments/bw8fyu/interesting_interview_on_client_servers_blog_with/">https://www.reddit.com/r/cpp/comments/bw8fyu/interesting_interview_on_client_servers_blog_with/</a></p>
 <h1 id="modern-c---authors-and-books">Modern C++ - authors and books</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/by60wx/modern_c_authors_and_books/">https://www.reddit.com/r/cpp/comments/by60wx/modern_c_authors_and_books/</a></p>
+<p><img src="img/cpp-data-structures-book-2019.png" alt="image" /></p>
+<h1 id="enum-template-parameters">Enum template parameters</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">enum</span> Foo {FooBar, FooBaz};</a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">template</span>&lt;Foo foo&gt;</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="kw">struct</span> Test {</a>
+<a class="sourceLine" id="cb1-5" title="5">    Kind kind{foo};</a>
+<a class="sourceLine" id="cb1-6" title="6">};</a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="dt">int</span> main() {</a>
+<a class="sourceLine" id="cb1-9" title="9">    Test&lt;FooBar&gt; fooBar;</a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="ot">assert</span>(fooBar.kind==FooBar);</a>
+<a class="sourceLine" id="cb1-11" title="11">}</a></code></pre></div>
 <h1 id="roman-numerals-in-c">Roman numerals in C++</h1>
 <p><a href="https://github.com/tcbrindle/numeris_romanis">https://github.com/tcbrindle/numeris_romanis</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/bxiqmm/numeris_romanis_roman_numeral_support_for_c17/">https://www.reddit.com/r/cpp/comments/bxiqmm/numeris_romanis_roman_numeral_support_for_c17/</a></p>
@@ -110,33 +126,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="understanding-when-not-to-stdmove-in-c">Understanding when not to <strong>std::move</strong> in C++</h1>
 <p><a href="https://developers.redhat.com/blog/2019/04/12/understanding-when-not-to-stdmove-in-c/">https://developers.redhat.com/blog/2019/04/12/understanding-when-not-to-stdmove-in-c/</a></p>
 <p>GCC 9:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">-Wall</span> -Wpessimizing-move</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">-Wall</span> -Wpessimizing-move</a></code></pre></div>
 <p>Example:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1">T fn() {</a>
-<a class="sourceLine" id="cb2-2" title="2">  T t;</a>
-<a class="sourceLine" id="cb2-3" title="3">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Prevents NRVO: returned expression must be a name</span></a>
-<a class="sourceLine" id="cb2-4" title="4">}</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1">T fn() {</a>
+<a class="sourceLine" id="cb3-2" title="2">  T t;</a>
+<a class="sourceLine" id="cb3-3" title="3">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Prevents NRVO: returned expression must be a name</span></a>
+<a class="sourceLine" id="cb3-4" title="4">}</a></code></pre></div>
 <h1 id="understanding-when-not-to-stdmove-in-c-cont.">Understanding when not to <strong>std::move</strong> in C++ (cont.)</h1>
 <p>GCC 9:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">-Wextra</span> -Wredundant-move</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">-Wextra</span> -Wredundant-move</a></code></pre></div>
 <p>Example:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">struct</span> T {</a>
-<a class="sourceLine" id="cb4-2" title="2">  T(<span class="at">const</span> T&amp;) = <span class="kw">delete</span>;</a>
-<a class="sourceLine" id="cb4-3" title="3">  T(T&amp;&amp;);</a>
-<a class="sourceLine" id="cb4-4" title="4">};</a>
-<a class="sourceLine" id="cb4-5" title="5"></a>
-<a class="sourceLine" id="cb4-6" title="6">T fn(T t) {</a>
-<a class="sourceLine" id="cb4-7" title="7">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Redundant: move used implicitly</span></a>
-<a class="sourceLine" id="cb4-8" title="8">}</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">struct</span> T {</a>
+<a class="sourceLine" id="cb5-2" title="2">  T(<span class="at">const</span> T&amp;) = <span class="kw">delete</span>;</a>
+<a class="sourceLine" id="cb5-3" title="3">  T(T&amp;&amp;);</a>
+<a class="sourceLine" id="cb5-4" title="4">};</a>
+<a class="sourceLine" id="cb5-5" title="5"></a>
+<a class="sourceLine" id="cb5-6" title="6">T fn(T t) {</a>
+<a class="sourceLine" id="cb5-7" title="7">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Redundant: move used implicitly</span></a>
+<a class="sourceLine" id="cb5-8" title="8">}</a></code></pre></div>
 <h1 id="understanding-when-not-to-stdmove-in-c-cont.-1">Understanding when not to <strong>std::move</strong> in C++ (cont.)</h1>
 <p>When <code>std::move</code> makes sense:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">struct</span> U {};</a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="kw">struct</span> T : U {};</a>
-<a class="sourceLine" id="cb5-3" title="3"></a>
-<a class="sourceLine" id="cb5-4" title="4">U f() {</a>
-<a class="sourceLine" id="cb5-5" title="5">  T t;</a>
-<a class="sourceLine" id="cb5-6" title="6">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Necessary</span></a>
-<a class="sourceLine" id="cb5-7" title="7">}</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">struct</span> U {};</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw">struct</span> T : U {};</a>
+<a class="sourceLine" id="cb6-3" title="3"></a>
+<a class="sourceLine" id="cb6-4" title="4">U f() {</a>
+<a class="sourceLine" id="cb6-5" title="5">  T t;</a>
+<a class="sourceLine" id="cb6-6" title="6">  <span class="cf">return</span> <span class="bu">std::</span>move(t); <span class="co">// Necessary</span></a>
+<a class="sourceLine" id="cb6-7" title="7">}</a></code></pre></div>
 <p>Explanation:</p>
 <blockquote>
 <p>When a function returns an object whose type is a class derived from the class type the function returns. In that case, overload resolution is performed a second time, this time treating the object as an <em>lvalue</em>.</p>
@@ -157,24 +173,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://www.reddit.com/r/programming/comments/buc3u4/reimplementing_an_old_dos_game_in_c_17/">https://www.reddit.com/r/programming/comments/buc3u4/reimplementing_an_old_dos_game_in_c_17/</a></li>
 </ul>
 <p>Also: <a href="https://osgameclones.com/">https://osgameclones.com/</a></p>
-<h1 id="heterogeneous-lookup-in-ordered-containers-in-c14">Heterogeneous Lookup in Ordered Containers in C++14</h1>
-<p><a href="https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html">https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/">https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/</a></p>
 <h1 id="using-main-is-undefined-behaviour">Using <strong>main</strong> is undefined behaviour</h1>
 <p>Shafik Yaghmour:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">int</span> main() {</a>
-<a class="sourceLine" id="cb6-2" title="2">    <span class="kw">decltype</span>(main()) x;</a>
-<a class="sourceLine" id="cb6-3" title="3">    <span class="cf">return</span> <span class="kw">static_cast</span>&lt;<span class="dt">bool</span>&gt;(&amp;main);</a>
-<a class="sourceLine" id="cb6-4" title="4">}</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">int</span> main() {</a>
+<a class="sourceLine" id="cb7-2" title="2">    <span class="kw">decltype</span>(main()) x;</a>
+<a class="sourceLine" id="cb7-3" title="3">    <span class="cf">return</span> <span class="kw">static_cast</span>&lt;<span class="dt">bool</span>&gt;(&amp;main);</a>
+<a class="sourceLine" id="cb7-4" title="4">}</a></code></pre></div>
 <p><img src="img/rules-main.png" alt="image" /></p>
 <h1 id="attempting-to-modify-a-const-object-is-undefined-behaviour">Attempting to modify a const object is undefined behaviour</h1>
 <p>Shafik Yaghmour:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">int</span> b() {</a>
-<a class="sourceLine" id="cb7-2" title="2">    <span class="at">const</span> <span class="dt">int</span> x=<span class="dv">1</span>;</a>
-<a class="sourceLine" id="cb7-3" title="3">    <span class="dt">int</span>* p = <span class="kw">const_cast</span>&lt;<span class="dt">int</span>*&gt;(&amp;x); <span class="co">// OK</span></a>
-<a class="sourceLine" id="cb7-4" title="4">    *p = <span class="dv">2</span>;                        <span class="co">// UB</span></a>
-<a class="sourceLine" id="cb7-5" title="5">    <span class="cf">return</span> *p;</a>
-<a class="sourceLine" id="cb7-6" title="6">}</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">int</span> b() {</a>
+<a class="sourceLine" id="cb8-2" title="2">    <span class="at">const</span> <span class="dt">int</span> x=<span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb8-3" title="3">    <span class="dt">int</span>* p = <span class="kw">const_cast</span>&lt;<span class="dt">int</span>*&gt;(&amp;x); <span class="co">// OK</span></a>
+<a class="sourceLine" id="cb8-4" title="4">    *p = <span class="dv">2</span>;                        <span class="co">// UB</span></a>
+<a class="sourceLine" id="cb8-5" title="5">    <span class="cf">return</span> *p;</a>
+<a class="sourceLine" id="cb8-6" title="6">}</a></code></pre></div>
 <h1 id="c17-stl-parallel-algorithms---with-gcc-9.1-and-intel-tbb-on-linux-and-macos">C++17 STL Parallel Algorithms - with GCC 9.1 and Intel TBB on Linux and macOS</h1>
 <p><a href="https://solarianprogrammer.com/2019/05/09/cpp-17-stl-parallel-algorithms-gcc-intel-tbb-linux-macos/">https://solarianprogrammer.com/2019/05/09/cpp-17-stl-parallel-algorithms-gcc-intel-tbb-linux-macos/</a></p>
 <p>Threading Building Blocks (TBB) <a href="https://www.threadingbuildingblocks.org/">https://www.threadingbuildingblocks.org/</a></p>
@@ -183,10 +196,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Since 2018 U5 TBB binary packages include Parallel STL as a high-level component.</p>
 </blockquote>
 <p>Parallel STL: <a href="https://github.com/intel/parallelstl">https://github.com/intel/parallelstl</a> (Apache 2.0)</p>
-<h1 id="professional-zero-cost-setup-for-c-projects">Professional, zero-cost setup for C++ projects</h1>
-<p>Part 1: <a href="https://awfulcode.io/2019/04/13/professional-zero-cost-setup-for-c-projects-part-1-of-n/">https://awfulcode.io/2019/04/13/professional-zero-cost-setup-for-c-projects-part-1-of-n/</a></p>
-<p>Part 2: <a href="https://awfulcode.io/2019/04/26/professional-zero-cost-setup-for-c-projects-part-2-of-n/">https://awfulcode.io/2019/04/26/professional-zero-cost-setup-for-c-projects-part-2-of-n/</a></p>
-<p>Reddit: <a href="https://www.reddit.com/r/cpp/comments/bhqcjh/professional_zerocost_setup_for_c_projects_part_2/">https://www.reddit.com/r/cpp/comments/bhqcjh/professional_zerocost_setup_for_c_projects_part_2/</a></p>
 <h1 id="quote">Quote</h1>
 <p>Melinda Varian:</p>
 <blockquote>
