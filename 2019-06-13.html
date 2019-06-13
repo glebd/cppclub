@@ -160,6 +160,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="heterogeneous-lookup-in-ordered-containers-in-c14">Heterogeneous Lookup in Ordered Containers in C++14</h1>
 <p><a href="https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html">https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/">https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/</a></p>
+<h1 id="using-main-is-undefined-behaviour">Using <strong>main</strong> is undefined behaviour</h1>
+<p>Shafik Yaghmour:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb6-1" title="1"><span class="dt">int</span> main() {</a>
+<a class="sourceLine" id="cb6-2" title="2">    <span class="kw">decltype</span>(main()) x;</a>
+<a class="sourceLine" id="cb6-3" title="3">    <span class="cf">return</span> <span class="kw">static_cast</span>&lt;<span class="dt">bool</span>&gt;(&amp;main);</a>
+<a class="sourceLine" id="cb6-4" title="4">}</a></code></pre></div>
+<p><img src="img/rules-main.png" alt="image" /></p>
+<h1 id="attempting-to-modify-a-const-object-is-undefined-behaviour">Attempting to modify a const object is undefined behaviour</h1>
+<p>Shafik Yaghmour:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb7-1" title="1"><span class="dt">int</span> b() {</a>
+<a class="sourceLine" id="cb7-2" title="2">    <span class="at">const</span> <span class="dt">int</span> x=<span class="dv">1</span>;</a>
+<a class="sourceLine" id="cb7-3" title="3">    <span class="dt">int</span>* p = <span class="kw">const_cast</span>&lt;<span class="dt">int</span>*&gt;(&amp;x); <span class="co">// OK</span></a>
+<a class="sourceLine" id="cb7-4" title="4">    *p = <span class="dv">2</span>;                        <span class="co">// UB</span></a>
+<a class="sourceLine" id="cb7-5" title="5">    <span class="cf">return</span> *p;</a>
+<a class="sourceLine" id="cb7-6" title="6">}</a></code></pre></div>
+<h1 id="c17-stl-parallel-algorithms---with-gcc-9.1-and-intel-tbb-on-linux-and-macos">C++17 STL Parallel Algorithms - with GCC 9.1 and Intel TBB on Linux and macOS</h1>
+<p><a href="https://solarianprogrammer.com/2019/05/09/cpp-17-stl-parallel-algorithms-gcc-intel-tbb-linux-macos/">https://solarianprogrammer.com/2019/05/09/cpp-17-stl-parallel-algorithms-gcc-intel-tbb-linux-macos/</a></p>
+<p>Threading Building Blocks (TBB) <a href="https://www.threadingbuildingblocks.org/">https://www.threadingbuildingblocks.org/</a></p>
+<p>GitHub: <a href="https://github.com/intel/tbb">https://github.com/intel/tbb</a> (Apache 2.0)</p>
+<blockquote>
+<p>Since 2018 U5 TBB binary packages include Parallel STL as a high-level component.</p>
+</blockquote>
+<p>Parallel STL: <a href="https://github.com/intel/parallelstl">https://github.com/intel/parallelstl</a> (Apache 2.0)</p>
 <h1 id="quote">Quote</h1>
 <p>Melinda Varian:</p>
 <blockquote>

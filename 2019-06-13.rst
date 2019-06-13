@@ -133,6 +133,47 @@ https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html
 
 https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/
 
+Using **main** is undefined behaviour
+-------------------------------------
+
+Shafik Yaghmour:
+
+.. code:: c++
+
+    int main() {
+        decltype(main()) x;
+        return static_cast<bool>(&main);
+    }
+
+.. image:: img/rules-main.png
+
+Attempting to modify a const object is undefined behaviour
+----------------------------------------------------------
+
+Shafik Yaghmour:
+
+.. code:: c++
+
+    int b() {
+        const int x=1;
+        int* p = const_cast<int*>(&x); // OK
+        *p = 2;                        // UB
+        return *p;
+    }
+
+C++17 STL Parallel Algorithms - with GCC 9.1 and Intel TBB on Linux and macOS
+-----------------------------------------------------------------------------
+
+https://solarianprogrammer.com/2019/05/09/cpp-17-stl-parallel-algorithms-gcc-intel-tbb-linux-macos/
+
+Threading Building Blocks (TBB) https://www.threadingbuildingblocks.org/
+
+GitHub: https://github.com/intel/tbb (Apache 2.0)
+
+    Since 2018 U5 TBB binary packages include Parallel STL as a high-level component.
+
+Parallel STL: https://github.com/intel/parallelstl (Apache 2.0)
+
 Quote
 -----
 
