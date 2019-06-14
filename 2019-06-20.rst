@@ -1,0 +1,35 @@
+----
+
+Heterogeneous Lookup in Ordered Containers in C++14
+---------------------------------------------------
+
+https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html
+
+https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/
+
+Professional, zero-cost setup for C++ projects
+----------------------------------------------
+
+Part 1: https://awfulcode.io/2019/04/13/professional-zero-cost-setup-for-c-projects-part-1-of-n/
+
+Part 2: https://awfulcode.io/2019/04/26/professional-zero-cost-setup-for-c-projects-part-2-of-n/
+
+Reddit: https://www.reddit.com/r/cpp/comments/bhqcjh/professional_zerocost_setup_for_c_projects_part_2/
+
+Higher-order functions
+----------------------
+
+`Meeting C++ 2018: Björn Fahller - Higher Order Functions for ordinary developers <https://youtu.be/qL6zUn7iiLg>`_
+
+    A **higher-order function** is a function that takes other functions as arguments or returns a function as result.
+
+Take-away messages:
+
+* Avoid using ``std::function`` as return type, use ``auto`` instead
+* Capturing by reference when returning a lambda is dangerous
+* Compose functions and give names to compositions
+* Functional extensions to ``std::optional`` and ``std::expected`` remove the need for many conditionals
+
+https://github.com/rollbear/lift
+
+`Boost.HOF <https://github.com/boostorg/hof>`_ in Boost 1.68+ (`Docs <http://boost-hof.readthedocs.io/>`_)

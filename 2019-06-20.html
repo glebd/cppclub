@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gleb Dolgich" />
+  <meta name="dcterms.date" content="2019-06-20" />
+  <title>C++ Club Meeting Notes</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">C++ Club Meeting Notes</h1>
+<p class="author">Gleb Dolgich</p>
+<p class="date">2019-06-20</p>
+</header>
+<hr />
+<h1 id="heterogeneous-lookup-in-ordered-containers-in-c14">Heterogeneous Lookup in Ordered Containers in C++14</h1>
+<p><a href="https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html">https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/">https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/</a></p>
+<h1 id="professional-zero-cost-setup-for-c-projects">Professional, zero-cost setup for C++ projects</h1>
+<p>Part 1: <a href="https://awfulcode.io/2019/04/13/professional-zero-cost-setup-for-c-projects-part-1-of-n/">https://awfulcode.io/2019/04/13/professional-zero-cost-setup-for-c-projects-part-1-of-n/</a></p>
+<p>Part 2: <a href="https://awfulcode.io/2019/04/26/professional-zero-cost-setup-for-c-projects-part-2-of-n/">https://awfulcode.io/2019/04/26/professional-zero-cost-setup-for-c-projects-part-2-of-n/</a></p>
+<p>Reddit: <a href="https://www.reddit.com/r/cpp/comments/bhqcjh/professional_zerocost_setup_for_c_projects_part_2/">https://www.reddit.com/r/cpp/comments/bhqcjh/professional_zerocost_setup_for_c_projects_part_2/</a></p>
+<h1 id="higher-order-functions">Higher-order functions</h1>
+<p><a href="https://youtu.be/qL6zUn7iiLg">Meeting C++ 2018: Björn Fahller - Higher Order Functions for ordinary developers</a></p>
+<blockquote>
+<p>A <strong>higher-order function</strong> is a function that takes other functions as arguments or returns a function as result.</p>
+</blockquote>
+<p>Take-away messages:</p>
+<ul>
+<li>Avoid using <code>std::function</code> as return type, use <code>auto</code> instead</li>
+<li>Capturing by reference when returning a lambda is dangerous</li>
+<li>Compose functions and give names to compositions</li>
+<li>Functional extensions to <code>std::optional</code> and <code>std::expected</code> remove the need for many conditionals</li>
+</ul>
+<p><a href="https://github.com/rollbear/lift">https://github.com/rollbear/lift</a></p>
+<p><a href="https://github.com/boostorg/hof">Boost.HOF</a> in Boost 1.68+ (<a href="http://boost-hof.readthedocs.io/">Docs</a>)</p>
+</body>
+</html>
