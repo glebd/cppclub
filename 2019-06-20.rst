@@ -1,5 +1,10 @@
 ----
 
+CPPP19 Trip Reports
+-------------------
+
+https://deque.blog/2019/06/17/trip-report-on-cppp-19-the-first-edition-of-the-first-c-french-conference/
+
 Heterogeneous Lookup in Ordered Containers in C++14
 ---------------------------------------------------
 
@@ -33,3 +38,48 @@ Take-away messages:
 https://github.com/rollbear/lift
 
 `Boost.HOF <https://github.com/boostorg/hof>`_ in Boost 1.68+ (`Docs <http://boost-hof.readthedocs.io/>`_)
+
+C++ Developer Ecosystem
+-----------------------
+
+https://www.jetbrains.com/lp/devecosystem-2019/cpp/
+
+https://www.reddit.com/r/cpp/comments/c21ft6/the_state_of_developer_ecosystem_2019_c/
+
+Catch V2.9.0
+------------
+
+https://github.com/catchorg/Catch2/releases/tag/v2.9.0
+
+This release replaces the old benchmarking support with a new one, based on donated Nonius code.
+
+Taskflow V2.2.0
+---------------
+
+    Cpp-Taskflow is by far faster, more expressive, and easier for drop-in integration than existing parallel task
+    programming libraries such as `OpenMP Tasking
+    <http://www.nersc.gov/users/software/programming-models/openmp/openmp-tasking/>`_ and `Intel TBB FlowGraph
+    <https://www.threadingbuildingblocks.org/tutorial-intel-tbb-flow-graph>`_ in handling complex parallel workloads.
+
+https://github.com/cpp-taskflow/cpp-taskflow/releases/tag/v2.2.0 (MIT)
+
+Docs: https://cpp-taskflow.github.io/cpp-taskflow/index.html
+
+SFINAE and enable_if
+--------------------
+
+https://eli.thegreenplace.net/2014/sfinae-and-enable_if/
+
+https://www.reddit.com/r/cpp/comments/c1njko/sfinae_and_enable_if_eli_benderskys_website/
+
+Boost **out_ptr**
+-----------------
+
+https://thephd.github.io/vendor/future_cxx/papers/d1132.html
+
+https://github.com/ThePhD/out_ptr
+
+https://github.com/ThePhD/out_ptr/blob/master/docs/out_ptr.adoc
+
+https://lists.boost.org/Archives/boost//2019/06/246353.php
+
