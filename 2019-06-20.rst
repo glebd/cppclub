@@ -1,0 +1,153 @@
+----
+
+CPPP19 Trip Reports
+-------------------
+
+https://deque.blog/2019/06/17/trip-report-on-cppp-19-the-first-edition-of-the-first-c-french-conference/
+
+Hello World with reflection
+---------------------------
+
+.. image:: img/hello-world-meta.png
+
+Heterogeneous Lookup in Ordered Containers in C++14
+---------------------------------------------------
+
+https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html
+
+https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/
+
+Professional, zero-cost setup for C++ projects
+----------------------------------------------
+
+Part 1: https://awfulcode.io/2019/04/13/professional-zero-cost-setup-for-c-projects-part-1-of-n/
+
+Part 2: https://awfulcode.io/2019/04/26/professional-zero-cost-setup-for-c-projects-part-2-of-n/
+
+Reddit: https://www.reddit.com/r/cpp/comments/bhqcjh/professional_zerocost_setup_for_c_projects_part_2/
+
+Higher-order functions
+----------------------
+
+`Meeting C++ 2018: Björn Fahller - Higher Order Functions for ordinary developers <https://youtu.be/qL6zUn7iiLg>`_
+
+    A **higher-order function** is a function that takes other functions as arguments or returns a function as result.
+
+Take-away messages:
+
+* Avoid using ``std::function`` as return type, use ``auto`` instead
+* Capturing by reference when returning a lambda is dangerous
+* Compose functions and give names to compositions
+* Functional extensions to ``std::optional`` and ``std::expected`` remove the need for many conditionals
+
+https://github.com/rollbear/lift
+
+`Boost.HOF <https://github.com/boostorg/hof>`_ in Boost 1.68+ (`Docs <http://boost-hof.readthedocs.io/>`_)
+
+PacifiC++ 2018 - Titus Winters - C++ Past vs. Future
+----------------------------------------------------
+
+https://youtu.be/IY8tHh2LSX4
+
+std::function const correctess bug
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: c++
+
+    struct Callable {
+        void operator()(){count++;}
+        void operator()() const = delete;
+        int count = 0;
+    };
+
+    void f() {
+        Callable counter;
+        std::function<void(void)> f = counter;
+        f();
+        const auto cf = f;
+        cf(); // ???
+    }
+
+PacifiC++ 2018 - Titus Winters - C++ Past vs. Future (cont.)
+------------------------------------------------------------
+
+std::function requires copyable callables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: c++
+
+    void f() {
+        std::unique_ptr<int> up;
+        auto l=[up=std::move(up)](){};
+        std::function<void(void)> f=l; // Build fails
+    }
+
+PacifiC++ 2018 - Titus Winters - C++ Past vs. Future (cont.)
+------------------------------------------------------------
+
+ODR violation
+~~~~~~~~~~~~~
+
+.. code:: c++
+
+    namespace libs {
+    inline bool contains(std::string_view needle, std::string_view haystack) {
+        assert(needle.size() <= haystack.size()); // !!!
+        return haystack.find(needle) != std::string_view::npos;
+    }
+    }
+
+C++ Developer Ecosystem
+-----------------------
+
+https://www.jetbrains.com/lp/devecosystem-2019/cpp/
+
+https://www.reddit.com/r/cpp/comments/c21ft6/the_state_of_developer_ecosystem_2019_c/
+
+Catch V2.9.0
+------------
+
+https://github.com/catchorg/Catch2/releases/tag/v2.9.0
+
+This release replaces the old benchmarking support with a new one, based on donated Nonius code.
+
+Taskflow V2.2.0
+---------------
+
+    Cpp-Taskflow is by far faster, more expressive, and easier for drop-in integration than existing parallel task
+    programming libraries such as `OpenMP Tasking
+    <http://www.nersc.gov/users/software/programming-models/openmp/openmp-tasking/>`_ and `Intel TBB FlowGraph
+    <https://www.threadingbuildingblocks.org/tutorial-intel-tbb-flow-graph>`_ in handling complex parallel workloads.
+
+https://github.com/cpp-taskflow/cpp-taskflow/releases/tag/v2.2.0 (MIT)
+
+Docs: https://cpp-taskflow.github.io/cpp-taskflow/index.html
+
+SFINAE and enable_if
+--------------------
+
+https://eli.thegreenplace.net/2014/sfinae-and-enable_if/
+
+https://www.reddit.com/r/cpp/comments/c1njko/sfinae_and_enable_if_eli_benderskys_website/
+
+Boost **out_ptr**
+-----------------
+
+https://thephd.github.io/vendor/future_cxx/papers/d1132.html
+
+https://github.com/ThePhD/out_ptr
+
+https://github.com/ThePhD/out_ptr/blob/master/docs/out_ptr.adoc
+
+https://lists.boost.org/Archives/boost//2019/06/246353.php
+
+Twitter
+-------
+
+.. image:: img/turner-hpp.png
+
+Quote
+-----
+
+.. image:: img/theory-practice.png
+
