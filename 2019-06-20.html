@@ -13,6 +13,71 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -26,6 +91,8 @@
 <hr />
 <h1 id="cppp19-trip-reports">CPPP19 Trip Reports</h1>
 <p><a href="https://deque.blog/2019/06/17/trip-report-on-cppp-19-the-first-edition-of-the-first-c-french-conference/">https://deque.blog/2019/06/17/trip-report-on-cppp-19-the-first-edition-of-the-first-c-french-conference/</a></p>
+<h1 id="hello-world-with-reflection">Hello World with reflection</h1>
+<p><img src="img/hello-world-meta.png" alt="image" /></p>
 <h1 id="heterogeneous-lookup-in-ordered-containers-in-c14">Heterogeneous Lookup in Ordered Containers in C++14</h1>
 <p><a href="https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html">https://www.bfilipek.com/2019/05/heterogeneous-lookup-cpp14.html</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/">https://www.reddit.com/r/cpp/comments/btrfnd/heterogeneous_lookup_in_ordered_containers_c14/</a></p>
@@ -47,6 +114,37 @@
 </ul>
 <p><a href="https://github.com/rollbear/lift">https://github.com/rollbear/lift</a></p>
 <p><a href="https://github.com/boostorg/hof">Boost.HOF</a> in Boost 1.68+ (<a href="http://boost-hof.readthedocs.io/">Docs</a>)</p>
+<h1 id="pacific-2018---titus-winters---c-past-vs.-future">PacifiC++ 2018 - Titus Winters - C++ Past vs. Future</h1>
+<p><a href="https://youtu.be/IY8tHh2LSX4">https://youtu.be/IY8tHh2LSX4</a></p>
+<h2 id="stdfunction-const-correctess-bug">std::function const correctess bug</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">struct</span> Callable {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="dt">void</span> <span class="kw">operator</span>()(){count++;}</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="dt">void</span> <span class="kw">operator</span>()() <span class="at">const</span> = <span class="kw">delete</span>;</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">int</span> count = <span class="dv">0</span>;</span>
+<span id="cb1-5"><a href="#cb1-5"></a>};</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="dt">void</span> f() {</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    Callable counter;</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f = counter;</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    f();</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="at">const</span> <span class="kw">auto</span> cf = f;</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    cf(); <span class="co">// ???</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>}</span></code></pre></div>
+<h1 id="pacific-2018---titus-winters---c-past-vs.-future-cont.">PacifiC++ 2018 - Titus Winters - C++ Past vs. Future (cont.)</h1>
+<h2 id="stdfunction-requires-copyable-callables">std::function requires copyable callables</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">void</span> f() {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="bu">std::</span>unique_ptr&lt;<span class="dt">int</span>&gt; up;</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="kw">auto</span> l=[up=<span class="bu">std::</span>move(up)](){};</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f=l; <span class="co">// Build fails</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>}</span></code></pre></div>
+<h1 id="pacific-2018---titus-winters---c-past-vs.-future-cont.-1">PacifiC++ 2018 - Titus Winters - C++ Past vs. Future (cont.)</h1>
+<h2 id="odr-violation">ODR violation</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">namespace</span> libs {</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">inline</span> <span class="dt">bool</span> contains(<span class="bu">std::</span>string_view needle, <span class="bu">std::</span>string_view haystack) {</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="ot">assert</span>(needle.size() &lt;= haystack.size()); <span class="co">// !!!</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="cf">return</span> haystack.find(needle) != <span class="bu">std::</span>string_view<span class="bu">::</span>npos;</span>
+<span id="cb3-5"><a href="#cb3-5"></a>}</span>
+<span id="cb3-6"><a href="#cb3-6"></a>}</span></code></pre></div>
 <h1 id="c-developer-ecosystem">C++ Developer Ecosystem</h1>
 <p><a href="https://www.jetbrains.com/lp/devecosystem-2019/cpp/">https://www.jetbrains.com/lp/devecosystem-2019/cpp/</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/c21ft6/the_state_of_developer_ecosystem_2019_c/">https://www.reddit.com/r/cpp/comments/c21ft6/the_state_of_developer_ecosystem_2019_c/</a></p>
@@ -67,5 +165,9 @@
 <p><a href="https://github.com/ThePhD/out_ptr">https://github.com/ThePhD/out_ptr</a></p>
 <p><a href="https://github.com/ThePhD/out_ptr/blob/master/docs/out_ptr.adoc">https://github.com/ThePhD/out_ptr/blob/master/docs/out_ptr.adoc</a></p>
 <p><a href="https://lists.boost.org/Archives/boost//2019/06/246353.php">https://lists.boost.org/Archives/boost//2019/06/246353.php</a></p>
+<h1 id="twitter">Twitter</h1>
+<p><img src="img/turner-hpp.png" alt="image" /></p>
+<h1 id="quote">Quote</h1>
+<p><img src="img/theory-practice.png" alt="image" /></p>
 </body>
 </html>

@@ -5,6 +5,11 @@ CPPP19 Trip Reports
 
 https://deque.blog/2019/06/17/trip-report-on-cppp-19-the-first-edition-of-the-first-c-french-conference/
 
+Hello World with reflection
+---------------------------
+
+.. image:: img/hello-world-meta.png
+
 Heterogeneous Lookup in Ordered Containers in C++14
 ---------------------------------------------------
 
@@ -38,6 +43,59 @@ Take-away messages:
 https://github.com/rollbear/lift
 
 `Boost.HOF <https://github.com/boostorg/hof>`_ in Boost 1.68+ (`Docs <http://boost-hof.readthedocs.io/>`_)
+
+PacifiC++ 2018 - Titus Winters - C++ Past vs. Future
+----------------------------------------------------
+
+https://youtu.be/IY8tHh2LSX4
+
+std::function const correctess bug
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: c++
+
+    struct Callable {
+        void operator()(){count++;}
+        void operator()() const = delete;
+        int count = 0;
+    };
+
+    void f() {
+        Callable counter;
+        std::function<void(void)> f = counter;
+        f();
+        const auto cf = f;
+        cf(); // ???
+    }
+
+PacifiC++ 2018 - Titus Winters - C++ Past vs. Future (cont.)
+------------------------------------------------------------
+
+std::function requires copyable callables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: c++
+
+    void f() {
+        std::unique_ptr<int> up;
+        auto l=[up=std::move(up)](){};
+        std::function<void(void)> f=l; // Build fails
+    }
+
+PacifiC++ 2018 - Titus Winters - C++ Past vs. Future (cont.)
+------------------------------------------------------------
+
+ODR violation
+~~~~~~~~~~~~~
+
+.. code:: c++
+
+    namespace libs {
+    inline bool contains(std::string_view needle, std::string_view haystack) {
+        assert(needle.size() <= haystack.size()); // !!!
+        return haystack.find(needle) != std::string_view::npos;
+    }
+    }
 
 C++ Developer Ecosystem
 -----------------------
@@ -82,4 +140,14 @@ https://github.com/ThePhD/out_ptr
 https://github.com/ThePhD/out_ptr/blob/master/docs/out_ptr.adoc
 
 https://lists.boost.org/Archives/boost//2019/06/246353.php
+
+Twitter
+-------
+
+.. image:: img/turner-hpp.png
+
+Quote
+-----
+
+.. image:: img/theory-practice.png
 
