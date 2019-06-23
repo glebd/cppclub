@@ -11,11 +11,15 @@ Follow-up: std::function const correctness
         int count = 0;
     };
 
-    void f() {
+    void f()
+    {
         Callable counter;
         std::function<void(void)> f = counter;
         f();
         const std::function<void(void) const> cf = counter;
+        //                                    ^^
+        // error: implicit instantiation of undefined template 'std::__1::function<void () const>'
+        //
         cf(); // Should not compile
     }
 
@@ -24,10 +28,11 @@ Follow-up: std::function movable callables
 
 .. code:: c++
 
-    void f() {
+    void f()
+    {
         std::unique_ptr<int> up;
         auto l=[up=std::move(up)](){};
-        std::function<void(void)> f1=l; // Doesn't compile
+        std::function<void(void)> f1=l; // Error
         std::function<void(void)> f2=std::move(l); // OK
     }
 
@@ -48,3 +53,14 @@ Algorithms/Data Structure course for C++
 * MIT `6.046J Design and Analysis of Algorithms, Spring 2015 <https://www.youtube.com/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp>`_
 * Alex Stepanov `Efficient Programming with Components <https://www.youtube.com/playlist?list=PLHxtyCq_WDLXryyw91lahwdtpZsmo4BGD>`_
 * Udemy `Mastering Data Structures & Algorithms using C and C++ <https://www.udemy.com/datastructurescncpp/>`_
+
+mimalloc
+--------
+
+Microsoft mimalloc is a compact general purpose allocator with excellent performance.
+
+https://github.com/microsoft/mimalloc
+
+https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/
+
+`Mimalloc: Free List Sharding in Action <https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/>`_

@@ -96,20 +96,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">int</span> count = <span class="dv">0</span>;</span>
 <span id="cb1-5"><a href="#cb1-5"></a>};</span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="dt">void</span> f() {</span>
-<span id="cb1-8"><a href="#cb1-8"></a>    Callable counter;</span>
-<span id="cb1-9"><a href="#cb1-9"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f = counter;</span>
-<span id="cb1-10"><a href="#cb1-10"></a>    f();</span>
-<span id="cb1-11"><a href="#cb1-11"></a>    <span class="at">const</span> <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>) <span class="at">const</span>&gt; cf = counter;</span>
-<span id="cb1-12"><a href="#cb1-12"></a>    cf(); <span class="co">// Should not compile</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>}</span></code></pre></div>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="dt">void</span> f()</span>
+<span id="cb1-8"><a href="#cb1-8"></a>{</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    Callable counter;</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f = counter;</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    f();</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="at">const</span> <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>) <span class="at">const</span>&gt; cf = counter;</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="co">//                                    ^^</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="co">// error: implicit instantiation of undefined template &#39;std::__1::function&lt;void () const&gt;&#39;</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="co">//</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>    cf(); <span class="co">// Should not compile</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>}</span></code></pre></div>
 <h1 id="follow-up-stdfunction-movable-callables">Follow-up: std::function movable callables</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">void</span> f() {</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="bu">std::</span>unique_ptr&lt;<span class="dt">int</span>&gt; up;</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="kw">auto</span> l=[up=<span class="bu">std::</span>move(up)](){};</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f1=l; <span class="co">// Doesn&#39;t compile</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f2=<span class="bu">std::</span>move(l); <span class="co">// OK</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">void</span> f()</span>
+<span id="cb2-2"><a href="#cb2-2"></a>{</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="bu">std::</span>unique_ptr&lt;<span class="dt">int</span>&gt; up;</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="kw">auto</span> l=[up=<span class="bu">std::</span>move(up)](){};</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f1=l; <span class="co">// Error</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f2=<span class="bu">std::</span>move(l); <span class="co">// OK</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>}</span></code></pre></div>
 <h1 id="a-dbg-macro-for-c">A dbg(…) macro for C++</h1>
 <p><a href="https://github.com/sharkdp/dbg-macro">https://github.com/sharkdp/dbg-macro</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/">https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/</a></p>
@@ -122,5 +127,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Alex Stepanov <a href="https://www.youtube.com/playlist?list=PLHxtyCq_WDLXryyw91lahwdtpZsmo4BGD">Efficient Programming with Components</a></li>
 <li>Udemy <a href="https://www.udemy.com/datastructurescncpp/">Mastering Data Structures &amp; Algorithms using C and C++</a></li>
 </ul>
+<h1 id="mimalloc">mimalloc</h1>
+<p>Microsoft mimalloc is a compact general purpose allocator with excellent performance.</p>
+<p><a href="https://github.com/microsoft/mimalloc">https://github.com/microsoft/mimalloc</a></p>
+<p><a href="https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/">https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/</a></p>
+<p><a href="https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/">Mimalloc: Free List Sharding in Action</a></p>
 </body>
 </html>
