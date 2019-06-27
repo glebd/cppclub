@@ -90,7 +90,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 <hr />
 <h1 id="concept-based-interfaces-by-gianluca-delfino">Concept-based interfaces, by Gianluca Delfino</h1>
-<p><a href="https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/">https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/</a></p>
+<p><a href="https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/">Article</a> | <a href="https://github.com/gianlucadelfino/cppfiddler/blob/master/conceptsInterfaces/src/main.cpp">Code</a> | <a href="https://godbolt.org/z/E8iHeS">Godbolt</a> | <a href="https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/">Reddit</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="kw">concept</span> Shape = <span class="kw">requires</span>(<span class="at">const</span> T&amp; t)</span>
 <span id="cb1-3"><a href="#cb1-3"></a>{</span>
@@ -105,10 +105,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-12"><a href="#cb1-12"></a>    T base;</span>
 <span id="cb1-13"><a href="#cb1-13"></a>    T height;</span>
 <span id="cb1-14"><a href="#cb1-14"></a>};</span></code></pre></div>
-<p><a href="https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/">https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/</a></p>
-<h1 id="c-pre-cologne-mailing">C++ pre-Cologne mailing</h1>
-<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/">https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/</a></p>
 <h1 id="intel-data-parallel-c">Intel Data Parallel C++</h1>
 <ul>
 <li><a href="https://fossbytes.com/intel-developing-new-programming-language-data-parallel-c/">FOSS Bytes</a></li>
@@ -143,6 +139,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-5"><a href="#cb3-5"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f1=l; <span class="co">// Error</span></span>
 <span id="cb3-6"><a href="#cb3-6"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f2=<span class="bu">std::</span>move(l); <span class="co">// OK</span></span>
 <span id="cb3-7"><a href="#cb3-7"></a>}</span></code></pre></div>
+<h1 id="c-pre-cologne-mailing">C++ pre-Cologne mailing</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/">https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/</a></p>
 <h1 id="direction-for-iso-c-r3">Direction for ISO C++ (R3)</h1>
 <p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0939r3.pdf">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0939r3.pdf</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/c3mes0/direction_for_iso_c_r3/">https://www.reddit.com/r/cpp/comments/c3mes0/direction_for_iso_c_r3/</a></p>
@@ -152,13 +151,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="bad_alloc-is-not-out-of-memory">bad_alloc is not out-of-memory!</h1>
 <p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1404r1.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1404r1.html</a></p>
 <p>TL;DR: Throwing <code>std::bad_alloc</code> is not the same as "there is no heap space available" - in particular when dealing with custom allocators.</p>
+<h1 id="in-support-of-p1485-better-keywords-for-coroutines">In support of P1485 “Better keywords for coroutines”</h1>
+<p><a href="https://quuxplusone.github.io/blog/2019/06/26/pro-p1485/">https://quuxplusone.github.io/blog/2019/06/26/pro-p1485/</a></p>
+<p><a href="https://stackoverflow.com/a/44244451/1424877">https://stackoverflow.com/a/44244451/1424877</a></p>
+<blockquote>
+<p>A function becomes a coroutine by having [a keyword such as <code>co_await</code>, <code>co_yield</code>, or <code>co_return</code>] in its body. So [without close inspection of every line of the body] they are indistinguishable from functions.</p>
+</blockquote>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1485r1.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1485r1.html</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c5uu56/in_support_of_p1485_better_keywords_for_coroutines/">https://www.reddit.com/r/cpp/comments/c5uu56/in_support_of_p1485_better_keywords_for_coroutines/</a></p>
+<h1 id="to-boldly-suggest-an-overall-plan-for-c23">To boldly suggest an overall plan for C++23</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0592r1.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0592r1.html</a></p>
+<p>Must have:</p>
+<ul>
+<li>Library support for coroutines</li>
+<li>Executors</li>
+<li>Networking</li>
+</ul>
+<p>Good to have:</p>
+<ul>
+<li>Reflection</li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1371r1.pdf">Pattern matching</a></li>
+</ul>
+<h1 id="other-cologne-papers">Other Cologne papers</h1>
+<ul>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1662r0.pdf">P1662R0 Adding async RAII support to coroutines</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1678r0.pdf">P1678R0 Callbacks and Composition</a>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxCpp">https://github.com/ReactiveX/RxCpp</a></li>
+<li><a href="https://github.com/facebookresearch/pushmi">https://github.com/facebookresearch/pushmi</a></li>
+</ul></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1688r0.html">P1688R0 Towards a C++ Ecosystem Technical Report</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1711r0.pdf">P1711R0 What to do about contracts?</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1717r0.pdf">P1717R0 Compile­-time Metaprogramming in C++</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1729r0.html">P1729R0 Text Parsing</a>
+<ul>
+<li><a href="https://github.com/eliaskosunen/scnlib">https://github.com/eliaskosunen/scnlib</a> (Apache-2.0) | <a href="https://www.reddit.com/r/cpp/comments/c4gyek/scnlib_scanf_for_modern_c/">Reddit</a></li>
+</ul></li>
+</ul>
 <h1 id="a-dbg-macro-for-c">A dbg(…) macro for C++</h1>
 <p><a href="https://github.com/sharkdp/dbg-macro">https://github.com/sharkdp/dbg-macro</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/">https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/</a></p>
 <p><a href="https://doc.rust-lang.org/std/macro.dbg.html">https://doc.rust-lang.org/std/macro.dbg.html</a></p>
-<h1 id="scnlib-scanf-for-modern-c">scnlib: scanf for modern C++</h1>
-<p><a href="https://github.com/eliaskosunen/scnlib">https://github.com/eliaskosunen/scnlib</a> (Apache-2.0)</p>
-<p><a href="https://www.reddit.com/r/cpp/comments/c4gyek/scnlib_scanf_for_modern_c/">https://www.reddit.com/r/cpp/comments/c4gyek/scnlib_scanf_for_modern_c/</a></p>
 <h1 id="algorithmsdata-structure-course-for-c">Algorithms/Data Structure course for C++</h1>
 <ul>
 <li>Stanford <a href="https://see.stanford.edu/Course/CS106B">CS106B - Programming Abstractions</a></li>
@@ -172,6 +205,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="https://github.com/microsoft/mimalloc">https://github.com/microsoft/mimalloc</a></p>
 <p><a href="https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/">https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/</a></p>
 <p><a href="https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/">Mimalloc: Free List Sharding in Action</a></p>
+<h1 id="serenity-os">Serenity OS</h1>
+<p><a href="https://github.com/SerenityOS/serenity">https://github.com/SerenityOS/serenity</a> (BSD-2-Clause)</p>
+<p><a href="https://www.reddit.com/r/programming/comments/c13vph/serenityos_a_marriage_between_the_aesthetic_of/">https://www.reddit.com/r/programming/comments/c13vph/serenityos_a_marriage_between_the_aesthetic_of/</a></p>
+<h1 id="serenity-os-patterns-the-badge">Serenity OS Patterns: The Badge</h1>
+<p>(aka The Client-Attorney Idiom)</p>
+<p><a href="https://awesomekling.github.io/Serenity-C++-patterns-The-Badge/">https://awesomekling.github.io/Serenity-C++-patterns-The-Badge/</a></p>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/bzjbu1/serenity_c_patterns_the_badge/">Reddit</a></li>
+<li><a href="https://stackoverflow.com/questions/3217390/clean-c-granular-friend-equivalent-answer-attorney-client-idiom/3218920#3218920">SO: Granular friend</a></li>
+<li><a href="http://www.drdobbs.com/friendship-and-the-attorney-client-idiom/184402053">Dr. Dobbs - Friendship and the Attorney-Client Idiom</a></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> Foo;</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">class</span> Bar { <span class="kw">public</span>: <span class="dt">void</span> special(<span class="dt">int</span> a, Key&lt;Foo&gt;); };</span>
+<span id="cb4-3"><a href="#cb4-3"></a>Bar().special(<span class="dv">1</span>, {}); <span class="co">// at call site in Foo</span></span></code></pre></div>
 <h1 id="twitter">Twitter</h1>
 <p><img src="img/ecstatic_cast.png" alt="image" /></p>
 </body>
