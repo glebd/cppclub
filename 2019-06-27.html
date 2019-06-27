@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gleb Dolgich" />
+  <meta name="dcterms.date" content="2019-06-27" />
+  <title>C++ Club Meeting Notes</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">C++ Club Meeting Notes</h1>
+<p class="author">Gleb Dolgich</p>
+<p class="date">2019-06-27</p>
+</header>
+<hr />
+<h1 id="concept-based-interfaces-by-gianluca-delfino">Concept-based interfaces, by Gianluca Delfino</h1>
+<p><a href="https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/">Article</a> | <a href="https://github.com/gianlucadelfino/cppfiddler/blob/master/conceptsInterfaces/src/main.cpp">Code</a> | <a href="https://godbolt.org/z/E8iHeS">Godbolt</a> | <a href="https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/">Reddit</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">concept</span> Shape = <span class="kw">requires</span>(<span class="at">const</span> T&amp; t)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>{</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    { t.area() } -&gt; <span class="dt">float</span>;</span>
+<span id="cb1-5"><a href="#cb1-5"></a>};</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="kw">struct</span> Rectangle</span>
+<span id="cb1-9"><a href="#cb1-9"></a>{</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    Rectangle() { <span class="kw">static_assert</span>(Shape&lt;T&gt;); }</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="dt">float</span> area() <span class="at">const</span>;</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    T base;</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    T height;</span>
+<span id="cb1-14"><a href="#cb1-14"></a>};</span></code></pre></div>
+<h1 id="concept-based-interfaces-by-gianluca-delfino-cont.">Concept-based interfaces, by Gianluca Delfino (cont.)</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/erqsx1e">Alternative solution</a>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">concept</span> Shape = <span class="kw">requires</span>(<span class="at">const</span> T&amp; t)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>{</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    { t.area() } -&gt; <span class="dt">float</span>;</span>
+<span id="cb2-5"><a href="#cb2-5"></a>};</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="kw">template</span>&lt;<span class="kw">class</span> T&gt;</span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="kw">struct</span> ModelsShape</span>
+<span id="cb2-9"><a href="#cb2-9"></a>{</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    ModelsShape() <span class="kw">requires</span>(Shape&lt;T&gt;) = <span class="cf">default</span>;</span>
+<span id="cb2-11"><a href="#cb2-11"></a>};</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="kw">struct</span> Circle: ModelsShape&lt;Circle&gt;</span>
+<span id="cb2-14"><a href="#cb2-14"></a>{</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="dt">float</span> area() <span class="at">const</span>;</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    <span class="dt">float</span> radius;</span>
+<span id="cb2-17"><a href="#cb2-17"></a>};</span></code></pre></div>
+<h1 id="intel-data-parallel-c">Intel Data Parallel C++</h1>
+<ul>
+<li><a href="https://fossbytes.com/intel-developing-new-programming-language-data-parallel-c/">FOSS Bytes</a></li>
+<li><a href="https://newsroom.intel.com/news/intels-one-api-project-delivers-unified-programming-model-across-diverse-architectures/">Intel Announcement</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/c4ses3/intel_announce_dpc/">Reddit</a></li>
+</ul>
+<p>Part of Intel One API Project. Based on C++14 and SYCL. Open Source. Developer Beta in 2019 Q4.</p>
+<h1 id="follow-up-stdfunction-const-correctness">Follow-up: std::function const correctness</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">struct</span> Callable {</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="dt">void</span> <span class="kw">operator</span>()(){count++;}</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="dt">void</span> <span class="kw">operator</span>()() <span class="at">const</span> = <span class="kw">delete</span>;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="dt">int</span> count = <span class="dv">0</span>;</span>
+<span id="cb3-5"><a href="#cb3-5"></a>};</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="dt">void</span> f()</span>
+<span id="cb3-8"><a href="#cb3-8"></a>{</span>
+<span id="cb3-9"><a href="#cb3-9"></a>    Callable counter;</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f = counter;</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    f();</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    <span class="at">const</span> <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>) <span class="at">const</span>&gt; cf = counter;</span>
+<span id="cb3-13"><a href="#cb3-13"></a>    <span class="co">//                                    ^^</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>    <span class="co">// error: implicit instantiation of undefined template</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>    <span class="co">// &#39;std::__1::function&lt;void () const&gt;&#39;</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>    <span class="co">//</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>    cf(); <span class="co">// Should not compile</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a>}</span></code></pre></div>
+<h1 id="follow-up-stdfunction-movable-callables">Follow-up: std::function movable callables</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">void</span> f()</span>
+<span id="cb4-2"><a href="#cb4-2"></a>{</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="bu">std::</span>unique_ptr&lt;<span class="dt">int</span>&gt; up;</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="kw">auto</span> l=[up=<span class="bu">std::</span>move(up)](){};</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f1=l; <span class="co">// Error</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f2=<span class="bu">std::</span>move(l); <span class="co">// OK</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>}</span></code></pre></div>
+<h1 id="c-pre-cologne-mailing">C++ pre-Cologne mailing</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/">https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/</a></p>
+<h1 id="direction-for-iso-c-r3">Direction for ISO C++ (R3)</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0939r3.pdf">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0939r3.pdf</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c3mes0/direction_for_iso_c_r3/">https://www.reddit.com/r/cpp/comments/c3mes0/direction_for_iso_c_r3/</a></p>
+<h1 id="proposal-enumerating-core-undefined-behaviour-p1705r0">Proposal: Enumerating Core Undefined Behaviour (P1705R0)</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1705r0.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1705r0.html</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c4548m/a_proposal_to_enumerating_core_undefined_behavior/">https://www.reddit.com/r/cpp/comments/c4548m/a_proposal_to_enumerating_core_undefined_behavior/</a></p>
+<h1 id="bad_alloc-is-not-out-of-memory">bad_alloc is not out-of-memory!</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1404r1.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1404r1.html</a></p>
+<p>TL;DR: Throwing <code>std::bad_alloc</code> is not the same as "there is no heap space available" - in particular when dealing with custom allocators.</p>
+<h1 id="in-support-of-p1485-better-keywords-for-coroutines">In support of P1485 “Better keywords for coroutines”</h1>
+<p><a href="https://quuxplusone.github.io/blog/2019/06/26/pro-p1485/">https://quuxplusone.github.io/blog/2019/06/26/pro-p1485/</a></p>
+<p><a href="https://stackoverflow.com/a/44244451/1424877">https://stackoverflow.com/a/44244451/1424877</a></p>
+<blockquote>
+<p>A function becomes a coroutine by having [a keyword such as <code>co_await</code>, <code>co_yield</code>, or <code>co_return</code>] in its body. So [without close inspection of every line of the body] they are indistinguishable from functions.</p>
+</blockquote>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1485r1.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1485r1.html</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c5uu56/in_support_of_p1485_better_keywords_for_coroutines/">https://www.reddit.com/r/cpp/comments/c5uu56/in_support_of_p1485_better_keywords_for_coroutines/</a></p>
+<h1 id="to-boldly-suggest-an-overall-plan-for-c23">To boldly suggest an overall plan for C++23</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0592r1.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0592r1.html</a></p>
+<p>Must have:</p>
+<ul>
+<li>Library support for coroutines</li>
+<li>Executors</li>
+<li>Networking</li>
+</ul>
+<p>Good to have:</p>
+<ul>
+<li>Reflection</li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1371r1.pdf">Pattern matching</a></li>
+</ul>
+<h1 id="other-cologne-papers">Other Cologne papers</h1>
+<ul>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1662r0.pdf">P1662R0 Adding async RAII support to coroutines</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1678r0.pdf">P1678R0 Callbacks and Composition</a>
+<ul>
+<li><a href="https://github.com/ReactiveX/RxCpp">https://github.com/ReactiveX/RxCpp</a></li>
+<li><a href="https://github.com/facebookresearch/pushmi">https://github.com/facebookresearch/pushmi</a></li>
+</ul></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1688r0.html">P1688R0 Towards a C++ Ecosystem Technical Report</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1711r0.pdf">P1711R0 What to do about contracts?</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1717r0.pdf">P1717R0 Compile­-time Metaprogramming in C++</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1729r0.html">P1729R0 Text Parsing</a>
+<ul>
+<li><a href="https://github.com/eliaskosunen/scnlib">https://github.com/eliaskosunen/scnlib</a> (Apache-2.0) | <a href="https://www.reddit.com/r/cpp/comments/c4gyek/scnlib_scanf_for_modern_c/">Reddit</a></li>
+</ul></li>
+</ul>
+<h1 id="twitter">Twitter</h1>
+<p><img src="img/ecstatic_cast.png" alt="image" /></p>
+</body>
+</html>
