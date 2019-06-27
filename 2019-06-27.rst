@@ -1,5 +1,45 @@
 ----
 
+Concept-based interfaces, by Gianluca Delfino
+---------------------------------------------
+
+https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/
+
+.. code:: c++
+
+    template <typename T>
+    concept Shape = requires(const T& t)
+    {
+        { t.area() } -> float;
+    };
+
+    template <typename T>
+    struct Rectangle
+    {
+        Rectangle() { static_assert(Shape<decltype(*this)>); }
+        float area() const;
+        T base;
+        T height;
+    };
+
+https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/
+
+C++ pre-Cologne mailing
+-----------------------
+
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06
+
+https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/
+
+Intel Data Parallel C++
+-----------------------
+
+* `FOSS Bytes <https://fossbytes.com/intel-developing-new-programming-language-data-parallel-c/>`_
+* `Intel Announcement <https://newsroom.intel.com/news/intels-one-api-project-delivers-unified-programming-model-across-diverse-architectures/>`_
+* `Reddit <https://www.reddit.com/r/cpp/comments/c4ses3/intel_announce_dpc/>`_
+
+Part of Intel One API Project. Based on C++14 and SYCL. Open Source. Developer Beta in 2019 Q4.
+
 Follow-up: std::function const correctness
 ------------------------------------------
 
@@ -18,7 +58,8 @@ Follow-up: std::function const correctness
         f();
         const std::function<void(void) const> cf = counter;
         //                                    ^^
-        // error: implicit instantiation of undefined template 'std::__1::function<void () const>'
+        // error: implicit instantiation of undefined template
+        // 'std::__1::function<void () const>'
         //
         cf(); // Should not compile
     }
@@ -36,6 +77,28 @@ Follow-up: std::function movable callables
         std::function<void(void)> f2=std::move(l); // OK
     }
 
+Direction for ISO C++ (R3)
+--------------------------
+
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0939r3.pdf
+
+https://www.reddit.com/r/cpp/comments/c3mes0/direction_for_iso_c_r3/
+
+Proposal: Enumerating Core Undefined Behaviour (P1705R0)
+--------------------------------------------------------
+
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1705r0.html
+
+https://www.reddit.com/r/cpp/comments/c4548m/a_proposal_to_enumerating_core_undefined_behavior/
+
+bad_alloc is not out-of-memory!
+-------------------------------
+
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1404r1.html
+
+TL;DR: Throwing ``std::bad_alloc`` is not the same as "there is no heap space available" - in particular when dealing
+with custom allocators.
+
 A dbg(…) macro for C++
 ------------------------
 
@@ -44,6 +107,13 @@ https://github.com/sharkdp/dbg-macro
 https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/
 
 https://doc.rust-lang.org/std/macro.dbg.html
+
+scnlib: scanf for modern C++
+----------------------------
+
+https://github.com/eliaskosunen/scnlib (Apache-2.0)
+
+https://www.reddit.com/r/cpp/comments/c4gyek/scnlib_scanf_for_modern_c/
 
 Algorithms/Data Structure course for C++
 ----------------------------------------
@@ -64,3 +134,9 @@ https://github.com/microsoft/mimalloc
 https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/
 
 `Mimalloc: Free List Sharding in Action <https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/>`_
+
+Twitter
+-------
+
+.. image:: img/ecstatic_cast.png
+

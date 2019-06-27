@@ -89,36 +89,76 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="date">2019-06-27</p>
 </header>
 <hr />
-<h1 id="follow-up-stdfunction-const-correctness">Follow-up: std::function const correctness</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">struct</span> Callable {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>    <span class="dt">void</span> <span class="kw">operator</span>()(){count++;}</span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="dt">void</span> <span class="kw">operator</span>()() <span class="at">const</span> = <span class="kw">delete</span>;</span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">int</span> count = <span class="dv">0</span>;</span>
+<h1 id="concept-based-interfaces-by-gianluca-delfino">Concept-based interfaces, by Gianluca Delfino</h1>
+<p><a href="https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/">https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">concept</span> Shape = <span class="kw">requires</span>(<span class="at">const</span> T&amp; t)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>{</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    { t.area() } -&gt; <span class="dt">float</span>;</span>
 <span id="cb1-5"><a href="#cb1-5"></a>};</span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="dt">void</span> f()</span>
-<span id="cb1-8"><a href="#cb1-8"></a>{</span>
-<span id="cb1-9"><a href="#cb1-9"></a>    Callable counter;</span>
-<span id="cb1-10"><a href="#cb1-10"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f = counter;</span>
-<span id="cb1-11"><a href="#cb1-11"></a>    f();</span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="at">const</span> <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>) <span class="at">const</span>&gt; cf = counter;</span>
-<span id="cb1-13"><a href="#cb1-13"></a>    <span class="co">//                                    ^^</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>    <span class="co">// error: implicit instantiation of undefined template &#39;std::__1::function&lt;void () const&gt;&#39;</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="co">//</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a>    cf(); <span class="co">// Should not compile</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>}</span></code></pre></div>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="kw">struct</span> Rectangle</span>
+<span id="cb1-9"><a href="#cb1-9"></a>{</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    Rectangle() { <span class="kw">static_assert</span>(Shape&lt;<span class="kw">decltype</span>(*<span class="kw">this</span>)&gt;); }</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="dt">float</span> area() <span class="at">const</span>;</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    T base;</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    T height;</span>
+<span id="cb1-14"><a href="#cb1-14"></a>};</span></code></pre></div>
+<p><a href="https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/">https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/</a></p>
+<h1 id="c-pre-cologne-mailing">C++ pre-Cologne mailing</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/">https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/</a></p>
+<h1 id="intel-data-parallel-c">Intel Data Parallel C++</h1>
+<ul>
+<li><a href="https://fossbytes.com/intel-developing-new-programming-language-data-parallel-c/">FOSS Bytes</a></li>
+<li><a href="https://newsroom.intel.com/news/intels-one-api-project-delivers-unified-programming-model-across-diverse-architectures/">Intel Announcement</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/c4ses3/intel_announce_dpc/">Reddit</a></li>
+</ul>
+<p>Part of Intel One API Project. Based on C++14 and SYCL. Open Source. Developer Beta in 2019 Q4.</p>
+<h1 id="follow-up-stdfunction-const-correctness">Follow-up: std::function const correctness</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">struct</span> Callable {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="dt">void</span> <span class="kw">operator</span>()(){count++;}</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="dt">void</span> <span class="kw">operator</span>()() <span class="at">const</span> = <span class="kw">delete</span>;</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="dt">int</span> count = <span class="dv">0</span>;</span>
+<span id="cb2-5"><a href="#cb2-5"></a>};</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="dt">void</span> f()</span>
+<span id="cb2-8"><a href="#cb2-8"></a>{</span>
+<span id="cb2-9"><a href="#cb2-9"></a>    Callable counter;</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f = counter;</span>
+<span id="cb2-11"><a href="#cb2-11"></a>    f();</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="at">const</span> <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>) <span class="at">const</span>&gt; cf = counter;</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    <span class="co">//                                    ^^</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="co">// error: implicit instantiation of undefined template</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="co">// &#39;std::__1::function&lt;void () const&gt;&#39;</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a>    <span class="co">//</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>    cf(); <span class="co">// Should not compile</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>}</span></code></pre></div>
 <h1 id="follow-up-stdfunction-movable-callables">Follow-up: std::function movable callables</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">void</span> f()</span>
-<span id="cb2-2"><a href="#cb2-2"></a>{</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="bu">std::</span>unique_ptr&lt;<span class="dt">int</span>&gt; up;</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="kw">auto</span> l=[up=<span class="bu">std::</span>move(up)](){};</span>
-<span id="cb2-5"><a href="#cb2-5"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f1=l; <span class="co">// Error</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f2=<span class="bu">std::</span>move(l); <span class="co">// OK</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">void</span> f()</span>
+<span id="cb3-2"><a href="#cb3-2"></a>{</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="bu">std::</span>unique_ptr&lt;<span class="dt">int</span>&gt; up;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="kw">auto</span> l=[up=<span class="bu">std::</span>move(up)](){};</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f1=l; <span class="co">// Error</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f2=<span class="bu">std::</span>move(l); <span class="co">// OK</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>}</span></code></pre></div>
+<h1 id="direction-for-iso-c-r3">Direction for ISO C++ (R3)</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0939r3.pdf">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0939r3.pdf</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c3mes0/direction_for_iso_c_r3/">https://www.reddit.com/r/cpp/comments/c3mes0/direction_for_iso_c_r3/</a></p>
+<h1 id="proposal-enumerating-core-undefined-behaviour-p1705r0">Proposal: Enumerating Core Undefined Behaviour (P1705R0)</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1705r0.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1705r0.html</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c4548m/a_proposal_to_enumerating_core_undefined_behavior/">https://www.reddit.com/r/cpp/comments/c4548m/a_proposal_to_enumerating_core_undefined_behavior/</a></p>
+<h1 id="bad_alloc-is-not-out-of-memory">bad_alloc is not out-of-memory!</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1404r1.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1404r1.html</a></p>
+<p>TL;DR: Throwing <code>std::bad_alloc</code> is not the same as "there is no heap space available" - in particular when dealing with custom allocators.</p>
 <h1 id="a-dbg-macro-for-c">A dbg(…) macro for C++</h1>
 <p><a href="https://github.com/sharkdp/dbg-macro">https://github.com/sharkdp/dbg-macro</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/">https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/</a></p>
 <p><a href="https://doc.rust-lang.org/std/macro.dbg.html">https://doc.rust-lang.org/std/macro.dbg.html</a></p>
+<h1 id="scnlib-scanf-for-modern-c">scnlib: scanf for modern C++</h1>
+<p><a href="https://github.com/eliaskosunen/scnlib">https://github.com/eliaskosunen/scnlib</a> (Apache-2.0)</p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c4gyek/scnlib_scanf_for_modern_c/">https://www.reddit.com/r/cpp/comments/c4gyek/scnlib_scanf_for_modern_c/</a></p>
 <h1 id="algorithmsdata-structure-course-for-c">Algorithms/Data Structure course for C++</h1>
 <ul>
 <li>Stanford <a href="https://see.stanford.edu/Course/CS106B">CS106B - Programming Abstractions</a></li>
@@ -132,5 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="https://github.com/microsoft/mimalloc">https://github.com/microsoft/mimalloc</a></p>
 <p><a href="https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/">https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/</a></p>
 <p><a href="https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/">Mimalloc: Free List Sharding in Action</a></p>
+<h1 id="twitter">Twitter</h1>
+<p><img src="img/ecstatic_cast.png" alt="image" /></p>
 </body>
 </html>
