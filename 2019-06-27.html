@@ -100,11 +100,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-7"><a href="#cb1-7"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</span>
 <span id="cb1-8"><a href="#cb1-8"></a><span class="kw">struct</span> Rectangle</span>
 <span id="cb1-9"><a href="#cb1-9"></a>{</span>
-<span id="cb1-10"><a href="#cb1-10"></a>    Rectangle() { <span class="kw">static_assert</span>(Shape&lt;<span class="kw">decltype</span>(*<span class="kw">this</span>)&gt;); }</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    Rectangle() { <span class="kw">static_assert</span>(Shape&lt;T&gt;); }</span>
 <span id="cb1-11"><a href="#cb1-11"></a>    <span class="dt">float</span> area() <span class="at">const</span>;</span>
 <span id="cb1-12"><a href="#cb1-12"></a>    T base;</span>
 <span id="cb1-13"><a href="#cb1-13"></a>    T height;</span>
 <span id="cb1-14"><a href="#cb1-14"></a>};</span></code></pre></div>
+<h1 id="concept-based-interfaces-by-gianluca-delfino-cont.">Concept-based interfaces, by Gianluca Delfino (cont.)</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/erqsx1e">Alternative solution</a>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">concept</span> Shape = <span class="kw">requires</span>(<span class="at">const</span> T&amp; t)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>{</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    { t.area() } -&gt; <span class="dt">float</span>;</span>
+<span id="cb2-5"><a href="#cb2-5"></a>};</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="kw">template</span>&lt;<span class="kw">class</span> T&gt;</span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="kw">struct</span> ModelsShape</span>
+<span id="cb2-9"><a href="#cb2-9"></a>{</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    ModelsShape() <span class="kw">requires</span>(Shape&lt;T&gt;) = <span class="cf">default</span>;</span>
+<span id="cb2-11"><a href="#cb2-11"></a>};</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="kw">struct</span> Circle: ModelsShape&lt;Circle&gt;</span>
+<span id="cb2-14"><a href="#cb2-14"></a>{</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="dt">float</span> area() <span class="at">const</span>;</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    <span class="dt">float</span> radius;</span>
+<span id="cb2-17"><a href="#cb2-17"></a>};</span></code></pre></div>
 <h1 id="intel-data-parallel-c">Intel Data Parallel C++</h1>
 <ul>
 <li><a href="https://fossbytes.com/intel-developing-new-programming-language-data-parallel-c/">FOSS Bytes</a></li>
@@ -113,32 +132,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Part of Intel One API Project. Based on C++14 and SYCL. Open Source. Developer Beta in 2019 Q4.</p>
 <h1 id="follow-up-stdfunction-const-correctness">Follow-up: std::function const correctness</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">struct</span> Callable {</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="dt">void</span> <span class="kw">operator</span>()(){count++;}</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="dt">void</span> <span class="kw">operator</span>()() <span class="at">const</span> = <span class="kw">delete</span>;</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="dt">int</span> count = <span class="dv">0</span>;</span>
-<span id="cb2-5"><a href="#cb2-5"></a>};</span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="dt">void</span> f()</span>
-<span id="cb2-8"><a href="#cb2-8"></a>{</span>
-<span id="cb2-9"><a href="#cb2-9"></a>    Callable counter;</span>
-<span id="cb2-10"><a href="#cb2-10"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f = counter;</span>
-<span id="cb2-11"><a href="#cb2-11"></a>    f();</span>
-<span id="cb2-12"><a href="#cb2-12"></a>    <span class="at">const</span> <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>) <span class="at">const</span>&gt; cf = counter;</span>
-<span id="cb2-13"><a href="#cb2-13"></a>    <span class="co">//                                    ^^</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>    <span class="co">// error: implicit instantiation of undefined template</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>    <span class="co">// &#39;std::__1::function&lt;void () const&gt;&#39;</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a>    <span class="co">//</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a>    cf(); <span class="co">// Should not compile</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">struct</span> Callable {</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="dt">void</span> <span class="kw">operator</span>()(){count++;}</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="dt">void</span> <span class="kw">operator</span>()() <span class="at">const</span> = <span class="kw">delete</span>;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="dt">int</span> count = <span class="dv">0</span>;</span>
+<span id="cb3-5"><a href="#cb3-5"></a>};</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="dt">void</span> f()</span>
+<span id="cb3-8"><a href="#cb3-8"></a>{</span>
+<span id="cb3-9"><a href="#cb3-9"></a>    Callable counter;</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f = counter;</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    f();</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    <span class="at">const</span> <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>) <span class="at">const</span>&gt; cf = counter;</span>
+<span id="cb3-13"><a href="#cb3-13"></a>    <span class="co">//                                    ^^</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>    <span class="co">// error: implicit instantiation of undefined template</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>    <span class="co">// &#39;std::__1::function&lt;void () const&gt;&#39;</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>    <span class="co">//</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>    cf(); <span class="co">// Should not compile</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a>}</span></code></pre></div>
 <h1 id="follow-up-stdfunction-movable-callables">Follow-up: std::function movable callables</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">void</span> f()</span>
-<span id="cb3-2"><a href="#cb3-2"></a>{</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="bu">std::</span>unique_ptr&lt;<span class="dt">int</span>&gt; up;</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="kw">auto</span> l=[up=<span class="bu">std::</span>move(up)](){};</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f1=l; <span class="co">// Error</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f2=<span class="bu">std::</span>move(l); <span class="co">// OK</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">void</span> f()</span>
+<span id="cb4-2"><a href="#cb4-2"></a>{</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="bu">std::</span>unique_ptr&lt;<span class="dt">int</span>&gt; up;</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="kw">auto</span> l=[up=<span class="bu">std::</span>move(up)](){};</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f1=l; <span class="co">// Error</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="bu">std::</span>function&lt;<span class="dt">void</span>(<span class="dt">void</span>)&gt; f2=<span class="bu">std::</span>move(l); <span class="co">// OK</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>}</span></code></pre></div>
 <h1 id="c-pre-cologne-mailing">C++ pre-Cologne mailing</h1>
 <p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/">https://www.reddit.com/r/cpp/comments/c3mup9/c_precologne_mailing/</a></p>
@@ -188,37 +207,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://github.com/eliaskosunen/scnlib">https://github.com/eliaskosunen/scnlib</a> (Apache-2.0) | <a href="https://www.reddit.com/r/cpp/comments/c4gyek/scnlib_scanf_for_modern_c/">Reddit</a></li>
 </ul></li>
 </ul>
-<h1 id="a-dbg-macro-for-c">A dbg(…) macro for C++</h1>
-<p><a href="https://github.com/sharkdp/dbg-macro">https://github.com/sharkdp/dbg-macro</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/">https://www.reddit.com/r/cpp/comments/c2ysa7/a_dbg_macro_for_c/</a></p>
-<p><a href="https://doc.rust-lang.org/std/macro.dbg.html">https://doc.rust-lang.org/std/macro.dbg.html</a></p>
-<h1 id="algorithmsdata-structure-course-for-c">Algorithms/Data Structure course for C++</h1>
-<ul>
-<li>Stanford <a href="https://see.stanford.edu/Course/CS106B">CS106B - Programming Abstractions</a></li>
-<li>MIT <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb">6.006 Introduction to Algorithms, Fall 2011</a></li>
-<li>MIT <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp">6.046J Design and Analysis of Algorithms, Spring 2015</a></li>
-<li>Alex Stepanov <a href="https://www.youtube.com/playlist?list=PLHxtyCq_WDLXryyw91lahwdtpZsmo4BGD">Efficient Programming with Components</a></li>
-<li>Udemy <a href="https://www.udemy.com/datastructurescncpp/">Mastering Data Structures &amp; Algorithms using C and C++</a></li>
-</ul>
-<h1 id="mimalloc">mimalloc</h1>
-<p>Microsoft mimalloc is a compact general purpose allocator with excellent performance.</p>
-<p><a href="https://github.com/microsoft/mimalloc">https://github.com/microsoft/mimalloc</a></p>
-<p><a href="https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/">https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/</a></p>
-<p><a href="https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/">Mimalloc: Free List Sharding in Action</a></p>
-<h1 id="serenity-os">Serenity OS</h1>
-<p><a href="https://github.com/SerenityOS/serenity">https://github.com/SerenityOS/serenity</a> (BSD-2-Clause)</p>
-<p><a href="https://www.reddit.com/r/programming/comments/c13vph/serenityos_a_marriage_between_the_aesthetic_of/">https://www.reddit.com/r/programming/comments/c13vph/serenityos_a_marriage_between_the_aesthetic_of/</a></p>
-<h1 id="serenity-os-patterns-the-badge">Serenity OS Patterns: The Badge</h1>
-<p>(aka The Client-Attorney Idiom)</p>
-<p><a href="https://awesomekling.github.io/Serenity-C++-patterns-The-Badge/">https://awesomekling.github.io/Serenity-C++-patterns-The-Badge/</a></p>
-<ul>
-<li><a href="https://www.reddit.com/r/cpp/comments/bzjbu1/serenity_c_patterns_the_badge/">Reddit</a></li>
-<li><a href="https://stackoverflow.com/questions/3217390/clean-c-granular-friend-equivalent-answer-attorney-client-idiom/3218920#3218920">SO: Granular friend</a></li>
-<li><a href="http://www.drdobbs.com/friendship-and-the-attorney-client-idiom/184402053">Dr. Dobbs - Friendship and the Attorney-Client Idiom</a></li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> Foo;</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">class</span> Bar { <span class="kw">public</span>: <span class="dt">void</span> special(<span class="dt">int</span> a, Key&lt;Foo&gt;); };</span>
-<span id="cb4-3"><a href="#cb4-3"></a>Bar().special(<span class="dv">1</span>, {}); <span class="co">// at call site in Foo</span></span></code></pre></div>
 <h1 id="twitter">Twitter</h1>
 <p><img src="img/ecstatic_cast.png" alt="image" /></p>
 </body>
