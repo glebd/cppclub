@@ -53,3 +53,11 @@ https://awesomekling.github.io/Serenity-C++-patterns-The-Badge/
     class Foo;
     class Bar { public: void special(int a, Key<Foo>); };
     Bar().special(1, {}); // at call site in Foo
+
+What are some uses of decltype(auto)?
+-------------------------------------
+
+https://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto
+  * https://stackoverflow.com/a/24109800/10154
+  * https://stackoverflow.com/a/24109944/10154
+
