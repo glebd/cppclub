@@ -121,13 +121,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-2"><a href="#cb1-2"></a><span class="kw">class</span> Bar { <span class="kw">public</span>: <span class="dt">void</span> special(<span class="dt">int</span> a, Key&lt;Foo&gt;); };</span>
 <span id="cb1-3"><a href="#cb1-3"></a>Bar().special(<span class="dv">1</span>, {}); <span class="co">// at call site in Foo</span></span></code></pre></div>
 <h1 id="what-are-some-uses-of-decltypeauto">What are some uses of decltype(auto)?</h1>
-<dl>
-<dt><a href="https://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto">https://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto</a></dt>
-<dd><ul>
+<p><a href="https://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto">https://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto</a></p>
+<ul>
 <li><a href="https://stackoverflow.com/a/24109800/10154">https://stackoverflow.com/a/24109800/10154</a></li>
 <li><a href="https://stackoverflow.com/a/24109944/10154">https://stackoverflow.com/a/24109944/10154</a></li>
 </ul>
-</dd>
-</dl>
+<h1 id="libtom">LibTom</h1>
+<p><a href="https://www.libtom.net/">https://www.libtom.net/</a></p>
+<p><a href="https://github.com/libtom/libtomcrypt">https://github.com/libtom/libtomcrypt</a></p>
+<h1 id="the-power-of-hidden-friends-in-c">The Power of Hidden Friends in C++</h1>
+<p>Article by Anthony Williams</p>
+<p><a href="https://www.justsoftwaresolutions.co.uk/cplusplus/hidden-friends.html">https://www.justsoftwaresolutions.co.uk/cplusplus/hidden-friends.html</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">namespace</span> A{</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">class</span> X{</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="kw">public</span>:</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    X(<span class="dt">int</span> i):data(i){}</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">private</span>:</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="dt">int</span> data;</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="kw">friend</span> <span class="dt">bool</span> <span class="kw">operator</span>==(X <span class="at">const</span>&amp; lhs,X <span class="at">const</span>&amp; rhs){</span>
+<span id="cb2-8"><a href="#cb2-8"></a>      <span class="cf">return</span> lhs.data==rhs.data;</span>
+<span id="cb2-9"><a href="#cb2-9"></a>    }</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  };</span>
+<span id="cb2-11"><a href="#cb2-11"></a>}</span></code></pre></div>
+<h1 id="strong_typedef---create-distinct-types-for-distinct-purposes"><strong>strong_typedef</strong> - Create distinct types for distinct purposes</h1>
+<p>Article by Anthony Williams</p>
+<p><a href="https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html">https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html</a></p>
+<p><a href="https://github.com/anthonywilliams/strong_typedef">https://github.com/anthonywilliams/strong_typedef</a> ()</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">using</span> transaction_id =</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  jss::strong_typedef&lt;<span class="kw">struct</span> transaction_tag, <span class="bu">std::</span>string&gt;;</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="dt">bool</span> is_a_foo(transaction_id id)</span>
+<span id="cb3-5"><a href="#cb3-5"></a>{</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="kw">auto</span> &amp;s = id.underlying_value();</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="cf">return</span> s.find(<span class="st">&quot;foo&quot;</span>) != s.end();</span>
+<span id="cb3-8"><a href="#cb3-8"></a>}</span></code></pre></div>
+<h1 id="introducing-the-rule-of-desdemova">Introducing the Rule of DesDeMovA</h1>
+<p>Blog post by Peter Sommerlad</p>
+<p><a href="https://blog.safecpp.com">https://blog.safecpp.com</a></p>
+<p><a href="https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf">https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf</a></p>
+<p>Rule of Zero:</p>
+<blockquote>
+<p>Code that you do not write cannot be wrong.</p>
+</blockquote>
+<h1 id="a-closer-look-at-bake-a-tool-that-makes-building-cc-code-effortless">A closer look at <strong>bake</strong>: a tool that makes building C/C++ code effortless</h1>
+<p><a href="https://medium.com/@cortoproject/a-closer-look-at-bake-a-tool-that-makes-building-c-c-code-effortless-b2e0409fad8f">https://medium.com/@cortoproject/a-closer-look-at-bake-a-tool-that-makes-building-c-c-code-effortless-b2e0409fad8f</a></p>
+<ul>
+<li><a href="https://www.reddit.com/r/C_Programming/comments/a85f6w/meet_bake_a_new_build_system_package_manager_for/">https://www.reddit.com/r/C_Programming/comments/a85f6w/meet_bake_a_new_build_system_package_manager_for/</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/a8d7ny/meet_bake_a_new_build_system_package_manager_for/">https://www.reddit.com/r/cpp/comments/a8d7ny/meet_bake_a_new_build_system_package_manager_for/</a></li>
+<li><a href="https://news.ycombinator.com/item?id=18787777">https://news.ycombinator.com/item?id=18787777</a></li>
+</ul>
+<p><a href="https://github.com/SanderMertens/bake">https://github.com/SanderMertens/bake</a> (GPLv3)</p>
+<blockquote>
+<p>A cargo-like buildsystem and package manager for C/C++</p>
+</blockquote>
+<p>Magic.</p>
+<h1 id="twitter">Twitter</h1>
+<p><img src="img/beethoven.png" alt="image" /></p>
 </body>
 </html>

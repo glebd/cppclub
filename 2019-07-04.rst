@@ -58,6 +58,88 @@ What are some uses of decltype(auto)?
 -------------------------------------
 
 https://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto
-  * https://stackoverflow.com/a/24109800/10154
-  * https://stackoverflow.com/a/24109944/10154
+
+* https://stackoverflow.com/a/24109800/10154
+* https://stackoverflow.com/a/24109944/10154
+
+LibTom
+------
+
+https://www.libtom.net/
+
+https://github.com/libtom/libtomcrypt
+
+The Power of Hidden Friends in C++
+----------------------------------
+
+Article by Anthony Williams
+
+https://www.justsoftwaresolutions.co.uk/cplusplus/hidden-friends.html
+
+.. code:: c++
+
+    namespace A{
+      class X{
+      public:
+        X(int i):data(i){}
+      private:
+        int data;
+        friend bool operator==(X const& lhs,X const& rhs){
+          return lhs.data==rhs.data;
+        }
+      };
+    }
+
+**strong_typedef** - Create distinct types for distinct purposes
+----------------------------------------------------------------
+
+Article by Anthony Williams
+
+https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html
+
+https://github.com/anthonywilliams/strong_typedef ()
+
+.. code:: c++
+
+    using transaction_id =
+      jss::strong_typedef<struct transaction_tag, std::string>;
+
+    bool is_a_foo(transaction_id id)
+    {
+      auto &s = id.underlying_value();
+      return s.find("foo") != s.end();
+    }
+
+Introducing the Rule of DesDeMovA
+---------------------------------
+
+Blog post by Peter Sommerlad
+
+https://blog.safecpp.com
+
+https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf
+
+Rule of Zero:
+
+    Code that you do not write cannot be wrong.
+
+A closer look at **bake**: a tool that makes building C/C++ code effortless
+---------------------------------------------------------------------------
+
+https://medium.com/@cortoproject/a-closer-look-at-bake-a-tool-that-makes-building-c-c-code-effortless-b2e0409fad8f
+
+* https://www.reddit.com/r/C_Programming/comments/a85f6w/meet_bake_a_new_build_system_package_manager_for/
+* https://www.reddit.com/r/cpp/comments/a8d7ny/meet_bake_a_new_build_system_package_manager_for/
+* https://news.ycombinator.com/item?id=18787777
+
+https://github.com/SanderMertens/bake (GPLv3)
+
+    A cargo-like buildsystem and package manager for C/C++
+
+Magic.
+
+Twitter
+-------
+
+.. image:: img/beethoven.png
 
