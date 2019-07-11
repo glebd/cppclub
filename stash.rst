@@ -338,3 +338,147 @@ Getting in trouble with mixed comparisons
 -----------------------------------------
 
 https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/
+
+**strong_typedef** - Create distinct types for distinct purposes
+----------------------------------------------------------------
+
+Article by Anthony Williams
+
+https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html
+
+https://github.com/anthonywilliams/strong_typedef ()
+
+.. code:: c++
+
+  using transaction_id =
+    jss::strong_typedef<struct transaction_tag, std::string>;
+
+  bool is_a_foo(transaction_id id)
+  {
+    auto &s = id.underlying_value();
+    return s.find("foo") != s.end();
+  }
+
+Introducing the Rule of DesDeMovA
+---------------------------------
+
+Blog post by Peter Sommerlad
+
+https://blog.safecpp.com
+
+https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf
+
+Rule of Zero:
+
+    Code that you do not write cannot be wrong.
+
+A closer look at **bake**: a tool that makes building C/C++ code effortless
+---------------------------------------------------------------------------
+
+https://medium.com/@cortoproject/a-closer-look-at-bake-a-tool-that-makes-building-c-c-code-effortless-b2e0409fad8f
+
+* https://www.reddit.com/r/C_Programming/comments/a85f6w/meet_bake_a_new_build_system_package_manager_for/
+* https://www.reddit.com/r/cpp/comments/a8d7ny/meet_bake_a_new_build_system_package_manager_for/
+* https://news.ycombinator.com/item?id=18787777
+
+https://github.com/SanderMertens/bake (GPLv3)
+
+    A cargo-like buildsystem and package manager for C/C++
+
+Magic.
+
+Use constexpr for faster, smaller, and safer code
+-------------------------------------------------
+
+https://blog.trailofbits.com/2019/06/27/use-constexpr-for-faster-smaller-and-safer-code/
+
+https://www.reddit.com/r/cpp/comments/c646ng/use_constexpr_for_faster_smaller_and_safer_code/
+
+https://github.com/trailofbits/constexpr-everything (Apache 2.0)
+
+How do you get the benefits of Rust in C++?
+-------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust_in_c/
+
+How do C++ developers manage dependencies
+-----------------------------------------
+
+https://www.reddit.com/r/cpp/comments/c6l3eg/how_do_c_developers_manage_dependencies/
+
+  Through much pain and anguish.
+
+Just started learning C++ coming from Python
+--------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/
+
+  The new GCC compiler with colour highlighting is a little bit better at pointing out errors. It's generally quite
+  helpful for pure C/C++ until you make an error with the standard library and you get 200 lines about std::
+  whatever<random characters>
+
+  In C++ a trick I always use when the error message is massive is to just focus on the first error.
+
+Scott Meyers' TD trick
+----------------------
+
+https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/eshq8vb?utm_source=share&utm_medium=web2x
+
+.. code:: c++
+
+  template <typename T> struct TD; // no definition
+
+Now you write something like ``TD<decltype(thing)>`` and the error message tells you the type of thing (as deduced by
+``decltype``, of course, but in this case that's probably what you want).
+
+Why std::expected is not in the standard yet? Is it bad practice?
+-----------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/c75ipk/why_stdexpected_is_not_in_the_standard_yet_is_it/
+
+* ``std::expected`` https://github.com/TartanLlama/expected
+* Boost Outcome https://www.boost.org/doc/libs/1_70_0/libs/outcome/doc/html/index.html
+* Outcome without Boost https://ned14.github.io/outcome/
+* Leaf https://github.com/zajo/leaf
+
+Go-like error handling in C++
+-----------------------------
+
+https://github.com/hellozee/errors
+
+https://www.reddit.com/r/cpp/comments/c7il5n/an_idiots_attempt_to_do_a_go_like_error_handling/
+
+  It looks like you invented something similar to ``std::expected``.
+
+Simplify Your Code With Rocket Science: C++20’s Spaceship Operator
+------------------------------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/
+
+https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/
+
+Better Ways to Test with **doctest** – the Fastest C++ Unit Testing Framework
+-----------------------------------------------------------------------------
+
+https://blog.jetbrains.com/rscpp/better-ways-testing-with-doctest/
+
+The Best Book to Read as a Developer
+------------------------------------
+
+https://dev.to/taillogs/the-best-book-to-read-as-a-developer-1h4m
+
+https://www.reddit.com/r/programming/comments/c8aaov/the_best_book_to_read_as_a_developer/
+
+* Inside the Machine by Jon Stokes http://joe90.yolasite.com/resources/InsidetheMachine.pdf
+* The Pragmatic Programmer
+* "Working Effectively with Legacy Code" by Michael Feathers
+* Charles Petzold's Code https://www.goodreads.com/book/show/44882.Code
+* Tao of Programming http://canonical.org/~kragen/tao-of-programming.html
+* Game Engine Architecture https://www.amazon.com/Game-Engine-Architecture-Jason-Gregory/dp/1568814135
+
+Splitting a string in C++
+-------------------------
+
+https://medium.com/@bkey76/splitting-a-string-in-c-23e2547e6451
+
+* C++ String Toolkit Library (MIT) http://www.partow.net/programming/strtk/index.html
