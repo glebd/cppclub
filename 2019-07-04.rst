@@ -13,6 +13,11 @@ PDF download:
 
 http://elementsofprogramming.com/
 
+C++17 - The Complete Guide by Nicolai Josuttis
+----------------------------------------------
+
+https://leanpub.com/cpp17
+
 CLion 2019.2 EAP: MSVC Debugger, Unused Includes Check, and More
 ----------------------------------------------------------------
 
@@ -46,7 +51,7 @@ Algorithms/Data Structure course for C++
 mimalloc
 --------
 
-Microsoft mimalloc is a compact general purpose allocator with excellent performance.
+Microsoft **mimalloc** is a compact general purpose allocator with excellent performance.
 
 https://github.com/microsoft/mimalloc
 
@@ -79,6 +84,28 @@ https://awesomekling.github.io/Serenity-C++-patterns-The-Badge/
     class Bar { public: void special(int a, Key<Foo>); };
     Bar().special(1, {}); // at call site in Foo
 
+Catching use-after-move bugs with Clang's consumed annotations
+--------------------------------------------------------------
+
+`Article by Andreas Kling <https://awesomekling.github.io/Catching-use-after-move-bugs-with-Clang-consumed-annotations/>`_ | `Reddit <https://www.reddit.com/r/cpp/comments/cbin7c/catching_useaftermove_bugs_with_clangs_consumed/>`_
+
+  - `Clang consumed annotation checking <https://clang.llvm.org/docs/AttributeReference.html#consumed-annotation-checking>`_
+  - `Clang-tidy bugprone-use-after-move <https://clang.llvm.org/extra/clang-tidy/checks/bugprone-use-after-move.html>`_
+
+.. code:: c++
+
+  class [[clang::consumable(unconsumed)]] CleverObject {
+  public:
+    CleverObject() {}
+    CleverObject(CleverObject&& other) { other.invalidate(); }
+    [[clang::callable_when(unconsumed)]]
+    void do_something() { assert(m_valid); }
+  private:
+    [[clang::set_typestate(consumed)]]
+    void invalidate() { m_valid = false; }
+    bool m_valid { true };
+  };
+
 What are some uses of decltype(auto)?
 -------------------------------------
 
@@ -103,17 +130,17 @@ https://www.justsoftwaresolutions.co.uk/cplusplus/hidden-friends.html
 
 .. code:: c++
 
-    namespace A{
-      class X{
-      public:
-        X(int i):data(i){}
-      private:
-        int data;
-        friend bool operator==(X const& lhs,X const& rhs){
-          return lhs.data==rhs.data;
-        }
-      };
-    }
+  namespace A{
+    class X{
+    public:
+      X(int i):data(i){}
+    private:
+      int data;
+      friend bool operator==(X const& lhs,X const& rhs){
+        return lhs.data==rhs.data;
+      }
+    };
+  }
 
 **strong_typedef** - Create distinct types for distinct purposes
 ----------------------------------------------------------------
@@ -126,14 +153,14 @@ https://github.com/anthonywilliams/strong_typedef ()
 
 .. code:: c++
 
-    using transaction_id =
-      jss::strong_typedef<struct transaction_tag, std::string>;
+  using transaction_id =
+    jss::strong_typedef<struct transaction_tag, std::string>;
 
-    bool is_a_foo(transaction_id id)
-    {
-      auto &s = id.underlying_value();
-      return s.find("foo") != s.end();
-    }
+  bool is_a_foo(transaction_id id)
+  {
+    auto &s = id.underlying_value();
+    return s.find("foo") != s.end();
+  }
 
 Introducing the Rule of DesDeMovA
 ---------------------------------
@@ -257,6 +284,39 @@ https://github.com/hellozee/errors
 https://www.reddit.com/r/cpp/comments/c7il5n/an_idiots_attempt_to_do_a_go_like_error_handling/
 
   It looks like you invented something similar to ``std::expected``.
+
+Simplify Your Code With Rocket Science: C++20’s Spaceship Operator
+------------------------------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/
+
+https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/
+
+Better Ways to Test with **doctest** – the Fastest C++ Unit Testing Framework
+-----------------------------------------------------------------------------
+
+https://blog.jetbrains.com/rscpp/better-ways-testing-with-doctest/
+
+The Best Book to Read as a Developer
+------------------------------------
+
+https://dev.to/taillogs/the-best-book-to-read-as-a-developer-1h4m
+
+https://www.reddit.com/r/programming/comments/c8aaov/the_best_book_to_read_as_a_developer/
+
+* Inside the Machine by Jon Stokes http://joe90.yolasite.com/resources/InsidetheMachine.pdf
+* The Pragmatic Programmer
+* "Working Effectively with Legacy Code" by Michael Feathers
+* Charles Petzold's Code https://www.goodreads.com/book/show/44882.Code
+* Tao of Programming http://canonical.org/~kragen/tao-of-programming.html
+* Game Engine Architecture https://www.amazon.com/Game-Engine-Architecture-Jason-Gregory/dp/1568814135
+
+Splitting a string in C++
+-------------------------
+
+https://medium.com/@bkey76/splitting-a-string-in-c-23e2547e6451
+
+* C++ String Toolkit Library (MIT) http://www.partow.net/programming/strtk/index.html
 
 Twitter
 -------

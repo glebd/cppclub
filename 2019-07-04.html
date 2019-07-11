@@ -97,6 +97,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p>PDF download:</p>
 <p><a href="http://elementsofprogramming.com/">http://elementsofprogramming.com/</a></p>
+<h1 id="c17---the-complete-guide-by-nicolai-josuttis">C++17 - The Complete Guide by Nicolai Josuttis</h1>
+<p><a href="https://leanpub.com/cpp17">https://leanpub.com/cpp17</a></p>
 <h1 id="clion-2019.2-eap-msvc-debugger-unused-includes-check-and-more">CLion 2019.2 EAP: MSVC Debugger, Unused Includes Check, and More</h1>
 <p><a href="https://blog.jetbrains.com/clion/2019/06/clion-2019-2-eap-msvc-debugger-unused-includes-check-and-more/">https://blog.jetbrains.com/clion/2019/06/clion-2019-2-eap-msvc-debugger-unused-includes-check-and-more/</a></p>
 <ul>
@@ -119,7 +121,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Udemy <a href="https://www.udemy.com/datastructurescncpp/">Mastering Data Structures &amp; Algorithms using C and C++</a></li>
 </ul>
 <h1 id="mimalloc">mimalloc</h1>
-<p>Microsoft mimalloc is a compact general purpose allocator with excellent performance.</p>
+<p>Microsoft <strong>mimalloc</strong> is a compact general purpose allocator with excellent performance.</p>
 <p><a href="https://github.com/microsoft/mimalloc">https://github.com/microsoft/mimalloc</a></p>
 <p><a href="https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/">https://www.reddit.com/r/programming/comments/c3ox2r/mimalloc_is_a_compact_general_purpose_allocator/</a></p>
 <p><a href="https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/">Mimalloc: Free List Sharding in Action</a></p>
@@ -137,6 +139,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> Foo;</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="kw">class</span> Bar { <span class="kw">public</span>: <span class="dt">void</span> special(<span class="dt">int</span> a, Key&lt;Foo&gt;); };</span>
 <span id="cb1-3"><a href="#cb1-3"></a>Bar().special(<span class="dv">1</span>, {}); <span class="co">// at call site in Foo</span></span></code></pre></div>
+<h1 id="catching-use-after-move-bugs-with-clangs-consumed-annotations">Catching use-after-move bugs with Clang's consumed annotations</h1>
+<p><a href="https://awesomekling.github.io/Catching-use-after-move-bugs-with-Clang-consumed-annotations/">Article by Andreas Kling</a> | <a href="https://www.reddit.com/r/cpp/comments/cbin7c/catching_useaftermove_bugs_with_clangs_consumed/">Reddit</a></p>
+<blockquote>
+<ul>
+<li><a href="https://clang.llvm.org/docs/AttributeReference.html#consumed-annotation-checking">Clang consumed annotation checking</a></li>
+<li><a href="https://clang.llvm.org/extra/clang-tidy/checks/bugprone-use-after-move.html">Clang-tidy bugprone-use-after-move</a></li>
+</ul>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> [[<span class="ex">clang::consumable</span>(<span class="at">unconsumed</span>)]] CleverObject {</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">public</span>:</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  CleverObject() {}</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  CleverObject(CleverObject&amp;&amp; other) { other.invalidate(); }</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  [[<span class="ex">clang::callable_when</span>(<span class="at">unconsumed</span>)]]</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="dt">void</span> do_something() { <span class="ot">assert</span>(<span class="va">m_valid</span>); }</span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="kw">private</span>:</span>
+<span id="cb2-8"><a href="#cb2-8"></a>  [[<span class="ex">clang::set_typestate</span>(<span class="at">consumed</span>)]]</span>
+<span id="cb2-9"><a href="#cb2-9"></a>  <span class="dt">void</span> invalidate() { <span class="va">m_valid</span> = <span class="kw">false</span>; }</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  <span class="dt">bool</span> <span class="va">m_valid</span> { <span class="kw">true</span> };</span>
+<span id="cb2-11"><a href="#cb2-11"></a>};</span></code></pre></div>
 <h1 id="what-are-some-uses-of-decltypeauto">What are some uses of decltype(auto)?</h1>
 <p><a href="https://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto">https://stackoverflow.com/questions/24109737/what-are-some-uses-of-decltypeauto</a></p>
 <ul>
@@ -149,29 +170,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="the-power-of-hidden-friends-in-c">The Power of Hidden Friends in C++</h1>
 <p>Article by Anthony Williams</p>
 <p><a href="https://www.justsoftwaresolutions.co.uk/cplusplus/hidden-friends.html">https://www.justsoftwaresolutions.co.uk/cplusplus/hidden-friends.html</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">namespace</span> A{</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">class</span> X{</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="kw">public</span>:</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    X(<span class="dt">int</span> i):data(i){}</span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">private</span>:</span>
-<span id="cb2-6"><a href="#cb2-6"></a>    <span class="dt">int</span> data;</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    <span class="kw">friend</span> <span class="dt">bool</span> <span class="kw">operator</span>==(X <span class="at">const</span>&amp; lhs,X <span class="at">const</span>&amp; rhs){</span>
-<span id="cb2-8"><a href="#cb2-8"></a>      <span class="cf">return</span> lhs.data==rhs.data;</span>
-<span id="cb2-9"><a href="#cb2-9"></a>    }</span>
-<span id="cb2-10"><a href="#cb2-10"></a>  };</span>
-<span id="cb2-11"><a href="#cb2-11"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">namespace</span> A{</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">class</span> X{</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="kw">public</span>:</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    X(<span class="dt">int</span> i):data(i){}</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="kw">private</span>:</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    <span class="dt">int</span> data;</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="kw">friend</span> <span class="dt">bool</span> <span class="kw">operator</span>==(X <span class="at">const</span>&amp; lhs,X <span class="at">const</span>&amp; rhs){</span>
+<span id="cb3-8"><a href="#cb3-8"></a>      <span class="cf">return</span> lhs.data==rhs.data;</span>
+<span id="cb3-9"><a href="#cb3-9"></a>    }</span>
+<span id="cb3-10"><a href="#cb3-10"></a>  };</span>
+<span id="cb3-11"><a href="#cb3-11"></a>}</span></code></pre></div>
 <h1 id="strong_typedef---create-distinct-types-for-distinct-purposes"><strong>strong_typedef</strong> - Create distinct types for distinct purposes</h1>
 <p>Article by Anthony Williams</p>
 <p><a href="https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html">https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html</a></p>
 <p><a href="https://github.com/anthonywilliams/strong_typedef">https://github.com/anthonywilliams/strong_typedef</a> ()</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">using</span> transaction_id =</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  jss::strong_typedef&lt;<span class="kw">struct</span> transaction_tag, <span class="bu">std::</span>string&gt;;</span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="dt">bool</span> is_a_foo(transaction_id id)</span>
-<span id="cb3-5"><a href="#cb3-5"></a>{</span>
-<span id="cb3-6"><a href="#cb3-6"></a>  <span class="kw">auto</span> &amp;s = id.underlying_value();</span>
-<span id="cb3-7"><a href="#cb3-7"></a>  <span class="cf">return</span> s.find(<span class="st">&quot;foo&quot;</span>) != s.end();</span>
-<span id="cb3-8"><a href="#cb3-8"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">using</span> transaction_id =</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  jss::strong_typedef&lt;<span class="kw">struct</span> transaction_tag, <span class="bu">std::</span>string&gt;;</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="dt">bool</span> is_a_foo(transaction_id id)</span>
+<span id="cb4-5"><a href="#cb4-5"></a>{</span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="kw">auto</span> &amp;s = id.underlying_value();</span>
+<span id="cb4-7"><a href="#cb4-7"></a>  <span class="cf">return</span> s.find(<span class="st">&quot;foo&quot;</span>) != s.end();</span>
+<span id="cb4-8"><a href="#cb4-8"></a>}</span></code></pre></div>
 <h1 id="introducing-the-rule-of-desdemova">Introducing the Rule of DesDeMovA</h1>
 <p>Blog post by Peter Sommerlad</p>
 <p><a href="https://blog.safecpp.com">https://blog.safecpp.com</a></p>
@@ -201,7 +222,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 id="msvc">MSVC</h2>
 <pre class="cmd"><code>/await /std:c++latest</code></pre>
 <h2 id="clang">Clang</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">-std</span>=c++2a -stdlib=libc++ -fcoroutines-ts</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">-std</span>=c++2a -stdlib=libc++ -fcoroutines-ts</span></code></pre></div>
 <ul>
 <li>CppCoro - <a href="https://github.com/lewissbaker/cppcoro">https://github.com/lewissbaker/cppcoro</a></li>
 <li>coroutine - <a href="https://github.com/luncliff/coroutine">https://github.com/luncliff/coroutine</a></li>
@@ -229,7 +250,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <h1 id="scott-meyers-td-trick">Scott Meyers' TD trick</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/eshq8vb?utm_source=share&amp;utm_medium=web2x">https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/eshq8vb?utm_source=share&amp;utm_medium=web2x</a></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt; <span class="kw">struct</span> TD; <span class="co">// no definition</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt; <span class="kw">struct</span> TD; <span class="co">// no definition</span></span></code></pre></div>
 <p>Now you write something like <code>TD&lt;decltype(thing)&gt;</code> and the error message tells you the type of thing (as deduced by <code>decltype</code>, of course, but in this case that's probably what you want).</p>
 <h1 id="why-stdexpected-is-not-in-the-standard-yet-is-it-bad-practice">Why std::expected is not in the standard yet? Is it bad practice?</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/c75ipk/why_stdexpected_is_not_in_the_standard_yet_is_it/">https://www.reddit.com/r/cpp/comments/c75ipk/why_stdexpected_is_not_in_the_standard_yet_is_it/</a></p>
@@ -245,6 +266,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote>
 <p>It looks like you invented something similar to <code>std::expected</code>.</p>
 </blockquote>
+<h1 id="simplify-your-code-with-rocket-science-c20s-spaceship-operator">Simplify Your Code With Rocket Science: C++20’s Spaceship Operator</h1>
+<p><a href="https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/">https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/">https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/</a></p>
+<h1 id="better-ways-to-test-with-doctest-the-fastest-c-unit-testing-framework">Better Ways to Test with <strong>doctest</strong> – the Fastest C++ Unit Testing Framework</h1>
+<p><a href="https://blog.jetbrains.com/rscpp/better-ways-testing-with-doctest/">https://blog.jetbrains.com/rscpp/better-ways-testing-with-doctest/</a></p>
+<h1 id="the-best-book-to-read-as-a-developer">The Best Book to Read as a Developer</h1>
+<p><a href="https://dev.to/taillogs/the-best-book-to-read-as-a-developer-1h4m">https://dev.to/taillogs/the-best-book-to-read-as-a-developer-1h4m</a></p>
+<p><a href="https://www.reddit.com/r/programming/comments/c8aaov/the_best_book_to_read_as_a_developer/">https://www.reddit.com/r/programming/comments/c8aaov/the_best_book_to_read_as_a_developer/</a></p>
+<ul>
+<li>Inside the Machine by Jon Stokes <a href="http://joe90.yolasite.com/resources/InsidetheMachine.pdf">http://joe90.yolasite.com/resources/InsidetheMachine.pdf</a></li>
+<li>The Pragmatic Programmer</li>
+<li>"Working Effectively with Legacy Code" by Michael Feathers</li>
+<li>Charles Petzold's Code <a href="https://www.goodreads.com/book/show/44882.Code">https://www.goodreads.com/book/show/44882.Code</a></li>
+<li>Tao of Programming <a href="http://canonical.org/~kragen/tao-of-programming.html">http://canonical.org/~kragen/tao-of-programming.html</a></li>
+<li>Game Engine Architecture <a href="https://www.amazon.com/Game-Engine-Architecture-Jason-Gregory/dp/1568814135">https://www.amazon.com/Game-Engine-Architecture-Jason-Gregory/dp/1568814135</a></li>
+</ul>
+<h1 id="splitting-a-string-in-c">Splitting a string in C++</h1>
+<p><a href="https://medium.com/@bkey76/splitting-a-string-in-c-23e2547e6451">https://medium.com/@bkey76/splitting-a-string-in-c-23e2547e6451</a></p>
+<ul>
+<li>C++ String Toolkit Library (MIT) <a href="http://www.partow.net/programming/strtk/index.html">http://www.partow.net/programming/strtk/index.html</a></li>
+</ul>
 <h1 id="twitter">Twitter</h1>
 <p><img src="img/beethoven.png" alt="image" /></p>
 </body>
