@@ -76,21 +76,27 @@ https://awesomekling.github.io/Serenity-C++-patterns-The-Badge/
 
 * `Reddit <https://www.reddit.com/r/cpp/comments/bzjbu1/serenity_c_patterns_the_badge/>`_
 * `SO: Granular friend <https://stackoverflow.com/questions/3217390/clean-c-granular-friend-equivalent-answer-attorney-client-idiom/3218920#3218920>`_
+  - Live code: http://ideone.com/7n1Wwz
 * `Dr. Dobbs - Friendship and the Attorney-Client Idiom <http://www.drdobbs.com/friendship-and-the-attorney-client-idiom/184402053>`_
 
 .. code:: c++
 
-    class Foo;
-    class Bar { public: void special(int a, Key<Foo>); };
-    Bar().special(1, {}); // at call site in Foo
+  template<typename T>
+  class Key { friend T; Key(){} Key(Key const&){} };
+  class Foo;
+  class Bar { public: void special(int a, Key<Foo>); }; // protected API
+  class Foo { public: void special() { Bar().special(1, {}); } };
+
+  // At call site
+  Foo().special();      // OK
+  Bar().special(1, {}); // Error: Key<Foo> ctor is private
 
 Catching use-after-move bugs with Clang's consumed annotations
 --------------------------------------------------------------
 
 `Article by Andreas Kling <https://awesomekling.github.io/Catching-use-after-move-bugs-with-Clang-consumed-annotations/>`_ | `Reddit <https://www.reddit.com/r/cpp/comments/cbin7c/catching_useaftermove_bugs_with_clangs_consumed/>`_
 
-  - `Clang consumed annotation checking <https://clang.llvm.org/docs/AttributeReference.html#consumed-annotation-checking>`_
-  - `Clang-tidy bugprone-use-after-move <https://clang.llvm.org/extra/clang-tidy/checks/bugprone-use-after-move.html>`_
+- `Clang consumed annotation checking <https://clang.llvm.org/docs/AttributeReference.html#consumed-annotation-checking>`_
 
 .. code:: c++
 
@@ -105,6 +111,8 @@ Catching use-after-move bugs with Clang's consumed annotations
     void invalidate() { m_valid = false; }
     bool m_valid { true };
   };
+
+- `Clang-tidy bugprone-use-after-move <https://clang.llvm.org/extra/clang-tidy/checks/bugprone-use-after-move.html>`_
 
 What are some uses of decltype(auto)?
 -------------------------------------
