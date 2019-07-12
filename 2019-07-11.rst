@@ -1,5 +1,14 @@
 ----
 
+Herb Sutter: Your “top five” ISO C++ feature proposals
+------------------------------------------------------
+
+https://herbsutter.com/2019/07/11/your-top-five-iso-c-feature-proposals/
+
+Survey: https://www.surveymonkey.com/r/ZDCD6YV
+
+Pre-Cologne papers: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-06
+
 Elements of Programming Authors' Edition (free ebook)
 -----------------------------------------------------
 
