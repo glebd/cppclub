@@ -17,7 +17,7 @@ if __name__ == "__main__":
     basename = os.path.splitext(filename)[0]
     metadata_file_name = basename + '.yaml'
     with open(metadata_file_name, 'w') as f:
-        f.write('---\ntitle:    C++ Club Meeting Notes')
+        f.write('---\ntitle:    C++ Club')
         f.write('\nauthor:   Gleb Dolgich')
         f.write('\ndate:     ' + basename)
         f.write('\n---\n')
