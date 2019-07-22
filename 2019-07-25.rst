@@ -1,11 +1,20 @@
 ----
 
+C++20 is feature-complete
+-------------------------
+
+.. image:: img/twitter-ewgchair-nooo.png
+
 Cologne trip reports
 --------------------
 
 * `Herb Sutter <https://herbsutter.com/2019/07/20/trip-report-summer-iso-c-standards-meeting-cologne/>`_
   - `Reddit <https://www.reddit.com/r/cpp/comments/cfpwvv/trip_report_summer_iso_c_standards_meeting_cologne/>`_
 * `Bryce Lelbach <https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/>`_
+  - `On the proposed coroutine keywords <https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/euaj7xz?utm_source=share&utm_medium=web2x>`_
+  - `On the madness that is std::web_view <https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/eub1zjy?utm_source=share&utm_medium=web2x>`_
+  - `On the constinit keyword <https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/euahb2a?utm_source=share&utm_medium=web2x>`_
+  - `On the spaceship operator <https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/eucur9p?utm_source=share&utm_medium=web2x>`_
 
 Why std::expected is not in the standard yet? Is it bad practice?
 -----------------------------------------------------------------
@@ -148,3 +157,12 @@ https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_c
 https://github.com/bernedom/SI
 
 Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
+
+Microsoft to explore using Rust
+-------------------------------
+
+https://www.zdnet.com/article/microsoft-to-explore-using-rust/
+
+https://www.reddit.com/r/cpp/comments/cegbhj/microsoft_looking_into_rust_as_an_alternative_to_c/
+
+.. image:: img/wrong-language.png
