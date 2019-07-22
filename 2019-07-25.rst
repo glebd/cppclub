@@ -5,6 +5,10 @@ C++20 is feature-complete
 
 .. image:: img/twitter-ewgchair-nooo.png
 
+I wonder what was this tweet about.
+
+``C++20 -= Contracts`` perhaps?
+
 Cologne trip reports
 --------------------
 
