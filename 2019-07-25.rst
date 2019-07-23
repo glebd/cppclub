@@ -170,3 +170,15 @@ https://www.zdnet.com/article/microsoft-to-explore-using-rust/
 https://www.reddit.com/r/cpp/comments/cegbhj/microsoft_looking_into_rust_as_an_alternative_to_c/
 
 .. image:: img/wrong-language.png
+
+Quote
+-----
+
+.. image:: img/lamport-distributed-system-quote.png
+
+Reddit
+------
+
+Vittorio Romeo:
+
+.. image:: img/vittorio-laughs-in-constexpr.png
