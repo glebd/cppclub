@@ -27,6 +27,15 @@ http://www.zverovich.net/2019/07/23/std-format-cpp20.html
 
 https://www.reddit.com/r/cpp/comments/cgqo14/stdformat_in_c20/
 
+Contracts while we wait
+-----------------------
+
+* https://github.com/alexeiz/contract: header-only, C++11, BSL-1.0, uses Waf build system, supports GCC and Clang
+* https://github.com/FelixPetriconi/contract_light: C++11, BSL-1.0, uses CMake, GTest (included)
+* Boost.Contract (1.67+)
+  * `Docs <https://www.boost.org/doc/libs/1_67_0/libs/contract/doc/html/index.html>`_
+  * https://github.com/boostorg/contract
+
 Why std::expected is not in the standard yet?
 ---------------------------------------------
 
