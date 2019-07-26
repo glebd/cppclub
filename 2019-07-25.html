@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gleb Dolgich" />
+  <meta name="dcterms.date" content="2019-07-25" />
+  <title>C++ Club</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">C++ Club</h1>
+<p class="author">Gleb Dolgich</p>
+<p class="date">2019-07-25</p>
+</header>
+<hr />
+<h1 id="c20-is-feature-complete">C++20 is feature-complete</h1>
+<p><img src="img/twitter-ewgchair-nooo.png" alt="image" /></p>
+<p>I wonder what was this tweet about.</p>
+<p><code>C++20 -= Contracts</code> perhaps?</p>
+<h1 id="cologne-trip-reports">Cologne trip reports</h1>
+<ul>
+<li><a href="https://herbsutter.com/2019/07/20/trip-report-summer-iso-c-standards-meeting-cologne/">Herb Sutter</a>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/cfpwvv/trip_report_summer_iso_c_standards_meeting_cologne/">Reddit</a></li>
+</ul></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/">Bryce Lelbach</a>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/euaj7xz?utm_source=share&amp;utm_medium=web2x">On the proposed coroutine keywords</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/eub1zjy?utm_source=share&amp;utm_medium=web2x">On std::web_view</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/euahb2a?utm_source=share&amp;utm_medium=web2x">On the constinit keyword</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/eucur9p?utm_source=share&amp;utm_medium=web2x">On the spaceship operator</a></li>
+</ul></li>
+</ul>
+<h1 id="stdformat-in-c20"><strong>std::format</strong> in C++20</h1>
+<p><a href="http://www.zverovich.net/2019/07/23/std-format-cpp20.html">http://www.zverovich.net/2019/07/23/std-format-cpp20.html</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/cgqo14/stdformat_in_c20/">https://www.reddit.com/r/cpp/comments/cgqo14/stdformat_in_c20/</a></p>
+<h1 id="contracts-while-we-wait">Contracts while we wait</h1>
+<ul>
+<li><a href="https://github.com/alexeiz/contract">https://github.com/alexeiz/contract</a>: header-only, C++11, BSL-1.0, uses Waf build system, supports GCC and Clang</li>
+<li><a href="https://github.com/FelixPetriconi/contract_light">https://github.com/FelixPetriconi/contract_light</a>: C++11, BSL-1.0, uses CMake, GTest (included)</li>
+<li>Boost.Contract (1.67+)
+<ul>
+<li><a href="https://www.boost.org/doc/libs/1_67_0/libs/contract/doc/html/index.html">Docs</a></li>
+<li><a href="https://github.com/boostorg/contract">https://github.com/boostorg/contract</a></li>
+</ul></li>
+</ul>
+<h1 id="why-stdexpected-is-not-in-the-standard-yet">Why <strong>std::expected</strong> is not in the standard yet?</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/c75ipk/why_stdexpected_is_not_in_the_standard_yet_is_it/">https://www.reddit.com/r/cpp/comments/c75ipk/why_stdexpected_is_not_in_the_standard_yet_is_it/</a></p>
+<ul>
+<li><code>std::expected</code> <a href="https://github.com/TartanLlama/expected">https://github.com/TartanLlama/expected</a></li>
+<li>Boost Outcome <a href="https://www.boost.org/doc/libs/1_70_0/libs/outcome/doc/html/index.html">https://www.boost.org/doc/libs/1_70_0/libs/outcome/doc/html/index.html</a></li>
+<li>Outcome without Boost <a href="https://ned14.github.io/outcome/">https://ned14.github.io/outcome/</a></li>
+<li>Leaf <a href="https://github.com/zajo/leaf">https://github.com/zajo/leaf</a></li>
+</ul>
+<h1 id="microsoft-to-explore-using-rust">Microsoft to explore using Rust</h1>
+<p><a href="https://www.zdnet.com/article/microsoft-to-explore-using-rust/">https://www.zdnet.com/article/microsoft-to-explore-using-rust/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/cegbhj/microsoft_looking_into_rust_as_an_alternative_to_c/">https://www.reddit.com/r/cpp/comments/cegbhj/microsoft_looking_into_rust_as_an_alternative_to_c/</a></p>
+<p><img src="img/wrong-language.png" alt="image" /></p>
+<h1 id="reddit">Reddit</h1>
+<p>Vittorio Romeo:</p>
+<p><img src="img/vittorio-laughs-in-constexpr.png" alt="image" /></p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>This is madness IMHO<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

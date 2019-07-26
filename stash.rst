@@ -322,11 +322,6 @@ Here’s my number; call me, maybe. Callbacks in a multithreaded world - Anthony
 
 https://www.youtube.com/watch?v=7hkqG8i0QaU
 
-Ranges for distributed and asynchronous systems - Ivan Čukić
-------------------------------------------------------------
-
-https://www.youtube.com/watch?v=eelpmWo2fuU
-
 uvw (header-only libuv wrapper in modern C++)
 ---------------------------------------------
 
@@ -374,15 +369,26 @@ https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c2
 
 https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/
 
-Why std::expected is not in the standard yet? Is it bad practice?
------------------------------------------------------------------
+How do you get the benefits of Rust in C++?
+-------------------------------------------
 
-https://www.reddit.com/r/cpp/comments/c75ipk/why_stdexpected_is_not_in_the_standard_yet_is_it/
+https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust_in_c/
 
-* ``std::expected`` https://github.com/TartanLlama/expected
-* Boost Outcome https://www.boost.org/doc/libs/1_70_0/libs/outcome/doc/html/index.html
-* Outcome without Boost https://ned14.github.io/outcome/
-* Leaf https://github.com/zajo/leaf
+* SaferCPlusPlus https://github.com/duneroadrunner/SaferCPlusPlus/blob/master/README.md
+* Clang 10 thread safety analysis https://clang.llvm.org/docs/ThreadSafetyAnalysis.html
+* Sanitizers https://github.com/google/sanitizers
+* Escher C++ Verifier http://www.eschertech.com/papers/ecvpp2016.pdf
+* Lifetime profile
+  * Paper https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Lifetime.pdf
+  * Clang implementation https://eurollvm2019.sched.com/event/MGhd/implementing-the-c-core-guidelines-lifetime-safety-profile-in-clang
+  * Lifetime Profile Update in Visual Studio 2019 Preview 2 https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/
+
+How do C++ developers manage dependencies?
+------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/c6l3eg/how_do_c_developers_manage_dependencies/
+
+  Through much pain and anguish.
 
 Scott Meyers' TD trick
 ----------------------
@@ -407,20 +413,8 @@ https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from
 
   In C++ a trick I always use when the error message is massive is to just focus on the first error.
 
-How do C++ developers manage dependencies?
-------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/c6l3eg/how_do_c_developers_manage_dependencies/
-
-  Through much pain and anguish.
-
-How do you get the benefits of Rust in C++?
--------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust_in_c/
-
-Use constexpr for faster, smaller, and safer code
--------------------------------------------------
+Use **constexpr** for faster, smaller, and safer code
+-----------------------------------------------------
 
 https://blog.trailofbits.com/2019/06/27/use-constexpr-for-faster-smaller-and-safer-code/
 
@@ -478,7 +472,7 @@ Article by Anthony Williams
 
 https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html
 
-https://github.com/anthonywilliams/strong_typedef ()
+https://github.com/anthonywilliams/strong_typedef
 
 .. code:: c++
 
@@ -498,6 +492,15 @@ https://www.cycfi.com/2019/07/photon-micro-gui/
 
 https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/
 
+Are there any good C++ libraries for data visualization?
+--------------------------------------------------------
+
+* VTK https://vtk.org/
+* ROOT https://root.cern.ch/
+* matplotlib-cpp https://github.com/lava/matplotlib-cpp
+  * matplotlib (Python) https://matplotlib.org/
+* QCustomPlot (QT, GPL/commercial) https://www.qcustomplot.com/
+
 CppCast - CMake and VTK with Robert Maynard
 -------------------------------------------
 
@@ -515,3 +518,8 @@ https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_c
 https://github.com/bernedom/SI
 
 Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
+
+Quote
+-----
+
+.. image:: img/lamport-distributed-system-quote.png
