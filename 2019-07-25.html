@@ -13,71 +13,6 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style>
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -102,12 +37,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/">Bryce Lelbach</a>
 <ul>
 <li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/euaj7xz?utm_source=share&amp;utm_medium=web2x">On the proposed coroutine keywords</a></li>
-<li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/eub1zjy?utm_source=share&amp;utm_medium=web2x">On the madness that is std::web_view</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/eub1zjy?utm_source=share&amp;utm_medium=web2x">On std::web_view</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 <li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/euahb2a?utm_source=share&amp;utm_medium=web2x">On the constinit keyword</a></li>
 <li><a href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/eucur9p?utm_source=share&amp;utm_medium=web2x">On the spaceship operator</a></li>
 </ul></li>
 </ul>
-<h1 id="stdformat-in-c20">std::format in C++20</h1>
+<h1 id="stdformat-in-c20"><strong>std::format</strong> in C++20</h1>
 <p><a href="http://www.zverovich.net/2019/07/23/std-format-cpp20.html">http://www.zverovich.net/2019/07/23/std-format-cpp20.html</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/cgqo14/stdformat_in_c20/">https://www.reddit.com/r/cpp/comments/cgqo14/stdformat_in_c20/</a></p>
 <h1 id="contracts-while-we-wait">Contracts while we wait</h1>
@@ -120,7 +55,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://github.com/boostorg/contract">https://github.com/boostorg/contract</a></li>
 </ul></li>
 </ul>
-<h1 id="why-stdexpected-is-not-in-the-standard-yet">Why std::expected is not in the standard yet?</h1>
+<h1 id="why-stdexpected-is-not-in-the-standard-yet">Why <strong>std::expected</strong> is not in the standard yet?</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/c75ipk/why_stdexpected_is_not_in_the_standard_yet_is_it/">https://www.reddit.com/r/cpp/comments/c75ipk/why_stdexpected_is_not_in_the_standard_yet_is_it/</a></p>
 <ul>
 <li><code>std::expected</code> <a href="https://github.com/TartanLlama/expected">https://github.com/TartanLlama/expected</a></li>
@@ -128,106 +63,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Outcome without Boost <a href="https://ned14.github.io/outcome/">https://ned14.github.io/outcome/</a></li>
 <li>Leaf <a href="https://github.com/zajo/leaf">https://github.com/zajo/leaf</a></li>
 </ul>
-<h1 id="how-do-you-get-the-benefits-of-rust-in-c">How do you get the benefits of Rust in C++?</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust_in_c/">https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust_in_c/</a></p>
-<ul>
-<li>SaferCPlusPlus <a href="https://github.com/duneroadrunner/SaferCPlusPlus/blob/master/README.md">https://github.com/duneroadrunner/SaferCPlusPlus/blob/master/README.md</a></li>
-<li>Clang 10 thread safety analysis <a href="https://clang.llvm.org/docs/ThreadSafetyAnalysis.html">https://clang.llvm.org/docs/ThreadSafetyAnalysis.html</a></li>
-<li>Sanitizers <a href="https://github.com/google/sanitizers">https://github.com/google/sanitizers</a></li>
-<li>Escher C++ Verifier <a href="http://www.eschertech.com/papers/ecvpp2016.pdf">http://www.eschertech.com/papers/ecvpp2016.pdf</a></li>
-<li>Lifetime profile
-<ul>
-<li>Paper <a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Lifetime.pdf">https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Lifetime.pdf</a></li>
-<li>Clang implementation <a href="https://eurollvm2019.sched.com/event/MGhd/implementing-the-c-core-guidelines-lifetime-safety-profile-in-clang">https://eurollvm2019.sched.com/event/MGhd/implementing-the-c-core-guidelines-lifetime-safety-profile-in-clang</a></li>
-<li>Lifetime Profile Update in Visual Studio 2019 Preview 2 <a href="https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/">https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/</a></li>
-</ul></li>
-</ul>
 <h1 id="microsoft-to-explore-using-rust">Microsoft to explore using Rust</h1>
 <p><a href="https://www.zdnet.com/article/microsoft-to-explore-using-rust/">https://www.zdnet.com/article/microsoft-to-explore-using-rust/</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/cegbhj/microsoft_looking_into_rust_as_an_alternative_to_c/">https://www.reddit.com/r/cpp/comments/cegbhj/microsoft_looking_into_rust_as_an_alternative_to_c/</a></p>
 <p><img src="img/wrong-language.png" alt="image" /></p>
-<h1 id="how-do-c-developers-manage-dependencies">How do C++ developers manage dependencies?</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/c6l3eg/how_do_c_developers_manage_dependencies/">https://www.reddit.com/r/cpp/comments/c6l3eg/how_do_c_developers_manage_dependencies/</a></p>
-<blockquote>
-<p>Through much pain and anguish.</p>
-</blockquote>
-<h1 id="scott-meyers-td-trick">Scott Meyers' TD trick</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/eshq8vb?utm_source=share&amp;utm_medium=web2x">https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/eshq8vb?utm_source=share&amp;utm_medium=web2x</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt; <span class="kw">struct</span> TD; <span class="co">// no definition</span></span></code></pre></div>
-<p>Now you write something like <code>TD&lt;decltype(thing)&gt;</code> and the error message tells you the type of thing (as deduced by <code>decltype</code>, of course, but in this case that's probably what you want).</p>
-<h1 id="just-started-learning-c-coming-from-python">Just started learning C++ coming from Python</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/">https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/</a></p>
-<blockquote>
-<p>The new GCC compiler with colour highlighting is a little bit better at pointing out errors. It's generally quite helpful for pure C/C++ until you make an error with the standard library and you get 200 lines about std:: whatever&lt;random characters&gt;</p>
-<p>In C++ a trick I always use when the error message is massive is to just focus on the first error.</p>
-</blockquote>
-<h1 id="use-constexpr-for-faster-smaller-and-safer-code">Use constexpr for faster, smaller, and safer code</h1>
-<p><a href="https://blog.trailofbits.com/2019/06/27/use-constexpr-for-faster-smaller-and-safer-code/">https://blog.trailofbits.com/2019/06/27/use-constexpr-for-faster-smaller-and-safer-code/</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/c646ng/use_constexpr_for_faster_smaller_and_safer_code/">https://www.reddit.com/r/cpp/comments/c646ng/use_constexpr_for_faster_smaller_and_safer_code/</a></p>
-<p><a href="https://github.com/trailofbits/constexpr-everything">https://github.com/trailofbits/constexpr-everything</a> (Apache 2.0)</p>
-<h1 id="a-closer-look-at-bake-a-tool-that-makes-building-cc-code-effortless">A closer look at <strong>bake</strong>: a tool that makes building C/C++ code effortless</h1>
-<p><a href="https://medium.com/@cortoproject/a-closer-look-at-bake-a-tool-that-makes-building-c-c-code-effortless-b2e0409fad8f">https://medium.com/@cortoproject/a-closer-look-at-bake-a-tool-that-makes-building-c-c-code-effortless-b2e0409fad8f</a></p>
-<ul>
-<li><a href="https://www.reddit.com/r/C_Programming/comments/a85f6w/meet_bake_a_new_build_system_package_manager_for/">https://www.reddit.com/r/C_Programming/comments/a85f6w/meet_bake_a_new_build_system_package_manager_for/</a></li>
-<li><a href="https://www.reddit.com/r/cpp/comments/a8d7ny/meet_bake_a_new_build_system_package_manager_for/">https://www.reddit.com/r/cpp/comments/a8d7ny/meet_bake_a_new_build_system_package_manager_for/</a></li>
-<li><a href="https://news.ycombinator.com/item?id=18787777">https://news.ycombinator.com/item?id=18787777</a></li>
-</ul>
-<p><a href="https://github.com/SanderMertens/bake">https://github.com/SanderMertens/bake</a> (GPLv3)</p>
-<blockquote>
-<p>A cargo-like buildsystem and package manager for C/C++</p>
-</blockquote>
-<p>Magic.</p>
-<h1 id="introducing-the-rule-of-desdemova-14">Introducing the Rule of DesDeMovA (1/4)</h1>
-<p>Blog post by Peter Sommerlad</p>
-<p><a href="https://blog.safecpp.com/2019/07/01/initial.html">https://blog.safecpp.com/2019/07/01/initial.html</a></p>
-<p><a href="https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf">https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf</a></p>
-<p>Rule of Zero:</p>
-<blockquote>
-<p>Code that you do not write cannot be wrong.</p>
-</blockquote>
-<h1 id="introducing-the-rule-of-desdemova-24">Introducing the Rule of DesDeMovA (2/4)</h1>
-<p><img src="img/sommerlad-desdemova1.png" alt="image" /></p>
-<h1 id="introducing-the-rule-of-desdemova-34">Introducing the Rule of DesDeMovA (3/4)</h1>
-<p><img src="img/sommerlad-desdemova2.png" alt="image" /></p>
-<h1 id="introducing-the-rule-of-desdemova-34-1">Introducing the Rule of DesDeMovA (3/4)</h1>
-<p><img src="img/sommerlad-desdemova3.png" alt="image" /></p>
-<h1 id="strong_typedef---create-distinct-types-for-distinct-purposes"><strong>strong_typedef</strong> - Create distinct types for distinct purposes</h1>
-<p>Article by Anthony Williams</p>
-<p><a href="https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html">https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html</a></p>
-<p><a href="https://github.com/anthonywilliams/strong_typedef">https://github.com/anthonywilliams/strong_typedef</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">using</span> transaction_id =</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  jss::strong_typedef&lt;<span class="kw">struct</span> transaction_tag, <span class="bu">std::</span>string&gt;;</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="dt">bool</span> is_a_foo(transaction_id id)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>{</span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="kw">auto</span> &amp;s = id.underlying_value();</span>
-<span id="cb2-7"><a href="#cb2-7"></a>  <span class="cf">return</span> s.find(<span class="st">&quot;foo&quot;</span>) != s.end();</span>
-<span id="cb2-8"><a href="#cb2-8"></a>}</span></code></pre></div>
-<h1 id="elements-c-gui-library">Elements C++ GUI library</h1>
-<p><a href="https://www.cycfi.com/2019/07/photon-micro-gui/">https://www.cycfi.com/2019/07/photon-micro-gui/</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/">https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/</a></p>
-<h1 id="are-there-any-good-c-libraries-for-data-visualization">Are there any good C++ libraries for data visualization?</h1>
-<ul>
-<li>VTK <a href="https://vtk.org/">https://vtk.org/</a></li>
-<li>ROOT <a href="https://root.cern.ch/">https://root.cern.ch/</a></li>
-<li>matplotlib-cpp <a href="https://github.com/lava/matplotlib-cpp">https://github.com/lava/matplotlib-cpp</a>
-<ul>
-<li>matplotlib (Python) <a href="https://matplotlib.org/">https://matplotlib.org/</a></li>
-</ul></li>
-<li>QCustomPlot (QT, GPL/commercial) <a href="https://www.qcustomplot.com/">https://www.qcustomplot.com/</a></li>
-</ul>
-<h1 id="cppcast---cmake-and-vtk-with-robert-maynard">CppCast - CMake and VTK with Robert Maynard</h1>
-<p><a href="http://cppcast.com/2019/07/robert-maynard/">http://cppcast.com/2019/07/robert-maynard/</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/">https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/</a></p>
-<h1 id="cmake-line-by-line---creating-a-header-only-library">CMake line by line - creating a header-only library</h1>
-<p><a href="http://dominikberner.ch/cmake-interface-lib/">http://dominikberner.ch/cmake-interface-lib/</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/">https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/</a></p>
-<p><a href="https://github.com/bernedom/SI">https://github.com/bernedom/SI</a></p>
-<p>Professional CMake: A Practical Guide, 4th ed., CMake 3.15 <a href="https://crascit.com/professional-cmake/">https://crascit.com/professional-cmake/</a> $30</p>
-<h1 id="quote">Quote</h1>
-<p><img src="img/lamport-distributed-system-quote.png" alt="image" /></p>
 <h1 id="reddit">Reddit</h1>
 <p>Vittorio Romeo:</p>
 <p><img src="img/vittorio-laughs-in-constexpr.png" alt="image" /></p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>This is madness IMHO<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>
