@@ -519,6 +519,11 @@ https://github.com/bernedom/SI
 
 Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
 
+Survey results: Your “top five” ISO C++ feature proposals
+---------------------------------------------------------
+
+https://herbsutter.com/2019/07/25/survey-results-your-top-five-iso-c-feature-proposals/
+
 Quote
 -----
 
