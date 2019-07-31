@@ -1,11 +1,36 @@
 ----
 
+Trip Report: C++ Standards Meeting in Cologne, July 2019
+--------------------------------------------------------
+
+`Botond Ballo <Trip Report: C++ Standards Meeting in Cologne, July 2019>`_ | `Reddit
+<https://www.reddit.com/r/cpp/comments/ci3oe6/trip_report_c_standards_meeting_in_cologne_july/>`_
+
+  Contracts were pulled from C++20 because the consensus for their current design has disappeared[#]_
+
+`Guy Davidson <https://hatcat.com/?p=86>`_ | `Reddit <https://www.reddit.com/r/cpp/comments/cjb8r2/the_german_tour_cologne_trip_report/>`_
+
+  The big news though was the withdrawal of Contracts from the working draft. The consensus is that
+  it simply isn’t ready yet <...>
+
+.. [#] https://botondballo.wordpress.com/2019/07/26/trip-report-c-standards-meeting-in-cologne-july-2019/#contracts
+
 Survey results: Your “top five” ISO C++ feature proposals
 ---------------------------------------------------------
 
 https://herbsutter.com/2019/07/25/survey-results-your-top-five-iso-c-feature-proposals/
 
+Comment:
+
+  Indeed, the results are incredibly biased, in favor of:
+
+  * Your own proposals.
+  * Your own interests.
+  * Proposals made recently or which have gone through part of the adoption pipeline.
+
 https://www.reddit.com/r/cpp/comments/ci0uz6/survey_results_your_top_five_iso_c_feature/
+
+* `ELI5 <https://www.reddit.com/r/cpp/comments/ci0uz6/survey_results_your_top_five_iso_c_feature/ev0kk52?utm_source=share&utm_medium=web2x>`_
 
 Simplify Your Code With Rocket Science: C++20’s Spaceship Operator
 ------------------------------------------------------------------
