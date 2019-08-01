@@ -40,23 +40,28 @@ https://www.reddit.com/r/cpp/comments/ci0uz6/survey_results_your_top_five_iso_c_
 
 * `ELI5 <https://www.reddit.com/r/cpp/comments/ci0uz6/survey_results_your_top_five_iso_c_feature/ev0kk52?utm_source=share&utm_medium=web2x>`_
 
-Simplify Your Code With Rocket Science: C++20’s Spaceship Operator
-------------------------------------------------------------------
-
-https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/
-
-https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/
-
 C++20 articles
 -------------------------
 
 * https://iscinumpy.gitlab.io/post/cpp-20/
 * https://hackaday.com/2019/07/30/c20-is-feature-complete-heres-what-changes-are-coming/
 
+Game developer's C++ rant
+-------------------------
+
+.. image:: img/cpp-gamedev-rant.png
+
 Meeting Bjarne Stroustrup this Monday, any questions you would like asked?
 --------------------------------------------------------------------------
 
 https://www.reddit.com/r/cpp/comments/chwncp/meeting_bjarne_stroustrup_creator_of_c_this/
+
+Simplify Your Code With Rocket Science: C++20’s Spaceship Operator
+------------------------------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/
+
+https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/
 
 How do you get the benefits of Rust in C++?
 -------------------------------------------
@@ -71,155 +76,6 @@ https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust
   * Paper https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Lifetime.pdf
   * Clang implementation https://eurollvm2019.sched.com/event/MGhd/implementing-the-c-core-guidelines-lifetime-safety-profile-in-clang
   * Lifetime Profile Update in Visual Studio 2019 Preview 2 https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/
-
-How do C++ developers manage dependencies?
-------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/c6l3eg/how_do_c_developers_manage_dependencies/
-
-  Through much pain and anguish.
-
-Scott Meyers' TD trick
-----------------------
-
-https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/eshq8vb?utm_source=share&utm_medium=web2x
-
-.. code:: c++
-
-  template <typename T> struct TD; // no definition
-
-Now you write something like ``TD<decltype(thing)>`` and the error message tells you the type of thing (as deduced by
-``decltype``, of course, but in this case that's probably what you want).
-
-Just started learning C++ coming from Python
---------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/
-
-  The new GCC compiler with colour highlighting is a little bit better at pointing out errors. It's generally quite
-  helpful for pure C/C++ until you make an error with the standard library and you get 200 lines about std::
-  whatever<random characters>
-
-  In C++ a trick I always use when the error message is massive is to just focus on the first error.
-
-Use **constexpr** for faster, smaller, and safer code
------------------------------------------------------
-
-https://blog.trailofbits.com/2019/06/27/use-constexpr-for-faster-smaller-and-safer-code/
-
-https://www.reddit.com/r/cpp/comments/c646ng/use_constexpr_for_faster_smaller_and_safer_code/
-
-https://github.com/trailofbits/constexpr-everything (Apache 2.0)
-
-A closer look at **bake**: a tool that makes building C/C++ code effortless
----------------------------------------------------------------------------
-
-https://medium.com/@cortoproject/a-closer-look-at-bake-a-tool-that-makes-building-c-c-code-effortless-b2e0409fad8f
-
-* https://www.reddit.com/r/C_Programming/comments/a85f6w/meet_bake_a_new_build_system_package_manager_for/
-* https://www.reddit.com/r/cpp/comments/a8d7ny/meet_bake_a_new_build_system_package_manager_for/
-* https://news.ycombinator.com/item?id=18787777
-
-https://github.com/SanderMertens/bake (GPLv3)
-
-    A cargo-like buildsystem and package manager for C/C++
-
-Magic.
-
-Introducing the Rule of DesDeMovA (1/4)
----------------------------------------
-
-Blog post by Peter Sommerlad
-
-https://blog.safecpp.com/2019/07/01/initial.html
-
-https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf
-
-Rule of Zero:
-
-    Code that you do not write cannot be wrong.
-
-Introducing the Rule of DesDeMovA (2/4)
----------------------------------------
-
-.. image:: img/sommerlad-desdemova1.png
-
-Introducing the Rule of DesDeMovA (3/4)
----------------------------------------
-
-.. image:: img/sommerlad-desdemova2.png
-
-Introducing the Rule of DesDeMovA (3/4)
----------------------------------------
-
-.. image:: img/sommerlad-desdemova3.png
-
-**strong_typedef** - Create distinct types for distinct purposes
-----------------------------------------------------------------
-
-Article by Anthony Williams
-
-https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html
-
-https://github.com/anthonywilliams/strong_typedef
-
-.. code:: c++
-
-  using transaction_id =
-    jss::strong_typedef<struct transaction_tag, std::string>;
-
-  bool is_a_foo(transaction_id id)
-  {
-    auto &s = id.underlying_value();
-    return s.find("foo") != s.end();
-  }
-
-Elements C++ GUI library
-------------------------
-
-https://www.cycfi.com/2019/07/photon-micro-gui/
-
-https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/
-
-Are there any good C++ libraries for data visualization?
---------------------------------------------------------
-
-* VTK https://vtk.org/
-* ROOT https://root.cern.ch/
-* matplotlib-cpp https://github.com/lava/matplotlib-cpp
-  * matplotlib (Python) https://matplotlib.org/
-* QCustomPlot (QT, GPL/commercial) https://www.qcustomplot.com/
-
-CppCast - CMake and VTK with Robert Maynard
--------------------------------------------
-
-http://cppcast.com/2019/07/robert-maynard/
-
-https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/
-
-CMake line by line - creating a header-only library
----------------------------------------------------
-
-http://dominikberner.ch/cmake-interface-lib/
-
-https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/
-
-https://github.com/bernedom/SI
-
-Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
-
-Are there any OSes built using C++
-----------------------------------
-
-https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
-
-* `TempleOS <https://github.com/DivineSystems/DivineOS>`_
-* `Haiku <https://www.haiku-os.org/>`_
-* `Google Fuchsia <https://fuchsia.dev/>`_
-* `IncludeOS <https://www.includeos.org/>`_
-* `DistortOS <http://distortos.org/>`_ (RTOS)
-* `Symbian OS <https://github.com/SymbianSource>`_ (Dead)
-* `SerenityOS <https://github.com/SerenityOS/serenity>`_
 
 Quote
 -----
