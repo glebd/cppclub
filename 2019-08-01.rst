@@ -3,12 +3,20 @@
 Trip Report: C++ Standards Meeting in Cologne, July 2019
 --------------------------------------------------------
 
-`Botond Ballo <Trip Report: C++ Standards Meeting in Cologne, July 2019>`_ | `Reddit
-<https://www.reddit.com/r/cpp/comments/ci3oe6/trip_report_c_standards_meeting_in_cologne_july/>`_
+`Botond Ballo <Trip Report: C++ Standards Meeting in Cologne, July 2019>`_
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/ci3oe6/trip_report_c_standards_meeting_in_cologne_july/>`_
+* `CppCast <http://cppcast.com/2019/07/botond-ballo-tom-honermann/>`_
+
+Quote:
 
   Contracts were pulled from C++20 because the consensus for their current design has disappeared[#]_
 
-`Guy Davidson <https://hatcat.com/?p=86>`_ | `Reddit <https://www.reddit.com/r/cpp/comments/cjb8r2/the_german_tour_cologne_trip_report/>`_
+`Guy Davidson <https://hatcat.com/?p=86>`_
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/cjb8r2/the_german_tour_cologne_trip_report/>`_
+
+Quote:
 
   The big news though was the withdrawal of Contracts from the working draft. The consensus is that
   it simply isn’t ready yet <...>
@@ -38,6 +46,17 @@ Simplify Your Code With Rocket Science: C++20’s Spaceship Operator
 https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/
 
 https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/
+
+C++20 articles
+-------------------------
+
+* https://iscinumpy.gitlab.io/post/cpp-20/
+* https://hackaday.com/2019/07/30/c20-is-feature-complete-heres-what-changes-are-coming/
+
+Meeting Bjarne Stroustrup this Monday, any questions you would like asked?
+--------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/chwncp/meeting_bjarne_stroustrup_creator_of_c_this/
 
 How do you get the benefits of Rust in C++?
 -------------------------------------------
@@ -189,10 +208,18 @@ https://github.com/bernedom/SI
 
 Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
 
-Survey results: Your “top five” ISO C++ feature proposals
----------------------------------------------------------
+Are there any OSes built using C++
+----------------------------------
 
-https://herbsutter.com/2019/07/25/survey-results-your-top-five-iso-c-feature-proposals/
+https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
+
+* `TempleOS <https://github.com/DivineSystems/DivineOS>`_
+* `Haiku <https://www.haiku-os.org/>`_
+* `Google Fuchsia <https://fuchsia.dev/>`_
+* `IncludeOS <https://www.includeos.org/>`_
+* `DistortOS <http://distortos.org/>`_ (RTOS)
+* `Symbian OS <https://github.com/SymbianSource>`_ (Dead)
+* `SerenityOS <https://github.com/SerenityOS/serenity>`_
 
 Quote
 -----
