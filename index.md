@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not those of my employer.
 
+* [1 August 2019](2019-08-01.html)
 * [25 July 2019](2019-07-25.html)
 * [18 July 2019](2019-07-18.html)
 * [11 July 2019](2019-07-11.html)

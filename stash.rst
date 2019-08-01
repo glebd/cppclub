@@ -362,27 +362,6 @@ Conor Hoekstra - C++ Algorithms in Haskell
 
 https://youtu.be/dTO3-1C1-t0
 
-Simplify Your Code With Rocket Science: C++20’s Spaceship Operator
-------------------------------------------------------------------
-
-https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/
-
-https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/
-
-How do you get the benefits of Rust in C++?
--------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust_in_c/
-
-* SaferCPlusPlus https://github.com/duneroadrunner/SaferCPlusPlus/blob/master/README.md
-* Clang 10 thread safety analysis https://clang.llvm.org/docs/ThreadSafetyAnalysis.html
-* Sanitizers https://github.com/google/sanitizers
-* Escher C++ Verifier http://www.eschertech.com/papers/ecvpp2016.pdf
-* Lifetime profile
-  * Paper https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Lifetime.pdf
-  * Clang implementation https://eurollvm2019.sched.com/event/MGhd/implementing-the-c-core-guidelines-lifetime-safety-profile-in-clang
-  * Lifetime Profile Update in Visual Studio 2019 Preview 2 https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/
-
 How do C++ developers manage dependencies?
 ------------------------------------------
 
@@ -519,7 +498,15 @@ https://github.com/bernedom/SI
 
 Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
 
-Quote
------
+Are there any OSes built using C++
+----------------------------------
 
-.. image:: img/lamport-distributed-system-quote.png
+https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
+
+* `TempleOS <https://github.com/DivineSystems/DivineOS>`_
+* `Haiku <https://www.haiku-os.org/>`_
+* `Google Fuchsia <https://fuchsia.dev/>`_
+* `IncludeOS <https://www.includeos.org/>`_
+* `DistortOS <http://distortos.org/>`_ (RTOS)
+* `Symbian OS <https://github.com/SymbianSource>`_ (Dead)
+* `SerenityOS <https://github.com/SerenityOS/serenity>`_
