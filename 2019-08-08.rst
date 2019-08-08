@@ -22,6 +22,36 @@ What Happened to C++20 Contracts? (cont.)
 
 My word, what a thread.
 
+Bryce Lelbach on the C++ Committee
+----------------------------------
+
+.. image:: img/lelbach-committee-slow-fast.png
+
+Twitter: who does what in the C++ Committee
+-------------------------------------------
+
+.. image:: img/committee-who-does-what.png
+
+Improved Linker Fundamentals in Visual Studio 2019
+--------------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/improved-linker-fundamentals-in-visual-studio-2019/
+
+https://www.reddit.com/r/cpp/comments/chqj93/visual_c_linking_speedup_by_23x_in_latest_visual/
+
+Technical vision for Qt 6
+-------------------------
+
+https://blog.qt.io/blog/2019/08/07/technical-vision-qt-6/
+
+https://www.reddit.com/r/cpp/comments/cn52ql/technical_vision_for_qt_6/
+
+* C++17
+* Strongly-typed QML
+* QML to C++ compilation, JavaScript optional
+* CMake as the build system
+* Next-generation graphics support
+
 How do C++ developers manage dependencies?
 ------------------------------------------
 
@@ -170,3 +200,30 @@ https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
 * `DistortOS <http://distortos.org/>`_ (RTOS)
 * `Symbian OS <https://github.com/SymbianSource>`_ (Dead)
 * `SerenityOS <https://github.com/SerenityOS/serenity>`_
+
+CosmoScout VR
+-------------
+
+A virtual universe which lets you explore, analyze and present huge planetary datasets and large simulation data in real-time.
+
+Uses C++17 and OpenGL.
+
+https://github.com/cosmoscout/cosmoscout-vr (MIT) Copyright (c) 2019 German Aerospace Center (DLR)
+
+https://www.reddit.com/r/cpp/comments/cn657d/the_german_center_for_aerospace_dlr_just_open/
+
+Agner Vector Class Library V2
+-----------------------------
+
+This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern microprocessors.
+
+https://www.agner.org/optimize/blog/read.php?i=1013
+
+https://github.com/vectorclass/version2 (Apache 2.0)
+
+Manual https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf
+
+Bugs
+----
+
+.. image:: img/grumpy-bugs.png
