@@ -151,74 +151,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A cargo-like buildsystem and package manager for C/C++</p>
 </blockquote>
 <p>Magic.</p>
-<h1 id="introducing-the-rule-of-desdemova-14">Introducing the Rule of DesDeMovA (1/4)</h1>
-<p>Blog post by Peter Sommerlad</p>
-<p><a href="https://blog.safecpp.com/2019/07/01/initial.html">https://blog.safecpp.com/2019/07/01/initial.html</a></p>
-<p><a href="https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf">https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf</a></p>
-<p>Rule of Zero:</p>
-<blockquote>
-<p>Code that you do not write cannot be wrong.</p>
-</blockquote>
-<h1 id="introducing-the-rule-of-desdemova-24">Introducing the Rule of DesDeMovA (2/4)</h1>
-<p><img src="img/sommerlad-desdemova1.png" alt="image" /></p>
-<h1 id="introducing-the-rule-of-desdemova-34">Introducing the Rule of DesDeMovA (3/4)</h1>
-<p><img src="img/sommerlad-desdemova2.png" alt="image" /></p>
-<h1 id="introducing-the-rule-of-desdemova-34-1">Introducing the Rule of DesDeMovA (3/4)</h1>
-<p><img src="img/sommerlad-desdemova3.png" alt="image" /></p>
-<h1 id="strong_typedef---create-distinct-types-for-distinct-purposes"><strong>strong_typedef</strong> - Create distinct types for distinct purposes</h1>
-<p>Article by Anthony Williams</p>
-<p><a href="https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html">https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html</a></p>
-<p><a href="https://github.com/anthonywilliams/strong_typedef">https://github.com/anthonywilliams/strong_typedef</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">using</span> transaction_id =</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  jss::strong_typedef&lt;<span class="kw">struct</span> transaction_tag, <span class="bu">std::</span>string&gt;;</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="dt">bool</span> is_a_foo(transaction_id id)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>{</span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="kw">auto</span> &amp;s = id.underlying_value();</span>
-<span id="cb2-7"><a href="#cb2-7"></a>  <span class="cf">return</span> s.find(<span class="st">&quot;foo&quot;</span>) != s.end();</span>
-<span id="cb2-8"><a href="#cb2-8"></a>}</span></code></pre></div>
-<h1 id="elements-c-gui-library">Elements C++ GUI library</h1>
-<p><a href="https://www.cycfi.com/2019/07/photon-micro-gui/">https://www.cycfi.com/2019/07/photon-micro-gui/</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/">https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/</a></p>
-<h1 id="are-there-any-good-c-libraries-for-data-visualization">Are there any good C++ libraries for data visualization?</h1>
-<ul>
-<li>VTK <a href="https://vtk.org/">https://vtk.org/</a></li>
-<li>ROOT <a href="https://root.cern.ch/">https://root.cern.ch/</a></li>
-<li>matplotlib-cpp <a href="https://github.com/lava/matplotlib-cpp">https://github.com/lava/matplotlib-cpp</a>
-<ul>
-<li>matplotlib (Python) <a href="https://matplotlib.org/">https://matplotlib.org/</a></li>
-</ul></li>
-<li>QCustomPlot (QT, GPL/commercial) <a href="https://www.qcustomplot.com/">https://www.qcustomplot.com/</a></li>
-</ul>
-<h1 id="cppcast---cmake-and-vtk-with-robert-maynard">CppCast - CMake and VTK with Robert Maynard</h1>
-<p><a href="http://cppcast.com/2019/07/robert-maynard/">http://cppcast.com/2019/07/robert-maynard/</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/">https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/</a></p>
-<h1 id="cmake-line-by-line---creating-a-header-only-library">CMake line by line - creating a header-only library</h1>
-<p><a href="http://dominikberner.ch/cmake-interface-lib/">http://dominikberner.ch/cmake-interface-lib/</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/">https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/</a></p>
-<p><a href="https://github.com/bernedom/SI">https://github.com/bernedom/SI</a></p>
-<p>Professional CMake: A Practical Guide, 4th ed., CMake 3.15 <a href="https://crascit.com/professional-cmake/">https://crascit.com/professional-cmake/</a> $30</p>
-<h1 id="are-there-any-oses-built-using-c">Are there any OSes built using C++</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/">https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/</a></p>
-<ul>
-<li><a href="https://github.com/DivineSystems/DivineOS">TempleOS</a></li>
-<li><a href="https://www.haiku-os.org/">Haiku</a></li>
-<li><a href="https://fuchsia.dev/">Google Fuchsia</a></li>
-<li><a href="https://www.includeos.org/">IncludeOS</a></li>
-<li><a href="http://distortos.org/">DistortOS</a> (RTOS)</li>
-<li><a href="https://github.com/SymbianSource">Symbian OS</a> (Dead)</li>
-<li><a href="https://github.com/SerenityOS/serenity">SerenityOS</a></li>
-</ul>
 <h1 id="cosmoscout-vr">CosmoScout VR</h1>
 <p>A virtual universe which lets you explore, analyze and present huge planetary datasets and large simulation data in real-time.</p>
 <p>Uses C++17 and OpenGL.</p>
 <p><a href="https://github.com/cosmoscout/cosmoscout-vr">https://github.com/cosmoscout/cosmoscout-vr</a> (MIT) Copyright (c) 2019 German Aerospace Center (DLR)</p>
 <p><a href="https://www.reddit.com/r/cpp/comments/cn657d/the_german_center_for_aerospace_dlr_just_open/">https://www.reddit.com/r/cpp/comments/cn657d/the_german_center_for_aerospace_dlr_just_open/</a></p>
-<h1 id="agner-vector-class-library-v2">Agner Vector Class Library V2</h1>
-<p>This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern microprocessors.</p>
-<p><a href="https://www.agner.org/optimize/blog/read.php?i=1013">https://www.agner.org/optimize/blog/read.php?i=1013</a></p>
-<p><a href="https://github.com/vectorclass/version2">https://github.com/vectorclass/version2</a> (Apache 2.0)</p>
-<p>Manual <a href="https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf">https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf</a></p>
 <h1 id="bugs">Bugs</h1>
 <p><img src="img/grumpy-bugs.png" alt="image" /></p>
 </body>
