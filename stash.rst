@@ -362,60 +362,6 @@ Conor Hoekstra - C++ Algorithms in Haskell
 
 https://youtu.be/dTO3-1C1-t0
 
-How do C++ developers manage dependencies?
-------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/c6l3eg/how_do_c_developers_manage_dependencies/
-
-  Through much pain and anguish.
-
-Scott Meyers' TD trick
-----------------------
-
-https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/eshq8vb?utm_source=share&utm_medium=web2x
-
-.. code:: c++
-
-  template <typename T> struct TD; // no definition
-
-Now you write something like ``TD<decltype(thing)>`` and the error message tells you the type of thing (as deduced by
-``decltype``, of course, but in this case that's probably what you want).
-
-Just started learning C++ coming from Python
---------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/c6vnb3/just_started_learning_c_coming_from_python_and/
-
-  The new GCC compiler with colour highlighting is a little bit better at pointing out errors. It's generally quite
-  helpful for pure C/C++ until you make an error with the standard library and you get 200 lines about std::
-  whatever<random characters>
-
-  In C++ a trick I always use when the error message is massive is to just focus on the first error.
-
-Use **constexpr** for faster, smaller, and safer code
------------------------------------------------------
-
-https://blog.trailofbits.com/2019/06/27/use-constexpr-for-faster-smaller-and-safer-code/
-
-https://www.reddit.com/r/cpp/comments/c646ng/use_constexpr_for_faster_smaller_and_safer_code/
-
-https://github.com/trailofbits/constexpr-everything (Apache 2.0)
-
-A closer look at **bake**: a tool that makes building C/C++ code effortless
----------------------------------------------------------------------------
-
-https://medium.com/@cortoproject/a-closer-look-at-bake-a-tool-that-makes-building-c-c-code-effortless-b2e0409fad8f
-
-* https://www.reddit.com/r/C_Programming/comments/a85f6w/meet_bake_a_new_build_system_package_manager_for/
-* https://www.reddit.com/r/cpp/comments/a8d7ny/meet_bake_a_new_build_system_package_manager_for/
-* https://news.ycombinator.com/item?id=18787777
-
-https://github.com/SanderMertens/bake (GPLv3)
-
-    A cargo-like buildsystem and package manager for C/C++
-
-Magic.
-
 Introducing the Rule of DesDeMovA (1/4)
 ---------------------------------------
 
@@ -510,3 +456,14 @@ https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
 * `DistortOS <http://distortos.org/>`_ (RTOS)
 * `Symbian OS <https://github.com/SymbianSource>`_ (Dead)
 * `SerenityOS <https://github.com/SerenityOS/serenity>`_
+
+Agner Vector Class Library V2
+-----------------------------
+
+This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern microprocessors.
+
+https://www.agner.org/optimize/blog/read.php?i=1013
+
+https://github.com/vectorclass/version2 (Apache 2.0)
+
+Manual https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf
