@@ -3,8 +3,8 @@
 Disclaimer: All opinions posted on this website are my own and not those of my employer.
 
 * [8 August 2019](2019-08-08.html)
-* [1 August 2019](2019-08-01.html) | [Video](https://youtu.be/RQRY52fW5UA)
-* [25 July 2019](2019-07-25.html) | [Video](https://youtu.be/q07NdM6F5zc)
+* [1 August 2019](2019-08-01.html) :: [Video](https://youtu.be/RQRY52fW5UA)
+* [25 July 2019](2019-07-25.html) :: [Video](https://youtu.be/q07NdM6F5zc)
 * [18 July 2019](2019-07-18.html)
 * [11 July 2019](2019-07-11.html)
 * [27 June 2019](2019-06-27.html)
