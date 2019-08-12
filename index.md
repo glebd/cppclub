@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not those of my employer.
 
+* [15 August 2019](2019-08-15.html) :: [PDF](2019-08-15.pdf)
 * [8 August 2019](2019-08-08.html) :: [PDF](2019-08-08.pdf) :: [Video](https://youtu.be/h0QgrOhbPoA)
 * [1 August 2019](2019-08-01.html) :: [PDF](2019-08-01.pdf) :: [Video](https://youtu.be/RQRY52fW5UA)
 * [25 July 2019](2019-07-25.html) :: [PDF](2019-07-25.pdf) :: [Video](https://youtu.be/q07NdM6F5zc)
