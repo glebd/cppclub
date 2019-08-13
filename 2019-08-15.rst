@@ -27,6 +27,11 @@ AnyDuck : A Value Type Erased Type
 
 Steve Downey: https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/
 
+Fixing c++ with epochs
+----------------------
+
+Vittorio Romeo: https://vittorioromeo.info/index/blog/fixing_cpp_with_epochs.html
+
 Introducing the Rule of DesDeMovA (1/4)
 ---------------------------------------
 
