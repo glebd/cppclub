@@ -10,10 +10,22 @@ C++ Parallel Programming with Threading Building Blocks
 
 https://www.reddit.com/r/cpp/comments/cov2xw/pro_tbb_c_parallel_programming_with_threading/
 
+Stop using out arguments
+------------------------
+
+Sean Parent: https://stlab.cc/tips/stop-using-out-arguments.html
+
 out_ptr
 -------
 
 * `P1132R6 <https://thephd.github.io/vendor/future_cxx/papers/d1132.html>`_
+* `Example <https://thephd.github.io/vendor/future_cxx/papers/d1132.html#design-casting-void>`_
+* Code: https://github.com/ThePhD/out_ptr (Boost)
+
+AnyDuck : A Value Type Erased Type
+----------------------------------
+
+Steve Downey: https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/
 
 Introducing the Rule of DesDeMovA (1/4)
 ---------------------------------------
