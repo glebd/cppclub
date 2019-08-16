@@ -362,6 +362,11 @@ Conor Hoekstra - C++ Algorithms in Haskell
 
 https://youtu.be/dTO3-1C1-t0
 
+AnyDuck : A Value Type Erased Type
+----------------------------------
+
+Steve Downey: https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/
+
 Introducing the Rule of DesDeMovA (1/4)
 ---------------------------------------
 
@@ -460,7 +465,8 @@ https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
 Agner Vector Class Library V2
 -----------------------------
 
-This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern microprocessors.
+This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern
+microprocessors.
 
 https://www.agner.org/optimize/blog/read.php?i=1013
 
