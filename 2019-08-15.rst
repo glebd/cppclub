@@ -1,5 +1,79 @@
 ----
 
+Cologne Trip Report
+-------------------
+
+* `Timur Doumler <http://timur.audio/trip-report-july-2019-iso-c-committee-meeting-cologne-germany>`_
+
+GCC 9.2 Released
+----------------
+
+https://gcc.gnu.org/gcc-9/changes.html
+
+https://www.reddit.com/r/cpp/comments/cpiwfc/gcc_92_released/
+
+Remember the Vasa! or, plus ça change, plus c’est la même chose
+---------------------------------------------------------------
+
+`Ben Deane <http://www.elbeno.com/blog/?p=1619>`_
+
+  C++ is growing. Change can be daunting, but I think we’re going to be fine. And when one day a specific little hammer
+  is just the right tool for the task at hand, I’ll be thankful that someone added that hammer to my toolbox.
+
+https://www.reddit.com/r/cpp/comments/cpqzwk/remember_the_vasa_or_plus_%C3%A7a_change_plus_cest_la/
+
+VxWorks uses Clang and C++14
+----------------------------
+
+https://www.windriver.com/products/vxworks/
+
+https://resources.windriver.com/vxworks/vxworks-compilers-and-frameworks
+
+VxWorks powers more than 2 billion devices.
+
+Fixing C++ with epochs
+----------------------
+
+`Vittorio Romeo <https://vittorioromeo.info/index/blog/fixing_cpp_with_epochs.html>`_
+
+  The goal of this blog post is to convince you that we need an equivalent of
+  `Rust Editions <https://doc.rust-lang.org/edition-guide/editions/index.html>`_ in C++, and that it is possible and a
+  good idea.
+
+https://www.reddit.com/r/cpp/comments/clcz08/fixing_c_with_epochs/
+
+https://www.reddit.com/r/cpp/comments/cnsi6x/an_alternative_to_epochs/
+
+Should not exceptions be finally deprecated?
+--------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/cliw5j/should_not_exceptions_be_finally_deprecated/
+
+  I have been programming in C++ for a long time, but I still do not understand how to use exceptions.
+
+A C++ acronym glossary
+----------------------
+
+`Arthur O'Dwyer <https://quuxplusone.github.io/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/>`_
+
+https://www.reddit.com/r/cpp/comments/cl7arc/a_c_acronym_glossary/
+
+See also: https://en.cppreference.com/w/cpp/language/acronyms
+
+SCARY
+  Seemingly erroneous (appearing Constrained by conflicting generic parameters), but Actually works with the Right
+  implementation (unconstrained bY the conflict due to minimized dependencies). From
+  http://www.stroustrup.com/SCARY.pdf
+
+Productivity Improvements for Visual C++
+----------------------------------------
+
+`Visual Studio Blog <https://devblogs.microsoft.com/cppblog/productivity-improvements-for-c-new-default-colorization-template-argument-filtering-in-call-stack-window-and-intellicode-on-by-default/>`_
+
+* New Default Semantic Colorization
+* Template Argument Filtering in Call Stack Window
+* IntelliCode On-By-Default
+
 Free Book > Pro TBB
 -------------------
 
@@ -22,125 +96,12 @@ out_ptr
 * `Example <https://thephd.github.io/vendor/future_cxx/papers/d1132.html#design-casting-void>`_
 * Code: https://github.com/ThePhD/out_ptr (Boost)
 
-AnyDuck : A Value Type Erased Type
-----------------------------------
-
-Steve Downey: https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/
-
-Fixing c++ with epochs
-----------------------
-
-Vittorio Romeo: https://vittorioromeo.info/index/blog/fixing_cpp_with_epochs.html
-
-Introducing the Rule of DesDeMovA (1/4)
----------------------------------------
-
-Blog post by Peter Sommerlad
-
-https://blog.safecpp.com/2019/07/01/initial.html
-
-https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf
-
-Rule of Zero:
-
-    Code that you do not write cannot be wrong.
-
-Introducing the Rule of DesDeMovA (2/4)
----------------------------------------
-
-.. image:: img/sommerlad-desdemova1.png
-
-Introducing the Rule of DesDeMovA (3/4)
----------------------------------------
-
-.. image:: img/sommerlad-desdemova2.png
-
-Introducing the Rule of DesDeMovA (3/4)
----------------------------------------
-
-.. image:: img/sommerlad-desdemova3.png
-
-**strong_typedef** - Create distinct types for distinct purposes
-----------------------------------------------------------------
-
-Article by Anthony Williams
-
-https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html
-
-https://github.com/anthonywilliams/strong_typedef
-
-.. code:: c++
-
-  using transaction_id =
-    jss::strong_typedef<struct transaction_tag, std::string>;
-
-  bool is_a_foo(transaction_id id)
-  {
-    auto &s = id.underlying_value();
-    return s.find("foo") != s.end();
-  }
-
-Elements C++ GUI library
-------------------------
-
-https://www.cycfi.com/2019/07/photon-micro-gui/
-
-https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/
-
-Are there any good C++ libraries for data visualization?
---------------------------------------------------------
-
-* VTK https://vtk.org/
-* ROOT https://root.cern.ch/
-* matplotlib-cpp https://github.com/lava/matplotlib-cpp
-  * matplotlib (Python) https://matplotlib.org/
-* QCustomPlot (QT, GPL/commercial) https://www.qcustomplot.com/
-
-CppCast - CMake and VTK with Robert Maynard
--------------------------------------------
-
-http://cppcast.com/2019/07/robert-maynard/
-
-https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/
-
-CMake line by line - creating a header-only library
----------------------------------------------------
-
-http://dominikberner.ch/cmake-interface-lib/
-
-https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/
-
-https://github.com/bernedom/SI
-
-Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
-
-Are there any OSes built using C++
-----------------------------------
-
-https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
-
-* `TempleOS <https://github.com/DivineSystems/DivineOS>`_
-* `Haiku <https://www.haiku-os.org/>`_
-* `Google Fuchsia <https://fuchsia.dev/>`_
-* `IncludeOS <https://www.includeos.org/>`_
-* `DistortOS <http://distortos.org/>`_ (RTOS)
-* `Symbian OS <https://github.com/SymbianSource>`_ (Dead)
-* `SerenityOS <https://github.com/SerenityOS/serenity>`_
-
-Agner Vector Class Library V2
------------------------------
-
-This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern microprocessors.
-
-https://www.agner.org/optimize/blog/read.php?i=1013
-
-https://github.com/vectorclass/version2 (Apache 2.0)
-
-Manual https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf
-
 Retro
 -----
 
 .. image:: img/unix-tape.png
 
+JavaScript is weird
+-------------------
 
+.. image:: img/js-banana.png
