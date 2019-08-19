@@ -106,3 +106,14 @@ https://www.agner.org/optimize/blog/read.php?i=1013
 https://github.com/vectorclass/version2 (Apache 2.0)
 
 Manual https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf
+
+Approval tests
+--------------
+
+Also known as **Golden Master Tests** or **Snapshot Testing**
+
+* CppOnSea 2019 - Clare Macrae - Quickly testing legacy code https://youtu.be/dtm8V3TIB6k
+* CppCast with Clare Macrae https://cppcast.com/clare-macrae/
+  * https://www.reddit.com/r/cpp/comments/ckzc11/cppcast_approval_tests_with_clare_macrae/
+* Code https://github.com/approvals/ApprovalTests.cpp (Apache 2.0)
+* Approval Tests Library - Capturing Human Intelligence [available for Java, C#, VB.Net, PHP, Ruby, Node.JS and Python] https://approvaltests.com/
