@@ -55,8 +55,8 @@ https://www.cycfi.com/2019/07/photon-micro-gui/
 
 https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/
 
-Are there any good C++ libraries for data visualization?
---------------------------------------------------------
+C++ libraries for data visualization
+------------------------------------
 
 * VTK https://vtk.org/
 * ROOT https://root.cern.ch/
@@ -82,8 +82,8 @@ https://github.com/bernedom/SI
 
 Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
 
-Are there any OSes built using C++
-----------------------------------
+OSes built using C++
+--------------------
 
 https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
 
