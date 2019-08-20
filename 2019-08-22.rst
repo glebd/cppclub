@@ -129,3 +129,8 @@ mdspan
 * Multi-dimensional strided array views in Magnum
   https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/
 * P0009R9 **mdspan**: A Non-Owning Multidimensional Array Reference http://wg21.link/p0009r9
+
+Twitter: Neural Proposals
+-------------------------
+
+.. image:: img/neural-proposals.png
