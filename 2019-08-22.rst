@@ -158,8 +158,7 @@ Twitter
 -------
 
 .. image:: img/tvaneerd-try-catch-opt.png
-   :width: 1242
-   :scale: 30%
+   :width: 90%
    :align: center
 
 Twitter: Neural Proposals
