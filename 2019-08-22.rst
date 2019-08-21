@@ -107,17 +107,40 @@ https://github.com/vectorclass/version2 (Apache 2.0)
 
 Manual https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf
 
-Approval tests
---------------
+Approval tests (1/2)
+--------------------
 
-Also known as **Golden Master Tests** or **Snapshot Testing**
+Also known as **Golden Master Tests** or **Snapshot Testing** (locking down current behaviour)
 
 * CppOnSea 2019 - Clare Macrae - Quickly testing legacy code https://youtu.be/dtm8V3TIB6k
-* CppCast with Clare Macrae https://cppcast.com/clare-macrae/
-  * r/cpp https://www.reddit.com/r/cpp/comments/ckzc11/cppcast_approval_tests_with_clare_macrae/
+  * Slides https://slideshare.net/ClareMacrae
+  * CppCast with Clare Macrae https://cppcast.com/clare-macrae/
+    * r/cpp https://www.reddit.com/r/cpp/comments/ckzc11/cppcast_approval_tests_with_clare_macrae/
 * Code https://github.com/approvals/ApprovalTests.cpp (Apache 2.0)
 * Approval Tests Library - Capturing Human Intelligence [available for Java, C#, VB.Net, PHP, Ruby, Node.JS and Python]
-  https://approvaltests.com/
+  https://approvaltests.com/ by Llevelyn Falco
+  * Supports Catch, Catch 2, Google Test, `Okra <https://github.com/JayBazuzi/Okra>`_
+* Mutation tests: sabotage the code
+  * Mutate++ https://github.com/nlohmann/mutate_cpp
+
+Approval tests (2/2)
+--------------------
+
+Books
+~~~~~
+
+* Modern C++ Programming with Test-Driven Development, by Jeff Langr
+  [`Safari Books Online <https://learning.oreilly.com/library/view/modern-c-programming/9781941222423/>`_]
+* Your Code as a Crime Scene, by Adam Tornhill
+  [`Safari Books Online <https://learning.oreilly.com/library/view/your-code-as/9781680500813/>`_]
+* Software Design X-Rays, by Adam Tornhill
+  [`Safari Books Online <https://learning.oreilly.com/library/view/software-design-x-rays/9781680505795/>`_]
+
+Tools
+~~~~~
+
+* OpenCoverage https://github.com/OpenCppCoverage
+* BullseyeCoverage https://www.bullseye.com
 
 mdspan
 ------
@@ -129,6 +152,15 @@ mdspan
 * Multi-dimensional strided array views in Magnum
   https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/
 * P0009R9 **mdspan**: A Non-Owning Multidimensional Array Reference http://wg21.link/p0009r9
+* CppCast with Bryce Adelstein Lelbach https://cppcast.com/bryce-lelbach-mdspan/
+
+Twitter
+-------
+
+.. image:: img/tvaneerd-try-catch-opt.png
+   :width: 1242
+   :scale: 30%
+   :align: center
 
 Twitter: Neural Proposals
 -------------------------
