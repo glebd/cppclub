@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gleb Dolgich" />
   <meta name="dcterms.date" content="2019-01-10" />
-  <title>C++ Club Meeting Notes</title>
+  <title>C++ Club UK</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -14,9 +14,9 @@
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
   <style>
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -26,14 +26,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -42,9 +44,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -82,7 +84,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">C++ Club Meeting Notes</h1>
+<h1 class="title">C++ Club UK</h1>
 <p class="author">Gleb Dolgich</p>
 <p class="date">2019-01-10</p>
 </header>
@@ -123,27 +125,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Code: <a href="https://github.com/SaadAttieh/lazyCode">https://github.com/SaadAttieh/lazyCode</a></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">int</span> total = lz::read&lt;<span class="dt">int</span>&gt;(ifstream(<span class="st">&quot;test.txt&quot;</span>)) | lz::limit(<span class="dv">10</span>) |</a>
-<a class="sourceLine" id="cb1-2" title="2">            lz::filter([](<span class="dt">int</span> i) { <span class="cf">return</span> i % <span class="dv">2</span> == <span class="dv">0</span>; }) |</a>
-<a class="sourceLine" id="cb1-3" title="3">            lz::map([](<span class="dt">int</span> i) { <span class="cf">return</span> i * i; }) | lz::sum();</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> total = lz::read&lt;<span class="dt">int</span>&gt;(ifstream(<span class="st">&quot;test.txt&quot;</span>)) | lz::limit(<span class="dv">10</span>) |</span>
+<span id="cb1-2"><a href="#cb1-2"></a>            lz::filter([](<span class="dt">int</span> i) { <span class="cf">return</span> i % <span class="dv">2</span> == <span class="dv">0</span>; }) |</span>
+<span id="cb1-3"><a href="#cb1-3"></a>            lz::map([](<span class="dt">int</span> i) { <span class="cf">return</span> i * i; }) | lz::sum();</span></code></pre></div>
 <h1 id="better-enums">Better Enums</h1>
 <ul>
 <li>Docs: <a href="https://aantron.github.io/better-enums/index.html">https://aantron.github.io/better-enums/index.html</a></li>
 <li>Code: <a href="https://github.com/aantron/better-enums">https://github.com/aantron/better-enums</a></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="pp">#include </span><span class="im">&quot;enum.h&quot;</span></a>
-<a class="sourceLine" id="cb2-3" title="3"></a>
-<a class="sourceLine" id="cb2-4" title="4">BETTER_ENUM(Word, <span class="dt">int</span>, Hello, World)</a>
-<a class="sourceLine" id="cb2-5" title="5"></a>
-<a class="sourceLine" id="cb2-6" title="6"><span class="dt">int</span> main()</a>
-<a class="sourceLine" id="cb2-7" title="7">{</a>
-<a class="sourceLine" id="cb2-8" title="8">    <span class="bu">std::</span>cout &lt;&lt; (+Word::Hello)._to_string() &lt;&lt; <span class="st">&quot;, &quot;</span></a>
-<a class="sourceLine" id="cb2-9" title="9">              &lt;&lt; (+Word::World)._to_string() &lt;&lt; <span class="st">&quot;!&quot;</span></a>
-<a class="sourceLine" id="cb2-10" title="10">              &lt;&lt; <span class="bu">std::</span>endl;</a>
-<a class="sourceLine" id="cb2-11" title="11"></a>
-<a class="sourceLine" id="cb2-12" title="12">    <span class="cf">return</span> <span class="dv">0</span>;</a>
-<a class="sourceLine" id="cb2-13" title="13">}</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="pp">#include </span><span class="im">&quot;enum.h&quot;</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>BETTER_ENUM(Word, <span class="dt">int</span>, Hello, World)</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="dt">int</span> main()</span>
+<span id="cb2-7"><a href="#cb2-7"></a>{</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="bu">std::</span>cout &lt;&lt; (+Word::Hello)._to_string() &lt;&lt; <span class="st">&quot;, &quot;</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>              &lt;&lt; (+Word::World)._to_string() &lt;&lt; <span class="st">&quot;!&quot;</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>              &lt;&lt; <span class="bu">std::</span>endl;</span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="cf">return</span> <span class="dv">0</span>;</span>
+<span id="cb2-13"><a href="#cb2-13"></a>}</span></code></pre></div>
 <h1 id="how-to-refurbish-legacy-code-into-a-maintainable-state">How to refurbish legacy code into a maintainable state</h1>
 <p><a href="http://nullptr.nl/2018/08/refurbish-legacy-code/">How to refurbish legacy code into a maintainable state</a> by Jan Wilmans</p>
 <ul>
@@ -173,15 +175,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="http://reedbeta.com/blog/python-like-enumerate-in-cpp17/">Python-Like enumerate() In C++17</a> by Nathan Reed</li>
 </ul>
 <p>Python:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="cf">for</span> i, thing <span class="kw">in</span> <span class="bu">enumerate</span>(listOfThings):</a>
-<a class="sourceLine" id="cb3-2" title="2">    <span class="bu">print</span>(<span class="st">&quot;The </span><span class="sc">%d</span><span class="st">th thing is </span><span class="sc">%s</span><span class="st">&quot;</span> <span class="op">%</span> (i, thing))</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="cf">for</span> i, thing <span class="kw">in</span> <span class="bu">enumerate</span>(listOfThings):</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="bu">print</span>(<span class="st">&quot;The </span><span class="sc">%d</span><span class="st">th thing is </span><span class="sc">%s</span><span class="st">&quot;</span> <span class="op">%</span> (i, thing))</span></code></pre></div>
 <p>C++:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb4-1" title="1"><span class="bu">std::</span>vector&lt;Thing&gt; things;</a>
-<a class="sourceLine" id="cb4-2" title="2">...</a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="cf">for</span> (<span class="kw">auto</span> [i, thing] : enumerate(things))</a>
-<a class="sourceLine" id="cb4-4" title="4">{</a>
-<a class="sourceLine" id="cb4-5" title="5">    <span class="co">// i gets the index and thing gets the Thing in each iteration</span></a>
-<a class="sourceLine" id="cb4-6" title="6">}</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">std::</span>vector&lt;Thing&gt; things;</span>
+<span id="cb4-2"><a href="#cb4-2"></a>...</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="cf">for</span> (<span class="kw">auto</span> [i, thing] : enumerate(things))</span>
+<span id="cb4-4"><a href="#cb4-4"></a>{</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="co">// i gets the index and thing gets the Thing in each iteration</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>}</span></code></pre></div>
 <ul>
 <li><a href="https://www.boost.org/doc/libs/1_69_0/libs/iterator/doc/counting_iterator.html">Boost Counting Iterator</a></li>
 </ul>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gleb Dolgich" />
   <meta name="dcterms.date" content="2019-03-07" />
-  <title>C++ Club Meeting Notes</title>
+  <title>C++ Club UK</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -14,9 +14,9 @@
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
   <style>
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -26,14 +26,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -42,9 +44,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -82,7 +84,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">C++ Club Meeting Notes</h1>
+<h1 class="title">C++ Club UK</h1>
 <p class="author">Gleb Dolgich</p>
 <p class="date">2019-03-07</p>
 </header>
@@ -139,11 +141,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote>
 <p><code>std::move_iterator</code> is an iterator adaptor which behaves exactly like the underlying iterator, except that dereferencing converts the value returned by the underlying iterator into an <em>rvalue</em>. (<a href="https://en.cppreference.com/w/cpp/iterator/move_iterator">https://en.cppreference.com/w/cpp/iterator/move_iterator</a>)</p>
 </blockquote>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">std::</span>vector&lt;fs::directory_entry&gt; results;</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="kw">auto</span> dir_items = files_in_dir(...);</a>
-<a class="sourceLine" id="cb1-3" title="3">results.insert(results.end(), dir_items.cbegin(), dir_items.cend());</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">std::</span>vector&lt;fs::directory_entry&gt; results;</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">auto</span> dir_items = files_in_dir(...);</span>
+<span id="cb1-3"><a href="#cb1-3"></a>results.insert(results.end(), dir_items.cbegin(), dir_items.cend());</span></code></pre></div>
 <p>Alternatively (see <a href="https://en.cppreference.com/w/cpp/algorithm/move">https://en.cppreference.com/w/cpp/algorithm/move</a>):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1"><span class="bu">std::</span>move(dir_items.begin(), dir_items.end(), <span class="bu">std::</span>back_inserter(results));</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">std::</span>move(dir_items.begin(), dir_items.end(), <span class="bu">std::</span>back_inserter(results));</span></code></pre></div>
 <h1 id="low-cost-deterministic-c-exceptions-for-embedded-systems">Low-cost Deterministic C++ Exceptions for Embedded Systems</h1>
 <p><a href="https://www.research.ed.ac.uk/portal/files/78829292/low_cost_deterministic_C_exceptions_for_embedded_systems.pdf">https://www.research.ed.ac.uk/portal/files/78829292/low_cost_deterministic_C_exceptions_for_embedded_systems.pdf</a></p>
 <p>James Renwick, Tom Spink, Björn Franke (University of Edinburgh)</p>
@@ -161,7 +163,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="dont-use-stdendl">Don’t Use <code>std::endl</code></h1>
 <p><a href="https://accu.org/index.php/journals/2619">https://accu.org/index.php/journals/2619</a></p>
 <h1 id="eventual-consistency">Eventual consistency</h1>
-<p><img src="img/eventual-consistency.png" alt="image" width="288" height="278" /></p>
+<p><img src="img/eventual-consistency.png" width="288" height="278" alt="image" /></p>
 <h1 id="twitter">Twitter</h1>
 <p><img src="img/cpp-grey-hair.png" alt="image" /></p>
 </body>
