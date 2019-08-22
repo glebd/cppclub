@@ -1,5 +1,51 @@
 ----
 
+Post-Cologne Mailing
+--------------------
+
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-08
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/crg1dr/c_standards_committee_papers_201908_postcologne/>`_
+
+Arthur O'Dwyer https://quuxplusone.github.io/blog/2019/08/18/post-cologne-mailing/
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/cs5qmf/the_postcologne_mailing_is_out/>`_
+
+Rust vs. C++
+------------
+
+Reddit: `Is the C++ committee or any key influencers in the C++ community working on anything to tackle the advantages that Rust
+has over C++ (eg. Rust's borrow checking, compiler-checked concurrency safety and cargo package management)
+<https://www.reddit.com/r/cpp/comments/crh7lh/is_the_c_committee_or_any_key_influencers_in_the/>`_
+
+Vcpkg: 2019.07 Update
+---------------------
+
+https://devblogs.microsoft.com/cppblog/vcpkg-2019-07-update/
+
+https://www.reddit.com/r/cpp/comments/cqta79/vcpkg_201907_update/
+
+  Hopefully you will not require specific versions of packages, as the workflow of vcpkg doesn't really support the
+  (very common) scenario well.
+
+Lambdas vs. Closures
+--------------------
+
+`Scott Meyers <http://scottmeyers.blogspot.com/2013/05/lambdas-vs-closures.html>`_
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/cqo05i/lambdas_vs_closures_scott_meyers/>`_
+
+Web Framework Benchmarks
+------------------------
+
+https://www.techempower.com/benchmarks/#section=test&runid=26a79c95-5eec-4572-8c94-dd710df659d7&hw=ph&test=update
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/csa0sg/drogonc17_becomes_one_of_the_fastest_web/>`_
+
+https://github.com/an-tao/drogon
+
+**Drogon**: A C++14/17 based HTTP web application framework running on Linux/macOS/Unix
+
 Introducing the Rule of DesDeMovA (1/4)
 ---------------------------------------
 
@@ -53,7 +99,7 @@ Elements C++ GUI library
 
 https://www.cycfi.com/2019/07/photon-micro-gui/
 
-https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/
+* `Reddit <https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/>`_
 
 C++ libraries for data visualization
 ------------------------------------
@@ -69,14 +115,14 @@ CppCast - CMake and VTK with Robert Maynard
 
 http://cppcast.com/2019/07/robert-maynard/
 
-https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/
+* `Reddit <https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/>`_
 
 CMake line by line - creating a header-only library
 ---------------------------------------------------
 
 http://dominikberner.ch/cmake-interface-lib/
 
-https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/
+* `Reddit <https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/>`_
 
 https://github.com/bernedom/SI
 
@@ -85,7 +131,7 @@ Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/p
 OSes built using C++
 --------------------
 
-https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
+`Reddit <https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/>`_
 
 * `TempleOS <https://github.com/DivineSystems/DivineOS>`_
 * `Haiku <https://www.haiku-os.org/>`_
@@ -153,6 +199,11 @@ mdspan
   https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/
 * P0009R9 **mdspan**: A Non-Owning Multidimensional Array Reference http://wg21.link/p0009r9
 * CppCast with Bryce Adelstein Lelbach https://cppcast.com/bryce-lelbach-mdspan/
+
+Clang Build Analyzer
+--------------------
+
+https://github.com/aras-p/ClangBuildAnalyzer
 
 Twitter
 -------
