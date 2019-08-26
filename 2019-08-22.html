@@ -106,6 +106,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote>
 <p>Hopefully you will not require specific versions of packages, as the workflow of vcpkg doesn't really support the (very common) scenario well.</p>
 </blockquote>
+<h1 id="boost-1.71-released">Boost 1.71 released</h1>
+<p><a href="https://www.boost.org/users/history/version_1_71_0.html">https://www.boost.org/users/history/version_1_71_0.html</a></p>
+<ul>
+<li>NEW: <strong>Variant2</strong>: A never-valueless, strong guarantee implementation of <code>std::variant</code>, from Peter Dimov.</li>
+<li><a href="https://www.reddit.com/r/cpp/comments/csj2ql/boost_version_1710/">Reddit</a></li>
+</ul>
 <h1 id="lambdas-vs.-closures">Lambdas vs. Closures</h1>
 <p><a href="http://scottmeyers.blogspot.com/2013/05/lambdas-vs-closures.html">Scott Meyers</a></p>
 <ul>
@@ -118,6 +124,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><a href="https://github.com/an-tao/drogon">https://github.com/an-tao/drogon</a></p>
 <p><strong>Drogon</strong>: A C++14/17 based HTTP web application framework running on Linux/macOS/Unix</p>
+<h1 id="unified-function-call">Unified function call</h1>
+<h2 id="barry-revzin">Barry Revzin</h2>
+<ul>
+<li><a href="https://brevzin.github.io/c++/2019/04/13/ufcs-history/">What is unified function call syntax anyway?</a>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/">Reddit</a></li>
+</ul></li>
+<li><a href="https://brevzin.github.io/c++/2019/08/22/ufcs-custom-extension/">UFCS Customization and Extension</a>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/ctykwd/ufcs_customization_and_extension/">Reddit</a></li>
+<li><a href="http://wg21.link/p1282">P1282R0 Ceci N’est Pas Une Pipe: Adding a workflow operator to C++</a></li>
+</ul></li>
+</ul>
+<h1 id="unified-function-call-1">Unified function call</h1>
+<h2 id="bjarne-stroustrup">Bjarne Stroustrup</h2>
+<ul>
+<li><p><a href="https://isocpp.org/blog/2016/02/a-bit-of-background-for-the-unified-call-proposal">A bit of background for the unified call proposal</a></p>
+<p>Based on real input from code and users, I reluctantly agreed that for compatibility reasons, x.f(y) and f(x,y) could not mean exactly the same. The only feasible way forward was to do a traditional lookup based on the syntax used, and then try the other syntax if the first one failed. Stability – backwards compatibility – is an important feature, overruling my desire for perfection.</p></li>
+<li><p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0131r0.pdf">P0131 Unified call syntax concerns</a></p></li>
+</ul>
 <h1 id="introducing-the-rule-of-desdemova-14">Introducing the Rule of DesDeMovA (1/4)</h1>
 <p>Blog post by Peter Sommerlad</p>
 <p><a href="https://blog.safecpp.com/2019/07/01/initial.html">https://blog.safecpp.com/2019/07/01/initial.html</a></p>

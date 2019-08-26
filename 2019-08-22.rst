@@ -1,7 +1,7 @@
 ----
 
 Post-Cologne Mailing
---------------------
+====================
 
 http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-08
 
@@ -12,14 +12,14 @@ Arthur O'Dwyer https://quuxplusone.github.io/blog/2019/08/18/post-cologne-mailin
 * `Reddit <https://www.reddit.com/r/cpp/comments/cs5qmf/the_postcologne_mailing_is_out/>`_
 
 Rust vs. C++
-------------
+============
 
 Reddit: `Is the C++ committee or any key influencers in the C++ community working on anything to tackle the advantages that Rust
 has over C++ (eg. Rust's borrow checking, compiler-checked concurrency safety and cargo package management)
 <https://www.reddit.com/r/cpp/comments/crh7lh/is_the_c_committee_or_any_key_influencers_in_the/>`_
 
 Vcpkg: 2019.07 Update
----------------------
+=====================
 
 https://devblogs.microsoft.com/cppblog/vcpkg-2019-07-update/
 
@@ -28,15 +28,24 @@ https://www.reddit.com/r/cpp/comments/cqta79/vcpkg_201907_update/
   Hopefully you will not require specific versions of packages, as the workflow of vcpkg doesn't really support the
   (very common) scenario well.
 
+Boost 1.71 released
+===================
+
+https://www.boost.org/users/history/version_1_71_0.html
+
+* NEW: **Variant2**: A never-valueless, strong guarantee implementation of ``std::variant``, from
+  Peter Dimov.
+* `Reddit <https://www.reddit.com/r/cpp/comments/csj2ql/boost_version_1710/>`_
+
 Lambdas vs. Closures
---------------------
+====================
 
 `Scott Meyers <http://scottmeyers.blogspot.com/2013/05/lambdas-vs-closures.html>`_
 
 * `Reddit <https://www.reddit.com/r/cpp/comments/cqo05i/lambdas_vs_closures_scott_meyers/>`_
 
 Web Framework Benchmarks
-------------------------
+========================
 
 https://www.techempower.com/benchmarks/#section=test&runid=26a79c95-5eec-4572-8c94-dd710df659d7&hw=ph&test=update
 
@@ -46,8 +55,38 @@ https://github.com/an-tao/drogon
 
 **Drogon**: A C++14/17 based HTTP web application framework running on Linux/macOS/Unix
 
+Unified function call
+=====================
+
+Barry Revzin
+------------
+
+* `What is unified function call syntax anyway? <https://brevzin.github.io/c++/2019/04/13/ufcs-history/>`_
+  * `Reddit <https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/>`_
+* `UFCS Customization and Extension <https://brevzin.github.io/c++/2019/08/22/ufcs-custom-extension/>`_
+  * `Reddit <https://www.reddit.com/r/cpp/comments/ctykwd/ufcs_customization_and_extension/>`_
+  * `P1282R0 Ceci N’est Pas Une Pipe: Adding a workflow operator to C++ <http://wg21.link/p1282>`_
+
+Unified function call
+=====================
+
+Bjarne Stroustrup
+-----------------
+
+* `A bit of background for the unified call proposal
+  <https://isocpp.org/blog/2016/02/a-bit-of-background-for-the-unified-call-proposal>`_
+
+  Based on real input from code and users, I reluctantly agreed that for compatibility reasons,
+  x.f(y) and f(x,y) could not mean exactly the same. The only feasible way forward was to do a
+  traditional lookup based on the syntax used, and then try the other syntax if the first one
+  failed. Stability – backwards compatibility – is an important feature, overruling my desire for
+  perfection.
+
+* `P0131 Unified call syntax concerns
+  <http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0131r0.pdf>`_
+
 Introducing the Rule of DesDeMovA (1/4)
----------------------------------------
+=======================================
 
 Blog post by Peter Sommerlad
 
@@ -60,22 +99,22 @@ Rule of Zero:
     Code that you do not write cannot be wrong.
 
 Introducing the Rule of DesDeMovA (2/4)
----------------------------------------
+=======================================
 
 .. image:: img/sommerlad-desdemova1.png
 
 Introducing the Rule of DesDeMovA (3/4)
----------------------------------------
+=======================================
 
 .. image:: img/sommerlad-desdemova2.png
 
 Introducing the Rule of DesDeMovA (3/4)
----------------------------------------
+=======================================
 
 .. image:: img/sommerlad-desdemova3.png
 
 **strong_typedef** - Create distinct types for distinct purposes
-----------------------------------------------------------------
+================================================================
 
 Article by Anthony Williams
 
@@ -95,14 +134,14 @@ https://github.com/anthonywilliams/strong_typedef
   }
 
 Elements C++ GUI library
-------------------------
+========================
 
 https://www.cycfi.com/2019/07/photon-micro-gui/
 
 * `Reddit <https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/>`_
 
 C++ libraries for data visualization
-------------------------------------
+====================================
 
 * VTK https://vtk.org/
 * ROOT https://root.cern.ch/
@@ -111,14 +150,14 @@ C++ libraries for data visualization
 * QCustomPlot (QT, GPL/commercial) https://www.qcustomplot.com/
 
 CppCast - CMake and VTK with Robert Maynard
--------------------------------------------
+===========================================
 
 http://cppcast.com/2019/07/robert-maynard/
 
 * `Reddit <https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/>`_
 
 CMake line by line - creating a header-only library
----------------------------------------------------
+===================================================
 
 http://dominikberner.ch/cmake-interface-lib/
 
@@ -129,7 +168,7 @@ https://github.com/bernedom/SI
 Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
 
 OSes built using C++
---------------------
+====================
 
 `Reddit <https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/>`_
 
@@ -142,7 +181,7 @@ OSes built using C++
 * `SerenityOS <https://github.com/SerenityOS/serenity>`_
 
 Agner Vector Class Library V2
------------------------------
+=============================
 
 This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern
 microprocessors.
@@ -154,7 +193,7 @@ https://github.com/vectorclass/version2 (Apache 2.0)
 Manual https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf
 
 Approval tests (1/2)
---------------------
+====================
 
 Also known as **Golden Master Tests** or **Snapshot Testing** (locking down current behaviour)
 
@@ -170,10 +209,10 @@ Also known as **Golden Master Tests** or **Snapshot Testing** (locking down curr
   * Mutate++ https://github.com/nlohmann/mutate_cpp
 
 Approval tests (2/2)
---------------------
+====================
 
 Books
-~~~~~
+-----
 
 * Modern C++ Programming with Test-Driven Development, by Jeff Langr
   [`Safari Books Online <https://learning.oreilly.com/library/view/modern-c-programming/9781941222423/>`_]
@@ -183,13 +222,13 @@ Books
   [`Safari Books Online <https://learning.oreilly.com/library/view/software-design-x-rays/9781680505795/>`_]
 
 Tools
-~~~~~
+-----
 
 * OpenCoverage https://github.com/OpenCppCoverage
 * BullseyeCoverage https://www.bullseye.com
 
 mdspan
-------
+======
 
 * Implementation https://github.com/kokkos/mdspan (BSD 3-Clause)
   * Intro https://github.com/kokkos/mdspan/wiki/A-Gentle-Introduction-to-mdspan
@@ -201,18 +240,18 @@ mdspan
 * CppCast with Bryce Adelstein Lelbach https://cppcast.com/bryce-lelbach-mdspan/
 
 Clang Build Analyzer
---------------------
+====================
 
 https://github.com/aras-p/ClangBuildAnalyzer
 
 Twitter
--------
+=======
 
 .. image:: img/tvaneerd-try-catch-opt.png
    :width: 90%
    :align: center
 
 Twitter: Neural Proposals
--------------------------
+=========================
 
 .. image:: img/neural-proposals.png

@@ -311,12 +311,6 @@ The Knightmare of Initialization in C++
 
 https://quuxplusone.github.io/blog/2019/02/18/knightmare-of-initialization/
 
-What is unified function call syntax anyway?
---------------------------------------------
-
-* https://brevzin.github.io/c++/2019/04/13/ufcs-history/
-* https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/
-
 Here’s my number; call me, maybe. Callbacks in a multithreaded world - Anthony Williams [ACCU 2019]
 ---------------------------------------------------------------------------------------------------
 
