@@ -244,6 +244,37 @@ Clang Build Analyzer
 
 https://github.com/aras-p/ClangBuildAnalyzer
 
+Dropbox abandons C++, uses Swift, Kotlin, JavaScript and Electron instead
+=========================================================================
+
+* `Eyal Guthmann (Dropbox): The (not so) hidden cost of sharing code between iOS and Android
+  <https://blogs.dropbox.com/tech/2019/08/the-not-so-hidden-cost-of-sharing-code-between-ios-and-android/>`_
+
+  It’s possible we could have done a better job at leveraging open source C++ libraries, but the
+  open source culture in the C++ development community was (is still?) not as strong as it is in the
+  mobile development community <...>
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/cqft4t/dropbox_replaces_c_with_platformspecific_languages/>`_
+* `HackerNews <https://news.ycombinator.com/item?id=20695806>`_
+
+  It seems like the real issue was that Dropbox lost all of their senior C++ engineers.
+
+* `The Register: Dropbox would rather write code twice than try to make C++ work on both iOS and
+  Android <https://www.theregister.co.uk/2019/08/16/dropbox_gives_up_on_sharing_c_code_between_ios_and_android/>`_
+  * `Reddit <https://www.reddit.com/r/programming/comments/crunfh/dropbox_would_rather_write_code_twice_than_try_to/>`_
+
+Dropbox abandons C++, uses Swift, Kotlin, JavaScript and Electron instead
+=========================================================================
+
+Previously
+----------
+
+* `Djinni <https://github.com/dropbox/djinni>`_
+* `CppCon 2014: Alex Allain & Andrew Twyman "Practical Cross-Platform Mobile C++ Development
+  <https://www.youtube.com/watch?v=ZcBtF-JWJhM>`_
+* `CppCon 2017: Stephen Spann “Cross-Platform Apps with Dropbox’s Djinni...”
+  <https://www.youtube.com/watch?v=ssqhz_1pPI4>`_
+
 Twitter
 =======
 
