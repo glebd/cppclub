@@ -73,8 +73,8 @@ Unified function call
 Bjarne Stroustrup
 -----------------
 
-* `A bit of background for the unified call proposal
-  <https://isocpp.org/blog/2016/02/a-bit-of-background-for-the-unified-call-proposal>`_
+`A bit of background for the unified call proposal
+<https://isocpp.org/blog/2016/02/a-bit-of-background-for-the-unified-call-proposal>`_
 
   Based on real input from code and users, I reluctantly agreed that for compatibility reasons,
   x.f(y) and f(x,y) could not mean exactly the same. The only feasible way forward was to do a
@@ -82,8 +82,8 @@ Bjarne Stroustrup
   failed. Stability – backwards compatibility – is an important feature, overruling my desire for
   perfection.
 
-* `P0131 Unified call syntax concerns
-  <http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0131r0.pdf>`_
+`P0131 Unified call syntax concerns
+<http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0131r0.pdf>`_
 
 Introducing the Rule of DesDeMovA (1/4)
 =======================================
@@ -250,14 +250,14 @@ Dropbox abandons C++, uses Swift, Kotlin, JavaScript and Electron instead
 * `Eyal Guthmann (Dropbox): The (not so) hidden cost of sharing code between iOS and Android
   <https://blogs.dropbox.com/tech/2019/08/the-not-so-hidden-cost-of-sharing-code-between-ios-and-android/>`_
 
-  It’s possible we could have done a better job at leveraging open source C++ libraries, but the
-  open source culture in the C++ development community was (is still?) not as strong as it is in the
-  mobile development community <...>
+    It’s possible we could have done a better job at leveraging open source C++ libraries, but the
+    open source culture in the C++ development community was (is still?) not as strong as it is in
+    the mobile development community <...>
 
 * `Reddit <https://www.reddit.com/r/cpp/comments/cqft4t/dropbox_replaces_c_with_platformspecific_languages/>`_
 * `HackerNews <https://news.ycombinator.com/item?id=20695806>`_
 
-  It seems like the real issue was that Dropbox lost all of their senior C++ engineers.
+    It seems like the real issue was that Dropbox lost all of their senior C++ engineers.
 
 * `The Register: Dropbox would rather write code twice than try to make C++ work on both iOS and
   Android <https://www.theregister.co.uk/2019/08/16/dropbox_gives_up_on_sharing_c_code_between_ios_and_android/>`_
@@ -280,9 +280,14 @@ Twitter
 
 .. image:: img/tvaneerd-try-catch-opt.png
    :width: 90%
-   :align: center
 
 Twitter: Neural Proposals
 =========================
 
 .. image:: img/neural-proposals.png
+
+Twitter: Generic cup
+====================
+
+.. image:: img/generic-cup.png
+   :width: 70%
