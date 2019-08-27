@@ -275,6 +275,15 @@ Previously
 * `CppCon 2017: Stephen Spann “Cross-Platform Apps with Dropbox’s Djinni...”
   <https://www.youtube.com/watch?v=ssqhz_1pPI4>`_
 
+Machine Learning with CPP
+=========================
+
+https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/
+
+* PyTorch https://pytorch.org/features -- has a pure C++ front end https://pytorch.org/cppdocs/
+* TensorFlow for C++ https://www.tensorflow.org/api_docs/cc
+* Shogun https://www.shogun.ml/
+
 Twitter
 =======
 
@@ -291,3 +300,8 @@ Twitter: Generic cup
 
 .. image:: img/generic-cup.png
    :width: 70%
+
+Twitter: Electronics
+====================
+
+.. image:: img/electronics.png
