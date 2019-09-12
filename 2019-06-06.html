@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gleb Dolgich" />
   <meta name="dcterms.date" content="2019-06-06" />
-  <title>C++ Club Meeting Notes</title>
+  <title>C++ Club UK</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -14,9 +14,9 @@
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
   <style>
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -26,14 +26,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -42,9 +44,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -82,7 +84,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">C++ Club Meeting Notes</h1>
+<h1 class="title">C++ Club UK</h1>
 <p class="author">Gleb Dolgich</p>
 <p class="date">2019-06-06</p>
 </header>
@@ -150,18 +152,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <h1 id="function-poisoning-in-c">Function Poisoning in C++</h1>
 <p><a href="https://www.fluentcpp.com/2018/09/04/function-poisoning-in-cpp/">https://www.fluentcpp.com/2018/09/04/function-poisoning-in-cpp/</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="pp">#pragma GCC poison puts</span></a>
-<a class="sourceLine" id="cb1-3" title="3"></a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="dt">int</span> main() {</a>
-<a class="sourceLine" id="cb1-5" title="5">    puts(<span class="st">&quot;a&quot;</span>);</a>
-<a class="sourceLine" id="cb1-6" title="6">}</a>
-<a class="sourceLine" id="cb1-7" title="7"></a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="co">// error: attempt to use poisoned &quot;puts&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="pp">#pragma GCC poison puts</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="dt">int</span> main() {</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    puts(<span class="st">&quot;a&quot;</span>);</span>
+<span id="cb1-6"><a href="#cb1-6"></a>}</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">// error: attempt to use poisoned &quot;puts&quot;</span></span></code></pre></div>
 <h1 id="deprecating-and-deleting-functions-in-c">Deprecating and Deleting Functions in C++</h1>
 <p><a href="https://www.fluentcpp.com/2018/11/20/deprecating-and-deleting-functions-in-cpp/">https://www.fluentcpp.com/2018/11/20/deprecating-and-deleting-functions-in-cpp/</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><a class="sourceLine" id="cb2-1" title="1">[[<span class="at">deprecated</span>(<span class="st">&quot;Replaced by fillmem, which has an improved interface&quot;</span>)]]</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="dt">void</span>* memset(<span class="dt">void</span>*, <span class="dt">int</span>, <span class="dt">size_t</span>);</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a>[[<span class="at">deprecated</span>(<span class="st">&quot;Replaced by fillmem, which has an improved interface&quot;</span>)]]</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="dt">void</span>* memset(<span class="dt">void</span>*, <span class="dt">int</span>, <span class="dt">size_t</span>);</span></code></pre></div>
 <h1 id="clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake">Clear, Functional C++ Documentation with Sphinx + Breathe + Doxygen + CMake</h1>
 <p><a href="https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/">https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/</a></p>
 <h2 id="see-also-1">See also</h2>

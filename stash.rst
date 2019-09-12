@@ -311,12 +311,6 @@ The Knightmare of Initialization in C++
 
 https://quuxplusone.github.io/blog/2019/02/18/knightmare-of-initialization/
 
-What is unified function call syntax anyway?
---------------------------------------------
-
-* https://brevzin.github.io/c++/2019/04/13/ufcs-history/
-* https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/
-
 Here’s my number; call me, maybe. Callbacks in a multithreaded world - Anthony Williams [ACCU 2019]
 ---------------------------------------------------------------------------------------------------
 
@@ -367,36 +361,114 @@ AnyDuck : A Value Type Erased Type
 
 Steve Downey: https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/
 
-Introducing the Rule of DesDeMovA (1/4)
----------------------------------------
+Dropbox abandons C++, uses Swift, Kotlin, JavaScript and Electron instead
+=========================================================================
 
-Blog post by Peter Sommerlad
+* `Eyal Guthmann (Dropbox): The (not so) hidden cost of sharing code between iOS and Android
+  <https://blogs.dropbox.com/tech/2019/08/the-not-so-hidden-cost-of-sharing-code-between-ios-and-android/>`_
 
-https://blog.safecpp.com/2019/07/01/initial.html
+    It’s possible we could have done a better job at leveraging open source C++ libraries, but the
+    open source culture in the C++ development community was (is still?) not as strong as it is in
+    the mobile development community <...>
 
-https://accu.org/content/conf2014/Howard_Hinnant_Accu_2014.pdf
+* `Reddit <https://www.reddit.com/r/cpp/comments/cqft4t/dropbox_replaces_c_with_platformspecific_languages/>`_
+* `HackerNews <https://news.ycombinator.com/item?id=20695806>`_
 
-Rule of Zero:
+    It seems like the real issue was that Dropbox lost all of their senior C++ engineers.
 
-    Code that you do not write cannot be wrong.
+* `The Register: Dropbox would rather write code twice than try to make C++ work on both iOS and
+  Android <https://www.theregister.co.uk/2019/08/16/dropbox_gives_up_on_sharing_c_code_between_ios_and_android/>`_
+  * `Reddit <https://www.reddit.com/r/programming/comments/crunfh/dropbox_would_rather_write_code_twice_than_try_to/>`_
 
-Introducing the Rule of DesDeMovA (2/4)
----------------------------------------
+Dropbox abandons C++, uses Swift, Kotlin, JavaScript and Electron instead
+=========================================================================
 
-.. image:: img/sommerlad-desdemova1.png
+Previously
+----------
 
-Introducing the Rule of DesDeMovA (3/4)
----------------------------------------
+* `Djinni <https://github.com/dropbox/djinni>`_
+* `CppCon 2014: Alex Allain & Andrew Twyman "Practical Cross-Platform Mobile C++ Development
+  <https://www.youtube.com/watch?v=ZcBtF-JWJhM>`_
+* `CppCon 2017: Stephen Spann “Cross-Platform Apps with Dropbox’s Djinni...”
+  <https://www.youtube.com/watch?v=ssqhz_1pPI4>`_
 
-.. image:: img/sommerlad-desdemova2.png
+Unified function call
+=====================
 
-Introducing the Rule of DesDeMovA (3/4)
----------------------------------------
+Barry Revzin
+------------
 
-.. image:: img/sommerlad-desdemova3.png
+* `What is unified function call syntax anyway? <https://brevzin.github.io/c++/2019/04/13/ufcs-history/>`_
+  * `Reddit <https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/>`_
+* `UFCS Customization and Extension <https://brevzin.github.io/c++/2019/08/22/ufcs-custom-extension/>`_
+  * `Reddit <https://www.reddit.com/r/cpp/comments/ctykwd/ufcs_customization_and_extension/>`_
+  * `P1282R0 Ceci N’est Pas Une Pipe: Adding a workflow operator to C++ <http://wg21.link/p1282>`_
+
+Unified function call
+=====================
+
+Bjarne Stroustrup
+-----------------
+
+`A bit of background for the unified call proposal
+<https://isocpp.org/blog/2016/02/a-bit-of-background-for-the-unified-call-proposal>`_
+
+  Based on real input from code and users, I reluctantly agreed that for compatibility reasons,
+  x.f(y) and f(x,y) could not mean exactly the same. The only feasible way forward was to do a
+  traditional lookup based on the syntax used, and then try the other syntax if the first one
+  failed. Stability – backwards compatibility – is an important feature, overruling my desire for
+  perfection.
+
+`P0131 Unified call syntax concerns
+<http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0131r0.pdf>`_
+
+Approval tests (1/2)
+====================
+
+Also known as **Golden Master Tests** or **Snapshot Testing** (locking down current behaviour)
+
+* CppOnSea 2019 - Clare Macrae - Quickly testing legacy code https://youtu.be/dtm8V3TIB6k
+  * Slides https://slideshare.net/ClareMacrae
+  * CppCast with Clare Macrae https://cppcast.com/clare-macrae/
+    * r/cpp https://www.reddit.com/r/cpp/comments/ckzc11/cppcast_approval_tests_with_clare_macrae/
+* Code https://github.com/approvals/ApprovalTests.cpp (Apache 2.0)
+* Approval Tests Library - Capturing Human Intelligence [available for Java, C#, VB.Net, PHP, Ruby, Node.JS and Python]
+  https://approvaltests.com/ by Llevelyn Falco
+  * Supports Catch, Catch 2, Google Test, `Okra <https://github.com/JayBazuzi/Okra>`_
+* Mutation tests: sabotage the code
+  * Mutate++ https://github.com/nlohmann/mutate_cpp
+
+Approval tests (2/2)
+====================
+
+Books
+-----
+
+* Modern C++ Programming with Test-Driven Development, by Jeff Langr
+  [`Safari Books Online <https://learning.oreilly.com/library/view/modern-c-programming/9781941222423/>`_]
+* Your Code as a Crime Scene, by Adam Tornhill
+  [`Safari Books Online <https://learning.oreilly.com/library/view/your-code-as/9781680500813/>`_]
+* Software Design X-Rays, by Adam Tornhill
+  [`Safari Books Online <https://learning.oreilly.com/library/view/software-design-x-rays/9781680505795/>`_]
+
+Tools
+-----
+
+* OpenCoverage https://github.com/OpenCppCoverage
+* BullseyeCoverage https://www.bullseye.com
+
+A new SQLite C++ wrapper
+========================
+
+https://blog.trailofbits.com/2019/08/26/wrappers-delight/
+
+https://www.reddit.com/r/cpp/comments/cxxk4b/a_new_c_sqlite_wrapper/
+
+The Reddit thread also includes a heated discussion on how to handle errors and if exceptions are a
+good thing (eyeroll).
 
 **strong_typedef** - Create distinct types for distinct purposes
-----------------------------------------------------------------
+================================================================
 
 Article by Anthony Williams
 
@@ -416,14 +488,14 @@ https://github.com/anthonywilliams/strong_typedef
   }
 
 Elements C++ GUI library
-------------------------
+========================
 
 https://www.cycfi.com/2019/07/photon-micro-gui/
 
-https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/
+* `Reddit <https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/>`_
 
-Are there any good C++ libraries for data visualization?
---------------------------------------------------------
+C++ libraries for data visualization
+====================================
 
 * VTK https://vtk.org/
 * ROOT https://root.cern.ch/
@@ -432,44 +504,81 @@ Are there any good C++ libraries for data visualization?
 * QCustomPlot (QT, GPL/commercial) https://www.qcustomplot.com/
 
 CppCast - CMake and VTK with Robert Maynard
--------------------------------------------
+===========================================
 
 http://cppcast.com/2019/07/robert-maynard/
 
-https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/
+* `Reddit <https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/>`_
 
 CMake line by line - creating a header-only library
----------------------------------------------------
+===================================================
 
 http://dominikberner.ch/cmake-interface-lib/
 
-https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/
+* `Reddit <https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/>`_
 
 https://github.com/bernedom/SI
 
 Professional CMake: A Practical Guide, 4th ed., CMake 3.15 https://crascit.com/professional-cmake/ $30
 
-Are there any OSes built using C++
-----------------------------------
-
-https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
-
-* `TempleOS <https://github.com/DivineSystems/DivineOS>`_
-* `Haiku <https://www.haiku-os.org/>`_
-* `Google Fuchsia <https://fuchsia.dev/>`_
-* `IncludeOS <https://www.includeos.org/>`_
-* `DistortOS <http://distortos.org/>`_ (RTOS)
-* `Symbian OS <https://github.com/SymbianSource>`_ (Dead)
-* `SerenityOS <https://github.com/SerenityOS/serenity>`_
-
 Agner Vector Class Library V2
------------------------------
+=============================
 
-This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern
-microprocessors.
+This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in
+modern microprocessors.
 
 https://www.agner.org/optimize/blog/read.php?i=1013
 
 https://github.com/vectorclass/version2 (Apache 2.0)
 
 Manual https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf
+
+mdspan
+======
+
+* Implementation https://github.com/kokkos/mdspan (BSD 3-Clause)
+  * Intro https://github.com/kokkos/mdspan/wiki/A-Gentle-Introduction-to-mdspan
+  * r/cpp https://www.reddit.com/r/cpp/comments/cl127i/mdspan_productionquality_reference_implementation/
+* Kokkos https://github.com/kokkos/kokkos
+* Multi-dimensional strided array views in Magnum
+  https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/
+* P0009R9 **mdspan**: A Non-Owning Multidimensional Array Reference http://wg21.link/p0009r9
+* CppCast with Bryce Adelstein Lelbach https://cppcast.com/bryce-lelbach-mdspan/
+
+Clang Build Analyzer
+====================
+
+https://github.com/aras-p/ClangBuildAnalyzer
+
+Machine Learning with CPP
+=========================
+
+https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/
+
+* PyTorch https://pytorch.org/features -- has a pure C++ front end https://pytorch.org/cppdocs/
+* TensorFlow for C++ https://www.tensorflow.org/api_docs/cc
+* Shogun https://www.shogun.ml/
+
+The sad history of Unicode printf-style format specifiers in Visual C++
+=======================================================================
+
+https://devblogs.microsoft.com/oldnewthing/20190830-00/?p=102823
+
+https://www.reddit.com/r/cpp/comments/cxi2xy/the_sad_history_of_unicode_printfstyle_format/
+
+Twitter
+=======
+
+.. image:: img/tvaneerd-try-catch-opt.png
+   :width: 90%
+
+Twitter: Generic cup
+====================
+
+.. image:: img/generic-cup.png
+   :width: 70%
+
+Twitter: Electronics
+====================
+
+.. image:: img/electronics.png
