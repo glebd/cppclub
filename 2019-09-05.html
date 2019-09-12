@@ -13,71 +13,6 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style>
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -121,29 +56,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>NEW: <strong>Variant2</strong>: A never-valueless, strong guarantee implementation of <code>std::variant</code>, from Peter Dimov.</li>
 <li><a href="https://www.reddit.com/r/cpp/comments/csj2ql/boost_version_1710/">Reddit</a></li>
 </ul>
-<h1 id="dropbox-abandons-c-uses-swift-kotlin-javascript-and-electron-instead">Dropbox abandons C++, uses Swift, Kotlin, JavaScript and Electron instead</h1>
-<ul>
-<li><p><a href="https://blogs.dropbox.com/tech/2019/08/the-not-so-hidden-cost-of-sharing-code-between-ios-and-android/">Eyal Guthmann (Dropbox): The (not so) hidden cost of sharing code between iOS and Android</a></p>
-<blockquote>
-<p>It’s possible we could have done a better job at leveraging open source C++ libraries, but the open source culture in the C++ development community was (is still?) not as strong as it is in the mobile development community &lt;...&gt;</p>
-</blockquote></li>
-<li><p><a href="https://www.reddit.com/r/cpp/comments/cqft4t/dropbox_replaces_c_with_platformspecific_languages/">Reddit</a></p></li>
-<li><p><a href="https://news.ycombinator.com/item?id=20695806">HackerNews</a></p>
-<blockquote>
-<p>It seems like the real issue was that Dropbox lost all of their senior C++ engineers.</p>
-</blockquote></li>
-<li><p><a href="https://www.theregister.co.uk/2019/08/16/dropbox_gives_up_on_sharing_c_code_between_ios_and_android/">The Register: Dropbox would rather write code twice than try to make C++ work on both iOS and Android</a></p>
-<ul>
-<li><a href="https://www.reddit.com/r/programming/comments/crunfh/dropbox_would_rather_write_code_twice_than_try_to/">Reddit</a></li>
-</ul></li>
-</ul>
-<h1 id="dropbox-abandons-c-uses-swift-kotlin-javascript-and-electron-instead-1">Dropbox abandons C++, uses Swift, Kotlin, JavaScript and Electron instead</h1>
-<h2 id="previously">Previously</h2>
-<ul>
-<li><a href="https://github.com/dropbox/djinni">Djinni</a></li>
-<li><a href="https://www.youtube.com/watch?v=ZcBtF-JWJhM">CppCon 2014: Alex Allain &amp; Andrew Twyman "Practical Cross-Platform Mobile C++ Development</a></li>
-<li><a href="https://www.youtube.com/watch?v=ssqhz_1pPI4">CppCon 2017: Stephen Spann “Cross-Platform Apps with Dropbox’s Djinni...”</a></li>
-</ul>
 <h1 id="oses-built-using-c">OSes built using C++</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/">Reddit</a></p>
 <ul>
@@ -167,59 +79,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><a href="https://github.com/an-tao/drogon">https://github.com/an-tao/drogon</a></p>
 <p><strong>Drogon</strong>: A C++14/17 based HTTP web application framework running on Linux/macOS/Unix</p>
-<h1 id="unified-function-call">Unified function call</h1>
-<h2 id="barry-revzin">Barry Revzin</h2>
-<ul>
-<li><a href="https://brevzin.github.io/c++/2019/04/13/ufcs-history/">What is unified function call syntax anyway?</a>
-<ul>
-<li><a href="https://www.reddit.com/r/cpp/comments/bdflpx/what_is_unified_function_call_syntax_anyway/">Reddit</a></li>
-</ul></li>
-<li><a href="https://brevzin.github.io/c++/2019/08/22/ufcs-custom-extension/">UFCS Customization and Extension</a>
-<ul>
-<li><a href="https://www.reddit.com/r/cpp/comments/ctykwd/ufcs_customization_and_extension/">Reddit</a></li>
-<li><a href="http://wg21.link/p1282">P1282R0 Ceci N’est Pas Une Pipe: Adding a workflow operator to C++</a></li>
-</ul></li>
-</ul>
-<h1 id="unified-function-call-1">Unified function call</h1>
-<h2 id="bjarne-stroustrup">Bjarne Stroustrup</h2>
-<p><a href="https://isocpp.org/blog/2016/02/a-bit-of-background-for-the-unified-call-proposal">A bit of background for the unified call proposal</a></p>
-<blockquote>
-<p>Based on real input from code and users, I reluctantly agreed that for compatibility reasons, x.f(y) and f(x,y) could not mean exactly the same. The only feasible way forward was to do a traditional lookup based on the syntax used, and then try the other syntax if the first one failed. Stability – backwards compatibility – is an important feature, overruling my desire for perfection.</p>
-</blockquote>
-<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0131r0.pdf">P0131 Unified call syntax concerns</a></p>
-<h1 id="approval-tests-12">Approval tests (1/2)</h1>
-<p>Also known as <strong>Golden Master Tests</strong> or <strong>Snapshot Testing</strong> (locking down current behaviour)</p>
-<ul>
-<li>CppOnSea 2019 - Clare Macrae - Quickly testing legacy code <a href="https://youtu.be/dtm8V3TIB6k">https://youtu.be/dtm8V3TIB6k</a>
-<ul>
-<li>Slides <a href="https://slideshare.net/ClareMacrae">https://slideshare.net/ClareMacrae</a></li>
-<li>CppCast with Clare Macrae <a href="https://cppcast.com/clare-macrae/">https://cppcast.com/clare-macrae/</a>
-<ul>
-<li>r/cpp <a href="https://www.reddit.com/r/cpp/comments/ckzc11/cppcast_approval_tests_with_clare_macrae/">https://www.reddit.com/r/cpp/comments/ckzc11/cppcast_approval_tests_with_clare_macrae/</a></li>
-</ul></li>
-</ul></li>
-<li>Code <a href="https://github.com/approvals/ApprovalTests.cpp">https://github.com/approvals/ApprovalTests.cpp</a> (Apache 2.0)</li>
-<li>Approval Tests Library - Capturing Human Intelligence [available for Java, C#, VB.Net, PHP, Ruby, Node.JS and Python] <a href="https://approvaltests.com/">https://approvaltests.com/</a> by Llevelyn Falco
-<ul>
-<li>Supports Catch, Catch 2, Google Test, <a href="https://github.com/JayBazuzi/Okra">Okra</a></li>
-</ul></li>
-<li>Mutation tests: sabotage the code
-<ul>
-<li>Mutate++ <a href="https://github.com/nlohmann/mutate_cpp">https://github.com/nlohmann/mutate_cpp</a></li>
-</ul></li>
-</ul>
-<h1 id="approval-tests-22">Approval tests (2/2)</h1>
-<h2 id="books">Books</h2>
-<ul>
-<li>Modern C++ Programming with Test-Driven Development, by Jeff Langr [<a href="https://learning.oreilly.com/library/view/modern-c-programming/9781941222423/">Safari Books Online</a>]</li>
-<li>Your Code as a Crime Scene, by Adam Tornhill [<a href="https://learning.oreilly.com/library/view/your-code-as/9781680500813/">Safari Books Online</a>]</li>
-<li>Software Design X-Rays, by Adam Tornhill [<a href="https://learning.oreilly.com/library/view/software-design-x-rays/9781680505795/">Safari Books Online</a>]</li>
-</ul>
-<h2 id="tools">Tools</h2>
-<ul>
-<li>OpenCoverage <a href="https://github.com/OpenCppCoverage">https://github.com/OpenCppCoverage</a></li>
-<li>BullseyeCoverage <a href="https://www.bullseye.com">https://www.bullseye.com</a></li>
-</ul>
 <h1 id="introducing-the-rule-of-desdemova-14">Introducing the Rule of DesDeMovA (1/4)</h1>
 <p>Blog post by Peter Sommerlad</p>
 <p><a href="https://blog.safecpp.com/2019/07/01/initial.html">https://blog.safecpp.com/2019/07/01/initial.html</a></p>
@@ -234,85 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="img/sommerlad-desdemova2.png" alt="image" /></p>
 <h1 id="introducing-the-rule-of-desdemova-34-1">Introducing the Rule of DesDeMovA (3/4)</h1>
 <p><img src="img/sommerlad-desdemova3.png" alt="image" /></p>
-<h1 id="a-new-sqlite-c-wrapper">A new SQLite C++ wrapper</h1>
-<p><a href="https://blog.trailofbits.com/2019/08/26/wrappers-delight/">https://blog.trailofbits.com/2019/08/26/wrappers-delight/</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/cxxk4b/a_new_c_sqlite_wrapper/">https://www.reddit.com/r/cpp/comments/cxxk4b/a_new_c_sqlite_wrapper/</a></p>
-<p>The Reddit thread also includes a heated discussion on how to handle errors and if exceptions are a good thing (eyeroll).</p>
-<h1 id="strong_typedef---create-distinct-types-for-distinct-purposes"><strong>strong_typedef</strong> - Create distinct types for distinct purposes</h1>
-<p>Article by Anthony Williams</p>
-<p><a href="https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html">https://www.justsoftwaresolutions.co.uk/cplusplus/strong_typedef.html</a></p>
-<p><a href="https://github.com/anthonywilliams/strong_typedef">https://github.com/anthonywilliams/strong_typedef</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">using</span> transaction_id =</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  jss::strong_typedef&lt;<span class="kw">struct</span> transaction_tag, <span class="bu">std::</span>string&gt;;</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="dt">bool</span> is_a_foo(transaction_id id)</span>
-<span id="cb1-5"><a href="#cb1-5"></a>{</span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="kw">auto</span> &amp;s = id.underlying_value();</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="cf">return</span> s.find(<span class="st">&quot;foo&quot;</span>) != s.end();</span>
-<span id="cb1-8"><a href="#cb1-8"></a>}</span></code></pre></div>
-<h1 id="elements-c-gui-library">Elements C++ GUI library</h1>
-<p><a href="https://www.cycfi.com/2019/07/photon-micro-gui/">https://www.cycfi.com/2019/07/photon-micro-gui/</a></p>
-<ul>
-<li><a href="https://www.reddit.com/r/cpp/comments/ccq9pn/elemental_c_gui_library/">Reddit</a></li>
-</ul>
-<h1 id="c-libraries-for-data-visualization">C++ libraries for data visualization</h1>
-<ul>
-<li>VTK <a href="https://vtk.org/">https://vtk.org/</a></li>
-<li>ROOT <a href="https://root.cern.ch/">https://root.cern.ch/</a></li>
-<li>matplotlib-cpp <a href="https://github.com/lava/matplotlib-cpp">https://github.com/lava/matplotlib-cpp</a>
-<ul>
-<li>matplotlib (Python) <a href="https://matplotlib.org/">https://matplotlib.org/</a></li>
-</ul></li>
-<li>QCustomPlot (QT, GPL/commercial) <a href="https://www.qcustomplot.com/">https://www.qcustomplot.com/</a></li>
-</ul>
-<h1 id="cppcast---cmake-and-vtk-with-robert-maynard">CppCast - CMake and VTK with Robert Maynard</h1>
-<p><a href="http://cppcast.com/2019/07/robert-maynard/">http://cppcast.com/2019/07/robert-maynard/</a></p>
-<ul>
-<li><a href="https://www.reddit.com/r/cpp/comments/c9bpxb/cppcast_cmake_and_vtk_with_robert_maynard/">Reddit</a></li>
-</ul>
-<h1 id="cmake-line-by-line---creating-a-header-only-library">CMake line by line - creating a header-only library</h1>
-<p><a href="http://dominikberner.ch/cmake-interface-lib/">http://dominikberner.ch/cmake-interface-lib/</a></p>
-<ul>
-<li><a href="https://www.reddit.com/r/cpp/comments/c8ty2h/a_line_by_line_explanation_how_to_create_a/">Reddit</a></li>
-</ul>
-<p><a href="https://github.com/bernedom/SI">https://github.com/bernedom/SI</a></p>
-<p>Professional CMake: A Practical Guide, 4th ed., CMake 3.15 <a href="https://crascit.com/professional-cmake/">https://crascit.com/professional-cmake/</a> $30</p>
-<h1 id="agner-vector-class-library-v2">Agner Vector Class Library V2</h1>
-<p>This is a C++17 class library for using the Single Instruction Multiple Data (SIMD) instructions in modern microprocessors.</p>
-<p><a href="https://www.agner.org/optimize/blog/read.php?i=1013">https://www.agner.org/optimize/blog/read.php?i=1013</a></p>
-<p><a href="https://github.com/vectorclass/version2">https://github.com/vectorclass/version2</a> (Apache 2.0)</p>
-<p>Manual <a href="https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf">https://github.com/vectorclass/manual/blob/master/vcl_manual.pdf</a></p>
-<h1 id="mdspan">mdspan</h1>
-<ul>
-<li>Implementation <a href="https://github.com/kokkos/mdspan">https://github.com/kokkos/mdspan</a> (BSD 3-Clause)
-<ul>
-<li>Intro <a href="https://github.com/kokkos/mdspan/wiki/A-Gentle-Introduction-to-mdspan">https://github.com/kokkos/mdspan/wiki/A-Gentle-Introduction-to-mdspan</a></li>
-<li>r/cpp <a href="https://www.reddit.com/r/cpp/comments/cl127i/mdspan_productionquality_reference_implementation/">https://www.reddit.com/r/cpp/comments/cl127i/mdspan_productionquality_reference_implementation/</a></li>
-</ul></li>
-<li>Kokkos <a href="https://github.com/kokkos/kokkos">https://github.com/kokkos/kokkos</a></li>
-<li>Multi-dimensional strided array views in Magnum <a href="https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/">https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/</a></li>
-<li>P0009R9 <strong>mdspan</strong>: A Non-Owning Multidimensional Array Reference <a href="http://wg21.link/p0009r9">http://wg21.link/p0009r9</a></li>
-<li>CppCast with Bryce Adelstein Lelbach <a href="https://cppcast.com/bryce-lelbach-mdspan/">https://cppcast.com/bryce-lelbach-mdspan/</a></li>
-</ul>
-<h1 id="clang-build-analyzer">Clang Build Analyzer</h1>
-<p><a href="https://github.com/aras-p/ClangBuildAnalyzer">https://github.com/aras-p/ClangBuildAnalyzer</a></p>
-<h1 id="machine-learning-with-cpp">Machine Learning with CPP</h1>
-<p><a href="https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/">https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/</a></p>
-<ul>
-<li>PyTorch <a href="https://pytorch.org/features">https://pytorch.org/features</a> -- has a pure C++ front end <a href="https://pytorch.org/cppdocs/">https://pytorch.org/cppdocs/</a></li>
-<li>TensorFlow for C++ <a href="https://www.tensorflow.org/api_docs/cc">https://www.tensorflow.org/api_docs/cc</a></li>
-<li>Shogun <a href="https://www.shogun.ml/">https://www.shogun.ml/</a></li>
-</ul>
-<h1 id="the-sad-history-of-unicode-printf-style-format-specifiers-in-visual-c">The sad history of Unicode printf-style format specifiers in Visual C++</h1>
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20190830-00/?p=102823">https://devblogs.microsoft.com/oldnewthing/20190830-00/?p=102823</a></p>
-<p><a href="https://www.reddit.com/r/cpp/comments/cxi2xy/the_sad_history_of_unicode_printfstyle_format/">https://www.reddit.com/r/cpp/comments/cxi2xy/the_sad_history_of_unicode_printfstyle_format/</a></p>
-<h1 id="twitter">Twitter</h1>
-<p><img src="img/tvaneerd-try-catch-opt.png" style="width:90.0%" alt="image" /></p>
 <h1 id="twitter-neural-proposals">Twitter: Neural Proposals</h1>
 <p><img src="img/neural-proposals.png" alt="image" /></p>
-<h1 id="twitter-generic-cup">Twitter: Generic cup</h1>
-<p><img src="img/generic-cup.png" style="width:70.0%" alt="image" /></p>
-<h1 id="twitter-electronics">Twitter: Electronics</h1>
-<p><img src="img/electronics.png" alt="image" /></p>
 </body>
 </html>
