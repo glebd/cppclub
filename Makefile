@@ -20,16 +20,16 @@ SLIDES_YAML := $(patsubst %.rst,%.yaml,$(SOURCES_RST))
 
 all: $(SLIDES_MD) $(SLIDES_YAML) $(SLIDES_RST) $(SLIDES_HTML)
 
-%.pdf: %.md $(HEADER)
+%.pdf: %.md
 	pandoc $(PANDOC_FLAGS) $(PANDOC_FLAGS_BEAMER) $< -o $@
 
-%.yaml: %.rst $(HEADER)
+%.yaml: %.rst
 	python3 mkmeta.py $<
 
-%.pdf: %.rst $(HEADER)
+%.pdf: %.rst
 	pandoc $(PANDOC_FLAGS) $(PANDOC_FLAGS_BEAMER) --metadata-file=$(basename $<).yaml $< -o $@
 
-%.html: %.rst $(HEADER)
+%.html: %.rst
 	pandoc $(PANDOC_FLAGS) --metadata-file=$(basename $<).yaml $< -o $@
 
 clean:
