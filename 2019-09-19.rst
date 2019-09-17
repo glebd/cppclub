@@ -1,5 +1,14 @@
 ----
 
+How long does it take to *really* master C++?
+=============================================
+
+`Reddit	<https://reddit.com/r/cpp/comments/d4u6ag/how_long_does_it_take_to_really_master_c/>`_
+
+	`If someone says they have mastered C++ they are lying. <https://www.reddit.com/r/cpp/comments/d4u6ag/how_long_does_it_take_to_really_master_c/f0gkd9j?utm_source=share&utm_medium=web2x>`_
+
+	`You don't master C++. Instead C++ masters you. <https://www.reddit.com/r/cpp/comments/d4u6ag/how_long_does_it_take_to_really_master_c/f0h9fbw?utm_source=share&utm_medium=web2x>`_
+
 Elements C++ GUI library
 ========================
 
