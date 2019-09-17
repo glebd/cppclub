@@ -1,5 +1,14 @@
 ----
 
+Open Sourcing MSVC’s STL
+========================
+
+https://devblogs.microsoft.com/cppblog/open-sourcing-msvcs-stl/
+
+https://www.reddit.com/r/cpp/comments/d58pmg/open_sourcing_msvcs_stl/
+
+https://github.com/microsoft/STL
+
 How long does it take to *really* master C++?
 =============================================
 
@@ -8,6 +17,13 @@ How long does it take to *really* master C++?
 	`If someone says they have mastered C++ they are lying. <https://www.reddit.com/r/cpp/comments/d4u6ag/how_long_does_it_take_to_really_master_c/f0gkd9j?utm_source=share&utm_medium=web2x>`_
 
 	`You don't master C++. Instead C++ masters you. <https://www.reddit.com/r/cpp/comments/d4u6ag/how_long_does_it_take_to_really_master_c/f0h9fbw?utm_source=share&utm_medium=web2x>`_
+
+The Surprising Limitations of C++ Ranges Beyond Trivial Cases
+=============================================================
+
+`Article <https://www.fluentcpp.com/2019/09/13/the-surprising-limitations-of-c-ranges-beyond-trivial-use-cases/>`_
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/d3qkas/the_surprising_limitations_of_c_ranges_beyond/>`_
 
 Elements C++ GUI library
 ========================
