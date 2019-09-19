@@ -339,8 +339,3 @@ Conor Hoekstra - C++ Algorithms in Haskell
 ------------------------------------------
 
 https://youtu.be/dTO3-1C1-t0
-
-AnyDuck : A Value Type Erased Type
-----------------------------------
-
-Steve Downey: https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/
