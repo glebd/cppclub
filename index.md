@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not my employer's.
 
+* 89 - [19 Sep 2019](2019-09-19.html) :: [PDF](2019-09-19.pdf)
 * 88 - [12 Sep 2019](2019-09-12.html) :: [PDF](2019-09-12.pdf)
 * 87 - [5 Sep 2019](2019-09-05.html) :: [PDF](2019-09-05.pdf)
 * 86 - [15 August 2019](2019-08-15.html) :: [PDF](2019-08-15.pdf) :: [Video](https://youtu.be/jAIRhp0dTKE)
