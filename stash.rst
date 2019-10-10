@@ -137,11 +137,6 @@ C++ Special Member Function Guidelines
 https://foonathan.net/special-member
 https://www.reddit.com/r/cpp/comments/avbscv/c_special_member_function_guidelines/
 
-Template meta-programming: Some testing and debugging tricks
-------------------------------------------------------------
-
-https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/
-
 span: the best span
 -------------------
 
