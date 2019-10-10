@@ -137,11 +137,6 @@ C++ Special Member Function Guidelines
 https://foonathan.net/special-member
 https://www.reddit.com/r/cpp/comments/avbscv/c_special_member_function_guidelines/
 
-Template meta-programming: Some testing and debugging tricks
-------------------------------------------------------------
-
-https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/
-
 span: the best span
 -------------------
 
@@ -340,6 +335,24 @@ Conor Hoekstra - C++ Algorithms in Haskell
 
 https://youtu.be/dTO3-1C1-t0
 
+wg21.link cheatsheet
+====================
+
+.. image:: img/wg_link_cheatsheet.png
+   :width: 90%
+
+Address Sanitizer is coming to MSVC
+===================================
+
+https://www.reddit.com/r/cpp/comments/d6k7mt/address_sanitizer_is_coming_to_msvc/
+
+Span Lite
+=========
+
+https://github.com/martinmoene/span-lite
+
+A C++20-like span for C++98, C++11 and later in a single-file header-only library.
+
 mdspan
 ======
 
@@ -352,7 +365,20 @@ mdspan
 * P0009R9 **mdspan**: A Non-Owning Multidimensional Array Reference http://wg21.link/p0009r9
 * CppCast with Bryce Adelstein Lelbach https://cppcast.com/bryce-lelbach-mdspan/
 
-Machine Learning with CPP
+Enums, warnings, and default
+============================
+
+https://brevzin.github.io/c++/2019/08/01/enums-default/
+
+https://www.reddit.com/r/cpp/comments/cubah9/enum_switch_warnings/
+
+GCC & Clang:
+
+.. code:: bash
+
+    -Wswitch-enum
+
+Machine Learning with C++
 =========================
 
 `Reddit <https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/>`_
@@ -395,8 +421,17 @@ AnyDuck : A Value Type Erased Type
 
 Steve Downey: https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/
 
-Twitter
-=======
+Template meta-programming: Some testing and debugging tricks
+============================================================
 
-.. image:: img/tvaneerd-try-catch-opt.png
-   :width: 90%
+https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/
+
+**using** vs. **typedef**
+=========================
+
+https://www.nextptr.com/tutorial/ta1193988140/how-cplusplus-using-or-aliasdeclaration-is-better-than-typedef
+
+Berkeley Container Library (BCL)
+================================
+
+https://github.com/berkeley-container-library/bcl
