@@ -1,5 +1,15 @@
 ----
 
+2019-10 Mailing
+===============
+
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-10
+
+https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/
+
+* `Oh boy (RX) <https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3p77u9/>`_ and `doubling down <https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3qamcy/>`_
+* `Oh boy (Graphics) <https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3pts6p/>`_
+
 wg21.link cheatsheet
 ====================
 
@@ -79,7 +89,8 @@ https://github.com/deplinenoise/ig-memtrace
 
 https://github.com/ivmai/bdwgc
 
-    The Boehm-Demers-Weiser conservative C/C++ Garbage Collector (libgc, bdwgc, boehm-gc) https://www.hboehm.info/gc/
+    The Boehm-Demers-Weiser conservative C/C++ Garbage Collector (libgc, bdwgc, boehm-gc)
+    https://www.hboehm.info/gc/
 
 AnyDuck : A Value Type Erased Type
 ==================================
