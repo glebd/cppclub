@@ -18,6 +18,12 @@ wg21.link cheatsheet
 .. image:: img/wg_link_cheatsheet.png
    :width: 90%
 
+MSVC versions are crazy
+=======================
+
+.. image:: img/msvc-versions.png
+   :width: 80%
+
 Pitchfork
 =========
 
@@ -40,6 +46,46 @@ Closing the gap: cross-language LTO between Rust and C/C++
 http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html
 
 `Reddit <https://www.reddit.com/r/cpp/comments/d6emaw/closing_the_gap_crosslanguage_lto_between_rust/>`_ descended into an irrelevant but heated discussion on the term "C/C++".
+
+What's the difference between “STL” and “C++ Standard Library”?
+===============================================================
+
+https://stackoverflow.com/questions/5205491/whats-the-difference-between-stl-and-c-standard-library
+
+https://www.reddit.com/r/cpp/comments/c90sxa/whats_the_difference_between_stl_and_c_standard/
+
+    STL is a maintainer of MSVC's implementation of the C++ Standard Library.
+
+Scapix language bridge
+======================
+
+https://www.scapix.com/introduction/
+
+https://github.com/scapix-com/scapix
+
+https://www.reddit.com/r/cpp/comments/cjvc1u/automatic_c_bindings_for_various_languages/
+
+https://www.reddit.com/r/cpp/comments/ckf44x/scapix_java_link_modern_c17_jni_wrapper_library/
+
+Coro Examples, by Arthur O'Dwyer
+================================
+
+https://quuxplusone.github.io/blog/2019/07/03/announcing-coro-examples/
+
+https://github.com/Quuxplusone/coro
+
+CURL wrappers
+=============
+
+Swish
+
+* https://github.com/lamarrr/swish
+* https://www.reddit.com/r/cpp/comments/c8q0wh/a_modern_c_17_http_client_library_for_humans/
+
+CPR
+
+* https://github.com/whoshuu/cpr
+* https://whoshuu.github.io/cpr/
 
 Span Lite
 =========
@@ -131,6 +177,11 @@ Berkeley Container Library (BCL)
 ================================
 
 https://github.com/berkeley-container-library/bcl
+
+C++ Interview Questions
+=======================
+
+https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/
 
 Quote
 =====
