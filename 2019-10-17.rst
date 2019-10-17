@@ -5,6 +5,8 @@
 
 http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-10
 
+* http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1894r0.pdf
+
 https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/
 
 * `Oh boy (RX) <https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3p77u9/>`_ and `doubling down <https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3qamcy/>`_
@@ -25,6 +27,7 @@ A de-facto standard C++ project layout, by Colby Pike <vectorofbool@gmail.com>
 * `Reddit post 2 <https://www.reddit.com/r/cpp/comments/9eq46c/pitchforks_part_ii_project_layout_and_naming/>`_
 * `Pitchfork GitHub repo <https://github.com/vector-of-bool/pitchfork>`_
 * `Pre-paper <https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs>`_
+* `Bloomberg BDE physical code organization <https://github.com/bloomberg/bde/wiki/Physical-Code-Organization>`_
 
 Address Sanitizer is coming to MSVC
 ===================================
@@ -121,3 +124,10 @@ Berkeley Container Library (BCL)
 ================================
 
 https://github.com/berkeley-container-library/bcl
+
+Quote
+=====
+
+Sturgeon's Law:
+
+    90% of everything is crap.
