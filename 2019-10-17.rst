@@ -34,6 +34,13 @@ Address Sanitizer is coming to MSVC
 
 https://www.reddit.com/r/cpp/comments/d6k7mt/address_sanitizer_is_coming_to_msvc/
 
+Closing the gap: cross-language LTO between Rust and C/C++
+==========================================================
+
+http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html
+
+`Reddit <https://www.reddit.com/r/cpp/comments/d6emaw/closing_the_gap_crosslanguage_lto_between_rust/>`_ descended into an irrelevant but heated discussion on the term "C/C++".
+
 Span Lite
 =========
 
