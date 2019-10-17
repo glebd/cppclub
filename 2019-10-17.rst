@@ -1,7 +1,7 @@
 ----
 
-2019-10 Mailing
-===============
+2019-10 Pre-Belfast Mailing
+===========================
 
 http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-10
 
@@ -15,6 +15,16 @@ wg21.link cheatsheet
 
 .. image:: img/wg_link_cheatsheet.png
    :width: 90%
+
+Pitchfork
+=========
+
+A de-facto standard C++ project layout, by Colby Pike <vectorofbool@gmail.com>
+
+* `Reddit post 1 <https://www.reddit.com/r/cpp/comments/996q8o/prepare_thy_pitchforks_a_de_facto_standard/>`_
+* `Reddit post 2 <https://www.reddit.com/r/cpp/comments/9eq46c/pitchforks_part_ii_project_layout_and_naming/>`_
+* `Pitchfork GitHub repo <https://github.com/vector-of-bool/pitchfork>`_
+* `Pre-paper <https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs>`_
 
 Address Sanitizer is coming to MSVC
 ===================================
