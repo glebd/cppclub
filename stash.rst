@@ -329,8 +329,3 @@ https://www.youtube.com/watch?v=eH1CxEC29l8
 https://www.reddit.com/r/cpp/comments/cd2prb/write_tests_directly_in_your_production_code/
 
 https://github.com/onqtam/doctest/issues/252
-
-Conor Hoekstra - C++ Algorithms in Haskell
-------------------------------------------
-
-https://youtu.be/dTO3-1C1-t0
