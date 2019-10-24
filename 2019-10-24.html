@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gleb Dolgich" />
+  <meta name="dcterms.date" content="2019-10-24" />
+  <title>C++ Club UK</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">C++ Club UK</h1>
+<p class="author">Gleb Dolgich</p>
+<p class="date">2019-10-24</p>
+</header>
+<hr />
+<h1 id="pre-belfast-mailing">2019-10 Pre-Belfast Mailing</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019">Mailing</a></p>
+<ul>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1894r0.pdf">Proposal of std::upto, std::indices and std::enumerate</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0443r11.html">A Unified Executors Proposal for C++</a></li>
+</ul>
+<p><a href="https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/">https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/</a></p>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3p77u9/">Oh boy (RX)</a> and <a href="https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3qamcy/">doubling down</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3pts6p/">Oh boy (Graphics)</a></li>
+</ul>
+<h1 id="eric-niebler-on-executors">Eric Niebler on Executors</h1>
+<p><a href="https://twitter.com/Cor3ntin/status/1186040861626437632">Corentin</a>: Executors are the least useful part of "A Unified Executors Proposal"</p>
+<p><a href="https://twitter.com/ericniebler/status/1186343156326887425">Eric Niebler</a>:</p>
+<p>It makes me happy to see the power of the Scheduler/Sender/Receiver recognized.</p>
+<p>Much of traditional Rx assumes runtime polymorphism and garbage collection / ref counting. That's obviously a poor fit for C++. The sender/receiver design skews toward static polymorphism w/Generic interfaces, and explicit memory mgmt.</p>
+<h1 id="eric-niebler-on-executors-cont.">Eric Niebler on Executors (cont.)</h1>
+<p>The factoring of <span class="title-ref">submit</span> into <span class="title-ref">connect</span>/<span class="title-ref">start</span> gives more flexible ownership semantics, and aligns the design conceptually with coroutines, making coroutines an efficient way of expressing sender/receiver.</p>
+<p>Once you introduce concurrency with non-overlapping scopes, the lifetime of your async operation state no longer corresponds to a simple C++ scope. That's why explicit memory mgmt and ownership become issues where they wouldn't be otherwise.</p>
+<h1 id="eric-niebler-on-executors-cont.-1">Eric Niebler on Executors (cont.)</h1>
+<p>One of coroutines great strengths is that they let us map async lifetime back to C++ scopes. Under the hood, the coroutine is carved up into callbacks, and the operation state (coroutine frame) is getting managed explicitly, but all that gets hidden from you by the coro types.</p>
+<p>Sender/receiver is a library reification of this separation. You might argue (and some have) that we should just drop sender/receiver and use coroutines everywhere for everything "async". That's appealing, but goes too far. Coroutines, for all their value, come up short sometimes.</p>
+<h1 id="eric-niebler-on-executors-cont.-2">Eric Niebler on Executors (cont.)</h1>
+<p>C++ has a long sad history of giving old things new names. Map and fold would have been better than transform and accumulate, and don't get me started on vector. Sender/receiver share some pedigree with Observable/Observer, but they really are different beasts ... by necessity.</p>
+<p>The intended purpose of sender/receiver is to be a base lingua franca for all C++ async libraries. I expect end-users to interface at much higher levels of abstraction in their own code.</p>
+<h1 id="coro-examples-by-arthur-odwyer">Coro Examples, by Arthur O'Dwyer</h1>
+<p><a href="https://quuxplusone.github.io/blog/2019/07/03/announcing-coro-examples/">https://quuxplusone.github.io/blog/2019/07/03/announcing-coro-examples/</a></p>
+<p><a href="https://github.com/Quuxplusone/coro">https://github.com/Quuxplusone/coro</a></p>
+<h1 id="wg21.link-cheatsheet">wg21.link cheatsheet</h1>
+<p><img src="img/wg_link_cheatsheet.png" style="width:90.0%" alt="image" /></p>
+<h1 id="address-sanitizer-in-msvc">Address Sanitizer in MSVC</h1>
+<p><a href="https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-windows-with-msvc/">https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-windows-with-msvc/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/d6k7mt/address_sanitizer_is_coming_to_msvc/">https://www.reddit.com/r/cpp/comments/d6k7mt/address_sanitizer_is_coming_to_msvc/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/dm1emb/addresssanitizer_asan_for_windows_with_msvc/">https://www.reddit.com/r/cpp/comments/dm1emb/addresssanitizer_asan_for_windows_with_msvc/</a></p>
+<h1 id="are-there-any-memory-safety-libraries-for-c">Are there any memory safety libraries for C++?</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/d0hguz/are_there_any_memory_safety_libraries_for_c/">https://www.reddit.com/r/cpp/comments/d0hguz/are_there_any_memory_safety_libraries_for_c/</a></p>
+<p><a href="https://github.com/duneroadrunner/SaferCPlusPlus/">https://github.com/duneroadrunner/SaferCPlusPlus/</a></p>
+<p><a href="https://github.com/deplinenoise/ig-memtrace">https://github.com/deplinenoise/ig-memtrace</a></p>
+<blockquote>
+<p>MemTrace is a memory debugging tool developed internally at Insomniac Games.</p>
+</blockquote>
+<p><a href="https://github.com/ivmai/bdwgc">https://github.com/ivmai/bdwgc</a></p>
+<blockquote>
+<p>The Boehm-Demers-Weiser conservative C/C++ Garbage Collector (libgc, bdwgc, boehm-gc) <a href="https://www.hboehm.info/gc/">https://www.hboehm.info/gc/</a></p>
+</blockquote>
+<h1 id="msvc-versions-are-crazy">MSVC versions are crazy</h1>
+<p><img src="img/msvc-versions.png" style="width:80.0%" alt="image" /></p>
+<h1 id="pitchfork">Pitchfork</h1>
+<p>A de-facto standard C++ project layout, by Colby Pike &lt;<a href="mailto:vectorofbool@gmail.com">vectorofbool@gmail.com</a>&gt;</p>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/996q8o/prepare_thy_pitchforks_a_de_facto_standard/">Reddit post 1</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/9eq46c/pitchforks_part_ii_project_layout_and_naming/">Reddit post 2</a></li>
+<li><a href="https://github.com/vector-of-bool/pitchfork">Pitchfork GitHub repo</a></li>
+<li><a href="https://api.csswg.org/bikeshed/?force=1&amp;url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs">Pre-paper</a></li>
+<li><a href="https://github.com/bloomberg/bde/wiki/Physical-Code-Organization">Bloomberg BDE physical code organization</a></li>
+</ul>
+<h1 id="closing-the-gap-cross-language-lto-between-rust-and-cc">Closing the gap: cross-language LTO between Rust and C/C++</h1>
+<p><a href="http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html">http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/d6emaw/closing_the_gap_crosslanguage_lto_between_rust/">Reddit</a> descended into an irrelevant but heated discussion on the term "C/C++".</p>
+<h1 id="whats-the-difference-between-stl-and-c-standard-library">What's the difference between “STL” and “C++ Standard Library”?</h1>
+<p><a href="https://stackoverflow.com/questions/5205491/whats-the-difference-between-stl-and-c-standard-library">https://stackoverflow.com/questions/5205491/whats-the-difference-between-stl-and-c-standard-library</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c90sxa/whats_the_difference_between_stl_and_c_standard/">https://www.reddit.com/r/cpp/comments/c90sxa/whats_the_difference_between_stl_and_c_standard/</a></p>
+<blockquote>
+<p>STL is a maintainer of MSVC's implementation of the C++ Standard Library.</p>
+</blockquote>
+<h1 id="quote">Quote</h1>
+<p>Sturgeon's Law:</p>
+<blockquote>
+<p>90% of everything is crap.</p>
+</blockquote>
+</body>
+</html>

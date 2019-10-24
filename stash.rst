@@ -330,21 +330,29 @@ https://www.reddit.com/r/cpp/comments/cd2prb/write_tests_directly_in_your_produc
 
 https://github.com/onqtam/doctest/issues/252
 
-Conor Hoekstra - C++ Algorithms in Haskell
-------------------------------------------
+Scapix language bridge
+======================
 
-https://youtu.be/dTO3-1C1-t0
+https://www.scapix.com/introduction/
 
-wg21.link cheatsheet
-====================
+https://github.com/scapix-com/scapix
 
-.. image:: img/wg_link_cheatsheet.png
-   :width: 90%
+https://www.reddit.com/r/cpp/comments/cjvc1u/automatic_c_bindings_for_various_languages/
 
-Address Sanitizer is coming to MSVC
-===================================
+https://www.reddit.com/r/cpp/comments/ckf44x/scapix_java_link_modern_c17_jni_wrapper_library/
 
-https://www.reddit.com/r/cpp/comments/d6k7mt/address_sanitizer_is_coming_to_msvc/
+CURL wrappers
+=============
+
+Swish
+
+* https://github.com/lamarrr/swish
+* https://www.reddit.com/r/cpp/comments/c8q0wh/a_modern_c_17_http_client_library_for_humans/
+
+CPR
+
+* https://github.com/whoshuu/cpr
+* https://whoshuu.github.io/cpr/
 
 Span Lite
 =========
@@ -401,21 +409,6 @@ https://blog.magnum.graphics/announcements/introducing-python-bindings/
 
 https://github.com/pybind/pybind11
 
-Are there any memory safety libraries for C++?
-==============================================
-
-https://www.reddit.com/r/cpp/comments/d0hguz/are_there_any_memory_safety_libraries_for_c/
-
-https://github.com/duneroadrunner/SaferCPlusPlus/
-
-https://github.com/deplinenoise/ig-memtrace
-
-    MemTrace is a memory debugging tool developed internally at Insomniac Games.
-
-https://github.com/ivmai/bdwgc
-
-    The Boehm-Demers-Weiser conservative C/C++ Garbage Collector (libgc, bdwgc, boehm-gc) https://www.hboehm.info/gc/
-
 AnyDuck : A Value Type Erased Type
 ==================================
 
@@ -435,3 +428,8 @@ Berkeley Container Library (BCL)
 ================================
 
 https://github.com/berkeley-container-library/bcl
+
+C++ Interview Questions
+=======================
+
+https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/
