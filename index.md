@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not my employer's.
 
+* 92 - [31 Oct 2019](2019-10-31.html) :: [PDF](2019-10-31.pdf)
 * 91 - [24 Oct 2019](2019-10-24.html) :: [PDF](2019-10-24.pdf)
 * 90 - [10 Oct 2019](2019-10-10.html) :: [PDF](2019-10-10.pdf)
 * 89 - [19 Sep 2019](2019-09-19.html) :: [PDF](2019-09-19.pdf)
