@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gleb Dolgich" />
+  <meta name="dcterms.date" content="2019-10-24" />
+  <title>C++ Club UK</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">C++ Club UK</h1>
+<p class="author">Gleb Dolgich</p>
+<p class="date">2019-10-24</p>
+</header>
+<hr />
+<h1 id="pre-belfast-mailing">2019-10 Pre-Belfast Mailing</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019">Mailing</a></p>
+<ul>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1894r0.pdf">Proposal of std::upto, std::indices and std::enumerate</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0443r11.html">A Unified Executors Proposal for C++</a></li>
+</ul>
+<p><a href="https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/">https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/</a></p>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3p77u9/">Oh boy (RX)</a> and <a href="https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3qamcy/">doubling down</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3pts6p/">Oh boy (Graphics)</a></li>
+</ul>
+<h1 id="eric-niebler-on-executors">Eric Niebler on Executors</h1>
+<p><a href="https://twitter.com/Cor3ntin/status/1186040861626437632">Corentin</a>: Executors are the least useful part of "A Unified Executors Proposal"</p>
+<p><a href="https://twitter.com/ericniebler/status/1186343156326887425">Eric Niebler</a>:</p>
+<p>It makes me happy to see the power of the Scheduler/Sender/Receiver recognized.</p>
+<p>Much of traditional Rx assumes runtime polymorphism and garbage collection / ref counting. That's obviously a poor fit for C++. The sender/receiver design skews toward static polymorphism w/Generic interfaces, and explicit memory mgmt.</p>
+<h1 id="eric-niebler-on-executors-cont.">Eric Niebler on Executors (cont.)</h1>
+<p>The factoring of <span class="title-ref">submit</span> into <span class="title-ref">connect</span>/<span class="title-ref">start</span> gives more flexible ownership semantics, and aligns the design conceptually with coroutines, making coroutines an efficient way of expressing sender/receiver.</p>
+<p>Once you introduce concurrency with non-overlapping scopes, the lifetime of your async operation state no longer corresponds to a simple C++ scope. That's why explicit memory mgmt and ownership become issues where they wouldn't be otherwise.</p>
+<h1 id="eric-niebler-on-executors-cont.-1">Eric Niebler on Executors (cont.)</h1>
+<p>One of coroutines great strengths is that they let us map async lifetime back to C++ scopes. Under the hood, the coroutine is carved up into callbacks, and the operation state (coroutine frame) is getting managed explicitly, but all that gets hidden from you by the coro types.</p>
+<p>Sender/receiver is a library reification of this separation. You might argue (and some have) that we should just drop sender/receiver and use coroutines everywhere for everything "async". That's appealing, but goes too far. Coroutines, for all their value, come up short sometimes.</p>
+<h1 id="eric-niebler-on-executors-cont.-2">Eric Niebler on Executors (cont.)</h1>
+<p>C++ has a long sad history of giving old things new names. Map and fold would have been better than transform and accumulate, and don't get me started on vector. Sender/receiver share some pedigree with Observable/Observer, but they really are different beasts ... by necessity.</p>
+<p>The intended purpose of sender/receiver is to be a base lingua franca for all C++ async libraries. I expect end-users to interface at much higher levels of abstraction in their own code.</p>
+<h1 id="coro-examples-by-arthur-odwyer">Coro Examples, by Arthur O'Dwyer</h1>
+<p><a href="https://quuxplusone.github.io/blog/2019/07/03/announcing-coro-examples/">https://quuxplusone.github.io/blog/2019/07/03/announcing-coro-examples/</a></p>
+<p><a href="https://github.com/Quuxplusone/coro">https://github.com/Quuxplusone/coro</a></p>
+<h1 id="wg21.link-cheatsheet">wg21.link cheatsheet</h1>
+<p><img src="img/wg_link_cheatsheet.png" style="width:90.0%" alt="image" /></p>
+<h1 id="address-sanitizer-in-msvc">Address Sanitizer in MSVC</h1>
+<p><a href="https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-windows-with-msvc/">https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-windows-with-msvc/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/d6k7mt/address_sanitizer_is_coming_to_msvc/">https://www.reddit.com/r/cpp/comments/d6k7mt/address_sanitizer_is_coming_to_msvc/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/dm1emb/addresssanitizer_asan_for_windows_with_msvc/">https://www.reddit.com/r/cpp/comments/dm1emb/addresssanitizer_asan_for_windows_with_msvc/</a></p>
+<h1 id="are-there-any-memory-safety-libraries-for-c">Are there any memory safety libraries for C++?</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/d0hguz/are_there_any_memory_safety_libraries_for_c/">https://www.reddit.com/r/cpp/comments/d0hguz/are_there_any_memory_safety_libraries_for_c/</a></p>
+<p><a href="https://github.com/duneroadrunner/SaferCPlusPlus/">https://github.com/duneroadrunner/SaferCPlusPlus/</a></p>
+<p><a href="https://github.com/deplinenoise/ig-memtrace">https://github.com/deplinenoise/ig-memtrace</a></p>
+<blockquote>
+<p>MemTrace is a memory debugging tool developed internally at Insomniac Games.</p>
+</blockquote>
+<p><a href="https://github.com/ivmai/bdwgc">https://github.com/ivmai/bdwgc</a></p>
+<blockquote>
+<p>The Boehm-Demers-Weiser conservative C/C++ Garbage Collector (libgc, bdwgc, boehm-gc) <a href="https://www.hboehm.info/gc/">https://www.hboehm.info/gc/</a></p>
+</blockquote>
+<h1 id="msvc-versions-are-crazy">MSVC versions are crazy</h1>
+<p><img src="img/msvc-versions.png" style="width:80.0%" alt="image" /></p>
+<h1 id="pitchfork">Pitchfork</h1>
+<p>A de-facto standard C++ project layout, by Colby Pike &lt;<a href="mailto:vectorofbool@gmail.com">vectorofbool@gmail.com</a>&gt;</p>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/996q8o/prepare_thy_pitchforks_a_de_facto_standard/">Reddit post 1</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/9eq46c/pitchforks_part_ii_project_layout_and_naming/">Reddit post 2</a></li>
+<li><a href="https://github.com/vector-of-bool/pitchfork">Pitchfork GitHub repo</a></li>
+<li><a href="https://api.csswg.org/bikeshed/?force=1&amp;url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs">Pre-paper</a></li>
+<li><a href="https://github.com/bloomberg/bde/wiki/Physical-Code-Organization">Bloomberg BDE physical code organization</a></li>
+</ul>
+<h1 id="closing-the-gap-cross-language-lto-between-rust-and-cc">Closing the gap: cross-language LTO between Rust and C/C++</h1>
+<p><a href="http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html">http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/d6emaw/closing_the_gap_crosslanguage_lto_between_rust/">Reddit</a> descended into an irrelevant but heated discussion on the term "C/C++".</p>
+<h1 id="whats-the-difference-between-stl-and-c-standard-library">What's the difference between “STL” and “C++ Standard Library”?</h1>
+<p><a href="https://stackoverflow.com/questions/5205491/whats-the-difference-between-stl-and-c-standard-library">https://stackoverflow.com/questions/5205491/whats-the-difference-between-stl-and-c-standard-library</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/c90sxa/whats_the_difference_between_stl_and_c_standard/">https://www.reddit.com/r/cpp/comments/c90sxa/whats_the_difference_between_stl_and_c_standard/</a></p>
+<blockquote>
+<p>STL is a maintainer of MSVC's implementation of the C++ Standard Library.</p>
+</blockquote>
+<h1 id="scapix-language-bridge">Scapix language bridge</h1>
+<p><a href="https://www.scapix.com/introduction/">https://www.scapix.com/introduction/</a></p>
+<p><a href="https://github.com/scapix-com/scapix">https://github.com/scapix-com/scapix</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/cjvc1u/automatic_c_bindings_for_various_languages/">https://www.reddit.com/r/cpp/comments/cjvc1u/automatic_c_bindings_for_various_languages/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/ckf44x/scapix_java_link_modern_c17_jni_wrapper_library/">https://www.reddit.com/r/cpp/comments/ckf44x/scapix_java_link_modern_c17_jni_wrapper_library/</a></p>
+<h1 id="curl-wrappers">CURL wrappers</h1>
+<p>Swish</p>
+<ul>
+<li><a href="https://github.com/lamarrr/swish">https://github.com/lamarrr/swish</a></li>
+<li><a href="https://www.reddit.com/r/cpp/comments/c8q0wh/a_modern_c_17_http_client_library_for_humans/">https://www.reddit.com/r/cpp/comments/c8q0wh/a_modern_c_17_http_client_library_for_humans/</a></li>
+</ul>
+<p>CPR</p>
+<ul>
+<li><a href="https://github.com/whoshuu/cpr">https://github.com/whoshuu/cpr</a></li>
+<li><a href="https://whoshuu.github.io/cpr/">https://whoshuu.github.io/cpr/</a></li>
+</ul>
+<h1 id="span-lite">Span Lite</h1>
+<p><a href="https://github.com/martinmoene/span-lite">https://github.com/martinmoene/span-lite</a></p>
+<p>A C++20-like span for C++98, C++11 and later in a single-file header-only library.</p>
+<h1 id="mdspan">mdspan</h1>
+<ul>
+<li>Implementation <a href="https://github.com/kokkos/mdspan">https://github.com/kokkos/mdspan</a> (BSD 3-Clause)
+<ul>
+<li>Intro <a href="https://github.com/kokkos/mdspan/wiki/A-Gentle-Introduction-to-mdspan">https://github.com/kokkos/mdspan/wiki/A-Gentle-Introduction-to-mdspan</a></li>
+<li>r/cpp <a href="https://www.reddit.com/r/cpp/comments/cl127i/mdspan_productionquality_reference_implementation/">https://www.reddit.com/r/cpp/comments/cl127i/mdspan_productionquality_reference_implementation/</a></li>
+</ul></li>
+<li>Kokkos <a href="https://github.com/kokkos/kokkos">https://github.com/kokkos/kokkos</a></li>
+<li>Multi-dimensional strided array views in Magnum <a href="https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/">https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/</a></li>
+<li>P0009R9 <strong>mdspan</strong>: A Non-Owning Multidimensional Array Reference <a href="http://wg21.link/p0009r9">http://wg21.link/p0009r9</a></li>
+<li>CppCast with Bryce Adelstein Lelbach <a href="https://cppcast.com/bryce-lelbach-mdspan/">https://cppcast.com/bryce-lelbach-mdspan/</a></li>
+</ul>
+<h1 id="enums-warnings-and-default">Enums, warnings, and default</h1>
+<p><a href="https://brevzin.github.io/c++/2019/08/01/enums-default/">https://brevzin.github.io/c++/2019/08/01/enums-default/</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/cubah9/enum_switch_warnings/">https://www.reddit.com/r/cpp/comments/cubah9/enum_switch_warnings/</a></p>
+<p>GCC &amp; Clang:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">-Wswitch-enum</span></span></code></pre></div>
+<h1 id="machine-learning-with-c">Machine Learning with C++</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/">Reddit</a></p>
+<ul>
+<li>PyTorch <a href="https://pytorch.org/features">https://pytorch.org/features</a> -- has a pure C++ front end <a href="https://pytorch.org/cppdocs/">https://pytorch.org/cppdocs/</a></li>
+<li>TensorFlow for C++ <a href="https://www.tensorflow.org/api_docs/cc">https://www.tensorflow.org/api_docs/cc</a></li>
+<li>Shogun <a href="https://www.shogun.ml/">https://www.shogun.ml/</a></li>
+</ul>
+<h1 id="the-sad-history-of-unicode-printf-style-format-specifiers-in-visual-c">The sad history of Unicode printf-style format specifiers in Visual C++</h1>
+<p><a href="https://devblogs.microsoft.com/oldnewthing/20190830-00/?p=102823">https://devblogs.microsoft.com/oldnewthing/20190830-00/?p=102823</a></p>
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/cxi2xy/the_sad_history_of_unicode_printfstyle_format/">Reddit</a></li>
+</ul>
+<h1 id="introducing-magnum-python-bindings">Introducing Magnum Python Bindings</h1>
+<p><a href="https://blog.magnum.graphics/announcements/introducing-python-bindings/">https://blog.magnum.graphics/announcements/introducing-python-bindings/</a></p>
+<p><a href="https://github.com/pybind/pybind11">https://github.com/pybind/pybind11</a></p>
+<h1 id="anyduck-a-value-type-erased-type">AnyDuck : A Value Type Erased Type</h1>
+<p>Steve Downey: <a href="https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/">https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/</a></p>
+<h1 id="template-meta-programming-some-testing-and-debugging-tricks">Template meta-programming: Some testing and debugging tricks</h1>
+<p><a href="https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/">https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/</a></p>
+<h1 id="using-vs.-typedef"><strong>using</strong> vs. <strong>typedef</strong></h1>
+<p><a href="https://www.nextptr.com/tutorial/ta1193988140/how-cplusplus-using-or-aliasdeclaration-is-better-than-typedef">https://www.nextptr.com/tutorial/ta1193988140/how-cplusplus-using-or-aliasdeclaration-is-better-than-typedef</a></p>
+<h1 id="berkeley-container-library-bcl">Berkeley Container Library (BCL)</h1>
+<p><a href="https://github.com/berkeley-container-library/bcl">https://github.com/berkeley-container-library/bcl</a></p>
+<h1 id="c-interview-questions">C++ Interview Questions</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/">https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/</a></p>
+<h1 id="quote">Quote</h1>
+<p>Sturgeon's Law:</p>
+<blockquote>
+<p>90% of everything is crap.</p>
+</blockquote>
+</body>
+</html>
