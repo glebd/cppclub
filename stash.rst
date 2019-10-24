@@ -329,3 +329,107 @@ https://www.youtube.com/watch?v=eH1CxEC29l8
 https://www.reddit.com/r/cpp/comments/cd2prb/write_tests_directly_in_your_production_code/
 
 https://github.com/onqtam/doctest/issues/252
+
+Scapix language bridge
+======================
+
+https://www.scapix.com/introduction/
+
+https://github.com/scapix-com/scapix
+
+https://www.reddit.com/r/cpp/comments/cjvc1u/automatic_c_bindings_for_various_languages/
+
+https://www.reddit.com/r/cpp/comments/ckf44x/scapix_java_link_modern_c17_jni_wrapper_library/
+
+CURL wrappers
+=============
+
+Swish
+
+* https://github.com/lamarrr/swish
+* https://www.reddit.com/r/cpp/comments/c8q0wh/a_modern_c_17_http_client_library_for_humans/
+
+CPR
+
+* https://github.com/whoshuu/cpr
+* https://whoshuu.github.io/cpr/
+
+Span Lite
+=========
+
+https://github.com/martinmoene/span-lite
+
+A C++20-like span for C++98, C++11 and later in a single-file header-only library.
+
+mdspan
+======
+
+* Implementation https://github.com/kokkos/mdspan (BSD 3-Clause)
+  * Intro https://github.com/kokkos/mdspan/wiki/A-Gentle-Introduction-to-mdspan
+  * r/cpp https://www.reddit.com/r/cpp/comments/cl127i/mdspan_productionquality_reference_implementation/
+* Kokkos https://github.com/kokkos/kokkos
+* Multi-dimensional strided array views in Magnum
+  https://blog.magnum.graphics/backstage/multidimensional-strided-array-views/
+* P0009R9 **mdspan**: A Non-Owning Multidimensional Array Reference http://wg21.link/p0009r9
+* CppCast with Bryce Adelstein Lelbach https://cppcast.com/bryce-lelbach-mdspan/
+
+Enums, warnings, and default
+============================
+
+https://brevzin.github.io/c++/2019/08/01/enums-default/
+
+https://www.reddit.com/r/cpp/comments/cubah9/enum_switch_warnings/
+
+GCC & Clang:
+
+.. code:: bash
+
+    -Wswitch-enum
+
+Machine Learning with C++
+=========================
+
+`Reddit <https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/>`_
+
+* PyTorch https://pytorch.org/features -- has a pure C++ front end https://pytorch.org/cppdocs/
+* TensorFlow for C++ https://www.tensorflow.org/api_docs/cc
+* Shogun https://www.shogun.ml/
+
+The sad history of Unicode printf-style format specifiers in Visual C++
+=======================================================================
+
+https://devblogs.microsoft.com/oldnewthing/20190830-00/?p=102823
+
+* `Reddit <https://www.reddit.com/r/cpp/comments/cxi2xy/the_sad_history_of_unicode_printfstyle_format/>`_
+
+Introducing Magnum Python Bindings
+==================================
+
+https://blog.magnum.graphics/announcements/introducing-python-bindings/
+
+https://github.com/pybind/pybind11
+
+AnyDuck : A Value Type Erased Type
+==================================
+
+Steve Downey: https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/
+
+Template meta-programming: Some testing and debugging tricks
+============================================================
+
+https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/
+
+**using** vs. **typedef**
+=========================
+
+https://www.nextptr.com/tutorial/ta1193988140/how-cplusplus-using-or-aliasdeclaration-is-better-than-typedef
+
+Berkeley Container Library (BCL)
+================================
+
+https://github.com/berkeley-container-library/bcl
+
+C++ Interview Questions
+=======================
+
+https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/
