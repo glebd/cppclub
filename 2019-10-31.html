@@ -89,6 +89,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="date">2019-10-31</p>
 </header>
 <hr />
+<h1 id="the-case-for-c">The Case for C++</h1>
+<p><a href="https://itnext.io/the-case-for-c-4122a5b47130">https://itnext.io/the-case-for-c-4122a5b47130</a></p>
+<p><a href="https://www.reddit.com/r/cpp/comments/dnm77y/the_case_for_c/">https://www.reddit.com/r/cpp/comments/dnm77y/the_case_for_c/</a></p>
+<h1 id="abi-now-or-never">ABI: Now or Never</h1>
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1863r0.pdf">P1863R0</a> by Titus Winters</p>
+<p><a href="https://www.reddit.com/r/cpp/comments/dnr2e1/abi_now_or_never/">https://www.reddit.com/r/cpp/comments/dnr2e1/abi_now_or_never/</a></p>
+<p><a href="https://vittorioromeo.info/index/blog/fixing_cpp_with_epochs.html">C++ Epochs</a> won't help as they only touch syntax, not ABI.</p>
 <h1 id="scapix-language-bridge">Scapix language bridge</h1>
 <p><a href="https://www.scapix.com/introduction/">https://www.scapix.com/introduction/</a></p>
 <p><a href="https://github.com/scapix-com/scapix">https://github.com/scapix-com/scapix</a></p>
@@ -150,5 +157,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="https://github.com/berkeley-container-library/bcl">https://github.com/berkeley-container-library/bcl</a></p>
 <h1 id="c-interview-questions">C++ Interview Questions</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/">https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/</a></p>
+<h1 id="eliminating-the-static-overhead-of-ranges">Eliminating the Static Overhead of Ranges</h1>
+<p><a href="https://vector-of-bool.github.io/2019/10/21/rngs-static-ovr.html">Colby Pike</a>, <a href="https://www.reddit.com/r/cpp/comments/dkxcwd/eliminating_the_static_overhead_of_ranges/">Reddit</a></p>
+<h2 id="without-ranges">Without ranges</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a>vector&lt;string&gt; child_names;</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="cf">for</span> (<span class="kw">auto</span>&amp; person : all_people) {</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">if</span> (person.age &lt; <span class="dv">14</span>) {</span>
+<span id="cb2-4"><a href="#cb2-4"></a>        child_names.push_back(person.name);</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    }</span>
+<span id="cb2-6"><a href="#cb2-6"></a>}</span></code></pre></div>
+<h2 id="with-ranges">With ranges</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">auto</span> children_names =</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    all_people</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    | filter([](<span class="at">const</span> <span class="kw">auto</span>&amp; person) { <span class="cf">return</span> person.age &lt; <span class="dv">14</span>; })</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    | transform([](<span class="at">const</span> <span class="kw">auto</span>&amp; person) { <span class="cf">return</span> person.name; })</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    | to_vector;</span></code></pre></div>
 </body>
 </html>

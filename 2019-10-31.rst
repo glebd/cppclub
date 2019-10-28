@@ -1,5 +1,22 @@
 ----
 
+The Case for C++
+================
+
+https://itnext.io/the-case-for-c-4122a5b47130
+
+https://www.reddit.com/r/cpp/comments/dnm77y/the_case_for_c/
+
+ABI: Now or Never
+=================
+
+`P1863R0 <http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1863r0.pdf>`_ by Titus Winters
+
+https://www.reddit.com/r/cpp/comments/dnr2e1/abi_now_or_never/
+
+`C++ Epochs <https://vittorioromeo.info/index/blog/fixing_cpp_with_epochs.html>`_ won't help as they
+only touch syntax, not ABI.
+
 Scapix language bridge
 ======================
 
@@ -103,3 +120,32 @@ C++ Interview Questions
 =======================
 
 https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/
+
+Eliminating the Static Overhead of Ranges
+=========================================
+
+`Colby Pike <https://vector-of-bool.github.io/2019/10/21/rngs-static-ovr.html>`_,
+`Reddit <https://www.reddit.com/r/cpp/comments/dkxcwd/eliminating_the_static_overhead_of_ranges/>`_
+
+Without ranges
+--------------
+
+.. code-block:: c++
+
+    vector<string> child_names;
+    for (auto& person : all_people) {
+        if (person.age < 14) {
+            child_names.push_back(person.name);
+        }
+    }
+
+With ranges
+-----------
+
+.. code-block:: c++
+
+    auto children_names =
+        all_people
+        | filter([](const auto& person) { return person.age < 14; })
+        | transform([](const auto& person) { return person.name; })
+        | to_vector;
