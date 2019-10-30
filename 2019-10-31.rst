@@ -149,3 +149,15 @@ With ranges
         | filter([](const auto& person) { return person.age < 14; })
         | transform([](const auto& person) { return person.name; })
         | to_vector;
+
+Change STL containers' size() method to return signed integer?
+==============================================================
+
+https://www.reddit.com/r/cpp/comments/dl7lcu/change_stl_containers_size_method_to_return/
+
+Camomilla by Vittorio Romeo
+===========================
+
+A Python script that simplifies C++ compiler errors. Useful when using heavily-templated libraries.
+
+https://github.com/SuperV1234/camomilla
