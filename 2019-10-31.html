@@ -96,6 +96,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1863r0.pdf">P1863R0</a> by Titus Winters</p>
 <p><a href="https://www.reddit.com/r/cpp/comments/dnr2e1/abi_now_or_never/">https://www.reddit.com/r/cpp/comments/dnr2e1/abi_now_or_never/</a></p>
 <p><a href="https://vittorioromeo.info/index/blog/fixing_cpp_with_epochs.html">C++ Epochs</a> won't help as they only touch syntax, not ABI.</p>
+<h1 id="the-most-essential-c-advice">The Most Essential C++ Advice</h1>
+<p><a href="https://www.codeproject.com/Tips/5249485/The-Most-Essential-Cplusplus-Advice">John M. Dlugosz</a></p>
+<h1 id="another-cool-msvc-flag-d1reporttime">Another cool MSVC flag: /d1reportTime</h1>
+<p><a href="https://aras-p.info/blog/2019/01/21/Another-cool-MSVC-flag-d1reportTime/">https://aras-p.info/blog/2019/01/21/Another-cool-MSVC-flag-d1reportTime/</a></p>
+<h1 id="why-t-tu-not-equivalent-to-t-t-u">Why <span class="title-ref">T t(u)</span> not equivalent to <span class="title-ref">T t = u</span> ?</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/dg4vql/why_t_tu_not_equivalent_to_t_t_u/f39cnsp/">https://www.reddit.com/r/cpp/comments/dg4vql/why_t_tu_not_equivalent_to_t_t_u/f39cnsp/</a></p>
+<p>STL:</p>
+<blockquote>
+<p>C++ initialization is a mess.</p>
+</blockquote>
+<p>Also: <a href="https://stackoverflow.com/questions/1051379/is-there-a-difference-between-copy-initialization-and-direct-initialization">https://stackoverflow.com/questions/1051379/is-there-a-difference-between-copy-initialization-and-direct-initialization</a></p>
 <h1 id="scapix-language-bridge">Scapix language bridge</h1>
 <p><a href="https://www.scapix.com/introduction/">https://www.scapix.com/introduction/</a></p>
 <p><a href="https://github.com/scapix-com/scapix">https://github.com/scapix-com/scapix</a></p>
@@ -130,8 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="enums-warnings-and-default">Enums, warnings, and default</h1>
 <p><a href="https://brevzin.github.io/c++/2019/08/01/enums-default/">https://brevzin.github.io/c++/2019/08/01/enums-default/</a></p>
 <p><a href="https://www.reddit.com/r/cpp/comments/cubah9/enum_switch_warnings/">https://www.reddit.com/r/cpp/comments/cubah9/enum_switch_warnings/</a></p>
-<p>GCC &amp; Clang:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">-Wswitch-enum</span></span></code></pre></div>
+<p>GCC &amp; Clang: <code>-Wswitch-enum</code></p>
 <h1 id="machine-learning-with-c">Machine Learning with C++</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/">Reddit</a></p>
 <ul>
@@ -160,22 +170,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 id="eliminating-the-static-overhead-of-ranges">Eliminating the Static Overhead of Ranges</h1>
 <p><a href="https://vector-of-bool.github.io/2019/10/21/rngs-static-ovr.html">Colby Pike</a>, <a href="https://www.reddit.com/r/cpp/comments/dkxcwd/eliminating_the_static_overhead_of_ranges/">Reddit</a></p>
 <h2 id="without-ranges">Without ranges</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a>vector&lt;string&gt; child_names;</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="cf">for</span> (<span class="kw">auto</span>&amp; person : all_people) {</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">if</span> (person.age &lt; <span class="dv">14</span>) {</span>
-<span id="cb2-4"><a href="#cb2-4"></a>        child_names.push_back(person.name);</span>
-<span id="cb2-5"><a href="#cb2-5"></a>    }</span>
-<span id="cb2-6"><a href="#cb2-6"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a>vector&lt;string&gt; child_names;</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="cf">for</span> (<span class="kw">auto</span>&amp; person : all_people) {</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="cf">if</span> (person.age &lt; <span class="dv">14</span>) {</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        child_names.push_back(person.name);</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    }</span>
+<span id="cb1-6"><a href="#cb1-6"></a>}</span></code></pre></div>
 <h2 id="with-ranges">With ranges</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">auto</span> children_names =</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    all_people</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    | filter([](<span class="at">const</span> <span class="kw">auto</span>&amp; person) { <span class="cf">return</span> person.age &lt; <span class="dv">14</span>; })</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    | transform([](<span class="at">const</span> <span class="kw">auto</span>&amp; person) { <span class="cf">return</span> person.name; })</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    | to_vector;</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">auto</span> children_names =</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    all_people</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    | filter([](<span class="at">const</span> <span class="kw">auto</span>&amp; person) { <span class="cf">return</span> person.age &lt; <span class="dv">14</span>; })</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    | transform([](<span class="at">const</span> <span class="kw">auto</span>&amp; person) { <span class="cf">return</span> person.name; })</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    | to_vector;</span></code></pre></div>
+<h1 id="expression-templates-ranges-and-coroutines">Expression templates, ranges, and coroutines</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Expression_templates">https://en.wikipedia.org/wiki/Expression_templates</a></li>
+<li><a href="https://gieseanw.wordpress.com/2019/10/20/we-dont-need-no-stinking-expression-templates/">We don’t need no stinking expression templates</a> by Andy G
+<ul>
+<li><a href="https://www.reddit.com/r/cpp/comments/dkmbud/we_dont_need_no_stinking_expression_templates/">Reddit</a></li>
+</ul></li>
+</ul>
 <h1 id="change-stl-containers-size-method-to-return-signed-integer">Change STL containers' size() method to return signed integer?</h1>
 <p><a href="https://www.reddit.com/r/cpp/comments/dl7lcu/change_stl_containers_size_method_to_return/">https://www.reddit.com/r/cpp/comments/dl7lcu/change_stl_containers_size_method_to_return/</a></p>
 <h1 id="camomilla-by-vittorio-romeo">Camomilla by Vittorio Romeo</h1>
 <p>A Python script that simplifies C++ compiler errors. Useful when using heavily-templated libraries.</p>
 <p><a href="https://github.com/SuperV1234/camomilla">https://github.com/SuperV1234/camomilla</a></p>
+<h1 id="is-requiring-lambdas-to-explicitly-list-what-they-capture-a-good-coding-standard">Is requiring lambdas to explicitly list what they capture a good coding standard?</h1>
+<p><a href="https://www.reddit.com/r/cpp/comments/dp8p2u/is_requiring_lambdas_to_explicitly_list_what_they/">https://www.reddit.com/r/cpp/comments/dp8p2u/is_requiring_lambdas_to_explicitly_list_what_they/</a></p>
+<h1 id="james-mcnelliss-typename-trick">James McNellis's typename trick</h1>
+<p><img src="img/mcnellis-typename.png" style="width:95.0%" alt="image" /></p>
+<h1 id="quote">Quote</h1>
+<p>The Programmers' Credo:</p>
+<blockquote>
+<p>We do these things not because they are easy, but because we thought they were going to be easy.</p>
+</blockquote>
 </body>
 </html>

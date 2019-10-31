@@ -17,6 +17,27 @@ https://www.reddit.com/r/cpp/comments/dnr2e1/abi_now_or_never/
 `C++ Epochs <https://vittorioromeo.info/index/blog/fixing_cpp_with_epochs.html>`_ won't help as they
 only touch syntax, not ABI.
 
+The Most Essential C++ Advice
+=============================
+
+`John M. Dlugosz <https://www.codeproject.com/Tips/5249485/The-Most-Essential-Cplusplus-Advice>`_
+
+Another cool MSVC flag: /d1reportTime
+=====================================
+
+https://aras-p.info/blog/2019/01/21/Another-cool-MSVC-flag-d1reportTime/
+
+Why `T t(u)` not equivalent to `T t = u` ?
+==========================================
+
+https://www.reddit.com/r/cpp/comments/dg4vql/why_t_tu_not_equivalent_to_t_t_u/f39cnsp/
+
+STL:
+
+  C++ initialization is a mess.
+
+Also: https://stackoverflow.com/questions/1051379/is-there-a-difference-between-copy-initialization-and-direct-initialization
+
 Scapix language bridge
 ======================
 
@@ -67,11 +88,7 @@ https://brevzin.github.io/c++/2019/08/01/enums-default/
 
 https://www.reddit.com/r/cpp/comments/cubah9/enum_switch_warnings/
 
-GCC & Clang:
-
-.. code:: bash
-
-    -Wswitch-enum
+GCC & Clang: ``-Wswitch-enum``
 
 Machine Learning with C++
 =========================
@@ -150,6 +167,13 @@ With ranges
         | transform([](const auto& person) { return person.name; })
         | to_vector;
 
+Expression templates, ranges, and coroutines
+============================================
+
+* https://en.wikipedia.org/wiki/Expression_templates
+* `We don’t need no stinking expression templates <https://gieseanw.wordpress.com/2019/10/20/we-dont-need-no-stinking-expression-templates/>`_ by Andy G
+  * `Reddit <https://www.reddit.com/r/cpp/comments/dkmbud/we_dont_need_no_stinking_expression_templates/>`_
+
 Change STL containers' size() method to return signed integer?
 ==============================================================
 
@@ -161,3 +185,21 @@ Camomilla by Vittorio Romeo
 A Python script that simplifies C++ compiler errors. Useful when using heavily-templated libraries.
 
 https://github.com/SuperV1234/camomilla
+
+Is requiring lambdas to explicitly list what they capture a good coding standard?
+=================================================================================
+
+https://www.reddit.com/r/cpp/comments/dp8p2u/is_requiring_lambdas_to_explicitly_list_what_they/
+
+James McNellis's typename trick
+===============================
+
+.. image:: img/mcnellis-typename.png
+   :width: 95%
+
+Quote
+=====
+
+The Programmers' Credo:
+
+    We do these things not because they are easy, but because we thought they were going to be easy.
