@@ -27,6 +27,12 @@ Another cool MSVC flag: /d1reportTime
 
 https://aras-p.info/blog/2019/01/21/Another-cool-MSVC-flag-d1reportTime/
 
+Introducing C++ Build Insights in Visual Studio
+===============================================
+
+* `VC++ Team Blog <https://devblogs.microsoft.com/cppblog/introducing-c-build-insights/>`_
+* `Reddit <https://www.reddit.com/r/cpp/comments/ds51u0/introducing_c_build_insights_visual_c/>`_
+
 Why `T t(u)` not equivalent to `T t = u` ?
 ==========================================
 
@@ -37,6 +43,13 @@ STL:
   C++ initialization is a mess.
 
 Also: https://stackoverflow.com/questions/1051379/is-there-a-difference-between-copy-initialization-and-direct-initialization
+
+A Universal Async Abstraction for C++
+=====================================
+
+https://cor3ntin.github.io/posts/executors/ by Corentin Jabot
+
+https://wg21.link/P0443R11 The Unified Executors Proposal
 
 Scapix language bridge
 ======================
@@ -190,6 +203,22 @@ Is requiring lambdas to explicitly list what they capture a good coding standard
 =================================================================================
 
 https://www.reddit.com/r/cpp/comments/dp8p2u/is_requiring_lambdas_to_explicitly_list_what_they/
+
+Installing GCC on Windows
+=========================
+
+* `GCC 9 <https://solarianprogrammer.com/2019/11/05/install-gcc-windows/>`_
+* `GCC 8.2 by STL <https://nuwen.net/mingw.html>`_
+
+Mermaid charts
+==============
+
+.. mermaid::
+
+   graph LR
+      A --- B
+      B-->C[fa:fa-ban forbidden]
+      B-->D(fa:fa-spinner);
 
 James McNellis's typename trick
 ===============================
