@@ -112,3 +112,8 @@ public:
 # Florent Castelli: Introduction to CMake
 
 [Video](https://www.youtube.com/watch?v=jt3meXdP-QI)
+
+# Interview with C++ creator Bjarne Stroustrup (1h:45m)
+
+[YouTube: Artificial Intelligence (AI) Podcast, by Lex Friedman](https://youtu.be/uTxRF5ag27A)
+    
