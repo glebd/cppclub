@@ -113,60 +113,13 @@ public:
 
 [Video](https://www.youtube.com/watch?v=jt3meXdP-QI)
 
-# The arrow operator
+# Interview with C++ creator Bjarne Stroustrup (1h:45m)
 
-Thanks to Martin Waplington:
-
-```cpp
-struct A { void foo(); };
-struct B { A* operator->(); };
-struct C { B operator->(); };
-struct D { C operator->(); };
-int main() {
-    D d;
-    d->foo();
-}
-```
-
-# Machine Learning with C++
-
-[Reddit](https://www.reddit.com/r/cpp/comments/cjrrwm/machine_learning_with_cpp/)
-
-* [PyTorch](https://pytorch.org/features -- has a pure C++ front end https://pytorch.org/cppdocs/)
-* [TensorFlow for C++](https://www.tensorflow.org/api_docs/cc)
-* [Shogun](https://www.shogun.ml/)
-
-# The sad history of Unicode printf-style format specifiers in Visual C++
-
-[Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20190830-00/?p=102823)
-
-[Reddit](https://www.reddit.com/r/cpp/comments/cxi2xy/the_sad_history_of_unicode_printfstyle_format/)
-
-# Introducing Magnum Python Bindings
-
-[Blog](https://blog.magnum.graphics/announcements/introducing-python-bindings/)
-
-[PyBind11](https://github.com/pybind/pybind11)
+[YouTube: Artificial Intelligence (AI) Podcast, by Lex Friedman](https://youtu.be/uTxRF5ag27A)
 
 # AnyDuck : A Value Type Erased Type
 
 [Steve Downey](https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/)
-
-# Template meta-programming: Some testing and debugging tricks
-
-[Ivan Cukic](https://cukic.co/2019/02/19/tmp-testing-and-debugging-templates/)
-
-# `using` vs. `typedef`
-
-[Article](https://www.nextptr.com/tutorial/ta1193988140/how-cplusplus-using-or-aliasdeclaration-is-better-than-typedef)
-
-# Berkeley Container Library (BCL)
-
-[GitHub](https://github.com/berkeley-container-library/bcl)
-
-# C++ Interview Questions
-
-[Reddit](https://www.reddit.com/r/cpp/comments/d9xnce/c_interview_questions/)
 
 # A Universal Async Abstraction for C++
 
@@ -209,12 +162,6 @@ auto children_names =
 
 [Reddit](https://www.reddit.com/r/cpp/comments/dl7lcu/change_stl_containers_size_method_to_return/)
 
-# Camomilla by Vittorio Romeo
-
-A Python script that simplifies C++ compiler errors. Useful when using heavily-templated libraries.
-
-[GitHub](https://github.com/SuperV1234/camomilla)
-
 # Is requiring lambdas to explicitly list what they capture a good coding standard?
 
 [Reddit](https://www.reddit.com/r/cpp/comments/dp8p2u/is_requiring_lambdas_to_explicitly_list_what_they/)
@@ -223,3 +170,24 @@ A Python script that simplifies C++ compiler errors. Useful when using heavily-t
 
 * [GCC 9](https://solarianprogrammer.com/2019/11/05/install-gcc-windows/)
 * [GCC 8.2 by STL](https://nuwen.net/mingw.html)
+
+# The arrow operator (1/2)
+
+[StackOverflow](https://stackoverflow.com/a/10678920/10154):
+
+> The `operator->` has special semantics in the language in that, when overloaded, it reapplies itself to the result. While the rest of the operators are applied only once, `operator->` will be applied by the compiler as many times as needed to get to a raw pointer and once more to access the memory referred by that pointer.
+
+# The arrow operator (2/2)
+
+```cpp
+struct A { void foo(); };
+struct B { A* operator->(); };
+struct C { B operator->(); };
+struct D { C operator->(); };
+int main() {
+    D d;
+    d->foo();
+}
+```
+
+Thanks to Martin Waplington for suggesting this.
