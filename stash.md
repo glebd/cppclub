@@ -113,44 +113,11 @@ public:
 
 [Video](https://www.youtube.com/watch?v=jt3meXdP-QI)
 
-# Interview with C++ creator Bjarne Stroustrup (1h:45m)
-
-[YouTube: Artificial Intelligence (AI) Podcast, by Lex Friedman](https://youtu.be/uTxRF5ag27A)
-
-# AnyDuck : A Value Type Erased Type
-
-[Steve Downey](https://www.sdowney.org/2019/07/anyduck-a-value-type-erased-type/)
-
 # A Universal Async Abstraction for C++
 
 [Corentin Jabot](https://cor3ntin.github.io/posts/executors/)
 
 [P0443R11 The Unified Executors Proposal](https://wg21.link/P0443R11)
-
-# Eliminating the Static Overhead of Ranges
-
-[Colby Pike](https://vector-of-bool.github.io/2019/10/21/rngs-static-ovr.html), [Reddit](https://www.reddit.com/r/cpp/comments/dkxcwd/eliminating_the_static_overhead_of_ranges/)
-
-## Without ranges
-
-```cpp
-vector<string> child_names;
-for (auto& person : all_people) {
-    if (person.age < 14) {
-        child_names.push_back(person.name);
-    }
-}
-```
-
-## With ranges
-
-```cpp
-auto children_names =
-    all_people
-    | filter([](const auto& person) { return person.age < 14; })
-    | transform([](const auto& person) { return person.name; })
-    | to_vector;
-```
 
 # Expression templates, ranges, and coroutines
 
@@ -166,28 +133,63 @@ auto children_names =
 
 [Reddit](https://www.reddit.com/r/cpp/comments/dp8p2u/is_requiring_lambdas_to_explicitly_list_what_they/)
 
-# Installing GCC on Windows
+# Towards a standard unit systems library
 
-* [GCC 9](https://solarianprogrammer.com/2019/11/05/install-gcc-windows/)
-* [GCC 8.2 by STL](https://nuwen.net/mingw.html)
+[P1930R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1930r0.pdf)
 
-# The arrow operator (1/2)
+[Reddit](https://www.reddit.com/r/cpp/comments/dpmsfg/towards_a_standard_unit_systems_library/)
 
-[StackOverflow](https://stackoverflow.com/a/10678920/10154):
+[Robert Ramey](https://www.reddit.com/r/cpp/comments/dpmsfg/towards_a_standard_unit_systems_library/f5xh1oe?utm_source=share&utm_medium=web2x):
 
-> The `operator->` has special semantics in the language in that, when overloaded, it reapplies itself to the result. While the rest of the operators are applied only once, `operator->` will be applied by the compiler as many times as needed to get to a raw pointer and once more to access the memory referred by that pointer.
+> The value of a paper like this would be to narrow the scope or domain of a problem to something that would be useful component in solving bigger problems. This paper does the opposite - expanding the domain to encompass the whole world of physics.
 
-# The arrow operator (2/2)
+# C++ `std::string_view` for better performance: An example use case
 
-```cpp
-struct A { void foo(); };
-struct B { A* operator->(); };
-struct C { B operator->(); };
-struct D { C operator->(); };
-int main() {
-    D d;
-    d->foo();
-}
+[Article](https://www.nextptr.com/tutorial/ta1217154594/cplusplus-stdstring_view-for-better-performance-an-example-use-case)
+
+[Reddit](https://www.reddit.com/r/cpp/comments/dosgnp/c_stdstring_view_for_better_performance_an/)
+
+[Arthur O'Dwyer: `std::string_view` is a borrow type](https://quuxplusone.github.io/blog/2018/03/27/string-view-is-a-borrow-type/)
+
+> Borrow types are essentially “borrowed” references to existing objects. They lack ownership; they are short-lived; they generally can do without an assignment operator. They generally appear only in function parameter lists; because they lack ownership semantics, they generally cannot be stored in data structures or returned safely from functions.
+
+[cppreference: `std::basic_string_view` (C++17)](https://en.cppreference.com/w/cpp/string/basic_string_view)
+
+# Scott Meyers's guideline "Make non-leaf classes abstract"
+
+[Reddit](https://www.reddit.com/r/cpp/comments/dz26kd/should_we_reevaluate_scott_meyerss_guideline_make/)
+
+# Empty struct size in C and C++
+
+![](img/c-cpp-empty-struct-size.png)
+
+# Hello World with C++2a modules
+
+[Arthur O'Dwyer](https://quuxplusone.github.io/blog/2019/11/07/modular-hello-world/)
+
+> Here’s how to build a “Hello world” program using Clang’s implementation of C++2a Modules, as it currently stands as of November 2019.
+
+[Reddit](https://www.reddit.com/r/cpp/comments/dtbqe9/hello_world_with_c2a_modules/)
+
+# JSON Library from the makers of Boost.Beast
+
+Vinnie Falcou:
+
+> A survey of existing JSON libraries shows impressive diversity and features. However, no library is known to meet all of the design goals mentioned here. In particular, we know of no library that supports incremental parsing and serialization, and also supports custom allocators robustly.
+
+[Reddit](https://www.reddit.com/r/cpp/comments/e42ovz/new_json_library_from_the_makers_of_boostbeast/) --- [GitHub](https://github.com/vinniefalco/json/) (C++11, Boost License) --- [Docs](http://vinniefalco.github.io/doc/json/index.html) --- [Benchmarks](http://vinniefalco.github.io/doc/json/json/benchmarks.html)
+
+> This is currently NOT an official Boost library.
+
+# Beginner's Guide to Linkers
+
+[http://www.lurklurk.org/linkers/linkers.html](http://www.lurklurk.org/linkers/linkers.html)
+
+```bash
+g++ -o test1 test1a.o test1b.o
+test1a.o(.text+0x18): In function `main':
+: undefined reference to `findmax(int, int)'
+collect2: ld returned 1 exit status
 ```
 
-Thanks to Martin Waplington for suggesting this.
+> If your reaction to this is 'almost certainly missing extern "C"' then you probably already know everything in this article.
