@@ -113,25 +113,11 @@ public:
 
 [Video](https://www.youtube.com/watch?v=jt3meXdP-QI)
 
-# A Universal Async Abstraction for C++
-
-[Corentin Jabot](https://cor3ntin.github.io/posts/executors/)
-
-[P0443R11 The Unified Executors Proposal](https://wg21.link/P0443R11)
-
 # Expression templates, ranges, and coroutines
 
 * [Wikipedia](https://en.wikipedia.org/wiki/Expression_templates)
 * [We don’t need no stinking expression templates](https://gieseanw.wordpress.com/2019/10/20/we-dont-need-no-stinking-expression-templates/) by Andy G
   * [Reddit](https://www.reddit.com/r/cpp/comments/dkmbud/we_dont_need_no_stinking_expression_templates/)
-
-# Change standard containers' `size()` method to return signed integer?
-
-[Reddit](https://www.reddit.com/r/cpp/comments/dl7lcu/change_stl_containers_size_method_to_return/)
-
-# Is requiring lambdas to explicitly list what they capture a good coding standard?
-
-[Reddit](https://www.reddit.com/r/cpp/comments/dp8p2u/is_requiring_lambdas_to_explicitly_list_what_they/)
 
 # Towards a standard unit systems library
 
@@ -158,10 +144,6 @@ public:
 # Scott Meyers's guideline "Make non-leaf classes abstract"
 
 [Reddit](https://www.reddit.com/r/cpp/comments/dz26kd/should_we_reevaluate_scott_meyerss_guideline_make/)
-
-# Empty struct size in C and C++
-
-![](img/c-cpp-empty-struct-size.png)
 
 # Hello World with C++2a modules
 
