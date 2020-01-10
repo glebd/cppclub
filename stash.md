@@ -56,10 +56,6 @@ public:
 
 * [Reddit](https://www.reddit.com/r/cpp/comments/7971ws/using_metaprogramming_for_pimpl_idiom/)
 
-# A hidden gem: `inner_product`
-
-* [Article](https://marcoarena.wordpress.com/2017/11/14/a-hidden-gem-inner_product/)
-
 # Your own type predicate
 
 * [Part 1](https://akrzemi1.wordpress.com/2017/12/02/your-own-type-predicate/)
@@ -119,16 +115,6 @@ public:
 * [We don’t need no stinking expression templates](https://gieseanw.wordpress.com/2019/10/20/we-dont-need-no-stinking-expression-templates/) by Andy G
   * [Reddit](https://www.reddit.com/r/cpp/comments/dkmbud/we_dont_need_no_stinking_expression_templates/)
 
-# Towards a standard unit systems library
-
-[P1930R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1930r0.pdf)
-
-[Reddit](https://www.reddit.com/r/cpp/comments/dpmsfg/towards_a_standard_unit_systems_library/)
-
-[Robert Ramey](https://www.reddit.com/r/cpp/comments/dpmsfg/towards_a_standard_unit_systems_library/f5xh1oe?utm_source=share&utm_medium=web2x):
-
-> The value of a paper like this would be to narrow the scope or domain of a problem to something that would be useful component in solving bigger problems. This paper does the opposite - expanding the domain to encompass the whole world of physics.
-
 # C++ `std::string_view` for better performance: An example use case
 
 [Article](https://www.nextptr.com/tutorial/ta1217154594/cplusplus-stdstring_view-for-better-performance-an-example-use-case)
@@ -141,37 +127,22 @@ public:
 
 [cppreference: `std::basic_string_view` (C++17)](https://en.cppreference.com/w/cpp/string/basic_string_view)
 
-# Scott Meyers's guideline "Make non-leaf classes abstract"
+# A hidden gem: `inner_product`
 
-[Reddit](https://www.reddit.com/r/cpp/comments/dz26kd/should_we_reevaluate_scott_meyerss_guideline_make/)
+* [Article](https://marcoarena.wordpress.com/2017/11/14/a-hidden-gem-inner_product/)
 
-# Hello World with C++2a modules
+# A hidden gem: `inner_product`
 
-[Arthur O'Dwyer](https://quuxplusone.github.io/blog/2019/11/07/modular-hello-world/)
+![](img/hoekstra-inner_product.png){width=50%}
 
-> Here’s how to build a “Hello world” program using Clang’s implementation of C++2a Modules, as it currently stands as of November 2019.
+# Lingo 0.1.0: Text encoding for modern C++
 
-[Reddit](https://www.reddit.com/r/cpp/comments/dtbqe9/hello_world_with_c2a_modules/)
+* [GitHub: C++11, MIT](https://github.com/rick-de-water/Lingo)
+* [Reddit](https://www.reddit.com/r/cpp/comments/ekhkk6/lingo_010_text_encoding_for_modern_c/)
 
-# JSON Library from the makers of Boost.Beast
+# Argumentum
 
-Vinnie Falcou:
+> Argumentum is a C++17 library for writing command-line program interfaces, inspired by Python argparse
 
-> A survey of existing JSON libraries shows impressive diversity and features. However, no library is known to meet all of the design goals mentioned here. In particular, we know of no library that supports incremental parsing and serialization, and also supports custom allocators robustly.
-
-[Reddit](https://www.reddit.com/r/cpp/comments/e42ovz/new_json_library_from_the_makers_of_boostbeast/) --- [GitHub](https://github.com/vinniefalco/json/) (C++11, Boost License) --- [Docs](http://vinniefalco.github.io/doc/json/index.html) --- [Benchmarks](http://vinniefalco.github.io/doc/json/json/benchmarks.html)
-
-> This is currently NOT an official Boost library.
-
-# Beginner's Guide to Linkers
-
-[http://www.lurklurk.org/linkers/linkers.html](http://www.lurklurk.org/linkers/linkers.html)
-
-```bash
-g++ -o test1 test1a.o test1b.o
-test1a.o(.text+0x18): In function `main':
-: undefined reference to `findmax(int, int)'
-collect2: ld returned 1 exit status
-```
-
-> If your reaction to this is 'almost certainly missing extern "C"' then you probably already know everything in this article.
+* [GitHub: C++17, MPL](https://github.com/mmahnic/argumentum)
+* [Reddit](https://www.reddit.com/r/cpp/comments/ekgdfr/argumentum_is_a_c17_library_for_writing/)

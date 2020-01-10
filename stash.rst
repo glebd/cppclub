@@ -121,11 +121,6 @@ Error Handling in C++ or: Why You Should Use Eithers in Favor of Exceptions and 
 https://buckaroo.pm/posts/error-handling-in-cpp/
 https://www.reddit.com/r/cpp/comments/aqir7n/error_handling_in_c_eithers_vs_exceptions_vs/
 
-What is Type Erasure?
----------------------
-
-https://quuxplusone.github.io/blog/2019/03/18/what-is-type-erasure/
-
 Networking TS + Beast
 ---------------------
 
