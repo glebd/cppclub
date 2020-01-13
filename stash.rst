@@ -302,13 +302,6 @@ Getting in trouble with mixed comparisons
 
 https://brevzin.github.io/c++/2018/12/09/mixed-comparisons/
 
-Modules are Coming - Bryce Adelstein Lelbach
---------------------------------------------
-
-https://www.youtube.com/watch?v=bDTm6y6fNSU
-
-https://www.reddit.com/r/cpp/comments/cd11ep/modules_are_coming_core_c_2019_bryce_adelstein/
-
 C++20: The small things
 -----------------------
 
