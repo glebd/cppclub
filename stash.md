@@ -114,23 +114,3 @@ public:
 * [Wikipedia](https://en.wikipedia.org/wiki/Expression_templates)
 * [We don’t need no stinking expression templates](https://gieseanw.wordpress.com/2019/10/20/we-dont-need-no-stinking-expression-templates/) by Andy G
   * [Reddit](https://www.reddit.com/r/cpp/comments/dkmbud/we_dont_need_no_stinking_expression_templates/)
-
-# A hidden gem: `inner_product`
-
-* [Article](https://marcoarena.wordpress.com/2017/11/14/a-hidden-gem-inner_product/)
-
-# A hidden gem: `inner_product`
-
-![](img/hoekstra-inner_product.png){width=50%}
-
-# Lingo 0.1.0: Text encoding for modern C++
-
-* [GitHub: C++11, MIT](https://github.com/rick-de-water/Lingo)
-* [Reddit](https://www.reddit.com/r/cpp/comments/ekhkk6/lingo_010_text_encoding_for_modern_c/)
-
-# Argumentum
-
-> Argumentum is a C++17 library for writing command-line program interfaces, inspired by Python argparse
-
-* [GitHub: C++17, MPL](https://github.com/mmahnic/argumentum)
-* [Reddit](https://www.reddit.com/r/cpp/comments/ekgdfr/argumentum_is_a_c17_library_for_writing/)
