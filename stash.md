@@ -51,10 +51,6 @@
 * [Article](https://sheep.horse/2018/5/converting_enum_classes_to_strings_and_back_in_c++.html)
 * [Reddit](https://www.reddit.com/r/cpp/comments/8hwk91/converting_enum_classes_to_strings_and_back_in_c/)
 
-# Unreal Engine Gameplay Framework Primer for C++
-
-* [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
-
 # Rvalues redefined
 
 * [Post](https://akrzemi1.wordpress.com/2018/05/16/rvalues-redefined/)
