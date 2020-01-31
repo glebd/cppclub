@@ -51,10 +51,6 @@
 * [Article](https://sheep.horse/2018/5/converting_enum_classes_to_strings_and_back_in_c++.html)
 * [Reddit](https://www.reddit.com/r/cpp/comments/8hwk91/converting_enum_classes_to_strings_and_back_in_c/)
 
-# Unreal Engine Gameplay Framework Primer for C++
-
-* [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
-
 # Rvalues redefined
 
 * [Post](https://akrzemi1.wordpress.com/2018/05/16/rvalues-redefined/)
@@ -109,11 +105,6 @@
 
 * [CppCon 2019: Robert Schumacher “How to Herd 1,000 Libraries”](https://youtu.be/Lb3hlLlHTrs)
 
-# Lucid C++ index
-
-* [Lucid C++ index](https://lucidindex.com/cpp)
-* [Reddit](https://www.reddit.com/r/cpp/comments/epikzx/i_built_a_site_to_search_c_libraries_based_on_the/)
-
 # A hidden gem: `inner_product`
 
 * [Article](https://marcoarena.wordpress.com/2017/11/14/a-hidden-gem-inner_product/)
@@ -122,33 +113,11 @@
 
 ![](img/hoekstra-inner_product.png){width=50%}
 
-# Lingo 0.1.0: Text encoding for modern C++
-
-* [GitHub: C++11, MIT](https://github.com/rick-de-water/Lingo)
-* [Reddit](https://www.reddit.com/r/cpp/comments/ekhkk6/lingo_010_text_encoding_for_modern_c/)
-
-# Argumentum
-
-> Argumentum is a C++17 library for writing command-line program interfaces, inspired by Python argparse
-
-* [GitHub: C++17, MPL](https://github.com/mmahnic/argumentum)
-* [Reddit](https://www.reddit.com/r/cpp/comments/ekgdfr/argumentum_is_a_c17_library_for_writing/)
-
 # Structured Exceptions (Win32) and C++
 
 * [Raymond Chen: How can I handle both structured exceptions and C++ exceptions potentially coming from the same source?](https://devblogs.microsoft.com/oldnewthing/20200116-00/?p=103333)
   * [Reddit](https://www.reddit.com/r/cpp/comments/epwpx3/how_can_i_handle_both_structured_exceptions_and_c/)
 * [Raymond Chen: Can I throw a C++ exception from a structured exception?](https://devblogs.microsoft.com/oldnewthing/?p=96706)
-
-# Book: C++ Move Semantics - The Complete Guide, by Nicolai Josuttis
-
-* [Website](http://www.cppmove.com)
-
-> Move semantics, introduced with C++11, has become a hallmark of modern C++ programming. However, it also complicates the language in many ways. Even after several years of support of move semantics experienced programmers struggle with all the details of move semantics. And style guides still don't recommend the right consequences for programming even of trivial classes.
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/ek32mq/c_move_semantics_the_complete_guide/)
-
-> Happy there is a book. Not happy this requires a book.
 
 # [C++ coroutines] Initial implementation pushed to GCC master
 
@@ -181,3 +150,15 @@ public:
    }
 };
 ```
+
+# Unreal Engine Gameplay Framework Primer for C++
+
+* [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
+
+# Twitter: Pure virtual function syntax (1/2)
+
+![](img/pure-func-1.jpeg)
+
+# Twitter: Pure virtual function syntax (2/2)
+
+![](img/pure-func-2.jpeg)
