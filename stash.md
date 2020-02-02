@@ -67,10 +67,6 @@
 
 * [Post](http://www.fluentcpp.com/2018/04/27/tag-dispatching/)
 
-# Declarative Functional APIs – A.K.A. Abusing Lambda Parameters
-
-* [Post](https://philippegroarke.com/blog/2018/05/19/declarative-functional-apis-a-k-a-abusing-lambda-parameters/?utm_source=newsletter_mailer&utm_medium=email&utm_campaign=weekly)
-
 # Embracing Algorithms, by Dave Abrahams (WWDC2018)
 
 * [Video](https://developer.apple.com/videos/play/wwdc2018/223/)
@@ -85,80 +81,3 @@
 # Florent Castelli: Introduction to CMake
 
 [Video](https://www.youtube.com/watch?v=jt3meXdP-QI)
-
-# Expression templates, ranges, and coroutines
-
-* [Wikipedia](https://en.wikipedia.org/wiki/Expression_templates)
-* [We don’t need no stinking expression templates](https://gieseanw.wordpress.com/2019/10/20/we-dont-need-no-stinking-expression-templates/) by Andy G
-  * [Reddit](https://www.reddit.com/r/cpp/comments/dkmbud/we_dont_need_no_stinking_expression_templates/)
-
-# A new decade, a new tool: **libman**
-
-* [Colby Pike (vector-of-bool)](https://vector-of-bool.github.io/2020/01/06/new-decade.html)
-* [Reddit](https://www.reddit.com/r/cpp/comments/ekwb4y/a_new_decade_a_new_tool/)
-* [GitHub](https://github.com/vector-of-bool/libman)
-* [Specification](https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/libman/develop/data/spec.bs)
-
-**libman** is a new level of indirection between package management and build systems.
-
-**dds** is Drop-Dead Simple build and package manager.
-
-* [CppCon 2019: Robert Schumacher “How to Herd 1,000 Libraries”](https://youtu.be/Lb3hlLlHTrs)
-
-# A hidden gem: `inner_product`
-
-* [Article](https://marcoarena.wordpress.com/2017/11/14/a-hidden-gem-inner_product/)
-
-# A hidden gem: `inner_product`
-
-![](img/hoekstra-inner_product.png){width=50%}
-
-# Structured Exceptions (Win32) and C++
-
-* [Raymond Chen: How can I handle both structured exceptions and C++ exceptions potentially coming from the same source?](https://devblogs.microsoft.com/oldnewthing/20200116-00/?p=103333)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/epwpx3/how_can_i_handle_both_structured_exceptions_and_c/)
-* [Raymond Chen: Can I throw a C++ exception from a structured exception?](https://devblogs.microsoft.com/oldnewthing/?p=96706)
-
-# [C++ coroutines] Initial implementation pushed to GCC master
-
-* [Message](https://gcc.gnu.org/ml/gcc-patches/2020-01/msg01096.html)
-* [Reddit](https://www.reddit.com/r/cpp/comments/eqrv1n/gcc_c_coroutines_initial_implementation_pushed_to/)
-
-> This is not enabled by default (even for -std=c++2a), it needs **-fcoroutines**
-
-# Concepts pushed to Clang master
-
-![](img/concepts-clang-master.jpg)
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/esamj3/concepts_merged_to_clang_trunk/)
-
-# "Making new friends" idiom by Dan Saks
-
-[Wikibooks](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Making_New_Friends)
-
-> The goal is to simplify creation of friend functions for a class template.
-
-```cpp
-template<typename T>
-class Foo {
-   T value;
-public:
-   Foo(const T& t) { value = t; }
-   friend ostream& operator <<(ostream& os, const Foo<T>& b)
-   {
-      return os << b.value;
-   }
-};
-```
-
-# Unreal Engine Gameplay Framework Primer for C++
-
-* [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
-
-# Twitter: Pure virtual function syntax (1/2)
-
-![](img/pure-func-1.jpeg)
-
-# Twitter: Pure virtual function syntax (2/2)
-
-![](img/pure-func-2.jpeg)
