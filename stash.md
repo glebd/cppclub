@@ -90,30 +90,20 @@
 * [Part 2](https://cor3ntin.github.io/posts/iouring/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/ewr18m/a_universal_io_abstraction_for_c/)
 
-## Structured Exceptions (Win32) and C++
+## EnTT
 
-* [Raymond Chen: How can I handle both structured exceptions and C++ exceptions potentially coming from the same source?](https://devblogs.microsoft.com/oldnewthing/20200116-00/?p=103333)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/epwpx3/how_can_i_handle_both_structured_exceptions_and_c/)
-* [Raymond Chen: Can I throw a C++ exception from a structured exception?](https://devblogs.microsoft.com/oldnewthing/?p=96706)
+A header-only, tiny and easy to use library for game programming and much more written in modern C++, mainly known for its innovative entity-component-system (ECS) model.
 
-## "Making new friends" idiom by Dan Saks
+* [GitHub](https://github.com/skypjack/entt) (C++17, MIT)
+* [Reddit](https://www.reddit.com/r/programming/comments/f7twdf/entt_v330_is_out_gaming_meets_modern_c/)
 
-[Wikibooks](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Making_New_Friends)
+## Unreal Engine Gameplay Framework Primer for C++
 
-> The goal is to simplify creation of friend functions for a class template.
+* [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
 
-```cpp
-template<typename T>
-class Foo {
-   T value;
-public:
-   Foo(const T& t) { value = t; }
-   friend ostream& operator <<(ostream& os, const Foo<T>& b)
-   {
-      return os << b.value;
-   }
-};
-```
+## The C++ Lifetime Profile: How It Plans to Make C++ Code Safer
+
+* [Daniel Martin](https://pspdfkit.com/blog/2020/the-cpp-lifetime-profile/)
 
 ## A new decade, a new tool: **libman**
 
@@ -128,6 +118,26 @@ public:
 
 * [CppCon 2019: Robert Schumacher “How to Herd 1,000 Libraries”](https://youtu.be/Lb3hlLlHTrs)
 
+## "Making new friends" idiom by Dan Saks
+
+[Wikibooks](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Making_New_Friends)
+
+> The goal is to simplify creation of friend functions for a class template.
+
+```cpp
+#include <iostream>
+template<typename T>
+class Foo {
+   T value;
+public:
+   Foo(const T& t) { value = t; }
+   friend std::ostream& operator <<(std::ostream& os, const Foo<T>& b)
+   {
+      return os << b.value;
+   }
+};
+```
+
 ## A hidden gem: `inner_product` (1/2)
 
 * [Article](https://marcoarena.wordpress.com/2017/11/14/a-hidden-gem-inner_product/)
@@ -136,29 +146,8 @@ public:
 
 ![Tweet](img/hoekstra-inner_product.png){width=50%}
 
-## Unreal Engine Gameplay Framework Primer for C++
+## Structured Exceptions (Win32) and C++
 
-* [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
-
-## The C++ Lifetime Profile: How It Plans to Make C++ Code Safer
-
-* [Daniel Martin](https://pspdfkit.com/blog/2020/the-cpp-lifetime-profile/)
-
-## EnTT
-
-A header-only, tiny and easy to use library for game programming and much more written in modern C++, mainly known for its innovative entity-component-system (ECS) model.
-
-* [GitHub](https://github.com/skypjack/entt) (C++17, MIT)
-* [Reddit](https://www.reddit.com/r/programming/comments/f7twdf/entt_v330_is_out_gaming_meets_modern_c/)
-
-## Favourite "You can do that in C++?! Neat!" moments
-
-[Reddit](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/)
-
-[Range-for loops](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi7oyou/), [fold expressions](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi7o43i/), [streams](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi87f6y/), [template definition in .cpp file](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi87nhw/), [RAII](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi8ssoj/), [operator overloading](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi89ryw/), [function/constructor `try` block](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi8h075/), [placement `new`](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi8i7cj/), [structured bindings](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi8odaz/), [taking address of a label](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi7qrbv/), [variadic templates](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi7oflw/), [overloading `operator,`](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi93qjh/), [algorithms](https://www.reddit.com/r/cpp/comments/f6wlbm/what_arewere_your_favourite_you_can_do_that_neat/fi9fm9w/), and many more.
-
-## Quote
-
-Oscar Godson:
-
-> One of the best programming skills you can have is knowing when to walk away for a while.
+* [Raymond Chen: How can I handle both structured exceptions and C++ exceptions potentially coming from the same source?](https://devblogs.microsoft.com/oldnewthing/20200116-00/?p=103333)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/epwpx3/how_can_i_handle_both_structured_exceptions_and_c/)
+* [Raymond Chen: Can I throw a C++ exception from a structured exception?](https://devblogs.microsoft.com/oldnewthing/?p=96706)
