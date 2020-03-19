@@ -90,6 +90,43 @@
 * [Part 2](https://cor3ntin.github.io/posts/iouring/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/ewr18m/a_universal_io_abstraction_for_c/)
 
+## C++ links: standard & standardization
+
+* [GitHub](https://github.com/MattPD/cpplinks/blob/master/std.md)
+
+## C++ links: Executables - Linking and Loading
+
+* [GitHub](https://github.com/MattPD/cpplinks/blob/master/executables.linking_loading.md)
+
+## C++ YouTubers
+
+[Reddit](https://www.reddit.com/r/cpp/comments/f79ws0/cpp_youtubers/)
+
+* [Casey Muratori aka HandmadeHero](https://www.youtube.com/user/handmadeheroarchive)
+* [C++ Weekly by Jason Turner](https://www.youtube.com/user/lefticus1)
+* [Jonathan Blow](https://www.youtube.com/user/jblow888)
+* [TheChernoProject](https://www.youtube.com/user/TheChernoProject)
+* [Bo Quian](https://www.youtube.com/channel/UCEOGtxYTB6vo6MQ-WQ9W_nQ)
+* [Hopson](https://www.youtube.com/channel/UCeQhZOvNKSBRU0Mdg7V44wA)
+* [OneLoneCoder](https://www.youtube.com/channel/UC-yuWVUplUJZvieEligKBkA)
+
+## Analyze your builds programmatically with the C++ Build Insights SDK
+
+* [MSVC Blog](https://devblogs.microsoft.com/cppblog/analyze-your-builds-programmatically-with-the-c-build-insights-sdk/)
+* [Reddit](https://www.reddit.com/r/cpp/comments/fegtup/analyze_your_builds_programmatically_with_the_c/)
+* [vcperf on GitHub](https://github.com/microsoft/vcperf)
+
+## for_each vs for
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/fadeu2/for_each_vs_for/)
+
+## TOML++
+
+* [toml++](https://marzer.github.io/tomlplusplus/) (C++17, MIT)
+* [Reddit](https://www.reddit.com/r/programming/comments/ffk4gf/toml_toml_config_parsing_and_serializing_library/)
+
+See also: [TOML Spec V0.5.0](https://github.com/toml-lang/toml/blob/master/versions/en/toml-v0.5.0.md)
+
 ## EnTT
 
 A header-only, tiny and easy to use library for game programming and much more written in modern C++, mainly known for its innovative entity-component-system (ECS) model.
@@ -104,6 +141,19 @@ A header-only, tiny and easy to use library for game programming and much more w
 ## The C++ Lifetime Profile: How It Plans to Make C++ Code Safer
 
 * [Daniel Martin](https://pspdfkit.com/blog/2020/the-cpp-lifetime-profile/)
+
+## The C++ rvalue lifetime disaster, by Arno Schödl
+
+* [Video](https://www.youtube.com/watch?v=s9vBk5CxFyY)
+* [Article by Arthur O'Dwyer](https://quuxplusone.github.io/blog/2020/03/04/rvalue-lifetime-disaster/)
+* [Reddit](https://www.reddit.com/r/cpp/comments/fdi5pb/thoughts_on_the_c_rvalue_lifetime_disaster/)
+
+See also: [Abseil Tip of the Week #107: Reference Lifetime Extension](https://abseil.io/tips/107)
+
+```cpp
+std::string Foo::GetName();
+const std::string& name = obj.GetName();  // Is this safe/legal?
+```
 
 ## A new decade, a new tool: **libman**
 
@@ -151,3 +201,25 @@ public:
 * [Raymond Chen: How can I handle both structured exceptions and C++ exceptions potentially coming from the same source?](https://devblogs.microsoft.com/oldnewthing/20200116-00/?p=103333)
   * [Reddit](https://www.reddit.com/r/cpp/comments/epwpx3/how_can_i_handle_both_structured_exceptions_and_c/)
 * [Raymond Chen: Can I throw a C++ exception from a structured exception?](https://devblogs.microsoft.com/oldnewthing/?p=96706)
+
+## How to Pass Class Member Functions to STL Algorithms
+
+* [Article by Jonathan Boccara](https://www.fluentcpp.com/2020/03/06/how-to-pass-class-member-functions-to-stl-algorithms/)
+* [Reddit](https://www.reddit.com/r/cpp/comments/febn53/fluent_c_how_to_pass_class_member_functions_to/)
+
+[STL writes](https://www.reddit.com/r/cpp/comments/febn53/fluent_c_how_to_pass_class_member_functions_to/fjn009x?utm_source=share&utm_medium=web2x):
+
+> `mem_fn` is less typing, but lambdas are higher performance (MSVC’s optimizer can’t see through `mem_fn`’s data member) and can handle overloaded/templated member functions much more easily.
+
+## Parameter passing, by Raymond Chen, Microsoft
+
+* [If you plan on keeping the parameter anyway, then there’s no need to have separate `T const&` and `T&&` overloads](https://devblogs.microsoft.com/oldnewthing/20200219-00/?p=103452)
+* [If you’re not keeping the parameter, then you still want to have separate `T const&` and `T&&` overloads](https://devblogs.microsoft.com/oldnewthing/20200220-00/?p=103463)
+* [Reddit](https://www.reddit.com/r/cpp/comments/f73g4a/if_youre_not_keeping_the_parameter_then_you_still/)
+
+## Modern std::byte stream IO for C++
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/fe72kp/modern_stdbyte_stream_io_for_c/)
+* [Paper PDF](https://github.com/Lyberta/cpp-io/raw/master/generated/Paper.pdf)
+* [Paper GitHub](https://github.com/Lyberta/cpp-io)
+* [Reference implementation](https://github.com/Lyberta/cpp-io-impl)
