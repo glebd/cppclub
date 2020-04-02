@@ -90,53 +90,26 @@
 * [Part 2](https://cor3ntin.github.io/posts/iouring/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/ewr18m/a_universal_io_abstraction_for_c/)
 
-## C++ links: standard & standardization
+## Follow-up: How I Declare My class And Why, by Howard Hinnant
 
-* [GitHub](https://github.com/MattPD/cpplinks/blob/master/std.md)
+* [Howard Hinnant](http://howardhinnant.github.io/classdecl.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/f918oz/how_i_declare_my_class_and_why_howard_e_hinnant/)
+  * [Coding guidelines](http://howardhinnant.github.io/coding_guidelines.html)
 
-## C++ links: Executables - Linking and Loading
+Order:
 
-* [GitHub](https://github.com/MattPD/cpplinks/blob/master/executables.linking_loading.md)
+* data members
+* destructor
+* default constructor
+* copy special members
+* move special members
+* other constructors
+* other member functions
 
-## C++ YouTubers
+## Follow-up: References, simply, by Herb Sutter
 
-[Reddit](https://www.reddit.com/r/cpp/comments/f79ws0/cpp_youtubers/)
-
-* [Casey Muratori aka HandmadeHero](https://www.youtube.com/user/handmadeheroarchive)
-* [C++ Weekly by Jason Turner](https://www.youtube.com/user/lefticus1)
-* [Jonathan Blow](https://www.youtube.com/user/jblow888)
-* [TheChernoProject](https://www.youtube.com/user/TheChernoProject)
-* [Bo Quian](https://www.youtube.com/channel/UCEOGtxYTB6vo6MQ-WQ9W_nQ)
-* [Hopson](https://www.youtube.com/channel/UCeQhZOvNKSBRU0Mdg7V44wA)
-* [OneLoneCoder](https://www.youtube.com/channel/UC-yuWVUplUJZvieEligKBkA)
-
-## Analyze your builds programmatically with the C++ Build Insights SDK
-
-* [MSVC Blog](https://devblogs.microsoft.com/cppblog/analyze-your-builds-programmatically-with-the-c-build-insights-sdk/)
-* [Reddit](https://www.reddit.com/r/cpp/comments/fegtup/analyze_your_builds_programmatically_with_the_c/)
-* [vcperf on GitHub](https://github.com/microsoft/vcperf)
-
-## for_each vs for
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/fadeu2/for_each_vs_for/)
-
-## TOML++
-
-* [toml++](https://marzer.github.io/tomlplusplus/) (C++17, MIT)
-* [Reddit](https://www.reddit.com/r/programming/comments/ffk4gf/toml_toml_config_parsing_and_serializing_library/)
-
-See also: [TOML Spec V0.5.0](https://github.com/toml-lang/toml/blob/master/versions/en/toml-v0.5.0.md)
-
-## EnTT
-
-A header-only, tiny and easy to use library for game programming and much more written in modern C++, mainly known for its innovative entity-component-system (ECS) model.
-
-* [GitHub](https://github.com/skypjack/entt) (C++17, MIT)
-* [Reddit](https://www.reddit.com/r/programming/comments/f7twdf/entt_v330_is_out_gaming_meets_modern_c/)
-
-## Unreal Engine Gameplay Framework Primer for C++
-
-* [Article](http://www.tomlooman.com/ue4-gameplay-framework/)
+* [Herb Sutter](https://herbsutter.com/2020/02/23/references-simply/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/f8jrfk/references_simply/)
 
 ## The C++ Lifetime Profile: How It Plans to Make C++ Code Safer
 
@@ -223,3 +196,14 @@ public:
 * [Paper PDF](https://github.com/Lyberta/cpp-io/raw/master/generated/Paper.pdf)
 * [Paper GitHub](https://github.com/Lyberta/cpp-io)
 * [Reference implementation](https://github.com/Lyberta/cpp-io-impl)
+
+## Book: The C++ Annotations, V11.4.0
+
+* [C++ Annotations Version 11.4.0, by Frank B. Brokken](http://www.icce.rug.nl/documents/cplusplus)
+* [Reddit 1](https://www.reddit.com/r/cpp/comments/62lqfn/the_c_annotations_a_free_gpl_uptodate_c17/)
+* [Reddit 2](https://www.reddit.com/r/cpp/comments/fqkf51/the_c_annotations_a_free_gpl_uptodate_c20/)
+
+## High performance SQLite, PostgreSQL, MySQL sync & async drivers
+
+* [Lithium](https://github.com/matt-42/lithium/tree/master/libraries/sql)
+* [Reddit](https://www.reddit.com/r/cpp/comments/fn31cp/high_performance_sqlite_postgresql_mysql_sync/)
