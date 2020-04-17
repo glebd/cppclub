@@ -2,6 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not my employer's.
 
+* 104 - [16 April 2020](2020-04-16) :: [PDF](2020-04-16.pdf)
 * 103 - [2 April 2020](2020-04-02) :: [PDF](2020-04-02.pdf)
 * 102 - [19 Mar 2020](2020-03-19) :: [PDF](2020-03-19.pdf)
 * 101 - [5 Mar 2020](2020-03-05) :: [PDF](2020-03-05.pdf)
