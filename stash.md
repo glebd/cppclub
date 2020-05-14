@@ -85,3 +85,18 @@
 * [Part 1](https://cor3ntin.github.io/posts/executors/)
 * [Part 2](https://cor3ntin.github.io/posts/iouring/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/ewr18m/a_universal_io_abstraction_for_c/)
+
+## Nifty Fold Expression Tricks
+
+* [Jonathan Müller](https://foonathan.net/2020/05/fold-tricks/#content)
+* [Reddit](https://www.reddit.com/r/cpp/comments/gdvqiq/nifty_fold_expression_tricks/)
+
+## Rvalue Ranges and Views in C++20
+
+* [Tristan Brindle](https://tristanbrindle.com/posts/rvalue-ranges-and-views)
+* [Reddit](https://www.reddit.com/r/cpp/comments/ginnrf/rvalue_ranges_and_views_in_c20/)
+
+## Enforcing locking with C++ nonmovable types
+
+* [Jussi Pakkanen](https://nibblestew.blogspot.com/2020/05/enforcing-locking-with-c-nonmovable.html)
+* [Reddit](https://www.reddit.com/r/cpp/comments/ghr35m/enforcing_locking_with_c_nonmovable_types/)
