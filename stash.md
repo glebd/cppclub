@@ -100,3 +100,38 @@
 
 * [Jussi Pakkanen](https://nibblestew.blogspot.com/2020/05/enforcing-locking-with-c-nonmovable.html)
 * [Reddit](https://www.reddit.com/r/cpp/comments/ghr35m/enforcing_locking_with_c_nonmovable_types/)
+
+## Let's unravel the secrets behind C++17's structured bindings
+
+* [Jean Guegant](https://jguegant.github.io/blogs/tech/structured-bindings.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/glnx3w/lets_unravel_the_secrets_behind_c17s_structured/)
+
+## Starting C++ today with a strong Java background
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/gkizd4/starting_c_today_with_a_strong_java_background/)
+
+## The C++ preprocessor doesn’t understand anything about C++, and certainly not templates
+
+* [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20200508-52/?p=103735)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/ggeer7/the_c_preprocessor_doesnt_understand_anything/)
+
+## How to modify a key in C++17 with `std::map::extract`
+
+![](img/std-map-extract.jpeg)
+
+## Release: spdlog V1.6.0
+
+* [GitHub](https://github.com/gabime/spdlog) (Header-only, MIT, C++11)
+  * [V1.6.0 ](https://github.com/gabime/spdlog/releases/tag/v1.6.0)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/gk99fk/spdlog_160_released/)
+
+## Release: Catch2 V3.0.0-preview2
+
+* [GitHub](https://github.com/catchorg/Catch2/releases/tag/v3.0.0-preview2)
+  * [Reddit: Catch2 now uses statically compiled library as its distribution model](https://www.reddit.com/r/cpp/comments/gjp548/catch2_v300_preview2_catch2_now_uses_statically/)
+
+## Quote
+
+Titus Winters:
+
+> Software engineering is programming integrated over time.
