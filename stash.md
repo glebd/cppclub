@@ -86,49 +86,58 @@
 * [Part 2](https://cor3ntin.github.io/posts/iouring/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/ewr18m/a_universal_io_abstraction_for_c/)
 
-## Nifty Fold Expression Tricks
-
-* [Jonathan Müller](https://foonathan.net/2020/05/fold-tricks/#content)
-* [Reddit](https://www.reddit.com/r/cpp/comments/gdvqiq/nifty_fold_expression_tricks/)
-
-## Rvalue Ranges and Views in C++20
-
-* [Tristan Brindle](https://tristanbrindle.com/posts/rvalue-ranges-and-views)
-* [Reddit](https://www.reddit.com/r/cpp/comments/ginnrf/rvalue_ranges_and_views_in_c20/)
-
-## Enforcing locking with C++ nonmovable types
-
-* [Jussi Pakkanen](https://nibblestew.blogspot.com/2020/05/enforcing-locking-with-c-nonmovable.html)
-* [Reddit](https://www.reddit.com/r/cpp/comments/ghr35m/enforcing_locking_with_c_nonmovable_types/)
-
 ## Let's unravel the secrets behind C++17's structured bindings
 
 * [Jean Guegant](https://jguegant.github.io/blogs/tech/structured-bindings.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/glnx3w/lets_unravel_the_secrets_behind_c17s_structured/)
 
-## Starting C++ today with a strong Java background
+## Reducing {fmt} library size 4x using Bloaty McBloatface
 
-* [Reddit](https://www.reddit.com/r/cpp/comments/gkizd4/starting_c_today_with_a_strong_java_background/)
+* [Viktor Zverovich](https://www.zverovich.net/2020/05/21/reducing-library-size.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/go82wo/reducing_fmt_library_size_4x_using_bloaty/)
+* [Bloaty McBloatface: A size profiler for binaries (Google)](https://github.com/google/bloaty)
 
-## The C++ preprocessor doesn’t understand anything about C++, and certainly not templates
+## The STL Algorithm Cheat Sheet, by Conor Hoekstra
 
-* [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20200508-52/?p=103735)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/ggeer7/the_c_preprocessor_doesnt_understand_anything/)
+* [YouTube](https://youtu.be/LMmFpOhcQhA)
+* [PDF](https://github.com/codereport/Algorithms/blob/master/CheatSheet/The%20STL%20Algorithm%20Cheat%20Sheet%20v0.0.pdf)
+* [Reddit](https://www.reddit.com/r/cpp/comments/g4e2uj/the_stl_algorithm_cheat_sheet/)
 
-## How to modify a key in C++17 with `std::map::extract`
+## The “OO” Antipattern, by Arthur O'DWyer
 
-![](img/std-map-extract.jpeg)
+* [Article](https://quuxplusone.github.io/blog/2020/05/28/oo-antipattern/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/gs0iwm/the_oo_antipattern/)
 
-## Release: spdlog V1.6.0
+## Naming Things: Implementer vs. User Names, by Jonathan Müller
 
-* [GitHub](https://github.com/gabime/spdlog) (Header-only, MIT, C++11)
-  * [V1.6.0 ](https://github.com/gabime/spdlog/releases/tag/v1.6.0)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/gk99fk/spdlog_160_released/)
+* [Article](https://foonathan.net/2019/11/implementer-vs-user-names/#content)
+  * [Reddit 1](https://www.reddit.com/r/programming/comments/e5hzmi/naming_things_implementer_vs_user_names/)
+  * [Reddit 2](https://www.reddit.com/r/cpp/comments/e5s6og/naming_things_implementer_vs_user_names/)
 
-## Release: Catch2 V3.0.0-preview2
+## std::polymorphic_value + Duck Typing = Type Erasure, by Jonathan Müller
 
-* [GitHub](https://github.com/catchorg/Catch2/releases/tag/v3.0.0-preview2)
-  * [Reddit: Catch2 now uses statically compiled library as its distribution model](https://www.reddit.com/r/cpp/comments/gjp548/catch2_v300_preview2_catch2_now_uses_statically/)
+* [Article](https://foonathan.net/2020/01/type-erasure/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/eq4b0h/stdpolymorphic_value_duck_typing_type_erasure/)
+* [polymorphic_value (GitHub)](https://github.com/jbcoe/polymorphic_value/)
+* [Better Code: Runtime Polymorphism - Sean Parent](https://youtu.be/QGcVXgEVMJg)
+
+## Modern C++ Template
+
+* [Filip Dutescu (GitHub)](https://github.com/filipdutescu/modern-cpp-template)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/gt0pz1/i_made_a_project_template_for_modern_c_projects/)
+
+A template for modern C++ projects using CMake, clang-format and unit testing
+
+## Runtime Polymorphism with `std::variant` and `std::visit`
+
+* [Bartek Filipek](https://www.bfilipek.com/2020/04/variant-virtual-polymorphism.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/fvtf4j/runtime_polymorphism_with_stdvariant_and_stdvisit/)
+
+## Testing C++ signal-slot libraries
+
+* [Julien Jorge](https://medium.com/@julienjorge/testing-c-signal-slot-libraries-1994eb120826)
+
+(_Don't write on Medium -- GD_)
 
 ## Quote
 
