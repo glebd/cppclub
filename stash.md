@@ -85,3 +85,62 @@
 * [Part 1](https://cor3ntin.github.io/posts/executors/)
 * [Part 2](https://cor3ntin.github.io/posts/iouring/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/ewr18m/a_universal_io_abstraction_for_c/)
+
+## Let's unravel the secrets behind C++17's structured bindings
+
+* [Jean Guegant](https://jguegant.github.io/blogs/tech/structured-bindings.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/glnx3w/lets_unravel_the_secrets_behind_c17s_structured/)
+
+## Reducing {fmt} library size 4x using Bloaty McBloatface
+
+* [Viktor Zverovich](https://www.zverovich.net/2020/05/21/reducing-library-size.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/go82wo/reducing_fmt_library_size_4x_using_bloaty/)
+* [Bloaty McBloatface: A size profiler for binaries (Google)](https://github.com/google/bloaty)
+
+## The STL Algorithm Cheat Sheet, by Conor Hoekstra
+
+* [YouTube](https://youtu.be/LMmFpOhcQhA)
+* [PDF](https://github.com/codereport/Algorithms/blob/master/CheatSheet/The%20STL%20Algorithm%20Cheat%20Sheet%20v0.0.pdf)
+* [Reddit](https://www.reddit.com/r/cpp/comments/g4e2uj/the_stl_algorithm_cheat_sheet/)
+
+## The “OO” Antipattern, by Arthur O'DWyer
+
+* [Article](https://quuxplusone.github.io/blog/2020/05/28/oo-antipattern/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/gs0iwm/the_oo_antipattern/)
+
+## Naming Things: Implementer vs. User Names, by Jonathan Müller
+
+* [Article](https://foonathan.net/2019/11/implementer-vs-user-names/#content)
+  * [Reddit 1](https://www.reddit.com/r/programming/comments/e5hzmi/naming_things_implementer_vs_user_names/)
+  * [Reddit 2](https://www.reddit.com/r/cpp/comments/e5s6og/naming_things_implementer_vs_user_names/)
+
+## std::polymorphic_value + Duck Typing = Type Erasure, by Jonathan Müller
+
+* [Article](https://foonathan.net/2020/01/type-erasure/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/eq4b0h/stdpolymorphic_value_duck_typing_type_erasure/)
+* [polymorphic_value (GitHub)](https://github.com/jbcoe/polymorphic_value/)
+* [Better Code: Runtime Polymorphism - Sean Parent](https://youtu.be/QGcVXgEVMJg)
+
+## Modern C++ Template
+
+* [Filip Dutescu (GitHub)](https://github.com/filipdutescu/modern-cpp-template)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/gt0pz1/i_made_a_project_template_for_modern_c_projects/)
+
+A template for modern C++ projects using CMake, clang-format and unit testing
+
+## Runtime Polymorphism with `std::variant` and `std::visit`
+
+* [Bartek Filipek](https://www.bfilipek.com/2020/04/variant-virtual-polymorphism.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/fvtf4j/runtime_polymorphism_with_stdvariant_and_stdvisit/)
+
+## Testing C++ signal-slot libraries
+
+* [Julien Jorge](https://medium.com/@julienjorge/testing-c-signal-slot-libraries-1994eb120826)
+
+(_Don't write on Medium -- GD_)
+
+## Quote
+
+Titus Winters:
+
+> Software engineering is programming integrated over time.
