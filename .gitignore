@@ -6,3 +6,6 @@ stash.pdf
 README.pdf
 .DS_Store
 *.mmd
+
+.fake
+.ionide
