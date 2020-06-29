@@ -20,21 +20,6 @@
 
 * [YouTube](https://www.youtube.com/watch?v=UsrHQAzSXkA)
 
-## Type Erasure by Andrzej
-
-* [Part 1](https://akrzemi1.wordpress.com/2013/11/18/type-erasure-part-i/)
-* [Part 2](https://akrzemi1.wordpress.com/2013/12/06/type-erasure-part-ii/)
-* [Part 3](https://akrzemi1.wordpress.com/2013/12/11/type-erasure-part-iii/)
-* [Part 4](https://akrzemi1.wordpress.com/2014/01/13/type-erasure-part-iv/)
-
-## Type Erasure with Merged Concepts
-
-* [Post by Andreas Herrmann](https://aherrmann.github.io/programming/2014/10/19/type-erasure-with-merged-concepts/)
-
-## On the Tension Between Object-Oriented and Generic Programming in C++, and What Type Erasure Can Do About It
-
-* [Article by Thomas Becker](https://www.artima.com/cppsource/type_erasure.html)
-
 ## Using metaprogramming for PIMPL idiom
 
 * [Reddit](https://www.reddit.com/r/cpp/comments/7971ws/using_metaprogramming_for_pimpl_idiom/)
@@ -74,58 +59,12 @@
 * [Video](https://developer.apple.com/videos/play/wwdc2018/223/)
 * [Reddit](https://www.reddit.com/r/cpp/comments/8pqtr1/dave_abrahams_on_embracing_algorithms_at_wwdc_2018/)
 
-> I guess most of you know who Dave Abrahams is and what he has done in the C++ community. He switched gears a little and is now working at Apple focusing mostly on the development of the Swift language and its library. However, yesterday he gave an excellent talk at their Developer Conference entitled Embracing Algorithms, which IMHO is general enough to be of interest for C++ developers as well. The link has a video of that 40 minutes long talk as well as the slides.
+> I guess most of you know who Dave Abrahams is and what he has done in the C++ community. He
+> switched gears a little and is now working at Apple focusing mostly on the development of the
+> Swift language and its library. However, yesterday he gave an excellent talk at their Developer
+> Conference entitled Embracing Algorithms, which IMHO is general enough to be of interest for C++
+> developers as well. The link has a video of that 40 minutes long talk as well as the slides.
 
 ## Matt Godbolt (2017-06-27) - Memory and Caches
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
-
-## A Universal Async Abstraction for C++, by Corentin Jabot
-
-* [Part 1](https://cor3ntin.github.io/posts/executors/)
-* [Part 2](https://cor3ntin.github.io/posts/iouring/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/ewr18m/a_universal_io_abstraction_for_c/)
-
-## std::polymorphic_value + Duck Typing = Type Erasure, by Jonathan Müller
-
-* [Article](https://foonathan.net/2020/01/type-erasure/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/eq4b0h/stdpolymorphic_value_duck_typing_type_erasure/)
-* [polymorphic_value (GitHub)](https://github.com/jbcoe/polymorphic_value/)
-* [Better Code: Runtime Polymorphism - Sean Parent](https://youtu.be/QGcVXgEVMJg)
-
-## Modern C++ Template
-
-* [Filip Dutescu (GitHub)](https://github.com/filipdutescu/modern-cpp-template)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/gt0pz1/i_made_a_project_template_for_modern_c_projects/)
-
-A template for modern C++ projects using CMake, clang-format and unit testing
-
-## Runtime Polymorphism with `std::variant` and `std::visit`
-
-* [Bartek Filipek](https://www.bfilipek.com/2020/04/variant-virtual-polymorphism.html)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/fvtf4j/runtime_polymorphism_with_stdvariant_and_stdvisit/)
-
-## Cefal: library of functional typeclasses using C++20 concepts
-
-* [GitHub](https://github.com/dkormalev/cefal) (C++20, BSD-3-Clause)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/g7mluk/cefal_library_of_functional_typeclasses_using_c20/)
-
-## C++ Lambdas, Threads, std::async and Parallel Algorithms
-
-* [B. Filipek](https://www.bfilipek.com/2020/05/lambdas-async.html?m=1)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/gufsdu/c_lambdas_threads_stdasync_and_parallel_algorithms/)
-
-## Taskflow
-
-Modern C++ Parallel Task Programming
-
-* [Home](https://taskflow.github.io/#/)
-* [GitHub](https://github.com/taskflow/)
-* [Taskflow 2.5 announcement on Reddit](https://www.reddit.com/r/cpp/comments/gvbfix/taskflow_v250_released_with_a_new_visualization/)
-* [Taskflow - C++ Parallel Tasking System, by Manoj Rao](http://www.mycpu.org/c++-taskflow/)
-
-## The Darkest Pipeline - Multithreaded pipelines for modern C++
-
-* [GitHub](https://github.com/JoelFilho/TDP)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/gmvlmu/the_darkest_pipeline_tdp_a_c17_library_for/)
-    (Header-only, C++17, Boost Licence)
