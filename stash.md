@@ -68,3 +68,54 @@
 ## Matt Godbolt (2017-06-27) - Memory and Caches
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
+
+## std::polymorphic_value + Duck Typing = Type Erasure, by Jonathan Müller
+
+* [Article](https://foonathan.net/2020/01/type-erasure/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/eq4b0h/stdpolymorphic_value_duck_typing_type_erasure/)
+* [polymorphic_value (GitHub)](https://github.com/jbcoe/polymorphic_value/)
+* [Better Code: Runtime Polymorphism - Sean Parent](https://youtu.be/QGcVXgEVMJg)
+
+## Runtime Polymorphism with `std::variant` and `std::visit`
+
+* [Bartek Filipek](https://www.bfilipek.com/2020/04/variant-virtual-polymorphism.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/fvtf4j/runtime_polymorphism_with_stdvariant_and_stdvisit/)
+
+## C++ Lambdas, Threads, std::async and Parallel Algorithms
+
+* [B. Filipek](https://www.bfilipek.com/2020/05/lambdas-async.html?m=1)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/gufsdu/c_lambdas_threads_stdasync_and_parallel_algorithms/)
+
+## The Darkest Pipeline - Multithreaded pipelines for modern C++
+
+* [GitHub](https://github.com/JoelFilho/TDP)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/gmvlmu/the_darkest_pipeline_tdp_a_c17_library_for/)
+    (Header-only, C++17, Boost Licence)
+
+## Testing a Modern C++ workflow by coding a base85 decoder from scratch
+
+* [German Diago Gomez](https://medium.com/@germandiagogomez/testing-a-modern-c-workflow-by-coding-a-base85-decoder-from-scratch-c6cde64984a9)
+  * Emacs
+  * Meson
+  * C++20
+* [Tom's Data Onion](https://www.tomdalling.com/toms-data-onion/)
+
+## An Introduction to Parallel Computing in C++ (2016)
+
+* [Notes](https://www.cs.cmu.edu/~15210/pasl.html)
+
+The goal of these notes is to introduce the reader to the following.
+
+1. Parallel computing in imperative programming languages and C++ in particular, and
+2. Real-world performance and efficiency concerns in writing parallel software and techniques for dealing with them.
+
+## Lambda Lambda Lambda
+
+* [Barry Revzin](https://brevzin.github.io/c++/2020/06/18/lambda-lambda-lambda/)
+  * [Reddit](https://brevzin.github.io/c++/2020/06/18/lambda-lambda-lambda/)
+
+![](img/lambdaaa.jpeg)
+
+## The importance of choosing the right data type
+
+![](img/showers.png)
