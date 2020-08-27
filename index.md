@@ -2,7 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not my employer's.
 
-* 112 - [13 August 2020](CppClubUK-112-20200813.md) :: [PDF](CppClubUK-112-20200813.pdf)
+* 112 - [27 August 2020](CppClubUK-112-20200827.md) :: [PDF](CppClubUK-112-20200827.pdf)
 * 111 - [30 July 2020](CppClubUK-111-20200730) :: [PDF](CppClubUK-111-20200730.pdf)
 * 110 - [9 July 2020](CppClubUK-110-20200709) :: [PDF](CppClubUK-110-20200709.pdf)
 * 109 - [11 June 2020](CppClubUK-109-20200611) :: [PDF](CppClubUK-109-20200611.pdf)
