@@ -68,3 +68,25 @@
 ## Matt Godbolt (2017-06-27) - Memory and Caches
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
+
+## Throwing Out the Kitchen Sink - Output Ranges
+
+* [JeanHeyd 'ThePhD' Meneide](https://thephd.github.io/output-ranges)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/iaesk7/throwing_out_the_kitchen_sink_output_ranges/)
+
+## Designing an ideal class in C++
+
+* [Anupam Mazumdar via Medium](https://medium.com/a-devs-life/designing-an-ideal-class-in-c-d205516c03ab)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/icijxj/writing_ideal_class_definition_in_c/)
+  * [See also: C++11: The Rule of the Big Five](https://www.feabhas.com/sites/default/files/2016-06/Rule%20of%20the%20Big%20Five.pdf)
+  * [See also: How I Declare My class And Why, by Howard Hinnant](https://howardhinnant.github.io/classdecl.html)
+
+## Here I Stand, Free - Allocators and an Inclusive STL
+
+* [JeanHeyd "ThePhD" Meneide](https://thephd.github.io/freestanding-noexcept-allocators-vector-memory-hole)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/idtnn7/here_i_stand_free_allocators_and_an_inclusive_stl/)
+
+## Standard library development made easy with C++20
+
+* [Corentin Jabot](https://cor3ntin.github.io/posts/tuple/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/ifotxd/standard_library_development_made_easy_with_c20/)
