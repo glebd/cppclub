@@ -68,3 +68,9 @@
 ## Matt Godbolt (2017-06-27) - Memory and Caches
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
+
+## r/cpp status update
+
+[Reddit](https://www.reddit.com/r/cpp/comments/j8t9fu/rcpp_status_update/)
+
+WHAT.
