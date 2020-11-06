@@ -166,3 +166,17 @@ auto operator+(
 ## Calendar and Time-Zones in C++20: Time of Day
 
 [Rainer Grimm](https://www.modernescpp.com/index.php/calendar-and-time-zone-in-c-20)
+
+## FTL - A functional template library for containers processing in C++
+
+* [GitHub](https://github.com/ftlorg/ftl)
+* [Reddit](https://www.reddit.com/r/cpp/comments/jor2hd/ftl_a_functional_template_library_for_containers/)
+
+FTL is a C++17-based library that provides a more convenient API for collections processing. The API is heavily inspired by the Rust programming language.
+
+```cpp
+const auto totalVolume = cityTrees.iter()
+               .filter([](const auto &tree) { return tree.kind == Tree::Oak && tree.diameter > 25; })
+               .map([](const auto &tree) { return tree.volume(); })
+               .sum();
+```
