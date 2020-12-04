@@ -69,78 +69,6 @@
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
 
-## C#-like events in C++
-
-[Reddit](https://www.reddit.com/r/cpp/comments/j2dfmi/clike_events_in_c/)
-
-(Unrelated: [Variable name prefixes](https://www.reddit.com/r/cpp/comments/j2dfmi/clike_events_in_c/g75e65w/))
-
-* [Code on Pastebin](https://pastebin.com/RjK6nLgM)
-* [Signal-Slot library benchmarks](https://github.com/NoAvailableAlias/signal-slot-benchmarks/blob/master/results/benchmarks_msvc/README.md)
-* [Boost.Signals2](https://www.boost.org/doc/libs/1_61_0/doc/html/signals2.html)
-
-## Uses of immediately invoked function expressions (IIFE) in C++
-
-* [Erik Rigtorp](https://rigtorp.se/iife/)
-* [Jonathan Müller](https://foonathan.net/2020/10/iife-metaprogramming/)
-
-## Overloading by Return Type in C++
-
-[Philip Trettner](https://artificial-mind.net/blog/2020/10/10/return-type-overloading)
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/j94jd8/overloading_by_return_type_in_c/)
-
-```cpp
-struct to_string_t {
-  std::string_view s;
-
-  // int  from_string(std::string_view s);
-  operator int() const;
-  // bool from_string(std::string_view s);
-  operator bool() const;
-};
-
-int i = to_string_t{"7"};
-bool b = to_string_t{"true"};
-```
-
-## The Defold game engine code style
-
-[Article](https://defold.com/2020/05/31/The-Defold-engine-code-style/)
-
-### Code style
-
-* C-like C++
-* No classes (_huh?_ -- _GD_)
-* No exceptions
-* No STL
-  * Custom containers
-* Data ownership tracking
-* C++98
-
-(_It's the end of 2020, by the way. -- GD_)
-
-## A Buffers Library for C++20
-
-[Colby Pike](https://vector-of-bool.github.io/2020/08/29/buffers-1.html)
-
-## vcpkg: Accelerate your team development environment with binary caching and manifests
-
-[Microsoft](https://devblogs.microsoft.com/cppblog/vcpkg-accelerate-your-team-development-environment-with-binary-caching-and-manifests/)
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/ix090v/vcpkg_accelerate_your_team_development/)
-
-### Related
-
-[Why is it such an abysmal pain to use libraries in C++ compared to pretty much anything else?](https://www.reddit.com/r/cpp/comments/ix9n1u/why_is_it_such_an_abysmal_pain_to_use_libraries/)
-
-## Raymond Chen on structured bindings
-
-* [Structured binding may be the new hotness, but we’ll always have `std::tie`](https://devblogs.microsoft.com/oldnewthing/20200925-00/?p=104297)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/izr5pf/structured_binding_may_be_the_new_hotness_but/)
-* [How to add C++ structured binding support to your own types](https://devblogs.microsoft.com/oldnewthing/20201015-00/?p=104369)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/jbwkiy/how_to_add_c_structured_binding_support_to_your/)
-
 ## dont_deduce<T>
 
 * [artificial::mind](https://artificial-mind.net/blog/2020/09/26/dont-deduce)
@@ -158,11 +86,88 @@ template <class T> using foo = typename foo_t<T>::type;
 ```cpp
 template <typename T>
 auto operator+(
-    vec3<T> const& a,
-    std::convertible_to<T> auto const& b
+  vec3<T> const& a,
+  std::convertible_to<T> auto const& b
 ) -> vec3<T>;
 ```
 
 ## Calendar and Time-Zones in C++20: Time of Day
 
 [Rainer Grimm](https://www.modernescpp.com/index.php/calendar-and-time-zone-in-c-20)
+
+## FTL - A functional template library for containers processing in C++
+
+* [GitHub](https://github.com/ftlorg/ftl)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/jor2hd/ftl_a_functional_template_library_for_containers/)
+
+FTL is a C++17-based library that provides a more convenient API for collections processing. The API is heavily inspired by the Rust programming language.
+
+```cpp
+const auto totalVolume = cityTrees.iter()
+  .filter([](c onst auto &tree) { return tree.kind == Tree::Oak && tree.diameter > 25; })
+  .map([](const auto &tree) { return tree.volume(); })
+  .sum();
+```
+
+## Compiling C/C++ on Apple M1
+
+* [Boris Kolpackov](https://build2.org/blog/apple-m1-compilation.xhtml)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/k4l03y/compiling_cc_on_apple_m1/)
+
+## A Small Open Source Game In C++
+
+* [Preshing](https://preshing.com/20201126/a-small-open-source-game-in-cpp/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/k1fcus/a_small_open_source_game_in_c/)
+  * [GitHub](https://github.com/arc80)
+
+That tongue animation :-)
+
+## Linux developer going Windows
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/k1wvdf/linux_developer_going_windows/)
+
+## BinOpt — A Library for Self-guided Runtime Binary Optimization
+
+* [GitHub](https://github.com/aengelke/binopt) (LGPLv2.1+)
+
+## Easily currying functions in C++
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/k32fx4/easily_currying_functions_in_c/)
+
+```cpp
+// Existing, non-curried function
+auto f(int a, int b, int c) noexcept -> int {
+    return a * b * c;
+}
+
+auto g = fn::curry(f); // g is th e curried form of f
+
+int main() {
+    return g(2)(5)(10); // returns 100
+}
+```
+
+## Cheerp 2.6 rc1: C++ compiled for the Web
+
+* [Carlo Piovesan](https://medium.com/leaningtech/cheerp-2-6-rc1-the-cpp-compiler-for-the-web-8873be6601b1)
+
+## Interactive C++ with Cling
+
+* [LLVM Blog](https://blog.llvm.org/posts/2020-11-17-interactive-cpp-with-cling/)
+
+## C++ executors
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/jw1kyr/c_executors/)
+  * [CppCon 2019: Eric Niebler, David Hollman “A Unifying Abstraction for Async in C++”](https://www.youtube.com/watch?v=tF-Nz4aRWAM&feature=youtu.be)
+  * [A Unified Executors Proposal for C++ | P0443R14](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p0443r14.html)
+  * [libunifex (Facebook)](https://github.com/facebookexperimental/libunifex)
+
+## Conditionally Trivial Special Member Functions
+
+* [Sy Brand](https://devblogs.microsoft.com/cppblog/conditionally-trivial-special-member-functions/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/jxt3i3/conditionally_trivial_special_member_functions/)
+
+## repr: return printable value
+
+* [GitHub](https://github.com/p-ranav/repr)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/jzgzoz/repr_for_c_return_printable_string_representation/)
