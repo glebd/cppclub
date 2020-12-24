@@ -171,3 +171,40 @@ int main() {
 
 * [GitHub](https://github.com/p-ranav/repr)
   * [Reddit](https://www.reddit.com/r/cpp/comments/jzgzoz/repr_for_c_return_printable_string_representation/)
+
+## The problem with C
+
+* [Corentin Jabot](https://cor3ntin.github.io/posts/c/)
+  * [Reddit](https://np.reddit.com/r/cpp/comments/ik3o10/the_problem_with_c/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/k8pxo1/a_very_nice_summary_of_the_philosophical_and/)
+
+## Turbo Vision
+
+A modern port of Turbo Vision 2.0, the classical framework for text-based user interfaces. Now cross-platform and with Unicode support.
+
+* [GitHub](https://github.com/magiblot/tvision)
+  * [Reddit](https://www.reddit.com/r/commandline/comments/kcn4xw/a_modern_cross_platform_port_of_borland_turbo/)
+
+![Screenshot](https://user-images.githubusercontent.com/20713561/81506401-4fffdd80-92f6-11ea-8826-ee42612eb82a.png)
+
+## Best framework to create HTTP server
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kgdcz5/best_framework_to_create_http_server/)
+
+## Boost 1.75
+
+* [Release notes](https://www.boost.org/users/history/version_1_75_0.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kbd8pe/boost_175_is_out/)
+
+## C++ Russia 2020 Moscow
+
+* [Playlist on YouTube](https://www.youtube.com/playlist?list=PLZN9ZGiWZoZruMY-MlkAd-nHzdP9TfLRC)
+
+## mocxx: a versatile C++ function mocking framework based on Frida, by Guardsquare
+
+No macros! Doesn't support mocking virtual functions yet.
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/k0atyi/mocxx_a_versatile_c_function_mocking_framework/)
+  * [GitHub](A versatile C++ function mocking framework. It replaces a target function with the provided implementation, and integrates well with existing testing and mocking frameworks.) (C++17, GPL-3.0)
+    * [Frida - Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers](https://github.com/frida)
+  * [Explanatory blog post at Guardsquare](https://tech.guardsquare.com/posts/mocxx-the-mocking-tool/)
