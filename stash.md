@@ -208,3 +208,145 @@ No macros! Doesn't support mocking virtual functions yet.
   * [GitHub](A versatile C++ function mocking framework. It replaces a target function with the provided implementation, and integrates well with existing testing and mocking frameworks.) (C++17, GPL-3.0)
     * [Frida - Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers](https://github.com/frida)
   * [Explanatory blog post at Guardsquare](https://tech.guardsquare.com/posts/mocxx-the-mocking-tool/)
+
+## Compile 1 Million Lines Of C++ In ~2 Minutes With A 16 Core Ryzen 9 5950x
+
+* [Embarcadero](https://blogs.embarcadero.com/compile-1-million-lines-of-c-in-2-minutes-with-a-16-core-ryzen-9-5950x/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kigy7l/compile_1_million_lines_of_c_in_2_minutes_with_a/)
+
+> I love how a shitty, bug-ridden development environment that costs US$1359 for the most basic edition still requires you to buy a separate US$139 extension to enable parallel builds, a standard feature available on practically every other closed and open source compiler and build system out of the box for $0 extra.
+
+### Dev-C++
+
+A fast, portable, simple, and free C/C++ IDE for Windows, built in Delphi
+
+* [GitHub](https://github.com/Embarcadero/Dev-Cpp)
+
+## Using std::list::splice to implement a LRU cache
+
+* [Article on nextptr](https://www.nextptr.com/tutorial/ta1576645374/stdlist-splice-for-implementing-lru-cache)
+* [std::list::splice](https://en.cppreference.com/w/cpp/container/list/splice)
+
+## Reverse Engineering the source code of the BioNTech/Pfizer SARS-CoV-2 Vaccine
+
+* [Article](https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/)
+  * [Reddit](https://www.reddit.com/r/programming/comments/kk8pxz/this_programmer_reverse_engineered_the_pfizer/)
+
+## Concepts appreciation thread
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kka4o7/concepts_appreciation_thread_i_dont_have_any/)
+
+## C++20 ISO standard published
+
+* [ISO](https://www.iso.org/standard/79358.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kdrwya/c20_published_isoiec_148822020/)
+
+## What should the state of a moved-from object be?
+
+* [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20201218-00/?p=104558)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kfsjr3/what_should_the_state_of_a_movedfrom_object_be/)
+
+## Reducing Memory Consumption in Visual Assist
+
+* [Blog post](https://blog.wholetomato.com/2020/12/17/technical-deep-dive-reducing-memory-consumption-in-visual-assist-build-2393/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kgpw63/technical_deep_dive_reducing_memory_consumption/)
+
+## Why Another C++ (And More™) Conference?
+
+* [JeanHeyd Meneide](https://thephd.github.io/why-another-c++-c-rust-zig-systems-programming-conference)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kgy75o/why_another_c_and_more_conference/)
+
+### CoSy - Computing Systems Technology Conference
+
+* [Website](https://soasis.org/cosy/)
+
+CoSy (pronounced like "cozy") is a Systems Programming Conference open to developers from all walks of life, both professional and non-professional, who want to engage other like-minded individuals for an intimate and wonderful blend of content.
+
+* Broad scope (C++, C, Rust, Zig, FORTH, Nim, OCaml etc.)
+* Double-blinded submission reviews
+
+> Of course, it’s not always possible to double-blind everything! If someone writes a submission about how they wrote a Great Book On Large Scale Software Architecture That’s Really Good And Helps You Modularize And Structure Large Software And The Sequel Is Out You Should Buy It Now, they have vastly reduced the pool of people they could be talking about.
+
+* Escaping the Crushing Despair (case in point: CppLang Slack)
+  * [The... Community? on YouTube](https://youtu.be/vaLKm9FE8oo)
+
+## is::Engine - C++ SFML game engine
+
+* [Reddit announcement](https://www.reddit.com/r/cpp/comments/kgem27/isengine_32_c_sfml_game_engine_available_with/?ref=share&ref_source=link)
+
+## Writing a custom iterator in modern C++ (C++17)
+
+* [Article](https://www.internalpointers.com/post/writing-custom-iterators-modern-cpp)
+  * [Reddit](https://www.reddit.com/r/programming/comments/kfl04g/writing_a_custom_iterator_in_modern_c/)
+
+## Fold expressions work inside constraints
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kd77ee/fold_expressions_work_inside_constraints/)
+
+```cpp
+template <template <typename> class FooT, typename... T>
+requires (... && Bar<FooT<T>>) struct Baz {};
+```
+
+Without fold expressions:
+
+```cpp
+template <template <typename> class FooT, typename... T>
+requires([]() {
+  std::array arr = std::array{Bar<FooT<T>>...};
+  return std::reduce(arr.begin(), arr.end(), true, std::logical_and<bool>{});
+}()) struct Baz {};
+```
+
+## Game dev C++ vs Regular C++
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/k7uwwe/game_dev_c_vs_regular_c/)
+
+> Some companies are stuck on the 98 standard, may God have pity on their souls, and others have weird requirements to avoid things because a manager had an issue with them 10 years ago. [=>](https://www.reddit.com/r/cpp/comments/k7uwwe/game_dev_c_vs_regular_c/geuao3j/)
+
+## Stroustrup on The Continuing Evolution of C++
+
+* [Video on IDA](https://ida.dk/viden-og-netvaerk/videoer-fra-ida/stroustrup-on-the-continuing-evolution-of-cplusplus)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/jxmuzk/stroustrup_on_the_continuing_evolution_of_c/)
+
+## Flap Hero Code Review
+
+* [Preshing](https://preshing.com/20201210/flap-hero-code-review/)
+  * [FlapHero on GitHub](https://github.com/arc80/FlapHero)
+
+## Graphics Library for simple 2D games
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/klo7x4/graphics_library_for_simple_2d_games/)
+  * [SFML](https://www.sfml-dev.org)
+  * [Allegro](https://liballeg.org)
+  * [SDL](https://www.libsdl.org) -- C
+  * [olcPixelGameEngine](https://github.com/OneLoneCoder/olcPixelGameEngine)
+
+## Bona - A C++20 based modern file information viewer
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/klib5n/bona_a_c20_based_modern_file_information_viewer/)
+
+## Project from scratch in C++ (for beginners)
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kl9w8f/project_from_scratch_in_c_for_beginners/)
+  * [YouTube](https://www.youtube.com/playlist?list=PLSGsTSSx2DyM8q6gM_cUVwX_da1tTYLrq)
+  * [Blog](http://www.thecppdev.wordpress.com/)
+
+## Do you use C++ in your day job? If so, what did it take to get there?
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kmpdlm/do_you_use_c_in_your_day_job_if_so_what_did_it/)
+
+## Wrapping C++ for use in Swift
+
+* [Reddit](https://www.reddit.com/r/iOSProgramming/comments/jxqv74/looking_for_good_examples_of_wrapping_c/)
+
+## consteval-huffman
+
+A C++20 utility for compressing string literals at compile-time to save program space. The compressed data can be decompressed at run-time through the use of a decoder that follows `std::forward_iterator`.
+
+* [GitHub](https://github.com/tcsullivan/consteval-huffman) (C++20, Public domain)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kn1wpe/compiletime_string_compression_using_huffman/)
+
+```cpp
+auto data = "This is my string of data"_huffman;
+```
