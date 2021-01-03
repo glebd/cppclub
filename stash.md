@@ -350,3 +350,33 @@ A C++20 utility for compressing string literals at compile-time to save program 
 ```cpp
 auto data = "This is my string of data"_huffman;
 ```
+
+## NoDiagnostic Required podcast from JetBrains
+
+* [Twitter: @ndr_cpp](https://twitter.com/ndr_cpp)
+* [YouTube: nodiagnosticrequired](https://www.youtube.com/channel/UCJZdS1wIqASD1MVrJyX8M2Q?mkt_tok=eyJpIjoiTTJNM09HUmhOR1JsWXpNdyIsInQiOiJ5eU9wWUphbzRvcWhTYStPc2huWmxlMzREaDNKRllEU2h3TEY1QlJmTDRHa1RSc0ZMNEtaMlkxU1BlN2w3Mm9GTmdcL3lvVVhiMGNlOGtcL3hCaEJIUkJxYkJISW9ZSVJkQTNsNytsRVpRbGZHZE1sRW9KUVEyZmtkbHBSdjlWaVh1In0%3D)
+
+## Firsts in 2020 (or, A little dose of good news)
+
+* [Herb Sutter](https://herbsutter.com/2020/12/30/firsts-in-2020-or-a-little-dose-of-good-news/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/knt1n3/firsts_in_2020_or_a_little_dose_of_good_news_herb/)
+
+## David Friberg - Three interesting minor features of C++20
+
+* [YouTube](https://youtube.com/watch?v=4AQulaRJGMc)
+* [Slides](https://dfrib.github.io/presentations/2020cw50_Gbgcpp_MinorCpp20Features.html)
+
+## Taskflow 3.0.0
+
+A General-purpose Parallel and Heterogeneous Task Programming System
+
+* [Home page](https://www.amazon.co.uk/gp/product/B08291CB6J/ref=ewc_pr_img_1?smid=A1DO4Y0KEIINI5&psc=1)
+  * [GitHub](https://github.com/taskflow/taskflow) (C++17, MIT)
+    * [v3.0.0](https://github.com/taskflow/taskflow/releases/tag/v3.0.0)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kos9mo/taskflow_v3_released_a_generalpurpose_parallel/)
+
+## C++ and passing by value
+
+* [Matt Godbolt](https://xania.org/202101/cpp-by-value-args)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kphzqt/c_and_passing_by_value/)
+
