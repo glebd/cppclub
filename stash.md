@@ -69,6 +69,150 @@
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
 
+## Reverse Engineering the source code of the BioNTech/Pfizer SARS-CoV-2 Vaccine
+
+* [Article](https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/)
+  * [Reddit](https://www.reddit.com/r/programming/comments/kk8pxz/this_programmer_reverse_engineered_the_pfizer/)
+
+## Why Another C++ (And More™) Conference?
+
+* [JeanHeyd Meneide](https://thephd.github.io/why-another-c++-c-rust-zig-systems-programming-conference)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kgy75o/why_another_c_and_more_conference/)
+
+### CoSy - Computing Systems Technology Conference
+
+* [Website](https://soasis.org/cosy/)
+
+CoSy (pronounced like "cozy") is a Systems Programming Conference open to developers from all walks of life, both professional and non-professional, who want to engage other like-minded individuals for an intimate and wonderful blend of content.
+
+* Broad scope (C++, C, Rust, Zig, FORTH, Nim, OCaml etc.)
+* Double-blinded submission reviews
+
+> Of course, it’s not always possible to double-blind everything! If someone writes a submission about how they wrote a Great Book On Large Scale Software Architecture That’s Really Good And Helps You Modularize And Structure Large Software And The Sequel Is Out You Should Buy It Now, they have vastly reduced the pool of people they could be talking about.
+
+* Escaping the Crushing Despair (case in point: CppLang Slack)
+  * [The... Community? on YouTube](https://youtu.be/vaLKm9FE8oo)
+
+## David Friberg - Three interesting minor features of C++20
+
+* [YouTube](https://youtube.com/watch?v=4AQulaRJGMc)
+* [Slides](https://dfrib.github.io/presentations/2020cw50_Gbgcpp_MinorCpp20Features.html)
+
+## Wrapping C++ for use in Swift
+
+* [Reddit](https://www.reddit.com/r/iOSProgramming/comments/jxqv74/looking_for_good_examples_of_wrapping_c/)
+
+## A Small Open Source Game In C++
+
+* [Preshing](https://preshing.com/20201126/a-small-open-source-game-in-cpp/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/k1fcus/a_small_open_source_game_in_c/)
+  * [GitHub](https://github.com/arc80)
+  * [Code review](https://preshing.com/20201210/flap-hero-code-review/)
+
+That tongue animation :-)
+
+## Graphics Library for simple 2D games
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/klo7x4/graphics_library_for_simple_2d_games/)
+  * [SFML](https://www.sfml-dev.org)
+  * [Allegro](https://liballeg.org)
+  * [SDL](https://www.libsdl.org) -- C
+  * [olcPixelGameEngine](https://github.com/OneLoneCoder/olcPixelGameEngine)
+
+## is::Engine - C++ SFML game engine
+
+* [Reddit announcement](https://www.reddit.com/r/cpp/comments/kgem27/isengine_32_c_sfml_game_engine_available_with/?ref=share&ref_source=link)
+
+## Interactive C++ with Cling
+
+* [LLVM Blog](https://blog.llvm.org/posts/2020-11-17-interactive-cpp-with-cling/)
+
+## Calendar and Time-Zones in C++20: Time of Day
+
+[Rainer Grimm](https://www.modernescpp.com/index.php/calendar-and-time-zone-in-c-20)
+
+## FTL - A functional template library for containers processing in C++
+
+* [GitHub](https://github.com/ftlorg/ftl)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/jor2hd/ftl_a_functional_template_library_for_containers/)
+
+FTL is a C++17-based library that provides a more convenient API for collections processing. The API is heavily inspired by the Rust programming language.
+
+```cpp
+const auto totalVolume = cityTrees.iter()
+  .filter([](const auto &tree) { return tree.kind == Tree::Oak && tree.diameter > 25; })
+  .map([](const auto &tree) { return tree.volume(); })
+  .sum();
+```
+
+## Compiling C/C++ on Apple M1
+
+* [Boris Kolpackov](https://build2.org/blog/apple-m1-compilation.xhtml)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/k4l03y/compiling_cc_on_apple_m1/)
+
+## Linux developer going Windows
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/k1wvdf/linux_developer_going_windows/)
+
+## BinOpt — A Library for Self-guided Runtime Binary Optimization
+
+* [GitHub](https://github.com/aengelke/binopt) (LGPLv2.1+)
+
+## Conditionally Trivial Special Member Functions
+
+* [Sy Brand](https://devblogs.microsoft.com/cppblog/conditionally-trivial-special-member-functions/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/jxt3i3/conditionally_trivial_special_member_functions/)
+
+## Best framework to create HTTP server
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kgdcz5/best_framework_to_create_http_server/)
+
+## Boost 1.75
+
+* [Release notes](https://www.boost.org/users/history/version_1_75_0.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kbd8pe/boost_175_is_out/)
+
+## C++ Russia 2020 Moscow
+
+* [Playlist on YouTube](https://www.youtube.com/playlist?list=PLZN9ZGiWZoZruMY-MlkAd-nHzdP9TfLRC)
+
+## mocxx: a versatile C++ function mocking framework based on Frida, by Guardsquare
+
+No macros! Doesn't support mocking virtual functions yet.
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/k0atyi/mocxx_a_versatile_c_function_mocking_framework/)
+  * [GitHub](A versatile C++ function mocking framework. It replaces a target function with the provided implementation, and integrates well with existing testing and mocking frameworks.) (C++17, GPL-3.0)
+    * [Frida - Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers](https://github.com/frida)
+  * [Explanatory blog post at Guardsquare](https://tech.guardsquare.com/posts/mocxx-the-mocking-tool/)
+
+## Compile 1 Million Lines Of C++ In ~2 Minutes With A 16 Core Ryzen 9 5950x
+
+* [Embarcadero](https://blogs.embarcadero.com/compile-1-million-lines-of-c-in-2-minutes-with-a-16-core-ryzen-9-5950x/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kigy7l/compile_1_million_lines_of_c_in_2_minutes_with_a/)
+
+> I love how a shitty, bug-ridden development environment that costs US$1359 for the most basic edition still requires you to buy a separate US$139 extension to enable parallel builds, a standard feature available on practically every other closed and open source compiler and build system out of the box for $0 extra.
+
+### Dev-C++
+
+A fast, portable, simple, and free C/C++ IDE for Windows, built in Delphi
+
+* [GitHub](https://github.com/Embarcadero/Dev-Cpp)
+
+## Using std::list::splice to implement a LRU cache
+
+* [Article on nextptr](https://www.nextptr.com/tutorial/ta1576645374/stdlist-splice-for-implementing-lru-cache)
+* [`std::list::splice`](https://en.cppreference.com/w/cpp/container/list/splice)
+
+## What should the state of a moved-from object be?
+
+* [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20201218-00/?p=104558)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kfsjr3/what_should_the_state_of_a_movedfrom_object_be/)
+
+## Reducing Memory Consumption in Visual Assist
+
+* [Blog post](https://blog.wholetomato.com/2020/12/17/technical-deep-dive-reducing-memory-consumption-in-visual-assist-build-2393/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kgpw63/technical_deep_dive_reducing_memory_consumption/)
+
 ## dont_deduce<T>
 
 * [artificial::mind](https://artificial-mind.net/blog/2020/09/26/dont-deduce)
@@ -91,83 +235,22 @@ auto operator+(
 ) -> vec3<T>;
 ```
 
-## Calendar and Time-Zones in C++20: Time of Day
+## Writing a custom iterator in modern C++ (C++17)
 
-[Rainer Grimm](https://www.modernescpp.com/index.php/calendar-and-time-zone-in-c-20)
+* [Article](https://www.internalpointers.com/post/writing-custom-iterators-modern-cpp)
+  * [Reddit](https://www.reddit.com/r/programming/comments/kfl04g/writing_a_custom_iterator_in_modern_c/)
 
-## FTL - A functional template library for containers processing in C++
+## C++ for Swift developers
 
-* [GitHub](https://github.com/ftlorg/ftl)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/jor2hd/ftl_a_functional_template_library_for_containers/)
+* [Sidharth Juyal](https://whackylabs.com/swift/cpp/languages/2021/01/03/cpp-for-swift-devs/)
+  * [Reddit](https://www.reddit.com/r/swift/comments/kpnp1m/c_for_swift_developers/)
 
-FTL is a C++17-based library that provides a more convenient API for collections processing. The API is heavily inspired by the Rust programming language.
+## Is Zero a Butterfly?
 
-```cpp
-const auto totalVolume = cityTrees.iter()
-  .filter([](c onst auto &tree) { return tree.kind == Tree::Oak && tree.diameter > 25; })
-  .map([](const auto &tree) { return tree.volume(); })
-  .sum();
-```
+* [Shafik Yaghmour](https://shafik.github.io/c++/2021/01/03/is_zero_a_butterfly.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kqhcdb/is_zero_a_butterfly/)
 
-## Compiling C/C++ on Apple M1
+## Linus Torvalds against 80-char line length limit
 
-* [Boris Kolpackov](https://build2.org/blog/apple-m1-compilation.xhtml)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/k4l03y/compiling_cc_on_apple_m1/)
-
-## A Small Open Source Game In C++
-
-* [Preshing](https://preshing.com/20201126/a-small-open-source-game-in-cpp/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/k1fcus/a_small_open_source_game_in_c/)
-  * [GitHub](https://github.com/arc80)
-
-That tongue animation :-)
-
-## Linux developer going Windows
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/k1wvdf/linux_developer_going_windows/)
-
-## BinOpt — A Library for Self-guided Runtime Binary Optimization
-
-* [GitHub](https://github.com/aengelke/binopt) (LGPLv2.1+)
-
-## Easily currying functions in C++
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/k32fx4/easily_currying_functions_in_c/)
-
-```cpp
-// Existing, non-curried function
-auto f(int a, int b, int c) noexcept -> int {
-    return a * b * c;
-}
-
-auto g = fn::curry(f); // g is th e curried form of f
-
-int main() {
-    return g(2)(5)(10); // returns 100
-}
-```
-
-## Cheerp 2.6 rc1: C++ compiled for the Web
-
-* [Carlo Piovesan](https://medium.com/leaningtech/cheerp-2-6-rc1-the-cpp-compiler-for-the-web-8873be6601b1)
-
-## Interactive C++ with Cling
-
-* [LLVM Blog](https://blog.llvm.org/posts/2020-11-17-interactive-cpp-with-cling/)
-
-## C++ executors
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/jw1kyr/c_executors/)
-  * [CppCon 2019: Eric Niebler, David Hollman “A Unifying Abstraction for Async in C++”](https://www.youtube.com/watch?v=tF-Nz4aRWAM&feature=youtu.be)
-  * [A Unified Executors Proposal for C++ | P0443R14](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p0443r14.html)
-  * [libunifex (Facebook)](https://github.com/facebookexperimental/libunifex)
-
-## Conditionally Trivial Special Member Functions
-
-* [Sy Brand](https://devblogs.microsoft.com/cppblog/conditionally-trivial-special-member-functions/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/jxt3i3/conditionally_trivial_special_member_functions/)
-
-## repr: return printable value
-
-* [GitHub](https://github.com/p-ranav/repr)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/jzgzoz/repr_for_c_return_printable_string_representation/)
+* [The Register](https://www.theregister.com/2020/06/01/linux_5_7/)
+  * [Reddit](https://www.reddit.com/r/programming/comments/kpq460/linus_torvalds_rails_against_80characterlines_as/)
