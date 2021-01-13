@@ -68,3 +68,12 @@
 ## Matt Godbolt (2017-06-27) - Memory and Caches
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
+
+## Replacing CRTP Static Polymorphism With Concepts
+
+* [Matthew Guidry](https://www.fluentcpp.com/2020/09/11/replacing-crtp-static-polymorphism-with-concepts/)
+
+## David Friberg - Three interesting minor features of C++20
+
+* [YouTube](https://youtube.com/watch?v=4AQulaRJGMc)
+* [Slides](https://dfrib.github.io/presentations/2020cw50_Gbgcpp_MinorCpp20Features.html)
