@@ -73,3 +73,7 @@
 
 * [YouTube](https://youtube.com/watch?v=4AQulaRJGMc)
 * [Slides](https://dfrib.github.io/presentations/2020cw50_Gbgcpp_MinorCpp20Features.html)
+
+## Variants suck. But you can get good performance with esoteric tricks. And even if you don't use them well, they'll still be faster than virtual inheritance
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/ktyxqa/variants_suck_but_you_can_get_good_performance/?ref=share&ref_source=link)
