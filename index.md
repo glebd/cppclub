@@ -2,7 +2,7 @@
 
 Disclaimer: All opinions posted on this website are my own and not my employer's.
 
-* 120 - [28 January 2021](CppClubUK-120-20210128.md) :: [PDF](CppClubUK-120-20210128.pdf)
+* 120 - [4 February 2021](CppClubUK-120-20210204.md) :: [PDF](CppClubUK-120-20210204.pdf)
 * 119 - [14 January 2021](CppClubUK-119-20210114.md) :: [PDF](CppClubUK-119-20210114.pdf)
 * 118 - [7 January 2021](CppClubUK-118-20210107.md) :: [PDF](CppClubUK-118-20210107.pdf)
 * 117 - [3 December 2020](CppClubUK-117-20201203.md) :: [PDF](CppClubUK-117-20201203.pdf)
