@@ -69,14 +69,38 @@
 
 * [Video](https://www.youtube.com/watch?v=vDns3Um39l0)
 
-## Replacing CRTP Static Polymorphism With Concepts
-
-* [Matthew Guidry](https://www.fluentcpp.com/2020/09/11/replacing-crtp-static-polymorphism-with-concepts/)
-
 ## David Friberg - Three interesting minor features of C++20
 
 * [YouTube](https://youtube.com/watch?v=4AQulaRJGMc)
 * [Slides](https://dfrib.github.io/presentations/2020cw50_Gbgcpp_MinorCpp20Features.html)
+
+## Variants suck. But you can get good performance with esoteric tricks. And even if you don't use them well, they'll still be faster than virtual inheritance
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/ktyxqa/variants_suck_but_you_can_get_good_performance/?ref=share&ref_source=link)
+
+## Perhaps it's time for a more opinionated dialect of C++
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kvdprx/perhaps_it_is_time_for_an_opinionated_dialekt_of_c/)
+* [Should I litter my code with (the correct) attributes for every function, or just leave it pretty?](https://www.reddit.com/r/cpp/comments/kvpab0/should_i_litter_my_code_with_the_correct/)
+
+## Latest C++: theory vs. reality
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kva2w8/latest_c_theory_vs_reality/)
+  * [Godot game engine C++ standard thread on GitHub](https://github.com/godotengine/godot/issues/9694)
+
+## C++ vs Rust performance
+
+* [Reddit /r/cpp](https://www.reddit.com/r/cpp/comments/kyhark/c_vs_rust_performance/)
+  * [Reddit /r/rust](https://www.reddit.com/r/rust/comments/k7pssg/do_the_compilers_really_create_more_optimal_code/)
+
+## If you were allowed to make breaking changes to the C++ specification, what features would you modify/replace/remove to make the language better?
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/ksb99w/if_you_were_allowed_to_make_breaking_changes_to/)
+
+## A Year of Conference Talks from the Microsoft C++ Team
+
+* [Sy Brand](https://devblogs.microsoft.com/cppblog/a-year-of-conference-talks-from-the-microsoft-c-team/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l4s1tg/a_year_of_conference_talks_from_the_microsoft_c/?ref=share&ref_source=link)
 
 ## mocxx: a versatile C++ function mocking framework based on Frida, by Guardsquare
 
@@ -100,7 +124,7 @@ A fast, portable, simple, and free C/C++ IDE for Windows, built in Delphi
 
 * [GitHub](https://github.com/Embarcadero/Dev-Cpp)
 
-## Using `std::list::splice` to implement a LRU cache
+## Using std::list::splice to implement a LRU cache
 
 * [Article on nextptr](https://www.nextptr.com/tutorial/ta1576645374/stdlist-splice-for-implementing-lru-cache)
 * [`std::list::splice`](https://en.cppreference.com/w/cpp/container/list/splice)
@@ -115,7 +139,7 @@ A fast, portable, simple, and free C/C++ IDE for Windows, built in Delphi
 * [Blog post](https://blog.wholetomato.com/2020/12/17/technical-deep-dive-reducing-memory-consumption-in-visual-assist-build-2393/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/kgpw63/technical_deep_dive_reducing_memory_consumption/)
 
-## `dont_deduce<T>`
+## dont_deduce<T>
 
 * [artificial::mind](https://artificial-mind.net/blog/2020/09/26/dont-deduce)
   * [Reddit](https://www.reddit.com/r/cpp/comments/j0pgxh/controlling_template_argument_deduction_via_dont/)
@@ -156,13 +180,9 @@ auto operator+(
 * [Shafik Yaghmour](https://shafik.github.io/c++/2021/01/03/is_zero_a_butterfly.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/kqhcdb/is_zero_a_butterfly/)
 
-## `std::optional` and other useful types
+## std::optional and other useful types
 
 * [Reddit](https://www.reddit.com/r/cpp/comments/kozrhy/what_tools_similar_to_stdoptional_should_you_be/)
-
-## If you were allowed to make breaking changes to the C++ specification, what features would you modify/replace/remove to make the language better?
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/ksb99w/if_you_were_allowed_to_make_breaking_changes_to/)
 
 ## EnTT 3.6.0
 
@@ -171,7 +191,7 @@ Gaming meets modern C++ - a fast and reliable entity component system (ECS) and 
 * [Announcement on Reddit](https://www.reddit.com/r/gamedev/comments/kttqxm/entt_v360_is_out_gaming_meets_modern_c/)
   * [GitHub](https://github.com/skypjack/entt) (C++17, MIT)
 
-## With `std::variant`, you choose either performance or sanity
+## With std::variant, you choose either performance or sanity
 
 * [Reddit](https://www.reddit.com/r/cpp/comments/kst2pu/with_stdvariant_you_choose_either_performance_or/)
 
@@ -214,12 +234,147 @@ Tracy supports profiling CPU (C, C++11, Lua), GPU (OpenGL, Vulkan, OpenCL, Direc
 
 * [GitHub](https://github.com/wolfpld/tracy)
 
-## Latest C++: theory vs. reality
+## The most thoroughly commented linker script (probably)
 
-* [Reddit](https://www.reddit.com/r/cpp/comments/kva2w8/latest_c_theory_vs_reality/)
-  * [Godot game engine C++ standard thread on GitHub](https://github.com/godotengine/godot/issues/9694)
+* [Stargirl](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
+  * [GitHub](https://github.com/theacodes/Winterbloom_Castor_and_Pollux/blob/master/firmware/scripts/samd21g18a.ld)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kx1dbg/the_most_thoroughly_commented_linker_script/)
 
-## Perhaps it's time for a more opinionated dialect of C++
+## How can I write a C++ class that iterates over its base classes?
 
-* [Reddit](https://www.reddit.com/r/cpp/comments/kvdprx/perhaps_it_is_time_for_an_opinionated_dialekt_of_c/)
-* [Should I litter my code with (the correct) attributes for every function, or just leave it pretty?](https://www.reddit.com/r/cpp/comments/kvpab0/should_i_litter_my_code_with_the_correct/)
+* [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20210114-00/?p=104714)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kx9uli/how_can_i_write_a_c_class_that_iterates_over_its/)
+
+## Template specialization and instantiation
+
+* [Xiang Fan, Microsoft](https://devblogs.microsoft.com/cppblog/build-throughput-series-template-metaprogramming-fundamentals/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kx7r0h/build_throughput_series_template_metaprogramming/)
+
+## C++ Performance Trap #1: Constant-size std::vector
+
+* [Scott Wolchok](https://wolchok.org/posts/cxx-trap-1-constant-size-vector/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kyc6f9/c_performance_trap_1_constantsize_stdvector/)
+  * [Software optimization resources, by Agner](https://www.agner.org/optimize/#manuals)
+
+## C++ Performance Trap #2: Unnecessary std::function
+
+* [Scott Wolchok](https://wolchok.org/posts/cxx-trap-2-std-function/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kzvjgn/c_performance_trap_2_unnecessary_stdfunction/?ref=share&ref_source=link)
+
+## Inlining and Compiler Optimizations
+
+* [Scott Wolchok](https://wolchok.org/posts/inlining-and-compiler-optimizations/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l3r8o4/inlining_and_compiler_optimizations/?ref=share&ref_source=link)
+
+## The perils of the accidental C++ conversion constructor
+
+* [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20210115-00/?p=104719)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/ky691b/the_perils_of_the_accidental_c_conversion/)
+
+> No one hates C++ more than the people who love C++. [=>](https://www.reddit.com/r/cpp/comments/ky691b/the_perils_of_the_accidental_c_conversion/gjfbed4/)
+
+## Making Win32 APIs More Accessible to More Languages
+
+* [Microsoft](https://blogs.windows.com/windowsdeveloper/2021/01/21/making-win32-apis-more-accessible-to-more-languages/)
+  * [C++/WinRT](https://github.com/microsoft/cppwinrt)
+
+## C++ and game engines
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/l1vfz5/c_and_game_engines/)
+
+> Hey, i started out with c++ 3 months ago and really love it. I already have some experience in unity, but i d like to use c++. Is there any engine you would recommend me to try out? I know about Unreal Engine but i cant find any good tutorials for how to use c++ with unreal engine. Is there any other option or a tutorial series or anything you could recommend me?
+
+## Game developers, what compiler optimization setting do you use?
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kyeid1/game_developers_what_compiler_optimization/?ref=share&ref_source=link)
+
+## Adding elements to arrays and changing variables during compilation – imperative meta-metaprogramming in C++
+
+* [Dugi](https://lordsoftech.com/programming/adding-elements-to-arrays-and-changing-variables-during-compilation-imperative-meta-metaprogramming-in-c/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l0pwes/adding_elements_to_arrays_and_changing_variables/?ref=share&ref_source=link)
+
+## Anonymous types in C++
+
+* [Jan Bielak](https://janbielak.com/index.php/2021/01/15/anonymous-types-in-c/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/ky56k7/anonymous_types_in_c/)
+
+```cpp
+constexpr auto simplify(struct_(int numerator, denominator;) ratio) -> decltype(ratio)
+{
+    int gcd = std::gcd(ratio.numerator, ratio.denominator);
+    return { ratio.numerator / gcd, ratio.denominator / gcd };
+}
+```
+
+## Documenting C++ code
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kzvnyx/how_do_you_document_your_c_code/?ref=share&ref_source=link)
+  * [Doxygen](https://www.doxygen.nl/index.html), [Sphinx](https://www.sphinx-doc.org/en/master/) + [Breathe](https://github.com/michaeljones/breathe) => [{fmt}](https://fmt.dev/latest/index.html)
+  * [Standardese](https://github.com/standardese/standardese)
+  * [clang-doc](https://clang.llvm.org/extra/clang-doc.html)
+  * [hdoc](https://hdoc.io/)
+  * [Adobe Hyde](https://github.com/adobe/hyde)
+
+## YAVE: Functional reactive visual programming language written in C++20
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kub1gu/yave_functional_reactive_visual_programming/)
+  * [GitHub](https://github.com/mocabe/yave) (C++20, LGPL)
+
+## Possibility of adding operators to handle nullptr easier ("??", "?->")
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/kxflj9/possibility_of_adding_operators_to_handle_nullptr/)
+
+## CMake and the Future of C++ Package Management
+
+* [Borislav Stanimirov](https://ibob.github.io/blog/2020/01/13/cmake-package-management/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kwpkcw/cmake_and_the_future_of_c_package_management/?ref=share&ref_source=link)
+
+## Fixed math header only library with MIT licence
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/l0uz1y/fixed_math_header_only_library_with_mit_licence/?ref=share&ref_source=link)
+  * [GitHub](https://github.com/arturbac/fixed_math) (C++17, MIT)
+
+## Coderrect Scanner
+
+A fast static analysis tool for detecting race conditions in C++ code. Supports pthreads, `std::thread`, OpenMP, and more.
+
+* [Home Page](https://coderrect.com/download/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l7z6s9/a_fast_static_analysis_tool_for_detecting_race/?ref=share&ref_source=link)
+
+## Purely academic purposes Compile-time Turing Machine in C++20
+
+* [GitHub](https://github.com/Eren121/CppTuringMachine)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l9gl25/purely_academic_purposes_compiletime_turing/?ref=share&ref_source=link)
+
+## X-Macros
+
+* [Arthur O'Dwyer](https://quuxplusone.github.io/blog/2021/02/01/x-macros/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/laqwkw/what_are_xmacros/?ref=share&ref_source=link)
+
+> Interesting technique, I hate it. [=>](https://www.reddit.com/r/cpp/comments/laqwkw/what_are_xmacros/glpkbmz/)
+
+## A C++20 container concepts library
+
+This library aims to provide general purpose concepts that are not available in the C++20 concepts library, most notably container concepts.
+
+* [GitHub](https://github.com/MiSo1289/more_concepts)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l9pt7n/a_c20_container_concepts_library/?ref=share&ref_source=link)
+
+## Motivating examples of coroutines
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/l4lcar/do_people_have_some_motivating_examples_for/?ref=share&ref_source=link)
+* [Previously: Reddit](https://www.reddit.com/r/cpp/comments/j6pi07/other_than_generators_what_do_coroutines_solve/?ref=share&ref_source=link)
+
+## std::jthread and cooperative cancellation with stop token
+
+* [Article on Nextptr](https://www.nextptr.com/tutorial/ta1588653702/stdjthread-and-cooperative-cancellation-with-stop-token)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/la35ec/stdjthread_and_cooperative_cancellation_with_stop/?ref=share&ref_source=link)
+
+## Time Travel Debugging for C/C++
+
+* [Article](https://pspdfkit.com/blog/2021/time-travel-debugging-for-c/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/laxdxy/time_travel_debugging_for_cc/)
+
+## C++ HTML
+
+* [J.F. Bastien](https://github.com/jfbastien/cpp-html)
