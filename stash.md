@@ -78,103 +78,6 @@
 
 * [Reddit](https://www.reddit.com/r/cpp/comments/ktyxqa/variants_suck_but_you_can_get_good_performance/?ref=share&ref_source=link)
 
-## Perhaps it's time for a more opinionated dialect of C++
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/kvdprx/perhaps_it_is_time_for_an_opinionated_dialekt_of_c/)
-* [Should I litter my code with (the correct) attributes for every function, or just leave it pretty?](https://www.reddit.com/r/cpp/comments/kvpab0/should_i_litter_my_code_with_the_correct/)
-
-## Latest C++: theory vs. reality
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/kva2w8/latest_c_theory_vs_reality/)
-  * [Godot game engine C++ standard thread on GitHub](https://github.com/godotengine/godot/issues/9694)
-
-## C++ vs Rust performance
-
-* [Reddit /r/cpp](https://www.reddit.com/r/cpp/comments/kyhark/c_vs_rust_performance/)
-  * [Reddit /r/rust](https://www.reddit.com/r/rust/comments/k7pssg/do_the_compilers_really_create_more_optimal_code/)
-
-## If you were allowed to make breaking changes to the C++ specification, what features would you modify/replace/remove to make the language better?
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/ksb99w/if_you_were_allowed_to_make_breaking_changes_to/)
-
-## A Year of Conference Talks from the Microsoft C++ Team
-
-* [Sy Brand](https://devblogs.microsoft.com/cppblog/a-year-of-conference-talks-from-the-microsoft-c-team/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/l4s1tg/a_year_of_conference_talks_from_the_microsoft_c/?ref=share&ref_source=link)
-
-## mocxx: a versatile C++ function mocking framework based on Frida, by Guardsquare
-
-No macros! Doesn't support mocking virtual functions yet.
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/k0atyi/mocxx_a_versatile_c_function_mocking_framework/)
-  * [GitHub](A versatile C++ function mocking framework. It replaces a target function with the provided implementation, and integrates well with existing testing and mocking frameworks.) (C++17, GPL-3.0)
-    * [Frida - Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers](https://github.com/frida)
-  * [Explanatory blog post at Guardsquare](https://tech.guardsquare.com/posts/mocxx-the-mocking-tool/)
-
-## Compile 1 Million Lines Of C++ In ~2 Minutes With A 16 Core Ryzen 9 5950x
-
-* [Embarcadero](https://blogs.embarcadero.com/compile-1-million-lines-of-c-in-2-minutes-with-a-16-core-ryzen-9-5950x/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kigy7l/compile_1_million_lines_of_c_in_2_minutes_with_a/)
-
-> I love how a shitty, bug-ridden development environment that costs US$1359 for the most basic edition still requires you to buy a separate US$139 extension to enable parallel builds, a standard feature available on practically every other closed and open source compiler and build system out of the box for $0 extra.
-
-### Dev-C++
-
-A fast, portable, simple, and free C/C++ IDE for Windows, built in Delphi
-
-* [GitHub](https://github.com/Embarcadero/Dev-Cpp)
-
-## Using std::list::splice to implement a LRU cache
-
-* [Article on nextptr](https://www.nextptr.com/tutorial/ta1576645374/stdlist-splice-for-implementing-lru-cache)
-* [`std::list::splice`](https://en.cppreference.com/w/cpp/container/list/splice)
-
-## What should the state of a moved-from object be?
-
-* [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20201218-00/?p=104558)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kfsjr3/what_should_the_state_of_a_movedfrom_object_be/)
-
-## Reducing Memory Consumption in Visual Assist
-
-* [Blog post](https://blog.wholetomato.com/2020/12/17/technical-deep-dive-reducing-memory-consumption-in-visual-assist-build-2393/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kgpw63/technical_deep_dive_reducing_memory_consumption/)
-
-## dont_deduce<T>
-
-* [artificial::mind](https://artificial-mind.net/blog/2020/09/26/dont-deduce)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/j0pgxh/controlling_template_argument_deduction_via_dont/)
-
-### C++11
-
-```cpp
-template <class T> struct foo_t { using type = T; };
-template <class T> using foo = typename foo_t<T>::type;
-```
-
-### C++20
-
-```cpp
-template <typename T>
-auto operator+(
-  vec3<T> const& a,
-  std::convertible_to<T> auto const& b
-) -> vec3<T>;
-```
-
-## Writing a custom iterator in modern C++ (C++17)
-
-* [Article](https://www.internalpointers.com/post/writing-custom-iterators-modern-cpp)
-  * [Reddit](https://www.reddit.com/r/programming/comments/kfl04g/writing_a_custom_iterator_in_modern_c/)
-
-## C++ for Swift developers
-
-* [Sidharth Juyal](https://whackylabs.com/swift/cpp/languages/2021/01/03/cpp-for-swift-devs/)
-  * [Reddit](https://www.reddit.com/r/swift/comments/kpnp1m/c_for_swift_developers/)
-
-### Wrapping C++ for use in Swift
-
-* [Reddit](https://www.reddit.com/r/iOSProgramming/comments/jxqv74/looking_for_good_examples_of_wrapping_c/)
-
 ## Is Zero a Butterfly?
 
 * [Shafik Yaghmour](https://shafik.github.io/c++/2021/01/03/is_zero_a_butterfly.html)
@@ -225,14 +128,6 @@ const bool b = prefix <isPrefixOf> text;
 ## Polymorphism Decision Table
 
 * [Kilian Henneberger](https://ukilele.github.io//2020/05/11/polymorphism-decision-table.html)
-
-## Tracy Profiler
-
-A real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications.
-
-Tracy supports profiling CPU (C, C++11, Lua), GPU (OpenGL, Vulkan, OpenCL, Direct3D 12), memory, locks, context switches, per-frame screenshots and more.
-
-* [GitHub](https://github.com/wolfpld/tracy)
 
 ## The most thoroughly commented linker script (probably)
 
@@ -375,6 +270,90 @@ This library aims to provide general purpose concepts that are not available in 
 * [Article](https://pspdfkit.com/blog/2021/time-travel-debugging-for-c/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/laxdxy/time_travel_debugging_for_cc/)
 
+## Number Parsing at a Gigabyte per Second
+
+* [Daniel Lemire](https://lemire.me/blog/2021/01/29/number-parsing-at-a-gigabyte-per-second/)
+  * [Paper](https://arxiv.org/pdf/2101.11408.pdf)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l80uat/number_parsing_at_a_gigabyte_per_second/)
+  * [fast_float (GitHub)](https://github.com/fastfloat/fast_float)
+  * [The Eisel-Lemire ParseNumberF64 Algorithm](https://nigeltao.github.io/blog/2020/parse-number-f64-simple.html)
+  * [Go Systems talk (YouTube)](https://www.youtube.com/watch?v=AVXgvlMeIm4)
+
+## Abbreviated Function Templates and Constrained Auto
+
+* [Sy Brand, Microsoft](https://devblogs.microsoft.com/cppblog/abbreviated-function-templates-and-constrained-auto/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lcwfzx/abbreviated_function_templates_and_constrained/)
+
+## Why no standard library support for command line parsing?
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/l6759u/why_no_standard_library_support_for_command_line/?ref=share&ref_source=link)
+  * [P0781R0 A Modern C++ Signature for `main`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0781r0.html)
+  * TCLAP - Templatized Command Line Argument Parser: [SourceForge](http://tclap.sourceforge.net), [GitHub](https://github.com/mirror/tclap/)
+  * [Gflags](https://gflags.github.io/gflags/), [GitHub](https://github.com/gflags/gflags)
+  * [Cxxopts](https://github.com/jarro2783/cxxopts)
+  * [CLI11](https://github.com/CLIUtils/CLI11)
+  * [Boost.Program_options](https://www.boost.org/doc/libs/1_75_0/doc/html/program_options.html)
+  * Quick Arg Parser: [GitHub](https://github.com/Dugy/quick_arg_parser), [Reddit](https://www.reddit.com/r/cpp/comments/l7a6uc/tired_of_unwieldy_tools_like_getopt_or_argp_try/)
+  * [Lyra](https://github.com/bfgroup/Lyra)
+  * [Clara](https://github.com/catchorg/Clara), [blog post by Marius Bancila](https://mariusbancila.ro/blog/2018/04/03/parsing-command-line-arguments-in-cpp-with-clara/)
+
+```cpp
+std::vector<std::string_view> args(argv, argv+argc);
+```
+
+## Moving Faster: Everyday Efficiency in Modern C++
+
+* [C++Now 2018, YouTube](https://youtu.be/LFv7XwgsdLY)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l5hxba/moving_faster_everyday_efficiency_in_modern_c/?ref=share&ref_source=link)
+
 ## C++ HTML
 
 * [J.F. Bastien](https://github.com/jfbastien/cpp-html)
+
+## Reference Views
+
+**rviews** (reference views) is a header-only C++17 library that allows viewing an STL container via another STL container with lvalue semantics. E.g. you could view a list as it would be a vector, or even as it would be a map, or even both.
+
+```cpp
+std::list<char> data{'a', 'b', 'c'};
+vector_view view{data};
+std::cout << view[0] << std::endl; // a
+std::cout << view[1] << std::endl; // b
+std::cout << view[2] << std::endl; // c
+```
+
+* [GitHub](https://github.com/vzelen/rviews)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/la0mq3/reference_views_headeronly_library_view_vector_as/?ref=share&ref_source=link)
+  * [See also: Vista](https://github.com/breese/vista)
+  * [See also: Boost flat_map](https://www.boost.org/doc/libs/1_75_0/doc/html/container/non_standard_containers.html#container.non_standard_containers.flat_xxx)
+
+## Conceptual
+
+A C++20 library adapting preexisting type_traits into concepts, as well as improving upon the preexisting standard ones with better subsumption.
+
+* [GitHub](https://github.com/Hamondorf/conceptual)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lbw45p/my_extended_concepts_library/?ref=share&ref_source=link)
+
+## C++ Memory Safety
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/lc1axl/c_memory_safety/?ref=share&ref_source=link)
+
+## Hot reloading C++ for rapid development with the help of **fungos/cr**
+
+* [Alex Dixon](https://www.polymonster.co.uk/blog/live-reloading)
+  * [fungos/cr](https://github.com/fungos/cr)
+  * [cr.h: A Simple C Hot Reload Header-only Library](https://fungos.github.io/cr-simple-c-hot-reload/)
+
+## Video: Pavel Novikov - "Understanding Coroutines by Example" - C++ London
+
+* [YouTube](https://www.youtube.com/watch?v=7sKUAyWXNHA)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lek2j1/understanding_c_coroutines_by_example_c_london/?ref=share&ref_source=link)
+  * [Slides](https://toughengineer.github.io/talks/C++%20Russia%202020%20Moscow/Understanding%20C++%20coroutines%20by%20example.pdf)
+
+## VirtualMultiArray
+
+Multi graphics card based C++ virtual array implementation that uses OpenCL just for the data transfers on PCIe bridge.
+
+* [GitHub](https://github.com/tugrul512bit/VirtualMultiArray)
+* [Wiki](https://github.com/tugrul512bit/VirtualMultiArray/wiki/How-it-works)
+* [Reddit](https://www.reddit.com/r/cpp/comments/leq0tm/a_c_virtualarray_that_uses_graphics_cards_as/?ref=share&ref_source=link)
