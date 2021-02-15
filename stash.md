@@ -73,3 +73,17 @@
 
 * [YouTube](https://youtube.com/watch?v=4AQulaRJGMc)
 * [Slides](https://dfrib.github.io/presentations/2020cw50_Gbgcpp_MinorCpp20Features.html)
+
+## Solving differential equations with LLVM
+
+Heyoka is a C++ library for the integration of ordinary differential equations (ODEs) via Taylor’s method. Notable features include:
+
+* support for both double-precision and extended-precision floating-point types (80-bit and 28-bit),
+* the ability to maintain machine precision accuracy over tens of billions of timesteps, batch mode integration to harness the power of modern SIMD instruction sets,
+* a high-performance implementation of Taylor’s method based on automatic differentiation techniques and aggressive just-in-time compilation via LLVM.
+
+### Links
+
+* [GitHub](https://github.com/bluescarni/heyoka) (C++17, MPL-2.0)
+  * [Docs](https://bluescarni.github.io/heyoka/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lkcjki/solving_differential_equations_with_llvm/?ref=share&ref_source=link)
