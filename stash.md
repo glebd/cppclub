@@ -74,76 +74,29 @@
 * [YouTube](https://youtube.com/watch?v=4AQulaRJGMc)
 * [Slides](https://dfrib.github.io/presentations/2020cw50_Gbgcpp_MinorCpp20Features.html)
 
-## Variants suck. But you can get good performance with esoteric tricks. And even if you don't use them well, they'll still be faster than virtual inheritance
+## Solving differential equations with LLVM
 
-* [Reddit](https://www.reddit.com/r/cpp/comments/ktyxqa/variants_suck_but_you_can_get_good_performance/?ref=share&ref_source=link)
+Heyoka is a C++ library for the integration of ordinary differential equations (ODEs) via Taylor’s method. Notable features include:
 
-## Is Zero a Butterfly?
+* support for both double-precision and extended-precision floating-point types (80-bit and 28-bit),
+* the ability to maintain machine precision accuracy over tens of billions of timesteps, batch mode integration to harness the power of modern SIMD instruction sets,
+* a high-performance implementation of Taylor’s method based on automatic differentiation techniques and aggressive just-in-time compilation via LLVM.
 
-* [Shafik Yaghmour](https://shafik.github.io/c++/2021/01/03/is_zero_a_butterfly.html)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kqhcdb/is_zero_a_butterfly/)
+### Links
 
-## std::optional and other useful types
+* [GitHub](https://github.com/bluescarni/heyoka) (C++17, MPL-2.0)
+  * [Docs](https://bluescarni.github.io/heyoka/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lkcjki/solving_differential_equations_with_llvm/?ref=share&ref_source=link)
 
-* [Reddit](https://www.reddit.com/r/cpp/comments/kozrhy/what_tools_similar_to_stdoptional_should_you_be/)
+## TTauri: modern retained-mode GUI library in C++20
 
-## EnTT 3.6.0
+* [GitHub](https://github.com/ttauri-project/ttauri)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/llq4z7/ttauri_modern_retainedmode_gui_library_in_c20/)
 
-Gaming meets modern C++ - a fast and reliable entity component system (ECS) and much more.
+## C++20 Coroutines: sketching a minimal async framework
 
-* [Announcement on Reddit](https://www.reddit.com/r/gamedev/comments/kttqxm/entt_v360_is_out_gaming_meets_modern_c/)
-  * [GitHub](https://github.com/skypjack/entt) (C++17, MIT)
-
-## With std::variant, you choose either performance or sanity
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/kst2pu/with_stdvariant_you_choose_either_performance_or/)
-
-## MSVC build performance
-
-* [Improving code generation time with C++ Build Insights](https://devblogs.microsoft.com/cppblog/improving-code-generation-time-with-cpp-build-insights/)
-* [Faster C++ builds, simplified: a new metric for time](https://devblogs.microsoft.com/cppblog/faster-cpp-builds-simplified-a-new-metric-for-time/)
-* [The Coalition Sees 27.9X Iteration Build Improvement with Visual Studio 2019](https://devblogs.microsoft.com/cppblog/the-coalition-sees-27-9x-iteration-build-improvement-with-visual-studio-2019/)
-* [Faster C++ Iteration Builds](https://devblogs.microsoft.com/cppblog/faster-c-iteration-builds/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/ksuvbo/msvc_faster_c_iteration_builds/)
-* [C++ Build Analyzer](https://github.com/MetanoKid/cpp-build-analyzer)
-  * [C++ Build Insights SDK](https://docs.microsoft.com/en-gb/cpp/build-insights/reference/sdk/overview?view=msvc-160)
-
-## Infix Function Calls with Boost HOF
-
-* [Jo Boccara](https://www.fluentcpp.com/2021/01/08/infix-function-calls-with-boost-hof/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kt06b5/fluentc_infix_function_calls_with_boost_hof/)
-
-### Before
-
-```cpp
-const bool b = isPrefixOf(prefix, text);
-```
-
-### After
-
-```cpp
-const bool b = prefix <isPrefixOf> text;
-```
-
-## Polymorphism Decision Table
-
-* [Kilian Henneberger](https://ukilele.github.io//2020/05/11/polymorphism-decision-table.html)
-
-## The most thoroughly commented linker script (probably)
-
-* [Stargirl](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
-  * [GitHub](https://github.com/theacodes/Winterbloom_Castor_and_Pollux/blob/master/firmware/scripts/samd21g18a.ld)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kx1dbg/the_most_thoroughly_commented_linker_script/)
-
-## How can I write a C++ class that iterates over its base classes?
-
-* [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20210114-00/?p=104714)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kx9uli/how_can_i_write_a_c_class_that_iterates_over_its/)
-
-## Template specialization and instantiation
-
-* [Xiang Fan, Microsoft](https://devblogs.microsoft.com/cppblog/build-throughput-series-template-metaprogramming-fundamentals/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kx7r0h/build_throughput_series_template_metaprogramming/)
+* [Jeremy Ong](https://www.jeremyong.com/cpp/2021/01/04/cpp20-coroutines-a-minimal-async-framework/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/ll3mdw/c20_coroutines_sketching_a_minimal_async_framework/)
 
 ## C++ Performance Trap #1: Constant-size std::vector
 
@@ -166,7 +119,7 @@ const bool b = prefix <isPrefixOf> text;
 * [Raymond Chen](https://devblogs.microsoft.com/oldnewthing/20210115-00/?p=104719)
   * [Reddit](https://www.reddit.com/r/cpp/comments/ky691b/the_perils_of_the_accidental_c_conversion/)
 
-> No one hates C++ more than the people who love C++. [=>](https://www.reddit.com/r/cpp/comments/ky691b/the_perils_of_the_accidental_c_conversion/gjfbed4/)
+> No one hates C++ more than the people who love C++. [#](https://www.reddit.com/r/cpp/comments/ky691b/the_perils_of_the_accidental_c_conversion/gjfbed4/)
 
 ## Making Win32 APIs More Accessible to More Languages
 
@@ -177,16 +130,18 @@ const bool b = prefix <isPrefixOf> text;
 
 * [Reddit](https://www.reddit.com/r/cpp/comments/l1vfz5/c_and_game_engines/)
 
-> Hey, i started out with c++ 3 months ago and really love it. I already have some experience in unity, but i d like to use c++. Is there any engine you would recommend me to try out? I know about Unreal Engine but i cant find any good tutorials for how to use c++ with unreal engine. Is there any other option or a tutorial series or anything you could recommend me?
+> Hey, I started out with C++ 3 months ago and really love it. I already have some experience in Unity, but I'd like to use C++. Is there any engine you would recommend me to try out? I know about Unreal Engine but I can't find any good tutorials for how to use C++ with Unreal Engine. Is there any other option or a tutorial series or anything you could recommend me?
 
 ## Game developers, what compiler optimization setting do you use?
 
 * [Reddit](https://www.reddit.com/r/cpp/comments/kyeid1/game_developers_what_compiler_optimization/?ref=share&ref_source=link)
 
-## Adding elements to arrays and changing variables during compilation – imperative meta-metaprogramming in C++
+## EnTT 3.6.0
 
-* [Dugi](https://lordsoftech.com/programming/adding-elements-to-arrays-and-changing-variables-during-compilation-imperative-meta-metaprogramming-in-c/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/l0pwes/adding_elements_to_arrays_and_changing_variables/?ref=share&ref_source=link)
+Gaming meets modern C++ - a fast and reliable entity component system (ECS) and much more.
+
+* [Announcement on Reddit](https://www.reddit.com/r/gamedev/comments/kttqxm/entt_v360_is_out_gaming_meets_modern_c/)
+  * [GitHub](https://github.com/skypjack/entt) (C++17, MIT)
 
 ## Anonymous types in C++
 
@@ -210,15 +165,6 @@ constexpr auto simplify(struct_(int numerator, denominator;) ratio) -> decltype(
   * [hdoc](https://hdoc.io/)
   * [Adobe Hyde](https://github.com/adobe/hyde)
 
-## YAVE: Functional reactive visual programming language written in C++20
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/kub1gu/yave_functional_reactive_visual_programming/)
-  * [GitHub](https://github.com/mocabe/yave) (C++20, LGPL)
-
-## Possibility of adding operators to handle nullptr easier ("??", "?->")
-
-* [Reddit](https://www.reddit.com/r/cpp/comments/kxflj9/possibility_of_adding_operators_to_handle_nullptr/)
-
 ## CMake and the Future of C++ Package Management
 
 * [Borislav Stanimirov](https://ibob.github.io/blog/2020/01/13/cmake-package-management/)
@@ -235,18 +181,6 @@ A fast static analysis tool for detecting race conditions in C++ code. Supports 
 
 * [Home Page](https://coderrect.com/download/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/l7z6s9/a_fast_static_analysis_tool_for_detecting_race/?ref=share&ref_source=link)
-
-## Purely academic purposes Compile-time Turing Machine in C++20
-
-* [GitHub](https://github.com/Eren121/CppTuringMachine)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/l9gl25/purely_academic_purposes_compiletime_turing/?ref=share&ref_source=link)
-
-## X-Macros
-
-* [Arthur O'Dwyer](https://quuxplusone.github.io/blog/2021/02/01/x-macros/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/laqwkw/what_are_xmacros/?ref=share&ref_source=link)
-
-> Interesting technique, I hate it. [=>](https://www.reddit.com/r/cpp/comments/laqwkw/what_are_xmacros/glpkbmz/)
 
 ## A C++20 container concepts library
 
@@ -306,9 +240,7 @@ std::vector<std::string_view> args(argv, argv+argc);
 * [C++Now 2018, YouTube](https://youtu.be/LFv7XwgsdLY)
   * [Reddit](https://www.reddit.com/r/cpp/comments/l5hxba/moving_faster_everyday_efficiency_in_modern_c/?ref=share&ref_source=link)
 
-## C++ HTML
-
-* [J.F. Bastien](https://github.com/jfbastien/cpp-html)
+![](img/talbot-movingfaster-1.jpg)
 
 ## Reference Views
 
@@ -357,3 +289,57 @@ Multi graphics card based C++ virtual array implementation that uses OpenCL just
 * [GitHub](https://github.com/tugrul512bit/VirtualMultiArray)
 * [Wiki](https://github.com/tugrul512bit/VirtualMultiArray/wiki/How-it-works)
 * [Reddit](https://www.reddit.com/r/cpp/comments/leq0tm/a_c_virtualarray_that_uses_graphics_cards_as/?ref=share&ref_source=link)
+
+## Boosting Productivity and Performance with the NVIDIA CUDA 11.2 C++ Compiler
+
+* [NVIDIA](https://developer.nvidia.com/blog/boosting-productivity-and-performance-with-the-nvidia-cuda-11-2-c-compiler/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lixejk/boosting_productivity_and_performance_with_the/?ref=share&ref_source=link)
+
+> All useful stuff for machine learning is written for cuda, so everyone is forced to buy Nvidia. Been waiting for opencl pytorch backend for years, but it just seems like nobody really has a reason to do it. [#](https://www.reddit.com/r/cpp/comments/lixejk/boosting_productivity_and_performance_with_the/gn70ega/)
+
+## Build2: Complete C++20 Modules Support with GCC
+
+* [Boris Kolpackov](https://build2.org/blog/build2-cxx20-modules-gcc.xhtml)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/ll1l6z/build2_complete_c20_modules_support_with_gcc/)
+
+> **build2** now provides conforming and scalable support for all the major C++20 Modules features when used with GCC. This includes named modules, module partitions (both interface and implementation), header unit importation, and include translation.
+
+Clang support is coming soon.
+
+## Meson Build 0.57.0
+
+* [Release notes](https://mesonbuild.com/Release-notes-for-0-57-0.html)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/ljwix0/meson_build_system_0570_is_out_with_experimental/?ref=share&ref_source=link)
+* [The Absolute Beginner's Guide to Installing and Using Meson](https://mesonbuild.com/SimpleStart.html)
+
+### Highlights
+
+* Experimental support for C++ modules in Visual Studio
+* **meson test** only rebuilds test dependencies
+* Support added for LLVM's thinLTO
+
+## Portability: should we stop using int?
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/lja95p/portability_should_we_stop_using_int/?ref=share&ref_source=link)
+
+## Asio-chan
+
+This library provides golang-inspired channel types to be used with ASIO awaitable coroutines. Channels allow bidirectional message passing and synchronization between coroutines.
+
+* [GitHub](https://github.com/MiSo1289/asiochan) (C++20, MIT)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lgsgdz/limited_golike_channel_implementation_with_asios/)
+
+## Better CMake
+
+* [Videos by Jefferson Amstutz](https://www.youtube.com/playlist?list=PL8i3OhJb4FNV10aIZ8oF0AA46HgA2ed8g)
+
+## Scientific computing in C++
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/ll3mdw/c20_coroutines_sketching_a_minimal_async_framework/)
+
+### Libraries
+
+* [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
+* [Blaze](https://bitbucket.org/blaze-lib/blaze/wiki/browse/)
+* [Boost uBLAS](https://www.boost.org/doc/libs/1_75_0/libs/numeric/ublas/doc/index.html)
+* [PETSc](https://www.mcs.anl.gov/petsc/)
