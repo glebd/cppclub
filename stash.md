@@ -87,3 +87,14 @@ Heyoka is a C++ library for the integration of ordinary differential equations (
 * [GitHub](https://github.com/bluescarni/heyoka) (C++17, MPL-2.0)
   * [Docs](https://bluescarni.github.io/heyoka/)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lkcjki/solving_differential_equations_with_llvm/?ref=share&ref_source=link)
+
+## TTauri: modern retained-mode GUI library in C++20
+
+* [GitHub](https://github.com/ttauri-project/ttauri)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/llq4z7/ttauri_modern_retainedmode_gui_library_in_c20/)
+
+## C++20 Coroutines: sketching a minimal async framework
+
+* [Jeremy Ong](https://www.jeremyong.com/cpp/2021/01/04/cpp20-coroutines-a-minimal-async-framework/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/ll3mdw/c20_coroutines_sketching_a_minimal_async_framework/)
+
