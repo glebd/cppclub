@@ -79,3 +79,8 @@
 * [YouTube](https://www.youtube.com/watch?v=7sKUAyWXNHA)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lek2j1/understanding_c_coroutines_by_example_c_london/?ref=share&ref_source=link)
   * [Slides](https://toughengineer.github.io/talks/C++%20Russia%202020%20Moscow/Understanding%20C++%20coroutines%20by%20example.pdf)
+
+## Video: Timur Doumler - How C++20 changes the way we write code - Meeting C++ 2020
+
+* [YouTube](https://youtu.be/VK-16tpFQVI)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lo4z89/timur_doumler_how_c20_changes_the_way_we_write/?ref=share&ref_source=link)
