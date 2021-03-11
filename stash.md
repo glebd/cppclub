@@ -83,3 +83,43 @@
 
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
+
+## C++ Performance Trap #1: Constant-size std::vector
+
+* [Scott Wolchok](https://wolchok.org/posts/cxx-trap-1-constant-size-vector/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kyc6f9/c_performance_trap_1_constantsize_stdvector/)
+  * [Software optimization resources, by Agner](https://www.agner.org/optimize/#manuals)
+
+## C++ Performance Trap #2: Unnecessary std::function
+
+* [Scott Wolchok](https://wolchok.org/posts/cxx-trap-2-std-function/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/kzvjgn/c_performance_trap_2_unnecessary_stdfunction/?ref=share&ref_source=link)
+
+## Inlining and Compiler Optimizations
+
+* [Scott Wolchok](https://wolchok.org/posts/inlining-and-compiler-optimizations/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/l3r8o4/inlining_and_compiler_optimizations/?ref=share&ref_source=link)
+
+## Library: Cli
+
+A cross-platform header only C++14 library for interactive command line interfaces (Cisco style).
+
+* [GitHub](https://github.com/daniele77/cli)
+
+## Introduction to Lua in C++ with Sol2
+
+* [Hristo Stamenov](https://thatonegamedev.com/cpp/introduction-to-lua-in-c-with-sol2/)
+
+## Book erratum: Professional C++ by Marc Gregoire
+
+* [Reddit](https://www.reddit.com/r/cpp/comments/ltwbsj/professional_c_5th_ed_and_statement_about_rvo_and/)
+
+> Statements of the form return object; trigger return value optimization (RVO) if object is a local variable, a parameter to the function, or a temporary value. Furthermore, if object is a local variable, named return value optimization (NRVO) can kick in.
+
+* [cppreference: Copy elision](https://en.cppreference.com/w/cpp/language/copy_elision)
+
+## Free Windows 10 development virtual machines for HyperV, Parallels, VirtualBox, and VMWare
+
+* [Scott Hanselman](https://www.hanselman.com/blog/free-windows-10-development-virtual-machines-for-hyperv-parallels-virtualbox-and-vmware)
+* [Virtual machine downloads at Microsoft](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/?WT.mc_id=-blog-scottha)
+* [Free developer tools for Windows 10](https://developer.microsoft.com/en-us/windows/downloads?WT.mc_id=-blog-scottha)
