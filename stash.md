@@ -84,42 +84,45 @@
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
 
-## C++ Performance Trap #1: Constant-size std::vector
+## Writing Interfaces: Stay true in booleans
 
-* [Scott Wolchok](https://wolchok.org/posts/cxx-trap-1-constant-size-vector/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kyc6f9/c_performance_trap_1_constantsize_stdvector/)
-  * [Software optimization resources, by Agner](https://www.agner.org/optimize/#manuals)
+* [Radek Vít](https://radekvit.medium.com/writing-interfaces-stay-true-in-booleans-ed52b5f1b720)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/m2tgx1/writing_interfaces_stay_true_in_booleans/)
 
-## C++ Performance Trap #2: Unnecessary std::function
+## Metalang99: Full-blown preprocessor metaprogramming for pure C
 
-* [Scott Wolchok](https://wolchok.org/posts/cxx-trap-2-std-function/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/kzvjgn/c_performance_trap_2_unnecessary_stdfunction/?ref=share&ref_source=link)
+For the horror value...
 
-## Inlining and Compiler Optimizations
+* [Docs](https://metalang99.readthedocs.io/en/latest/)
+* [GitHub](https://github.com/Hirrolot/metalang99)
 
-* [Scott Wolchok](https://wolchok.org/posts/inlining-and-compiler-optimizations/)
-  * [Reddit](https://www.reddit.com/r/cpp/comments/l3r8o4/inlining_and_compiler_optimizations/?ref=share&ref_source=link)
+## Modern C++ "result" type based on Swift / Rust
 
-## Library: Cli
+* [GitHub](https://github.com/bitwizeshift/result)
+* [Reddit announcement](https://www.reddit.com/r/cpp/comments/m3hvx8/modern_c_result_type_based_on_swift_rust/)
 
-A cross-platform header only C++14 library for interactive command line interfaces (Cisco style).
+### See also
 
-* [GitHub](https://github.com/daniele77/cli)
+* [absl::StatusOr](https://github.com/abseil/abseil-cpp/blob/master/absl/status/statusor.h)
+* [Boost.Outcome](https://www.boost.org/doc/libs/1_75_0/libs/outcome/doc/html/index.html)
+* [P0323. std::expected](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0323r9.html) possibly for C++23
 
-## Introduction to Lua in C++ with Sol2
+## How C++ Resolves a Function Call
 
-* [Hristo Stamenov](https://thatonegamedev.com/cpp/introduction-to-lua-in-c-with-sol2/)
+* [Preshing](https://preshing.com/20210315/how-cpp-resolves-a-function-call/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/m5jpwz/how_c_resolves_a_function_call/)
 
-## Book erratum: Professional C++ by Marc Gregoire
+### ADL
 
-* [Reddit](https://www.reddit.com/r/cpp/comments/ltwbsj/professional_c_5th_ed_and_statement_about_rvo_and/)
+* [Arthur O'Dwyer](https://quuxplusone.github.io/blog/2019/04/26/what-is-adl/)
+* [Abseil Tip #49](https://abseil.io/tips/49)
 
-> Statements of the form return object; trigger return value optimization (RVO) if object is a local variable, a parameter to the function, or a temporary value. Furthermore, if object is a local variable, named return value optimization (NRVO) can kick in.
+## Don’t blindly prefer emplace_back to push_back
 
-* [cppreference: Copy elision](https://en.cppreference.com/w/cpp/language/copy_elision)
+* [Arthur O'Dwyer](https://quuxplusone.github.io/blog/2021/03/03/push-back-emplace-back/)
+  * [Reddit](https://www.reddit.com/r/cpp/comments/lx7hej/dont_blindly_prefer_emplace_back_to_push_back/)
+  * [The emplace-new antipattern](http://kayari.org/cxx/antipatterns.html#emplace-new)
 
-## Free Windows 10 development virtual machines for HyperV, Parallels, VirtualBox, and VMWare
+## C++ Antipatterns
 
-* [Scott Hanselman](https://www.hanselman.com/blog/free-windows-10-development-virtual-machines-for-hyperv-parallels-virtualbox-and-vmware)
-* [Virtual machine downloads at Microsoft](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/?WT.mc_id=-blog-scottha)
-* [Free developer tools for Windows 10](https://developer.microsoft.com/en-us/windows/downloads?WT.mc_id=-blog-scottha)
+* [Kayari](http://kayari.org/cxx/antipatterns.html)
