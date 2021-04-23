@@ -1,8 +1,8 @@
 TEX = xelatex
 HEADER = beameropt.tex
 
-PANDOC_FLAGS = -s --listings
-PANDOC_FLAGS_BEAMER = -t beamer -H $(HEADER) --pdf-engine=$(TEX)
+PANDOC_FLAGS = -s --listings --pdf-engine=$(TEX)
+PANDOC_FLAGS_BEAMER = -t beamer -H $(HEADER)
 
 SOURCES_MD := $(wildcard ????-??-??.md)
 SOURCES_MD_V2 := $(wildcard CppClubUK-???-????????.md)
@@ -28,7 +28,7 @@ LOG := $(LOG_MD) $(LOG_MD_V2) $(LOG_RST) missfont.log
 all: $(SLIDES_MD) $(SLIDES_MD_V2) $(SLIDES_YAML) $(SLIDES_RST) $(SLIDES_HTML)
 
 %.pdf: %.md
-	pandoc $(PANDOC_FLAGS) $(PANDOC_FLAGS_BEAMER) $< -o $@
+	pandoc $(PANDOC_FLAGS) -H header.tex $< -o $@
 
 %.yaml: %.rst
 	python3 mkmeta.py $<
