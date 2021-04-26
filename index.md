@@ -2,8 +2,11 @@
 
 Disclaimer: All opinions posted on this website are my own and not my employer's.
 
-* 127 - [22 April 2021](CppClubUK-127-20210422.md) :: [PDF](CppClubUK-127-20210422.pdf)
-* 126 - [1 April 2021](CppClubUK-126-20210401.md) :: [PDF](CppClubUK-126-20210401.pdf)
+The meeting notes and the [podcast](https://redcircle.com/shows/cppclub) contain public information only.
+
+* 128 - [6 May 2021](CppClubUK-128-20210506.md) :: [PDF](CppClubUK-128-20210506.pdf)
+* 127 - [22 April 2021](CppClubUK-127-20210422.md) :: [PDF](CppClubUK-127-20210422.pdf) :: [Podcast](https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/3fea6b5a-c6ef-4978-9d6d-85a1210d4c4c)
+* 126 - [1 April 2021](CppClubUK-126-20210401.md) :: [PDF](CppClubUK-126-20210401.pdf) :: [Podcast](https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/004a8a2a-c41f-473d-a48b-27461ca6241e)
 * 125 - [11 March 2021](CppClubUK-125-20210311.md) :: [PDF](CppClubUK-125-20210311.pdf)
 * 124 - [4 March 2021](CppClubUK-124-20210304.md) :: [PDF](CppClubUK-124-20210304.pdf)
 * 123 - [25 February 2021](CppClubUK-123-20210225.md) :: [PDF](CppClubUK-123-20210225.pdf)
