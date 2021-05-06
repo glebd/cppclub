@@ -84,66 +84,6 @@
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
 
-## How C++ Resolves a Function Call
-
-Canadian programmer Jeff Preshing ([@preshing](https://twitter.com/preshing)) posted an [article](https://preshing.com/20210315/how-cpp-resolves-a-function-call/) about how C++ resolves a function call, which has a nice diagram based on the C++ standard. He then explains in detail what happens at each step of the diagram:
-
-* name lookup
-    * member name lookup
-    * qualified name lookup
-    * unqualified name lookup (with its own [set of rules](https://en.cppreference.com/w/cpp/language/unqualified_lookup))
-        * argument-dependent lookup
-* handling of function templates
-* overload resolution
-* [tie-breakers](https://en.cppreference.com/w/cpp/language/overload_resolution#Best_viable_function)
-
-This is a really good explanation that should be bookmarked and re-read several times.
-
-The [Reddit thread](https://www.reddit.com/r/cpp/comments/m5jpwz/how_c_resolves_a_function_call/) has more useful links, including ADL articles.
-
-### ADL
-
-* [cppreference](https://en.cppreference.com/w/cpp/language/adl)
-* [Arthur O'Dwyer](https://quuxplusone.github.io/blog/2019/04/26/what-is-adl/)
-* [Abseil Tip #49](https://abseil.io/tips/49)
-
-## Don’t blindly prefer `emplace_back` to `push_back`
-
-[Arthur O'Dwyer](https://quuxplusone.github.io/blog/2021/03/03/push-back-emplace-back/) writes:
-
-> Even a decade after C++11 was released, I still sometimes see programmers assume that `emplace_back` is somehow related to move semantics. <...> `emplace_back` was added to the language at the same time as `std::move` — just like lambdas were added at the same time as `std::function` — but that doesn’t make them the same thing.
-
-`emplace_back` constructs a container element in place, given constructor arguments. You can also move an element into its place in the container, but in this case `push_back` can also be used.
-
-Arthur O'Dwyer concludes:
- 
-> I recommend sticking with `push_back` for day-to-day use. You should definitely use `emplace_back` when you need its particular set of skills — for example, `emplace_back` is your only option when dealing with a `deque<mutex>` or other non-movable type — but `push_back` is the appropriate default.
-
-In the [Reddit thread](https://www.reddit.com/r/cpp/comments/lx7hej/dont_blindly_prefer_emplace_back_to_push_back/), a redditor nicely [summarised](https://www.reddit.com/r/cpp/comments/lx7hej/dont_blindly_prefer_emplace_back_to_push_back/gplomqr/) the article:
-
-> tl;dr: understand what `emplace_back` does before you use it
-
-Scott Meyers [gets a mention](https://www.reddit.com/r/cpp/comments/lx7hej/dont_blindly_prefer_emplace_back_to_push_back/gplg4ko/), which evolves into a sub-thread discussing his retirement from C++.
-
-Another redditor [mentions](https://www.reddit.com/r/cpp/comments/lx7hej/dont_blindly_prefer_emplace_back_to_push_back/gpln1by/) [the emplace-new antipattern](http://kayari.org/cxx/antipatterns.html#emplace-new).
-
-## C++ Antipatterns
-
-Speaking of antipatterns, let's take a look at the [Kayari website](http://kayari.org/cxx/antipatterns.html) I just mentioned, which lists a few C++ antipatterns. The author writes:
-
-> This page documents some common mistakes that I see again and again in bug reports and requests for help on sites like StackOverflow.
-
-The list includes:
-
-* [Reading from an `istream` without checking the result](http://kayari.org/cxx/antipatterns.html#istream-check)
-* [Testing for `istream.eof()` in a loop](http://kayari.org/cxx/antipatterns.html#istream-eof)
-* [Locking and unlocking a `std::mutex`](http://kayari.org/cxx/antipatterns.html#locking-mutex)
-* [Inserting into a container of smart pointers with `emplace_back(new X)`](http://kayari.org/cxx/antipatterns.html#emplace-new), just mentioned above
-* [Defining "less than" and other orderings correctly](http://kayari.org/cxx/antipatterns.html#strict-weak-order)
-* [Dynamically allocating `std::thread` objects](http://kayari.org/cxx/antipatterns.html#std-thread-alloc)
-* [Using `std::bind` when constructing `std::thread` objects](http://kayari.org/cxx/antipatterns.html#std-thread-bind)
-* [Using `std::string("")` to create empty `std::string` objects](http://kayari.org/cxx/antipatterns.html#empty-string)
-
 ## Ticket Maps
 
 [Anthony Williams](https://www.justsoftwaresolutions.co.uk/cplusplus/ticket-maps.html) writes:
@@ -236,4 +176,36 @@ The author then presents a solution:
 
 > This code fixes that, so that there can be zero runtime overhead. <...> This uses a well-known hack where you put the necessary storage into your class, and then placement-new the forward declared object into the storage.
 
-My impression is that this solution eliminates the main PIMPL advantage, which is removing the need to rebuild client code when implementation changes. Sure, it's more efficient than ordinary PIMPL, but I'm not convinced it's worth it (unless, perhaps, you are an embedded system programmer). If your clients have to rebuild after implementation changes anyway, just keep things simple and use the implementation directly.
+My impression is that this solution eliminates the main Pimpl advantage, which is removing the need to rebuild client code when implementation changes. Sure, it's more efficient than ordinary Pimpl, but I'm not convinced it's worth it (unless, perhaps, you are an embedded system programmer). If your clients have to rebuild after implementation changes anyway, just keep things simple and use the implementation directly.
+
+## Semantics of unsigned integers
+
+A redditor [asks](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/), what should be the semantics of unsigned integers. As it often happens, to get the right answer someone has to post a wrong answer, and the redditor Full-Spectral is [happy to oblige](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvfodkm/). They write:
+
+> I'm one of those that doesn't agree with the always use signed types thing. If you don't understand the magnitude of the values involved, using signed types isn't going to magically make everything better. I believe in modelling the things you are operating on, and if that can never be negative, then I don't see how using signed values is better unless you always check the result.
+
+Predictably, this resulted in a good [reply](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvhdfcx/):
+
+> The issue is not the range of values you can store in a variable, but that due to type promotion that range will also apply to all intermediate values when using arithmetic operations. This means that you need to be super careful about performing subtractions with unsigned integers, which is basically just asking for trouble.
+
+Another redditor [writes](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvfkgg5/):
+
+> These are some valid use cases of modulo behaviour of unsigned arithmetic:
+>
+> * hashes
+> * random numbers
+> * implementing multiprecision types
+> * crypto
+> * emulation of hardware
+
+Tony Van Eerd [replies](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvla83m/):
+
+> People expect numbers to act like numbers. <...> Neither signed nor unsigned really work like numbers when you are near the boundaries, but unsigned puts a boundary at 0, which may very well be the most common number in all of programming. <...> So avoid unsigned numbers for numbers. Use signed. The committee apologies profusely for making `size_t` be unsigned.
+
+Another redditor [reminds](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvfnfas/) that
+
+> The C++ Core Guidelines also have the "unsigned for bitwise, signed for arithmetic" rule.
+
+And of course someone [mentions](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvfguit/) Rust:
+
+> Rust does a better job of divorcing signedness from overflow behaviour and what’s undefined behaviour, along with avoiding the implicit integer casts and promotions that make these subtleties problematic.
