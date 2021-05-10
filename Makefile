@@ -28,7 +28,7 @@ LOG := $(LOG_MD) $(LOG_MD_V2) $(LOG_RST) missfont.log
 all: $(SLIDES_MD) $(SLIDES_MD_V2) $(SLIDES_YAML) $(SLIDES_RST) $(SLIDES_HTML)
 
 %.pdf: %.md
-	pandoc $(PANDOC_FLAGS) -H header.tex $< -o $@
+	pandoc $(PANDOC_FLAGS) --toc -H header.tex $< -o $@
 
 %.yaml: %.rst
 	python3 mkmeta.py $<
