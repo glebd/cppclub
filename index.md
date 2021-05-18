@@ -8,7 +8,7 @@ The meeting notes and the podcast contain publicly available information only.
 
 ## Podcast
 
-You can subscribe to the C++ Club [podcast](https://redcircle.com/shows/cppclub) ([RSS feed](https://feeds.redcircle.com/0835997e-47ec-438e-b6ae-0b390966aa7e)) to hear me going through the meeting notes below.
+You can subscribe to the C++ Club [podcast](https://redcircle.com/shows/cppclub) ([RSS feed](https://feeds.redcircle.com/0835997e-47ec-438e-b6ae-0b390966aa7e)) to hear me read the meeting notes.
 
 ## Meeting notes
 
