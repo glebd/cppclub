@@ -84,51 +84,137 @@
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
 
-## Semantics of unsigned integers
+## C++ for fun... ctional programmers
 
-A redditor [asks](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/), what should be the semantics of unsigned integers. As it often happens, to get the right answer someone has to post a wrong answer, and the redditor Full-Spectral is [happy to oblige](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvfodkm/). They write:
+[Video](https://youtu.be/2vJfJE4K0zg) at Func Prog Sweden
 
-> I'm one of those that doesn't agree with the always use signed types thing. If you don't understand the magnitude of the values involved, using signed types isn't going to magically make everything better. I believe in modelling the things you are operating on, and if that can never be negative, then I don't see how using signed values is better unless you always check the result.
+[Reddit](https://www.reddit.com/r/cpp/comments/nmwywg/c_for_fun_ctional_programmers_by_harald_achitz/)
 
-Predictably, this resulted in a good [reply](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvhdfcx/):
+[Blog](https://medium.com/swlh/doing-it-the-functional-way-in-c-5c392bbdd46a)
 
-> The issue is not the range of values you can store in a variable, but that due to type promotion that range will also apply to all intermediate values when using arithmetic operations. This means that you need to be super careful about performing subtractions with unsigned integers, which is basically just asking for trouble.
+## Status of the Networking TS
 
-Another redditor [writes](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvfkgg5/):
+A redditor is [curious](https://www.reddit.com/r/cpp/comments/mr0f56/does_anyone_have_any_updates_on_the_status_of_the/): "Does anyone have any updates on the status of the C++ Networking TS?"
 
-> These are some valid use cases of modulo behaviour of unsigned arithmetic:
->
-> * hashes
-> * random numbers
-> * implementing multiprecision types
-> * crypto
-> * emulation of hardware
+Redditor **14ned** (Niall Douglas), a committee member, [replies](https://www.reddit.com/r/cpp/comments/mr0f56/does_anyone_have_any_updates_on_the_status_of_the/gul7mek/):
 
-Tony Van Eerd [replies](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvla83m/):
+> Last time I looked, it all depends on how covid goes. If normal committee work resumes early 2022, there is a chance Networking makes 23. If it's late 2022, there is very little chance.
+Currently the C++ 23 standard looks like it will be a fairly light one, but given how severely curtailed the committee's productivity has been, I still think it great anything got in at all. Equally, this probably means 26 will be a correspondingly bumper standard.
 
-> People expect numbers to act like numbers. <...> Neither signed nor unsigned really work like numbers when you are near the boundaries, but unsigned puts a boundary at 0, which may very well be the most common number in all of programming. <...> So avoid unsigned numbers for numbers. Use signed. The committee apologises profusely for making `size_t` be unsigned.
+Then we have this very emotional and somewhat misguided [reply](https://www.reddit.com/r/cpp/comments/mr0f56/does_anyone_have_any_updates_on_the_status_of_the/gulsghv/) from redditor **Plazmatic**:
 
-Another redditor [reminds](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvfnfas/) that
+> Why do they need to "meet up" to basically just make decisions on things. They are presumably all tech people, we have video chat, or heck, they could do what every other language does and, you know use text platforms to discuss these things. When rust or python makes updates, the people in charge of the language don't all need to be in the same room to make it happen. Same thing for C#, Go, Swift, Kotlin, and heck, even Java. Why is C++ special? Why do they need 5 star hotels and vacation destinations to talk about the future of C++?
 
-> The C++ Core Guidelines also have the "unsigned for bitwise, signed for arithmetic" rule.
+Another redditor [answers that](https://www.reddit.com/r/cpp/comments/mr0f56/does_anyone_have_any_updates_on_the_status_of_the/gult2jf/):
 
-And of course someone [mentions](https://www.reddit.com/r/cpp/comments/mw13za/semantics_of_unsigned_integers/gvfguit/) Rust:
+> Basically it all boils down to being a ISO language and having to follow ISO processes, which as far as I am aware have already been greatly simplified for C++. Also note that the languages listed by you don't have any presence in many markets where the only option is between C, C++ and Ada, all ISO languages with certified compiler toolchains and language standard compliance.
 
-> Rust does a better job of divorcing signedness from overflow behaviour and what’s undefined behaviour, along with avoiding the implicit integer casts and promotions that make these subtleties problematic.
+And more from [Niall Douglas](https://www.reddit.com/r/cpp/comments/mr0f56/does_anyone_have_any_updates_on_the_status_of_the/guq7kr6/):
+
+> Late stage uncontentious proposals can make reasonable progress by teleconference. <...> Early stage proposals all went on pause over a year ago. None of progressed, none can progress, until onsite meetings return. <...> I am unaware of any programming ecosystem upon which billions of dollars of existing infrastructure lies which does not have multiple annual face to face gatherings.
+
+[This is what Niall says](https://www.reddit.com/r/cpp/comments/mr0f56/does_anyone_have_any_updates_on_the_status_of_the/guq4rj1/) regarding the hotel "luxuries":
+
+> Unless you go a day or two early, or stay after, you only see your hotel bedroom when sleeping and absolutely none of any facilities nor surrounds. You most definitely do NOT see the location you are in during the meeting itself, which particularly sucks for Kona.
+
+Back on topic, **psyspy2** [replies](https://www.reddit.com/r/cpp/comments/mr0f56/does_anyone_have_any_updates_on_the_status_of_the/guklw08/):
+
+> Networking is dependent on executors. That needs to go first. Networking might not make it into C++ 23.
+
+Redditor **Gracicot** [expands on that]():
+
+> <...> we need a standard interface to schedule async operations. In asio, it's the `io_context` type. The design of executor is still being tweaked though.
+
+### Thhird-party solutions and links
+
+* [Seastar](http://seastar.io/) ([GitHub](https://github.com/scylladb/seastar)) from [ScyllaDB](https://www.scylladb.com/) is an event-driven framework allowing you to write non-blocking, asynchronous code in a relatively straightforward manner. It supports C++17 and C++20, comes with its own native userspace [networking stack](https://github.com/scylladb/seastar/blob/master/doc/native-stack.md), and is distributed under the Apache-2.0 licence.
+* [Asio](https://think-async.com/Asio/) is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach. It can be used either as part of Boost or in standalone mode.
+* Video: _The Networking TS from Scratch: I/O Objects - Robert Leahy - CppCon 2020_ on [YouTube](https://youtu.be/xgXFZ-rYc4w).
 
 ## Vcpkg package search
 
-Vcpkg is a C++ package manager from Microsoft. It builds packages from source, and now offers a [search function](https://vcpkg.io/en/index.html) on its official website, which allows you to find the library you need across approximateky 1500 available recipes. The nice thing is, vcpkg is cross-platform.
+Vcpkg is a C++ package manager from Microsoft. It builds packages from source, and now offers a [search function](https://vcpkg.io/en/index.html) on its official website, which allows you to find the library you need across approximately 1500 available recipes. The nice thing is, vcpkg is cross-platform.
 
 There is another unofficial website, [vcpkg.info](https://vcpkg.info/), which lists even more packages (around 1600).
 
 Good to see C++ package management getting more attention.
 
-## Twitter
+## Yet another pamphlet about inlining
 
-Sara Drasher @[sarah_edo](https://twitter.com/sarah_edo) [describes](https://twitter.com/sarah_edo/status/1391868594762305537) the ideal development workflow:
+Thomas Lourseyre writes on his blog [Belay the C++](https://belaycpp.com/2021/05/17/yet-another-pamphlet-about-inlining/):
 
-> Make it work\
-> Make it right\
-> Make it fast\
-> Make it work again because you broke it making it fast\
+> I will try here to summarize all you need to remember about inlining, giving pros, cons and situations to use it and to not use it.
+
+The author correctly points out that the [`inline`](https://en.cppreference.com/w/cpp/language/inline) keyword is *a hint* to the compiler, which can ignore it. He then goes through pros and cons, and most of those assume that inlining actually happens, like the pros (avoiding the function call overhead) and cons (code size bloat).
+
+Of course, `inline` being just a hint, the compiler is free to not inline the functions marked `inline`, but even if that doesn't happen, it allows you to keep function definition in the header file, which is useful if, for example, you have a header-only library. On the other hand, inline functions pollute headers and increase compiler memory requirements (we experienced this recently as a consequence of developers in one team keeping _all_ their functions in headers, which led to MSVC running out of memory on a 64GB machine).
+
+Keep in mind that function templates are implicitly inline, so marking them `inline` is redundant.
+
+Therte is a compiler-specific keyword `__forceinline` and the corresponding `__attribute__((always_inline))` which indicates that a function _must_ be inlined. However, compilers are free to ignore it as well.
+
+With link-time optimization (LTO) modern compilers defer inlining until the link stage, when they can inline functions not explicitly marked `inline`.
+
+This [redditor](https://www.reddit.com/r/cpp/comments/ne9qj2/belay_the_c_yet_another_pamphlet_about_inlining/gyf8jjx/) says:
+
+> In modern C++ `inline` does not mean what you think it means. It currently is only used to be able to define the same function, global variable, or static member variable in multiple compilation units; while satisfying the "one definition rule".
+
+The author writes:
+
+> Here is my advice: don’t use `inline` unless you are 100% sure it is called inside a bottleneck.
+
+I think that, given all of the above, this advice doesn't make much sense.
+
+He finishes with a completely unrelated issue of having one-line function definitions that are tricky to debug, which seems out of place in the article about inlining.
+
+### Static inline variables
+
+I wanted to remind you that C++17 introduced another very handy use of the `inline` keyword - static inline variables. They allow you to define static variables inside class declaration to avoid having to define them in the implementation file, reducing redundancy.
+
+C++14 and earlier:
+
+```cpp
+// foo.hpp
+class Foo
+{
+    static int bar;
+};
+
+// foo.cpp
+int Foo::bar = 42;
+```
+
+C++17 and later:
+
+```cpp
+// foo.hpp
+class Foo
+{
+    static inline int bar = 42;
+    static constexpr int baz = 1; // implicitly inline
+};
+```
+
+## TOML for modern C++
+
+[TOML++ v2.4.0](https://marzer.github.io/tomlplusplus/)
+
+[TOML](https://toml.io/en/) is _Tom's Obvious Minimal Language_, 'a configuration file format for humans' developed by [Tom Preston-Werner](https://en.wikipedia.org/wiki/Tom_Preston-Werner), the founder of GitHub ([he doesn't work there anymore](https://techcrunch.com/2014/04/21/github-denies-allegations-of-gender-based-harassment-co-founder-preston-werner-resigns/)). The language is easy to read and understand, it allows comments (hey, JSON!) and is widely supported - implementations are available in C, C++, C#, Java, JavaScript, Swift, Scala, Python, Ruby and other languages. TOML++ is a modern C++ implementation using C++17 and C++20, released under MIT license. It supports JSON serialization, UTF-8, optional header-only mode, and works with MSVC, Clang and GCC.
+
+The [documentation](https://marzer.github.io/tomlplusplus/) is really nicely done. The author released a Doxygen wrapper called [Poxy](https://github.com/marzer/poxy) that you can use to produce similarly formatted documentation. One nice feature of Poxy is its improved Doxygen configuration file, which uses - you guessed it - TOML. As the author [says](https://www.reddit.com/r/cpp/comments/n8njbm/poxy_a_doxygen_frontend_with_extra_fancy/gxjd03h/) in the Reddit thread:
+
+> While I can't take credit for the HTML generator itself <...>, I did write an additional front-end layer for it that fixes various Doxygen bugs and oddities, adds features and post-processes the HTML for extra fancy bits.
+
+Consider using TOML for your next project's configuration.
+
+## Cascadia Code 2105.24
+
+I previously mentioned the new Cascadia Code font from Microsoft. It will be included in the Visual Studio 2022 preview this summer. A new version of the font has been released, and this time it has [fancy italics](https://github.com/microsoft/cascadia-code/releases/tag/v2105.24)! Go download and try it out with your current text editor or IDE. It's really nice and very readable.
+
+## I don't need to read the documentation
+
+[Reddit](https://www.reddit.com/r/ProgrammerHumor/comments/nl5lkf/i_dont_need_to_read_the_documentation_i_can_make/)
+
+![](img/reddit-no-docs.jpg)
+
+I feel seen.
