@@ -12,6 +12,7 @@ You can subscribe to the [C++ Club podcast](https://redcircle.com/shows/cppclub)
 
 ## Meeting notes
 
+* 132 - [24 June 2021](CppClubUK-132-20210624.md) :: [PDF](CppClubUK-132-20210624.pdf) :: [Podcast](https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/ca09447a-d6e1-4cf8-b9de-c4bb8667258c)
 * 131 - [10 June 2021](CppClubUK-131-20210610.md) :: [PDF](CppClubUK-131-20210610.pdf) :: [Podcast](https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/09054ee1-72e0-4f50-8125-cc5cd31d60bd)
 * 130 - [3 June 2021](CppClubUK-130-20210603.md) :: [PDF](CppClubUK-130-20210603.pdf) :: [Podcast](https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/feac1771-d6d0-4f9f-9696-bebffb15dfd3)
 * 129 - [13 May 2021](CppClubUK-129-20210513.md) :: [PDF](CppClubUK-129-20210513.pdf) :: [Podcast](https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/510217d3-7fdd-417d-9ebb-db94a3e19d77)

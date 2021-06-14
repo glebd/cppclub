@@ -83,11 +83,3 @@
 
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
-
-## C++ for fun... ctional programmers
-
-[Video](https://youtu.be/2vJfJE4K0zg) at Func Prog Sweden
-
-[Reddit](https://www.reddit.com/r/cpp/comments/nmwywg/c_for_fun_ctional_programmers_by_harald_achitz/)
-
-[Blog](https://medium.com/swlh/doing-it-the-functional-way-in-c-5c392bbdd46a)
