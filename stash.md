@@ -83,3 +83,25 @@
 
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
+
+## A list of bad practices commonly seen in industrial projects
+
+[The article](https://belaycpp.com/2021/06/01/a-list-of-bad-practices-commonly-seen-in-industrial-projects/) on the [Belay the C++](https://belaycpp.com/) blog discusses bad practices in C++ projects. The list includes:
+
+- Overly long functions
+- Creating classes unnecessarily (fully static classes instead of free functions in a namespace, publicly accessible classes instead of `struct`)
+- Implementing undefiuned behaviour (the list of UB is too long)
+- Comparing signed and unsigned integers
+- Premature optimization
+- Premature pessimization
+- "Just-in-case" programming (_YAGNI_ - _You Ain't Gonna Need It_)
+
+The [Reddit thread](https://www.reddit.com/r/cpp/comments/npq1tb/belay_the_c_a_list_of_bad_practices_commonly_seen/) has some more discussion on the raised topics. The winner is the [following comment](https://www.reddit.com/r/cpp/comments/npq1tb/belay_the_c_a_list_of_bad_practices_commonly_seen/h07iis0/):
+
+> I'm a Python user and I have no clue what I just read but it sounds cool
+
+Regarding classes vs. free functions, the user **staletic** replies to the author's point "_Why would you use class at all, where a namespace suffices?_" with this:
+
+> To shut down ADL and not have users of your library "steal" function calls with their functions.
+
+Apparently Bloomberg C++ guidelines prohibit free functions altogether because of this.
