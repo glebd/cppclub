@@ -104,4 +104,28 @@ Regarding classes vs. free functions, the user **staletic** replies to the autho
 
 > To shut down ADL and not have users of your library "steal" function calls with their functions.
 
-Apparently Bloomberg C++ guidelines prohibit free functions altogether because of this.
+Apparently Bloomberg C++ guidelines prohibit free functions altogether because of this. Hmmm... Free functions, what a concept. Well, I'm sure they'll be OK with modules and contracts.
+
+## FoundationDB
+
+A seriously impressive open source distributed database from Apple:
+
+> FoundationDB is a distributed database designed to handle large volumes of structured data across clusters of commodity servers. It organizes data as an ordered key-value store and employs ACID transactions for all operations.
+
+FoundationDB links:
+
+* [Home page](https://www.foundationdb.org/)
+* [Code](https://github.com/apple/foundationdb) - Apache licence, portable C++, language bindings
+* [Documentation](https://apple.github.io/foundationdb/)
+* [Downloads](https://www.foundationdb.org/download/)
+* [Forums](https://forums.foundationdb.org/)
+
+[This](https://news.ycombinator.com/item?id=16877401) was the reaction on HackerNews to Apple open-sourcing FoundationDB after acquiring it:
+
+> This is INCREDIBLE news! FoundationDB is the greatest piece of software I’ve ever worked on or used, and an amazing primitive for anybody who’s building distributed systems.
+
+> The short version is that FDB is a massively scalable and fast transactional distributed database with some of the best testing and fault-tolerance on earth. It’s in widespread production use at Apple and several other major companies.
+
+> But the really interesting part is that it provides an extremely efficient and low-level interface for any other system that needs to scalably store consistent state. At FoundationDB (the company) our initial push was to use this to write multiple different database frontends with different data models and query languages (a SQL database, a document database, etc.) which all stored their data in the same underlying system. A customer could then pick whichever one they wanted, or even pick a bunch of them and only have to worry about operating one distributed stateful thing.
+
+The thread contains more interesting replies from developers and users of FoundationDB. If you are into databases, give it a read.
