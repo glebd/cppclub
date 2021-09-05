@@ -84,7 +84,31 @@
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
 
-## A list of bad practices commonly seen in industrial projects
+## CppBooks
+
+There is a huge list of C++ books on github, in a repo creatively called [CppBooks](https://github.com/yuchdev/CppBooks). Most are paid, but some are freely downloadable. A very useful resource.
+
+## Using `constexpr` `std::vector` and `std::string`
+
+[B. Filipek writes](https://www.cppstories.com/2021/constexpr-vecstr-cpp20/):
+
+> `constexpr` started small in C++11 but then, with each Standard revision, improved considerably. In C++20, we can say that there’s a culmination point as you can even use `std::vector` and `std::string` in constant expressions!
+
+In addition to this, in C++20 there are `constexpr` algorithms to use with vectors and strings.
+
+For this to work, the C++ Committee had to allow the following changes:
+
+- `constexpr` destructors;
+- `constexpr` dynamic memory allocation;
+- in-place construction using placement `new`;
+- `constexpr` `try`/`catch` blocks;
+- new type traits, like `pointer_traits` and `char_traits`.
+
+The main limitation is that newly constructed vectors and strings cannot leave the `constexpr` function:
+
+> Because vectors and strings use dynamic memory allocations, and currently, compilers don’t support so-called “non-transient” memory allocations. That would mean that the memory is allocated at compile-time but then somehow “passed” into runtime and deallocated. For now, we can use memory allocations in one constexpr context, and all of them must be deallocated before we leave the context/function.
+
+## Bad practices in industrial projects
 
 [The article](https://belaycpp.com/2021/06/01/a-list-of-bad-practices-commonly-seen-in-industrial-projects/) on the [Belay the C++](https://belaycpp.com/) blog discusses bad practices in C++ projects. The list includes:
 
@@ -129,3 +153,66 @@ FoundationDB links:
 > But the really interesting part is that it provides an extremely efficient and low-level interface for any other system that needs to scalably store consistent state. At FoundationDB (the company) our initial push was to use this to write multiple different database frontends with different data models and query languages (a SQL database, a document database, etc.) which all stored their data in the same underlying system. A customer could then pick whichever one they wanted, or even pick a bunch of them and only have to worry about operating one distributed stateful thing.
 
 The thread contains more interesting replies from developers and users of FoundationDB. If you are into databases, give it a read.
+
+## Library: Neither
+
+A functional implementation of Either in C++14 as a way to handle errors returned from functions. A bit like `std::expected` or Boost.Outcome with a functional interface.
+
+[GitHub](https://github.com/LoopPerfect/neither) - MIT License, C++14, uses Buckaroo build system, which seems to use [TOML](https://github.com/toml-lang/toml) for its configuration files.
+
+```cpp
+// a function that throws, sometimes we can't avoid it...
+auto unsafe = [] {
+  if (true) {
+    throw std::runtime_error("error");
+  }
+  return 1;
+}
+
+// let's lift the exception into the typesystem
+Either<std::exception, int> e = Try<std::exception>(unsafe);
+
+e.left()
+  .map([](auto const& e) {
+    return std::cerr << e.what() << '\n';
+  }); // print error if available
+
+int result = e
+  .leftMap([](auto) { return 42; })
+  // ^ do nothing with exception and map to 42
+  .rightMap([](auto x) { return x * 2; })
+  // ^ do further computation if value available
+  .join()
+  // ^ join both sides of either
+
+ASSERT_TRUE(result == 42);
+```
+
+The motivation section talks about how bad C++ exceptions are (_they aren't actually_). If you can't or won't use exceptions in your code, I suppose you could check this library out.
+
+## Video: C++ exception handling is a billion-dollar historical mistake
+
+It's not often that I suggest you don't watch something, but here we are. This angry [video](https://youtu.be/I_ffAFzi-7M) lists the C++ things to not use: exceptions (which apparently were added to C++ by Hewlett Packard, which the author thinks doesn't exist anymore, and that makes him happy for some reason), iostream, filesystem, charconv, format, etc. Oh, and unique_ptr. Is there anything in C++ we can use?
+
+The committee also gets its share of abuse. Stupid gamedevs, the lot of them.
+
+But seriously, I wish I could unsee this video. It's 25 min of my life I'm not getting back. An uninformed incoherent angry rant full of abuse and expletives, with a title that suggests a serious opinion. Just no. Give it a pass.
+
+## STL Visualizers on GitHub
+
+The Visual Studio debugger has this neat feature where you can show the data in a custom human-readable format, defining the actual formatting rules in XML files called visualizers. Some 3rd-party libraries also have their own visualizers, often supported by the community (Eigen, Boost). And now Microsoft has [open-sourced all the STL visualizers on GitHub](https://github.com/microsoft/STL/blob/main/stl/debugger/STL.natvis), to allow everyone to contribute, so that they stay updated. They [announced it](https://devblogs.microsoft.com/cppblog/stl-visualizers-on-github/) on the Visual Studio blog.
+
+Using visualizers has become much simpler in VS2017 and VS2019. Previously you had to put them in a certain directory in your Documents folder, of all places. Now you can include the XML files in a dummy container project in your solution, and the debugger will automagically use them to display the appropriate data. Very neat!
+
+## Twitter
+
+Someone saw a poster in a mall that read:
+
+> Lost children will be taught the C programming language
+
+![](img/lost-children-c.jpeg)
+
+## Bungie coding guidelines
+
+This is a perfect analogy because, as we all know, Mona Lisa was famously painted by a bunch of guys with really good guidelines.
+

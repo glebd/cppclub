@@ -2,7 +2,7 @@
 
 ## Intro
 
-Hi, I'm Gleb from London, I run a C++ club at work, where we discuss C++ programming news and related articles. You can find our meeting notes at cppclub.uk. This podcast and the meeting notes contain public information only.
+My name is Gleb, I run a C++ club at work. You can find our meeting notes at cppclub.uk. This podcast and the meeting notes contain public information only.
 
 ## Filters
 
