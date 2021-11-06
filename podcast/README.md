@@ -34,3 +34,8 @@ Copyright: 2021 Gleb Dolgich
 Podcast title: C++ Club
 Episode title: Meeting #mmm
 Summary: http://cppclub.uk
+
+### Reaper
+
+Normalize to: LUFS-I -19 dB
+Brickwall limit: true peak -1 dB
