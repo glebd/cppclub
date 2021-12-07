@@ -84,110 +84,94 @@
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
 
-## PLF C++ Library
+## Little C++ Standard Library Utility: `std::align`
 
-[This library](https://plflib.org) by Matt Bentley provides alternatives to Standard Library's containers and offers some additional utilities and data types, like `plf::colony` (which apparently is not coming to C++23 as `std::hive` -- maybe C++26 will get it). The library is header-only and comes under a permissive [ZLib licence](https://en.wikipedia.org/wiki/Zlib_License). It supports C++ standards from C++03 to C++20 and builds with MSVC, Clang and GCC. There are links to talks that the author gave at various C++ conferences, on the colony data type and how to design a faster list data structure.
+[Lesley Lai](https://lesleylai.info) posted an [article](https://lesleylai.info/en/std-align/) about `std::align` in which he describes a use case, then implements a helper function manually, and finally replaces it with `std::align`.
 
-## When to use PIMPL
+> Arena, also called bump allocator or region-based allocator, is probably the simplest allocation strategy. It is so widely used that even the C++ standard library has an arena implementation called `std::pmr::monotonic_buffer_resource`.
 
-[This post on Reddit](https://www.reddit.com/r/cpp/comments/r4atq2/when_to_use_the_pimpl_idiom/) is asking when to use the Pointer-to-Implementation ([PIMPL](https://en.cppreference.com/w/cpp/language/pimpl)) idiom. It used to be recommended to break dependencies between components in big systems, to decrease the number of files to recompile when a header changes, and to guard against ABI breaks to a degree. Reddit also says that a separate use case for PIMPL is to prevent inclusuon of the `Windows.h` header, or to act as a wrapper for a large library used in implementation that client code doesn't need to know about. It is also used widely in [Qt](https://code.woboq.org/qt5/).
+> With arena, we first have a large chunk of pre-allocated memory. That chunk of memory itself can either come from the stack or one large allocation of another allocator such as malloc. Afterward, we allocate memory from that chunk by bumping a pointer offset.
 
-However, if you are compiling everything together or use static linking, PIMPL doesn't add anything except an unnecessary level of indirection and heap allocation overhead. The added indirection can harm optimization. In large codebases it can have a detrimental effect of complicating class hierarchies and relationships.
+> Arena allocation has outstanding performance characteristics, especially compared to complicated beasts like `malloc`. Each allocation only needs to bump a pointer, and the deallocation is almost free if the objects allocated are trivially destructible. <...> it is useful in situations where we have a lot of heterogeneous allocations that only need to be freed together, and is widely used in application domains from compilers to video games.
 
-There is one other thing that will make PIMPL obsolete: modules.
+When allocating memory in an arena we need to deal with alignment. Incrementing the 'next' pointer by the size of allocated object is not enough --- starting the lifetime of objects on unaligned locations is undefined behavior.
 
-## Bad C++ habits
+Lesley then explains how to handle alignment, including a full implementation of a helper function that bumps arena pointer to the next allocation address and updates the remaining area space.
 
-[A redditor asks](https://www.reddit.com/r/cpp/comments/r4kkcd/what_are_some_bad_c_habits_you_know_or_have_seen/) what bad habits developers have seen in C++ code. The replies include:
+Turns out, that's what `std::align` is for:
 
-- Abuse of `std::shared_ptr` where every non-scalar function parameter is a `shared_ptr`. I'm working on several codebases like this. As they say, you can write Java in any language.
-- [STL says](https://www.reddit.com/r/cpp/comments/r4kkcd/what_are_some_bad_c_habits_you_know_or_have_seen/hmhdvdd/):
-    + Working around a bug without reporting it
-    + Not commenting the workaround
-    + Not citing the bug database and number in the comment
-    + Not using a uniform pattern for such commented workarounds, so that they can be found and re-evaluated/removed later.
-    + Good habits: In MSVC's STL, we use `// TRANSITION, BugDatabase-NNNN` for this purpose.
+```cpp
+namespace std {
+auto align(std::size_t alignment,
+           std::size_t size,
+           void*& ptr,
+           std::size_t& space)
+-> void*;
+}
+```
 
-Of course, another redditor grepped the Microsoft STL code for this and found 667 instances!
+From [cppreference](https://en.cppreference.com/w/cpp/memory/align):
 
-Other bad habits included:
+> Given a pointer `ptr` to a buffer of size `space`, returns a pointer aligned by the specified alignment for `size` number of bytes and decreases `space` argument by the number of bytes used for alignment. The first aligned address is returned.
 
-- overcomplicated logical expressions: `if (a == b) return true; else return false;`
-- throwing exceptions on logic errors instead of terminating the program (this one occurs often in our code, and I'm not sure what to do in case a library must absolutely not crash even when the programmer screwed up).
-- unnecessarily complex template frameworks without documentation
-- unnecessarily complicated class hierarchies (I can physically feel this one)
-- union-based type punning (legal in C, not so in C++)
-- two-step class initialization (hello Symbian OS!)
+We still need to change `ptr` and `space` according to the actual allocation size, as they are only bumped by the number of alignment bytes.
 
-[This redditor](https://www.reddit.com/r/cpp/comments/r4kkcd/what_are_some_bad_c_habits_you_know_or_have_seen/hmifyrk/) gives us some more:
+So here it is, `std::align`, a very useful function for a very limited use case.
 
-- Using `unique_ptr` when a simple composition would suffice.
-- Using `shared_ptr` when a `unique_ptr` would suffice.
-- Mocking everything and creating a maintenance nightmare.
-- Taking test coverage to an extreme, letting it damage the design and clarity just to make it unit-testable to an extreme degree (>%98 coverage).
+## `T*` makes for a poor `optional<T&>`
 
-[A sad reply](https://www.reddit.com/r/cpp/comments/r4kkcd/what_are_some_bad_c_habits_you_know_or_have_seen/hmipdzq/):
+Barry Revzin [writes](https://brevzin.github.io/c++/2021/12/13/optional-ref-ptr/):
 
-> You just described the code base I work on everyday!
+> Whenever the idea of an optional reference comes up, inevitably somebody will bring up the point that we don’t need to support `optional<T&>` because we already have in the language a perfectly good optional reference: `T*`. <...> The purpose of this post is to point out that, despite these similarities, `T*` is simply not a solution for `optional<T&>`.
 
-[Another good list](https://www.reddit.com/r/cpp/comments/r4kkcd/what_are_some_bad_c_habits_you_know_or_have_seen/hmi7s8r/):
+As an example Barry chose a function that returns the 1st element of a range or nothing if the range is empty. He develops the function over several iterations and demonstrates that in order to support any input range the return type must be `optional<T&>`. He shows that `T*` doesn't really work, and `optional<T>` is also unsuitable for some input range types, notably `vector<T>` which has reference type of `T&`.
 
-- C strings and arrays, with enough pointer arithmetic
-- Macros everywhere instead of templates
-- Disabling exceptions, but then not being consistent checking error returns codes from every call
-- Using pointers instead of references for out parameters
-- The new fashion of header only libraries
-- Being too clever with SFINAE and template metaprogramming
+When the return type is `optional<ranges::range_reference_t<R>>` (where `R` is the input range type) it resolves to `optional<int>` for `ranges::iota<int>` but for `vector<int>` it resolves to `optional<int&>`. The author shows that returning `int*` instead doesn't work without a lot of workarounds. If we wanted to have a nice usage where a default value is returned if the input range is empty, it doesn't work with pointers unless more workarounds are provided, and then the call syntax is not as nice:
 
-Even more:
+```cpp
+// ideal
+int value1 = try_front(r).value_or(-1); // ideal
 
-- Defining functions in headers (ouch, can feel that too!)
-- Writing everything as a template, just because someone might one day want to customize something
-- Using `std::endl` -- this adds unnecessary overhead to the already slow stream IO
-- Not using the correct include format (`""` vs `<>`)
-- Fixing problem code while failing to find and inform author (and reviewer), which deprives them of the opportunity to improve
-- Minimal or no use of `const`
-- Speculatively or unnecessarily defensive code (instead of assertive code)
-- Including pointers in a typedef or macro (`using T = *myclass`) -- the 'handle' pattern. Looking at you, CUDA and OpenCascade
-- Using `std::map` for anything but huge runtime maps
-- Uninitialized variables
+// workaround
+template <typename P, typename U>
+constexpr auto value_or(P&& ptrish, U&& dflt) {
+  return ptrish ? *FWD(ptrish) : FWD(dflt);
+}
+int value2 = N::value_or(try_front(r), -1);
+```
 
-I'm sure everyone can add to this list. A large part of my work is dealing with technical debt, which is all the above and more.
+Barry takes a quick aside to remind us why `vector<booL>` is bad, and then writes:
 
-## Apple Metal C++ bindings
+> If we all agree that `vector<bool>` is bad because of several subtle differences with `vector<T>`, then surely we should all agree that `T*` is a bad `optional<T&>` because it has several very large and completely unavoidable differences with `optional<T>`.
 
-Apple published [C++ bindings for Metal](https://developer.apple.com/metal/cpp/). [Metal](https://developer.apple.com/metal/) is Apple's high-level graphics and general acceleration API (Vulcan anyone?). I guess if you control both your hardware and software stacks, you'd want to have something of your own in the high-performance graphics department, so that you can tune your silicon accordingly. [And oh boy did they tune it](https://www.tomsguide.com/uk/news/macbook-pro-m1x-benchmarks-just-leaked-and-intel-should-be-scared) -- are you feeling OK Intel?
+> Namely:
 
-It's nice though that Apple now allows using C++ to write Metal code, given that their main language is Swift (Objective-C is legacy tech now).
+> * it is spelled differently from `optional<T>` (trivially: it is spelled `T*`)
+> * it is differently constructible from `optional<T>` (you need to write `&e` in one case and `e` in the other)
+> * it has a different set of supported operations from `optional<T>`
 
-## JUCE coding standards
+Barry talks about the future too:
 
-For a sane set of coding standards you can refer to [JUCE](https://juce.com/discover/stories/coding-standards). I only skimmed the article, but nothing jumps out as obviously wrong, or weird, or outdated. A good point of reference if you must come up with your own (none of that Google or a random game company weirdness).
+> We don’t have pattern matching in C++ yet, and we still won’t in C++23. But eventually we will, and when we do, we’ll want to be able to match on whether our optional reference actually contains a reference, or not. We do not need to match whether we’re… holding a derived type or not. This is yet another operation that a `T*` won’t do for us.
 
-## How is `constexpr` implemented in the compiler
+He concludes:
 
-This is what a redditor [asked](https://www.reddit.com/r/cpp/comments/n8pq3z/how_is_constexpr_implemented_in_the_compiler/):
+> The ability to have `optional<T&>` as a type, making optional a total metafunction, means that in algorithms where you want to return an optional value of some computed type `U`, you can just write `optional<U>` without having to worry about whether `U` happens to be a reference type or not. This makes such algorithms easy to write.
 
-> I know that `constexpr` means that something can be evaluated at compile time. But this obviously means that `constexpr` code must somehow be interpreted, since it must be executed before compilation. Do modern C++ compilers come equipped with full blown C++ interpreters? Or is the `constexpr` code compiled to LLVM and then the resulting bytecode is run on a virtual machine?
+[Reddit thread](https://www.reddit.com/r/cpp/comments/rfmg3a/t_makes_for_a_poor_optionalt/) has much to say about the topic, and specifically about what should happen when assigning to `optional<T&>`.
 
-The replies shed light on this:
+## Printing tabular data
 
-> Not full-blown; it's a significantly-simplified subset of the runtime, and the AST can be reused.
+Some links for when you need to output tables in C++:
 
-> There's an experiment going on with Clang to replace the AST walking interpreter with a proper byte-code VM.
+### [tableprinter by Ozan Cansel](https://github.com/OzanCansel/tableprinter)
 
-[Erich Keane](https://www.linkedin.com/in/erichkeane/) of Intel [says](https://www.reddit.com/r/cpp/comments/n8pq3z/how_is_constexpr_implemented_in_the_compiler/gxk8kcc/):
+A header-only C++17 library, no 3rd-party dependencies, MIT licence.
 
-> It's not so much an interpreter as an AST evaluator. The constant evaluator happens after the code has been parsed/lexed/semantically analyzed, and formed into the Abstract Syntax Tree.
+### [CppConsoleTable by Denis Samilton](https://github.com/DenisSamilton/CppConsoleTable)
 
-> When the compiler evaluates a constant expression, it goes through the AST and evaluates each node to get the answer.
+A header-only C++17 library, MIT licence. This one prints table borders using the extended line drawing characters.
 
-> There IS an effort that is ongoing (though slowly) to replace this with an AST->byte-code type compilation, which can then just be evaluated immediately. My understanding is it is quite a bit faster, particularly when the same code is evaluated multiple times.
+### [variadic_table by Derek Gaston](https://github.com/friedmud/variadic_table)
 
-[Cling](https://root.cern/cling/) gets a [mention](https://www.reddit.com/r/cpp/comments/n8pq3z/how_is_constexpr_implemented_in_the_compiler/gxln7h2/):
-
-> CERN has developed a C++ interpreter with a REPL called Cling. It is amazing. It is built on top of Clang and LLVM and JITs the code. There is even a Jupyter extension for it so you can use it in a notebook.
-
-> It’s kind of a solution in search of a problem outside of CERN, but man, what a cool solution it is!
-
-MSVC [didn't have an AST](https://devblogs.microsoft.com/cppblog/thoughts-on-the-visual-c-abstract-syntax-tree-ast/) until at least [2015](https://devblogs.microsoft.com/cppblog/rejuvenating-the-microsoft-cc-compiler/) and used a 'token stream' instead (this allowed compilation on some really memory-restricted machines). I'm wondering how that affected the processing of `constexpr` --- or did Microsoft switch to the new compiler front-end by the time `constexpr` support was added?
+A header-only C++17 library that uses variadic templates for convenience. This one prints table borders using standard characters (dash and pipe). The licence is [LGPL-2.1](https://github.com/friedmud/variadic_table/blob/master/LICENSE), so be careful.
