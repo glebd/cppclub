@@ -84,6 +84,68 @@
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
   * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
 
-## Be positive
+## Swift and C++ interoperability workgroup announcement
 
-![](img/be-positive.jpeg)
+We discussed [Swift C++ Interoperability Manifesto](https://github.com/apple/swift/blob/main/docs/CppInteroperabilityManifesto.md) previously. There is a new development in this area: the creation of a [workgroup](https://forums.swift.org/t/swift-and-c-interoperability-workgroup-announcement/54998) dedicated to C++ and Swift bi-directional API level interoperability.
+
+> Over the past few years there has been a huge amount of interest in bidirectional interoperability between Swift and C++. <...> the Swift compiler is now able to import and use some C++ APIs, including C++ standard library types like `std::string` and `std::vector`. <...> To advance the interoperability support between Swift and C++, we are announcing the formation of the Swift and C++ interoperability workgroup as part of the Swift project.
+
+This is very welcome news. There are many tasks for which C++ is better suited (like working with memory or system APIs), and to be able to use C++ in a Swift program, especially with two-way access, will be really helpful. It also shows that no matter how focussed Apple is on Swift, they must have realised that C++ isn't going anywhere and there needs to be a way for Swift to use it.
+
+## Which standard C++ library elements should I avoid?
+
+A redditor [asks](https://www.reddit.com/r/cpp/comments/sa080z/which_standard_c_library_elements_should_i_avoid/):
+
+> I'm aware that due to ABI backward compatibility and historical reasons there are parts of standard library that shouldn't be used. I've seen people complaining and warning about regular expresions/unordered containers since they are (apparently) horrendously slow. What about the other stuff? What else is advised to be ignored?
+
+The most sensible advice seems to be to avoid nothing and measure performance. However, many redditors concur that `std::regex` is very slow and shouldn't be used. Apparently `boost::regex` is about 10 times faster, and there is also much anticipated [compile-time regular expressions](https://github.com/hanickadot/compile-time-regular-expressions) (CTRE) by Hana Dusíková that you can with C++17 and C++20.
+
+According to a Microsoft STL [developer](https://www.reddit.com/r/cpp/comments/sa080z/which_standard_c_library_elements_should_i_avoid/htswq66/):
+
+> `std::regex` is bad and you should forget it exists.
+
+Regarding `std::map` versus `std::unordered_map`, opinions [differ](https://www.reddit.com/r/cpp/comments/sa080z/which_standard_c_library_elements_should_i_avoid/htr0rrv/). Some say that `map` is slow and you should use `unordered_map` unless you need ordering. Others point out that `unordered_map` has more requirements for the element type (hashing). I liked this [quote](https://www.reddit.com/r/cpp/comments/sa080z/which_standard_c_library_elements_should_i_avoid/htsbqkw/) by **mark_99**:
+
+> `unordered_map` is never very slow under any of the possible use cases.
+
+A link was posted to a [set of benchmarks](https://tessil.github.io/2016/08/29/benchmark-hopscotch-map.html) for the most common hash map implementations, which show that `std::unordered_map` is indeed slow compared to other hash maps.
+
+Anotehr redditor [says](https://www.reddit.com/r/cpp/comments/sa080z/which_standard_c_library_elements_should_i_avoid/htrbeti/) not to use iostreams, as they are slow and add too much bloat to the binary, which is especially important in the embedded space. The **{fmt}** library is much faster, has very small code size, and is easy to work with.
+
+To speed up maths this redditor [says](https://www.reddit.com/r/cpp/comments/sa080z/which_standard_c_library_elements_should_i_avoid/htqyit7/):
+
+> If you don't rely on it disable math-`errno` on your compiler. The C standard mandates that otherwise single instruction operations like `sqrt` return their errors as `errno` value, which can result in half a page of cleanup instructions for every instruction of actual work.
+
+A redditor [says](https://www.reddit.com/r/cpp/comments/sa080z/which_standard_c_library_elements_should_i_avoid/htqn6ib/):
+
+> I don't use thread anymore, just jthread.
+
+Remember the proposal to make `<random>` usable, which didn't make it into C++23? A redditor [writes](https://www.reddit.com/r/cpp/comments/sa080z/which_standard_c_library_elements_should_i_avoid/htshwlg/):
+
+> `<random>` is suboptimal and worth avoiding, because all of the generators provided are slow or have poor statistical qualities, and its generally difficult to use correctly.
+
+There are also discussions of `std::list` vs. `std::vector` which you can read yourself.
+
+## I don’t know which container to use
+
+A related article by Chloé Lourseyre on the _Belay C++_ blog goes into details of container selection given a task and requirements.
+
+> As far as containers go in C++, since `std::vector` is well suited for most cases (with the occasional `std::map` when you need key-value association), it’s become easy to forget that there are other types of containers. Each container has its strength and weaknesses <...>.
+
+The author presents two matrices illustrating container properties, one for sequence containers and another for associative containers. She also shows Joe Gibson's data structure selection flowchart.
+
+> Vectors are the most understandable structure because it is quite close to the plain-old arrays. Most C++ users aren’t experts, and `std::vector` is the container they know how to use best. We shouldn’t make mundane code any more difficult to read and understand. Of course, as soon as you have special needs, you should use the most appropriate container, but that doesn’t happen very often.
+
+Chloé reminds us that optimization should not be the first consideration. Only after you measure the performance you should start thinking of choosing a faster data structure. She provides her own flowchart that works like a preliminary step before referring to Joe Gibson's flowchart for more granular selection. Her flowchart advises to use `std::vector` and `std::map` by default. There is a footnote clarifying use of unordered containers:
+
+> Unfortunately, the presented flowchart lacks any `unordered_` associative containers. But you can think of it like this: "Values need to be ordered? Yes -> `map/set` ; No -> `unordered_map/unordered_set`".
+
+There is a short Reddit [thread](https://www.reddit.com/r/cpp/comments/simufv/i_dont_know_which_container_to_use_and_at_this/) discussing the article. The [first reply](https://www.reddit.com/r/cpp/comments/simufv/i_dont_know_which_container_to_use_and_at_this/hv9m1c6/) is:
+
+> Almost always vector.
+
+Regarding maps, a redditor [says](https://www.reddit.com/r/cpp/comments/simufv/i_dont_know_which_container_to_use_and_at_this/hv9ox91/):
+
+> (Almost) Never. Use. `std::map`. If you think you need `std::map`, you really want `std::unordered_map`.
+
+I'm looking forward to `std::hive` in C++26.
