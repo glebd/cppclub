@@ -12,6 +12,7 @@ You can subscribe to the [C++ Club podcast](https://redcircle.com/shows/cppclub)
 
 ## Meeting notes
 
+* 146 - [31 March 2022](CppClubUK-146-20220331.md) :: [PDF](CppClubUK-146-20220331.pdf) :: [Podcast](#)
 * 145 - [17 March 2022](CppClubUK-145-20220317.md) :: [PDF](CppClubUK-145-20220317.pdf) :: [Podcast](#)
 * 144 - [24 February 2022](CppClubUK-144-20220224.md) :: [PDF](CppClubUK-144-20220224.pdf) :: [Podcast](#)
 * 143 - [3 February 2022](CppClubUK-143-20220203.md) :: [PDF](CppClubUK-143-20220203.pdf) :: [Podcast](#)
