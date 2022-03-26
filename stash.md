@@ -133,7 +133,7 @@ A related article by John D. Cook, [_Floating point numbers are a leaky abstract
 
 ### Herbie
 
-[Herbie](https://herbie.uwplse.org) is a mind-blowing tool that simplifies arithmetic expressions to avoid FP issues.
+[Herbie](https://herbie.uwplse.org) is a neat tool that simplifies arithmetic expressions to avoid FP issues.
 
 > `sqrt(x+1) - sqrt(x) -> 1/(sqrt(x+1) + sqrt(x))`
 >
@@ -149,7 +149,7 @@ Herbie can be installed locally or used from the [web demo page](https://herbie.
 
 ## Xmake package management
 
-This [article](https://github.com/xmake-io/xmake/wiki/Xmake-and-Cplusplus--Package-Management) describes package management in CMake using Vcpkg and Conan and compares it to what's available in Xmake. It also introduces Xmake's standalone package manager Xrepo. I'm still amazed at the quality and capabilities of Xmake. We lament about how difficult it is to bootstrap a C++ project, we have entire tools that create CMake project templates, but here it is, an easy to use and amazingly capable build system, and nobody seems to know about it. CMake is the standard, but teaching it to students is akin to starting C++ course by explaining pointers. Xmake could be an ideal student-friendly introduction to build systems at least for their toy projects, to avoid scaring them away before they even start learning C++.
+This [article](https://github.com/xmake-io/xmake/wiki/Xmake-and-Cplusplus--Package-Management) describes package management in CMake using Vcpkg and Conan and compares it to what's available in Xmake. It also introduces Xmake's standalone package manager Xrepo. I'm still amazed at the quality and capabilities of Xmake. We lament about how difficult it is to bootstrap a C++ project, we have entire tools that boostrap CMake projects, but here it is, an easy to use and amazingly capable build system, and nobody seems to know about it. CMake is the standard, but teaching it to students is akin to starting a C++ course by explaining pointers. Xmake could be an ideal student-friendly introduction to build systems at least for their toy projects, to avoid scaring them away before they even start learning C++.
 
 ## A replacement for `std::vector<bool>`
 
