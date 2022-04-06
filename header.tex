@@ -1,6 +1,14 @@
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage{fontspec}
+\usepackage{sectsty}
+\usepackage{listings}
+% for adjustwidth environment
+\usepackage[strict]{changepage}
+% for formal definitions
+\usepackage{framed}
+\usepackage{hyperref}
+
 % \setmonofont[Scale=MatchLowercase]{Courier Prime}
 \setmonofont[Scale=MatchUppercase]{Courier Prime}
 %\setmonofont[Scale=MatchUppercase]{IBM Plex Mono}
@@ -23,10 +31,8 @@
 % \setmainfont{Puritan}
 % \setmainfont{Alegreya Sans}
 % \setmainfont[SmallCapsFont={* SC}]{Andada}
-\hypersetup{colorlinks,urlcolor=magenta}
-\usepackage{sectsty}
+\hypersetup{colorlinks=true,urlcolor={magenta}}
 \sectionfont{\clearpage}
-\usepackage{listings}
 \lstset{
     frame=leftline,
     rulecolor=\color{magenta},
@@ -51,12 +57,6 @@
     linewidth=\textwidth,
     basewidth=0.55em,
 }
-
-% for adjustwidth environment
-\usepackage[strict]{changepage}
-
-% for formal definitions
-\usepackage{framed}
 
 % environment derived from framed.sty: see leftbar environment definition
 \definecolor{formalshade}{rgb}{0.95,0.95,1}
