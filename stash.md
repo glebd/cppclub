@@ -79,3 +79,43 @@
 
 * [David Mazières](https://www.scs.stanford.edu/~dm/blog/c++-coroutines.html)
 * [Reddit](https://www.reddit.com/r/cpp/comments/lpo9qa/my_tutorial_and_take_on_c20_coroutines_david/)
+
+## Library: WxWidgets 3.1.6
+
+One of the best cross-platform GUI libraries for C++, [WxWidgets](https://www.wxwidgets.org), has been updated to [version 3.1.6](https://github.com/wxWidgets/wxWidgets/releases/tag/v3.1.6). When asked about C++ GUI libraries most developers think of Qt. But if you want native controls and look on all supported platforms, WxWidgets is the best option. (Qt draws custom controls and therefore looks the same but also alien on all platforms).
+
+The [code](https://github.com/wxWidgets/wxWidgets) does have a bit of MFC vibe, but the UI definitions are XML-based and can be reloaded without recompiling the program, which can be convenient. The [Hello World example](https://docs.wxwidgets.org/trunk/overview_helloworld.html) is not exactly short or simple, but it is probably an acceptable compromise for what you are getting.
+
+The OS support range is impressive, from Windows XP to 10 (32- and 64-bit), most Linux variants using GTK+, macOS 10.10+ using Cocoa.
+
+The [licence](https://github.com/wxWidgets/wxWidgets/blob/master/docs/licence.txt) is a modified LGPL explicitly allowing not distributing the sources of an application using the library even in the case of static linking, which is really nice.
+
+The popular free audio editor [Audacity](https://www.audacityteam.org) uses WxWidgets.
+
+## Library: Vapid soa
+
+[Vapid soa](https://github.com/markisus/vapid-soa) is a header-only library that implements a structure of arrays (SOA). It follows the [data-oriented design idiom](https://en.wikipedia.org/wiki/Data-oriented_design) and is a faster and more cache-friendly replacement for an array of structures.
+
+The library supports various data transformations and accessors, comes under MIT licence, requires C++17 and uses Bazel Build.
+
+Example code:
+
+```cpp
+constexpr int ORDER = 0;
+constexpr int FIRST_NAME = 1;
+constexpr int LAST_NAME = 2;
+vapid::soa<int, std::string, std::string> presidents;
+
+presidents.insert(0, "Abraham", "Lincoln");
+presidents.insert(2, "George", "Bush");
+presidents.insert(1, "Bill", "Clinton");
+
+// sort by time (first column)
+presidents.sort_by_field<ORDER>();
+std::cout << "Presidents sorted by temporal order" << "\n";
+std::cout << presidents << "\n";
+```
+
+## List of C++ libraries on cppreference
+
+There is a [list](https://en.cppreference.com/w/cpp/links/libs) of open-source C++ libraries on the best C++ reference website, [cppreference](https://en.cppreference.com). It's not as long as [some](https://github.com/fffaraz/awesome-cpp) [other](https://github.com/uhub/awesome-cpp) [lists](https://cpp.libhunt.com), but still provides a good sample of what's available.
