@@ -11,3 +11,7 @@ README.pdf
 .ionide
 
 podcast/episodes
+
+# Hugo
+resources
+*.lock
