@@ -1,6 +1,5 @@
 *.log
 *.aux
-*.yaml
 index.pdf
 stash.pdf
 README.pdf
@@ -11,3 +10,8 @@ README.pdf
 .ionide
 
 podcast/episodes
+
+# Hugo
+resources
+*.lock
+public
