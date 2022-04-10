@@ -53,6 +53,7 @@ weight = 4
   # Home page settings
   description = "C++ Club is a semi-regular online meeting of C++ enthusiasts to discuss the latest news, events and anything else related to the C++ programming language. This is where I post meeting notes."
   mainSection = "meetings" # your main section
+  mainSectionTitle = "Meetings"
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   #tagsOverview = true # show tags overview by default.
