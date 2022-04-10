@@ -1,0 +1,100 @@
+---
+title:    Meeting 28 February 2019
+author:   Gleb Dolgich
+date:     2019-02-28
+---
+
+Meeting 28 February 2019
+========================
+
+Bryce Lelbach's Kona Twitter Poll
+---------------------------------
+
+.. image:: /img/lelbach-kona-poll.png
+
+https://www.reddit.com/r/cpp/comments/aq8rxf/bryce_lelbach_on_twitter_what_proposed_c20/
+
+Twitter
+-------
+
+.. image:: /img/ewg-ransom.png
+
+Kona Trip Reports
+-----------------
+
+* Modules! Coroutines! Contracts! Ranges! Constexpr! Spaceships! Calendars! Time zones!
+* Bryce Lelbach https://www.reddit.com/r/cpp/comments/au0c4x/201902_kona_iso_c_committee_trip_report_c20/
+    * The reports of modules being dead on arrival have been greatly exaggerated. https://www.reddit.com/r/cpp/comments/au0c4x/201902_kona_iso_c_committee_trip_report_c20/eh4stfg/
+    * More Reddit https://www.reddit.com/r/programming/comments/au1ie3/201902_kona_iso_c_committee_trip_report_c20/
+    * Hacker News https://news.ycombinator.com/item?id=19235702
+* Herb Sutter https://herbsutter.com/2019/02/23/trip-report-winter-iso-c-standards-meeting-kona/
+    * Reddit https://www.reddit.com/r/cpp/comments/au1skl/herbs_kona_trip_report_winter_iso_c_standards/
+
+    At our next meeting in July, we expect to formally adopt a few additional features that were design-approved at this meeting but didn’t complete full wording specification review this week <...> (formatting, ``flat_map`` etc.)
+
+C++20
+-----
+
+Bryce Lelbach:
+
+    TL;DR: C++20 may well be as big a release as C++11.
+
+.. image:: /img/epic_win.jpg
+
+API design: iterator-based vs. container-based
+----------------------------------------------
+
+Pros:
+
+* Iterator-based API is more flexible
+    * works with different containers
+    * works with types that expose differently-named **begin** and **end** member functions
+    * works on ranges of data instead of the entire container
+* Protobuf APIs are iterator-based
+* Flatbuffers are iterator-based
+* Standard and Boost algorithms are iterator-based
+
+Cons:
+
+* Not as readable as container-based API
+
+Eigen + MTS + Google Ceres Solver = SEGFAULT
+--------------------------------------------
+
+* Eigen http://eigen.tuxfamily.org/index.php?title=Main_Page
+* Ceres Solver http://ceres-solver.org/
+* Memory managers:
+    * MTS http://www.desy.de/user/projects/C++/products/mts.html
+        - for every 10000 allocations 13 to 17 were unaligned
+    * TCMalloc (Google) http://goog-perftools.sourceforge.net/doc/tcmalloc.html
+    * Jemalloc (FreeBSD, Facebook) http://jemalloc.net/
+
+.. code:: c++
+
+    bool aligned = ((unsigned long)p % 16) == 0;
+
+Cpp On Sea 2019 Trip Report by Arne Mertz
+-----------------------------------------
+
+https://arne-mertz.de/2019/02/cpp-on-sea-2019-trip-report/
+
+    C++ On Sea is definitely the best conference I have ever been to.
+
+    The opener was titled “Hello, World”, there was a “main()” plenary hall and session rooms titled “const west”, “east const”, and “unsigned”. The latter was the smallest of the session rooms and had an overflow problem a few times, but luckily that did not lead to undefined behavior, because C++ conference attendees seem to be very nice people in general.
+
+C++ Binary Compatibility and Pain-Free Upgrades to Visual Studio 2019
+---------------------------------------------------------------------
+
+https://blogs.msdn.microsoft.com/vcblog/2019/01/31/cpp-binary-compatibility-and-pain-free-upgrades-to-visual-studio-2019/
+
+Visual Studio 2019 Release Candidate (RC) now available
+-------------------------------------------------------
+
+https://devblogs.microsoft.com/visualstudio/visual-studio-2019-release-candidate-rc-now-available/
+
+Twitter
+-------
+
+.. image:: /img/cmake-cats.png
+
+.. image:: /img/load-bearing-bug.png
