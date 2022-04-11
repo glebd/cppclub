@@ -50,7 +50,7 @@ Update subtree:
 
 ### Chroma code highlighter styles
 
-https://xyproto.github.io/splash/docs/
+https://xyproto.github.io/splash/docs/all.html
 
 ### Shortcodes
 
