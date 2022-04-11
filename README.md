@@ -48,6 +48,14 @@ Update subtree:
     git fetch cactus
     git subtree pull --squash --prefix=themes/cactus cactus main
 
+### Chroma code highlighter styles
+
+https://xyproto.github.io/splash/docs/
+
+### Shortcodes
+
+https://gohugo.io/content-management/shortcodes/
+
 ### Links
 
 * https://gohugo.io/getting-started/quick-start/
