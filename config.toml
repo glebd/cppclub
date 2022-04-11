@@ -40,7 +40,7 @@ weight = 4
     lineNos = true
     lineNumbersInTable = false
     noClasses = true
-    style = "dracula"
+    style = "solarized-light"
     tabWidth = 4
 
 [params]
