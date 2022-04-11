@@ -40,7 +40,7 @@ weight = 4
     lineNos = true
     lineNumbersInTable = false
     noClasses = true
-    style = "solarized-light"
+    style = "manni"
     tabWidth = 4
 
 [params]
