@@ -6,22 +6,31 @@ Disclaimer: all opinions posted in this repository are my own and not those of m
 
 Author: Gleb Dolgich
 
-# Building Slides
+## Building Slides
 
-## Prerequisites
+### Prerequisites
 
 * Pandoc
 * LaTeX
 
-## Command
+### Command
 
 ```bash
 make
 ```
 
-## Installing mermaid filter for pandoc
+### Installing mermaid filter for pandoc
 
 ```bash
 pip3 install pandoc-mermaid-filter
 pandoc -s --listings -t beamer -H beameropt.tex --pdf-engine=xelatex -F mermaid-filter 2019-11-07.md -o 2019-11-07.pdf
 ```
+
+## Pelican
+
+### Links
+
+* https://docs.getpelican.com/en/latest/quickstart.html
+* https://mcss.mosra.cz
+* https://github.com/kmonsoor/awesome-pelican
+* https://github.com/getpelican/pelican-plugins

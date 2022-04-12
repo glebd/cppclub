@@ -119,3 +119,23 @@ std::cout << presidents << "\n";
 ## List of C++ libraries on cppreference
 
 There is a [list](https://en.cppreference.com/w/cpp/links/libs) of open-source C++ libraries on the best C++ reference website, [cppreference](https://en.cppreference.com). It's not as long as [some](https://github.com/fffaraz/awesome-cpp) [other](https://github.com/uhub/awesome-cpp) [lists](https://cpp.libhunt.com), but still provides a good sample of what's available.
+
+## Please repeat yourself: The `noexcept(noexcept(…))` idiom
+
+Raymond Chen [writes](https://devblogs.microsoft.com/oldnewthing/20220408-00/?p=106438):
+
+TODO
+
+Reddit [thread](https://www.reddit.com/r/cpp/comments/tz8xgl/please_repeat_yourself_the_noexceptnoexcept_idiom/)
+
+## GUI for software, not games, but lighter than Qt
+
+A redditor [asks](https://www.reddit.com/r/cpp/comments/tyzs7p/gui_for_software_not_games_but_lighter_than_qt/):
+
+TODO
+
+## Divide & Conquer and Sets: The 114 C++ algorithms series
+
+[Medium](https://itnext.io/divide-conquer-and-sets-the-114-c-algorithms-series-d0085a38046e)
+
+TODO
