@@ -1,4 +1,25 @@
-----
+---
+title:    Meeting 17 January 2019
+author:   Gleb Dolgich
+date:     2019-01-17
+tags:
+  - Intel
+  - Parallelism
+  - STL
+  - LLVM
+  - JeanHeyd Meneide
+  - ODR
+  - Error handling
+  - Gamedev
+  - Coding standard
+  - Branimir Karadzic
+  - Modern C++
+  - CTAD
+  - Stephan T. Lavavej
+---
+
+Meeting 17 January 2019
+=======================
 
 Intel Contributes Its Parallel STL Implementation To LLVM
 ---------------------------------------------------------
@@ -138,70 +159,34 @@ CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyon
 .. _`Stephan T. Lavavej - Class Template Argument Deduction for Everyone`: https://www.youtube.com/watch?v=-H-ut6j1BYU
 .. _`How to Use Class Template Argument Deduction`: https://blogs.msdn.microsoft.com/vcblog/2018/10/11/how-to-use-class-template-argument-deduction/
 
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
+.. image:: /img/stl-ctad-1.png
 
-.. image:: img/stl-ctad-1.png
+.. image:: /img/stl-ctad-2.png
 
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
+.. image:: /img/stl-ctad-3.png
 
-.. image:: img/stl-ctad-2.png
+.. image:: /img/stl-ctad-4.png
 
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
+.. image:: /img/stl-ctad-5.png
 
-.. image:: img/stl-ctad-3.png
+.. image:: /img/stl-ctad-6.png
 
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
+.. image:: /img/stl-ctad-7.png
 
-.. image:: img/stl-ctad-4.png
+.. image:: /img/stl-ctad-8.png
 
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
+.. image:: /img/stl-ctad-9.png
 
-.. image:: img/stl-ctad-5.png
+.. image:: /img/stl-ctad-10.png
 
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
+.. image:: /img/stl-ctad-11.png
 
-.. image:: img/stl-ctad-6.png
-
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
-
-.. image:: img/stl-ctad-7.png
-
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
-
-.. image:: img/stl-ctad-8.png
-
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
-
-.. image:: img/stl-ctad-9.png
-
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
-
-.. image:: img/stl-ctad-10.png
-
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
-
-.. image:: img/stl-ctad-11.png
-
-CppCon 2018: Stephan T. Lavavej “Class Template Argument Deduction for Everyone”
---------------------------------------------------------------------------------
-
-.. image:: img/stl-ctad-12.png
+.. image:: /img/stl-ctad-12.png
 
 Returning values in parentheses
 -------------------------------
 
-.. image:: img/return-paren.png
+.. image:: /img/return-paren.png
 
 Quote
 -----
@@ -211,4 +196,4 @@ Quote
 Twitter
 -------
 
-.. image:: img/undefined-solo.png
+.. image:: /img/undefined-solo.png
