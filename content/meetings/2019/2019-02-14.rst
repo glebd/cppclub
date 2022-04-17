@@ -1,4 +1,22 @@
-----
+---
+title:    Meeting 14 February 2019
+author:   Gleb Dolgich
+date:     2019-02-14
+tags:
+  - Sign
+  - CppChat
+  - Nicolai Josuttis
+  - Geoff Romer
+  - Multithreading
+  - Initialization
+  - Andreas Weis
+  - Timur Doumler
+  - Matt Godbolt
+  - Daniele Pallastrelli
+---
+
+Meeting 14 February 2019
+========================
 
 Avoid unsigned
 --------------
@@ -30,7 +48,7 @@ https://youtu.be/_CaP_xwfAFU
 * Initialiser lists are broken!
 * Auto initialisation is broken!
 
-.. image:: img/original_rage.jpg
+.. image:: /img/original_rage.jpg
    :width: 1500 px
    :height: 1173 px
    :scale: 10 %
@@ -40,70 +58,25 @@ CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
 
 https://youtu.be/s5PCh_FaMfM
 
-.. image:: img/romer-threadsafe-1.png
+.. image:: /img/romer-threadsafe-1.png
 
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
+.. image:: /img/romer-threadsafe-2.png
 
-https://youtu.be/s5PCh_FaMfM
+.. image:: /img/romer-threadsafe-3.png
 
-.. image:: img/romer-threadsafe-2.png
+.. image:: /img/romer-threadsafe-4.png
 
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
+.. image:: /img/romer-threadsafe-5.png
 
-https://youtu.be/s5PCh_FaMfM
+.. image:: /img/romer-threadsafe-6.png
 
-.. image:: img/romer-threadsafe-3.png
+.. image:: /img/romer-threadsafe-7.png
 
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
+.. image:: /img/romer-threadsafe-8.png
 
-https://youtu.be/s5PCh_FaMfM
+.. image:: /img/romer-threadsafe-9.png
 
-.. image:: img/romer-threadsafe-4.png
-
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
-
-https://youtu.be/s5PCh_FaMfM
-
-.. image:: img/romer-threadsafe-5.png
-
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
-
-https://youtu.be/s5PCh_FaMfM
-
-.. image:: img/romer-threadsafe-6.png
-
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
-
-https://youtu.be/s5PCh_FaMfM
-
-.. image:: img/romer-threadsafe-7.png
-
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
-
-https://youtu.be/s5PCh_FaMfM
-
-.. image:: img/romer-threadsafe-8.png
-
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
-
-https://youtu.be/s5PCh_FaMfM
-
-.. image:: img/romer-threadsafe-9.png
-
-CppCon 2018 - Geoff Romer - What do you mean "thread-safe"?
------------------------------------------------------------
-
-https://youtu.be/s5PCh_FaMfM
-
-.. image:: img/romer-threadsafe-10.png
+.. image:: /img/romer-threadsafe-10.png
 
 Proper way to iterate backwards in C++
 --------------------------------------
@@ -151,11 +124,6 @@ Inverse two-phase initialisation
         : m_state(std::move(t.state)) {}
     };
 
-CppCon 2018 - Andreas Weis - Fixing Two-Phase Initialisation
-------------------------------------------------------------
-
-https://youtu.be/S7I66lZX_zM
-
 Inverse two-phase initialisation: usage
 
 .. code:: c++
@@ -187,11 +155,6 @@ https://youtu.be/tsG95Y-C14k
     // MSVC accepts, GCC rejects, Clang accepts
     extern "C++" extern "C" extern "C++" extern int x;
 
-CppCon 2018 - Timur Doumler - I can has grammar?
-------------------------------------------------
-
-https://youtu.be/tsG95Y-C14k
-
 | *selection-statement:*
 |     ``if constexpr``:sub:`opt` ( *init-statement*:sub:`opt` *condition* ) *statement*
 
@@ -203,21 +166,11 @@ https://youtu.be/tsG95Y-C14k
 
     if (; true) /* ... */;
 
-CppCon 2018 - Timur Doumler - I can has grammar?
-------------------------------------------------
-
-https://youtu.be/tsG95Y-C14k
-
 Declare and initialise a variable of type "function pointer":
 
 .. code:: c++
 
     auto (*fp)() -> int(&f);
-
-CppCon 2018 - Timur Doumler - I can has grammar?
-------------------------------------------------
-
-https://youtu.be/tsG95Y-C14k
 
 .. code:: c++
 
@@ -225,11 +178,6 @@ https://youtu.be/tsG95Y-C14k
     void bar(foo foo);
     void bar(foo(foo)); // vexing parse
     void bar(foo((foo))); // more vexing parse
-
-CppCon 2018 - Timur Doumler - I can has grammar?
-------------------------------------------------
-
-https://youtu.be/tsG95Y-C14k
 
 .. code:: c++
 
@@ -246,11 +194,6 @@ https://youtu.be/tsG95Y-C14k
     class C { void foo(struct S* x); };
     S* s;
 
-CppCon 2018 - Timur Doumler - I can has grammar?
-------------------------------------------------
-
-https://youtu.be/tsG95Y-C14k
-
 *pseudo-destructor-name*
 
 .. code:: c++
@@ -260,12 +203,6 @@ https://youtu.be/tsG95Y-C14k
     using foo = int;
     i.~foo(); // OK
     ~int();   // OK (not a destructor!)
-
-
-CppCon 2018 - Timur Doumler - I can has grammar?
-------------------------------------------------
-
-https://youtu.be/tsG95Y-C14k
 
 Alternative tokens
 
@@ -300,4 +237,4 @@ Move smart pointers in and out functions in modern C++
 Twitter
 -------
 
-.. image:: img/js-increment.png
+.. image:: /img/js-increment.png
