@@ -1,4 +1,15 @@
-----
+---
+title:    Meeting 31 January 2019
+author:   Gleb Dolgich
+date:     2019-01-31
+tags:
+  - WG21
+  - Mailing
+  - Modules
+---
+
+Meeting 31 January 2019
+=======================
 
 Pre-Kona Papers
 ---------------
@@ -6,9 +17,9 @@ Pre-Kona Papers
 mailing2019-01_
 
 * P1408R0_ Abandon ``observer_ptr`` (Bjarne Stroustrup)
-  * Reddit: https://www.reddit.com/r/cpp/comments/ak0vfg/abandon_observer_ptr_bjarne_stroustrup/
+    * Reddit: https://www.reddit.com/r/cpp/comments/ak0vfg/abandon_observer_ptr_bjarne_stroustrup/
 * P1329R0_ On the Coroutines TS (Oppose merging of Coroutines TS into the Standard -- prefer Core Coroutines or an alternative where coroutines are "first-class citizens of the language".)
-  * P1430R0_ First-class symmetric coroutines in C++
+    * P1430R0_ First-class symmetric coroutines in C++
 * P0843R3_ ``static_vector``
 * P1021R3_ Filling holes in CTAD (aggregates, alias templates, inherited constructors)
 * P1132R3_ ``out_ptr``
@@ -22,11 +33,6 @@ mailing2019-01_
 .. _P1021R3: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1021r3.html
 .. _P1132R3: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1132r3.html
 .. _P1337R0: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1337r0.pdf
-
-Pre-Kona Papers
----------------
-
-mailing2019-01_
 
 * P1392R0_ Differences Between Functions and Function Templates (informational)
 * P1426R0_ Pull the Plug on Contracts? (wow)
@@ -55,13 +61,9 @@ C++ Modules Might Be Dead-on-Arrival
 C vs. C++ ``for`` scope
 -----------------------
 
-.. image:: img/c-cpp-for-scope.png
-   :width: 1242 px
-   :height: 1174 px
-   :scale: 25 %
-   :align: center
+.. image:: /img/c-cpp-for-scope.png
 
 Twitter
 -------
 
-.. image:: img/software-dev-tools.png
+.. image:: /img/software-dev-tools.png
