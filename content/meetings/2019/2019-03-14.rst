@@ -1,0 +1,143 @@
+---
+title:    Meeting 14 March 2019
+author:   Gleb Dolgich
+date:     2019-03-14
+tags:
+    - Exceptions
+    - Gamedev
+    - Walter E. Brown
+    - TMP
+    - Kirk Shoop
+    - Executors
+    - Reactive
+    - RxCpp
+    - Coroutines
+    - Varun Ramesh
+    - Microsoft
+    - Windows
+    - Isabella Muerte
+    - CMake
+---
+
+Meeting 14 March 2019
+=====================
+
+Making C++ Exception Handling Smaller On x64
+--------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/making-cpp-exception-handling-smaller-x64/
+
+    Visual Studio 2019 Preview 3 introduces a new feature to reduce the binary size of C++ exception handling (``try``/``catch`` and automatic destructors) on x64. Dubbed **FH4** (for ``__CxxFrameHandler4``, see below), I developed new formatting and processing for data used for C++ exception handling that is ~60% smaller than the existing implementation, resulting in overall binary reduction of up to 20% for programs with heavy usage of C++ exception handling.
+
+https://www.reddit.com/r/cpp/comments/ayeg0b/making_c_exception_handling_smaller_on_x64/
+
+C++, it’s not you. It’s me.
+---------------------------
+
+Blog post: https://c0de517e.blogspot.com/2019/02/c-its-not-you-its-me.html
+
+    The crux of the issue <...> is the growing disconnect between people working on big, complex, performance-sensitive and often monolithic and legacy-ridden codebases that we find in game development, and the ideas of "modernity” of the C++ standard community.
+
+`Reddit <https://www.reddit.com/r/cpp/comments/av8mmz/c_its_not_you_its_me/>`_
+
+    I'm just going to throw it out there: I'm tired of reading this kind of stuff from game devs.
+
+    Acting like they are the only ones with performance issues. The only ones with complex codebases. The only ones who actually ship code. The ones who are just solving more unique and difficult problems than anyone else, for which C++ falls short by more.
+
+C++ On Sea 2019 - Walter E. Brown - C++ Function Templates: How Do They Really Work?
+------------------------------------------------------------------------------------
+
+https://youtu.be/nfIX8yWlByY
+
+.. image:: /img/brown-fn-templ-1.png
+
+.. image:: /img/brown-fn-templ-2.png
+
+.. image:: /img/brown-fn-templ-3.png
+
+.. image:: /img/brown-fn-templ-4.png
+
+.. image:: /img/brown-fn-templ-5.png
+
+.. image:: /img/brown-fn-templ-6.png
+
+.. image:: /img/brown-fn-templ-7.png
+
+.. image:: /img/brown-fn-templ-8.png
+
+.. image:: /img/brown-fn-templ-9.png
+
+.. image:: /img/brown-fn-templ-10.png
+
+.. image:: /img/brown-fn-templ-11.png
+
+.. image:: /img/brown-fn-templ-12.png
+
+.. image:: /img/brown-fn-templ-13.png
+
+.. image:: /img/brown-fn-templ-14.png
+
+.. image:: /img/brown-fn-templ-15.png
+
+.. image:: /img/brown-fn-templ-16.png
+
+.. image:: /img/brown-fn-templ-17.png
+
+.. image:: /img/brown-fn-templ-18.png
+
+.. image:: /img/brown-fn-templ-19.png
+
+.. image:: /img/brown-fn-templ-20.png
+
+.. image:: /img/brown-fn-templ-21.png
+
+.. image:: /img/brown-fn-templ-22.png
+
+.. image:: /img/brown-fn-templ-23.png
+
+.. image:: /img/brown-fn-templ-24.png
+
+.. image:: /img/brown-fn-templ-25.png
+
+.. image:: /img/brown-fn-templ-26.png
+
+.. image:: /img/brown-fn-templ-27.png
+
+.. image:: /img/brown-fn-templ-28.png
+
+.. image:: /img/brown-fn-templ-29.png
+
+RxCpp and Executors with Kirk Shoop
+-----------------------------------
+
+http://cppcast.com/2019/03/kirk-shoop/
+
+* Ranges deal with objects distributed in space, Rx deals with objects distributed in time
+* Executors need to be compatible with tasks and observables
+* Works at Facebook with Eric Niebler and Lewis Baker on making ranges work with coroutines and executors
+* Rx was developed for a garbage-collected object lifetime, but with C++ it's more complicated
+
+Stackless vs. Stackful Coroutines
+---------------------------------
+
+`Article by Varun Ramesh, 18 August 2017 <https://blog.varunramesh.net/posts/stackless-vs-stackful-coroutines/>`_
+
+Announcing the Open Sourcing of Windows Calculator
+--------------------------------------------------
+
+* `Blog post <https://blogs.windows.com/buildingapps/2019/03/06/announcing-the-open-sourcing-of-windows-calculator/>`_
+* https://github.com/Microsoft/calculator
+* https://www.reddit.com/r/programming/comments/ay2aq6/announcing_the_open_sourcing_of_windows/
+* `Counting Bugs in Windows Calculator <https://www.viva64.com/en/b/0615/>`_
+
+Everything You Never Wanted to Know About CMake
+-----------------------------------------------
+
+https://izzys.casa/2019/02/everything-you-never-wanted-to-know-about-cmake/
+
+Quote
+-----
+
+Unknown:
+
+    Weeks of coding can save you hours of planning.
