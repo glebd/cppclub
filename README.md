@@ -31,9 +31,11 @@ pandoc -s --listings -t beamer -H beameropt.tex --pdf-engine=xelatex -F mermaid-
 ### Install
 
     brew install hugo
+    brew install docutils
 
 ### Server
 
+    export HUGO_SECURITY_EXEC_ALLOW=rst2html.py
     hugo server
 
 ### Cactus Theme
