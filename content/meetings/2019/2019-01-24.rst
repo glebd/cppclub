@@ -1,4 +1,26 @@
-----
+---
+title:    Meeting 24 January 2019
+author:   Gleb Dolgich
+date:     2019-01-24
+tags:
+  - CTAD
+  - Andrzej Krzemieński
+  - Arthur O'Dwyer
+  - Modern C++
+  - Aras Pranckevičius
+  - Gamedev
+  - Ben Deane
+  - Mathieu Ropert
+  - Sean Parent
+  - MSVC
+  - sol
+  - Lua
+  - JeanHeyd Meneide
+  - Task
+---
+
+Meeting 24 January 2019
+=======================
 
 Deducing your intentions
 ------------------------
@@ -102,7 +124,7 @@ Another cool MSVC flag: /d1reportTime
 
 * `Complete list of MSVC flags`_
 
-.. _`Another cool MSVC flag: /d1reportTime`: http://aras-p.info/blog/2019/01/21/Another-cool-MSVC-flag-d1reportTime/  
+.. _`Another cool MSVC flag: /d1reportTime`: http://aras-p.info/blog/2019/01/21/Another-cool-MSVC-flag-d1reportTime/
 .. _`Complete list of MSVC flags`: https://lectem.github.io/msvc/reverse-engineering/build/2019/01/21/MSVC-hidden-flags.html
 
 Compile Time, Binary Size Reductions and C++'s future for sol3
