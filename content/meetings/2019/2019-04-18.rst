@@ -1,4 +1,31 @@
-----
+---
+title:    Meeting 18 April 2019
+author:   Gleb Dolgich
+date:     2019-04-18
+tags:
+    - Compiler Explorer
+    - Matt Godbolt
+    - Language rankings
+    - TIOBE
+    - Energy efficiency
+    - WG21
+    - Mailing
+    - Trip report
+    - Botond Ballo
+    - Jason Merrill
+    - Exceptions
+    - Marius Bancila
+    - Benchmarking
+    - Cryptography
+    - Computer vision
+    - iostreams
+    - auto
+    - Microsoft
+    - Bitcoin
+---
+
+Meeting 18 April 2019
+=====================
 
 Compiler Explorer
 -----------------
@@ -48,15 +75,15 @@ Kona trip reports
 -----------------
 
 * `Botond Ballo <https://botondballo.wordpress.com/2019/03/20/trip-report-c-standards-meeting-in-kona-february-2019/>`_
-  - https://www.reddit.com/r/cpp/comments/b3gcp8/trip_report_c_standards_meeting_in_kona_february/
-  - Status of the papers https://github.com/jensmaurer/papers/issues
+    - https://www.reddit.com/r/cpp/comments/b3gcp8/trip_report_c_standards_meeting_in_kona_february/
+    - Status of the papers https://github.com/jensmaurer/papers/issues
 * `Jason Merrill, Red Hat Developer Blog <https://developers.redhat.com/blog/2019/04/11/report-from-the-february-2019-iso-c-meeting-core-language-working-group/>`_
 
-Little-known C++: function-try-block (1/2)
-------------------------------------------
+Little-known C++: function-try-block
+------------------------------------
 
 * Marius Bancila: https://mariusbancila.ro/blog/2019/03/13/little-known-cpp-function-try-block/
-  * Reddit: https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/
+    * Reddit: https://www.reddit.com/r/cpp/comments/b0jzzy/littleknown_c_functiontryblock/
 * Vorbrodt: https://vorbrodt.blog/2019/04/02/function-try-catch-blocks/
 
 .. code:: c++
@@ -69,9 +96,6 @@ Little-known C++: function-try-block (1/2)
     } catch (...) {
        return -1;
     }
-
-Little-known C++: function-try-block (2/2)
-------------------------------------------
 
 .. code:: c++
 
@@ -105,7 +129,7 @@ Your favorite C++ code?
 `www.reddit.com/r/cpp/comments/abcgci/your_favorite_c_code/ <https://www.reddit.com/r/cpp/comments/abcgci/your_favorite_c_code/>`_
 
 * Niels Lohmann's JSON library https://github.com/nlohmann/json (also Milo Yip's RapidJSON https://github.com/Tencent/rapidjson)
-* Sol 2 - Lua bindings https://github.com/ThePhD/sol2
+* Sol2 - Lua bindings https://github.com/ThePhD/sol2
 * effolkronium/random https://github.com/effolkronium/random
 * cereal - Serialization https://uscilab.github.io/cereal/
 * ranges-v3, fmtlib, pybind11
@@ -169,9 +193,9 @@ https://mariusbancila.ro/blog/2019/03/18/little-known-cpp-operator-auto/
 Twitter
 -------
 
-.. image:: img/mov.png
+.. image:: /img/mov.png
 
 Twitter
 -------
 
-.. image:: img/bitcoin.png
+.. image:: /img/bitcoin.png
