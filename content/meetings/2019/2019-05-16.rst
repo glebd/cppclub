@@ -1,4 +1,27 @@
-----
+---
+title:    Meeting 16 May 2019
+author:   Gleb Dolgich
+date:     2019-05-16
+tags:
+    - ACCU
+    - Trip report
+    - Kate Gregory
+    - Sanitizers
+    - VS2019
+    - GCC
+    - Data structures
+    - Licensing
+    - Survey
+    - Parsing
+    - FSM
+    - Regular expressions
+    - Parallelism
+    - Outcome
+    - Boost
+---
+
+Meeting 16 May 2019
+===================
 
 ACCU 2019 Trip Reports
 ----------------------
@@ -15,8 +38,8 @@ GCC 9.1 Released
 ----------------
 
 * Announcement https://lwn.net/Articles/787385/
-  * C++17 fully implemented
-  * OpenMP 5.0 partially supported
+    * C++17 fully implemented
+    * OpenMP 5.0 partially supported
 * Reddit https://www.reddit.com/r/cpp/comments/bk7uha/gcc_91_released/
 * GCC 9: Link-time and inter-procedural optimization improvements
   http://hubicka.blogspot.com/2019/05/gcc-9-link-time-and-inter-procedural.html
@@ -67,7 +90,7 @@ On resolving the type vs member conflict in C++: The Color Color problem
 * https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/
 * https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition
 
-Microsoft BlingFire - A lightning fast Finite State machine and REgular expression manipulation library
+Microsoft BlingFire - A lightning fast Finite State machine and Regular expression manipulation library
 -------------------------------------------------------------------------------------------------------
 
 * https://github.com/Microsoft/BlingFire (MIT)
