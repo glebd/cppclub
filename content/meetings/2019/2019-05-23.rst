@@ -1,4 +1,24 @@
-----
+---
+title:    Meeting 23 May 2019
+author:   Gleb Dolgich
+date:     2019-05-23
+tags:
+    - ML
+    - Peter Goldsborough
+    - PyTorch
+    - CTAD
+    - Barry Revzin
+    - GUI
+    - Best practices
+    - Alignment
+    - Enums
+    - Nameof
+    - Microsoft
+    - GSL
+---
+
+Meeting 23 May 2019
+===================
 
 PyTorch and C++
 ---------------
@@ -10,8 +30,8 @@ PyTorch and C++
 * PyTorch docs https://pytorch.org/cppdocs
 * PyTorch code https://github.com/pytorch/pytorch
 
-Quirks in Class Template Argument Deduction (1/2)
--------------------------------------------------
+Quirks in Class Template Argument Deduction
+-------------------------------------------
 
 Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
 
@@ -25,9 +45,6 @@ Barry Revzin: https://brevzin.github.io/c++/2018/09/01/quirks-ctad/
 What is the intent behind the declaration of variable ``x``?
 Are we constructing a new thing (the CTAD goal) or are we using ``std::tuple``
 as annotation to ensure that ``x`` is in fact a ``tuple`` (the Concepts goal)?
-
-Quirks in Class Template Argument Deduction (2/2)
--------------------------------------------------
 
 A clearer example:
 
@@ -78,30 +95,30 @@ C++ Experts, what advice would you give to a new C++ developer?
 
 https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/
 
-* Exceptions don't work with MPI `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8lswhe?utm_source=share&utm_medium=web2x>`_
+* `Exceptions don't work with MPI <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8lswhe?utm_source=share&utm_medium=web2x>`_
 * `Prefer composition over inheritance <https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance>`_
-* "Don't overuse exceptions" may not be so clear cut `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8mabti?utm_source=share&utm_medium=web2x>`_ [`Measuring execution performance of C++ exceptions vs error codes <http://nibblestew.blogspot.com/2017/01/measuring-execution-performance-of-c.html>`_]
-* Write unit tests for public API `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8lz3ss?utm_source=share&utm_medium=web2x>`_ `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8m6sr8?utm_source=share&utm_medium=web2x>`_
-* Not everything needs to be a class `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8m0ppp?utm_source=share&utm_medium=web2x>`_
-* Consider data-oriented design `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8rb8ae?utm_source=share&utm_medium=web2x>`_
-* A bunch of useful tips `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8mkvgs?utm_source=share&utm_medium=web2x>`_
-* "Rust is a good choice!" `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8s0kta?utm_source=share&utm_medium=web2x>`_ `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8nq1md?utm_source=share&utm_medium=web2x>`_ *(there's always one or two)*
+* `"Don't overuse exceptions" may not be so clear cut <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8mabti?utm_source=share&utm_medium=web2x>`_ [`Measuring execution performance of C++ exceptions vs error codes <http://nibblestew.blogspot.com/2017/01/measuring-execution-performance-of-c.html>`_]
+* `Write unit tests for public API <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8lz3ss?utm_source=share&utm_medium=web2x>`_ `# <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8m6sr8?utm_source=share&utm_medium=web2x>`_
+* `Not everything needs to be a class <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8m0ppp?utm_source=share&utm_medium=web2x>`_
+* `Consider data-oriented design <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8rb8ae?utm_source=share&utm_medium=web2x>`_
+* `A bunch of useful tips <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8mkvgs?utm_source=share&utm_medium=web2x>`_
+* "Rust is a good choice!" `1 <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8s0kta?utm_source=share&utm_medium=web2x>`_ `2 <https://www.reddit.com/r/cpp/comments/9s34p9/c_experts_what_advice_would_you_give_to_a_new_c/e8nq1md?utm_source=share&utm_medium=web2x>`_ *(there's always one or two)*
 
 What are some things commonly taught in C++ that are really bad practice?
 -------------------------------------------------------------------------
 
 https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/
 
-* Using inheritance for code reuse. After a couple of years you have an unmaintainable spaghetti that goes 5 levels deep. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elka68o?utm_source=share&utm_medium=web2x>`_
-* Raw pointers/new/delete without RAII, improper use of raw (C) strings and arrays `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk6q6a?utm_source=share&utm_medium=web2x>`_
-* Trust the programmer. I trusted myself once, and it didn’t end well. Never again making that mistake. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk23m0?utm_source=share&utm_medium=web2x>`_
-* ``using namespace std;`` `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elkfyls?utm_source=share&utm_medium=web2x>`_
-* Abuse of ``protected``. Where author of base class assumes you will correctly fiddle with protected members. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk97j4?utm_source=share&utm_medium=web2x>`_
-* Single entry, single exit. `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/ells0vz?utm_source=share&utm_medium=web2x>`_
-* Throwing exceptions (!) `# <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk7qdu?utm_source=share&utm_medium=web2x>`_
+* `Using inheritance for code reuse. After a couple of years you have an unmaintainable spaghetti that goes 5 levels deep. <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elka68o?utm_source=share&utm_medium=web2x>`_
+* `Raw pointers/new/delete without RAII, improper use of raw (C) strings and arrays <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk6q6a?utm_source=share&utm_medium=web2x>`_
+* `Trust the programmer. I trusted myself once, and it didn’t end well. Never again making that mistake. <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk23m0?utm_source=share&utm_medium=web2x>`_
+* ```using namespace std;`` <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elkfyls?utm_source=share&utm_medium=web2x>`_
+* `Abuse of ``protected``. Where author of base class assumes you will correctly fiddle with protected members. <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk97j4?utm_source=share&utm_medium=web2x>`_
+* `Single entry, single exit. <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/ells0vz?utm_source=share&utm_medium=web2x>`_
+* `Throwing exceptions (!) <https://www.reddit.com/r/cpp/comments/bgdawr/what_are_some_things_commonly_taught_in_c_that/elk7qdu?utm_source=share&utm_medium=web2x>`_
 
-Same function parameters with different return type in C++17/C++20 (1/3)
-------------------------------------------------------------------------
+Same function parameters with different return type in C++17/C++20
+------------------------------------------------------------------
 
 https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
 
@@ -115,11 +132,6 @@ Before:
 
     foo<string>(1);
 
-Same function parameters with different return type in C++17/C++20 (2/3)
-------------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
-
 After:
 
 .. code:: c++
@@ -132,11 +144,6 @@ After:
     };
 
     template<class F> Auto(F) -> Auto<F>; // deduction guide
-
-Same function parameters with different return type in C++17/C++20 (3/3)
-------------------------------------------------------------------------
-
-https://www.reddit.com/r/cpp/comments/aoidsi/what_is_the_solution_for_same_function_parameters/
 
 After:
 
@@ -207,14 +214,8 @@ Is Microsoft/GSL still being maintained?
 Twitter: identifier case
 ------------------------
 
-.. image:: img/case1.png
+.. image:: /img/case1.png
 
-Twitter: identifier case
-------------------------
+.. image:: /img/case2.png
 
-.. image:: img/case2.png
-
-Twitter: identifier case
-------------------------
-
-.. image:: img/case3.png
+.. image:: /img/case3.png
