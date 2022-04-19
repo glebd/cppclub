@@ -1,4 +1,28 @@
-----
+---
+title:    Meeting 20 June 2019
+author:   Gleb Dolgich
+date:     2019-06-20
+tags:
+    - Trip report
+    - Reflection
+    - Containers
+    - C++14
+    - Project template
+    - HOF
+    - Björn Fahller
+    - Titus Winters
+    - function
+    - ODR
+    - Const correctness
+    - Catch
+    - Taskflow
+    - SFINAE
+    - Boost
+    - Best practices
+---
+
+Meeting 20 June 2019
+====================
 
 CPPP19 Trip Reports
 -------------------
@@ -8,7 +32,7 @@ https://deque.blog/2019/06/17/trip-report-on-cppp-19-the-first-edition-of-the-fi
 Hello World with reflection
 ---------------------------
 
-.. image:: img/hello-world-meta.png
+.. image:: /img/hello-world-meta.png
 
 Heterogeneous Lookup in Ordered Containers in C++14
 ---------------------------------------------------
@@ -144,10 +168,10 @@ https://lists.boost.org/Archives/boost//2019/06/246353.php
 Twitter
 -------
 
-.. image:: img/turner-hpp.png
+.. image:: /img/turner-hpp.png
 
 Quote
 -----
 
-.. image:: img/theory-practice.png
+.. image:: /img/theory-practice.png
 
