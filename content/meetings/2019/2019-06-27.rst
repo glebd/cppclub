@@ -26,10 +26,10 @@ Meeting 27 June 2019
 Concept-based interfaces, by Gianluca Delfino
 ---------------------------------------------
 
-`Article <https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/>`_ | `Code
-<https://github.com/gianlucadelfino/cppfiddler/blob/master/conceptsInterfaces/src/main.cpp>`_ | `Godbolt
-<https://godbolt.org/z/E8iHeS>`_ | `Reddit
-<https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/>`_
+* Article: https://www.cppfiddler.com/2019/06/09/concept-based-interfaces/
+* Code: https://github.com/gianlucadelfino/cppfiddler/blob/master/conceptsInterfaces/src/main.cpp
+* Godbolt: https://godbolt.org/z/E8iHeS
+* Reddit https://www.reddit.com/r/cpp/comments/c39asd/interfaces_with_c20_concepts/
 
 .. code:: c++
 
