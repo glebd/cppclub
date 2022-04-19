@@ -1,4 +1,23 @@
-----
+---
+title:    Meeting 8 August 2019
+author:   Gleb Dolgich
+date:     2019-08-08
+tags:
+    - WG21
+    - Contracts
+    - Nathan Myers
+    - VS2019
+    - Qt
+    - Dependency management
+    - Scott Meyers
+    - constexpr
+    - Build systems
+    - bake
+    - VR
+---
+
+Meeting 8 August 2019
+=====================
 
 What Happened to C++20 Contracts?
 ---------------------------------
@@ -8,9 +27,6 @@ Nathan Myers: https://www.reddit.com/r/cpp/comments/cmk7ek/what_happened_to_c20_
   This was the first time, in the (exactly) 30 years since ISO was first asked to form a Working Group to standardize C++, that the committee has removed from its Working Draft a major feature, for no expressible technical reason.
 
   Almost immediately after the feature was voted in, one party to the original agreement -- authors of the rejected 2012 design -- began to post a bewildering variety of proposals for radical changes to the design, promoting them by encouraging confusion about consequences of the agreed-upon design.
-
-What Happened to C++20 Contracts? (cont.)
------------------------------------------
 
   One of the proposals, not seen before the day it was presented, seemed to offer that simplicity, and the group seized upon it, voting for it by a margin of 3 to 1. It was opposed by four of the five participants of the original design group, because it was fatally flawed: in use, programmers would need to define preprocessor macros, and put calls to those in their code instead of the core-language syntax defined. It would breed "macro hell".
 
@@ -25,12 +41,12 @@ My word, what a thread.
 Bryce Lelbach on the C++ Committee
 ----------------------------------
 
-.. image:: img/lelbach-committee-slow-fast.png
+.. image:: /img/lelbach-committee-slow-fast.png
 
 Twitter: who does what in the C++ Committee
 -------------------------------------------
 
-.. image:: img/committee-who-does-what.png
+.. image:: /img/committee-who-does-what.png
 
 Improved Linker Fundamentals in Visual Studio 2019
 --------------------------------------------------
@@ -120,4 +136,4 @@ https://www.reddit.com/r/cpp/comments/cn657d/the_german_center_for_aerospace_dlr
 Bugs
 ----
 
-.. image:: img/grumpy-bugs.png
+.. image:: /img/grumpy-bugs.png
