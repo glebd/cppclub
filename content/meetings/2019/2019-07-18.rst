@@ -1,4 +1,26 @@
-----
+---
+title:    Meeting 18 July 2019
+author:   Gleb Dolgich
+date:     2019-07-18
+tags:
+    - WG21
+    - Bartek Filipek
+    - Books
+    - Clang
+    - MSBuild
+    - Documentation
+    - Herb Sutter
+    - Compiler Explorer
+    - Coroutines
+    - Error handling
+    - Strings
+    - Testing
+    - Doctest
+    - JetBrains
+---
+
+Meeting 18 July 2019
+====================
 
 Five Awesome C++ Papers for Cologne ISO Meeting
 -----------------------------------------------
@@ -93,4 +115,4 @@ https://blog.jetbrains.com/rscpp/better-ways-testing-with-doctest/
 Twitter
 -------
 
-.. image:: img/terminator-cpp.png
+.. image:: /img/terminator-cpp.png
