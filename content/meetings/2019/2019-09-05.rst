@@ -1,18 +1,39 @@
-----
+---
+title:    Meeting 5 September 2019
+author:   Gleb Dolgich
+date:     2019-09-05
+tags:
+    - WG21
+    - Mailing
+    - Epochs
+    - Vittorio Romeo
+    - CppCast
+    - Rust
+    - VCPkg
+    - {fmt}
+    - Boost
+    - Lambdas
+    - Webdev
+    - Drogon
+    - Peter Sommerlad
+---
+
+Meeting 5 September 2019
+========================
 
 Post-Cologne Mailing
-====================
+--------------------
 
 http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-08
 
-* `Reddit <https://www.reddit.com/r/cpp/comments/crg1dr/c_standards_committee_papers_201908_postcologne/>`_
+* Reddit: https://www.reddit.com/r/cpp/comments/crg1dr/c_standards_committee_papers_201908_postcologne/
 
 Arthur O'Dwyer https://quuxplusone.github.io/blog/2019/08/18/post-cologne-mailing/
 
-* `Reddit <https://www.reddit.com/r/cpp/comments/cs5qmf/the_postcologne_mailing_is_out/>`_
+* Reddit: https://www.reddit.com/r/cpp/comments/cs5qmf/the_postcologne_mailing_is_out/
 
 CppCast: C++ Epochs with Vittorio Romeo
-=======================================
+---------------------------------------
 
 https://cppcast.com/vittorio-romeo-epochs/
 
@@ -22,7 +43,7 @@ Article:
 https://vittorioromeo.info/index/blog/fixing_cpp_with_epochs.html
 
 Rust vs. C++
-============
+------------
 
 Reddit: `Is the C++ committee or any key influencers in the C++ community working on anything to
 tackle the advantages that Rust has over C++ (eg. Rust's borrow checking, compiler-checked
@@ -30,7 +51,7 @@ concurrency safety and cargo package management)
 <https://www.reddit.com/r/cpp/comments/crh7lh/is_the_c_committee_or_any_key_influencers_in_the/>`_
 
 Vcpkg: 2019.07 Update
-=====================
+---------------------
 
 https://devblogs.microsoft.com/cppblog/vcpkg-2019-07-update/
 
@@ -40,7 +61,7 @@ https://www.reddit.com/r/cpp/comments/cqta79/vcpkg_201907_update/
   really support the (very common) scenario well.
 
 {fmt} V6.0.0 released
-=====================
+---------------------
 
 https://github.com/fmtlib/fmt/releases/tag/6.0.0
 
@@ -51,18 +72,18 @@ Cpp.Chat: https://youtu.be/PIeLO-H9ZZE
 CppCast: https://cppcast.com/victor-zverovich/
 
 Boost 1.71 released
-===================
+-------------------
 
 https://www.boost.org/users/history/version_1_71_0.html
 
 * NEW: **Variant2**: A never-valueless, strong guarantee implementation of ``std::variant``, from
   Peter Dimov.
-* `Reddit <https://www.reddit.com/r/cpp/comments/csj2ql/boost_version_1710/>`_
+* Reddit https://www.reddit.com/r/cpp/comments/csj2ql/boost_version_1710/
 
 OSes built using C++
-====================
+--------------------
 
-`Reddit <https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/>`_
+Reddit: https://www.reddit.com/r/cpp/comments/cho1qb/are_there_any_oses_built_using_c/
 
 * `TempleOS <https://github.com/DivineSystems/DivineOS>`_
 * `Haiku <https://www.haiku-os.org/>`_
@@ -73,25 +94,25 @@ OSes built using C++
 * `SerenityOS <https://github.com/SerenityOS/serenity>`_
 
 Lambdas vs. Closures
-====================
+--------------------
 
 `Scott Meyers <http://scottmeyers.blogspot.com/2013/05/lambdas-vs-closures.html>`_
 
-* `Reddit <https://www.reddit.com/r/cpp/comments/cqo05i/lambdas_vs_closures_scott_meyers/>`_
+* Reddit: https://www.reddit.com/r/cpp/comments/cqo05i/lambdas_vs_closures_scott_meyers/
 
 Web Framework Benchmarks
-========================
+------------------------
 
 https://www.techempower.com/benchmarks/#section=test&runid=26a79c95-5eec-4572-8c94-dd710df659d7&hw=ph&test=update
 
-* `Reddit <https://www.reddit.com/r/cpp/comments/csa0sg/drogonc17_becomes_one_of_the_fastest_web/>`_
+* Reddit: https://www.reddit.com/r/cpp/comments/csa0sg/drogonc17_becomes_one_of_the_fastest_web/
 
 https://github.com/an-tao/drogon
 
 **Drogon**: A C++14/17 based HTTP web application framework running on Linux/macOS/Unix
 
-Introducing the Rule of DesDeMovA (1/4)
-=======================================
+Introducing the Rule of DesDeMovA
+---------------------------------
 
 Blog post by Peter Sommerlad
 
@@ -103,22 +124,15 @@ Rule of Zero:
 
     Code that you do not write cannot be wrong.
 
-Introducing the Rule of DesDeMovA (2/4)
-=======================================
+.. image:: /img/sommerlad-desdemova1.png
 
-.. image:: img/sommerlad-desdemova1.png
+.. image:: /img/sommerlad-desdemova2.png
 
-Introducing the Rule of DesDeMovA (3/4)
-=======================================
+.. image:: /img/sommerlad-desdemova3.png
 
-.. image:: img/sommerlad-desdemova2.png
-
-Introducing the Rule of DesDeMovA (3/4)
-=======================================
-
-.. image:: img/sommerlad-desdemova3.png
+(C++ developers are really bad at naming things.)
 
 Twitter: Neural Proposals
-=========================
+-------------------------
 
-.. image:: img/neural-proposals.png
+.. image:: /img/neural-proposals.png
