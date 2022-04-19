@@ -1,4 +1,30 @@
-----
+---
+title:    Meeting 11 July 2019
+author:   Gleb Dolgich
+date:     2019-07-11
+tags:
+    - Herb Sutter
+    - WG21
+    - Books
+    - Alex Stepanov
+    - Paul McJones
+    - Nicolai Josuttis
+    - C++17
+    - CLion
+    - Macros
+    - Courses
+    - Serenity OS
+    - Andreas Kling
+    - Clang
+    - Lifetime
+    - Cryptography
+    - Friends
+    - Anthony Williams
+    - Coding style
+---
+
+Meeting 11 July 2019
+====================
 
 Herb Sutter: Your “top five” ISO C++ feature proposals
 ------------------------------------------------------
@@ -83,7 +109,7 @@ Serenity OS Patterns: The Badge
 
 https://awesomekling.github.io/Serenity-C++-patterns-The-Badge/
 
-* `Reddit <https://www.reddit.com/r/cpp/comments/bzjbu1/serenity_c_patterns_the_badge/>`_
+* Reddit https://www.reddit.com/r/cpp/comments/bzjbu1/serenity_c_patterns_the_badge/
 * `SO: Granular friend <https://stackoverflow.com/questions/3217390/clean-c-granular-friend-equivalent-answer-attorney-client-idiom/3218920#3218920>`_
   - Live code: http://ideone.com/7n1Wwz
 * `Dr. Dobbs - Friendship and the Attorney-Client Idiom <http://www.drdobbs.com/friendship-and-the-attorney-client-idiom/184402053>`_
@@ -167,7 +193,7 @@ https://www.reddit.com/r/cpp/comments/c6ag3l/how_to_try_the_new_coroutines_ts/
 MSVC
 ~~~~
 
-.. code:: cmd
+.. code:: bat
 
   /await /std:c++latest
 
@@ -194,5 +220,5 @@ https://www.reddit.com/r/cpp/comments/c6rnel/discussion_member_variable_naming/
 Twitter
 -------
 
-.. image:: img/beethoven.png
+.. image:: /img/beethoven.png
 
