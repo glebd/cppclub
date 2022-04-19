@@ -1,4 +1,28 @@
-----
+---
+title:    Meeting 15 August 2019
+author:   Gleb Dolgich
+date:     2019-08-15
+tags:
+    - WG21
+    - Trip report
+    - Timur Doumler
+    - GCC
+    - Ben Deane
+    - VxWorks
+    - Clang
+    - Epochs
+    - Vittorio Romeo
+    - Arthur O'Dwyer
+    - VS2019
+    - Intel
+    - TBB
+    - Books
+    - Parallelism
+    - Sean Parent
+---
+
+Meeting 15 August 2019
+======================
 
 Cologne Trip Report
 -------------------
@@ -99,9 +123,9 @@ out_ptr
 Retro
 -----
 
-.. image:: img/unix-tape.png
+.. image:: /img/unix-tape.png
 
 JavaScript is weird
 -------------------
 
-.. image:: img/js-banana.png
+.. image:: /img/js-banana.png
