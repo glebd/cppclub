@@ -1,4 +1,33 @@
-----
+---
+title:    Meeting 13 June 2019
+author:   Gleb Dolgich
+date:     2019-06-13
+tags:
+    - Bjarne Stroustrup
+    - Pattern matching
+    - Michael Park
+    - Bloomberg
+    - Elliot Goodrich
+    - Modern C++
+    - Books
+    - Enums
+    - TMP
+    - Move semantics
+    - Sanitizers
+    - Valgrind
+    - Futures
+    - Retro
+    - Gamedev
+    - Shafik Yaghmour
+    - UB
+    - Intel
+    - TBB
+    - STL
+    - Parallelism
+---
+
+Meeting 13 June 2019
+====================
 
 P0976r0: Bjarne Stroustrup - The Evils of Paradigms
 ---------------------------------------------------
@@ -31,7 +60,7 @@ Modern C++ - authors and books
 
 https://www.reddit.com/r/cpp/comments/by60wx/modern_c_authors_and_books/
 
-.. image:: img/cpp-data-structures-book-2019.png
+.. image:: /img/cpp-data-structures-book-2019.png
 
 Enum template parameters
 ------------------------
@@ -81,9 +110,6 @@ Example:
       return std::move(t); // Prevents NRVO: returned expression must be a name
     }
 
-Understanding when not to **std::move** in C++ (cont.)
-------------------------------------------------------
-
 GCC 9:
 
 .. code:: bash
@@ -102,9 +128,6 @@ Example:
     T fn(T t) {
       return std::move(t); // Redundant: move used implicitly
     }
-
-Understanding when not to **std::move** in C++ (cont.)
-------------------------------------------------------
 
 When ``std::move`` makes sense:
 
@@ -164,7 +187,7 @@ Shafik Yaghmour:
         return static_cast<bool>(&main);
     }
 
-.. image:: img/rules-main.png
+.. image:: /img/rules-main.png
 
 Attempting to modify a const object is undefined behaviour
 ----------------------------------------------------------
