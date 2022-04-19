@@ -1,7 +1,25 @@
-----
+---
+title:    Meeting 24 October 2019
+author:   Gleb Dolgich
+date:     2019-10-24
+tags:
+    - WG21
+    - Executors
+    - Senders/Receivers
+    - Eric Niebler
+    - Arthur O'Dwyer
+    - MSVC
+    - Sanitizers
+    - Project layout
+    - Pitchfork
+    - STL
+---
+
+Meeting 24 October 2019
+=======================
 
 2019-10 Pre-Belfast Mailing
-===========================
+---------------------------
 
 `Mailing <http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019>`_
 
@@ -14,7 +32,7 @@ https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_avai
 * `Oh boy (Graphics) <https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_available/f3pts6p/>`_
 
 Eric Niebler on Executors
-=========================
+-------------------------
 
 `Corentin <https://twitter.com/Cor3ntin/status/1186040861626437632>`_: Executors are the least
 useful part of "A Unified Executors Proposal"
@@ -27,9 +45,6 @@ Much of traditional Rx assumes runtime polymorphism and garbage collection / ref
 obviously a poor fit for C++. The sender/receiver design skews toward static polymorphism w/Generic
 interfaces, and explicit memory mgmt.
 
-Eric Niebler on Executors (cont.)
-=================================
-
 The factoring of `submit` into `connect`/`start` gives more flexible ownership semantics, and aligns
 the design conceptually with coroutines, making coroutines an efficient way of expressing
 sender/receiver.
@@ -37,9 +52,6 @@ sender/receiver.
 Once you introduce concurrency with non-overlapping scopes, the lifetime of your async operation
 state no longer corresponds to a simple C++ scope. That's why explicit memory mgmt and ownership
 become issues where they wouldn't be otherwise.
-
-Eric Niebler on Executors (cont.)
-=================================
 
 One of coroutines great strengths is that they let us map async lifetime back to C++ scopes. Under
 the hood, the coroutine is carved up into callbacks, and the operation state (coroutine frame) is
@@ -49,9 +61,6 @@ Sender/receiver is a library reification of this separation. You might argue (an
 should just drop sender/receiver and use coroutines everywhere for everything "async". That's
 appealing, but goes too far. Coroutines, for all their value, come up short sometimes.
 
-Eric Niebler on Executors (cont.)
-=================================
-
 C++ has a long sad history of giving old things new names. Map and fold would have been better than
 transform and accumulate, and don't get me started on vector. Sender/receiver share some pedigree
 with Observable/Observer, but they really are different beasts ... by necessity.
@@ -60,20 +69,19 @@ The intended purpose of sender/receiver is to be a base lingua franca for all C+
 expect end-users to interface at much higher levels of abstraction in their own code.
 
 Coro Examples, by Arthur O'Dwyer
-================================
+--------------------------------
 
 https://quuxplusone.github.io/blog/2019/07/03/announcing-coro-examples/
 
 https://github.com/Quuxplusone/coro
 
 wg21.link cheatsheet
-====================
+--------------------
 
-.. image:: img/wg_link_cheatsheet.png
-   :width: 90%
+.. image:: /img/wg_link_cheatsheet.png
 
 Address Sanitizer in MSVC
-=========================
+-------------------------
 
 https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-windows-with-msvc/
 
@@ -82,7 +90,7 @@ https://www.reddit.com/r/cpp/comments/d6k7mt/address_sanitizer_is_coming_to_msvc
 https://www.reddit.com/r/cpp/comments/dm1emb/addresssanitizer_asan_for_windows_with_msvc/
 
 Are there any memory safety libraries for C++?
-==============================================
+----------------------------------------------
 
 https://www.reddit.com/r/cpp/comments/d0hguz/are_there_any_memory_safety_libraries_for_c/
 
@@ -98,13 +106,12 @@ https://github.com/ivmai/bdwgc
     https://www.hboehm.info/gc/
 
 MSVC versions are crazy
-=======================
+-----------------------
 
-.. image:: img/msvc-versions.png
-   :width: 80%
+.. image:: /img/msvc-versions.png
 
 Pitchfork
-=========
+---------
 
 A de-facto standard C++ project layout, by Colby Pike <vectorofbool@gmail.com>
 
@@ -115,14 +122,16 @@ A de-facto standard C++ project layout, by Colby Pike <vectorofbool@gmail.com>
 * `Bloomberg BDE physical code organization <https://github.com/bloomberg/bde/wiki/Physical-Code-Organization>`_
 
 Closing the gap: cross-language LTO between Rust and C/C++
-==========================================================
+----------------------------------------------------------
 
 http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html
 
-`Reddit <https://www.reddit.com/r/cpp/comments/d6emaw/closing_the_gap_crosslanguage_lto_between_rust/>`_ descended into an irrelevant but heated discussion on the term "C/C++".
+https://www.reddit.com/r/cpp/comments/d6emaw/closing_the_gap_crosslanguage_lto_between_rust/
+
+The Reddit thread descended into an irrelevant but heated discussion on the term "C/C++".
 
 What's the difference between “STL” and “C++ Standard Library”?
-===============================================================
+---------------------------------------------------------------
 
 https://stackoverflow.com/questions/5205491/whats-the-difference-between-stl-and-c-standard-library
 
@@ -131,7 +140,7 @@ https://www.reddit.com/r/cpp/comments/c90sxa/whats_the_difference_between_stl_an
     STL is a maintainer of MSVC's implementation of the C++ Standard Library.
 
 Quote
-=====
+-----
 
 Sturgeon's Law:
 
