@@ -1,9 +1,25 @@
-----
+---
+title:    Meeting 25 July 2019
+author:   Gleb Dolgich
+date:     2019-07-25
+tags:
+    - C++20
+    - WG21
+    - Trip report
+    - Formatting
+    - Contracts
+    - Error handling
+    - Microsoft
+    - Rust
+---
+
+Meeting 25 July 2019
+====================
 
 C++20 is feature-complete
 -------------------------
 
-.. image:: img/twitter-ewgchair-nooo.png
+.. image:: /img/twitter-ewgchair-nooo.png
 
 I wonder what was this tweet about.
 
@@ -35,8 +51,8 @@ Contracts while we wait
 * https://github.com/alexeiz/contract: header-only, C++11, BSL-1.0, uses Waf build system, supports GCC and Clang
 * https://github.com/FelixPetriconi/contract_light: C++11, BSL-1.0, uses CMake, GTest (included)
 * Boost.Contract (1.67+)
-  * `Docs <https://www.boost.org/doc/libs/1_67_0/libs/contract/doc/html/index.html>`_
-  * https://github.com/boostorg/contract
+    * `Docs <https://www.boost.org/doc/libs/1_67_0/libs/contract/doc/html/index.html>`_
+    * https://github.com/boostorg/contract
 
 Why **std::expected** is not in the standard yet?
 -------------------------------------------------
@@ -55,11 +71,11 @@ https://www.zdnet.com/article/microsoft-to-explore-using-rust/
 
 https://www.reddit.com/r/cpp/comments/cegbhj/microsoft_looking_into_rust_as_an_alternative_to_c/
 
-.. image:: img/wrong-language.png
+.. image:: /img/wrong-language.png
 
 Reddit
 ------
 
 Vittorio Romeo:
 
-.. image:: img/vittorio-laughs-in-constexpr.png
+.. image:: /img/vittorio-laughs-in-constexpr.png
