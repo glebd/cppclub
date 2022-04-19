@@ -1,20 +1,37 @@
-----
+---
+title:    C++ Club UK
+author:   Gleb Dolgich
+date:     2019-08-01
+tags:
+    - WG21
+    - Trip report
+    - Botond Ballo
+    - Guy Davidson
+    - Contracts
+    - C++20
+    - Herb Sutter
+    - Gamedev
+    - Bjarne Stroustrup
+    - Spaceship operator
+    - Comparison
+    - Rust
+---
 
 Trip Report: C++ Standards Meeting in Cologne, July 2019
 --------------------------------------------------------
 
 `Botond Ballo <Trip Report: C++ Standards Meeting in Cologne, July 2019>`_
 
-* `Reddit <https://www.reddit.com/r/cpp/comments/ci3oe6/trip_report_c_standards_meeting_in_cologne_july/>`_
+* Reddit https://www.reddit.com/r/cpp/comments/ci3oe6/trip_report_c_standards_meeting_in_cologne_july/
 * `CppCast <http://cppcast.com/2019/07/botond-ballo-tom-honermann/>`_
 
 Quote:
 
-  Contracts were pulled from C++20 because the consensus for their current design has disappeared[#]_
+  Contracts were pulled from C++20 because the consensus for their current design has disappeared [#]_
 
 `Guy Davidson <https://hatcat.com/?p=86>`_
 
-* `Reddit <https://www.reddit.com/r/cpp/comments/cjb8r2/the_german_tour_cologne_trip_report/>`_
+* Reddit https://www.reddit.com/r/cpp/comments/cjb8r2/the_german_tour_cologne_trip_report/
 
 Quote:
 
@@ -49,7 +66,7 @@ C++20 articles
 Game developer's C++ rant
 -------------------------
 
-.. image:: img/cpp-gamedev-rant.png
+.. image:: /img/cpp-gamedev-rant.png
 
 Meeting Bjarne Stroustrup this Monday, any questions you would like asked?
 --------------------------------------------------------------------------
@@ -73,11 +90,11 @@ https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust
 * Sanitizers https://github.com/google/sanitizers
 * Escher C++ Verifier http://www.eschertech.com/papers/ecvpp2016.pdf
 * Lifetime profile
-  * Paper https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Lifetime.pdf
-  * Clang implementation https://eurollvm2019.sched.com/event/MGhd/implementing-the-c-core-guidelines-lifetime-safety-profile-in-clang
-  * Lifetime Profile Update in Visual Studio 2019 Preview 2 https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/
+    * Paper https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Lifetime.pdf
+    * Clang implementation https://eurollvm2019.sched.com/event/MGhd/implementing-the-c-core-guidelines-lifetime-safety-profile-in-clang
+    * Lifetime Profile Update in Visual Studio 2019 Preview 2 https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/
 
 Quote
 -----
 
-.. image:: img/lamport-distributed-system-quote.png
+.. image:: /img/lamport-distributed-system-quote.png
