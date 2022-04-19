@@ -1,5 +1,5 @@
 ---
-title:    C++ Club UK
+title:    Meeting 1 August 2019
 author:   Gleb Dolgich
 date:     2019-08-01
 tags:
@@ -16,6 +16,9 @@ tags:
     - Comparison
     - Rust
 ---
+
+Meeting 1 August 2019
+=====================
 
 Trip Report: C++ Standards Meeting in Cologne, July 2019
 --------------------------------------------------------
