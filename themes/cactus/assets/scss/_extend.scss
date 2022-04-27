@@ -106,8 +106,8 @@ table {
   display: block;
 }
 th {
-  padding: 8px;
-  border-bottom: 1px dashed $color-border;
+  padding: 4px 8px;
+  border-bottom: 1px solid $color-border;
   color: $color-accent-2;
   font-weight: bold;
   font-size: $font-size - 1px;
