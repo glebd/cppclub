@@ -53,7 +53,7 @@ weight = 4
   showAllPostsArchive = false # default
 
   # Home page settings
-  description = "C++ Club is a semi-regular online meeting of C++ enthusiasts to discuss the latest news, events and anything else related to the C++ programming language. This is where I post meeting notes. **UNDER CONSTRUCTION • Bear with me while I transfer posts from the old website to the new one.**"
+  description = "C++ Club is a semi-regular online meeting of C++ enthusiasts to discuss the latest news, events and anything else related to the C++ programming language. This is where I post meeting notes."
   mainSection = "meetings" # your main section
   mainSectionTitle = "Meetings"
   showAllPostsOnHomePage = false # default
