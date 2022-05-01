@@ -1,0 +1,149 @@
+---
+title:    Meeting 24 January 2019
+author:   Gleb Dolgich
+date:     2019-01-24
+tags:
+  - CTAD
+  - Andrzej Krzemieński
+  - Arthur O'Dwyer
+  - Modern C++
+  - Aras Pranckevičius
+  - Gamedev
+  - Ben Deane
+  - Mathieu Ropert
+  - Sean Parent
+  - MSVC
+  - sol
+  - Lua
+  - JeanHeyd Meneide
+  - Task
+---
+
+Meeting 24 January 2019
+=======================
+
+Deducing your intentions
+------------------------
+
+`Deducing your intentions`_ by Andrzej Krzemieński
+
+    In this post we will briefly describe what class template argument deduction is, and why it works differently than what people often expect.
+
+* Class template argument deduction (CTAD) in C++17: P0091R2_
+
+.. code:: c++
+
+    auto q = std::make_optional(std::optional<int>{});
+    // q is optional<optional<int>>
+    std::optional q (std::optional<int>{});
+    // q is optional<int> !
+
+.. _`Deducing your intentions`: https://akrzemi1.wordpress.com/2018/12/09/deducing-your-intentions/
+.. _P0091R2: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html
+
+Contra CTAD
+-----------
+
+`Contra CTAD`_ by Arthur O'Dwyer
+
+    “I like features that work 100% of the time. I hate features that work 99% of the time. Working 99% of the time is much worse than working 50% of the time.” And CTAD is the poster child for a feature that works 99% of the time. That is, it works 100% of the time… until it doesn’t.
+
+.. _`Contra CTAD`: https://quuxplusone.github.io/blog/2018/12/09/wctad/
+
+Stop with the CTAD FUD!
+-----------------------
+
+`Stop with the CTAD FUD!`_
+
+.. code:: c++
+
+    std::optional maybe_string{"Hello!"s}; // optional<string>
+    std::optional other_thing{maybe_string}; // optional<string>
+
+    // Deduction guides:
+    // [1] Explicit
+    template <typename T> auto __deduce(T) -> optional<T>;
+    // [2] Implicit from std::optional copy ctor
+    template <typename T> auto __deduce(const optional<T>&) -> optional<T>;
+
+.. _`Stop with the CTAD FUD!`: https://vector-of-bool.github.io/2018/12/11/enough-ctad-fud.html
+
+"Modern" C++ Lamentations
+-------------------------
+
+`"Modern" C++ Lamentations`_ by Aras Pranckevičius (Unity)
+
+    C++ compilation times have been a source of pain in every non-trivial-size codebase I’ve worked on. <...> Yet it feels like the C++ community at large pretends that is not an issue, with each revision of the language putting even more stuff into header files, and even more stuff into templated code that has to live in header files.
+
+    Some of the “all feedback will be ignored unless it comes in form of a paper presented at a C++ committee meeting” replies that I’ve seen in the past few days sound to me like a not very productive approach.
+
+* Reddit: https://www.reddit.com/r/programming/comments/aac4hg/modern_c_lamentations/
+  * https://www.reddit.com/r/programming/comments/aac4hg/modern_c_lamentations/ecrwgep/
+
+.. _`"Modern" C++ Lamentations`: http://aras-p.info/blog/2018/12/28/Modern-C-Lamentations/
+
+Thoughts on Modern C++ and Game Dev
+-----------------------------------
+
+`Thoughts on Modern C++ and Game Dev`_ by Ben Deane
+
+    TL;DR: The C++ committee isn’t following some sort of agenda to ignore the needs of game programmers, and “modern” C++ isn’t going to become undebuggable.
+
+    I think it’s a shame that the STL is so strongly identified with its containers. They tend to be what gets taught first, so when we say “the STL” we often first think of ``std::vector`` when we should really be thinking of ``std::find_if``.
+
+* Reddit: https://www.reddit.com/r/cpp/comments/abnoke/thoughts_on_modern_c_and_game_dev/
+
+.. _`Thoughts on Modern C++ and Game Dev`: http://www.elbeno.com/blog/?p=1598
+
+Gamedev introduction to 'Modern' C++
+------------------------------------
+
+`Gamedev introduction to 'Modern' C++`_ by Mathieu Ropert
+
+* Reddit: https://www.reddit.com/r/cpp/comments/abvw6c/gamedev_introduction_to_modern_c/
+
+.. _`Gamedev introduction to 'Modern' C++`: https://mropert.github.io/2019/01/02/gamedev_intro_to_modern_cpp/
+
+"Modern" C++ Ruminations
+------------------------
+
+`"Modern" C++ Ruminations`_ by Sean Parent
+
+    Programming is a profession. It is an ethical obligation to work to improve our profession. The more senior and talented you are, the more you owe to the community. Giving back can take many forms; mentoring, lecturing, publishing, serving on committees and furthering open source projects. Part of that obligation is to continue to study, to read papers and work through books.
+
+* Reddit: https://www.reddit.com/r/cpp/comments/ac3ntu/modern_c_ruminations/
+
+.. _`"Modern" C++ Ruminations`: https://sean-parent.stlab.cc/2018/12/30/cpp-ruminations.html
+
+Another cool MSVC flag: /d1reportTime
+-------------------------------------
+
+* `Another cool MSVC flag: /d1reportTime`_ by Aras Pranckevičius
+
+  * Reddit: https://www.reddit.com/r/cpp/comments/aij9h4/another_cool_msvc_flag_d1reporttime/
+
+* `Complete list of MSVC flags`_
+
+.. _`Another cool MSVC flag: /d1reportTime`: http://aras-p.info/blog/2019/01/21/Another-cool-MSVC-flag-d1reportTime/
+.. _`Complete list of MSVC flags`: https://lectem.github.io/msvc/reverse-engineering/build/2019/01/21/MSVC-hidden-flags.html
+
+Compile Time, Binary Size Reductions and C++'s future for sol3
+--------------------------------------------------------------
+
+`Compile Time, Binary Size Reductions and C++'s future for sol3`_ by ThePhD
+
+.. _`Compile Time, Binary Size Reductions and C++'s future for sol3`: https://thephd.github.io/sol3-compile-times-binary-sizes
+
+Cpp-Taskflow
+------------
+
+* Code: https://github.com/cpp-taskflow/cpp-taskflow
+* Docs: https://cpp-taskflow.github.io/cpp-taskflow-documentation.github.io/
+* Reddit: https://www.reddit.com/r/cpp/comments/9b01ek/cpptaskflow_v20_a_new_taskbased_parallel/
+
+Quote
+-----
+
+Eagleson's Law:
+
+    Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.

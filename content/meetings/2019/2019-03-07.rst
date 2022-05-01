@@ -1,0 +1,86 @@
+---
+title:    Meeting 7 March 2019
+author:   Gleb Dolgich
+date:     2019-03-07
+tags:
+    - WG21
+    - Trip report
+    - Timur Doumler
+    - Corentin Jabot
+    - Colby Pike
+    - Modules
+    - GCC
+    - CMake
+    - {fmt}
+    - endl
+---
+
+Meeting 7 March 2019
+====================
+
+Kona Trip Reports
+-----------------
+
+* `CppCast: Kona Trip Report with Peter Bindels <http://cppcast.com/2019/02/peter-bindels/>`_
+* `Timur Doumler <http://timur.audio/trip-report-february-2019-iso-c-committee-meeting-kona-hawaii>`_
+* `Corentin Jabot <https://cor3ntin.github.io/posts/kona2019/>`_ (`Reddit <https://www.reddit.com/r/cpp/comments/aw3x67/kona_a_trip_report/>`_)
+    - 177 papers, of which 144 never seen before
+    - One contention point of the Coroutines TS is that it always heap-allocates the type-erased coroutine frame and relies on impressive optimization techniques to make these allocations disappear when the frame does not outlive the caller’s context. The Core Coroutine proposal offered deterministic stack allocations of coroutines frames. The issue with having the coroutine frame allocated on the stack is that it can not be optimized away without black magic. That black magic now has a name: Deferred layout. (Deemed very complex to implement by compiler vendors.)
+    - https://github.com/lewissbaker/cppcoro
+    - https://github.com/luncliff/coroutine
+    - There will be a paper in the post-mailling which offer a great way to use ``await`` and ``yield`` as keyword without breaking any existing code.
+    - Voted against Modules.
+
+Are C++ Modules Dead-on-Arrival?
+--------------------------------
+
+Colby Pike:
+
+* https://vector-of-bool.github.io/2019/03/04/modules-doa-2.html
+* https://www.reddit.com/r/cpp/comments/ax81zs/are_modules_doa_a_followup/
+
+This is a follow-up to `C++ Modules might be Dead-on-Arrival <https://vector-of-bool.github.io/2019/01/27/modules-doa.html>`_.
+
+    We can deduce the answer from Betteridge’s law of headlines: No.
+
+    First and foremost, let me get this out of the way: I do not want C++ modules to fail. I do not know of anyone who wishes for them to crash and burn. I do know people with serious concerns about modules. The purpose of these posts is not to shoot down the modules work, but to make our skeptical voices heard.
+
+Gabriel Dos Reis:
+
+    A lot of harm has been done with incomplete understandings or misunderstandings presented as flaws in the modules design.
+
+CMake + GCC module proof-of-concept
+-----------------------------------
+
+https://www.reddit.com/r/cpp/comments/axnwiz/cmake_gcc_module_proofofconcept/
+
+    Hi all, CMake developer here. There's been a lot of noise and discussion of modules recently, particularly with respect to how build systems will deal with it. There has been **build2** for quite a while, but it was also designed with modules in mind.
+
+    At Kona last week, I worked with Nathan Sidwell who is working on GCC's module support to get a minimally viable proof-of-concept for CMake building modules.
+
+Twitter bot that posts updates when compilers add support for new features
+--------------------------------------------------------------------------
+
+* https://twitter.com/CompilerCpp/status/1102565726970363904
+* Programmed in Go
+* https://github.com/therocode/CppCompilerCompliance
+
+Formatting user-defined types with {fmt} library
+------------------------------------------------
+
+https://wgml.pl/blog/formatting-user-defined-types-fmt.html
+
+Don’t Use ``std::endl``
+-----------------------
+
+https://accu.org/index.php/journals/2619
+
+Eventual consistency
+--------------------
+
+.. image:: /img/eventual-consistency.png
+
+Twitter
+-------
+
+.. image:: /img/cpp-grey-hair.png

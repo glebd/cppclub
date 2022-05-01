@@ -1,0 +1,140 @@
+---
+title:    Meeting 7 February 2019
+author:   Gleb Dolgich
+date:     2019-02-07
+tags:
+   - Bjarne Stroustrup
+   - RVO
+   - Arthur O'Dwyer
+   - Jason Turner
+   - Lifetime
+   - auto
+   - Move semantics
+---
+
+Meeting 7 February 2019
+=======================
+
+Bjarne Stroustrup at UC3M
+-------------------------
+
+Celebrating Honoris Causa Doctorate at UC3M by Bjarne Stroustrup
+
+`The continuing evolution of C++`_
+
+.. _`The continuing evolution of C++`: https://youtu.be/ooehrkYkGdA
+
+CppCon 2018: Arthur O'Dwyer "RVO: Harder Than It Looks"
+-------------------------------------------------------
+
+* `CppCon 2018 - Arthur O'Dwyer - RVO: Harder Than It Looks`_
+* `Trivially Relocatable FAQ`_
+
+.. _`CppCon 2018 - Arthur O'Dwyer - RVO: Harder Than It Looks`: https://youtu.be/hA1WNtNyNbo
+.. _`Trivially Relocatable FAQ`: https://quuxplusone.github.io/blog/2018/10/04/trivially-relocatable-faq/
+
+.. image:: /img/odwyer-rvo-1.png
+
+.. image:: /img/odwyer-rvo-2.png
+
+.. image:: /img/odwyer-rvo-3.png
+
+.. image:: /img/odwyer-rvo-4.png
+
+.. image:: /img/odwyer-rvo-5.png
+
+.. image:: /img/odwyer-rvo-6.png
+
+.. image:: /img/odwyer-rvo-7.png
+
+.. image:: /img/odwyer-rvo-8.png
+
+.. image:: /img/odwyer-rvo-9.png
+
+.. image:: /img/odwyer-rvo-10.png
+
+.. image:: /img/odwyer-rvo-11.png
+
+.. image:: /img/odwyer-rvo-12.png
+
+.. image:: /img/odwyer-rvo-13.png
+
+.. image:: /img/odwyer-rvo-14.png
+
+.. image:: /img/odwyer-rvo-15.png
+
+.. image:: /img/odwyer-rvo-16.png
+
+.. image:: /img/odwyer-rvo-17.png
+
+CppCon 2018: Jason Turner "Surprises in Object Lifetime"
+--------------------------------------------------------
+
+`CppCon 2018 - Jason Turner - Surprises in Object Lifetime`_
+
+.. _`CppCon 2018 - Jason Turner - Surprises in Object Lifetime`: https://youtu.be/uQyT-5iWUow
+
+.. image:: /img/turner-surprises-lifetime-0.png
+
+.. image:: /img/turner-surprises-lifetime-1.png
+
+.. image:: /img/turner-surprises-lifetime-2.png
+
+.. image:: /img/turner-surprises-lifetime-3.png
+
+.. image:: /img/turner-surprises-lifetime-4.png
+
+.. image:: /img/turner-surprises-lifetime-5.png
+
+.. image:: /img/turner-surprises-lifetime-6.png
+
+.. image:: /img/turner-surprises-lifetime-7.png
+
+.. image:: /img/turner-surprises-lifetime-8.png
+
+.. image:: /img/turner-surprises-lifetime-9.png
+
+.. image:: /img/turner-surprises-lifetime-10.png
+
+.. image:: /img/turner-surprises-lifetime-11.png
+
+.. image:: /img/turner-surprises-lifetime-12.png
+
+.. image:: /img/turner-surprises-lifetime-13.png
+
+.. image:: /img/turner-surprises-lifetime-14.png
+
+.. image:: /img/turner-surprises-lifetime-15.png
+
+.. image:: /img/turner-surprises-lifetime-16.png
+
+.. image:: /img/turner-surprises-lifetime-17.png
+
+.. image:: /img/turner-surprises-lifetime-18.png
+
+.. image:: /img/turner-surprises-lifetime-19.png
+
+Arthur O'Dwyer: Feature that Always Works
+-----------------------------------------
+
+* `for (auto&& elt : range) Always Works`_
+* `for (auto&& elt : range) Still Always Works`_
+
+.. code:: c++
+
+    for (auto&& elt : range) {
+        do_something_with(elt);
+    }
+
+.. _`for (auto&& elt : range) Always Works`: https://quuxplusone.github.io/blog/2018/12/15/autorefref-always-works/
+.. _`for (auto&& elt : range) Still Always Works`: https://quuxplusone.github.io/blog/2018/12/27/autorefref-still-always-works/
+
+Twitter
+-------
+
+.. image:: /img/hanselman-whydontyoujust.png
+
+Twitter
+-------
+
+.. image:: /img/whynotjust.png

@@ -1,0 +1,103 @@
+---
+title:    Meeting 1 August 2019
+author:   Gleb Dolgich
+date:     2019-08-01
+tags:
+    - WG21
+    - Trip report
+    - Botond Ballo
+    - Guy Davidson
+    - Contracts
+    - C++20
+    - Herb Sutter
+    - Gamedev
+    - Bjarne Stroustrup
+    - Spaceship operator
+    - Comparison
+    - Rust
+---
+
+Meeting 1 August 2019
+=====================
+
+Trip Report: C++ Standards Meeting in Cologne, July 2019
+--------------------------------------------------------
+
+`Botond Ballo <Trip Report: C++ Standards Meeting in Cologne, July 2019>`_
+
+* Reddit https://www.reddit.com/r/cpp/comments/ci3oe6/trip_report_c_standards_meeting_in_cologne_july/
+* `CppCast <http://cppcast.com/2019/07/botond-ballo-tom-honermann/>`_
+
+Quote:
+
+  Contracts were pulled from C++20 because the consensus for their current design has disappeared [#]_
+
+`Guy Davidson <https://hatcat.com/?p=86>`_
+
+* Reddit https://www.reddit.com/r/cpp/comments/cjb8r2/the_german_tour_cologne_trip_report/
+
+Quote:
+
+  The big news though was the withdrawal of Contracts from the working draft. The consensus is that
+  it simply isn’t ready yet <...>
+
+.. [#] https://botondballo.wordpress.com/2019/07/26/trip-report-c-standards-meeting-in-cologne-july-2019/#contracts
+
+Survey results: Your “top five” ISO C++ feature proposals
+---------------------------------------------------------
+
+https://herbsutter.com/2019/07/25/survey-results-your-top-five-iso-c-feature-proposals/
+
+Comment:
+
+  Indeed, the results are incredibly biased, in favor of:
+
+  * Your own proposals.
+  * Your own interests.
+  * Proposals made recently or which have gone through part of the adoption pipeline.
+
+https://www.reddit.com/r/cpp/comments/ci0uz6/survey_results_your_top_five_iso_c_feature/
+
+* `ELI5 <https://www.reddit.com/r/cpp/comments/ci0uz6/survey_results_your_top_five_iso_c_feature/ev0kk52?utm_source=share&utm_medium=web2x>`_
+
+C++20 articles
+-------------------------
+
+* https://iscinumpy.gitlab.io/post/cpp-20/
+* https://hackaday.com/2019/07/30/c20-is-feature-complete-heres-what-changes-are-coming/
+
+Game developer's C++ rant
+-------------------------
+
+.. image:: /img/cpp-gamedev-rant.png
+
+Meeting Bjarne Stroustrup this Monday, any questions you would like asked?
+--------------------------------------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/chwncp/meeting_bjarne_stroustrup_creator_of_c_this/
+
+Simplify Your Code With Rocket Science: C++20’s Spaceship Operator
+------------------------------------------------------------------
+
+https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/
+
+https://www.reddit.com/r/cpp/comments/c68457/simplify_your_code_with_rocket_science_c20s/
+
+How do you get the benefits of Rust in C++?
+-------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/c6gtd4/how_do_you_get_the_benefits_of_rust_in_c/
+
+* SaferCPlusPlus https://github.com/duneroadrunner/SaferCPlusPlus/blob/master/README.md
+* Clang 10 thread safety analysis https://clang.llvm.org/docs/ThreadSafetyAnalysis.html
+* Sanitizers https://github.com/google/sanitizers
+* Escher C++ Verifier http://www.eschertech.com/papers/ecvpp2016.pdf
+* Lifetime profile
+    * Paper https://github.com/isocpp/CppCoreGuidelines/blob/master/docs/Lifetime.pdf
+    * Clang implementation https://eurollvm2019.sched.com/event/MGhd/implementing-the-c-core-guidelines-lifetime-safety-profile-in-clang
+    * Lifetime Profile Update in Visual Studio 2019 Preview 2 https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/
+
+Quote
+-----
+
+.. image:: /img/lamport-distributed-system-quote.png

@@ -1,0 +1,115 @@
+---
+title:    Meeting 16 May 2019
+author:   Gleb Dolgich
+date:     2019-05-16
+tags:
+    - ACCU
+    - Trip report
+    - Kate Gregory
+    - Sanitizers
+    - VS2019
+    - GCC
+    - Data structures
+    - Licensing
+    - Survey
+    - Parsing
+    - FSM
+    - Regular expressions
+    - Parallelism
+    - Outcome
+    - Boost
+---
+
+Meeting 16 May 2019
+===================
+
+ACCU 2019 Trip Reports
+----------------------
+
+* `Kate Gregory <http://www.gregcons.com/KateBlog/ACCUTripReport.aspx>`_
+
+AddressSanitizer (ASan) for the Linux Workload in Visual Studio 2019
+--------------------------------------------------------------------
+
+* https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-the-linux-workload-in-visual-studio-2019/
+* https://www.reddit.com/r/cpp/comments/bme3rg/addresssanitizer_asan_for_the_linux_workload_in/
+
+GCC 9.1 Released
+----------------
+
+* Announcement https://lwn.net/Articles/787385/
+    * C++17 fully implemented
+    * OpenMP 5.0 partially supported
+* Reddit https://www.reddit.com/r/cpp/comments/bk7uha/gcc_91_released/
+* GCC 9: Link-time and inter-procedural optimization improvements
+  http://hubicka.blogspot.com/2019/05/gcc-9-link-time-and-inter-procedural.html
+* Usability improvements in GCC 9
+  https://developers.redhat.com/blog/2019/03/08/usability-improvements-in-gcc-9/
+
+flat.hpp
+--------
+
+A library of flat vector-like based associative containers.
+
+* https://blackmatov.github.io/flat.hpp/
+* https://github.com/BlackMATov/flat.hpp C++14, MIT
+* https://www.reddit.com/r/cpp/comments/bkq9qn/new_c_minilibrary_library_of_flat_vectorlike/
+
+Blue Oak License
+----------------
+
+https://blueoakcouncil.org/license/1.0.0
+
+    Blue Oak Council’s model license demonstrates all the techniques that licenses can use to make software free and
+    simple for everyone to use and build on, in everyday language that everyone can understand.
+
+https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html
+
+    MIT and BSD open source licenses are well known, popular, and legally deprecated. They served long and well, but
+    they’re older than many open source software developers, and haven’t been maintained.
+
+2019 Annual C++ Developer Survey Results
+----------------------------------------
+
+https://isocpp.org/files/papers/CppDevSurvey-2019-04-summary.pdf
+
+C++17 parser-combinator library, CppCmb
+---------------------------------------
+
+Cpp>>=Cmb
+
+* https://github.com/LPeter1997/CppCmb
+* https://www.reddit.com/r/cpp/comments/bemqaq/my_c17_parsercombinator_library_cppcmb_got_a_huge/
+
+On resolving the type vs member conflict in C++: The Color Color problem
+------------------------------------------------------------------------
+
+    In C++, there are ambiguities when a member function has the same name as a type.
+
+* https://devblogs.microsoft.com/oldnewthing/20190419-00/?p=102431
+* https://www.reddit.com/r/cpp/comments/bfb1z4/on_resolving_the_type_vs_member_conflict_in_c_the/
+* https://en.cppreference.com/w/cpp/language/unqualified_lookup#Member_function_definition
+
+Microsoft BlingFire - A lightning fast Finite State machine and Regular expression manipulation library
+-------------------------------------------------------------------------------------------------------
+
+* https://github.com/Microsoft/BlingFire (MIT)
+* https://www.reddit.com/r/programming/comments/bf6ks4/microsoft_bing_fire_tokenizer_10x_faster_than_nltk/
+* https://news.ycombinator.com/item?id=19687549
+
+Awesome Parallel Computing Resources
+------------------------------------
+
+https://github.com/cpp-taskflow/cpp-taskflow/blob/master/awesome-parallel-computing.md
+
+Boost.Outcome ready for Boost 1.70 release
+------------------------------------------
+
+https://www.reddit.com/r/cpp/comments/aqidl6/boostoutcome_ready_for_boost_170_release/
+
+Quote
+-----
+
+Nicoll Hunt:
+
+    The first step of any project is to grossly underestimate its complexity and difficulty.

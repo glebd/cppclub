@@ -1,0 +1,90 @@
+baseURL = 'https://cppclub.uk/'
+languageCode = 'en-us'
+title = 'C++ Club'
+theme = "cactus"
+copyright = "Gleb Dolgich"
+
+# summaryLength = 2
+
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Meetings"
+url = "/meetings"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "manni"
+    tabWidth = 4
+
+[params]
+
+  logo = "/cppclub_logo_2022.png"
+
+  colortheme = "white" # dark, light, white, or classic
+  rss = true # generate rss feed. default value is false
+  googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+  showAllPostsArchive = false # default
+
+  # Home page settings
+  description = "C++ Club is a semi-regular online meeting of C++ enthusiasts to discuss the latest news, events and anything else related to the C++ programming language. This is where I post meeting notes."
+  mainSection = "meetings" # your main section
+  mainSectionTitle = "Meetings"
+  showAllPostsOnHomePage = false # default
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+  tagsOverview = true # show tags overview by default.
+  showProjectsList = false # show projects list by default (if projects data file exists).
+  projectsUrl = "https://github.com/glebd" # title link for projects list
+
+  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+  dateFormat = "2006-01-02" # default
+
+  # Post page settings
+  show_updated = true # default
+  showReadTime = true # default
+
+  [params.comments]
+    enabled = false
+    engine = "disqus" # only disqus, utterances, and cactus_comments is supported
+    disqusShortname = "cppclub"
+
+  # the value of name should be an valid font awesome icon name (brands type)
+  # https://fontawesome.com/icons?d=gallery&s=brands
+  [[params.social]]
+    name = "github"
+    link = "https://github.com/glebd"
+  [[params.social]]
+    name = "twitter"
+    link = "https://www.twitter.com/glebd"
+  [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/glebd"
+  [[params.social]]
+    name = "email"
+    link = "glebd70@gmail.com"  # no need for "mailto:" in the head
