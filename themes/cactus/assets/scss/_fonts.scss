@@ -4,6 +4,9 @@
   font-display: swap;
   src: local("JetBrains Mono"), local("JetBrains-Mono"), url("../lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format("woff2"), url("../lib/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff"), url("../lib/JetBrainsMono/web/eot/JetBrainsMono-Regular.eot") format("embedded-opentype"), url("../lib/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
 };
+
+// Inter
+
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -155,4 +158,78 @@
   font-display: swap;
   src: url("../lib/Inter/Inter-BlackItalic.woff2?v=3.19") format("woff2"),
        url("../lib/Inter/Inter-BlackItalic.woff?v=3.19") format("woff");
+}
+
+// Uncut Sans
+
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../lib/UncutSans/Uncut-Sans-Regular.woff2?v=1.111") format("woff2"),
+       url("../lib/UncutSans/Uncut-Sans-Regular.woff?v=1.111") format("woff");
+}
+
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style:  oblique;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../lib/UncutSans/Uncut-Sans-RegularOblique.woff2?v=1.111") format("woff2"),
+       url("../lib/UncutSans/Uncut-Sans-RegularOblique.woff?v=1.111") format("woff");
+}
+
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../lib/UncutSans/Uncut-Sans-Medium.woff2?v=1.111") format("woff2"),
+       url("../lib/UncutSans/Uncut-Sans-Medium.woff?v=1.111") format("woff");
+}
+
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style:  oblique;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../lib/UncutSans/Uncut-Sans-MediumOblique.woff2?v=1.111") format("woff2"),
+       url("../lib/UncutSans/Uncut-Sans-MediumOblique.woff?v=1.111") format("woff");
+}
+
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../lib/UncutSans/Uncut-Sans-Semibold.woff2?v=1.111") format("woff2"),
+       url("../lib/UncutSans/Uncut-Sans-Semibold.woff?v=1.111") format("woff");
+}
+
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style:  oblique;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../lib/UncutSans/Uncut-Sans-SemiboldOblique.woff2?v=1.111") format("woff2"),
+       url("../lib/UncutSans/Uncut-Sans-SemiboldOblique.woff?v=1.111") format("woff");
+}
+
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../lib/UncutSans/Uncut-Sans-Bold.woff2?v=1.111") format("woff2"),
+       url("../lib/UncutSans/Uncut-Sans-Bold.woff?v=1.111") format("woff");
+}
+
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style:  oblique;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../lib/UncutSans/Uncut-Sans-BoldOblique.woff2?v=1.111") format("woff2"),
+       url("../lib/UncutSans/Uncut-Sans-BoldOblique.woff?v=1.111") format("woff");
 }
