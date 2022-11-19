@@ -83,6 +83,9 @@ weight = 4
     name = "twitter"
     link = "https://www.twitter.com/glebd"
   [[params.social]]
+    name = "mastodon"
+    link = "https://mastodon.social/@glebd"
+  [[params.social]]
     name = "linkedin"
     link = "https://www.linkedin.com/glebd"
   [[params.social]]
