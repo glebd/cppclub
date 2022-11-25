@@ -62,6 +62,7 @@ body {
   }
   a.icon {
     background: none;
+    text-decoration: none;
 
     &:hover {
       color: $color-link;
