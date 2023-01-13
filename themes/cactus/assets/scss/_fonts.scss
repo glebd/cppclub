@@ -434,3 +434,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Clear Sans
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style:  normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../lib/clear-sans/webfonts/clearsans_thin/ClearSans-Thin-webfont.woff?v=1.00") format("woff");
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../lib/clear-sans/webfonts/clearsans_light/ClearSans-Light-webfont.woff?v=1.00") format("woff");
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../lib/clear-sans/webfonts/clearsans_regular/ClearSans-Regular-webfont.woff?v=1.00") format("woff");
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../lib/clear-sans/webfonts/clearsans_italic/ClearSans-Italic-webfont.woff?v=1.00") format("woff");
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../lib/clear-sans/webfonts/clearsans_medium/ClearSans-Medium-webfont.woff?v=1.00") format("woff");
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../lib/clear-sans/webfonts/clearsans_mediumitalic/ClearSans-MediumItalic-webfont.woff?v=1.00") format("woff");
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../lib/clear-sans/webfonts/clearsans_bold/ClearSans-Bold-webfont.woff?v=1.00") format("woff");
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style:  italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../lib/clear-sans/webfonts/clearsans_bolditalic/ClearSans-BoldItalic-webfont.woff?v=1.00") format("woff");
+}
