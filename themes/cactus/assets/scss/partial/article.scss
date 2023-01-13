@@ -28,12 +28,11 @@ article {
     h2 {
       &:before {
         position: absolute;
-        top: -4px;
+        top: 3px;
         left: -1rem;
         color: $color-accent-1;
-        content: "#";
-        font-weight: bold;
-        font-size: 1.2rem;
+        content: "⌘";
+        font-size: 0.8rem;
       }
     }
   }
