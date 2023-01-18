@@ -12,7 +12,6 @@ tags:
     - Clang
     - Epochs
     - Vittorio Romeo
-    - Arthur O'Dwyer
     - VS2019
     - Intel
     - TBB
@@ -78,11 +77,7 @@ https://www.reddit.com/r/cpp/comments/cliw5j/should_not_exceptions_be_finally_de
 A C++ acronym glossary
 ----------------------
 
-`Arthur O'Dwyer <https://quuxplusone.github.io/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/>`_
-
-https://www.reddit.com/r/cpp/comments/cl7arc/a_c_acronym_glossary/
-
-See also: https://en.cppreference.com/w/cpp/language/acronyms
+https://en.cppreference.com/w/cpp/language/acronyms
 
 SCARY
   Seemingly erroneous (appearing Constrained by conflicting generic parameters), but Actually works with the Right

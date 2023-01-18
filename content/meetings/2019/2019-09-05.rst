@@ -28,10 +28,6 @@ http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/#mailing2019-08
 
 * Reddit: https://www.reddit.com/r/cpp/comments/crg1dr/c_standards_committee_papers_201908_postcologne/
 
-Arthur O'Dwyer https://quuxplusone.github.io/blog/2019/08/18/post-cologne-mailing/
-
-* Reddit: https://www.reddit.com/r/cpp/comments/cs5qmf/the_postcologne_mailing_is_out/
-
 CppCast: C++ Epochs with Vittorio Romeo
 ---------------------------------------
 

@@ -7,7 +7,6 @@ tags:
     - Executors
     - Senders/Receivers
     - Eric Niebler
-    - Arthur O'Dwyer
     - MSVC
     - Sanitizers
     - Project layout
@@ -67,13 +66,6 @@ with Observable/Observer, but they really are different beasts ... by necessity.
 
 The intended purpose of sender/receiver is to be a base lingua franca for all C++ async libraries. I
 expect end-users to interface at much higher levels of abstraction in their own code.
-
-Coro Examples, by Arthur O'Dwyer
---------------------------------
-
-https://quuxplusone.github.io/blog/2019/07/03/announcing-coro-examples/
-
-https://github.com/Quuxplusone/coro
 
 wg21.link cheatsheet
 --------------------

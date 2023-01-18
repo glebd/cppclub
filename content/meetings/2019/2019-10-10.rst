@@ -9,7 +9,6 @@ tags:
     - Herb Sutter
     - Exceptions
     - Herbceptions
-    - Arthur O'Dwyer
 ---
 
 Meeting 10 October 2019
@@ -53,13 +52,6 @@ CppCon 2019: Herb Sutter “De-fragmenting C++: Making Exceptions and RTTI More 
 .. image:: /img/sutter-defrag-cpp19-13.png
 
 .. image:: /img/sutter-defrag-cpp19-14.png
-
-Arthur O'Dwyer "Thoughts on Herb Sutter’s CppCon keynote"
----------------------------------------------------------
-
-https://quuxplusone.github.io/blog/2019/09/24/thoughts-on-eh/
-
-Reddit: https://www.reddit.com/r/cpp/comments/d8p08f/thoughts_on_herb_sutters_cppcon_keynote/
 
 Twitter
 -------

@@ -5,7 +5,6 @@ date:     2019-01-24
 tags:
   - CTAD
   - Andrzej Krzemieński
-  - Arthur O'Dwyer
   - Modern C++
   - Aras Pranckevičius
   - Gamedev
@@ -40,15 +39,6 @@ Deducing your intentions
 
 .. _`Deducing your intentions`: https://akrzemi1.wordpress.com/2018/12/09/deducing-your-intentions/
 .. _P0091R2: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r2.html
-
-Contra CTAD
------------
-
-`Contra CTAD`_ by Arthur O'Dwyer
-
-    “I like features that work 100% of the time. I hate features that work 99% of the time. Working 99% of the time is much worse than working 50% of the time.” And CTAD is the poster child for a feature that works 99% of the time. That is, it works 100% of the time… until it doesn’t.
-
-.. _`Contra CTAD`: https://quuxplusone.github.io/blog/2018/12/09/wctad/
 
 Stop with the CTAD FUD!
 -----------------------
