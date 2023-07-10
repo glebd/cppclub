@@ -1,0 +1,196 @@
+---
+title: 164. ADSP, C++ and beyond, GCC, Boost.Async, callables, ranges
+author: Gleb Dolgich
+date: 2023-08-10
+tags:
+    - ACCU
+    - Video
+    - Clang
+    - GCC
+    - UML
+    - C++23
+    - ADSP
+    - Conor Hoekstra
+    - Bryce Lelbach
+    - Victor Ciura
+    - Sandor Dargo
+    - Optimization
+    - Interview
+    - Boost.Async
+    - Niall Douglas
+    - Senders/receivers
+    - ASIO
+    - Ranges
+---
+
+:showtitle:
+:toc:
+
+= 164. ADSP, C++ and beyond, GCC, Boost.Async, callables and ranges
+
+With Gianluca Delfino, Vladimír Arnošt, Andrew Fodiman, Dmitry Kuzminov, Mikhail Zborovski, Sergey Ishin et al.
+
+== Media
+
+=== Video
+
+https://youtu.be/mpoqVodkNB0
+
+{{<youtube mpoqVodkNB0>}}
+
+=== Podcast
+
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/ep/89713bd1-3ea8-4554-910e-d8744fb361bc
+
+{{<redcircle 89713bd1-3ea8-4554-910e-d8744fb361bc>}}
+
+== ADSP Episode 136
+
+https://adspthepodcast.com/2023/06/30/Episode-136.html[ADSP 136]
+
+____
+Is CppClub a real thing?
+
+The least subscribed to C++ podcast.
+
+Go subscribe to whatever this is!
+____
+
+Thanks, Conor and Bryce, for mentioning us!
+
+== Clang-UML
+
+* https://github.com/bkryza/clang-uml[GitHub]
+** https://news.ycombinator.com/item?id=36480779[HackerNews]
+
+____
+Remember the days people thought they could build everything in UML diagrams, and have the code essentially be generated or trivially written from there?
+Fast-forward to 2023, and we're generating UML diagrams from C++ code because it's easier.
+____
+
+== C++ And Beyond: Discussion
+
+WARNING: TRIGGER WARNING: Extreme C++ negativity.
+
+https://www.youtube.com/watch?v=_AmjHjYUx6c[YouTube: C++ And Beyond: Discussion - Vittorio Romeo, Kevlin Henney, Nico Josuttis & Kate Gregory - ACCU 2023]
+
+{{<youtube _AmjHjYUx6c>}}
+
+Introductions:
+
+* KG: "I'm part of the Carbon project"
+* NJ: "I used to love C++, now I hate it. I proposed this panel because I like to complain."
+* VR: "I'm the young person of the panel."
+
+Discussion:
+
+* VR: Epochs + Modules = C++ evolution
+* KH: "We are accumulating crap and adding more crap, and the committee members don't realise that because they are solving pet projects and saying no to other things." Says we need another programming language.
+* NJ: "C\++ is fundamentally broken. I don't think we can solve that. I think the Committee is not willing to solve that, and the reason is we have no common sense or common direction." There is no language that can replace C++, so "this is a dead language for the next 20 years".
+* KG: "There are some toxic pockets in our community that are celebrated." _Hear hear!_
+* NJ: "I sell a hell of a lot of books describing the nonsense and bullshit we standardised."
+* VR: "I like Rust. I'm sorry if someone feels offended by this statement." Doesn't see Carbon or Cpp2 as viable paths forward for C++.
+* NJ: "C++ will be in top 5 in 10 years, because there is no replacement."
+* KH: "C++ has got the wrong mechanism for its future evolution" (meaning the ISO process).
+* VR: "Some people in the committee, including Bjarne, are against dialects. How can you convince them that we need dialects?" It's Epochs again. Also mentions Circle. Changing code meaning per module.
+* BAL: There is no sense of common ownership in the committee. People are pushing their own papers. We need people to review and discuss other peoples' papers.
+* NJ: "Usually when we vote on something in the Standard, 90% of the people voting have no clue what they are voting on."
+* VR: Should we welcome new talent to C++ given how terrible and broken it is, or should we tell them to stay away and use other languages?
+* KG: Bjarne's quote "There are two kinds of languages..."
+* VR: "I don't mean to sound like a Rust evangelist, I like C++, but..." goes on praising Rust. _Well..._
+* KG: "I like learning. And despite your doom and gloom about how broken C++20 is, I've been having a lot of fun learning the new stuff, writing the new examples, figuring out how it makes code shorter and more expressive."
+
+https://www.reddit.com/r/cpp/comments/14rfufc/c_and_beyond_discussion_vittorio_romeo_kevlin/[Reddit]
+
+* "Quite surreal to hear them talk about such doom and gloom over the future of C++." https://www.reddit.com/r/cpp/comments/14rfufc/c_and_beyond_discussion_vittorio_romeo_kevlin/jqrxg66/[{{<fas square-arrow-up-right>}}]
+* "At least they are being honest. It's a common perception here that committee driven development in its current form is a fail." https://www.reddit.com/r/cpp/comments/14rfufc/c_and_beyond_discussion_vittorio_romeo_kevlin/jqua5xc/[{{<fas square-arrow-up-right>}}]
+** "C\++ is exactly as much committee-driven as users want it to be. The C\++ committee are to a large degree volunteers that care enough to actually work on C++ and put a substantial amount of their time and money into that work." -- https://www.reddit.com/r/cpp/comments/14rfufc/c_and_beyond_discussion_vittorio_romeo_kevlin/jqvylip/[Daniela Engert]
+
+My impression of the panel: KG was the most calm and reasonable participant. It's like men are too emotional for C++.
+
+See also:
+
+* https://yosefk.com/c++fqa/
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2816r0.pdf[P2816: Safety Profiles: Type-and-resource Safe programming in ISO Standard C++]
+
+== Why C++ Today?
+
+https://ciura.ro/blog/why-cpp.html[Victor Ciura]
+
+____
+Every important piece of software we use today has some C\++ in it: maybe it’s all C\++, maybe it has some important components in C\++, maybe it’s library is natively compiled in C\++, maybe it’s compiler/runtime is written in C++,…
+
+C++ is still the King of programming languages. Long live the King!
+____
+
+See also: https://www.sandordargo.com/blog/2022/11/09/why-to-use-cpp-in-2022[Sandor Dargo: Why use C++ in 2022]
+
+== C++ Continues to Surge Up Popular Languages List
+
+https://www.dice.com/career-advice/c-continues-to-surge-up-popular-languages-list[Dice]
+
+== New diagnostic messages in GCC14
+
+https://social.treehouse.systems/@thesamesam/110697332121438807[sam]:
+
+____
+GCC 14 is still in development, but it has a wonderful new feature in its static analyzer (`-fanalyzer`).
+
+It can now draw beautiful Unicode diagrams showing exactly how you went out-of-bounds.
+
+See https://inbox.sourceware.org/gcc-patches/20230531180630.3127108-1-dmalcolm@redhat.com/ too.
+
+Thank you to the wonderful David Malcolm for implementing this - who also does a tonne of work with mentoring for GCC's GSoC programme, and working on docs to help new people get into GCC: https://gcc-newbies-guide.readthedocs.io/en/latest/index.html[gcc-newbies-guide.readthedocs.io].
+____
+
+== Boost.Async
+
+* https://www.reddit.com/r/cpp/comments/15l8xju/review_of_proposed_boostasync_begins/[Reddit post by Niall Douglas]
+* https://github.com/klemens-morgenstern/async[GitHub: Klemens Morgenstern]
+* https://klemens.dev/async/[Documentation]
+
+== Composing callables in modern C++
+
+https://ngathanasiou.wordpress.com/2023/03/05/composing-callables-in-modern-c/[Nick Athanasiou]
+
+[source]
+----
+h(x) = f(g(x)) = (f * g)(x)
+----
+
+[source,cpp]
+----
+template <class... Fs>
+auto composer(Fs&&... functions)
+{
+    using std::views::transform;
+    return (transform(functions) | ...);
+}
+----
+
+== An interview question about branch prediction
+
+https://www.reddit.com/r/cpp/comments/yf15sp/interviewer_thinking_that_ifelse_is_better_than/[Reddit: Interviewer thinking that if-else is better than ternary operator because of branch prediction]
+
+See also:
+
+* https://www.agner.org/optimize/[Agner Fog]
+* https://en.algorithmica.org/hpc/[Algorithms for Modern Hardware]
+
+== C with classes
+
+https://mas.to/@carnage4life/110857265920408198[Dare Obasanjo]:
+
+> When people say C++ is just C with classes.
+
+image::/img/puffer-fish-sea-mine.jpeg[]
+
+(Image of a cute cartoon puffer fish labelled *_C_* cuddling against a spiky naval mine labelled *_C++_*)
+
+Both have spikes, but one is not the same as the other.
+
+== RIP Bram Moolenaar
+
+https://www.theregister.com/2023/08/07/bram_moolenaar_obituary/[The Register]
+
+`:wq`
