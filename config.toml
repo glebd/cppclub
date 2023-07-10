@@ -1,5 +1,5 @@
 baseURL = 'https://cppclub.uk/'
-languageCode = 'en-us'
+languageCode = 'en-gb'
 title = 'C++ Club'
 theme = "cactus"
 copyright = "Gleb Dolgich"
