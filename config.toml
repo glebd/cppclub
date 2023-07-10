@@ -91,3 +91,7 @@ weight = 4
   [[params.social]]
     name = "email"
     link = "glebd70@gmail.com"  # no need for "mailto:" in the head
+
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$', 'rst2html.py', 'asciidoctor']

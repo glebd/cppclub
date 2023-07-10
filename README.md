@@ -12,10 +12,20 @@ Author: Gleb Dolgich
 
     brew install hugo
     brew install docutils
+    brew install asciidoctor
+
+### Configure
+
+In `config.toml`, add:
+
+```toml
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$', 'rst2html.py', 'asciidoctor']
+```
 
 ### Server
 
-    export HUGO_SECURITY_EXEC_ALLOW=rst2html.py
     hugo server
 
 ### Cactus Theme
