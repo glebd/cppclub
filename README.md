@@ -13,6 +13,8 @@ Author: Gleb Dolgich
     brew install hugo
     brew install docutils
     brew install asciidoctor
+    gem install asciidoctor-html5s
+    which asciidoctor # -> /opt/homebrew/opt/ruby/bin/asciidoctor
 
 ### Configure
 
@@ -22,6 +24,21 @@ In `config.toml`, add:
 [security]
   [security.exec]
     allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$', 'rst2html.py', 'asciidoctor']
+
+[markup.asciidocExt]
+  backend = 'html5s'
+  doctype = 'book'
+  extensions = ['asciidoctor-html5s']
+  failureLevel = 'fatal'
+  noHeaderOrFooter = true
+  preserveTOC = false
+  safeMode = 'unsafe'
+  sectionNumbers = false
+  trace = false
+  verbose = false
+  workingFolderCurrent = false
+  [markup.asciidocExt.attributes]
+    "icons" = "font"
 ```
 
 ### Server

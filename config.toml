@@ -59,6 +59,7 @@ weight = 4
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = true # show tags overview by default.
+  tocInline = false
   showProjectsList = false # show projects list by default (if projects data file exists).
   projectsUrl = "https://github.com/glebd" # title link for projects list
 
@@ -95,3 +96,18 @@ weight = 4
 [security]
   [security.exec]
     allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$', 'rst2html.py', 'asciidoctor']
+
+[markup.asciidocExt]
+  backend = 'html5s'
+  doctype = 'book'
+  extensions = ['asciidoctor-html5s']
+  failureLevel = 'fatal'
+  noHeaderOrFooter = true
+  preserveTOC = false
+  safeMode = 'unsafe'
+  sectionNumbers = false
+  trace = false
+  verbose = false
+  workingFolderCurrent = false
+  [markup.asciidocExt.attributes]
+    "icons" = "font"
