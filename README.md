@@ -15,6 +15,7 @@ Author: Gleb Dolgich
     brew install asciidoctor
     gem install asciidoctor-html5s
     which asciidoctor # -> /opt/homebrew/opt/ruby/bin/asciidoctor
+    gem install rouge
 
 ### Configure
 

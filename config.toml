@@ -111,3 +111,6 @@ weight = 4
   workingFolderCurrent = false
   [markup.asciidocExt.attributes]
     "icons" = "font"
+    "source-highlighter" = "rouge"
+    "rouge-style" = "igor_pro"
+    "rouge-css" = "style"
