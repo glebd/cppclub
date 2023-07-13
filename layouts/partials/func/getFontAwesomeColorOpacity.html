@@ -1,0 +1,7 @@
+{{ $result := 0 }}
+{{ $parts := split (index . 0) "/" }}
+{{ with (index $parts (index . 1)) }}
+  {{ $result = trim . " \t\n" }}
+{{ end }}
+
+{{- return $result -}}

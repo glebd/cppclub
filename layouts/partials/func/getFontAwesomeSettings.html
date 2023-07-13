@@ -1,0 +1,30 @@
+{{ $lengthPattern := "^[\\d\\.]+(?i)(?:cm|in|mm|pc|pt|px|q|%|ch|em|ex|lh|rem|vh|vmax|vmin|vw)(?-i)$" }}
+
+{{ $data := newScratch }}
+{{ $data.Set "size" "1em" }}
+{{ $data.Set "primaryColor" "currentColor" }}
+{{ $data.Set "primaryOpacity" "1.0" }}
+{{ $data.Set "secondaryColor" "currentColor" }}
+{{ $data.Set "secondaryOpacity" "0.4" }}
+
+{{ $args := slice .arg1 .arg2 }}
+{{ range $args }}
+  {{ $length := findRE $lengthPattern . }}
+  {{ with $length }}
+    {{ $data.Set "size" (delimit $length "") }}
+  {{ else }}
+    {{ with . }}
+      {{ $parts := split . ";" }}
+      {{ with (index $parts 0) }}
+        {{ $data.Set "primaryColor" ((partial "func/getFontAwesomeColorOpacity.html" (slice . 0)) | default "currentColor") -}}) }}
+        {{ $data.Set "primaryOpacity" ((partial "func/getFontAwesomeColorOpacity.html" (slice . 1)) | default "1.0") -}}) }}
+      {{ end }}
+      {{ with (index $parts 1) }}
+        {{ $data.Set "secondaryColor" ((partial "func/getFontAwesomeColorOpacity.html" (slice . 0)) | default "currentColor") -}}) }}
+        {{ $data.Set "secondaryOpacity" ((partial "func/getFontAwesomeColorOpacity.html" (slice . 1)) | default "0.4") -}}) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{- return (dict "size" ($data.Get "size")  "primaryColor" ($data.Get "primaryColor")  "primaryOpacity" ($data.Get "primaryOpacity")  "secondaryColor" ($data.Get "secondaryColor")  "secondaryOpacity" ($data.Get "secondaryOpacity") ) -}}

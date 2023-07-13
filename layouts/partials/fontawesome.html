@@ -1,0 +1,20 @@
+{{- $settings := partial "func/getFontAwesomeSettings.html" (dict "style" .style "arg1" .arg1 "arg2" .arg2) -}}
+<span style="line-height:1em; vertical-align:middle;">
+  {{- $fname:=print "/assets/svg/" .style "/" .icon ".svg" -}}
+  {{- if (fileExists $fname) -}}
+    {{- $svg := readFile $fname -}}
+    {{- $svg = replace $svg " 512\"><!--" (print " 512\" style=\"height:" $settings.size "; width:" $settings.size "\"><!--") -}}
+    {{- $svg = replaceRE "<!--[^>]*-->" "" $svg -}}
+    {{- if eq .style "duotone" -}}
+      {{- $svg = replace $svg "class=\"fa-primary\"/>" (print "class=\"fa-primary\" style=\"fill:" $settings.primaryColor "; opacity:" $settings.primaryOpacity "\"/>") -}}
+      {{- $svg = replace $svg "class=\"fa-secondary\"/>" (print "class=\"fa-secondary\" style=\"fill:" $settings.secondaryColor "; opacity:" $settings.secondaryOpacity "\"/>") -}}
+      {{- $svg = replace $svg "<defs><style>.fa-secondary{opacity:.4}</style></defs>" "" -}}
+    {{- else -}}
+      {{- $svg = replace $svg "<path" (print "<path fill=\"" $settings.primaryColor "\" opacity=\"" $settings.primaryOpacity "\"") -}}
+    {{- end -}}
+    {{- $svg | safeHTML -}}
+  {{- else -}}
+    <span class="sc-fontawesome-missing" title="Could not find &quot;{{.icon}}&quot; icon with &quot;{{.style}}&quot; style">&#xFFFD;</span>
+    {{- warnf "Could not find \"%s\" icon with \"%s\" style." .icon .style -}}
+  {{- end -}}
+</span>{{- "" -}}
