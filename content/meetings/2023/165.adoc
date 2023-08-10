@@ -1,0 +1,243 @@
+---
+title: 165. Bjarne Stroustrup's talks on safety, WG21 August mailing, Rust
+author: Gleb Dolgich
+date: 2023-09-07
+tags:
+    - Bjarne Stroustrup
+    - Safety
+    - WG21
+    - Mailing
+    - Contracts
+    - Erroneous behavior
+    - UB
+    - Dave Plummer
+    - Microsoft
+    - Windows
+    - Retrocomputing
+    - ChatGPT
+    - Rust
+---
+
+:showtitle:
+:toc:
+
+= 165. Bjarne Stroustrup's talks on safety, WG21 August mailing, Rust
+
+With Gianluca Delfino, Frances Buontempo, Vladimír Arnošt, Ivor Hewitt et al.
+
+== Media
+
+=== Video
+
+https://youtu.be/WpXW42iYP_k
+
+{{<youtube WpXW42iYP_k>}}
+
+https://www.reddit.com/r/cpp/comments/16jk5ni/c_club_165_bjarne_stroustrups_talks_on_safety/[Reddit]
+
+=== Podcast
+
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/f914aea4-404a-4f41-83e6-52dae99fc0d5
+
+{{<redcircle f914aea4-404a-4f41-83e6-52dae99fc0d5>}}
+
+== Life advice from Bjarne Stroustrup
+
+https://youtu.be/-QxI-RP6-HM
+
+{{<youtube -QxI-RP6-HM>}}
+
+* Don't overspecialise
+* Have a life and interests outside computing
+* Build a portfolio of skills
+* Be ready for the opportunity and don't let it go unnoticed
+
+https://www.reddit.com/r/cpp/comments/164hnto/life_advice_from_the_creator_of_c/[Reddit]
+
+> Life is like undefined behaviour no one knows what will happen next. https://www.reddit.com/r/cpp/comments/164hnto/life_advice_from_the_creator_of_c/jy8fd1k/[{{<fas square-arrow-up-right>}}]
+
+== Approaching C++ safety - Bjarne Stroustrup (CoreCppIL 2023)
+
+https://youtu.be/eo-4ZSLn3jc
+
+{{<youtube eo-4ZSLn3jc>}}
+
+* Goal: type- and resource-safe C++
+* The spooks (NSA) say don't use C/C\++ as it's unsafe. I sort of agree, I don't like C/C++, it's a mythical language which is usually a mess.
+* People choose C\++ for a reason. The alternatives are new and shiny, but largely untried, and don't handle the range of applications that C++ does.
+
+image::/img/bjarne-safety-eo-4ZSLn3jc-0001.png[]
+
+* You just have to be careful, but being careful is not good enough.
+* We can't just "outsource" unsafe parts to another language.
+* "RAII -- Resource Acquisition Is Initialization -- must be the dumbest name for a great feature. Apologies for that. I was busy."
+* People come and say: "C++ is too complex, I want you to simplify it. By the way, while you're at it, I want these two features added, I need them yesterday. And whatever you do, don't break my code!"
+* Safety by subsetting the language doesn't work because lots of the low-level features aren't safe.
+
+image::/img/bjarne-safety-eo-4ZSLn3jc-0002.png[]
+
+* Superset the language with libraries (STL, GSL) and then subset it.
+* Different domains have different definition of "safety", but basic type and resource safety should be common.
+* Arbitrary C++ code is simply too complex for static analysis.
+* Profile: a coherent set of rules yielding a guarantee: bounds, type, memory etc. Must be visible in code (to indicate intent and to trigger analysis). Similar to https://docs.adacore.com/gnathie_ug-docs/html/gnathie_ug/gnathie_ug/the_predefined_profiles.html[Ada's safety profiles].
+* The hardest problem is mixing profiles.
+
+image::/img/bjarne-safety-eo-4ZSLn3jc-0003.png[]
+
+* Suggested initial profiles: `type_safety`, `range`, `arithmetic`.
+
+== Hardening C++ (Bjarne Stroustrup, Software Engineering Daily, March 2023)
+
+https://youtu.be/eLLi0nWMUMs
+
+{{<youtube eLLi0nWMUMs>}}
+
+> Don't use "C/C++" but "try this other language which is not even standardized and has no formal definition, but it's safe!" --- give me a break!
+
+== WG21 Mailing, August 2023
+
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/#mailing2023-08[Papers]
+* https://www.reddit.com/r/cpp/comments/15yxx58/wg21_papers_for_august_2023/[Reddit]
+
+=== Erroneous behaviour for uninitialized reads
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2795r3.html[P2795R3] by Thomas Köppe
+
+____
+We propose to address the safety problems of reading a default-initialized automatic variable (an “uninitialized read”) by adding a novel kind of behaviour for C++. This new behaviour, called erroneous behaviour, allows us to formally speak about “buggy” (or “incorrect”) code, that is, code that does not mean what it should mean (in a sense we will discuss). This behaviour is both “wrong” in the sense of indicating a programming bug, and also well-defined in the sense of not posing a safety risk.
+
+We propose to change the semantics of reading an uninitialized variable:
+
+Default-initialization of an automatic variable initializes the variable with a fixed value defined by the implementation; however, reading that value is a conceptual error. Implementations are allowed and encouraged to diagnose this error, but they are also allowed to ignore the error and treat the read as valid. Additionally, an opt-out mechanism (in the form of an attribute on a variable definition) is provided to restore the previous behaviour.
+
+<...>
+
+In other words, it is still an "wrong" to read an uninitialized value, but if you do read it and the implementation does not otherwise stop you, you get some specific value.
+____
+
+This paper seems like an opposite of the paper https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2723r1.html[P2723 Zero-initialize objects of automatic storage duration]. It looks like you can't have both.
+
+=== `span.at()`
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2821r4.html[P2821R4] by Jarrad J. Waterloo
+
+> This paper proposes the standard adds the `at` method to `std::span` class in order to address safety, consistency and PR (public relations) concerns. <...> If <index> is not within the range of the container, an exception of type `std::out_of_range` is thrown.
+
+=== An Attribute-Like Syntax for Contracts
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2935r0.pdf[P2935R0] by Joshua Berne
+
+[source,cpp]
+----
+int f(const int x, int y)
+    [[ pre : y > 0 ]]
+    [[ post : fstate() == x ]] // Parameters referenced in post must be const.
+    [[ post r   : r > x ]]     // Postcondition may optionally name return value.
+    [[ post (r) : r > y ]]     // Return value may have parenthesis.
+{
+    [[ assert : x > 0 ]];
+    return x;
+}
+----
+
+=== Safer Range Access
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2955r0.html[P2955R0] by Jarrad J. Waterloo
+
+Annotations!
+
+=== Reference checking
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2878r5.html[P2878R5] by Jarrad J. Waterloo
+
+More annotations!
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2878r5.html#Resolution[Example code]
+
+____
+This paper proposes that we allow programmers to provide explicit lifetime dependence information to the compiler for the following reasons:
+
+* Standardize the documentation of lifetimes of API(s) for developers
+* Standardize the specification of lifetimes for proposals
+* Greatly reduce the dangling of the stack for references
+
+What is being asked for is similar to but not exactly like Rust’s feature called _explicit lifetimes_.
+____
+
+== Considering C++ over Rust
+
+https://www.reddit.com/r/cpp/comments/16a0c9x/considering_c_over_rust/[Reddit]
+
+____
+You can’t just place a [.line-through]#LISP# Rust book on top of an x86 chip and hope that the hardware learns about lambda calculus by osmosis.
+
+--- https://www.usenix.org/system/files/1311_05-08_mickens.pdf[_James Mickens_]
+____
+
+https://www.reddit.com/r/cpp/comments/16a0c9x/considering_c_over_rust/jz5663j/[James20k on Rust vs. C++]
+
+> I found it irritating that some of the same C devs who have been in denial about C++ for decades now rave about Rust. https://www.reddit.com/r/cpp/comments/16a0c9x/considering_c_over_rust/jz57ong/[{{<fas square-arrow-up-right>}}]
+
+* https://www.reddit.com/r/cpp/comments/16a0c9x/considering_c_over_rust/jz5bh24/[An insightful comment by nihilistic_ant]
+* https://www.reddit.com/r/cpp/comments/16a0c9x/considering_c_over_rust/jz5ifjg/[Dean_Roddey happily migrated to Rust]
+
+== Dave Plummer's stupid C++ tricks
+
+YouTube: https://youtu.be/p-sprvJX07E
+
+{{<youtube p-sprvJX07E>}}
+
+Modern C++, not that vintage "https://gist.github.com/bkaradzic/2e39896bc7d8c34e042b[orthodox]" stuff!
+
+Great anecdotes from the old days of Microsoft and Windows, like this one: at Microsoft they never called BSOD a _blue screen of death_ -- only _blue screen_, or a _bugcheck_, as it was initiated by calling the kernel function `KeBugCheck`.
+
+https://www.youtube.com/@DavesGarage[Dave's Garage YouTube channel]
+
+== Node.js is moving to a new, faster URL parser called Ada written in modern C++
+
+https://www.reddit.com/r/cpp/comments/10wrkk3/nodejs_is_moving_to_a_new_faster_url_parser/[Reddit]
+
+Putting aside the confusing name which suggests the author didn't know (or didn't care) about the Ada language...
+
+> "Written in modern C++" and literally the first lines in `ada.h` that actually do something are: https://www.reddit.com/r/cpp/comments/10wrkk3/nodejs_is_moving_to_a_new_faster_url_parser/j7pk9rl/[{{<fas square-arrow-up-right>}}]
+
+[source,cpp]
+----
+#define ADA_ROUNDUP_N(a, n) (((a) + ((n)-1)) & ~((n)-1))
+#define ADA_ROUNDDOWN_N(a, n) ((a) & ~((n)-1))
+----
+
+Apparently also `memcpy()` https://www.reddit.com/r/cpp/comments/10wrkk3/nodejs_is_moving_to_a_new_faster_url_parser/j7poplb/[{{<fas square-arrow-up-right>}}]
+
+== C++ in Chromium
+
+* https://chromium.googlesource.com/chromiumos/docs/%2B/HEAD/development_basics.md[Chromium programming languages and styles]
+* https://chromium.googlesource.com/chromium/src/%2B/HEAD/styleguide/c%2B%2B/c%2B%2B-features.md[Modern C++ use in Chromium]
+
+Yeees, "**Modern**". <facepalm>
+
+== Why Rust will replace C++ in the future
+
+https://dev.to/roy8/why-rust-will-replace-c-in-the-future-49op[Article by Roy]
+
+This sounds to me like something written by ChatGPT. The irony is that the article was probably generated by code written in C++.
+
+== C/C++: well, actually
+
+Predrag Gruevski https://hachyderm.io/@predrag/110850542847721352[writes] on Mastodon:
+
+> Including C/C++ on my resume has been a great way of selecting out people that would be the kind of "well, actually" that I don't think I'd enjoy working with.
+
+== Mastodon: pragma once
+
+By https://vt.social/@lethalbit/110820778962019754[aki-nyan]:
+
+> if `#pragma once` is so good where is `#pragma twice`
+
+== Mastodon: clocks
+
+https://mas.to/@carnage4life/110850691497063871[Dare Obasanjo]:
+
+> A broken clock fixed by taping a working clock over it is a metaphor for every codebase you’ll encounter in your professional career as a software developer.
+
+image::/img/clock-fixed.jpeg[]
