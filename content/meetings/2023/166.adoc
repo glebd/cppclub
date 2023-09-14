@@ -1,0 +1,215 @@
+---
+title: 166. WG21 September 2023 mailing, Contracts, Modules, Cppfront
+author: Gleb Dolgich
+date: 2023-10-05
+tags:
+    - WG21
+    - Mailing
+    - Contracts
+    - Erroneous behavior
+    - UB
+    - Modules
+    - CMake
+    - Clang
+    - Cpp2
+    - Cppfront
+    - Herb Sutter
+    - Roi Barkan
+---
+
+:showtitle:
+:toc:
+
+= 166. WG21 September 2023 mailing, Contracts, Modules, Cppfront
+
+With Gianluca Delfino, Vladimír Arnošt, Sergey Ishin, Damask Talary-Brown et al.
+
+== Media
+
+=== Video
+
+https://youtu.be/6L3Vk6Zax_w
+
+{{<youtube 6L3Vk6Zax_w>}}
+
+=== Podcast
+
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/a465d354-b505-4cf5-8dbb-b2f8cda18e71
+
+{{<redcircle a465d354-b505-4cf5-8dbb-b2f8cda18e71>}}
+
+== Feedback
+
+Roi Barkan commented on https://youtu.be/WpXW42iYP_k[Episode 165]:
+
+____
+I think the “erroneous behavior” proposal is meant to allow the standard to specify situations where it is allowed to either fail on, or to allow - but be deterministic if it allows the situation.
+
+To try and clarify, here are various situations the standard describes:
+
+* ILL-Formed: compilation must fail
+* Undefined Behavior: compilation must succeed (compiler might warn), but code can do ANYTHING
+* ILL-Formed-No-Diagnostics-Required (IFNDR) - compilation is allowed to fail or generate code that can do ANYTHING
+* Erroneous Behavior - compilation is allowed to fail, or generate deterministic (not explode) behavior
+____
+
+== WG21 mailing, September 2023
+
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/#mailing2023-09[Mailing]
+* https://www.reddit.com/r/cpp/comments/16lkccd/wg21_aka_c_standard_committee_september_2023/[Reddit]
+
+Nothing on Reflection or Pattern Matching.
+
+=== Paper: Vector API for random number generation
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p1068r9.pdf[P1068R9]
+
+[source,c++]
+----
+std::array<std::uint_fast32_t, arrayLength> intArray;
+std::mt19937 g(777);
+std::ranges::generate_random(intArray, g);
+----
+
+=== Paper: A natural syntax for Contracts
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2961r0.pdf[P2961R0] by Jens Maurer and Timur Doumler
+
+[source,c++]
+----
+float sqrt(float x)
+    pre (x >= 0);
+----
+
+=== Paper: A Principled Approach to Open Design Questions for Contracts
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2932r0.pdf[P2932R0] by Joshua Berne
+
+> The Contracts MVP being developed by SG211 is progressing smoothly toward a complete proposal according to the agreed-upon schedule.
+
+Hold that thought.
+
+=== Paper: A Bold Plan for a Complete Contracts Facility
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2755r0.pdf[P2755R0] by Joshua Berne, Jake Fevold, John Lakos.
+
+A wild paper appears, 48 pages long! Is this the complete Contracts proposal that builds on top of the MVP, or is this something else? I think I've seen that before, can't put my finger on it...
+
+=== Paper: A Plan for C++26 Ranges
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2760r0.html[P2760R0] by Barry Revzin
+
+=== Paper: Sender/Receiver Interface For Networking
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2762r1.pdf[P2762R1] by Dietmar Kühl
+
+Remember Networking TS? It lives! Kind of.
+
+=== Paper: Erroneous behaviour for missing return from assignment
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2973r0.html[P2973R0] by Jonathan Wakely and Thomas Köppe
+
+> We propose to change the behaviour of flowing off the end of an overloaded assignment operator from undefined to erroneous, erroneously returning `*this`.
+
+[source,c++]
+----
+struct Foo {
+  Foo& operator=(const Foo& rhs) {
+    x = rhs.x;
+    y = rhs.y;
+    // error: forgot "return *this;"!
+  }
+};
+----
+
+=== Paper: Implication for C++
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2971r0.pdf[P2971R0] by Walter E. Brown
+
+> This paper proposes to introduce `operator=>`, the implication operator, into the C++ core language.
+
+A new operator! `p => q` is equivalent to `(!p) || q`
+
+[cols="3", options="header"]
+|===
+|p
+|q
+|p=>q
+
+|true
+|true
+|true
+
+|true
+|false
+|false
+
+|false
+|true
+|true
+
+|false
+|false
+|true
+|===
+
+Seems like a waste of a good operator. Give me short lambdas!
+
+== Reflection
+
+https://www.reddit.com/r/cpp/comments/16lokr1/question_is_sg_7_reflection_still_active/[Reddit: Is Reflection (SG7) still active?]
+
+No, it is not.
+
+== C++ Modules in CMake 3.28
+
+https://www.reddit.com/r/cpp/comments/16y9qv2/cmake_c_modules_support_in_328/[Reddit]
+
+> After 5 years its finally done. Next cmake 3.28 release will support cpp modules
+C++ 20 named modules are now supported by Ninja Generators and Visual Studio Generators for VS 2022 and newer, in combination with the MSVC 14.34 toolset (provided with VS 17.4) and newer, LLVM/Clang 16.0 and newer, and GCC 14 (after the 2023-09-20 daily bump) and newer.
+
+== Microsoft IFC SDK open-sourced
+
+* https://devblogs.microsoft.com/cppblog/open-sourcing-ifc-sdk-for-cpp-modules/[GDR on Microsoft C++ Team Blog]
+* https://www.reddit.com/r/cpp/comments/16ys1r2/open_sourcing_ifc_sdk_for_c_modules/[Reddit]
+
+== Cppfront autumn update
+
+* https://herbsutter.com/2023/09/28/cppfront-autumn-update/[Herb Sutter]
+* https://www.reddit.com/r/cpp/comments/16ummo8/cppfront_autumn_update/[Reddit]
+
+> the more i look at Cpp2 the less i like the syntax it uses, it is becoming complex really fast
+And is great it change/improve some things but the ones i think are a mistake (like the 6 types of arguments for a function) remains so ... This will end in a complex syntax and a complex lang which will be an issue sooner than later https://www.reddit.com/r/cpp/comments/16ummo8/cppfront_autumn_update/k2msfya/[↑]
+
+https://www.reddit.com/r/cpp/comments/16ummo8/cppfront_autumn_update/k2ww94o/[Herb does RDD (Reddit-Driven Development)]
+
+== C++ Modules in Clang
+
+https://libcxx.llvm.org/Modules.html[Modules in LLVM]
+
+* Experimental
+* Relies on a temporary CMake project to build library modules
+* Users need to be able to build their own BMI files
+
+== cpp-dump
+
+* https://github.com/philip82148/cpp-dump[GitHub]
+* https://news.ycombinator.com/item?id=37712593[HackerNews]
+
+== Turing-complete `MOV`
+
+image::/img/turing-mov.jpeg[]
+
+https://x86.mov/ is Turing-complete
+
+https://github.com/xoreaxeaxeax/movfuscator[movfuscator] -- the single-instruction C compiler
+
+https://github.com/xoreaxeaxeax/movfuscator/blob/master/validation/doom/README.md[Branchless DOOM]
+
+== Mastodon: CMake
+
+https://mastodon.social/@glebd/110859221837801840[glebd (that's me!)]:
+
+> CMake is the PHP of C++ build systems
+
+OK, that didn't go viral as I'd hoped.
