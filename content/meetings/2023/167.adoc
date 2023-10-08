@@ -1,0 +1,160 @@
+---
+title: 167. Kona, C++26, Contracts, Reflection, Cpp2
+author: Gleb Dolgich
+date: 2023-11-16
+tags:
+    - WG21
+    - Kona
+    - Mailing
+    - Meeting
+    - C++26
+    - Cpp2
+    - Herb Sutter
+    - Bjarne Stroustrup
+    - David Sankel
+    - Reflection
+    - UB
+    - EB
+    - UFCS
+---
+
+:showtitle:
+:toc:
+
+= 167. Kona, C++26, Contracts, Reflection, Cpp2
+
+With Gianluca Delfino and other colleagues. https://www.reddit.com/r/cpp/comments/182ecqj/c_club_167_kona_c26_contracts_reflection_cpp2/[Reddit thread.]
+
+== Media
+
+=== Video
+
+https://youtu.be/_KYUUc6LJR8
+
+{{<youtube _KYUUc6LJR8>}}
+
+=== Podcast
+
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/0d1daf37-44c9-4242-9c33-d0fecb58f352
+
+{{<redcircle 0d1daf37-44c9-4242-9c33-d0fecb58f352>}}
+
+== WG21 Kona meeting, November 2023
+
+* https://www.reddit.com/r/cpp/comments/17vnfqq/202311_kona_iso_c_committee_trip_report_second/[Inbal Levy on Reddit]
+* https://herbsutter.com/2023/11/11/trip-report-autumn-iso-c-standards-meeting-kona-hi-usa/[Herb Sutter]
+** https://www.reddit.com/r/cpp/comments/17t8nr0/trip_report_autumn_iso_c_standards_meeting_kona/[Reddit]
+* https://www.reddit.com/r/cpp/comments/17t7ohe/contracts_moving_along_hopefully_on_track_for_c26/[Timur Doumler on Reddit]
+** The Reddit thread doesn't sound convinced.
+
+From Twitter:
+
+____
+WG21 meeting in Kona is over. SG21 approved our paper with a new Contracts syntax: https://wg21.link/p2961r2
+
+The double square brackets are gone, contract checks are now spelled like this:
+
+[source,cpp]
+----
+int f(int x)
+  pre (x > 0)
+  post (r: r > x)
+{
+  contract_assert(i > 0);
+  return x + i;
+}
+----
+____
+
+The _natural_ syntax has won apparently, but `contract_assert`, seriously? https://www.reddit.com/r/cpp/comments/17ttjmd/a_backwardscompatible_assert_keyword_for_contract/[Reddit thread on a possible solution].
+
+From Herb Sutter's talk:
+
+image::/img/sutter-cppcon23-0001.png[]
+
+The attribute-like syntax would have stood out better IMHO, but whatever. As long as Contracts are in C++26...
+
+Also: REFLECTION!
+
+* https://isocpp.org/files/papers/D2996R1.html[D2996R1 Reflection for C++26]
+* https://www.reddit.com/r/cpp/comments/17rnuh6/fuzzy_feeling_when_i_see_progress_being_made_on/[Reddit is happy].
+
+Pattern matching: current target is C++29! <sadface>
+
+From https://www.reddit.com/r/cpp/comments/17vnfqq/202311_kona_iso_c_committee_trip_report_second/[Inbal Levy's Reddit post comments]:
+
+____
+P2971R1: Implication for C++ "There was mild opposition and many neutrals, but also significant interest from a small but vocal set of people." Ok vocal minority, return with your next proposal, but just don't steal => for your niche purpose rather than something more valuable and common like a terse lambda many have asked for (and many more have asked for that than have ever asked for implication). https://www.reddit.com/r/cpp/comments/17vnfqq/202311_kona_iso_c_committee_trip_report_second/[↑]
+____
+
+Hear hear!
+
+== WG21 October mailing
+
+https://isocpp.org//blog/2023/10/2023-10-mailing-available[Link]
+
+=== Paper: std::optional<T&>
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2988r0.html[P2988R0] by Steve Downey and Peter Sommerlad
+
+____
+We propose to fix a hole intentionally left in **std::optional**: An optional over a reference such that the post condition on assignment is independent of the engaged state, always producing a rebound reference, and assigning a **U** to a **T** is disallowed by **static_assert** if a **U** can not be bound to a **T&**.
+____
+
+=== Paper: Unified function call syntax (UFCS)
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p3021r0.pdf[P3021R0] by Herb Sutter
+
+=== Paper: C\++ Should Be C++
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p3023r0.html[P3023R0] by David Sankel (Adobe)
+
+== Video: Bjarne Stroustrup - Delivering Safe C++ (CppCon 2023)
+
+A new iteration of the talk discussed previously.
+
+https://youtu.be/I8UvQKvOSSw
+
+{{<youtube I8UvQKvOSSw>}}
+
+https://www.reddit.com/r/cpp/comments/170l785/delivering_safe_c_bjarne_stroustrup_cppcon_2023/[Reddit]
+
+== Concrete suggestions for initial Profiles, by Bjarne Stroustrup
+
+* https://isocpp.org/files/papers/D3038R0.pdf[PDF]
+
+== Video: Herb Sutter - Cooperative C\++ Evolution - Toward a TypeScript for C++ (CppCon 2023)
+
+https://youtu.be/8U3hl8XMm8c
+
+{{<youtube 8U3hl8XMm8c>}}
+
+https://herbsutter.com/2023/10/09/my-new-cppcon-talk-is-on-youtube-cooperative-c-evolution-toward-a-typescript-for-c/[Follow-up post on Herb's blog]
+
+"Safety for C\++ 50x, simplicity for C++ 10x". Round numbers in slogans are a red flag for me, but OK.
+
+Asking the audience: "How many of you would be interested in seeing C\++ get significantly simpler and type/memory safer?" is a bit cheap. I'm not a fan of this style of presentation. Especially given that Herb's "solution" is not actually C++ as such.
+
+That Beetles song again, <eyeroll>. "All you need is class". jfc
+
+"This is pure 100% C+\+." Proceeds to show non-C++ code, often invoking Bjarne's name for validation (?).
+
+"Swift is a TypeScript for Objective-C" --- WHAT.
+
+Says it's just a personal experiment, then tells the audience that "the TypeScript way" (Cpp2) is the only way forward for C++ "because people are telling us gradual evolution is not good enough".
+
+Sorry, I shouldn't be so pessimistic and cynical. It's easy to criticise without doing the actual work. Cpp2 could be our future. Or Herb could be trailblazing actual new C++ features, like the above UFCS.
+
+But the whole talk feels like an ad.
+
+https://www.reddit.com/r/cpp/comments/171o3q9/cooperative_c_evolution_toward_a_typescript_for_c/[Reddit]
+
+____
+Stroustrup's keynote - specifically the last point in the slide where it mentions that successor languages are welcome, but they're not C\++ is relevant here. No matter how much you try and sugarcoat it as a "TypeScript for C++". https://www.reddit.com/r/cpp/comments/171o3q9/cooperative_c_evolution_toward_a_typescript_for_c/[↑]
+____
+
+== How are you doing?
+
+image::/img/how-are-you-doing.png[]
+
+Of course, the proper British way is to always reply, "I'm good, thanks".
