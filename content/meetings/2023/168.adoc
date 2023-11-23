@@ -1,0 +1,187 @@
+---
+title: 168. Safety, "C/C++", reflection, include order, Bjarne's quotes
+author: Gleb Dolgich
+date: 2023-12-14
+tags:
+    - CLion
+    - JetBrains
+    - Herb Sutter
+    - Cpp2
+    - C/C++
+    - Safety
+    - Bjarne Stroustrup
+    - Reflection
+    - USA
+    - Government
+    - Cybersecurity
+    - Whitepaper
+---
+
+:showtitle:
+:toc:
+
+= 168. Safety, "C/C++", reflection, include order, Bjarne's quotes
+
+With Gianluca Delfino, Frances Buontempo, Vladimír Arnošt, Dmitry Kuzminov and other colleagues.
+
+== Media
+
+=== Video
+
+Coming soon.
+
+=== Podcast
+
+Coming soon.
+
+== Feedback
+
+Roi Barkan commented on https://www.youtube.com/attribution_link?a=wfsNN5T2gd56rUVw&u=/watch%3Fv%3D6L3Vk6Zax_w%26lc%3DUgyZsphIRCf3J73YN9V4AaABAg%26feature%3Dem-comments[episode 166]:
+
+____
+I think Herb’s point is that the combination of: 1. his cpp2 feature of “automatically **std::move** the last use of each variable” together + 2. the fact that rvalues can’t be passed to functions that take “mutable reference” (and cpp2 inout/out) = mean that a “mutable reference” (and inout/out) parameters will act as “nodiscard” (and will have to be manually discarded via the assignment to _). I guess Herb likes it because he likes nodiscard, and he is happy that he “got it for free” as a consequence of 1+2 above
+____
+
+The code in question: https://herbsutter.com/2023/09/28/cppfront-autumn-update/[Herb Sutter: Cppfront Autumn Update]
+
+[source,cpp]
+----
+{
+    x := my_vector.begin();
+    std::advance(x, 2);
+    _ = x; // all right, you said you meant it, carry on then...
+}
+----
+
+Walter Svenddal left this comment on the same video:
+
+____
+It's honestly pretty infuriating how often this group completely misunderstands the articles they read.
+
+Like how for about 5 mins in discussing cppfront's explicit data flow (33:02), they speculate the purpose of discarding 'x'  has something to do with optimizations. And then when they finally continue reading, they realize it's just about data flow, then misread the article **again** and somehow hallucinate that the discard statement must be modifying the behaviour of the previous function call.
+
+This has happened many times in past videos. Does the presenter read the articles they talk about beforehand? It seems like something they should review beforehand instead of just... Guessing, without reading, during their meetup.
+____
+
+Wow, harsh.
+
+A quick aside.
+
+I've been programming in C\++ for nearly 30 years now. I started it in the 1990s as a side gig while studying medicine. I'm a self-taught programmer, and not having computer science or maths background sometimes means that even after all these years it takes me longer to understand programming-related stuff. I don't pretend to always have correct understanding of things I read, but I still like to discuss them with colleagues. My takes are subjective and sometimes emotional. If you are looking for a source of definitive C++ information, this is not it.
+
+Early in my medical career I decided to switch to programming. I must admit this comment kicked my impostor syndrome into high gear for a while. It has subsided now, and I'm again confident in my ability to wing it.
+
+Lastly, if something (or someone) infuriates you, stop listening. It's bad for your mental health.
+
+== The Case for Memory Safe Roadmaps
+
+A new "C/C++ is bad, actually" whitepaper has dropped, woo-hoo!
+
+Published by USA Cybersecurity and Infrastructure Security Agency (CISA) (https://www.cisa.gov/sites/default/files/2023-12/The-Case-for-Memory-Safe-Roadmaps-508c.pdf[PDF])
+
+> Programming languages such as C and C++ are examples of memory unsafe programming
+languages that can lead to memory unsafe code and are still among the most widely used
+languages today.
+
+The author: "Bjarne doesn't like the term "C/C+\+". I know, I'll use "C and C++" instead!"
+
+No examples of other memory-unsafe languages. So it's just about C/C++ then. Why not say so?
+
+____
+Safer Language Subsets
+
+The C\++ community has been contemplating the balance between backwards compatibility, memory-safety defaults, and other priorities for the base language. There are multiple targeted efforts to make C and C++ less vulnerable for existing code bases and products. For example, Apple has modified the C compiler toolchain used in the iBoot system16 to mitigate memory and type safety issues. <...> Microsoft has developed “Checked C” that “adds static and dynamic checking to C to detect or prevent common programming errors such as buffer overruns and out-of-bounds memory accesses.” There are more general efforts to improve C++ memory safety for existing code, including efforts like Carbon.
+____
+
+Hmm. Apple and Microsoft's efforts are targeted at C, and Carbon is not "improving C++".
+
+* https://www.reddit.com/r/cpp/comments/18cpelz/the_case_for_memory_safe_roadmaps_cia_fbi_global/[Reddit (1)]
+
+> Well, they are not wrong to point the finger at C/C++. https://www.reddit.com/r/cpp/comments/18cpelz/the_case_for_memory_safe_roadmaps_cia_fbi_global/kcc79ae/[↑]
+
+> As Stroustrup said: C/C\++ is a mythical language. I know C and C++ and you write those quite different. https://www.reddit.com/r/cpp/comments/18cpelz/the_case_for_memory_safe_roadmaps_cia_fbi_global/kcd9vni/[↑]
+
+* https://www.reddit.com/r/programming/comments/18grv9g/the_nsa_advises_move_to_memorysafe_languages/[Reddit (2)] (rants, mostly)
+
+____
+They've been saying this for almost 10 years now.
+Most security issues are not the result of malevolence - they're the result of human error.
+I've seen some of the code that contractors have delivered. A lot of it was appallingly bad.
+It's cheaper and safer for them to get people off of C/C++ than it is for them to try to clean up and secure dangerously bad code. https://www.reddit.com/r/programming/comments/18grv9g/the_nsa_advises_move_to_memorysafe_languages/kd2hueo/[↑]
+____
+
+=== Feedback on feedback
+
+Brace yourself.
+
+* https://hachyderm.io/@alilleybrinker/111546233275768709[Rust folks]
+* https://sfba.social/@dgregor79/111551954160777115[C++ folks]
+** https://hachyderm.io/@DanielaKEngert/111549713103814873[Daniela Engert]
+
+== Reflection feedback
+
+https://www.reddit.com/r/cpp/comments/17x1n83/anyone_find_the_proposed_reflection_syntax/[Reddit]
+
+=== Reflect-cpp
+
+https://www.reddit.com/r/cpp/comments/1890jr9/reflectcpp_automatic_field_name_extraction_from/[Reddit]
+
+https://github.com/getml/reflect-cpp[GitHub]
+
+== Compiler options hardening guide for C and C++
+
+https://best.openssf.org/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.html[OpenSSF]
+
+https://www.reddit.com/r/cpp/comments/187yrih/compiler_options_hardening_guide_for_c_and_c/[Reddit]
+
+== CLion Nova 2023.3
+
+https://blog.jetbrains.com/clion/2023/11/clion-nova/[JetBrains]
+
+https://www.reddit.com/r/cpp/comments/17rfb3x/new_clion_clion_nova/[Reddit]
+
+Uses ReSharper C++/Rider-based out-of-process language engine. Will be integrated into CLion later.
+
+== Features to remove from C++
+
+https://www.reddit.com/r/cpp/comments/124xbje/reddit/[Reddit]
+
+> C++ is getting more and more complex. The Committee keeps adding new features based on its consensus. Let's remove features based on Reddit's consensus.
+
+https://www.reddit.com/r/cpp/comments/124xbje/reddit/je1rwdb/[rhubarbjin]:
+
+> Everyone agrees that C++ is broken, but no one agrees precisely which parts need fixing ...which just goes to show that **the language isn't broken at all**. It just has a very wide user base with very diverse needs. One coder's boondoggle is another coder's bedrock.
+
+https://www.reddit.com/r/cpp/comments/124xbje/reddit/je1kzqq/[jdehesa]:
+
+> Gotta love how nearly everything suggested in the replies (save for `std::vector<bool>`?) is followed by a reply saying how that feature is actually useful sometimes :) It's too late for C++ now, at this point everyone uses it on their own particular way and every obscure or weird feature has found its place for someone 😄
+
+And we have a winner:
+
+> **The only thing wrong with C\++ is other users of C++.** https://www.reddit.com/r/cpp/comments/124xbje/reddit/je1xpcz/[↑]
+
+See also: https://en.wikipedia.org/wiki/Wikipedia:Chesterton%27s_fence[Chesterton's fence]
+
+== Bjarne Stroustrup Quotes discussed on HackerNews
+
+https://news.ycombinator.com/item?id=38424689[HackerNews]
+
+== Will C++ ever get a standard GUI/2D Graphics library?
+
+https://www.reddit.com/r/cpp/comments/12zqov0/will_c_ever_get_a_standard_gui2d_graphics_library/[Reddit]
+
+== Include order
+
+* https://stackoverflow.com/questions/2762568/c-c-include-header-file-order[StackOverflow]
+* https://cplusplus.com/forum/articles/10627/[cplusplus.com]
+
+== From the Web
+
+Q: Name a book that made you cry.
+A: "Data Structures and Algorithms in Java"
+
+== Lucid dream startup
+
+Lucid dream startup says engineers can write code in their sleep. Work may never be the same. (https://fortune.com/2023/11/30/lucid-dream-startup-prophetic-headset-prepare-meetings-while-sleeping/[Fortune])
+
+https://tech.slashdot.org/story/23/12/01/1355239/lucid-dream-startup-says-engineers-can-write-code-in-their-sleep[Slashdot]
