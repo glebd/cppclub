@@ -1,0 +1,196 @@
+---
+title: 169. WG21 Mailings, Contracts, C++ Ecosystem
+author: Gleb Dolgich
+date: 2024-01-26
+tags:
+    - WG21
+    - Mailing
+    - UFCS
+    - Contracts
+    - Modules
+    - 10x Editor
+    - Juusi Pakkanen
+    - Viktor Zverovich
+    - CppOnlineUK
+    - Rainer Grimm
+    - ALS
+    - JetBrains
+    - Survey
+---
+
+:showtitle:
+:toc:
+
+= 169. WG21 Mailings, Contracts, C++ Ecosystem
+
+With Gianluca Delfino, Frances Buontempo, Vladimír Arnošt, Mohamad ElKaissi, Mikhail Zborovski and others.
+
+https://www.reddit.com/r/cpp/comments/1aog2qy/c_club_169_wg21_mailings_contracts_c_ecosystem/[Reddit] • https://www.linkedin.com/posts/glebd_169-wg21-mailings-contracts-c-ecosystem-activity-7162527104163651584-i0No[LinkedIn]
+
+== Media
+
+=== Video
+
+https://youtu.be/-G7HU_zOD6U
+
+{{<youtube -G7HU_zOD6U>}}
+
+=== Podcast
+
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/6b3c0daa-bbe5-4390-8ee5-b007f403674e
+
+{{<redcircle 6b3c0daa-bbe5-4390-8ee5-b007f403674e>}}
+
+== CppOnline UK
+
+https://cpponline.uk/schedule/[Schedule]
+
+== Rainer Grimm has ALS
+
+https://www.modernescpp.com/index.php/our-money-raising-campaign-for-als-research/[Fundraising campaign]
+
+== WG21 mailings
+
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/#mailing2023-12[December 2023]
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/#mailing2024-01[January 2024]
+
+=== UFCS is a breaking change, of the absolutely worst kind
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p3027r0.html[P3027R0] by Ville Voutilainen et al.
+
+> Enabling a multi-meaning for a member function call to also find and call non-member calls without changing the syntax of those calls is a terrible idea at such a level that words fail me.
+
+=== C\++ should be C++
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p3023r1.html[P3023R1] by David Sankel
+
+https://www.reddit.com/r/cpp/comments/18m0rt0/c_should_be_c/[Discussed on Reddit]
+
+=== Introduction of **std::hive** to the standard library
+
+P0447 https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p0447r24.html[R24],
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p0447r25.html[R25],
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p0447r26.html[R26]
+
+This is what determination looks like.
+
+=== Do expressions
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2806r2.html[P2806R2]
+
+[source,cpp]
+----
+int x = do { do_return 42; };
+----
+
+=== Contracts on lambdas
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2890r2.pdf[P2890R2] by Timur Doumler
+
+[source,cpp]
+----
+auto f = [] (int i)
+    pre (i > 0)     // proposed; ill-formed in MVP
+    post (r: r > i) // proposed; ill-formed in MVP
+{
+    contract_assert (s > 0); // already allowed in MVP
+    return i + s;
+};
+----
+
+> C++20 Contracts did not allow pre and post on lambda expressions because it was using attribute syntax, and attributes could not be meaningfully applied to lambdas at the time.
+
+> The cited issue was later resolved by adopting https://wg21.link/P2173R1[P2173R1] for C++23, and is no longer relevant for the Contracts MVP because we are no longer using attribute syntax.
+
+=== An Attribute-Like Syntax for Contracts
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2935r4.pdf[P2935R4] by Joshua Berne, 2023-11-05.
+
+=== An Overview of Syntax Choices for Contracts
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p3028r0.pdf[P3028R0] by Joshua Berne, Gašper Ažman, Rostislav Khlebnikov and Timur Doumler, 2023-11-05.
+
+Attribute-like: 4 variants. Natural: single variant.
+
+=== A natural syntax for Contracts
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2961r2.pdf[P2961R2] by Timur Doumler and Jens Maurer, 2023-11-08.
+
+=== Constant evaluation of Contracts
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2894r1.pdf[P2894R1] by Timur Doumler
+
+> One of these design holes is the question of how contract annotations should behave during constant evaluation.
+
+> Whether contracts are checked during constant evaluation should be implementation-defined, allowing implementations to offer both options, e.g. through compiler flags.
+
+> The only difference is that constant evaluation has no compile-time analogue for installing a user-defined contract-violation handler: as a user-replaceable function that is added at link time, a user-defined contract-violation handler is inherently a runtime-only feature.
+
+=== **std::quantity** as a numeric type
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2982r1.html[P2982R1] by Mateusz Pusz and Chip Hogg
+
+=== Reflection for C++26
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p2996r1.html[P2996R1] now has Godbolt links for examples, using EDG experimental implementation.
+
+=== **constexpr std::shared_ptr**
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p3037r0.pdf[P3037R0] by Paul Keir
+
+=== Adding an Undefined Behavior and IFNDR Annex
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/p3075r0.pdf[P3075R0] by Shafik Yaghmour.
+
+Looks like this is a "how" paper to the initial "why" paper https://wg21.link/P1705R0[P1705R0].
+
+== The C++ Ecosystem in 2023
+
+https://blog.jetbrains.com/clion/2024/01/the-cpp-ecosystem-in-2023/[JetBrains blog post]
+
+== Juusi Pakkanen on modules
+
+* https://nibblestew.blogspot.com/2023/10/the-road-to-hell-is-paved-with-good.html[Part 1]
+* https://nibblestew.blogspot.com/2023/12/even-more-breakage-in-c-module-world.html[Part 2]
+* https://www.reddit.com/r/cpp/comments/18nr7r4/even_more_breakage_in_the_c_module_world/[Reddit]
+
+Paraphrasing Reddit: Not great, not terrible.
+
+== **std::print** in C++23
+
+https://vitaut.net/posts/2023/print-in-cpp23/[Viktor Zverovich]
+
+https://www.reddit.com/r/cpp/comments/18q0lh3/stdprint_in_c23/[Reddit]
+
+[source,cpp]
+----
+#include <print>
+
+int main()
+{
+  std::print("Hello, world!\n");
+  std::print("{:d}", "I am not a number"); // compile error
+  std::print("你好{}！\n", "世界");
+}
+----
+
+== 10x Editor
+
+https://10xeditor.com/[10x Editor Website]
+
+An editor for 10x developers at last! But seriously, looks very nice and capable. Pity it's Windows-only for the time being. Also, not sure how their pitch works against all the free and paid C++ IDEs available.
+
+https://youtu.be/fH80sofUS7o
+
+{{<youtube fH80sofUS7o>}}
+
+Personal licence: £8/month or £80/year
+
+== Quote
+
+https://mastodon.social/@programming_quotes/111754187177420252
+
+[quote,Unknown]
+____
+A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.
+____
