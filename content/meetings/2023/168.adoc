@@ -1,5 +1,5 @@
 ---
-title: 168. Safety, "C/C++", reflection, include order, Bjarne's quotes
+title: 168. Safety, "C/C++", reflection, include order, Bjarne Stroustrup's quotes
 author: Gleb Dolgich
 date: 2023-12-14
 tags:
@@ -20,7 +20,7 @@ tags:
 :showtitle:
 :toc:
 
-= 168. Safety, "C/C++", reflection, include order, Bjarne's quotes
+= 168. Safety, "C/C++", reflection, include order, Bjarne Stroustrup's quotes
 
 With Gianluca Delfino, Frances Buontempo, Vladimír Arnošt, Dmitry Kuzminov and other colleagues.
 
