@@ -28,11 +28,15 @@ With Gianluca Delfino, Frances Buontempo, Vladimír Arnošt, Dmitry Kuzminov and
 
 === Video
 
-Coming soon.
+https://youtu.be/spKvxc2R7nc
+
+{{<youtube spKvxc2R7nc>}}
 
 === Podcast
 
-Coming soon.
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/af037d9d-c7e2-4c31-8964-a3db20b2d911
+
+{{<redcircle af037d9d-c7e2-4c31-8964-a3db20b2d911>}}
 
 == Feedback
 
