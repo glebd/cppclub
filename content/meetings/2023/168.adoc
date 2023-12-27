@@ -24,6 +24,8 @@ tags:
 
 With Gianluca Delfino, Frances Buontempo, Vladimír Arnošt, Dmitry Kuzminov and other colleagues.
 
+https://www.reddit.com/r/cpp/comments/18s2isl/c_club_168_safety_cc_reflection_include_order/
+
 == Media
 
 === Video
