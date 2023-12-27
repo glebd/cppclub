@@ -67,15 +67,7 @@ Like how for about 5 mins in discussing cppfront's explicit data flow (33:02), t
 This has happened many times in past videos. Does the presenter read the articles they talk about beforehand? It seems like something they should review beforehand instead of just... Guessing, without reading, during their meetup.
 ____
 
-Wow, harsh.
-
-A quick aside.
-
-I've been programming in C\++ for nearly 30 years now. I started it in the 1990s as a side gig while studying medicine. I'm a self-taught programmer, and not having computer science or maths background sometimes means that even after all these years it takes me longer to understand programming-related stuff. I don't pretend to always have correct understanding of things I read, but I still like to discuss them with colleagues. My takes are subjective and sometimes emotional. If you are looking for a source of definitive C++ information, this is not it.
-
-Early in my medical career I decided to switch to programming. I must admit this comment kicked my impostor syndrome into high gear for a while. It has subsided now, and I'm again confident in my ability to wing it.
-
-Lastly, if something (or someone) infuriates you, stop listening. It's bad for your mental health.
+Wow, harsh. I'll make sure to understand 100% of everything I read from now on.
 
 == The Case for Memory Safe Roadmaps
 
