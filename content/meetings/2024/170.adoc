@@ -1,0 +1,175 @@
+---
+title: 170. WG21 Feb '24 Mailing, C++ Successors, Reflection, Pattern Matching
+author: Gleb Dolgich
+date: 2024-02-22
+tags:
+    - Sean Baxter
+    - Circle
+    - Carbon
+    - CppCast
+    - Reflection
+    - Daveed Vandervoorde
+    - Successor Languages
+    - Reflection
+    - Pattern Matching
+    - WG21
+    - Mailing
+---
+
+:showtitle:
+:toc:
+
+= 170. WG21 Feb '24 Mailing, C++ Successors, Reflection, Pattern Matching
+
+An office meeting pretending to be a podcast. With Gianluca Delfino, Frances Buontempo, Dmitry Kuzminov, Jody Hagins et al.
+
+https://www.reddit.com/r/cpp/comments/1b98t9t/c_club_170_wg21_feb_24_mailing_c_successors/[Reddit]
+
+== Media
+
+=== Video
+
+https://youtu.be/vMIvCyW-Qnc
+
+{{<youtube vMIvCyW-Qnc>}}
+
+=== Podcast
+
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/41b8e67b-66ca-4693-b26f-f16a6d9d109a
+
+{{<redcircle 41b8e67b-66ca-4693-b26f-f16a6d9d109a>}}
+
+== Regarding C++ successor languages
+
+Heard this from a colleague (thanks for the insight Chris S.!): Scala was initially positioned as a "better Java" when Java evolution stagnated. It had lots of syntactic sugar and more features, including FP. Some were very enthusiastic about this and took a risk of adopting Scala. Now, they are finding themselves in a pickle due to slow language evolution and dearth of expertise. In the meantime Java gained many of Scala features, and is more popular than ever.
+
+This reminds me of how C++ successor languages are being positioned now.
+
+[quote,Joe Kassabian]
+____
+Time is a flat circle.
+____
+
+== What's the status on "C++ 2.0" compilers like Circle, Carbon, cpp2 etc? Will Circle ever go open source?
+
+https://www.reddit.com/r/cpp/comments/1adhzeu/whats_the_status_on_c_20_compilers_like_circle/[Reddit]
+
+> The COVID-19 lockdown period was the Great Era of C++ Successor experimentation. Lockdown is over, and we are all ordered to go back to work. https://www.reddit.com/r/cpp/comments/1adhzeu/whats_the_status_on_c_20_compilers_like_circle/kk1c3kx/[↑]
+
+[quote,Sean Baxter]
+____
+Compilers need paid people to work on them, open source or not. Nobody is paying me to work on Circle, so I'm pretty certain nobody will pay anyone else to work on it either. I'm burning savings every day that goes by, and I need to prioritize software development, rather than all the other stuff that an open source effort requires--and which won't advance the project technically at all. https://www.reddit.com/r/cpp/comments/1adhzeu/whats_the_status_on_c_20_compilers_like_circle/kk1zltm/[↑]
+____
+
+What's the play here, I don't get it.
+
+== WG21 Mailing, February 2024
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/#mailing2024-02[Mailing]
+
+https://www.reddit.com/r/cpp/comments/1arumja/wg21_aka_c_standard_committee_february_2024/[Reddit]
+
+=== Reflection for C++26
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2996r2.html[P2996R2]
+
+https://cppcast.com/reflection_for_cpp26/[CppCast: Reflection for C++26, with Daveed Vandevoorde, EDG]
+
+* https://www.reddit.com/r/cpp/comments/1abg1ni/cppcast_reflection_for_c26/[Reddit]
+* https://www.reddit.com/r/cpp/comments/1abg1ni/cppcast_reflection_for_c26/kjnkpka/[Why can't we **simply**...]
+
+EDG = Edison Design Group
+
+The EDG compiler can impersonate multiple versions of GCC, Clang, or MSVC when analysing code, including all their features and bugs. _This sounds terrible if you are an EDG compiler developer._
+
+The new syntactical construct `[:foo:]` is called _**splicer**_. David says, "all the good delimiters were taken, and **reflexpr** looked heavy."
+
+For the opposite construct they went with the caret operator `^` because it illustrates the _**lift**_ operation.
+
+Writing `[:^int:]` is the same as writing `int`.
+
+=== Pattern Matching: **match** Expression
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2688r1.pdf[P2688R1] by Michael Park.
+
+=== **std::optional<T&>**
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2988r3.pdf[P2988R3] by Steve Downey and Peter Sommerlad.
+
+Assignment to `std::optional<T&>` means re-sitting of the optional, NOT assignment-through.
+
+=== Principled Design for WG21
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3004r0.pdf[P3004R0] by John Lakos et al., Bloomberg (65 pages).
+
+> This paper presents a formal, systematic, individual- and group-friendly design selection and/or refinement methodology called principled design. We offer several examples of using this principled-design process to evaluate proposed solutions using relevant, characterized, and ordered principles that represent design criteria and to compare each criterion to each solution. By scoring each solution against each principle in turn, we can quickly elucidate which solutions are nonviable, ultimately guiding us to consensus and an optimal resolution.
+
+* This paper is so meta I can't even.
+* Adding a level of indirection on top of the existing WG21 process: there should be an app for that.
+* Vik never gets to choose another team outing ever again.
+
+=== **indirect** and **polymorphic**: Vocabulary Types for Composite Class Design
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3019r6.html[P3019R6] by Jonathan Coe, Antony Peacock, and Sean Parent.
+
+____
+The class template `indirect` confers value-like semantics on a free-store-allocated object. An `indirect` may hold an object of a class `T`. Copying the indirect will copy the object `T`. When an `indirect<T>` is accessed through a `const` access path, constness will propagate to the owned object.
+
+The class template `polymorphic` confers value-like semantics on a dynamically-allocated object. A `polymorphic<T>` may hold an object of a class publicly derived from `T`. Copying the `polymorphic<T>` will copy the object of the derived type. When a `polymorphic<T>` is accessed through a `const` access path, constness will propagate to the owned object.
+____
+
+=== Quantities and units library
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3045r0.html[P3045R0] by Mateusz Pusz et al.
+
+=== **std::basic_fixed_string**
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3094r0.html[P3094R0] by Mateusz Pusz.
+
+> This paper proposes standardizing a string type that could be used at compile-time as a non-type template parameter (NTTP).
+
+=== Allowing exception throwing in constant-evaluation
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3068r0.pdf[P3068R0] by Hana Dusíková.
+
+=== **std::execution** Introduction
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3090r0.pdf[P3090R0] by Inbal Levi and Eric Niebler.
+
+> This paper aims to provide a high-level introduction to the design of https://wg21.link/P2300[P2300] and its guiding principles.
+
+=== A plan for **std::execution** for C++26
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3109r0.html[P3109R0]
+
+=== C++ Asynchronous Parallel Algorithms
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3300r0.html[P3300R0] by Bryce Adelstein Lelbach.
+
+=== Graph Library
+
+By Phil Ratzloff and Andrew Lumsdaine.
+
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3126r0.pdf[P3126R0] Overview
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3127r0.pdf[P3127R0] Background and Terminology
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3128r0.pdf[P3128R0] Algorithms
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3129r0.pdf[P3129R0] Views
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3130r0.pdf[P3130R0] Graph Container Interface
+* https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3131r0.pdf[P3131R0] Graph Containers
+
+=== Refining Contract Violation Enumerations
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3102r0.pdf[P3102R0] by Joshua Berne.
+
+=== Printing Blank Lines with **println**
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3142r0.pdf[P3142R0] by Alan Talbot.
+
+== Quote
+
+https://infosec.exchange/@0xabad1dea/111810652448906201
+
+[quote,abadidea via Mastodon]
+____
+a significant part of my job is telling the customer that their code contains undefined behavior that could explode in their faces on next compiler upgrade, to which the response, invariably, is that they are still using the exact same build of gcc as the day the company was founded in 2007, and they will bury that exact binary of gcc with them in their grave.
+____
