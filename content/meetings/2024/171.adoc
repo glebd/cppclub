@@ -1,0 +1,273 @@
+---
+title: 171. WG21 Tokyo, next 30 years, WH safety report
+author: Gleb Dolgich
+date: 2024-03-28
+tags:
+    - WG21
+    - Tokyo
+    - C++26
+    - Safety
+    - Government
+    - David Sankel
+    - Bjarne Stroustrup
+    - Reflection
+    - Contracts
+    - Pattern Matching
+    - Maya Posch
+    - Steve Klabnik
+---
+
+:showtitle:
+:toc:
+
+= 171. WG21 Tokyo, next 30 years, WH safety report
+
+Hej og vilkommen til C++ Club!
+
+With Bjarne Stroustrup, Gianluca Delfino, Jody Hagins, Frances Buontempo, Dmitry Kuzminov and Wenguang He.
+
+== Media
+
+=== Video
+
+https://youtu.be/2GxSWFMEcLk
+
+{{<youtube 2GxSWFMEcLk>}}
+
+=== Podcast
+
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/1a24f4c8-5ae9-4d36-884b-2a61ba818b47
+
+{{<redcircle 1a24f4c8-5ae9-4d36-884b-2a61ba818b47>}}
+
+== Follow-up
+
+=== Roi Barkan
+
+Imagine the combination of reflection and pattern matching (both having brackets in their syntax):
+
+[source,cpp]
+----
+constexpr auto enum_to_string(std::enum auto value) {
+  return value match {
+    template for (constexpr auto e: std::meta::members_of(^decltype(value)))
+      [[:e:]] => std::string{std::meta::name_of(e)};
+  }
+}
+----
+
+Val -> Hylo
+
+_*Val* sounded better, IMHO. Also, more friendly to foreign languages._
+
+Reify:: to make something more real or consider it as real (https://dictionary.cambridge.org/dictionary/english/reify[Cambridge Dictionary]). In C++ Reflection: to convert meta type to the actual type (not _materialize_ as I said previously because I couldn't remember the correct term).
+
+=== Rust pattern matching
+
+[source,rust]
+----
+let x = 1;
+
+match x {
+    1 | 2 => println!("one or two"),
+    3 => println!("three"),
+    _ => println!("anything"),
+}
+----
+
+=== CISA Paper quotes
+
+Listener SM from South Korea sent a couple of quotes from the https://www.cisa.gov/sites/default/files/2023-12/CSAC_TAC_Recommendations-Memory-Safety_Final_20231205_508.pdf[CISA paper on memory safety]:
+
+> On page 9: There is a table illustrating short / mid / long-term plans, for example, in 5+ years, "Companies use MSSL for all new code with attack surface". (MSSL: Memory Safe Systems Languages)
+
+> On page 12: "Encourage industry standards groups to take on memory safety standardization efforts. One example could be funding research projects with legacy unsafe language standards groups such as C and C++ to update standards and tools to default to memory safe features."
+
+We'll discuss this a bit later.
+
+== WG21 Tokyo meeting March 2024
+
+=== Trip reports
+
+* https://www.reddit.com/r/cpp/comments/1bloatw/202403_tokyo_iso_c_committee_trip_report_third/[Inbal Levy on Reddit]
+* https://herbsutter.com/2024/03/22/trip-report-winter-iso-c-standards-meeting-tokyo-japan/[Herb Sutter]
+** https://www.reddit.com/r/cpp/comments/1blh0pq/trip_report_winter_iso_c_standards_meeting_tokyo/[Reddit]
+
+> We all probably suspected that pattern matching is a “ground-shaking” proposed addition to future C++, but in Tokyo during the pattern matching session there was a literal earthquake that briefly interrupted the session!
+
+* https://www.think-cell.com/en/career/devblog/trip-report-spring-iso-cpp-meeting-in-tokyo-japan[Jonathan Müller]
+
+=== Principled design for WG21
+
+From WG21 email list:
+
+____
+The method suggested in the paper got support, even though some issues occurred:
+
+1. Questions regarding the need for such a method, as we already aim to have similar considerations with the existing proposals' structure (Motivation, design considerations).
+2. Question on whether this can create too much of an overhead, especially for small/medium non-controversial topics.
+
+There was a concern that the classifications proposed may be biased and affected by opinions, and therefore, the "grades" may be biased (as the "grades" and importance may be affected by one's assumptions).
+____
+
+== C++ and The Next 30 Years
+
+https://blog.developer.adobe.com/c-and-the-next-30-years-47c3b3b8fe98[David Sankel (Adobe)]
+
+> In the next 10 years I expect C\++ modules to become more accessible. Most C++ vendors have at least some support and CMake recently announced its feature set. However, transitioning existing code bases and, in many instances, bespoke build systems will be a great obstacle.
+
+Agreed, and hopefully CMake will be gradually phased out in favour of other build systems.
+
+> In the C++ feature department, we can expect static reflection, pattern matching, contracts, and sender/receiver to become available over the next decade.
+
+Yes, please!
+
+> AI-assisted coding is following the well-trodden Gartner hype cycle where inflated expectations precede an ultimate plateau of productivity. While we’re thankfully past the idea that AI-backed productivity gains will result in massive Software Engineering workforce reductions, I don’t think it is yet clear to what extent AI will improve software development productivity.
+
+Evidently, the management are not yet past this idea, as layoffs continue in favour of transition to "AI".
+
+> Another major factor over the next 10 years will be the growing usage of Rust by C++ developers.
+
+Hmm, I can see that.
+
+> One might wonder if today’s C++ successor hopefuls — Hylo, Swift, Cpp2, Carbon, Zig, Mojo, and Rust — will gain more traction at this time.
+
+C++ successor hopefuls? Putting established production languages like Swift and Rust side by side with language experiments? Hmm...
+
+> Swift and Rust are likely to remain due to the world’s existing dependence on them.
+
+Apple, you can start breathing again. Phew!
+
+> C\++ will remain important in niches, companies with large existing C++ code bases, and surrounding software assets no one wants to rewrite.
+
+That's quite a lot of 'niches'.
+
+> In the 10–20 year timeframe a few industry shifts will start to take hold. First, memory safety legislation will make usage of C and C\++ for new projects require special justification and oversight. Safety-critical applications will see C++ entirely phased out.
+
+Yes, legislation will solve everything. Just pass a law to forbid C++ in, say, automotive industry, embedded systems, military or space exploration. Boom! Solved.
+
+> Second, software engineering as an engineering discipline will mature with regulatory oversight, inspections, and enforcement of best practices becoming commonplace.
+
+This is the funniest sentence in the whole essay.
+
+> Finally, on the application side, AI will become the dominant form of human-computer interaction.
+
+https://knowyourmeme.com/editorials/guides/where-did-the-press-x-to-doubt-meme-originate-the-la-noire-inspired-meme-explained[Pressing X for Doubt].
+
+image::/img/doubt.png[]
+
+> C\++ in 20 to 30 years:
+> This period is difficult to predict, but the world will likely remain highly dependent on complicated and memory-unsafe C++.
+
+Wait, didn't you say it was going to be phased out, what with all the legislation?
+
+> However, rather than people, AI will be doing most of the coding; it will find and fix defects and we’ll trust it to do so.
+
+No, I take it back, _this_ is the funniest sentence of the essay.
+
+A probability-based autocomplete trained on poor quality code will suddenly create new good code and fix defects? Suuuuure.
+
+All in all, this is a pretty strange article by someone who authored the paper called https://isocpp.org/files/papers/P3023R1.html[C\++ should be C++].
+
+== The White House report on memory safety
+
+* https://www.whitehouse.gov/wp-content/uploads/2024/02/Final-ONCD-Technical-Report.pdf[United States White House Report on Memory Safe Programming [pdf]]
+** https://news.ycombinator.com/item?id=39514844[HN(1)]
+** https://news.ycombinator.com/item?id=39542440[HN(2)]
+
+____
+“While formal methods have been studied for decades, their deployment remains limited; further innovation in approaches to make formal methods widely accessible is vital to accelerate their broad adoption.” — White House
+
+Well gosh. I applied to US research programs with an interest in formal methods and was rejected absolutely across the board. Good luck to you. https://news.ycombinator.com/item?id=39542886[↑]
+____
+
+* https://www.infoworld.com/article/3714401/c-plus-plus-creator-rebuts-white-house-warning.html[Bjarne’s response]
+** https://www.reddit.com/r/programming/comments/1bhvwyd/c_creator_rebuts_white_house_warning/[Reddit 1]
+** https://www.reddit.com/r/cpp/comments/1bi2xmc/c_creator_rebuts_white_house_warning/[Reddit 2]
+** https://news.ycombinator.com/item?id=39751046[HN]
+** https://developers.slashdot.org/story/24/03/19/019240/c-creator-rebuts-white-house-warning[Slashdot]
+
+> “I find it surprising that the writers of those government documents seem oblivious of the strengths of contemporary C++ and the efforts to provide strong safety guarantees,” Stroustrup said. “On the other hand, they seem to have realized that a programming language is just one part of a tool chain, so that improved tools and development processes are essential.”
+
+[quote,Paul Krill, InfoWorld]
+____
+Biden administration seems oblivious of the strengths of contemporary C++ and the efforts to provide strong safety guarantees, Bjarne Stroustrup said.
+____
+
+Nice work, Mr. Krill, it sure seems like Biden's fault.
+
+> I've been in the industry long enough to know that there's a significant number of devs that will refuse to adopt new language standards. I'm 100% confident there are C\++ devs still writing C\++03 style code. Both because they simply haven't taken the time to know what's in C\++11 and later and because they have some mistrust and even irrational fears about enabling C++11 and later feature sets on their codebases. https://www.reddit.com/r/programming/comments/1bhvwyd/c_creator_rebuts_white_house_warning/kvhf84b/[↑]
+
+> I really respect Bjarne Stroustrup, but (_oh boy here we go_) he seems to not understand the fact that the problem is not in the language but in programmers who are failing to keep up with the pace of learning the safety features of C++. https://www.reddit.com/r/programming/comments/1bhvwyd/c_creator_rebuts_white_house_warning/kvhgynb/[↑] _Huh that's actually fair_
+
+https://www.pcmag.com/news/white-house-to-developers-using-c-plus-plus-invites-cybersecurity-risks[White House to Developers: Using C or C++ Invites Cybersecurity Risks (PC Magazine)]
+
+> Non-memory safe languages include C and C++, both of which are commonly used today. Memory safe languages include Rust, Go, C#, Java, Swift, Python, and JavaScript
+
+How many of those are self-hosted, and how many are implemented using C++?
+
+https://steveklabnik.com/writing/memory-safety-is-a-red-herring[Memory Safety is a Red Herring (Steve Klabnik)]
+
+____
+Your operating system does not offer memory-safe APIs. To do anything useful, you must call into the operating system. This means every program would be infected via this conception of safety, and therefore, as a definition, it would be useless.
+
+If we instead make an exception for a language’s runtime, which is allowed to make unsafe calls, but users’ code is not, that would draw an appropriate boundary: only write code in the guest language, and you don’t have to worry about safety anymore.
+____
+
+https://hackaday.com/2024/02/29/the-white-house-memory-safety-appeal-is-a-security-red-herring/[The White House Memory Safety Appeal Is a Security Red Herring (Maya Posch)]
+
+> Putting the focus on memory safety is more than a little suspect when the worst CVEs come from programmers not putting in basic checks for path traversal and forgetting to fully check user credentials. What is also worrying is the complete lack of any reference to the favorite language of the military, medical, and aviation fields where things going boom (prematurely) is generally considered a bad thing: Ada.
+
+> Even so, Ada’s lack of popularity outside of the aforementioned fields has led to a dearth of Ada programmers, which has resulted in C\++ ultimately being approved for DoD projects like the F-35 program, albeit with strong restrictions on acceptable code to bring it more into line with Ada. What this shows is perhaps that the problem is not so much C++, but more how you use it.
+
+> After all, C\++ by itself has no major issues with memory management or a lot of undefined behavior as long as you keep away from its C compatibility syntax. With RAII (resource allocation is initialization) and encapsulating code into classes with well-tested constructors and destructors, you avoid many of the issues that plague C. Add to this C++’s standard template library (STL) with std::string and containers that replace the nightmarish and error-prone C-style strings and arrays, and suddenly you have to try pretty hard to get code that has any memory-related issues, because simple buffer overruns no longer happen.
+
+> Perhaps in this era of instant-gratification LLM code generating tools and “cut/paste from Stack Overflow”, we have forgotten the most important thing of all about programming. Namely that it is an engineering discipline that requires planning, documenting, testing, and feeling like the more you learn, the less you know, and the more easy mistakes you make as you write more complicated programs.
+
+> This is perhaps why the ONCD report feels so wrong, as it contains none of the lessons of the past, nor the hard-won experiences of those who write the code that keeps much of society up and running. You can almost hear the cries of many senior software engineers as they wonder whether they’re merely chopped liver in the eyes of government organizations, even as said organizations are kept running due to countless lines of Ada, COBOL, C and C++ code. Never mind the security researchers who despair as basic input validation is once again ignored in favor of buzzwords pushed by a couple large corporations.
+
+* https://lobste.rs/s/u2t1cs/path_toward_secure_measurable_software[Path toward secure measurable software (Lobsters)]
+* https://mastodon.gamedev.place/@sos/112042062939170429[Safe languages are not all free (@sos via Mastodon)]
+* https://herbsutter.com/2024/03/11/safety-in-context/[C++ safety, in context (Herb Sutter)]
+** https://news.ycombinator.com/item?id=39676702[HN]
+** https://www.reddit.com/r/cpp/comments/1bcqj0m/c_safety_in_context/[Reddit]
+
+> It's unfortunate that mr. Sutter still throws C and C\++ into one bucket, and then concludes that bounds checking is a problem that "we" have. This data really needs to be split into three categories: C, C++ as written by people that will never progress beyond C\++ 98, and C++ as written by people that use modern tools to begin with. The first two groups should be considered as being outside the target audience for any kind of safety initiative. https://www.reddit.com/r/cpp/comments/1bcqj0m/c_safety_in_context/kuhx540/[↑]
+
+* https://btmc.substack.com/p/memory-unsafety-is-an-attitude-problem[Memory Unsafety is an Attitude Problem (Sir Whinesalot)]
+
+> The online discourse quickly devolved into “just rewrite it in Rust bro!” which I find a bit unfortunate because it is a relevant report and the use of memory safe languages is just the main recommendation, other possibilities are given. I urge everyone to actually read the report and not just immediately jump to conclusions.
+
+* https://accu.org/journals/overload/32/179/teodorescu/[Safety, Revisited (Lucian Radu Teodorescu)]
+** https://www.reddit.com/r/cpp/comments/1apwtl7/safety_revisited/[Reddit]
+
+> C\++ has too much undefined behaviour to become a safe programming language in the foreseeable future. One way or another, all the C++ experts cited here agree on that.
+
+* https://johnfarrier.com/looking-for-pointers-the-c-memory-safety-debate/[Looking for Pointers: The C++ Memory Safety Debate (John Farrier)]
+** https://www.reddit.com/r/cpp/comments/1bnd5aj/looking_for_pointers_the_c_memory_safety_debate/[Reddit]
+
+> <...> the narrative of C++ as inherently unsafe oversimplifies the situation. The language has undergone substantial evolution, with modern iterations emphasizing safer memory practices without compromising the language’s core principles of efficiency and control.
+
+> The journey toward making C\++ a safer language is complex and fraught with challenges. However, the discussions and proposals led by Stroustrup and supported by the broader C++ community suggest a forward path that respects the language’s legacy while addressing the pressing needs of modern computing.
+
+> Right now, many of the articles about modern C\++ and memory safe C++ end up preaching to the choir. The advice doesn’t reach all corners of industry, and many places in academia are stuck in their ways. If you go to small CS programs at small schools, you will frequently find people learning C\++ as C++ 98 or C\++ 03, so they see C++ as “C with Classes and Templates” or “Java without a GC”. https://www.reddit.com/r/cpp/comments/1bnd5aj/looking_for_pointers_the_c_memory_safety_debate/kwhft2g/[↑]
+
+== Mastodon: Clothes
+
+https://mastodon.social/@nixCraft/112037980887829843
+
+[quote,ash]
+____
+"Why do you have a messy pile of clothes in the chair?"
+
+"It's L1 cache for fast random access to our frequently used clother in O(1) time"
+____
+
+== Mastodon: Embedded software development
+
+https://octodon.social/@faho/111306878523313027
+
+[quote,Tenacious B (@faho@octodon.social)]
+____
+"Embedded software development" is when you write software in your bed
+____
