@@ -1,0 +1,217 @@
+---
+title: 171. TODO
+author: Gleb Dolgich
+date: 2024-03-20
+tags:
+    - Borland
+    - Turbo C++
+    - Microsoft
+    - Visual C++
+    - History
+    - Retrocomputing
+    - Books
+    - Lambda
+    - Boost
+    - C++23
+    - argparse
+    - Crubit
+    - Stronk
+    - Bartłomiej Filipek
+    - Tomasz Wisniewski
+    - Predrag Gruevski
+    - UB
+    - IDE
+    - CMake
+    - Rust
+---
+
+:showtitle:
+:toc:
+
+= 170. TODO
+
+== Media
+
+=== Video
+
+Coming soon.
+
+=== Podcast
+
+Coming soon.
+
+== Boost: good or bad?
+
+From Reddit:
+
+https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/[Annoyed with Overuse of Boost in C++ Discussions]
+
+https://www.reddit.com/r/cpp/comments/18plb43/annoyed_with_fud_surrounding_boost_in_c/[Annoyed with FUD surrounding Boost in C++ discussions]
+
+== The C++20 Naughty and Nice List for Game Devs
+
+https://www.jeremyong.com/c++/2023/12/24/cpp20-gamedev-naughty-nice/[Jeremy Ong]
+
+Discussions: https://news.ycombinator.com/item?id=38760120[HN], https://lobste.rs/s/ocnwuf/c_20_naughty_nice_list_for_game_devs[Lobsters]
+
+== Learn Modern C++
+
+https://learnmoderncpp.com/[A self-study C++20 course] by Richard Spencer
+
+https://github.com/cpp-tutor/learnmoderncpp-tutorial[GitHub]
+
+== How often do you create memory leak or segfault bugs with modern C++?
+
+https://www.reddit.com/r/cpp/comments/16nfksr/how_often_do_you_create_memory_leak_or_segfault/[Reddit]
+
+== Safety, Revisited
+
+https://accu.org/journals/overload/32/179/teodorescu/[Lucian Radu Teodorescu]
+
+https://www.reddit.com/r/cpp/comments/1apwtl7/safety_revisited/[Reddit]
+
+== Lambdas in C++23
+
+* https://www.sandordargo.com/blog/2022/11/23/cpp23-changes-to-lambdas[Sandor Dargo]
+* https://lobste.rs/s/15awsx/c_23_how_lambdas_are_going_change[Lobsters]
+
+== argparse 2.9 released
+
+* https://github.com/p-ranav/argparse[GitHub]
+* https://www.reddit.com/r/cpp/comments/xl05c1/argparse_v29_released_now_with_support_for/[Reddit]
+
+== Google Crubit
+
+Crubit: C++/Rust Bidirectional Interop Tool
+
+* https://github.com/google/crubit[GitHub]
+* https://github.com/google/crubit/blob/main/docs/design.md[Design documentation]
+
+== Stronk - a strong type and unit library
+
+* https://github.com/twig-energy/stronk/[GitHub]
+* https://www.reddit.com/r/cpp/comments/x1jag3/stronk_an_easy_to_customize_strong_type_library/[Reddit]
+
+== Can you link 2 binaries compiled with 2 different C++ compilers?
+
+https://www.reddit.com/r/cpp/comments/134gaqw/can_you_link_2_binaries_compiled_with_2_different/[Reddit]
+
+== New C++23 features I'm excited about, by Tomasz Wisniewski
+
+https://twdev.blog/2022/10/cpp23/[Article]
+
+== Revisiting Turbo C++
+
+* https://hackaday.com/2023/04/08/revisiting-borland-turbo-c-and-c/[Maya Posch]
+* https://www.codeproject.com/Articles/5358258/Revisiting-Borland-Turbo-C-Cplusplus-A-Great-IDE-b[Tough Developer]
+
+See also: https://blogsystem5.substack.com/p/the-ides-we-had-30-years-ago-and[The IDEs we had 30 years ago... and we lost], discussed on https://news.ycombinator.com/item?id=38792446[HN] and https://lobste.rs/s/md9jcb/ides_we_had_30_years_ago_we_lost[Lobsters]
+
+image::/img/turbo_c_3050.webp[]
+
+== A visual history of Visual C++
+
+http://www.malsmith.net/blog/visual-c-visual-history/[Article]
+
+image::/img/msvc1.png[]
+
+== A Year of C++ Improvements in Visual Studio, VS Code, and vcpkg
+
+https://devblogs.microsoft.com/cppblog/a-year-of-cpp-improvements-in-visual-studio-vs-code-and-vcpkg/[Sy Brand, Microsoft]
+
+== Book: _C++ Initialization Story_, by Bartłomiej Filipek
+
+https://www.cppstories.com/2023/init-story-print/[Blog post]
+
+== Falsehoods programmers believe about undefined behavior
+
+https://predr.ag/blog/falsehoods-programmers-believe-about-undefined-behavior/[Predrag Gruevski]
+
+____
+The moment your program contains UB, all bets are off.
+
+Even if it's just one little UB.
+
+Even if it's never executed.
+
+Even if you don't know it's there at all.
+____
+
+Thinking of using this next time when I have to prove that my UB fix is actually necessary.
+
+== Blender forum: Speeding up C++ builds
+
+https://devtalk.blender.org/t/speed-up-c-compilation/30508/11[Article]
+
+== Subspace
+
+* https://suslib.cc/[Home page]
+* https://github.com/chromium/subspace[GitHub]
+* https://github.com/chromium/subspace/tree/main/subdoc[SubDoc]
+
+== Accidentally hiding base virtual functions
+
+[source,cpp]
+----
+#include <iostream>
+
+struct B
+{
+    virtual ~B() = default;
+    virtual void foo() { std::cout << "B::foo()\n"; }
+    virtual void foo(int) { std::cout << "B::foo(int)\n"; }
+};
+
+struct D1 : B
+{
+    void foo() override { std::cout << "I::foo()\n"; }
+    // ^ MSVC warning 4266: no override for foo(int); function is hidden
+};
+
+struct D2 final : D1
+{
+    void foo() override { std::cout << "D::foo()\n"; }
+    void foo(int) override { std::cout << "D::foo(int)\n"; }
+};
+
+int main(int /*argc*/, char** /*argv*/)
+{
+    B b;
+    b.foo();
+    b.foo(0);
+
+    D1 i;
+    i.foo();
+    i.foo(0);    // Does not compile: base function is hidden
+    i.B::foo(0); // Call base version
+
+    D2 d;
+    d.foo();
+    d.foo(0);
+
+    return 0;
+}
+----
+
+== Rust and C++ interop
+
+* https://security.googleblog.com/2024/02/improving-interoperability-between-rust-and-c.html[Improving Interoperability Between Rust and C++ (Google)]
+** https://www.reddit.com/r/cpp/comments/1aqmx9m/interoperability_with_rust/[Reddit]
+** https://developers.slashdot.org/story/24/02/09/216222/to-help-rustc-interoperability-google-gives-rust-foundation-1m[Slashdot]
+
+> Old codebases need maintenance. It is a technical debt that comes due eventually. The most direct approach to improve security and quality of C\++ project is to migrate to more recent C++ specification and compilers. Adding layer of "rust" to old codebases is not going to make them safer or better. https://developers.slashdot.org/comments.pl?sid=23221784&cid=64230408[↑]
+
+See also: https://www.swift.org/documentation/cxx-interop/[Mixing Swift and C++]
+
+== Why CMake sucks
+
+https://twdev.blog/2021/08/cmake/[Tomasz Wisniewski]
+
+https://lobste.rs/s/i2qnqj[Lobsters]
+
+Follow-ups by Tomasz Wisniewski:
+
+* https://twdev.blog/2022/09/meson/[Intro to Meson]
+* https://twdev.blog/2023/05/cppsetup/[My setup for personal C++ projects]
+
+See also: https://www.reddit.com/r/cpp/comments/1avpnen/cmake_is_the_perfect_build_tool_for_c/[CMake is the perfect build tool for C++ (Reddit)]
