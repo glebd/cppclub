@@ -1,7 +1,7 @@
 ---
 title: 171. TODO
 author: Gleb Dolgich
-date: 2024-03-20
+date: 2024-03-09
 tags:
     - Borland
     - Turbo C++
@@ -39,6 +39,36 @@ Coming soon.
 === Podcast
 
 Coming soon.
+
+== Follow-up
+
+=== Roi Barkan
+
+Imagine the combination of reflection and pattern matching (both having brackets in their syntax):
+
+[source,cpp]
+----
+constexpr auto enum_to_string(std::enum auto value) {
+  return value match {
+    template for (constexpr auto e: std::meta::members_of(^decltype(value)))
+      [[:e:]] => std::string{std::meta::name_of(e)};
+  }
+}
+----
+
+Val -> Hylo
+
+=== Reify
+
+Reify: convert meta type to the actual type (not materialize as I said previously because I couldn't remember the correct term).
+
+=== Rust pattern matching
+
+TODO
+
+=== Principled design for WG21
+
+TODO
 
 == Boost: good or bad?
 
