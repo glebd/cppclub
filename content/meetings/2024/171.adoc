@@ -58,9 +58,9 @@ constexpr auto enum_to_string(std::enum auto value) {
 
 Val -> Hylo
 
-=== Reify
+_Val sounded better, IMHO._
 
-Reify: convert meta type to the actual type (not materialize as I said previously because I couldn't remember the correct term).
+Reify:: to make something more real or consider it as real (https://dictionary.cambridge.org/dictionary/english/reify[Cambridge Dictionary]). In C++ Reflection: to convert meta type to the actual type (not _materialize_ as I said previously because I couldn't remember the correct term).
 
 === Rust pattern matching
 
@@ -69,6 +69,63 @@ TODO
 === Principled design for WG21
 
 TODO
+
+== C++ and The Next 30 Years
+
+https://blog.developer.adobe.com/c-and-the-next-30-years-47c3b3b8fe98[David Sankel (Adobe)]
+
+> In the next 10 years I expect C\++ modules to become more accessible. Most C++ vendors have at least some support and CMake recently announced its feature set. However, transitioning existing code bases and, in many instances, bespoke build systems will be a great obstacle.
+
+Agreed, and hopefully CMake will be gradually phased out in favour of other build systems.
+
+> In the C++ feature department, we can expect static reflection, pattern matching, contracts, and sender/receiver to become available over the next decade.
+
+Yes, please!
+
+> AI-assisted coding is following the well-trodden Gartner hype cycle where inflated expectations precede an ultimate plateau of productivity. While we’re thankfully past the idea that AI-backed productivity gains will result in massive Software Engineering workforce reductions, I don’t think it is yet clear to what extent AI will improve software development productivity.
+
+Evidently, the management are not yet past this idea, as layoffs continue in favour of transition to "AI".
+
+> Another major factor over the next 10 years will be the growing usage of Rust by C++ developers.
+
+Hmm, I can see that.
+
+> One might wonder if today’s C++ successor hopefuls — Hylo, Swift, Cpp2, Carbon, Zig, Mojo, and Rust — will gain more traction at this time.
+
+C++ successor hopefuls? Putting established production languages like Swift and Rust side by side with language experiments? Hmm...
+
+> Swift and Rust are likely to remain due to the world’s existing dependence on them.
+
+Apple says thank you.
+
+> C\++ will remain important in niches, companies with large existing C++ code bases, and surrounding software assets no one wants to rewrite.
+
+That's quite a lot of 'niches'.
+
+> In the 10–20 year timeframe a few industry shifts will start to take hold. First, memory safety legislation will make usage of C and C\++ for new projects require special justification and oversight. Safety-critical applications will see C++ entirely phased out.
+
+Yes, legislation will solve everything. Just pass a law to forbid C++ in, say, military or space exploration. Boom! Solved.
+
+> Second, software engineering as an engineering discipline will mature with regulatory oversight, inspections, and enforcement of best practices becoming commonplace.
+
+This is the funniest sentence in the whole essay.
+
+> Finally, on the application side, AI will become the dominant form of human-computer interaction.
+
+https://knowyourmeme.com/editorials/guides/where-did-the-press-x-to-doubt-meme-originate-the-la-noire-inspired-meme-explained[Pressing X for Doubt].
+
+image::/img/doubt.png[]
+
+> C\++ in 20 to 30 years:
+> This period is difficult to predict, but the world will likely remain highly dependent on complicated and memory-unsafe C++.
+
+Wait, didn't you say it was going to be phased out, what with all the legislation?
+
+> However, rather than people, AI will be doing most of the coding; it will find and fix defects and we’ll trust it to do so.
+
+No, I take it back, _this_ is the funniest sentence in the essay. A probability-based autocomplete trained on bad code will suddenly produce new good code and fix defects? Give me a break.
+
+This is a strange aricle by someone who authored the paper https://isocpp.org/files/papers/P3023R1.html[C\++ should be C++].
 
 == Boost: good or bad?
 
