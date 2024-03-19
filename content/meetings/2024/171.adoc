@@ -108,6 +108,8 @@ Yes, legislation will solve everything. Just pass a law to forbid C++ in, say, m
 
 > Second, software engineering as an engineering discipline will mature with regulatory oversight, inspections, and enforcement of best practices becoming commonplace.
 
+TODO: Laughter track
+
 This is the funniest sentence in the whole essay.
 
 > Finally, on the application side, AI will become the dominant form of human-computer interaction.
@@ -123,9 +125,13 @@ Wait, didn't you say it was going to be phased out, what with all the legislatio
 
 > However, rather than people, AI will be doing most of the coding; it will find and fix defects and we’ll trust it to do so.
 
-No, I take it back, _this_ is the funniest sentence in the essay. A probability-based autocomplete trained on bad code will suddenly produce new good code and fix defects? Give me a break.
+No, I take it back, _this_ is the funniest sentence in the essay.
 
-This is a strange aricle by someone who authored the paper https://isocpp.org/files/papers/P3023R1.html[C\++ should be C++].
+TODO: Louder laughter track
+
+A probability-based autocomplete trained on poor quality code will suddenly create new good code and fix defects? Give me a break.
+
+All in all, this is a pretty strange aricle by someone who authored the paper called https://isocpp.org/files/papers/P3023R1.html[C\++ should be C++].
 
 == Boost: good or bad?
 
