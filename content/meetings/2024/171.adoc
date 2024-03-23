@@ -58,7 +58,7 @@ constexpr auto enum_to_string(std::enum auto value) {
 
 Val -> Hylo
 
-_Val sounded better, IMHO._
+_*Val* sounded better, IMHO._
 
 Reify:: to make something more real or consider it as real (https://dictionary.cambridge.org/dictionary/english/reify[Cambridge Dictionary]). In C++ Reflection: to convert meta type to the actual type (not _materialize_ as I said previously because I couldn't remember the correct term).
 
@@ -69,6 +69,14 @@ TODO
 === Principled design for WG21
 
 TODO
+
+== WG21 Tokyo meeting March 2024
+
+* https://www.reddit.com/r/cpp/comments/1bloatw/202403_tokyo_iso_c_committee_trip_report_third/[Inbal Levy on Reddit]
+* https://herbsutter.com/2024/03/22/trip-report-winter-iso-c-standards-meeting-tokyo-japan/[Herb Sutter]
+** https://www.reddit.com/r/cpp/comments/1blh0pq/trip_report_winter_iso_c_standards_meeting_tokyo/[Reddit]
+
+> We all probably suspected that pattern matching is a “ground-shaking” proposed addition to future C++, but in Tokyo during the pattern matching session there was a literal earthquake that briefly interrupted the session!
 
 == C++ and The Next 30 Years
 
@@ -96,7 +104,7 @@ C++ successor hopefuls? Putting established production languages like Swift and 
 
 > Swift and Rust are likely to remain due to the world’s existing dependence on them.
 
-Apple says thank you.
+Apple, you can start breathing again. Phew!
 
 > C\++ will remain important in niches, companies with large existing C++ code bases, and surrounding software assets no one wants to rewrite.
 
@@ -104,7 +112,7 @@ That's quite a lot of 'niches'.
 
 > In the 10–20 year timeframe a few industry shifts will start to take hold. First, memory safety legislation will make usage of C and C\++ for new projects require special justification and oversight. Safety-critical applications will see C++ entirely phased out.
 
-Yes, legislation will solve everything. Just pass a law to forbid C++ in, say, military or space exploration. Boom! Solved.
+Yes, legislation will solve everything. Just pass a law to forbid C++ in, say, automotive industry, embedded systems, military or space exploration. Boom! Solved.
 
 > Second, software engineering as an engineering discipline will mature with regulatory oversight, inspections, and enforcement of best practices becoming commonplace.
 
@@ -125,11 +133,11 @@ Wait, didn't you say it was going to be phased out, what with all the legislatio
 
 > However, rather than people, AI will be doing most of the coding; it will find and fix defects and we’ll trust it to do so.
 
-No, I take it back, _this_ is the funniest sentence in the essay.
+No, I take it back, _this_ is the funniest sentence of the essay.
 
 TODO: Louder laughter track
 
-A probability-based autocomplete trained on poor quality code will suddenly create new good code and fix defects? Give me a break.
+A probability-based autocomplete trained on poor quality code will suddenly create new good code and fix defects? Suuuuure.
 
 All in all, this is a pretty strange aricle by someone who authored the paper called https://isocpp.org/files/papers/P3023R1.html[C\++ should be C++].
 
@@ -307,4 +315,8 @@ Follow-ups by Tomasz Wisniewski:
 * https://twdev.blog/2022/09/meson/[Intro to Meson]
 * https://twdev.blog/2023/05/cppsetup/[My setup for personal C++ projects]
 
-See also: https://www.reddit.com/r/cpp/comments/1avpnen/cmake_is_the_perfect_build_tool_for_c/[CMake is the perfect build tool for C++ (Reddit)]
+See also:
+
+* https://www.reddit.com/r/cpp/comments/1avpnen/cmake_is_the_perfect_build_tool_for_c/[CMake is the perfect build tool for C++ (Reddit)]
+* https://cliutils.gitlab.io/modern-cmake/[Intro to Modern CMake]
+** https://news.ycombinator.com/item?id=39784784[HackerNews]
