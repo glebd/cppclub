@@ -183,11 +183,26 @@ https://github.com/cpp-tutor/learnmoderncpp-tutorial[GitHub]
 
 https://www.reddit.com/r/cpp/comments/16nfksr/how_often_do_you_create_memory_leak_or_segfault/[Reddit]
 
-== Safety, Revisited
+== White House report on memory safety (sigh)
 
-https://accu.org/journals/overload/32/179/teodorescu/[Lucian Radu Teodorescu]
-
-https://www.reddit.com/r/cpp/comments/1apwtl7/safety_revisited/[Reddit]
+* https://www.whitehouse.gov/wp-content/uploads/2024/02/Final-ONCD-Technical-Report.pdf[United States White House Report on Memory Safe Programming [pdf]]
+** https://news.ycombinator.com/item?id=39542440[HN]
+* https://www.pcmag.com/news/white-house-to-developers-using-c-plus-plus-invites-cybersecurity-risks[White House to Developers: Using C or C++ Invites Cybersecurity Risks (PC Magazine)]
+* https://hackaday.com/2024/02/29/the-white-house-memory-safety-appeal-is-a-security-red-herring/[The White House Memory Safety Appeal Is a Security Red Herring (Maya Posch)]
+* https://steveklabnik.com/writing/memory-safety-is-a-red-herring[Memory Safety is a Red Herring (Steve Klabnik)]
+* https://lobste.rs/s/u2t1cs/path_toward_secure_measurable_software[Path toward secure measurable software (Lobsters)]
+* https://mastodon.gamedev.place/@sos/112042062939170429[Safe languages are not all free (@sos via Mastodon)]
+* https://www.infoworld.com/article/3714401/c-plus-plus-creator-rebuts-white-house-warning.html[Bjarne’s response]
+** https://www.reddit.com/r/programming/comments/1bhvwyd/c_creator_rebuts_white_house_warning/[Reddit 1]
+** https://www.reddit.com/r/cpp/comments/1bi2xmc/c_creator_rebuts_white_house_warning/[Reddit 2]
+** https://news.ycombinator.com/item?id=39751046[HN]
+** https://developers.slashdot.org/story/24/03/19/019240/c-creator-rebuts-white-house-warning[Slashdot]
+* https://herbsutter.com/2024/03/11/safety-in-context/[C++ safety, in context (Herb Sutter)]
+** https://www.reddit.com/r/cpp/comments/1bcqj0m/c_safety_in_context/[Reddit]
+** https://news.ycombinator.com/item?id=39676702[HN]
+* https://btmc.substack.com/p/memory-unsafety-is-an-attitude-problem[Memory Unsafety is an Attitude Problem (Sir Whinesalot)]
+* https://accu.org/journals/overload/32/179/teodorescu/[Safety, Revisited (Lucian Radu Teodorescu)]
+** https://www.reddit.com/r/cpp/comments/1apwtl7/safety_revisited/[Reddit]
 
 == Lambdas in C++23
 
@@ -338,3 +353,4 @@ See also:
 * https://www.reddit.com/r/cpp/comments/1avpnen/cmake_is_the_perfect_build_tool_for_c/[CMake is the perfect build tool for C++ (Reddit)]
 * https://cliutils.gitlab.io/modern-cmake/[Intro to Modern CMake]
 ** https://news.ycombinator.com/item?id=39784784[HackerNews]
+* https://www.reddit.com/r/cpp/comments/1b53rks/is_cmake_the_de_facto_standard_mandatory_to_use/[Is CMake the de facto standard mandatory to use? (Reddit)]
