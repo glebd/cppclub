@@ -64,11 +64,29 @@ Reify:: to make something more real or consider it as real (https://dictionary.c
 
 === Rust pattern matching
 
-TODO
+[source,rust]
+----
+let x = 1;
+
+match x {
+    1 | 2 => println!("one or two"),
+    3 => println!("three"),
+    _ => println!("anything"),
+}
+----
 
 === Principled design for WG21
 
-TODO
+From WG21 email list:
+
+____
+The method suggested in the paper got support, even though some issues occurred:
+
+1. Questions regarding the need for such a method, as we already aim to have similar considerations with the existing proposals' structure (Motivation, design considerations).
+2. Question on whether this can create too much of an overhead, especially for small/medium non-controversial topics.
+
+There was a concern that the classifications proposed may be biased and affected by opinions, and therefore, the "grades" may be biased (as the "grades" and importance may be affected by one's assumptions).
+____
 
 == WG21 Tokyo meeting March 2024
 
