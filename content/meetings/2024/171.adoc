@@ -58,7 +58,7 @@ constexpr auto enum_to_string(std::enum auto value) {
 
 Val -> Hylo
 
-_*Val* sounded better, IMHO._
+_*Val* sounded better, IMHO. Also, more friendly to foreign languages._
 
 Reify:: to make something more real or consider it as real (https://dictionary.cambridge.org/dictionary/english/reify[Cambridge Dictionary]). In C++ Reflection: to convert meta type to the actual type (not _materialize_ as I said previously because I couldn't remember the correct term).
 
@@ -165,6 +165,16 @@ From Reddit:
 
 https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/[Annoyed with Overuse of Boost in C++ Discussions]
 
+> For instance, I was recently exploring Interprocess, only to find out I needed Boost.Date, which led me to implement it myself rather than dealing with the extra dependency.
+
+Ah yes, a date library, famously easy to implement. (OK, they used a **std::chrono** wrapper, but still.)
+
+> And in your lack of experience, you committed a cardinal sin of programming. NEVER write your own datetime implementation unless you are prepared to dedicate a team to maintain it. Time zones are impossible, leap seconds will screw you, and numerous other pitfalls await. It's almost always a terrible idea. Use a library that gets tons of real world use and debugging. https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/keth1qx/[↑]
+
+> Boost is now modular you don’t need to build the full Boost Set of libraries + with vcpkg it is straightforward : i don’t understand why people try to reimplement sub parts of Boost in worse way. Sometime you can find better libraries than the Boost ones and that perfect, but imo Boost is the first to be tried. https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/keq84wr/[↑]
+
+> We here use boost extensively, both server and embedded. Honestly I don’t know what all the fuss is about. It’s excellent code, well maintained by top folks in the c++ world. If you don’t like it, don’t use it. But don’t whine when other people do. https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/keosn2x/[↑]
+
 https://www.reddit.com/r/cpp/comments/18plb43/annoyed_with_fud_surrounding_boost_in_c/[Annoyed with FUD surrounding Boost in C++ discussions]
 
 == The C++20 Naughty and Nice List for Game Devs
@@ -182,6 +192,10 @@ https://github.com/cpp-tutor/learnmoderncpp-tutorial[GitHub]
 == How often do you create memory leak or segfault bugs with modern C++?
 
 https://www.reddit.com/r/cpp/comments/16nfksr/how_often_do_you_create_memory_leak_or_segfault/[Reddit]
+
+> Memory leaks - pretty much never. RAII takes care of those way too well for them to happen. The only time I may make them is if I have a resource that I simply don't know I have to cleanup.
+Segfaults - I do sometimes make them, particularly during development. They are much more likely when I interface with very low level code (e.g. OS APIs or other low-level libraries), which tends to have many pointers and/or poor type safety. In high level code I make them much less commonly.
+Overall, I personally don't find memory management in C++ to be too troublesome. https://www.reddit.com/r/cpp/comments/16nfksr/how_often_do_you_create_memory_leak_or_segfault/k1e2sam/[↑]
 
 == White House report on memory safety
 
@@ -357,13 +371,22 @@ See also:
 ** https://news.ycombinator.com/item?id=39784784[HackerNews]
 * https://www.reddit.com/r/cpp/comments/1b53rks/is_cmake_the_de_facto_standard_mandatory_to_use/[Is CMake the de facto standard mandatory to use? (Reddit)]
 
-== Mastodon
+== Mastodon: Clothes
 
 https://mastodon.social/@nixCraft/112037980887829843
 
-[quote, ash]
+[quote,ash]
 ____
 "Why do you have a messy pile of clothes in the chair?"
 
 "It's L1 cache for fast random access to our frequently used clother in O(1) time"
+____
+
+== Mastodon: Embedded software development
+
+https://octodon.social/@faho/111306878523313027
+
+[quote,Tenacious B (@faho@octodon.social)]
+____
+"Embedded software development" is when you write software in your bed
 ____
