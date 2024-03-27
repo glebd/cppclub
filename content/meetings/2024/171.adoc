@@ -75,6 +75,16 @@ match x {
 }
 ----
 
+=== CISA Paper quotes
+
+Listener SM from South Korea sent a couple of quotes from the https://www.cisa.gov/sites/default/files/2023-12/CSAC_TAC_Recommendations-Memory-Safety_Final_20231205_508.pdf[CISA paper on memory safety]:
+
+> On page 9: There is a table illustrating short / mid / long-term plans, for example, in 5+ years, "Companies use MSSL for all new code with attack surface". (MSSL: Memory Safe Systems Languages)
+
+> On page 12: "Encourage industry standards groups to take on memory safety standardization efforts. One example could be funding research projects with legacy unsafe language standards groups such as C and C++ to update standards and tools to default to memory safe features."
+
+We'll discuss this a bit later.
+
 === Principled design for WG21
 
 From WG21 email list:
