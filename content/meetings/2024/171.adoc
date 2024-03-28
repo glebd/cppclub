@@ -3,6 +3,8 @@ title: 171. TODO
 author: Gleb Dolgich
 date: 2024-03-09
 tags:
+    - WG21
+    - Tokyo
     - Borland
     - Turbo C++
     - Microsoft
@@ -12,6 +14,7 @@ tags:
     - Books
     - Lambda
     - Boost
+    - C++20
     - C++23
     - argparse
     - Crubit
@@ -23,6 +26,8 @@ tags:
     - IDE
     - CMake
     - Rust
+    - Safety
+    - Government
 ---
 
 :showtitle:
@@ -210,25 +215,118 @@ Overall, I personally don't find memory management in C++ to be too troublesome.
 == White House report on memory safety
 
 * https://www.whitehouse.gov/wp-content/uploads/2024/02/Final-ONCD-Technical-Report.pdf[United States White House Report on Memory Safe Programming [pdf]]
-** https://news.ycombinator.com/item?id=39542440[HN]
-* https://www.pcmag.com/news/white-house-to-developers-using-c-plus-plus-invites-cybersecurity-risks[White House to Developers: Using C or C++ Invites Cybersecurity Risks (PC Magazine)]
-* https://hackaday.com/2024/02/29/the-white-house-memory-safety-appeal-is-a-security-red-herring/[The White House Memory Safety Appeal Is a Security Red Herring (Maya Posch)]
-* https://steveklabnik.com/writing/memory-safety-is-a-red-herring[Memory Safety is a Red Herring (Steve Klabnik)]
-* https://lobste.rs/s/u2t1cs/path_toward_secure_measurable_software[Path toward secure measurable software (Lobsters)]
-* https://mastodon.gamedev.place/@sos/112042062939170429[Safe languages are not all free (@sos via Mastodon)]
+** https://news.ycombinator.com/item?id=39514844[HN(1)]
+** https://news.ycombinator.com/item?id=39542440[HN(2)]
+
+____
+“While formal methods have been studied for decades, their deployment remains limited; further innovation in approaches to make formal methods widely accessible is vital to accelerate their broad adoption.” — White House
+
+Well gosh. I applied to US research programs with an interest in formal methods and was rejected absolutely across the board. Good luck to you. https://news.ycombinator.com/item?id=39542886[↑]
+____
+
 * https://www.infoworld.com/article/3714401/c-plus-plus-creator-rebuts-white-house-warning.html[Bjarne’s response]
 ** https://www.reddit.com/r/programming/comments/1bhvwyd/c_creator_rebuts_white_house_warning/[Reddit 1]
 ** https://www.reddit.com/r/cpp/comments/1bi2xmc/c_creator_rebuts_white_house_warning/[Reddit 2]
 ** https://news.ycombinator.com/item?id=39751046[HN]
 ** https://developers.slashdot.org/story/24/03/19/019240/c-creator-rebuts-white-house-warning[Slashdot]
+
+> “I find it surprising that the writers of those government documents seem oblivious of the strengths of contemporary C++ and the efforts to provide strong safety guarantees,” Stroustrup said. “On the other hand, they seem to have realized that a programming language is just one part of a tool chain, so that improved tools and development processes are essential.”
+
+[quote,Paul Krill, InfoWorld]
+____
+Biden administration seems oblivious of the strengths of contemporary C++ and the efforts to provide strong safety guarantees, Bjarne Stroustrup said.
+____
+
+Nice work, Mr. Krill, it sure seems like Biden's fault.
+
+> I've been in the industry long enough to know that there's a significant number of devs that will refuse to adopt new language standards. I'm 100% confident there are C++ devs still writing C++03 style code. Both because they simply haven't taken the time to know what's in C++11 and later and because they have some mistrust and even irrational fears about enabling C++11 and later feature sets on their codebases. https://www.reddit.com/r/programming/comments/1bhvwyd/c_creator_rebuts_white_house_warning/kvhf84b/[↑]
+
+> I really respect Bjarne Stroustrup, but (_oh boy here we go_) he seems to not understand the fact that the problem is not in the language but in programmers who are failing to keep up with the pace of learning the safety features of C++. https://www.reddit.com/r/programming/comments/1bhvwyd/c_creator_rebuts_white_house_warning/kvhgynb/[↑] _Huh that's actually fair_
+
+https://www.pcmag.com/news/white-house-to-developers-using-c-plus-plus-invites-cybersecurity-risks[White House to Developers: Using C or C++ Invites Cybersecurity Risks (PC Magazine)]
+
+> Non-memory safe languages include C and C++, both of which are commonly used today. Memory safe languages include Rust, Go, C#, Java, Swift, Python, and JavaScript
+
+How many of those are self-hosted, and how many are implemented using C++?
+
+https://steveklabnik.com/writing/memory-safety-is-a-red-herring[Memory Safety is a Red Herring (Steve Klabnik)]
+
+____
+Your operating system does not offer memory-safe APIs. To do anything useful, you must call into the operating system. This means every program would be infected via this conception of safety, and therefore, as a definition, it would be useless.
+
+If we instead make an exception for a language’s runtime, which is allowed to make unsafe calls, but users’ code is not, that would draw an appropriate boundary: only write code in the guest language, and you don’t have to worry about safety anymore.
+____
+
+https://hackaday.com/2024/02/29/the-white-house-memory-safety-appeal-is-a-security-red-herring/[The White House Memory Safety Appeal Is a Security Red Herring (Maya Posch)]
+
+> Putting the focus on memory safety is more than a little suspect when the worst CVEs come from programmers not putting in basic checks for path traversal and forgetting to fully check user credentials. What is also worrying is the complete lack of any reference to the favorite language of the military, medical, and aviation fields where things going boom (prematurely) is generally considered a bad thing: Ada.
+
+> Even so, Ada’s lack of popularity outside of the aforementioned fields has led to a dearth of Ada programmers, which has resulted in C++ ultimately being approved for DoD projects like the F-35 program, albeit with strong restrictions on acceptable code to bring it more into line with Ada. What this shows is perhaps that the problem is not so much C++, but more how you use it.
+
+> After all, C++ by itself has no major issues with memory management or a lot of undefined behavior as long as you keep away from its C compatibility syntax. With RAII (resource allocation is initialization) and encapsulating code into classes with well-tested constructors and destructors, you avoid many of the issues that plague C. Add to this C++’s standard template library (STL) with std::string and containers that replace the nightmarish and error-prone C-style strings and arrays, and suddenly you have to try pretty hard to get code that has any memory-related issues, because simple buffer overruns no longer happen.
+
+> Perhaps in this era of instant-gratification LLM code generating tools and “cut/paste from Stack Overflow”, we have forgotten the most important thing of all about programming. Namely that it is an engineering discipline that requires planning, documenting, testing, and feeling like the more you learn, the less you know, and the more easy mistakes you make as you write more complicated programs.
+
+> This is perhaps why the ONCD report feels so wrong, as it contains none of the lessons of the past, nor the hard-won experiences of those who write the code that keeps much of society up and running. You can almost hear the cries of many senior software engineers as they wonder whether they’re merely chopped liver in the eyes of government organizations, even as said organizations are kept running due to countless lines of Ada, COBOL, C and C++ code. Never mind the security researchers who despair as basic input validation is once again ignored in favor of buzzwords pushed by a couple large corporations.
+
+* https://lobste.rs/s/u2t1cs/path_toward_secure_measurable_software[Path toward secure measurable software (Lobsters)]
+* https://mastodon.gamedev.place/@sos/112042062939170429[Safe languages are not all free (@sos via Mastodon)]
 * https://herbsutter.com/2024/03/11/safety-in-context/[C++ safety, in context (Herb Sutter)]
-** https://www.reddit.com/r/cpp/comments/1bcqj0m/c_safety_in_context/[Reddit]
 ** https://news.ycombinator.com/item?id=39676702[HN]
+** https://www.reddit.com/r/cpp/comments/1bcqj0m/c_safety_in_context/[Reddit]
+
+> It's unfortunate that mr. Sutter still throws C and C++ into one bucket, and then concludes that bounds checking is a problem that "we" have. This data really needs to be split into three categories: C, C++ as written by people that will never progress beyond C++98, and C++ as written by people that use modern tools to begin with. The first two groups should be considered as being outside the target audience for any kind of safety initiative. https://www.reddit.com/r/cpp/comments/1bcqj0m/c_safety_in_context/kuhx540/[↑]
+
 * https://btmc.substack.com/p/memory-unsafety-is-an-attitude-problem[Memory Unsafety is an Attitude Problem (Sir Whinesalot)]
+
+> The online discourse quickly devolved into “just rewrite it in Rust bro!” which I find a bit unfortunate because it is a relevant report and the use of memory safe languages is just the main recommendation, other possibilities are given. I urge everyone to actually read the report and not just immediately jump to conclusions.
+
 * https://accu.org/journals/overload/32/179/teodorescu/[Safety, Revisited (Lucian Radu Teodorescu)]
 ** https://www.reddit.com/r/cpp/comments/1apwtl7/safety_revisited/[Reddit]
+
+> C++ has too much undefined behaviour to become a safe programming language in the foreseeable future. One way or another, all the C++ experts cited here agree on that.
+
 * https://johnfarrier.com/looking-for-pointers-the-c-memory-safety-debate/[Looking for Pointers: The C++ Memory Safety Debate (John Farrier)]
 ** https://www.reddit.com/r/cpp/comments/1bnd5aj/looking_for_pointers_the_c_memory_safety_debate/[Reddit]
+
+> <...> the narrative of C++ as inherently unsafe oversimplifies the situation. The language has undergone substantial evolution, with modern iterations emphasizing safer memory practices without compromising the language’s core principles of efficiency and control.
+
+> The journey toward making C++ a safer language is complex and fraught with challenges. However, the discussions and proposals led by Stroustrup and supported by the broader C++ community suggest a forward path that respects the language’s legacy while addressing the pressing needs of modern computing.
+
+> Right now, many of the articles about modern C++ and memory safe C++ end up preaching to the choir. The advice doesn’t reach all corners of industry, and many places in academia are stuck in their ways. If you go to small CS programs at small schools, you will frequently find people learning C++ as C++ 98 or C++03, so they see C++ as “C with Classes and Templates” or “Java without a GC”. https://www.reddit.com/r/cpp/comments/1bnd5aj/looking_for_pointers_the_c_memory_safety_debate/kwhft2g/[↑]
+
+== Rust and C++ interop
+
+* https://security.googleblog.com/2024/02/improving-interoperability-between-rust-and-c.html[Improving Interoperability Between Rust and C++ (Google)]
+** https://www.reddit.com/r/cpp/comments/1aqmx9m/interoperability_with_rust/[Reddit]
+** https://developers.slashdot.org/story/24/02/09/216222/to-help-rustc-interoperability-google-gives-rust-foundation-1m[Slashdot]
+
+> Old codebases need maintenance. It is a technical debt that comes due eventually. The most direct approach to improve security and quality of C\++ project is to migrate to more recent C++ specification and compilers. Adding layer of "rust" to old codebases is not going to make them safer or better. https://developers.slashdot.org/comments.pl?sid=23221784&cid=64230408[↑]
+
+See also: https://www.swift.org/documentation/cxx-interop/[Mixing Swift and C++]
+
+== Google Crubit
+
+Crubit: C++/Rust Bidirectional Interop Tool
+
+* https://github.com/google/crubit[GitHub]
+* https://github.com/google/crubit/blob/main/docs/design.md[Design documentation]
+
+== Falsehoods programmers believe about undefined behavior
+
+https://predr.ag/blog/falsehoods-programmers-believe-about-undefined-behavior/[Predrag Gruevski]
+
+____
+The moment your program contains UB, all bets are off.
+
+Even if it's just one little UB.
+
+Even if it's never executed.
+
+Even if you don't know it's there at all.
+____
+
+Thinking of using this next time when I have to prove that my UB fix is actually necessary.
 
 == Lambdas in C++23
 
@@ -239,13 +337,6 @@ Overall, I personally don't find memory management in C++ to be too troublesome.
 
 * https://github.com/p-ranav/argparse[GitHub]
 * https://www.reddit.com/r/cpp/comments/xl05c1/argparse_v29_released_now_with_support_for/[Reddit]
-
-== Google Crubit
-
-Crubit: C++/Rust Bidirectional Interop Tool
-
-* https://github.com/google/crubit[GitHub]
-* https://github.com/google/crubit/blob/main/docs/design.md[Design documentation]
 
 == Stronk - a strong type and unit library
 
@@ -282,22 +373,6 @@ https://devblogs.microsoft.com/cppblog/a-year-of-cpp-improvements-in-visual-stud
 == Book: _C++ Initialization Story_, by Bartłomiej Filipek
 
 https://www.cppstories.com/2023/init-story-print/[Blog post]
-
-== Falsehoods programmers believe about undefined behavior
-
-https://predr.ag/blog/falsehoods-programmers-believe-about-undefined-behavior/[Predrag Gruevski]
-
-____
-The moment your program contains UB, all bets are off.
-
-Even if it's just one little UB.
-
-Even if it's never executed.
-
-Even if you don't know it's there at all.
-____
-
-Thinking of using this next time when I have to prove that my UB fix is actually necessary.
 
 == Blender forum: Speeding up C++ builds
 
@@ -352,16 +427,6 @@ int main(int /*argc*/, char** /*argv*/)
     return 0;
 }
 ----
-
-== Rust and C++ interop
-
-* https://security.googleblog.com/2024/02/improving-interoperability-between-rust-and-c.html[Improving Interoperability Between Rust and C++ (Google)]
-** https://www.reddit.com/r/cpp/comments/1aqmx9m/interoperability_with_rust/[Reddit]
-** https://developers.slashdot.org/story/24/02/09/216222/to-help-rustc-interoperability-google-gives-rust-foundation-1m[Slashdot]
-
-> Old codebases need maintenance. It is a technical debt that comes due eventually. The most direct approach to improve security and quality of C\++ project is to migrate to more recent C++ specification and compilers. Adding layer of "rust" to old codebases is not going to make them safer or better. https://developers.slashdot.org/comments.pl?sid=23221784&cid=64230408[↑]
-
-See also: https://www.swift.org/documentation/cxx-interop/[Mixing Swift and C++]
 
 == Why CMake sucks
 
