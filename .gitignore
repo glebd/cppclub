@@ -5,6 +5,7 @@ stash.pdf
 README.pdf
 .DS_Store
 *.mmd
+*swp
 
 .fake
 .ionide
