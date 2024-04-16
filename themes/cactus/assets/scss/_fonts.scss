@@ -500,3 +500,51 @@
   font-display: swap;
   src: url("../lib/clear-sans/webfonts/clearsans_bolditalic/ClearSans-BoldItalic-webfont.woff?v=1.00") format("woff");
 }
+
+@font-face {
+  font-family: 'Reddit Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../lib/RedditMono/RedditMono-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Reddit Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../lib/RedditMono/RedditMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Reddit Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../lib/RedditMono/RedditMono-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Reddit Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../lib/RedditMono/RedditMono-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Reddit Mono';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../lib/RedditMono/RedditMono-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Reddit Mono';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../lib/RedditMono/RedditMono-ExtraBold.woff2") format("woff2");
+}
