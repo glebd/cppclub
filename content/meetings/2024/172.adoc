@@ -106,6 +106,27 @@ Crubit: C++/Rust Bidirectional Interop Tool
 
 A series of articles by https://www.douggregor.net/posts/swift-for-cxx-practitioners-value-types/[Doug Gregor]
 
+== WG21 Mailing Apr 2024
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/#mailing2024-04[Papers]
+
+https://www.reddit.com/r/cpp/comments/1c5voqx/wg21_aka_c_standard_committee_april_2024_mailing/[Reddit]
+
+=== Static Exception Specifications
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3166r0.html[P3166R0] by Lewis Baker
+
+=== P2900R6 May Be Minimal, but It Is Not Viable
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3173r0.pdf[P3173R0] by Gabriel Dos Reis, Microsoft
+
+> Without adequate limitation on undefined behavior in the evaluation of contract assertions, Microsoft considers the Contracts facility not viable in the contemporary environments where C++ is used.
+
+> Contracts facility that fails to adequately support efficient use with virtual functions and pointer to functions is woefully inadequate and unready for prime use, and inclusion in C++26
+in particular. Microsoft recommends against the inclusion of P2900R6 in C++26.
+
+> Microsoft recommends against P2900R6 without applications in the Standard Library, in particular in the algorithm section, and field experience.
+
 == How often do you create memory leak or segfault bugs with modern C++?
 
 https://www.reddit.com/r/cpp/comments/16nfksr/how_often_do_you_create_memory_leak_or_segfault/[Reddit]
@@ -260,6 +281,22 @@ int main(int /*argc*/, char** /*argv*/)
 }
 ----
 
+== Mastodon: preventing implicit conversions
+
+https://mastodon.social/@ohunt/112294336934673348
+
+Oliver Hunt:
+
+I was today years old when I discovered you can stop implicit bool->int conversion in APIs where it causes problems by doing
+
+[source,cpp]
+----
+int foo(int) {...}
+int foo(bool) = delete;
+----
+
+Despite knowing this is a valid syntax it never occurred to me you could use it this way, and I did not realize you can do this for free functions O_o
+
 == Why CMake sucks
 
 https://twdev.blog/2021/08/cmake/[Tomasz Wisniewski]
@@ -305,4 +342,13 @@ ____
 AI company: we trained this dog to talk. It doesn't actually understand language, but it kinda sounds like it's having a conversation by mimicking the sound of human speech.
 
 CEO: awesome, I've fired my entire staff, how quickly can it start diagnosing medical disorders
+____
+
+== Mastodon: Programming
+
+https://chaosfem.tw/@rooster/112335366409013731
+
+[quote,Jessica @rooster@chaosfem.tw]
+____
+I think programming is like running a dishwasher. It always takes longer than you think and some stuff is never as clean as you expected it to be.
 ____
