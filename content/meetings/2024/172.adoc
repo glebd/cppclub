@@ -118,6 +118,20 @@ ____
 
 See also: https://www.swift.org/documentation/cxx-interop/[Mixing Swift and C++]
 
+== Mixing C++ and Rust for Fun and Profit
+
+KDAB:
+
+* https://www.kdab.com/mixing-c-and-rust-for-fun-and-profit-part-1/[Part 1]
+* https://www.kdab.com/mixing-c-and-rust-for-fun-and-profit-part-2/[Part 2]
+* https://www.kdab.com/mixing-c-and-rust-for-fun-and-profit-part-3/[Part 3]
+
+== Why Rust isn't killing C++
+
+https://societysbackend.com/p/why-rust-isnt-killing-c[Society's Backend] (_Great website name!_) by Logan Thorneloe, an ML engineer at Google.
+
+> ... the internet likes to perpetuate the myth that C++ is a soon-to-be-dead language. I’ve seen many people say not to learn C++ because Rust can do basically everything C++ can do but is much easier to work with and almost guaranteed to be memory safe. This narrative is especially harmful for new developers who focus primarily on what languages they should gain experience in. This causes them to write off C++ which I think is a huge mistake because it’s actually one of the _best_ languages for new developers to learn.
+
 == Google Crubit
 
 Crubit: C++/Rust Bidirectional Interop Tool
@@ -191,6 +205,18 @@ Ah yes, a date library, famously easy to implement. (OK, they used a **std::chro
 > We here use boost extensively, both server and embedded. Honestly I don’t know what all the fuss is about. It’s excellent code, well maintained by top folks in the c++ world. If you don’t like it, don’t use it. But don’t whine when other people do. https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/keosn2x/[↑]
 
 https://www.reddit.com/r/cpp/comments/18plb43/annoyed_with_fud_surrounding_boost_in_c/[Annoyed with FUD surrounding Boost in C++ discussions]
+
+== Alternatives to Boost
+
+https://www.reddit.com/r/cpp/comments/1cpwyqj/whats_your_favorite_boost_alternative/
+
+* https://abseil.io/[Abseil] (Google)
+* https://github.com/facebook/folly[Folly] (Facebook)
+* https://pocoproject.org/[POCO]
+
+== Are We Modules Yet?
+
+https://arewemodulesyet.org/
 
 == The C++20 Naughty and Nice List for Game Devs
 
@@ -338,6 +364,10 @@ See also:
 ** https://news.ycombinator.com/item?id=39784784[HackerNews]
 * https://www.reddit.com/r/cpp/comments/1b53rks/is_cmake_the_de_facto_standard_mandatory_to_use/[Is CMake the de facto standard mandatory to use? (Reddit)]
 
+== ppstep Interactive Macro Debugger
+
+https://github.com/notfoundry/ppstep
+
 == Mastodon
 
 https://hachyderm.io/@sara/109837493423134480
@@ -375,3 +405,8 @@ https://chaosfem.tw/@rooster/112335366409013731
 ____
 I think programming is like running a dishwasher. It always takes longer than you think and some stuff is never as clean as you expected it to be.
 ____
+
+== Slop
+
+https://simonwillison.net/2024/May/8/slop/
+
