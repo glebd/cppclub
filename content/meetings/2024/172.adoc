@@ -132,6 +132,19 @@ https://societysbackend.com/p/why-rust-isnt-killing-c[Society's Backend] (_Great
 
 > ... the internet likes to perpetuate the myth that C++ is a soon-to-be-dead language. I’ve seen many people say not to learn C++ because Rust can do basically everything C++ can do but is much easier to work with and almost guaranteed to be memory safe. This narrative is especially harmful for new developers who focus primarily on what languages they should gain experience in. This causes them to write off C++ which I think is a huge mistake because it’s actually one of the _best_ languages for new developers to learn.
 
+== Unsafe Rust in the Wild: Notes on the Current State of Unsafe Rust
+
+https://foundation.rust-lang.org/news/unsafe-rust-in-the-wild-notes-on-the-current-state-of-unsafe-rust/
+
+https://developers.slashdot.org/story/24/05/25/2250236/rust-foundation-reports-20-of-rust-crates-use-unsafe-keyword[Slashdot: Rust Foundation Reports 20% of Rust Crates Use 'Unsafe' Keyword]
+
+== Why all the 'hate' for C++?
+
+https://www.reddit.com/r/cpp/comments/1czmjhj/why_all_the_hate_for_c/
+
+> The vast majority of opinions that people espouse relate to their need to justify their decisions and should be of no interest to you. They are not trying to help you, they are trying to help themselves.
+Carry on. Good luck. https://www.reddit.com/r/cpp/comments/1czmjhj/why_all_the_hate_for_c/l5haupr/[↑]
+
 == Google Crubit
 
 Crubit: C++/Rust Bidirectional Interop Tool
@@ -367,6 +380,12 @@ See also:
 == ppstep Interactive Macro Debugger
 
 https://github.com/notfoundry/ppstep
+
+== Don't Use include-what-you-use
+
+https://danra.prose.sh/dont_use_iwyu
+
+https://www.reddit.com/r/cpp/comments/1cwjtpw/dont_use_includewhatyouuse/
 
 == Mastodon
 
