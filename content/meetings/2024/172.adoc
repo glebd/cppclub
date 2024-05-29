@@ -51,7 +51,7 @@ Robert:
 
 > you quote a prediction regarding regulation on software engineering, and then ridicule it with a laughing track. A laughing track, like we were watching a sitcom! This was really undignified. Especially, since I assess the prediction to have some truth to it: It is already starting to happen. Customers start putting pressure on software developers to follow rules and fulfill regulatory reguirements, so they won't be liable if the software they bought causes damages.
 
-Having worked as a consultant in many large firms over the years, I saw too often projects getting outsourced to the lowest bidder, and code written by contractors who don't give two shits about quality of their work. The entire defective and badly designed systems produced by outsourced programmers ruining peoples' lives (like the UK Post Office defective Horizon system produced by Fujitsu where software bugs were ignored and covered up, https://www.computerweekly.com/news/252509066/Fujitsu-escaped-huge-lawsuit-because-Post-Office-behaved-so-badly-in-Horizon-scandal[have a read]). This has been happening for many years and is still happening (take a guess which company is getting a new Government contract in the UK). So forgive me if I'm not too optimistic here.
+Having worked as a consultant in many large firms over the years, I saw too often projects getting outsourced to the lowest bidder, and code written by contractors who don't give two shits about quality of their work (current place being a rare exception). The entire defective and badly designed systems produced by outsourced programmers ruining peoples' lives (like the UK Post Office defective Horizon system produced by Fujitsu where software bugs were ignored and covered up, https://www.computerweekly.com/news/252509066/Fujitsu-escaped-huge-lawsuit-because-Post-Office-behaved-so-badly-in-Horizon-scandal[have a read]). This has been happening for many years and is still happening (take a guess which company is getting a new Government contract in the UK). So forgive me if I'm not too optimistic here.
 
 === Swift as C++ successor
 
@@ -429,3 +429,10 @@ ____
 
 https://simonwillison.net/2024/May/8/slop/
 
+== Burn-out
+
+Via Dare Obasanjo and Ivor Hewitt
+
+https://mas.to/@carnage4life/112439740083930142
+
+image::/img/dyno-burnout.jpeg[]
