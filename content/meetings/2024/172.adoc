@@ -183,7 +183,13 @@ in particular. Microsoft recommends against the inclusion of P2900R6 in C++26.
 
 > Microsoft recommends against P2900R6 without applications in the Standard Library, in particular in the algorithm section, and field experience.
 
-== More papers
+== More papers from May 2024 mailing
+
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/#mailing2024-05 (https://www.reddit.com/r/cpp/comments/1cy8k8o/wg21_aka_c_standard_committee_may_2024_mailing/[Reddit])
+
+=== A framework for Profiles development
+
+https://wg21.link/p3274r0 by Bjarne Stroustrup
 
 === Undefined and erroneous behaviour are contract violations
 
@@ -228,11 +234,65 @@ ____
 * The _quick_enforce_ semantic will not invoke the contract-violation handler, but instead immediately terminate the program in an implementation-defined fashion.
 ____
 
+=== C++ Contracts and Coroutines
+
+https://wg21.link/p3251r0 by Peter Bindels
+
+> The paper is not required for the MVP; it defines behavior for a currently ill-formed construct. It does have very little impact on the contents as it mostly provides a rationale and approach for the reason not to forbid coroutines to have contracts, and as such it could be considered for the C++26 deadline.
+
+=== Contract testing support
+
+https://wg21.link/p3183r1 by Bengt Gustafsson
+
+=== Ship Contracts in a TS
+
+https://wg21.link/p3265r1 by Ville Voutilainen
+
+=== Do Not Ship Contracts as a TS
+
+https://wg21.link/p3269r0 by Timur Doumler, John Spicer
+
+=== https://wg21.link/P2900[P2900] Is Superior to a Contracts TS
+
+https://wg21.link/p3276r0 by Joshua Berne, Steve Downey, Jake Fevold, Mungo Gill, Rostislav Khlebnikov, John Lakos, and Alisdair Meredith
+
+=== To TS or not to TS: that is the question
+
+https://wg21.link/p4000r0 by Michael Wong, H. Hinnant, R. Orr, B. Stroustrup, D. Vandevoorde
+
+=== C++26 Needs Contract Checking
+
+https://wg21.link/p3297r0 by Ryan McDougall, Jean-Francois Campeau, Christian Eltzschig, Mathias Kraus, Pez Zarifian
+
+Not sure Contracts will magically solve all security problems in C++.
+
+=== Expansion statements
+
+https://wg21.link/p1306r2 by Dan Katz, Andrew Sutton, Sam Goodrick, Daveed Vandevoorde
+
+=== Code Injection with Token Sequences
+
+https://wg21.link/p3294r0 by Barry Revzin, Andrei Alexandrescu (NVIDIA), Daveed Vandevoorde
+
+=== Generative Extensions for Reflection
+
+https://wg21.link/p3157r1 by Andrei Alexandrescu, Barry Revzin, Bryce Lelbach, Michael Garland
+
+The metaclasses paper has been marked as abandoned: https://github.com/cplusplus/papers/issues/403
+
+=== A unified syntax for Pattern Matching and Contracts when introducing a new name
+
+https://wg21.link/p3249r0 by Ran Regev
+
 === Pointer Tagging
 
 https://wg21.link/p3125r0 by Hana Dusíková
 
 > This paper proposes a library based design with "magical functions" to store and retrieve information into bits of pointers which are not significant to the pointer’s address, and to inform developers about how many such bits are available.
+
+=== Reserve identifiers preceded by `@` for non-ignorable annotation tokens
+
+https://wg21.link/p3254r0 by Brian Bi
 
 == How often do you create memory leak or segfault bugs with modern C++?
 
@@ -350,7 +410,9 @@ https://www.cppstories.com/2023/init-story-print/[Blog post]
 
 https://devtalk.blender.org/t/speed-up-c-compilation/30508/11[Article]
 
+=== Working With Jumbo/Unity Builds (Single Translation Unit)
 
+https://austinmorlan.com/posts/unity_jumbo_build/ by Austin Morlan
 
 == Subspace
 
