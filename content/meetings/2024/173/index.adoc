@@ -255,23 +255,6 @@ See also:
 
 https://github.com/notfoundry/ppstep
 
-== Don't Use include-what-you-use
-
-https://danra.prose.sh/dont_use_iwyu
-
-https://www.reddit.com/r/cpp/comments/1cwjtpw/dont_use_includewhatyouuse/
-
-== Mastodon
-
-https://hachyderm.io/@sara/109837493423134480
-
-[quote,Sara Safavi @sara@hachyderm.io]
-____
-accidentally wrote "saad" instead of "saas" in a text to my partner; they immediately coined "Software as a Disappointment"
-
-and honestly, where is the lie
-____
-
 == Mastodon: Debugging
 
 https://octodon.social/@splitbrain/112086905723468442
@@ -293,3 +276,21 @@ ____
 == Slop
 
 https://simonwillison.net/2024/May/8/slop/
+
+== Remote workers
+
+devopscats via Mastodon: https://toot.cat/@devopscats/112566801377839795
+
+> Behind every remote worker is a cat that hasn't signed an NDA and will sell all the secrets for a
+piece of sashimi.
+
+image:remote_cat.jpeg[]
+
+== Quote
+
+https://mastodon.social/@programming_quotes/112572400857683147
+
+[quote,Oscar Godson]
+____
+One of the best programming skills you can have is knowing when to walk away for awhile.
+____
