@@ -43,6 +43,17 @@ Coming soon.
 
 Coming soon.
 
+== WG21 Meeting, St Louis, 2024
+
+* https://herbsutter.com/2024/07/02/trip-report-summer-iso-c-standards-meeting-st-louis-mo-usa/[Trip report: Summer ISO C++ standards meeting (St Louis, MO, USA) by Herb Sutter]
+** https://www.reddit.com/r/cpp/comments/1du3i63/trip_report_summer_iso_c_standards_meeting_st/[Reddit]
+** https://lobste.rs/s/qhsz2b[Lobsters]
+
+== Reflection in C++26: the renaissance of C++
+
+* https://youtu.be/vRda0mGYg_A?si=CSzENClTssKtK1U8[Video by JF Bastien]
+** https://www.reddit.com/r/cpp/comments/1cvahnr/reflection_in_c26_the_renaissance_of_c/[Reddit]
+
 == CppCast 383: Safe, Borrow-Checked, C++
 
 https://cppcast.com/safe-borrow-checked-cpp/
@@ -159,13 +170,20 @@ https://devblogs.microsoft.com/cppblog/a-year-of-cpp-improvements-in-visual-stud
 
 https://www.cppstories.com/2023/init-story-print/[Blog post]
 
-== Blender forum: Speeding up C++ builds
+== Speeding up C++ build times
+
+=== Blender forum: Speeding up C++ builds
 
 https://devtalk.blender.org/t/speed-up-c-compilation/30508/11[Article]
 
 === Working With Jumbo/Unity Builds (Single Translation Unit)
 
 https://austinmorlan.com/posts/unity_jumbo_build/ by Austin Morlan
+
+=== Figma
+
+* https://www.figma.com/blog/speeding-up-build-times/[Speeding up C++ build times]
+** https://news.ycombinator.com/item?id=40178634[HN]
 
 == Subspace
 
@@ -293,4 +311,14 @@ https://mastodon.social/@programming_quotes/112572400857683147
 [quote,Oscar Godson]
 ____
 One of the best programming skills you can have is knowing when to walk away for awhile.
+____
+
+== Mastodon: Full-stack developer
+
+https://digipres.club/@foone/112412593654054471
+
+[quote,Foone]
+
+____
+I'm a "full stack developer", in that my stack is full and if you try to push any more tasks on me I'm gonna overflow it and start corrupting my own memory
 ____
