@@ -1,7 +1,7 @@
 ---
 title: 173. TODO
 author: Gleb Dolgich
-date: 2024-06-07
+date: 2024-08-01
 tags:
     - WG21
     - Committee
@@ -49,12 +49,22 @@ Coming soon.
 
 Coming soon.
 
+== CrowdStrike and C++
+
+https://www.efinancialcareers.com/news/crowdstrike-c-plus-plus-pointer[Sean Baxter has a solution]
+
 == WG21 Meeting, St Louis, 2024
 
 * https://www.reddit.com/r/cpp/comments/1dwc7f2/202406_st_louis_iso_c_committee_trip_report/[Inbal Levy on Reddit]
 * https://herbsutter.com/2024/07/02/trip-report-summer-iso-c-standards-meeting-st-louis-mo-usa/[Trip report: Summer ISO C++ standards meeting (St Louis, MO, USA) by Herb Sutter]
 ** https://www.reddit.com/r/cpp/comments/1du3i63/trip_report_summer_iso_c_standards_meeting_st/[Reddit]
 ** https://lobste.rs/s/qhsz2b[Lobsters]
+* https://www.think-cell.com/en/career/devblog/trip-report-summer-iso-cpp-meeting-in-st-louis-usa[Jonathan Müller]
+** https://www.reddit.com/r/cpp/comments/1e1zpfq/trip_report_summer_iso_c_meeting_in_st_louis_usa/[Reddit]
+
+C++26 will have https://wg21.link/P2300R10[P2300] `std::execution`!
+
+No progress on pattern matching, it seems...
 
 == Reflection in C++26: the renaissance of C++
 
@@ -176,6 +186,8 @@ https://devblogs.microsoft.com/cppblog/a-year-of-cpp-improvements-in-visual-stud
 == Book: _C++ Initialization Story_, by Bartłomiej Filipek
 
 https://www.cppstories.com/2023/init-story-print/[Blog post]
+
+See also: https://consteval.ca/2024/07/03/initialization/[I HAVE NO CONSTRUCTOR, AND I MUST INITIALIZE, by Evan Girardin] (Nice website banner, strong PDP-11 vibes). https://news.ycombinator.com/item?id=40880932[Discussion on HN.]
 
 == Speeding up C++ build times
 
