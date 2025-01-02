@@ -99,6 +99,7 @@ weight = 4
     allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$', 'rst2html.py', 'asciidoctor']
 
 [markup.asciidocExt]
+  # gem install asciidoctor-html5s
   backend = 'html5s'
   doctype = 'book'
   extensions = ['asciidoctor-html5s']
