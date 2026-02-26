@@ -33,10 +33,11 @@ https://www.reddit.com/r/cpp/comments/dhm138/wg21_the_201910_mailing_is_now_avai
 Eric Niebler on Executors
 -------------------------
 
-`Corentin <https://twitter.com/Cor3ntin/status/1186040861626437632>`_: Executors are the least
-useful part of "A Unified Executors Proposal"
+Corentin:
 
-`Eric Niebler <https://twitter.com/ericniebler/status/1186343156326887425>`_:
+Executors are the least useful part of "A Unified Executors Proposal"
+
+Eric Niebler:
 
 It makes me happy to see the power of the Scheduler/Sender/Receiver recognized.
 
