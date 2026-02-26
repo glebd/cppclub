@@ -1,0 +1,113 @@
+---
+title: 173. Client project lessons, C++26 reflection, CMake.
+author: Gleb Dolgich
+date: 2026-03-05
+tags:
+    - CMake
+    - C++26
+    - Reflection
+    - Build
+---
+
+:showtitle:
+:toc:
+:doctype: book
+
+= 173. Client project lessons, C++26 reflection, CMake.
+
+== Media
+
+=== Video
+
+https://youtu.be/3-JKn7nF-tA
+
+{{<youtube 3-JKn7nF-tA>}}
+
+=== Podcast
+
+https://redcircle.com/shows/0835997e-47ec-438e-b6ae-0b390966aa7e/episodes/bbc8ddef-5ff2-4f56-83f9-9c6ec9b732d7
+
+{{<redcircle bbc8ddef-5ff2-4f56-83f9-9c6ec9b732d7>}}
+
+== Rainer Grimm, RIP
+
+https://www.modernescpp.com/index.php/my-als-journey-31-31-the-end/
+
+https://www.linkedin.com/feed/update/urn:li:activity:7381981863952781313/
+
+== Follow-up
+
+I made a mistake last time when I said that https://cmake.org/[CMake] was being developed by https://www.kdab.com/[KDAB]. It is, of course, https://www.kitware.com/[KitWare]. Sorry for the confusion.
+
+== Personal update
+
+https://glebd.com/[I have a blog now, yay]
+
+https://glebd.com/posts/251106-project/[Client project post-mortem]
+
+== A Brief History of Bjarne Stroustrup, the Creator of C++
+
+https://www.youtube.com/watch?v=uDtvEsv730Y
+
+{{<youtube uDtvEsv730Y>}}
+
+== CppReference
+
+=== Vandalism
+
+* https://www.reddit.com/r/Cplusplus/comments/14aiwqj/cppreferencecom_saying_please_migrate_to_rust/[Reddit 1]
+* https://www.reddit.com/r/cpp/comments/16we35b/was_cppreferencecom_hacked/[Reddit 2]
+* https://www.reddit.com/r/cpp/comments/15dn2cf/cppreference_stdvector_redirects_to_rust/[Reddit 3]
+* https://fosstodon.org/@lawmurray/110551332002478346[Mastodon]
+
+=== CppDocs.dev
+
+* https://cppdocs.dev
+* https://www.reddit.com/r/cpp/comments/1rjzp33/built_a_static_c_reference_site_on_top_of/[Reddit]
+
+== C++26 Reflections Adventures & Compile Time UML
+
+* https://www.reachablecode.com/2025/07/31/c26-reflections-adventures-compile-time-uml/[Gianluca Delfino]
+** https://godbolt.org/z/P39K4vYEz[Godbolt]
+** https://www.reddit.com/r/cpp/comments/1mevtwm/c26_reflections_adventures_compile_time_uml/[Reddit]
+
+== CMake 4.0
+
+CMake 4.0 has been released a while ago.
+
+* CMake 3.28: adds support for C++ modules.
+* CMake 4.0: minor improvements.
+
+Links:
+
+* https://www.kitware.com/cmake-4-0-0-available-for-download/[Announcement]
+* https://cmake.org/cmake/help/v4.0/release/4.0.html[Release notes]
+* https://www.reddit.com/r/cpp/comments/1jmbekf/cmake_400_released/[Reddit]
+
+> It's new major release because they completely overhauled the language to be more readable, right? Right? https://www.reddit.com/r/cpp/comments/1jmbekf/cmake_400_released/mkakf29/[↑]
+
+Of all the build systems ever created, CMake is certainly one of them.
+
+== 25 Years of CMake
+
+https://youtu.be/wPZV2hBNJmo
+
+{{<youtube wPZV2hBNJmo>}}
+
+> Cmake is pain and suffering cosplaying as a build system. https://www.reddit.com/r/programming/comments/1qfck14/the_evolution_of_cmake_25_years_of_c_build/[↑]
+
+== Mastodon: Full-stack developer
+
+https://digipres.club/@foone/112412593654054471
+
+[quote,Foone]
+
+____
+I'm a "full stack developer", in that my stack is full and if you try to push any more tasks on me I'm gonna overflow it and start corrupting my own memory
+____
+
+== Mastodon
+
+https://chaos.social/@soc/116006405349410421
+
+image::/img/cpp-compilers-tool-for-ub.jpeg[]

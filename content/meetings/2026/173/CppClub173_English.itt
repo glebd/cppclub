@@ -1,0 +1,820 @@
+<?xml version="1.0"?>
+<tt xmlns:vt="http://namespace.itunes.apple.com/itt/ttml-extension#vertical" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xmlns:ittp="http://www.w3.org/ns/ttml/profile/imsc1#parameter" xmlns:tt_feature="http://www.w3.org/ns/ttml/feature/" xmlns:ebutts="urn:ebu:tt:style" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:tt_extension="http://www.w3.org/ns/ttml/extension/" xmlns:tt_profile="http://www.w3.org/ns/ttml/profile/" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns:ry="http://namespace.itunes.apple.com/itt/ttml-extension#ruby" xmlns:itts="http://www.w3.org/ns/ttml/profile/imsc1#styling" xmlns="http://www.w3.org/ns/ttml" xml:lang="en" ttp:dropMode="nonDrop" ttp:frameRate="25" ttp:frameRateMultiplier="1 1" ttp:timeBase="smpte" xmlns:tt="http://www.w3.org/ns/ttml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <styling>
+      <style xml:id="normal" tts:color="white" tts:fontFamily="sansSerif" tts:fontSize="100%" tts:fontStyle="normal" tts:fontWeight="normal"/>
+    </styling>
+    <layout>
+      <region xml:id="bottom" tts:displayAlign="after" tts:extent="100% 15%" tts:origin="0% 85%" tts:writingMode="lrtb"/>
+    </layout>
+  </head>
+  <body tts:color="white" region="bottom" style="normal">
+    <div>
+      <p begin="00:00:00:00" end="00:00:02:00" region="bottom">Welcome to the C++ Club.</p>
+      <p begin="00:00:02:00" end="00:00:04:00" region="bottom">This is Meeting 173.</p>
+      <p begin="00:00:06:00" end="00:00:09:00" region="bottom">Right, first of all, I wanted to mention one of</p>
+      <p begin="00:00:09:00" end="00:00:12:00" region="bottom"> us who we lost.</p>
+      <p begin="00:00:13:00" end="00:00:17:00" region="bottom">Rainer Grimm sadly passed away in October last year.</p>
+      <p begin="00:00:17:00" end="00:00:20:00" region="bottom">I didn't know him personally, but he</p>
+      <p begin="00:00:20:00" end="00:00:23:00" region="bottom"> seemed to have been a great guy and an</p>
+      <p begin="00:00:23:00" end="00:00:26:00" region="bottom"> excellent C++ educator, and it's a sad loss.</p>
+      <p begin="00:00:29:00" end="00:00:32:00" region="bottom">I've met him a couple of times at different conferences,</p>
+      <p begin="00:00:32:00" end="00:00:35:00" region="bottom"> and you're absolutely right in your assessment.</p>
+      <p begin="00:00:35:00" end="00:00:37:00" region="bottom">It's so unfortunate.</p>
+      <p begin="00:00:37:00" end="00:00:40:00" region="bottom">Maybe, I may give you</p>
+      <p begin="00:00:40:00" end="00:00:44:00" region="bottom"> the information that</p>
+      <p begin="00:00:45:00" end="00:00:48:00" region="bottom"> his son is trying to keep</p>
+      <p begin="00:00:48:00" end="00:00:50:00" region="bottom"> on with his blog here.</p>
+      <p begin="00:00:50:00" end="00:00:54:00" region="bottom">And I might appear</p>
+      <p begin="00:00:54:00" end="00:00:56:00" region="bottom"> there sometime in the future.</p>
+      <p begin="00:00:58:00" end="00:00:59:00" region="bottom">That's, that's good to hear.</p>
+      <p begin="00:00:59:00" end="00:01:00:00" region="bottom">That's good news.</p>
+      <p begin="00:01:00:00" end="00:01:01:00" region="bottom">Thank you.</p>
+      <p begin="00:01:01:00" end="00:01:05:00" region="bottom">Hopefully, his life</p>
+      <p begin="00:01:05:00" end="00:01:07:00" region="bottom"> work continues this way.</p>
+      <p begin="00:01:10:00" end="00:01:13:00" region="bottom">Next item is</p>
+      <p begin="00:01:13:00" end="00:01:15:00" region="bottom"> a bit of a feedback reaction.</p>
+      <p begin="00:01:16:00" end="00:01:19:00" region="bottom">Last time, which was a very long, long time</p>
+      <p begin="00:01:19:00" end="00:01:22:00" region="bottom"> ago, I mistakenly said</p>
+      <p begin="00:01:22:00" end="00:01:25:00" region="bottom"> that CMake was a product of</p>
+      <p begin="00:01:25:00" end="00:01:28:00" region="bottom"> the company called KDAB.</p>
+      <p begin="00:01:28:00" end="00:01:29:00" region="bottom">Obviously that was wrong.</p>
+      <p begin="00:01:30:00" end="00:01:32:00" region="bottom">I am correcting my record.</p>
+      <p begin="00:01:32:00" end="00:01:34:00" region="bottom">It's, of course, Kitware.</p>
+      <p begin="00:01:34:00" end="00:01:36:00" region="bottom">And we'll talk about CMake later.</p>
+      <p begin="00:01:36:00" end="00:01:37:00" region="bottom">Other news.</p>
+      <p begin="00:01:38:00" end="00:01:39:00" region="bottom">I have a blog now.</p>
+      <p begin="00:01:39:00" end="00:01:40:00" region="bottom">Yay!</p>
+      <p begin="00:01:41:00" end="00:01:42:00" region="bottom">It's pretty much empty.</p>
+      <p begin="00:01:43:00" end="00:01:45:00" region="bottom">Except for one record.</p>
+      <p begin="00:01:45:00" end="00:01:48:00" region="bottom">Sort of an explanation why it took me so</p>
+      <p begin="00:01:48:00" end="00:01:49:00" region="bottom"> long to restart the meetings.</p>
+      <p begin="00:01:50:00" end="00:01:54:00" region="bottom">I've been on a very intense</p>
+      <p begin="00:01:54:00" end="00:01:57:00" region="bottom"> project since the last meeting.</p>
+      <p begin="00:01:57:00" end="00:01:59:00" region="bottom">The project lasted for about a year and a half.</p>
+      <p begin="00:02:00:00" end="00:02:03:00" region="bottom">It was a really, really interesting project.</p>
+      <p begin="00:02:03:00" end="00:02:06:00" region="bottom">Now that it's over, I wanted to</p>
+      <p begin="00:02:06:00" end="00:02:08:00" region="bottom"> mention what I was doing there.</p>
+      <p begin="00:02:08:00" end="00:02:12:00" region="bottom">I was brought in to implement</p>
+      <p begin="00:02:12:00" end="00:02:15:00" region="bottom"> a particular piece of infrastructure,</p>
+      <p begin="00:02:15:00" end="00:02:18:00" region="bottom"> expose an internal system to</p>
+      <p begin="00:02:18:00" end="00:02:22:00" region="bottom"> clients using a web service.</p>
+      <p begin="00:02:22:00" end="00:02:23:00" region="bottom">And while I was doing that,</p>
+      <p begin="00:02:24:00" end="00:02:27:00" region="bottom">naturally, I tried to optimise</p>
+      <p begin="00:02:27:00" end="00:02:30:00" region="bottom"> the build system, as one does,</p>
+      <p begin="00:02:30:00" end="00:02:33:00" region="bottom"> made it quicker than before.</p>
+      <p begin="00:02:33:00" end="00:02:36:00" region="bottom">That particular code base built in 7 minutes, before I</p>
+      <p begin="00:02:37:00" end="00:02:41:00" region="bottom"> started with it, and after that,</p>
+      <p begin="00:02:41:00" end="00:02:44:00" region="bottom"> it was less than half a minute.</p>
+      <p begin="00:02:44:00" end="00:02:47:00" region="bottom">Obviously, I cheated</p>
+      <p begin="00:02:47:00" end="00:02:49:00" region="bottom"> a little bit with ccache.</p>
+      <p begin="00:02:49:00" end="00:02:51:00" region="bottom">Anything to make the build quicker.</p>
+      <p begin="00:02:51:00" end="00:02:53:00" region="bottom">And then I was extended to do</p>
+      <p begin="00:02:54:00" end="00:02:57:00" region="bottom"> the same build improvements in another code base.</p>
+      <p begin="00:02:57:00" end="00:03:01:00" region="bottom">Did you use any particular tools to analyse the build times?</p>
+      <p begin="00:03:03:00" end="00:03:04:00" region="bottom">Later on</p>
+      <p begin="00:03:04:00" end="00:03:07:00" region="bottom">I introduced ClangBuildAnalyzer.</p>
+      <p begin="00:03:07:00" end="00:03:10:00" region="bottom">And that helped pinpoint</p>
+      <p begin="00:03:10:00" end="00:03:13:00" region="bottom"> parts of the code that the other</p>
+      <p begin="00:03:13:00" end="00:03:15:00" region="bottom"> developers then looked at.</p>
+      <p begin="00:03:16:00" end="00:03:19:00" region="bottom">But my main objective,</p>
+      <p begin="00:03:19:00" end="00:03:22:00" region="bottom"> apart from the actual main one, was</p>
+      <p begin="00:03:23:00" end="00:03:26:00" region="bottom"> I wanted to introduce static checking,</p>
+      <p begin="00:03:26:00" end="00:03:29:00" region="bottom"> because they only had pretty</p>
+      <p begin="00:03:29:00" end="00:03:32:00" region="bottom"> much a single build using CMake, and</p>
+      <p begin="00:03:32:00" end="00:03:36:00" region="bottom"> that was either release or debug, depending</p>
+      <p begin="00:03:36:00" end="00:03:39:00" region="bottom"> on what configuration command you ran</p>
+      <p begin="00:03:39:00" end="00:03:42:00" region="bottom"> last, everything built into the</p>
+      <p begin="00:03:42:00" end="00:03:45:00" region="bottom"> same build directory, which was inconvenient, and also</p>
+      <p begin="00:03:45:00" end="00:03:46:00" region="bottom"> in the other code base</p>
+      <p begin="00:03:47:00" end="00:03:51:00" region="bottom">they did something I never encountered</p>
+      <p begin="00:03:51:00" end="00:03:55:00" region="bottom"> before, which was they built their test binaries</p>
+      <p begin="00:03:55:00" end="00:03:57:00" region="bottom"> into the source tree.</p>
+      <p begin="00:03:58:00" end="00:03:59:00" region="bottom">And that was not ideal.</p>
+      <p begin="00:03:59:00" end="00:04:00:00" region="bottom">That doesn't sound right?</p>
+      <p begin="00:04:00:00" end="00:04:04:00" region="bottom">Yeah, it was not ideal.</p>
+      <p begin="00:04:04:00" end="00:04:07:00" region="bottom">My goal was, first of all, to enable</p>
+      <p begin="00:04:07:00" end="00:04:10:00" region="bottom"> different build types in such a way that each</p>
+      <p begin="00:04:10:00" end="00:04:14:00" region="bottom"> of them built into its own build directory (build tree).</p>
+      <p begin="00:04:15:00" end="00:04:18:00" region="bottom">My idea was that if I had that,</p>
+      <p begin="00:04:18:00" end="00:04:21:00" region="bottom"> I could then set up a</p>
+      <p begin="00:04:21:00" end="00:04:24:00" region="bottom"> continuous build in such a way that all those</p>
+      <p begin="00:04:24:00" end="00:04:27:00" region="bottom"> builds could be done in parallel, because they would</p>
+      <p begin="00:04:27:00" end="00:04:30:00" region="bottom"> not be interfering with each other.</p>
+      <p begin="00:04:30:00" end="00:04:33:00" region="bottom">But in the second code base, that wouldn't</p>
+      <p begin="00:04:33:00" end="00:04:36:00" region="bottom"> be possible because the test binaries would</p>
+      <p begin="00:04:37:00" end="00:04:39:00" region="bottom"> overwrite each other.</p>
+      <p begin="00:04:39:00" end="00:04:42:00" region="bottom">There would be race conditions in the file system, which I didn't want.</p>
+      <p begin="00:04:42:00" end="00:04:45:00" region="bottom">I can see why you're experimenting with Bazel.</p>
+      <p begin="00:04:47:00" end="00:04:49:00" region="bottom">Did you have to then go back to CMake, I see here.</p>
+      <p begin="00:04:49:00" end="00:04:52:00" region="bottom">They only use CMake, as often</p>
+      <p begin="00:04:53:00" end="00:04:55:00" region="bottom"> happens with CMake.</p>
+      <p begin="00:04:55:00" end="00:04:58:00" region="bottom">You just Google a working</p>
+      <p begin="00:04:58:00" end="00:05:01:00" region="bottom"> configuration, then you cut and paste lots of</p>
+      <p begin="00:05:01:00" end="00:05:04:00" region="bottom"> stuff, and you then don't touch it because</p>
+      <p begin="00:05:04:00" end="00:05:06:00" region="bottom"> it works. Or you think it works.</p>
+      <p begin="00:05:06:00" end="00:05:08:00" region="bottom">You hope not to touch it.</p>
+      <p begin="00:05:08:00" end="00:05:09:00" region="bottom">You hope it works.</p>
+      <p begin="00:05:09:00" end="00:05:12:00" region="bottom">And slowly, over time, it grows</p>
+      <p begin="00:05:12:00" end="00:05:15:00" region="bottom"> various appendages and strange</p>
+      <p begin="00:05:15:00" end="00:05:17:00" region="bottom"> build commands that you have to run.</p>
+      <p begin="00:05:17:00" end="00:05:20:00" region="bottom">So unpicking that took quite a long time,</p>
+      <p begin="00:05:21:00" end="00:05:25:00" region="bottom"> but in the end, I had builds</p>
+      <p begin="00:05:25:00" end="00:05:28:00" region="bottom"> that used CMake profiles,</p>
+      <p begin="00:05:29:00" end="00:05:32:00" region="bottom"> which, frankly, saved me.</p>
+      <p begin="00:05:32:00" end="00:05:34:00" region="bottom">It was such a great life</p>
+      <p begin="00:05:34:00" end="00:05:38:00" region="bottom"> quality improvement for anyone who works with CMake.</p>
+      <p begin="00:05:38:00" end="00:05:41:00" region="bottom">I came up with a scheme where the profile</p>
+      <p begin="00:05:42:00" end="00:05:47:00" region="bottom"> name expressed the build flavour, so to speak.</p>
+      <p begin="00:05:47:00" end="00:05:51:00" region="bottom">For example, I had a build called gcc_deb</p>
+      <p begin="00:05:51:00" end="00:05:55:00" region="bottom">and gcc_rel.</p>
+      <p begin="00:05:56:00" end="00:05:59:00" region="bottom">And then I also introduced Clang</p>
+      <p begin="00:05:59:00" end="00:06:02:00" region="bottom"> compiler. The production was GCC,</p>
+      <p begin="00:06:02:00" end="00:06:06:00" region="bottom"> but I could run clang building parallel, and that</p>
+      <p begin="00:06:06:00" end="00:06:09:00" region="bottom"> enabled me to also use all the clang tools,</p>
+      <p begin="00:06:09:00" end="00:06:12:00" region="bottom"> including clang-tidy, all the clang sanitizers</p>
+      <p begin="00:06:12:00" end="00:06:15:00" region="bottom"> alongside GCC sanitizers.</p>
+      <p begin="00:06:15:00" end="00:06:18:00" region="bottom">I was lucky that they stayed on the pretty</p>
+      <p begin="00:06:18:00" end="00:06:21:00" region="bottom"> much the latest compilers, so I think by</p>
+      <p begin="00:06:22:00" end="00:06:25:00" region="bottom"> the end of it, we used GCC 14</p>
+      <p begin="00:06:25:00" end="00:06:28:00" region="bottom"> and Clang 19.</p>
+      <p begin="00:06:28:00" end="00:06:32:00" region="bottom">Well, not the cutting edge, but still pretty new.</p>
+      <p begin="00:06:32:00" end="00:06:36:00" region="bottom">Better than the average of the industry.</p>
+      <p begin="00:06:36:00" end="00:06:38:00" region="bottom">Yeah, definitely better than many.</p>
+      <p begin="00:06:38:00" end="00:06:42:00" region="bottom">So yeah, by the end of that exercise,</p>
+      <p begin="00:06:42:00" end="00:06:45:00" region="bottom"> I had those builds running in</p>
+      <p begin="00:06:45:00" end="00:06:48:00" region="bottom"> parallel, those included debug,</p>
+      <p begin="00:06:48:00" end="00:06:51:00" region="bottom"> release, all</p>
+      <p begin="00:06:51:00" end="00:06:54:00" region="bottom"> the sanitizers: address, undefined</p>
+      <p begin="00:06:55:00" end="00:06:58:00" region="bottom"> behavior and thread. Setting up memory sanitizer</p>
+      <p begin="00:06:58:00" end="00:07:00:00" region="bottom"> is exercise in frustration,</p>
+      <p begin="00:07:00:00" end="00:07:01:00" region="bottom">So I didn't do that.</p>
+      <p begin="00:07:01:00" end="00:07:03:00" region="bottom">Did you have Valgrind on the side?</p>
+      <p begin="00:07:03:00" end="00:07:06:00" region="bottom">Another build was release with debug</p>
+      <p begin="00:07:06:00" end="00:07:07:00" region="bottom"> information for Valgrind.</p>
+      <p begin="00:07:08:00" end="00:07:11:00" region="bottom">Everything was running on Jenkins.</p>
+      <p begin="00:07:11:00" end="00:07:14:00" region="bottom">And yeah, the entire build set took</p>
+      <p begin="00:07:14:00" end="00:07:16:00" region="bottom"> about an hour.</p>
+      <p begin="00:07:16:00" end="00:07:17:00" region="bottom">That's pretty good.</p>
+      <p begin="00:07:17:00" end="00:07:21:00" region="bottom">Yeah, and I scheduled it once a day</p>
+      <p begin="00:07:21:00" end="00:07:24:00" region="bottom">at night so that it didn't interfere</p>
+      <p begin="00:07:24:00" end="00:07:25:00" region="bottom"> with any other builds.</p>
+      <p begin="00:07:26:00" end="00:07:28:00" region="bottom">The 1st code base was</p>
+      <p begin="00:07:28:00" end="00:07:29:00" region="bottom">1.5 years old,</p>
+      <p begin="00:07:29:00" end="00:07:32:00" region="bottom">The other one was more than 10 or even maybe</p>
+      <p begin="00:07:32:00" end="00:07:33:00" region="bottom"> 15 years old.</p>
+      <p begin="00:07:33:00" end="00:07:36:00" region="bottom">C++23 was enabled in both.</p>
+      <p begin="00:07:36:00" end="00:07:39:00" region="bottom">And it's not like everyone suddenly started</p>
+      <p begin="00:07:40:00" end="00:07:43:00" region="bottom"> using those C++23 features, but if</p>
+      <p begin="00:07:43:00" end="00:07:47:00" region="bottom"> anyone wanted to, they were there. Like string::contains.</p>
+      <p begin="00:07:47:00" end="00:07:49:00" region="bottom">Oh my god, imagine that.</p>
+      <p begin="00:07:49:00" end="00:07:53:00" region="bottom">Most new features were in use, especially,</p>
+      <p begin="00:07:53:00" end="00:07:54:00" region="bottom"> especially concepts.</p>
+      <p begin="00:07:54:00" end="00:07:55:00" region="bottom">That was nice.</p>
+      <p begin="00:07:55:00" end="00:07:58:00" region="bottom">That was my 1st time dealing with using concepts</p>
+      <p begin="00:07:58:00" end="00:08:01:00" region="bottom"> and I really, really liked it.</p>
+      <p begin="00:08:01:00" end="00:08:04:00" region="bottom">There was quite a lot of template code.</p>
+      <p begin="00:08:04:00" end="00:08:07:00" region="bottom">I decided after some Googling to</p>
+      <p begin="00:08:07:00" end="00:08:12:00" region="bottom"> use Drogon framework for creating a web service.</p>
+      <p begin="00:08:12:00" end="00:08:13:00" region="bottom">That was really nice.</p>
+      <p begin="00:08:13:00" end="00:08:16:00" region="bottom">And I combined it with some templated code</p>
+      <p begin="00:08:17:00" end="00:08:20:00" region="bottom"> to make it easy to add new endpoints.</p>
+      <p begin="00:08:20:00" end="00:08:23:00" region="bottom">It was really quick and easy to set up.</p>
+      <p begin="00:08:23:00" end="00:08:27:00" region="bottom">And the benchmarks show that Drogon is one of the fastest available</p>
+      <p begin="00:08:27:00" end="00:08:30:00" region="bottom"> C++ web frameworks.</p>
+      <p begin="00:08:30:00" end="00:08:32:00" region="bottom">So yeah, if you need...</p>
+      <p begin="00:08:32:00" end="00:08:35:00" region="bottom">I didn't know about this Drogon, and is it like header-only, perhaps,</p>
+      <p begin="00:08:35:00" end="00:08:37:00" region="bottom"> thing, or is it?</p>
+      <p begin="00:08:37:00" end="00:08:39:00" region="bottom">Let's see, I don't think it's header only.</p>
+      <p begin="00:08:40:00" end="00:08:44:00" region="bottom">I think I had to build it and set it up</p>
+      <p begin="00:08:44:00" end="00:08:47:00" region="bottom"> as a library dependency.</p>
+      <p begin="00:08:47:00" end="00:08:49:00" region="bottom">That's actually good.</p>
+      <p begin="00:08:49:00" end="00:08:53:00" region="bottom">If you want to increase build times, use header only libraries.</p>
+      <p begin="00:08:53:00" end="00:08:56:00" region="bottom">In fact, you know, I wanted to ask you, what was the biggest bang for</p>
+      <p begin="00:08:56:00" end="00:08:59:00" region="bottom"> your buck when you wanted to reduce the time for compilation,</p>
+      <p begin="00:08:59:00" end="00:09:03:00" region="bottom"> did you find that too many includes or perhaps too</p>
+      <p begin="00:09:03:00" end="00:09:06:00" region="bottom"> many templates were the problems or a combination?</p>
+      <p begin="00:09:06:00" end="00:09:09:00" region="bottom">Circular dependencies were the</p>
+      <p begin="00:09:09:00" end="00:09:12:00" region="bottom"> biggest culprit for long build times.</p>
+      <p begin="00:09:12:00" end="00:09:16:00" region="bottom">I found an interesting thing about ccache.</p>
+      <p begin="00:09:16:00" end="00:09:19:00" region="bottom">Apparently, the new version of ccache starting from version 4</p>
+      <p begin="00:09:20:00" end="00:09:23:00" region="bottom"> supports a remote</p>
+      <p begin="00:09:23:00" end="00:09:26:00" region="bottom"> cache in the same format as Bazel.</p>
+      <p begin="00:09:26:00" end="00:09:29:00" region="bottom">So if you have a Bazel cache</p>
+      <p begin="00:09:29:00" end="00:09:31:00" region="bottom"> server running somewhere,</p>
+      <p begin="00:09:31:00" end="00:09:34:00" region="bottom">you can use it alongside Bazel</p>
+      <p begin="00:09:34:00" end="00:09:37:00" region="bottom"> for any ccache remote storage.</p>
+      <p begin="00:09:37:00" end="00:09:41:00" region="bottom">There is an option that you can set up and like it works out of the box.</p>
+      <p begin="00:09:41:00" end="00:09:44:00" region="bottom">The whole thing was a lot of yak shaving.</p>
+      <p begin="00:09:45:00" end="00:09:48:00" region="bottom">So in order to do one part,</p>
+      <p begin="00:09:48:00" end="00:09:51:00" region="bottom">I had to set up a Bazel build of a</p>
+      <p begin="00:09:51:00" end="00:09:53:00" region="bottom"> framework called TensorFlow.</p>
+      <p begin="00:09:53:00" end="00:09:55:00" region="bottom">It's like a machine learning thing.</p>
+      <p begin="00:09:56:00" end="00:09:59:00" region="bottom">I think it's by Google, and obviously it uses</p>
+      <p begin="00:09:59:00" end="00:10:02:00" region="bottom"> Bazel, and they didn't have Bazel, so I</p>
+      <p begin="00:10:02:00" end="00:10:05:00" region="bottom"> had to onboard it, and then I discovered that the</p>
+      <p begin="00:10:05:00" end="00:10:07:00" region="bottom"> full build off TensorFlow took 4 hours.</p>
+      <p begin="00:10:07:00" end="00:10:10:00" region="bottom">So after that, I had to set up a remote</p>
+      <p begin="00:10:11:00" end="00:10:15:00" region="bottom"> cache, which was fairly easy because they used</p>
+      <p begin="00:10:15:00" end="00:10:17:00" region="bottom"> Docker infrastructure.</p>
+      <p begin="00:10:17:00" end="00:10:20:00" region="bottom">And I just found a Docker image with a ready-made</p>
+      <p begin="00:10:20:00" end="00:10:22:00" region="bottom"> Bazel cache server.</p>
+      <p begin="00:10:22:00" end="00:10:26:00" region="bottom">Then we pointed it to Amazon AWS,</p>
+      <p begin="00:10:27:00" end="00:10:29:00" region="bottom"> and by the time I left,</p>
+      <p begin="00:10:29:00" end="00:10:31:00" region="bottom">there was plenty of space left in the cache.</p>
+      <p begin="00:10:31:00" end="00:10:34:00" region="bottom">And then after that, I discovered that ccache supported it as well.</p>
+      <p begin="00:10:35:00" end="00:10:38:00" region="bottom">So, the interesting</p>
+      <p begin="00:10:38:00" end="00:10:41:00" region="bottom"> result of it was that often local</p>
+      <p begin="00:10:41:00" end="00:10:45:00" region="bottom"> cache in ccache was slower than</p>
+      <p begin="00:10:45:00" end="00:10:47:00" region="bottom"> using the remote one.</p>
+      <p begin="00:10:47:00" end="00:10:50:00" region="bottom">I suspect that might have been because the</p>
+      <p begin="00:10:50:00" end="00:10:53:00" region="bottom"> local storage was getting full and was</p>
+      <p begin="00:10:53:00" end="00:10:56:00" region="bottom"> just thrashing, trying to clean</p>
+      <p begin="00:10:56:00" end="00:11:00:00" region="bottom"> up and then that, potentially slowed it down.</p>
+      <p begin="00:11:00:00" end="00:11:03:00" region="bottom">I have to mention that both projects were in</p>
+      <p begin="00:11:03:00" end="00:11:07:00" region="bottom"> teams that were working close together and both teams were excellent.</p>
+      <p begin="00:11:07:00" end="00:11:09:00" region="bottom">They were really easy to work with.</p>
+      <p begin="00:11:09:00" end="00:11:12:00" region="bottom">Fantastic experience working with them.</p>
+      <p begin="00:11:12:00" end="00:11:15:00" region="bottom">So the last thing</p>
+      <p begin="00:11:16:00" end="00:11:20:00" region="bottom"> that I did was I tried setting up modules,</p>
+      <p begin="00:11:20:00" end="00:11:24:00" region="bottom"> because by the time my project was, my consulting</p>
+      <p begin="00:11:24:00" end="00:11:25:00" region="bottom"> gig was up.</p>
+      <p begin="00:11:25:00" end="00:11:29:00" region="bottom">I had a couple of weeks left and everything was pretty much done.</p>
+      <p begin="00:11:29:00" end="00:11:33:00" region="bottom">So they said, why don't I look at using modules?</p>
+      <p begin="00:11:33:00" end="00:11:36:00" region="bottom">And sadly, GCC 13 had</p>
+      <p begin="00:11:37:00" end="00:11:41:00" region="bottom"> a few bugs, just didn't work.</p>
+      <p begin="00:11:41:00" end="00:11:44:00" region="bottom">So I left it all more</p>
+      <p begin="00:11:44:00" end="00:11:47:00" region="bottom"> or less prepared for them for when they migrate</p>
+      <p begin="00:11:47:00" end="00:11:50:00" region="bottom"> to GCC 14 and then</p>
+      <p begin="00:11:50:00" end="00:11:54:00" region="bottom"> it all should work, at least with a single project.</p>
+      <p begin="00:11:54:00" end="00:11:57:00" region="bottom"> The goal was just to convert a single part of the project</p>
+      <p begin="00:11:57:00" end="00:11:59:00" region="bottom"> to modules and see how it goes.</p>
+      <p begin="00:11:59:00" end="00:12:02:00" region="bottom">So Clang 19 worked perfectly.</p>
+      <p begin="00:12:02:00" end="00:12:06:00" region="bottom">Did they have a specific goal to try and get modules working?</p>
+      <p begin="00:12:06:00" end="00:12:09:00" region="bottom">Was it working in other stuff or was just just wanting</p>
+      <p begin="00:12:09:00" end="00:12:12:00" region="bottom"> to experiment with something that probably should work by now?</p>
+      <p begin="00:12:13:00" end="00:12:15:00" region="bottom">No, it was the latter.</p>
+      <p begin="00:12:15:00" end="00:12:17:00" region="bottom">They wanted the latest feature.</p>
+      <p begin="00:12:17:00" end="00:12:20:00" region="bottom">They knew all the advantages of having modules,</p>
+      <p begin="00:12:21:00" end="00:12:24:00" region="bottom"> and I'm guessing the most sought</p>
+      <p begin="00:12:24:00" end="00:12:27:00" region="bottom"> after feature of modules was code isolation</p>
+      <p begin="00:12:28:00" end="00:12:29:00" region="bottom"> and organization.</p>
+      <p begin="00:12:29:00" end="00:12:32:00" region="bottom">Not the build time speed up.</p>
+      <p begin="00:12:33:00" end="00:12:36:00" region="bottom">The main thing was to use</p>
+      <p begin="00:12:36:00" end="00:12:39:00" region="bottom"> modules to make it all tidier and</p>
+      <p begin="00:12:39:00" end="00:12:42:00" region="bottom"> more isolated and prevent further</p>
+      <p begin="00:12:42:00" end="00:12:44:00" region="bottom"> circular dependencies from appearing.</p>
+      <p begin="00:12:44:00" end="00:12:45:00" region="bottom">Good approach.</p>
+      <p begin="00:12:45:00" end="00:12:46:00" region="bottom">Yeah.</p>
+      <p begin="00:12:46:00" end="00:12:50:00" region="bottom">And they were just, they just wanted to prepare for the future.</p>
+      <p begin="00:12:50:00" end="00:12:53:00" region="bottom">I was glad to see that they stayed</p>
+      <p begin="00:12:53:00" end="00:12:56:00" region="bottom"> on the latest compilers and their internal</p>
+      <p begin="00:12:56:00" end="00:12:59:00" region="bottom"> systems were easy to work with and upgrading</p>
+      <p begin="00:12:59:00" end="00:13:02:00" region="bottom"> infrastructure related stuff was pretty easy.</p>
+      <p begin="00:13:02:00" end="00:13:05:00" region="bottom">So, yeah, CMake is a terrible mess.</p>
+      <p begin="00:13:05:00" end="00:13:08:00" region="bottom">Like, I like to say, and everything I learned</p>
+      <p begin="00:13:08:00" end="00:13:10:00" region="bottom"> about it was against my will.</p>
+      <p begin="00:13:10:00" end="00:13:13:00" region="bottom">My advice is to use CMake presets.</p>
+      <p begin="00:13:13:00" end="00:13:16:00" region="bottom">They are supported by VSCode</p>
+      <p begin="00:13:16:00" end="00:13:20:00" region="bottom"> out of the box, and if you make</p>
+      <p begin="00:13:20:00" end="00:13:23:00" region="bottom"> CMake presets sort of the 1st the 1st rate</p>
+      <p begin="00:13:23:00" end="00:13:26:00" region="bottom"> citizen of your build, the source of truth,</p>
+      <p begin="00:13:26:00" end="00:13:29:00" region="bottom"> that gives you the ability to repeat</p>
+      <p begin="00:13:30:00" end="00:13:33:00" region="bottom"> builds both from the terminal and</p>
+      <p begin="00:13:33:00" end="00:13:36:00" region="bottom"> from VSCode, the build artefacts go</p>
+      <p begin="00:13:36:00" end="00:13:39:00" region="bottom"> in the same directories, so you don't end to, </p>
+      <p begin="00:13:39:00" end="00:13:40:00" region="bottom"> you don't end up</p>
+      <p begin="00:13:41:00" end="00:13:45:00" region="bottom">rebuilding stuff as you switch from terminal</p>
+      <p begin="00:13:45:00" end="00:13:46:00" region="bottom"> to VSCode and back.</p>
+      <p begin="00:13:47:00" end="00:13:50:00" region="bottom">That was my 1st time working with Docker</p>
+      <p begin="00:13:50:00" end="00:13:53:00" region="bottom"> and Devimages, and I really liked it.</p>
+      <p begin="00:13:54:00" end="00:13:57:00" region="bottom">When I was being onboarded, after</p>
+      <p begin="00:13:57:00" end="00:14:00:00" region="bottom"> an hour I could build the entire code base</p>
+      <p begin="00:14:00:00" end="00:14:03:00" region="bottom"> with all the debugging and stuff.</p>
+      <p begin="00:14:03:00" end="00:14:06:00" region="bottom">So for me as a consultant who goes from</p>
+      <p begin="00:14:06:00" end="00:14:09:00" region="bottom"> firm to firm, that was like a thing unheard of.</p>
+      <p begin="00:14:09:00" end="00:14:12:00" region="bottom">It usually takes days, if not weeks, to get</p>
+      <p begin="00:14:13:00" end="00:14:17:00" region="bottom"> onboarded properly and start building and committing.</p>
+      <p begin="00:14:17:00" end="00:14:20:00" region="bottom">And here I am in my 1st day, opening a PR—pretty good.</p>
+      <p begin="00:14:21:00" end="00:14:24:00" region="bottom">I worked in finance for a bit</p>
+      <p begin="00:14:24:00" end="00:14:27:00" region="bottom"> once in my 1st contracting role, it took weeks</p>
+      <p begin="00:14:28:00" end="00:14:30:00" region="bottom"> to be able to commit any code.</p>
+      <p begin="00:14:30:00" end="00:14:32:00" region="bottom">But it was the same problem.</p>
+      <p begin="00:14:32:00" end="00:14:36:00" region="bottom">All the other people went, it builds on my machine,</p>
+      <p begin="00:14:36:00" end="00:14:39:00" region="bottom"> but there were circular dependencies going on, and they just</p>
+      <p begin="00:14:39:00" end="00:14:42:00" region="bottom"> warmed himself to a point where they'd got an old DLL that he</p>
+      <p begin="00:14:42:00" end="00:14:43:00" region="bottom"> kind of bootstrapped itself.</p>
+      <p begin="00:14:44:00" end="00:14:48:00" region="bottom">It's when we started trying to set up CI it became apparent what was happening.</p>
+      <p begin="00:14:48:00" end="00:14:51:00" region="bottom">And we managed to fix it as well and get it down to your </p>
+      <p begin="00:14:51:00" end="00:14:54:00" region="bottom"> build something of an hour. The circular dependencies</p>
+      <p begin="00:14:54:00" end="00:14:55:00" region="bottom"> again, honestly.</p>
+      <p begin="00:14:55:00" end="00:14:58:00" region="bottom">When I came on the project, </p>
+      <p begin="00:14:59:00" end="00:15:02:00" region="bottom"> their initial structure was in the source tree,</p>
+      <p begin="00:15:02:00" end="00:15:04:00" region="bottom"> you had multiple projects.</p>
+      <p begin="00:15:04:00" end="00:15:07:00" region="bottom">Every one of them had their own CMakeLists.</p>
+      <p begin="00:15:07:00" end="00:15:10:00" region="bottom">There was the main one in the</p>
+      <p begin="00:15:10:00" end="00:15:12:00" region="bottom"> root of the source tree.</p>
+      <p begin="00:15:12:00" end="00:15:15:00" region="bottom">And the thing that was the culprit was they</p>
+      <p begin="00:15:15:00" end="00:15:19:00" region="bottom"> added the source tree root directory</p>
+      <p begin="00:15:19:00" end="00:15:22:00" region="bottom"> as the include to all the projects.</p>
+      <p begin="00:15:22:00" end="00:15:24:00" region="bottom">And so every project was free to</p>
+      <p begin="00:15:25:00" end="00:15:27:00" region="bottom"> include anything from anywhere.</p>
+      <p begin="00:15:27:00" end="00:15:30:00" region="bottom">And obviously that wasn't ideal, it resulted</p>
+      <p begin="00:15:30:00" end="00:15:32:00" region="bottom"> in lots of circular dependencies.</p>
+      <p begin="00:15:32:00" end="00:15:35:00" region="bottom">As for the IDE, they preferred</p>
+      <p begin="00:15:35:00" end="00:15:38:00" region="bottom"> VSCode.  I initially dismissed</p>
+      <p begin="00:15:38:00" end="00:15:41:00" region="bottom"> it because it's a browser.</p>
+      <p begin="00:15:42:00" end="00:15:46:00" region="bottom">I mean, JavaScript-based IDE for C++, come on.</p>
+      <p begin="00:15:46:00" end="00:15:49:00" region="bottom">But it turned out it was pretty good, especially</p>
+      <p begin="00:15:49:00" end="00:15:52:00" region="bottom"> because it supported Devcontainers</p>
+      <p begin="00:15:52:00" end="00:15:55:00" region="bottom"> much better than, say, CLion.</p>
+      <p begin="00:15:55:00" end="00:15:56:00" region="bottom"> Till I left,</p>
+      <p begin="00:15:56:00" end="00:16:00:00" region="bottom">I couldn't get CLion working with Devcontainers</p>
+      <p begin="00:16:00:00" end="00:16:01:00" region="bottom"> no matter what I tried.</p>
+      <p begin="00:16:01:00" end="00:16:04:00" region="bottom">It was always broken in different curious ways</p>
+      <p begin="00:16:05:00" end="00:16:07:00" region="bottom"> every time I tried it.</p>
+      <p begin="00:16:07:00" end="00:16:08:00" region="bottom">So I stayed with VSCode.</p>
+      <p begin="00:16:10:00" end="00:16:13:00" region="bottom">I think most of the people I speak to,</p>
+      <p begin="00:16:13:00" end="00:16:15:00" region="bottom"> they have similar opinions.</p>
+      <p begin="00:16:15:00" end="00:16:18:00" region="bottom">We all came to VSCode with suspicion,</p>
+      <p begin="00:16:18:00" end="00:16:20:00" region="bottom"> thinking that that cannot be for me.</p>
+      <p begin="00:16:20:00" end="00:16:23:00" region="bottom">But then there is a divide.</p>
+      <p begin="00:16:23:00" end="00:16:26:00" region="bottom">You know, some people are the hardliners, they will stick to Vim and Emacs.</p>
+      <p begin="00:16:27:00" end="00:16:28:00" region="bottom">More power to them.</p>
+      <p begin="00:16:28:00" end="00:16:31:00" region="bottom">Otherwise, you know, for common mortals</p>
+      <p begin="00:16:31:00" end="00:16:35:00" region="bottom"> like myself, I think VSCode that comes with batteries included.</p>
+      <p begin="00:16:36:00" end="00:16:39:00" region="bottom">Everything works out of the box, it's fast enough.</p>
+      <p begin="00:16:39:00" end="00:16:42:00" region="bottom">Certainly it's not slowing me down.</p>
+      <p begin="00:16:42:00" end="00:16:46:00" region="bottom">My own brain is the bottleneck here, not VSCode.</p>
+      <p begin="00:16:46:00" end="00:16:47:00" region="bottom">So it's good enough to me.</p>
+      <p begin="00:16:47:00" end="00:16:48:00" region="bottom">Yeah, yeah.</p>
+      <p begin="00:16:49:00" end="00:16:52:00" region="bottom">So this was the 1st time I used mold linker.</p>
+      <p begin="00:16:52:00" end="00:16:56:00" region="bottom">If you haven't used it, I strongly advise you to try it out.</p>
+      <p begin="00:16:56:00" end="00:16:59:00" region="bottom">It's a drop-in replacement for the gold</p>
+      <p begin="00:16:59:00" end="00:17:02:00" region="bottom"> linker and LLD and it's so much</p>
+      <p begin="00:17:03:00" end="00:17:04:00" region="bottom"> faster than anything else.</p>
+      <p begin="00:17:04:00" end="00:17:07:00" region="bottom">Even even faster than LLD.</p>
+      <p begin="00:17:07:00" end="00:17:08:00" region="bottom">It's really good.</p>
+      <p begin="00:17:08:00" end="00:17:11:00" region="bottom">The guy who created it was the</p>
+      <p begin="00:17:11:00" end="00:17:13:00" region="bottom"> same guy who worked on LLD.</p>
+      <p begin="00:17:13:00" end="00:17:16:00" region="bottom">Ccache with remote backend, and</p>
+      <p begin="00:17:16:00" end="00:17:18:00" region="bottom"> distcc also helped.</p>
+      <p begin="00:17:18:00" end="00:17:21:00" region="bottom">We only had one distcc server,</p>
+      <p begin="00:17:21:00" end="00:17:23:00" region="bottom"> but it was a pretty powerful one.</p>
+      <p begin="00:17:24:00" end="00:17:26:00" region="bottom">So, Clang Build Analyzer.</p>
+      <p begin="00:17:26:00" end="00:17:29:00" region="bottom">Although getting useful</p>
+      <p begin="00:17:29:00" end="00:17:32:00" region="bottom"> results with Clang Build Analyzer is more difficult</p>
+      <p begin="00:17:32:00" end="00:17:35:00" region="bottom"> than tweaking the build because it usually requires</p>
+      <p begin="00:17:35:00" end="00:17:38:00" region="bottom"> quite a bit of refactoring and getting rid</p>
+      <p begin="00:17:38:00" end="00:17:41:00" region="bottom"> of unnecessary templates and stuff like that.</p>
+      <p begin="00:17:41:00" end="00:17:45:00" region="bottom">So it's more of a strategic engine</p>
+      <p begin="00:17:45:00" end="00:17:48:00" region="bottom"> that can advise you what to look at.</p>
+      <p begin="00:17:48:00" end="00:17:51:00" region="bottom">One other feedback was that the release</p>
+      <p begin="00:17:51:00" end="00:17:54:00" region="bottom"> process must require as few manual steps as</p>
+      <p begin="00:17:54:00" end="00:17:57:00" region="bottom"> possible, and I made it my goal to set it</p>
+      <p begin="00:17:57:00" end="00:18:00:00" region="bottom"> up in such a way that build would only</p>
+      <p begin="00:18:00:00" end="00:18:03:00" region="bottom"> require at most 2 commands, one</p>
+      <p begin="00:18:03:00" end="00:18:06:00" region="bottom"> to configure, including the, all the running</p>
+      <p begin="00:18:07:00" end="00:18:10:00" region="bottom"> the configuration stage of CMake, and the</p>
+      <p begin="00:18:10:00" end="00:18:12:00" region="bottom"> other one to build. Clang-format.</p>
+      <p begin="00:18:12:00" end="00:18:14:00" region="bottom">I set up Clang-format.</p>
+      <p begin="00:18:14:00" end="00:18:17:00" region="bottom">Yeah, Kubernetes is great if you</p>
+      <p begin="00:18:17:00" end="00:18:20:00" region="bottom"> are a YAML developer.</p>
+      <p begin="00:18:21:00" end="00:18:24:00" region="bottom">Were you using Kubernetes just for your build flow or was it</p>
+      <p begin="00:18:24:00" end="00:18:26:00" region="bottom"> actually being used for deployments?</p>
+      <p begin="00:18:26:00" end="00:18:28:00" region="bottom">It's deployments.</p>
+      <p begin="00:18:28:00" end="00:18:32:00" region="bottom">So all the prod applications were running through,</p>
+      <p begin="00:18:32:00" end="00:18:34:00" region="bottom"> they were all containerized?</p>
+      <p begin="00:18:34:00" end="00:18:35:00" region="bottom">Interesting.</p>
+      <p begin="00:18:36:00" end="00:18:39:00" region="bottom">I hadn't, I hadn't talked to anybody in the space that</p>
+      <p begin="00:18:39:00" end="00:18:42:00" region="bottom"> was actually using it because the test that they had</p>
+      <p begin="00:18:42:00" end="00:18:45:00" region="bottom"> all done, even though the performance was</p>
+      <p begin="00:18:45:00" end="00:18:48:00" region="bottom"> negligible, but it was measurable, and they didn't want</p>
+      <p begin="00:18:48:00" end="00:18:49:00" region="bottom"> to pay the cost for it.</p>
+      <p begin="00:18:50:00" end="00:18:53:00" region="bottom">So was that an issue at all or has that been solved?</p>
+      <p begin="00:18:53:00" end="00:18:57:00" region="bottom">I don't think performance was a huge bottleneck</p>
+      <p begin="00:18:57:00" end="00:18:59:00" region="bottom"> in that particular setup.</p>
+      <p begin="00:18:59:00" end="00:19:01:00" region="bottom">Most of the clients used Python, so</p>
+      <p begin="00:19:01:00" end="00:19:04:00" region="bottom"> it wasn't like C++ based code</p>
+      <p begin="00:19:05:00" end="00:19:08:00" region="bottom"> running in a container would slow them down.</p>
+      <p begin="00:19:08:00" end="00:19:11:00" region="bottom">In those cases where there was a slow down,</p>
+      <p begin="00:19:12:00" end="00:19:15:00" region="bottom">it wasn't because of the container, but</p>
+      <p begin="00:19:15:00" end="00:19:19:00" region="bottom"> because of the problems with</p>
+      <p begin="00:19:19:00" end="00:19:21:00" region="bottom"> C++ implementation, for example.</p>
+      <p begin="00:19:21:00" end="00:19:25:00" region="bottom">But the deployment was a breeze, it was very easy.</p>
+      <p begin="00:19:25:00" end="00:19:29:00" region="bottom">When I came on a project, I was like, so do</p>
+      <p begin="00:19:29:00" end="00:19:32:00" region="bottom"> you have a team that does your deployments? </p>
+      <p begin="00:19:32:00" end="00:19:35:00" region="bottom"> And they smiled and said, nope, we just do it ourselves, just</p>
+      <p begin="00:19:35:00" end="00:19:38:00" region="bottom"> edit one YAML file and it's done.</p>
+      <p begin="00:19:38:00" end="00:19:39:00" region="bottom">I'm surprised they didn't</p>
+      <p begin="00:19:39:00" end="00:19:40:00" region="bottom">look at you and said, now we do.</p>
+      <p begin="00:19:43:00" end="00:19:46:00" region="bottom">They did prod deployments several</p>
+      <p begin="00:19:46:00" end="00:19:48:00" region="bottom"> times a day, all by themselves.</p>
+      <p begin="00:19:48:00" end="00:19:50:00" region="bottom">If anything went wrong,</p>
+      <p begin="00:19:50:00" end="00:19:54:00" region="bottom">they just reverted to a previous good version. Fantastic.</p>
+      <p begin="00:19:54:00" end="00:19:55:00" region="bottom">I really liked it.</p>
+      <p begin="00:19:56:00" end="00:19:59:00" region="bottom">Let's go to the next item.</p>
+      <p begin="00:20:00:00" end="00:20:03:00" region="bottom">A brief history of Bjarne Stroustrup.</p>
+      <p begin="00:20:03:00" end="00:20:04:00" region="bottom"> [In Danish] Bjarne Stroustrup.</p>
+      <p begin="00:20:04:00" end="00:20:08:00" region="bottom">He explains how to pronounce his name in this video.</p>
+      <p begin="00:20:08:00" end="00:20:10:00" region="bottom">It's a short video.</p>
+      <p begin="00:20:10:00" end="00:20:11:00" region="bottom">I liked it.</p>
+      <p begin="00:20:11:00" end="00:20:14:00" region="bottom">It's a good production value, very lighthearted.</p>
+      <p begin="00:20:14:00" end="00:20:15:00" region="bottom">It was funny.</p>
+      <p begin="00:20:15:00" end="00:20:17:00" region="bottom">Yeah, it was pretty funny.</p>
+      <p begin="00:20:17:00" end="00:20:18:00" region="bottom">I found it very humorous.</p>
+      <p begin="00:20:19:00" end="00:20:22:00" region="bottom">And they're going to produce another one about</p>
+      <p begin="00:20:22:00" end="00:20:23:00" region="bottom"> C++, I think.</p>
+      <p begin="00:20:23:00" end="00:20:26:00" region="bottom">Feature length one or another small one?</p>
+      <p begin="00:20:26:00" end="00:20:27:00" region="bottom">I don't know.</p>
+      <p begin="00:20:27:00" end="00:20:30:00" region="bottom">It's like, the next step,</p>
+      <p begin="00:20:30:00" end="00:20:32:00" region="bottom"> probably, in the history of Bjarne.</p>
+      <p begin="00:20:32:00" end="00:20:34:00" region="bottom">I bet that one'll be fun.</p>
+      <p begin="00:20:35:00" end="00:20:36:00" region="bottom">Right, Gianluca.</p>
+      <p begin="00:20:36:00" end="00:20:37:00" region="bottom">This is you.</p>
+      <p begin="00:20:38:00" end="00:20:40:00" region="bottom">I have to change that picture, though.</p>
+      <p begin="00:20:40:00" end="00:20:44:00" region="bottom">So thank you for warning me that we were going to talk about this.</p>
+      <p begin="00:20:44:00" end="00:20:47:00" region="bottom">I remember writing this last summer</p>
+      <p begin="00:20:47:00" end="00:20:50:00" region="bottom"> and I was pleased that somebody else posted it.</p>
+      <p begin="00:20:50:00" end="00:20:54:00" region="bottom">I thought it was going to get just ignored and</p>
+      <p begin="00:20:54:00" end="00:20:57:00" region="bottom"> I got a few upvotes </p>
+      <p begin="00:20:57:00" end="00:20:58:00" region="bottom"> on the sites.</p>
+      <p begin="00:20:58:00" end="00:21:01:00" region="bottom">I mean, you know, got a handful of good, very good</p>
+      <p begin="00:21:01:00" end="00:21:03:00" region="bottom"> tips, which I implemented.</p>
+      <p begin="00:21:04:00" end="00:21:08:00" region="bottom">And overall, you know, </p>
+      <p begin="00:21:08:00" end="00:21:09:00" region="bottom"> I was pleasantly surprised.</p>
+      <p begin="00:21:09:00" end="00:21:12:00" region="bottom">So I think, you know, I dip</p>
+      <p begin="00:21:12:00" end="00:21:15:00" region="bottom"> my toe in the reflection feature and</p>
+      <p begin="00:21:16:00" end="00:21:19:00" region="bottom"> I couldn't get enough of it, certainly,</p>
+      <p begin="00:21:19:00" end="00:21:22:00" region="bottom"> I would suggest anybody to play with it.</p>
+      <p begin="00:21:23:00" end="00:21:25:00" region="bottom">Sorry, for the podcast listeners,</p>
+      <p begin="00:21:25:00" end="00:21:27:00" region="bottom">can you say what the title was?</p>
+      <p begin="00:21:28:00" end="00:21:29:00" region="bottom">All right.</p>
+      <p begin="00:21:29:00" end="00:21:32:00" region="bottom">So, I implemented a</p>
+      <p begin="00:21:32:00" end="00:21:35:00" region="bottom"> little reflection-based program that would</p>
+      <p begin="00:21:35:00" end="00:21:38:00" region="bottom"> produce a UML diagram at compile</p>
+      <p begin="00:21:38:00" end="00:21:41:00" region="bottom"> time, with some cheating, and obviously </p>
+      <p begin="00:21:42:00" end="00:21:45:00" region="bottom"> it's not supposed to be a real implementation</p>
+      <p begin="00:21:45:00" end="00:21:48:00" region="bottom"> of anything, just a bit of a toy</p>
+      <p begin="00:21:48:00" end="00:21:51:00" region="bottom"> program that would navigate the tree of</p>
+      <p begin="00:21:51:00" end="00:21:55:00" region="bottom"> your classes, and output</p>
+      <p begin="00:21:55:00" end="00:21:57:00" region="bottom"> something that is PlantUML </p>
+      <p begin="00:21:58:00" end="00:22:01:00" region="bottom">script that you can just then plop into a</p>
+      <p begin="00:22:01:00" end="00:22:04:00" region="bottom"> viewer and produce a diagram of sorts.</p>
+      <p begin="00:22:05:00" end="00:22:08:00" region="bottom">So, it's an experiment, but</p>
+      <p begin="00:22:08:00" end="00:22:11:00" region="bottom"> it taught me a couple of</p>
+      <p begin="00:22:11:00" end="00:22:14:00" region="bottom"> concepts and I had fun writing it.</p>
+      <p begin="00:22:14:00" end="00:22:17:00" region="bottom">So, definitely, definitely suggest everybody</p>
+      <p begin="00:22:18:00" end="00:22:21:00" region="bottom"> to play, if they can, with reflections.</p>
+      <p begin="00:22:21:00" end="00:22:24:00" region="bottom">Unfortunately, we at work won't be</p>
+      <p begin="00:22:25:00" end="00:22:28:00" region="bottom"> able to for a while, we are far from</p>
+      <p begin="00:22:28:00" end="00:22:29:00" region="bottom"> the latest compilers.</p>
+      <p begin="00:22:29:00" end="00:22:33:00" region="bottom">But if anybody can, maybe people in other industry</p>
+      <p begin="00:22:33:00" end="00:22:35:00" region="bottom"> can, then go ahead.</p>
+      <p begin="00:22:35:00" end="00:22:38:00" region="bottom">Please, it's, I don't know if you're going to also talk about</p>
+      <p begin="00:22:38:00" end="00:22:41:00" region="bottom"> some talks that did a very</p>
+      <p begin="00:22:41:00" end="00:22:44:00" region="bottom"> good job at explaining reflections much</p>
+      <p begin="00:22:44:00" end="00:22:47:00" region="bottom"> better than I could in my post, like there</p>
+      <p begin="00:22:47:00" end="00:22:50:00" region="bottom"> was a Barry Revzin talk in CppCon</p>
+      <p begin="00:22:50:00" end="00:22:53:00" region="bottom"> last October.</p>
+      <p begin="00:22:53:00" end="00:22:56:00" region="bottom">That's great, but there's a bunch of them, there's Herb Sutter's talk.</p>
+      <p begin="00:22:56:00" end="00:22:59:00" region="bottom">It'll be one</p>
+      <p begin="00:22:59:00" end="00:23:01:00" region="bottom"> of the next times, not this time.</p>
+      <p begin="00:23:02:00" end="00:23:05:00" region="bottom">Gianluca's article is</p>
+      <p begin="00:23:05:00" end="00:23:08:00" region="bottom"> titled &quot;C ++26 Reflections,</p>
+      <p begin="00:23:08:00" end="00:23:11:00" region="bottom"> Adventures and Compile Time UML&quot;, and there is</p>
+      <p begin="00:23:11:00" end="00:23:14:00" region="bottom"> a page that you link in</p>
+      <p begin="00:23:14:00" end="00:23:18:00" region="bottom"> Compiler Explorer, which shows the execution and the result of it.</p>
+      <p begin="00:23:18:00" end="00:23:20:00" region="bottom">And it's really amazing.</p>
+      <p begin="00:23:20:00" end="00:23:23:00" region="bottom">It was amazing how easy it was and how much,</p>
+      <p begin="00:23:24:00" end="00:23:29:00" region="bottom"> how much I can now get away without learning proper metaprogramming.</p>
+      <p begin="00:23:30:00" end="00:23:34:00" region="bottom">You said your experiment had a bit of cheating.</p>
+      <p begin="00:23:34:00" end="00:23:38:00" region="bottom">I would say reflection is sort of cheating.</p>
+      <p begin="00:23:38:00" end="00:23:43:00" region="bottom">Right, when the program reflects the kingdom, yeah.</p>
+      <p begin="00:23:43:00" end="00:23:44:00" region="bottom">Yeah, exactly.</p>
+      <p begin="00:23:44:00" end="00:23:46:00" region="bottom">It's like a meta world.</p>
+      <p begin="00:23:46:00" end="00:23:50:00" region="bottom">Has anybody seen the latest</p>
+      <p begin="00:23:50:00" end="00:23:53:00" region="bottom"> what a blog by</p>
+      <p begin="00:23:54:00" end="00:23:55:00" region="bottom"> Ben Deane?</p>
+      <p begin="00:23:55:00" end="00:23:56:00" region="bottom">Oh, no.</p>
+      <p begin="00:23:56:00" end="00:23:59:00" region="bottom">Where he was speaking about reflection and</p>
+      <p begin="00:23:59:00" end="00:24:03:00" region="bottom"> the limited ways of</p>
+      <p begin="00:24:03:00" end="00:24:06:00" region="bottom"> code generation that is coming along with it</p>
+      <p begin="00:24:06:00" end="00:24:10:00" region="bottom"> in C++26 is actually capable</p>
+      <p begin="00:24:10:00" end="00:24:13:00" region="bottom"> of doing type calculations in the</p>
+      <p begin="00:24:13:00" end="00:24:15:00" region="bottom"> reflected world.</p>
+      <p begin="00:24:15:00" end="00:24:18:00" region="bottom">So yay, no more template</p>
+      <p begin="00:24:18:00" end="00:24:20:00" region="bottom"> metaprogramming to calculate types.</p>
+      <p begin="00:24:20:00" end="00:24:22:00" region="bottom">This is amazing.</p>
+      <p begin="00:24:22:00" end="00:24:25:00" region="bottom">Does this mean computing like unique types or</p>
+      <p begin="00:24:25:00" end="00:24:28:00" region="bottom"> does this mean like being able to generate,</p>
+      <p begin="00:24:28:00" end="00:24:32:00" region="bottom"> for example, a strong type for an alias?</p>
+      <p begin="00:24:32:00" end="00:24:34:00" region="bottom">It was more general.</p>
+      <p begin="00:24:34:00" end="00:24:37:00" region="bottom">It was about the fact that you can use</p>
+      <p begin="00:24:37:00" end="00:24:40:00" region="bottom"> only template metaprogramming if you want</p>
+      <p begin="00:24:40:00" end="00:24:42:00" region="bottom"> to compute something along with types.</p>
+      <p begin="00:24:43:00" end="00:24:45:00" region="bottom">We have value-based metaprogramming.</p>
+      <p begin="00:24:45:00" end="00:24:47:00" region="bottom">This is a pretty old kind of thing.</p>
+      <p begin="00:24:47:00" end="00:24:49:00" region="bottom">With constexpr now.</p>
+      <p begin="00:24:50:00" end="00:24:53:00" region="bottom">But with type calculations,</p>
+      <p begin="00:24:53:00" end="00:24:56:00" region="bottom"> we couldn't do that with the</p>
+      <p begin="00:24:56:00" end="00:24:59:00" region="bottom"> facility since C++ up and</p>
+      <p begin="00:24:59:00" end="00:25:02:00" region="bottom"> until 23, but with 26 and</p>
+      <p begin="00:25:02:00" end="00:25:05:00" region="bottom"> reflection, we can actually do also type</p>
+      <p begin="00:25:05:00" end="00:25:09:00" region="bottom"> calculations in the meta world without using</p>
+      <p begin="00:25:09:00" end="00:25:11:00" region="bottom"> templates for that.</p>
+      <p begin="00:25:11:00" end="00:25:15:00" region="bottom">Because, you know, templates require memoization</p>
+      <p begin="00:25:15:00" end="00:25:18:00" region="bottom"> and specialisations, and this is really expensive to the compiler.</p>
+      <p begin="00:25:18:00" end="00:25:21:00" region="bottom">So now we have everything we</p>
+      <p begin="00:25:22:00" end="00:25:25:00" region="bottom"> need to actually write complete programs within</p>
+      <p begin="00:25:25:00" end="00:25:28:00" region="bottom"> the space of the compiler.</p>
+      <p begin="00:25:28:00" end="00:25:30:00" region="bottom">That's interesting.</p>
+      <p begin="00:25:30:00" end="00:25:33:00" region="bottom">Can you, can you, at the same time, can you also tell whether</p>
+      <p begin="00:25:33:00" end="00:25:37:00" region="bottom"> the class has been defined or whether it's incomplete or not?</p>
+      <p begin="00:25:37:00" end="00:25:40:00" region="bottom">I didn't really understand what you were trying to ask.</p>
+      <p begin="00:25:42:00" end="00:25:43:00" region="bottom">May I?</p>
+      <p begin="00:25:43:00" end="00:25:44:00" region="bottom">What do you want to repeat?</p>
+      <p begin="00:25:44:00" end="00:25:48:00" region="bottom">Currently, you can't tell in the language</p>
+      <p begin="00:25:48:00" end="00:25:50:00" region="bottom">if a class is defined or not,</p>
+      <p begin="00:25:50:00" end="00:25:51:00" region="bottom">right?</p>
+      <p begin="00:25:52:00" end="00:25:55:00" region="bottom">If a type, if a type is actually defined or not, or if it's just alias.</p>
+      <p begin="00:25:58:00" end="00:26:01:00" region="bottom">And because there's a lot of template things that require the</p>
+      <p begin="00:26:01:00" end="00:26:03:00" region="bottom"> class to be defined for it to have defined behaviour.</p>
+      <p begin="00:26:04:00" end="00:26:07:00" region="bottom">And but you can't tell currently at compile</p>
+      <p begin="00:26:07:00" end="00:26:10:00" region="bottom"> time, and I was just wondering if maybe you could do that with reflection.</p>
+      <p begin="00:26:10:00" end="00:26:13:00" region="bottom">So you mean, do you speak about</p>
+      <p begin="00:26:13:00" end="00:26:16:00" region="bottom"> if you can sniff out at compile time</p>
+      <p begin="00:26:16:00" end="00:26:19:00" region="bottom"> if a particular specialisation has happened before?</p>
+      <p begin="00:26:19:00" end="00:26:22:00" region="bottom">Well, no, so let's say you just have struct foo;</p>
+      <p begin="00:26:22:00" end="00:26:25:00" region="bottom"> you've declared it, but you haven't defined it.</p>
+      <p begin="00:26:27:00" end="00:26:30:00" region="bottom">That's what I want to be able to know</p>
+      <p begin="00:26:30:00" end="00:26:31:00" region="bottom"> if I'm looking at a type:</p>
+      <p begin="00:26:31:00" end="00:26:33:00" region="bottom">has it actually been defined or has it just been declared?</p>
+      <p begin="00:26:34:00" end="00:26:37:00" region="bottom">I would try </p>
+      <p begin="00:26:37:00" end="00:26:40:00" region="bottom"> the &quot;eyebrow&quot; operator to actually bring this</p>
+      <p begin="00:26:40:00" end="00:26:43:00" region="bottom"> particular expected type into the meta space</p>
+      <p begin="00:26:43:00" end="00:26:45:00" region="bottom"> and see if it fails.</p>
+      <p begin="00:26:45:00" end="00:26:48:00" region="bottom">I don't know if it's possible, but I</p>
+      <p begin="00:26:49:00" end="00:26:52:00" region="bottom"> haven't had any chance to actually play with reflections</p>
+      <p begin="00:26:52:00" end="00:26:56:00" region="bottom"> so far, but Gianluca will probably jump into that.</p>
+      <p begin="00:26:56:00" end="00:26:59:00" region="bottom">I don't actually know myself, of course,</p>
+      <p begin="00:26:59:00" end="00:27:02:00" region="bottom"> you know, again, I think there's so many things I,</p>
+      <p begin="00:27:02:00" end="00:27:05:00" region="bottom"> I don't know that I feel so ignorant</p>
+      <p begin="00:27:06:00" end="00:27:09:00" region="bottom"> just looking at the many things that one could</p>
+      <p begin="00:27:09:00" end="00:27:12:00" region="bottom"> do, if we just managed to</p>
+      <p begin="00:27:12:00" end="00:27:14:00" region="bottom"> master this feature in general.</p>
+      <p begin="00:27:14:00" end="00:27:17:00" region="bottom">I've seen about this just recently in</p>
+      <p begin="00:27:18:00" end="00:27:21:00" region="bottom"> the &quot;Practical...&quot;</p>
+      <p begin="00:27:21:00" end="00:27:23:00" region="bottom">I think the talk was called, &quot;Practical</p>
+      <p begin="00:27:24:00" end="00:27:28:00" region="bottom"> reflection&quot; or &quot;Practical use of reflections&quot; by Barry Revzin.</p>
+      <p begin="00:27:29:00" end="00:27:32:00" region="bottom">And he would just declare the class and</p>
+      <p begin="00:27:32:00" end="00:27:35:00" region="bottom"> then open a consteval scope to define</p>
+      <p begin="00:27:35:00" end="00:27:38:18" region="bottom"> it with some metaprogramming logic.</p>
+      <p begin="00:27:39:00" end="00:27:41:00" region="bottom">You know, obviously that doesn't answer Jody's question.</p>
+      <p begin="00:27:41:00" end="00:27:44:00" region="bottom">Yeah, no, for that specific one, if you, if for that specific one,</p>
+      <p begin="00:27:45:00" end="00:27:48:00" region="bottom"> if you've got just a declaration, when you then in the reflection, if you,</p>
+      <p begin="00:27:48:00" end="00:27:52:00" region="bottom"> you've got the option, you can iterate it over the contents.</p>
+      <p begin="00:27:52:00" end="00:27:54:00" region="bottom">In that case, if you tried iterating, it would be empty.</p>
+      <p begin="00:27:54:00" end="00:27:57:00" region="bottom">So you could have a bit of logic in there to say, if there's nothing to iterate,</p>
+      <p begin="00:27:57:00" end="00:28:00:00" region="bottom"> if the iteration is not, then it is.</p>
+      <p begin="00:28:00:00" end="00:28:03:00" region="bottom">So it'll fail, it'll just not, it won't have any elements.</p>
+      <p begin="00:28:04:00" end="00:28:05:00" region="bottom">Exactly.</p>
+      <p begin="00:28:05:00" end="00:28:08:00" region="bottom">But it would end up, wouldn't distinguish between an empty class and that.</p>
+      <p begin="00:28:09:00" end="00:28:10:00" region="bottom">Yeah, I'm not sure.</p>
+      <p begin="00:28:10:00" end="00:28:13:00" region="bottom">I'd have to dig to find out if there's a specific way to then dig further,</p>
+      <p begin="00:28:13:00" end="00:28:16:00" region="bottom"> but yeah, that was one way that, yeah, if you try to iterate it,</p>
+      <p begin="00:28:16:00" end="00:28:19:00" region="bottom"> it would be able to, but yeah, but yeah, interesting.</p>
+      <p begin="00:28:19:00" end="00:28:20:00" region="bottom">I'll dig into that and find out.</p>
+      <p begin="00:28:20:00" end="00:28:23:00" region="bottom">So Gianluca, with this example that you were talking about,</p>
+      <p begin="00:28:23:00" end="00:28:26:00" region="bottom"> that Barry had, does that mean that at compile time,</p>
+      <p begin="00:28:26:00" end="00:28:28:00" region="bottom"> with reflection, I could define a type?</p>
+      <p begin="00:28:28:00" end="00:28:31:00" region="bottom">And then I could iterate over another type, like I could say, you</p>
+      <p begin="00:28:32:00" end="00:28:35:00" region="bottom"> know, define a type name, and basically</p>
+      <p begin="00:28:35:00" end="00:28:38:00" region="bottom"> I just wanted to act just like a string, except I wanted to</p>
+      <p begin="00:28:38:00" end="00:28:40:00" region="bottom"> be, in other words, a native strong type.</p>
+      <p begin="00:28:40:00" end="00:28:43:00" region="bottom">And then I could just iterate over the string and pull everything from a string</p>
+      <p begin="00:28:43:00" end="00:28:46:00" region="bottom"> into the, into that guy's space, and now</p>
+      <p begin="00:28:46:00" end="00:28:49:00" region="bottom"> I've got a strong, a new, strong type that</p>
+      <p begin="00:28:49:00" end="00:28:50:00" region="bottom"> acts just like a string.</p>
+      <p begin="00:28:52:00" end="00:28:55:00" region="bottom">So you have, and do look at the full</p>
+      <p begin="00:28:55:00" end="00:28:58:00" region="bottom"> implementation, a full example in the video that he presents.</p>
+      <p begin="00:28:59:00" end="00:29:02:00" region="bottom">You know, it's honestly mind-blowing, is building these</p>
+      <p begin="00:29:02:00" end="00:29:06:00" region="bottom"> classes on the go, but just declaring the</p>
+      <p begin="00:29:06:00" end="00:29:09:00" region="bottom"> type, in this case, in this case, it's declaring a</p>
+      <p begin="00:29:09:00" end="00:29:12:00" region="bottom"> little bit of a vector class, and then, you know,</p>
+      <p begin="00:29:12:00" end="00:29:15:00" region="bottom"> it just goes declaration, then consteval scope,</p>
+      <p begin="00:29:16:00" end="00:29:19:00" region="bottom"> it adds on top that whatever it wants, and after the scope</p>
+      <p begin="00:29:19:00" end="00:29:20:00" region="bottom"> is done, the type is defined.</p>
+      <p begin="00:29:20:00" end="00:29:23:00" region="bottom">And in the scope there, it did marvelous</p>
+      <p begin="00:29:23:00" end="00:29:27:00" region="bottom"> things, you know, all sorts of backwards flips</p>
+      <p begin="00:29:27:00" end="00:29:29:00" region="bottom"> that blew my mind, honestly.</p>
+      <p begin="00:29:30:00" end="00:29:31:00" region="bottom">Do you know which talk this was?</p>
+      <p begin="00:29:31:00" end="00:29:33:00" region="bottom">Yeah, it was &quot;Practical...&quot;</p>
+      <p begin="00:29:33:00" end="00:29:35:00" region="bottom">Let me just look it up.</p>
+      <p begin="00:29:35:00" end="00:29:39:00" region="bottom">&quot;Practical reflection with C++26&quot;,</p>
+      <p begin="00:29:39:00" end="00:29:42:00" region="bottom"> Barry Revzin, CppCon 2025.</p>
+      <p begin="00:29:42:00" end="00:29:45:00" region="bottom">And Jody, to your question regarding the existence</p>
+      <p begin="00:29:45:00" end="00:29:49:00" region="bottom"> of a particular type, I think you should be able</p>
+      <p begin="00:29:49:00" end="00:29:52:00" region="bottom"> to do that in C++20 with requires</p>
+      <p begin="00:29:52:00" end="00:29:53:00" region="bottom"> expressions.</p>
+      <p begin="00:29:53:00" end="00:29:56:00" region="bottom">Yeah, no, you, yeah, I don't think you can.</p>
+      <p begin="00:29:57:00" end="00:30:00:00" region="bottom">I've been down this road with some other folks before, but,</p>
+      <p begin="00:30:00:00" end="00:30:01:00" region="bottom"> but, I would love to,</p>
+      <p begin="00:30:01:00" end="00:30:02:00" region="bottom">love to see that.</p>
+      <p begin="00:30:02:00" end="00:30:05:00" region="bottom">There's the problem, the problem is that if you do</p>
+      <p begin="00:30:05:00" end="00:30:09:00" region="bottom"> it, is that of the memoization. Once you've decided,</p>
+      <p begin="00:30:09:00" end="00:30:12:00" region="bottom"> whether it's defined or not, that will</p>
+      <p begin="00:30:12:00" end="00:30:15:00" region="bottom"> change once it becomes, like, if you say, oh, it's not defined.</p>
+      <p begin="00:30:15:00" end="00:30:19:00" region="bottom">And then later, if you ask and it has to change to be defined.</p>
+      <p begin="00:30:19:00" end="00:30:23:00" region="bottom">And so there's a chicken and egg problem there and actually determining</p>
+      <p begin="00:30:23:00" end="00:30:26:00" region="bottom"> at which location, because of the memoization.</p>
+      <p begin="00:30:26:00" end="00:30:30:00" region="bottom">I didn't speak about this memoization kind of thing because</p>
+      <p begin="00:30:30:00" end="00:30:33:00" region="bottom"> you were asking about a non-templated class.</p>
+      <p begin="00:30:33:00" end="00:30:35:00" region="bottom">And in the case of a non-templated class,</p>
+      <p begin="00:30:35:00" end="00:30:38:00" region="bottom"> it should be possible to do it with a requires expression.</p>
+      <p begin="00:30:39:00" end="00:30:42:00" region="bottom">You ask for the existence of a type,</p>
+      <p begin="00:30:42:00" end="00:30:45:00" region="bottom"> and it should just fail to,</p>
+      <p begin="00:30:45:00" end="00:30:49:00" region="bottom"> give a</p>
+      <p begin="00:30:49:00" end="00:30:52:00" region="bottom"> valid expression in them, and now you should</p>
+      <p begin="00:30:52:00" end="00:30:55:00" region="bottom"> be able to actually say that</p>
+      <p begin="00:30:55:00" end="00:30:59:00" region="bottom"> the attempt to do that 'requires'</p>
+      <p begin="00:30:59:00" end="00:31:01:00" region="bottom"> be evaluated to false.</p>
+      <p begin="00:31:01:00" end="00:31:04:00" region="bottom">We can do some experiments probably and</p>
+      <p begin="00:31:04:00" end="00:31:05:00" region="bottom"> see that.</p>
+      <p begin="00:31:06:00" end="00:31:08:00" region="bottom">Yeah that's what I'll be doing when we hang up.</p>
+      <p begin="00:31:09:00" end="00:31:11:00" region="bottom">Oh, Bjarne?</p>
+      <p begin="00:31:12:00" end="00:31:13:00" region="bottom">Hi, Bjarne!</p>
+      <p begin="00:31:13:00" end="00:31:14:00" region="bottom">Thanks for joining.</p>
+      <p begin="00:31:14:00" end="00:31:19:00" region="bottom">Hi, I thought I just hop in and say hi.</p>
+      <p begin="00:31:19:00" end="00:31:22:00" region="bottom">I've been in meetings until</p>
+      <p begin="00:31:23:00" end="00:31:26:00" region="bottom"> now and from 10 minutes from now.</p>
+      <p begin="00:31:26:00" end="00:31:29:00" region="bottom">Ah, just to say hello.</p>
+      <p begin="00:31:29:00" end="00:31:30:00" region="bottom">Thank you.</p>
+      <p begin="00:31:30:00" end="00:31:34:00" region="bottom">We were just discussing a video about yourself.</p>
+      <p begin="00:31:34:00" end="00:31:35:00" region="bottom">Oh dear!</p>
+      <p begin="00:31:37:00" end="00:31:38:00" region="bottom">That seems to be popular.</p>
+      <p begin="00:31:38:00" end="00:31:42:00" region="bottom">Yeah, the general consensus is that it's a pretty nice video.</p>
+      <p begin="00:31:42:00" end="00:31:45:00" region="bottom">It's quite funny and good production value.</p>
+      <p begin="00:31:45:00" end="00:31:47:00" region="bottom">So looking forward to the next one.</p>
+      <p begin="00:31:48:00" end="00:31:51:00" region="bottom">There will be one on C++ in May.</p>
+      <p begin="00:31:53:00" end="00:31:55:00" region="bottom">It's really nice.</p>
+      <p begin="00:31:55:00" end="00:31:58:00" region="bottom">And, you did explain how to</p>
+      <p begin="00:31:58:00" end="00:32:00:00" region="bottom"> pronounce your name, so that's good.</p>
+      <p begin="00:32:01:00" end="00:32:05:00" region="bottom">I mean, 20,000 views</p>
+      <p begin="00:32:05:00" end="00:32:09:00" region="bottom"> a day on average for the 1st couple of weeks.</p>
+      <p begin="00:32:10:00" end="00:32:11:00" region="bottom">It's pretty amazing.</p>
+      <p begin="00:32:11:00" end="00:32:13:00" region="bottom">Yeah, they did a good job, I thought.</p>
+      <p begin="00:32:15:00" end="00:32:19:00" region="bottom">One thing that Fran</p>
+      <p begin="00:32:20:00" end="00:32:23:00" region="bottom"> mentioned was this about</p>
+      <p begin="00:32:23:00" end="00:32:26:00" region="bottom"> cppreference that there was a case</p>
+      <p begin="00:32:27:00" end="00:32:28:00" region="bottom"> of a vandalism.</p>
+      <p begin="00:32:28:00" end="00:32:31:00" region="bottom">It was some time ago,</p>
+      <p begin="00:32:31:00" end="00:32:34:00" region="bottom"> but since then it's been put in a</p>
+      <p begin="00:32:34:00" end="00:32:37:00" region="bottom"> read-only mode, and so there's no new</p>
+      <p begin="00:32:37:00" end="00:32:39:00" region="bottom"> C++26 content there.</p>
+      <p begin="00:32:39:00" end="00:32:41:00" region="bottom">Working on it.</p>
+      <p begin="00:32:41:00" end="00:32:44:00" region="bottom">It's been like that for over a year now.</p>
+      <p begin="00:32:45:00" end="00:32:48:00" region="bottom">There's a little banner up saying they're working on it and there</p>
+      <p begin="00:32:48:00" end="00:32:51:00" region="bottom"> was an email that you could send support to,</p>
+      <p begin="00:32:51:00" end="00:32:54:00" region="bottom"> so I did, but it's been the same state for over a year</p>
+      <p begin="00:32:54:00" end="00:32:57:00" region="bottom"> now, which is unnerving, I think.</p>
+      <p begin="00:32:58:00" end="00:33:00:00" region="bottom">Yeah, it's really sad.</p>
+      <p begin="00:33:00:00" end="00:33:03:00" region="bottom">Everything has been superseded by rust,</p>
+      <p begin="00:33:03:00" end="00:33:06:00" region="bottom"> according to this troll person who did it,</p>
+      <p begin="00:33:06:00" end="00:33:08:00" region="bottom"> vandalized it.</p>
+      <p begin="00:33:08:00" end="00:33:11:00" region="bottom">Okay, it was pretty childish, but the result</p>
+      <p begin="00:33:11:00" end="00:33:14:00" region="bottom"> is still that we don't have a reference at the moment.</p>
+      <p begin="00:33:14:00" end="00:33:16:00" region="bottom">But we have alternatives.</p>
+      <p begin="00:33:19:00" end="00:33:20:00" region="bottom">We do.</p>
+      <p begin="00:33:20:00" end="00:33:21:00" region="bottom">There's cppdocs.</p>
+      <p begin="00:33:21:00" end="00:33:22:00" region="bottom">For example.</p>
+      <p begin="00:33:22:00" end="00:33:25:00" region="bottom">Yeah, but they say it's</p>
+      <p begin="00:33:25:00" end="00:33:28:00" region="bottom"> based on the content from cppreference.</p>
+      <p begin="00:33:28:00" end="00:33:31:00" region="bottom">So presumably there won't be anything new,</p>
+      <p begin="00:33:32:00" end="00:33:35:00" region="bottom"> although they do have</p>
+      <p begin="00:33:35:00" end="00:33:36:00" region="bottom"> a C++26 filter.</p>
+      <p begin="00:33:36:00" end="00:33:39:00" region="bottom">I don't think the filtering works at the moment.</p>
+      <p begin="00:33:39:00" end="00:33:40:00" region="bottom">I couldn't get it working.</p>
+      <p begin="00:33:40:00" end="00:33:43:00" region="bottom">I just sent a message asking.</p>
+      <p begin="00:33:43:00" end="00:33:44:00" region="bottom">Right.</p>
+      <p begin="00:33:44:00" end="00:33:48:00" region="bottom">Yeah, hopefully it'll be revived</p>
+      <p begin="00:33:48:00" end="00:33:51:00" region="bottom"> at some point, or maybe this one grows.</p>
+      <p begin="00:33:51:00" end="00:33:54:00" region="bottom">It'd be good to have a point</p>
+      <p begin="00:33:54:00" end="00:33:56:00" region="bottom"> of reference somewhere.</p>
+      <p begin="00:33:56:00" end="00:33:59:00" region="bottom">Well, otherwise you'll have to read</p>
+      <p begin="00:34:00:00" end="00:34:03:00" region="bottom"> the textbooks, which are well, on paper</p>
+      <p begin="00:34:03:00" end="00:34:06:00" region="bottom"> mostly, and not organised for lookup</p>
+      <p begin="00:34:06:00" end="00:34:09:00" region="bottom"> and all the standards, which is unreadable,</p>
+      <p begin="00:34:10:00" end="00:34:14:00" region="bottom"> for ordinary mortals, like me.</p>
+      <p begin="00:34:14:00" end="00:34:17:00" region="bottom">I bet someone is going to try and ask</p>
+      <p begin="00:34:17:00" end="00:34:20:00" region="bottom"> ChatGPT to summarise C++ standard and we'll</p>
+      <p begin="00:34:20:00" end="00:34:24:00" region="bottom"> end up with a couple of pages of gibberish, so that's good.</p>
+      <p begin="00:34:24:00" end="00:34:27:00" region="bottom">Well, that, it'll burn down a couple of lakes.</p>
+      <p begin="00:34:27:00" end="00:34:30:00" region="bottom">A couple of burnt lakes later</p>
+      <p begin="00:34:30:00" end="00:34:32:00" region="bottom">we have a couple of pages that are useless.</p>
+      <p begin="00:34:32:00" end="00:34:33:00" region="bottom">Okay.</p>
+      <p begin="00:34:35:00" end="00:34:39:00" region="bottom">So, I promised to talk about CMake.</p>
+      <p begin="00:34:40:00" end="00:34:42:00" region="bottom">if you aren't still too bored of it.</p>
+      <p begin="00:34:42:00" end="00:34:44:00" region="bottom">It seems to be everywhere.</p>
+      <p begin="00:34:44:00" end="00:34:46:00" region="bottom">And this one is a bit outdated.</p>
+      <p begin="00:34:46:00" end="00:34:49:00" region="bottom">I would like to listen to this, but I can't.</p>
+      <p begin="00:34:50:00" end="00:34:51:00" region="bottom">I have to bail out again.</p>
+      <p begin="00:34:51:00" end="00:34:53:00" region="bottom">I promise just to come and say hi.</p>
+      <p begin="00:34:53:00" end="00:34:57:00" region="bottom">Thank you very much for joining, if only briefly.</p>
+      <p begin="00:34:57:00" end="00:35:01:00" region="bottom">I'm sure I wasn't the only one who</p>
+      <p begin="00:35:01:00" end="00:35:04:00" region="bottom"> hoped that CMake 4 would be</p>
+      <p begin="00:35:04:00" end="00:35:07:00" region="bottom"> a major improvement, to the point that someone</p>
+      <p begin="00:35:08:00" end="00:35:11:00" region="bottom"> on Reddit said, &quot;It's new major release</p>
+      <p begin="00:35:11:00" end="00:35:14:00" region="bottom"> because they completely overhauled the language to be more readable, right?</p>
+      <p begin="00:35:14:00" end="00:35:15:00" region="bottom">Right?&quot;</p>
+      <p begin="00:35:15:00" end="00:35:17:00" region="bottom">What are even version numbers?</p>
+      <p begin="00:35:17:00" end="00:35:21:00" region="bottom">They seem to be using them very arbitrarily.</p>
+      <p begin="00:35:22:00" end="00:35:25:00" region="bottom">It's like, &quot;CMake 3.28: add</p>
+      <p begin="00:35:25:00" end="00:35:27:00" region="bottom"> support for C ++ modules.</p>
+      <p begin="00:35:27:00" end="00:35:30:00" region="bottom">CMake 4.0: minor improvements.&quot;</p>
+      <p begin="00:35:33:00" end="00:35:36:00" region="bottom">Of all the build systems ever created, CMake is certainly one of them.</p>
+      <p begin="00:35:36:00" end="00:35:39:00" region="bottom">You know that CMake still hasn't</p>
+      <p begin="00:35:39:00" end="00:35:42:00" region="bottom"> any support for header units, which means half</p>
+      <p begin="00:35:42:00" end="00:35:43:00" region="bottom"> of the modules feature?</p>
+      <p begin="00:35:45:00" end="00:35:49:00" region="bottom">And it's not like all other build systems are perfect.</p>
+      <p begin="00:35:49:00" end="00:35:52:00" region="bottom">It's like the other build systems</p>
+      <p begin="00:35:52:00" end="00:35:56:00" region="bottom"> that do support modules that come to mind, Meson.</p>
+      <p begin="00:35:58:00" end="00:35:59:00" region="bottom">I'm not even sure about it.</p>
+      <p begin="00:35:59:00" end="00:36:00:00" region="bottom">There was a...</p>
+      <p begin="00:36:00:00" end="00:36:03:00" region="bottom">Meson is a big critic of modules.</p>
+      <p begin="00:36:03:00" end="00:36:06:00" region="bottom">Oh yeah, I read, I read his blog post.</p>
+      <p begin="00:36:06:00" end="00:36:09:00" region="bottom">He seems to be very against it, and</p>
+      <p begin="00:36:10:00" end="00:36:13:00" region="bottom"> he seems to only focus his attention</p>
+      <p begin="00:36:13:00" end="00:36:16:00" region="bottom"> on the build time improvements of modules.</p>
+      <p begin="00:36:16:00" end="00:36:19:00" region="bottom">I think it was some other person's</p>
+      <p begin="00:36:19:00" end="00:36:22:00" region="bottom"> contribution to the Meson code base to</p>
+      <p begin="00:36:22:00" end="00:36:25:00" region="bottom"> introduce, that introduced some basic support</p>
+      <p begin="00:36:25:00" end="00:36:29:00" region="bottom"> for modules, and that's pretty much it, except we</p>
+      <p begin="00:36:29:00" end="00:36:30:00" region="bottom"> have multiple alternatives.</p>
+      <p begin="00:36:31:00" end="00:36:33:00" region="bottom">Xmake is the biggest one.</p>
+      <p begin="00:36:33:00" end="00:36:34:00" region="bottom">Xmake.</p>
+      <p begin="00:36:35:00" end="00:36:38:00" region="bottom">Yes, I'm very fond of XMake</p>
+      <p begin="00:36:38:00" end="00:36:40:00" region="bottom"> because in my personal toy projects</p>
+      <p begin="00:36:40:00" end="00:36:43:00" region="bottom">it removes all the friction that usually is associated</p>
+      <p begin="00:36:43:00" end="00:36:45:00" region="bottom"> with build system, and it just works.</p>
+      <p begin="00:36:46:00" end="00:36:49:00" region="bottom">I hadn't tried its module support yet, but</p>
+      <p begin="00:36:49:00" end="00:36:51:00" region="bottom"> from what I read in the documentation</p>
+      <p begin="00:36:51:00" end="00:36:55:00" region="bottom">it's been there for several years now, and it's</p>
+      <p begin="00:36:55:00" end="00:36:56:00" region="bottom"> only getting better.</p>
+      <p begin="00:36:56:00" end="00:36:58:00" region="bottom">I'm using MSBuild.</p>
+      <p begin="00:36:58:00" end="00:37:01:00" region="bottom">MSBuild is working like a charm for</p>
+      <p begin="00:37:02:00" end="00:37:04:00" region="bottom"> many, many, many years now.</p>
+      <p begin="00:37:04:00" end="00:37:06:00" region="bottom">Unfortunately, you can't use it.</p>
+      <p begin="00:37:06:00" end="00:37:09:00" region="bottom">Like I was going to mention on</p>
+      <p begin="00:37:09:00" end="00:37:12:00" region="bottom"> the feedback of my last project that</p>
+      <p begin="00:37:13:00" end="00:37:17:00" region="bottom"> life is pretty good if you don't have to build for Windows.</p>
+      <p begin="00:37:17:00" end="00:37:20:00" region="bottom">We only build for Windows, we have no troubles.</p>
+      <p begin="00:37:20:00" end="00:37:23:00" region="bottom">I think the trouble starts happening when you're</p>
+      <p begin="00:37:23:00" end="00:37:25:00" region="bottom"> trying to build for more than one platform.</p>
+      <p begin="00:37:25:00" end="00:37:26:00" region="bottom">So it depends on what</p>
+      <p begin="00:37:26:00" end="00:37:27:00" region="bottom">you're coming from.</p>
+      <p begin="00:37:27:00" end="00:37:30:00" region="bottom">But it's not insurmountable, but yeah,</p>
+      <p begin="00:37:31:00" end="00:37:32:00" region="bottom"> it adds challenges.</p>
+      <p begin="00:37:33:00" end="00:37:36:00" region="bottom">There was a talk by, I think,</p>
+      <p begin="00:37:36:00" end="00:37:39:00" region="bottom"> Bill Hoffman, who is one</p>
+      <p begin="00:37:39:00" end="00:37:42:00" region="bottom"> of the main people, or maybe even the person</p>
+      <p begin="00:37:42:00" end="00:37:46:00" region="bottom"> behind CMake, and the talk was</p>
+      <p begin="00:37:46:00" end="00:37:50:00" region="bottom"> &quot;25 years of C++ build portability&quot;.</p>
+      <p begin="00:37:50:00" end="00:37:51:00" region="bottom">And the comments are brutal.</p>
+      <p begin="00:37:51:00" end="00:37:55:00" region="bottom">The 1st one, &quot;I don't understand how we accept CMake&quot;.</p>
+      <p begin="00:37:55:00" end="00:37:59:00" region="bottom">The fact that Bill Hoffman tends to apologize</p>
+      <p begin="00:37:59:00" end="00:38:02:00" region="bottom"> for CMake design in all</p>
+      <p begin="00:38:02:00" end="00:38:06:00" region="bottom"> his presentations makes me feel bad for him.</p>
+      <p begin="00:38:06:00" end="00:38:09:00" region="bottom">But at this stage, what can you do?</p>
+      <p begin="00:38:09:00" end="00:38:12:00" region="bottom">I mean, one of the ways forward that I can</p>
+      <p begin="00:38:12:00" end="00:38:15:00" region="bottom"> see would be to treat CMake as</p>
+      <p begin="00:38:15:00" end="00:38:18:00" region="bottom"> sort of an assembly language for the build and use</p>
+      <p begin="00:38:19:00" end="00:38:22:00" region="bottom"> CMake file generators like Xmake, to produce</p>
+      <p begin="00:38:22:00" end="00:38:25:00" region="bottom"> CMake files and then build with CMake, introducing</p>
+      <p begin="00:38:25:00" end="00:38:28:00" region="bottom"> one more layer of indirection, which,</p>
+      <p begin="00:38:28:00" end="00:38:30:00" region="bottom"> as we all know, is a solution to everything.</p>
+      <p begin="00:38:31:00" end="00:38:34:00" region="bottom">Yeah, I mean, that's fairly what I used to do when,</p>
+      <p begin="00:38:34:00" end="00:38:37:00" region="bottom"> I mean, it's a long time ago, when we were doing KDE development, it was, you</p>
+      <p begin="00:38:37:00" end="00:38:40:00" region="bottom"> in fact, you used the QT profiles,</p>
+      <p begin="00:38:40:00" end="00:38:44:00" region="bottom"> the PR profiles, and you, they would then generate the CMake file for you.</p>
+      <p begin="00:38:44:00" end="00:38:46:00" region="bottom">And, you know, I was quite happy using CMake.</p>
+      <p begin="00:38:46:00" end="00:38:48:00" region="bottom">It just worked, but you never actually touched it itself.</p>
+      <p begin="00:38:48:00" end="00:38:52:00" region="bottom">You know, you work at a level above defining</p>
+      <p begin="00:38:52:00" end="00:38:54:00" region="bottom"> the QT files and then that spits out CMake.</p>
+      <p begin="00:38:55:00" end="00:38:56:00" region="bottom">This is the way.</p>
+      <p begin="00:38:56:00" end="00:38:58:00" region="bottom">I think we're out of time.</p>
+      <p begin="00:38:58:00" end="00:39:02:00" region="bottom">I wanted to show you this post on Mastodon</p>
+      <p begin="00:39:02:00" end="00:39:05:00" region="bottom"> where someone said, &quot;C/C++&quot; &lt;heeeyyyy&gt;</p>
+      <p begin="00:39:05:00" end="00:39:08:00" region="bottom"> compilers are a tool to convert source</p>
+      <p begin="00:39:08:00" end="00:39:10:00" region="bottom"> code into undefined behavior.&quot;</p>
+      <p begin="00:39:10:00" end="00:39:12:00" region="bottom">And there was another one:</p>
+      <p begin="00:39:12:00" end="00:39:15:00" region="bottom">&quot;I'm a full stack developer in that my stack</p>
+      <p begin="00:39:15:00" end="00:39:18:00" region="bottom"> is full, and if you try to push any more tasks on me</p>
+      <p begin="00:39:18:00" end="00:39:21:24" region="bottom">I'm gonna overflow it and start corrupting my own memory.&quot;</p>
+      <p begin="00:39:22:00" end="00:39:23:01" region="bottom">Right. I think that's it for today.</p>
+      <p begin="00:39:23:01" end="00:39:24:23" region="bottom">Thank you very much for joining.</p>
+      <p begin="00:39:25:00" end="00:39:28:00" region="bottom">And I'll see you next time, hopefully soon.</p>
+      <p begin="00:39:28:00" end="00:39:29:00" region="bottom">Bye, bye.</p>
+    </div>
+  </body>
+</tt>

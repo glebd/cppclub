@@ -1,8 +1,9 @@
 ---
-title: 173. What have I missed?
+title: 174.
 author: Gleb Dolgich
-date: 2025-02-16
+date: 2026-05-05
 tags:
+    - CMake
     - WG21
     - Committee
     - C++26
@@ -27,7 +28,6 @@ tags:
     - Predrag Gruevski
     - UB
     - IDE
-    - CMake
     - Rust
     - Government
     - Safety
@@ -38,7 +38,7 @@ tags:
 :toc:
 :doctype: book
 
-= 173. What have I missed?
+= 174
 
 == Media
 
@@ -50,37 +50,125 @@ Coming soon.
 
 Coming soon.
 
-== CrowdStrike and C++
+== Why CMake sucks
 
-https://www.efinancialcareers.com/news/crowdstrike-c-plus-plus-pointer[Sean Baxter has a solution]
+* https://twdev.blog/2021/08/cmake/[Tomasz Wisniewski]
+* https://lobste.rs/s/i2qnqj[Lobsters]
 
-== WG21 Meeting, St Louis, 2024
+> The explicit configure + generate step, touched on in the article, precludes most forms of dynamic dependency generation. Making this work with C++ modules has been very painful. https://lobste.rs/c/na4lmx[↑]
 
-* https://www.reddit.com/r/cpp/comments/1dwc7f2/202406_st_louis_iso_c_committee_trip_report/[Inbal Levy on Reddit]
-* https://herbsutter.com/2024/07/02/trip-report-summer-iso-c-standards-meeting-st-louis-mo-usa/[Trip report: Summer ISO C++ standards meeting (St Louis, MO, USA) by Herb Sutter]
-** https://www.reddit.com/r/cpp/comments/1du3i63/trip_report_summer_iso_c_standards_meeting_st/[Reddit]
-** https://lobste.rs/s/qhsz2b[Lobsters]
-* https://www.think-cell.com/en/career/devblog/trip-report-summer-iso-cpp-meeting-in-st-louis-usa[Jonathan Müller]
-** https://www.reddit.com/r/cpp/comments/1e1zpfq/trip_report_summer_iso_c_meeting_in_st_louis_usa/[Reddit]
+Follow-ups by Tomasz Wisniewski:
 
-C++26 will have https://wg21.link/P2300R10[P2300] `std::execution`!
+* https://twdev.blog/2022/09/meson/[Intro to Meson]
+* https://twdev.blog/2023/05/cppsetup/[My setup for personal C++ projects]
 
-No progress on pattern matching, it seems...
+See also:
 
-== WG21 August 2024 mailing
+* https://www.reddit.com/r/cpp/comments/1avpnen/cmake_is_the_perfect_build_tool_for_c/[CMake is the perfect build tool for C++ (Reddit)]
+* https://cliutils.gitlab.io/modern-cmake/[Intro to Modern CMake]
+** https://news.ycombinator.com/item?id=39784784[HackerNews]
+* https://www.reddit.com/r/cpp/comments/1b53rks/is_cmake_the_de_facto_standard_mandatory_to_use/[Is CMake the de facto standard mandatory to use? (Reddit)]
 
-https://isocpp.org//blog/2024/08/2024-08-mailing-available
+== Safe C++
 
-TODO
+* https://safecpp.org/draft.html[Sean Baxter's draft proposal]
 
-== Reflection in C+\+26: the renaissance of C++
+> Safe C\++ is an extension of C++. It adds a robust safety model, but it's not a new language.
 
-* https://youtu.be/vRda0mGYg_A?si=CSzENClTssKtK1U8[Video by JF Bastien]
-** https://www.reddit.com/r/cpp/comments/1cvahnr/reflection_in_c26_the_renaissance_of_c/[Reddit]
+OH: _"Sean Baxter thinks he can add arbitrary stuff to C\++ and still call it C++"_.
+
+https://www.reddit.com/r/cpp/comments/1lhbqua/any_news_on_safe_c/[Reddit]
+
+=== Sean Baxter's Circle talk at Bloomberg (2023)
+
+https://www.youtube.com/watch?v=x7fxeNqSK2k
+
+{{<youtube x7fxeNqSK2k>}}
+
+Quotes from the talk:
+
+> It's _easy_ to fix C++
+
+The fix is Circle, of course.
+
+> Each textual file has an active mask of features. Per-file, not per translation unit. Files don't inherit features. Library files (.h files): Feature mask _has no effect_ on files that include it.
+
+https://godbolt.org/z/Kqf4xeWMn[Example (Godbolt)]
+
+> Make a `pragma.feature` file in your source folder. List feature names/editions in the file. These features get _picked up by every file in the folder_.
+
+This sounds like a _terrible_ idea to me. Not only the compiler has to be aware of a file system entity (and file system, for that matter), but the language used in source files may change if files get moved.
+
+image:baxter-bloomberg-01.jpeg[]
+
+Who needs standards anyway, right?
+
+image:baxter-bloomberg-02.jpeg[]
+
+image:baxter-bloomberg-04.jpeg[]
+
+https://godbolt.org/z/Yd3efGhGo[Example of `interface` (Godbolt)]
+
+This looks cool, but it' not C++.
+
+image:baxter-bloomberg-05.jpeg[]
+
+There is a Circle feature for those who _really_ dislike angle brackets, apparently.
+
+Viktor Zverovich enters the chat:
+
+image:baxter-bloomberg-03.jpeg[]
+
+This provides a glimpse into Sean's plan:
+
+image:baxter-bloomberg-06.jpeg[]
+
+I'm not convinced, but I'm a nobody -- big firms like Bloomberg will surely be interested?
+
+Sigh. If only Circle were open-sourced. Without that, betting on it is just too much risk, IMHO.
 
 == CppCast 383: Safe, Borrow-Checked, C++
 
 https://cppcast.com/safe-borrow-checked-cpp/
+
+=== Any news on Safe C++?
+
+https://www.reddit.com/r/cpp/comments/1lhbqua/any_news_on_safe_c/[Reddit]
+
+== CrowdStrike and C++
+
+https://www.efinancialcareers.com/news/crowdstrike-c-plus-plus-pointer[Sean Baxter enters the chat]
+
+== Three Cool Things in C+\+26: Safety, Reflection & std::execution - Herb Sutter - C++ on Sea 2025
+
+https://www.youtube.com/watch?v=kKbT0Vg3ISw
+
+{{<youtube kKbT0Vg3ISw>}}
+
+* Safety
+** Erroneous behaviour
+** Stdlib hardening
+** Trivial relocation
+* Reflection
+* std::execution
+
+https://www.reddit.com/r/cpp/comments/1mqxz47/three_cool_things_in_c26_safety_reflection/[Reddit]
+
+== The Joy of C++26 Contracts - Myths, Misconceptions & Defensive Programming - Herb Sutter
+
+https://www.youtube.com/watch?v=oitYvDe4nps
+
+{{<youtube oitYvDe4nps>}}
+
+== Known pitfalls in C++26 Contracts - Ran Regev
+
+https://www.youtube.com/watch?v=tzXu5KZGMJk
+
+{{<youtube tzXu5KZGMJk>}}
+
+https://www.reddit.com/r/cpp/comments/1ldgg9u/known_pitfalls_in_c26_contracts_using_stdcpp_2025/[Reddit]
+
+image::ran-regev-contract-pitfalls-0001.png[]
 
 == How often do you create memory leak or segfault bugs with modern C++?
 
@@ -89,6 +177,10 @@ https://www.reddit.com/r/cpp/comments/16nfksr/how_often_do_you_create_memory_lea
 > Memory leaks - pretty much never. RAII takes care of those way too well for them to happen. The only time I may make them is if I have a resource that I simply don't know I have to cleanup.
 Segfaults - I do sometimes make them, particularly during development. They are much more likely when I interface with very low level code (e.g. OS APIs or other low-level libraries), which tends to have many pointers and/or poor type safety. In high level code I make them much less commonly.
 Overall, I personally don't find memory management in C++ to be too troublesome. https://www.reddit.com/r/cpp/comments/16nfksr/how_often_do_you_create_memory_leak_or_segfault/k1e2sam/[↑]
+
+== ACCU 2025 trip report, now with AI!
+
+https://mropert.github.io/2025/04/10/accu_2025/
 
 == C++ Linkers and the One Definition Rule - Roger Orr - ACCU 2024
 
@@ -101,6 +193,33 @@ https://www.youtube.com/watch?v=HakSW8wIH8A
 https://www.youtube.com/watch?v=_enXuIxuNV4
 
 {{<youtube _enXuIxuNV4>}}
+
+== The existential threat against C++ and where to go from here - Helge Penne - NDC TechTown 2024
+
+https://www.youtube.com/watch?v=gG4BJ23BFBE
+
+{{<youtube gG4BJ23BFBE>}}
+
+TL;DR: Doom and gloom, there's no hope to make C++ safe, just use Rust, which somehow is a drop-in replacement.
+
+* https://www.reddit.com/r/cpp/comments/1hv9osb/the_existential_threat_against_c_and_where_to_go/[Reddit 1]
+* https://www.reddit.com/r/rust/comments/1hvkjvb/the_existential_threat_against_c_and_where_to_go/[Reddit 2]
+
+> Ah, he's from Thales. They had a C++/Rust job listing open recently, for working with secure communication. Wouldn't be surprised if Thales internationally were generally moving towards Rust. https://www.reddit.com/r/rust/comments/1hvkjvb/the_existential_threat_against_c_and_where_to_go/m5uhef4/[↑]
+
+> i've spent over three years each using C++, then Rust, and then returning to C++. Initially, i believed that borrow checking (and Rust as a whole) was a perfect solution. However, the more complex tasks i encountered, the more i realized that "memory safety" is an ideal that doesn't fully exist in practice. <...> Here's the real challenge: proving that an `unsafe` block in Rust is both safe and sound is often more difficult than using raw pointers correctly in C or C++. https://www.reddit.com/r/cpp/comments/1hv9osb/the_existential_threat_against_c_and_where_to_go/m5uem20/[↑]
+
+== SwedenCpp Video List
+
+https://www.swedencpp.se/videos
+
+== Why Nobody is Using C++ Modules
+
+https://lucisqr.substack.com/p/why-nobody-is-using-c-modules[Henrique Bucher (please leave Substack!)]
+
+See also: https://www.reddit.com/r/cpp/comments/1mlqox5/why_is_nobody_using_c20_modules/[Reddit]
+
+See also: https://arewemodulesyet.org/[Are We Modules Yet?]
 
 == C++ package managers
 
@@ -131,7 +250,16 @@ Thinking of using this next time when I have to prove that my UB fix is actually
 
 == Arithmetic Types in C++
 
-https://biowpn.github.io/bioweapon/2024/08/29/arithmetic-types-in-cpp.html, https://www.reddit.com/r/cpp/comments/1f4x340/arithmetic_types_in_c/[Reddit]
+* https://biowpn.github.io/bioweapon/2024/08/29/arithmetic-types-in-cpp.html[Bioweapon blog]
+* https://www.reddit.com/r/cpp/comments/1f4x340/arithmetic_types_in_c/[Reddit]
+
+== C++ features banned in Chromium
+
+* https://chromium.googlesource.com/chromium/src/+/main/styleguide/c++/c++-features.md#user_defined-literals-banned[User-defined literals]
+* https://chromium.googlesource.com/chromium/src/+/main/styleguide/c++/c++-features.md#exception_banned[Exceptions]
+* https://chromium.googlesource.com/chromium/src/+/main/styleguide/c++/c++-features.md#std_shared_ptr-banned[`std::shared_ptr`]
+
+https://news.ycombinator.com/item?id=46737447[HN thread]
 
 == Boost: good or bad?
 
@@ -147,7 +275,7 @@ Ah yes, a date library, famously easy to implement. (OK, they used a **std::chro
 
 > Boost is now modular you don't need to build the full Boost Set of libraries + with vcpkg it is straightforward : I don't understand why people try to reimplement sub parts of Boost in worse way. Sometime you can find better libraries than the Boost ones and that perfect, but imo Boost is the first to be tried. https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/keq84wr/[↑]
 
-> We here use boost extensively, both server and embedded. Honestly I don't know what all the fuss is about. It's excellent code, well maintained by top folks in the c++ world. If you don't like it, don't use it. But don't whine when other people do. https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/keosn2x/[↑]
+> We here use boost extensively, both server and embedded. Honestly I don't know what all the fuss is about. It's excellent code, well maintained by top folks in the C++ world. If you don't like it, don't use it. But don't whine when other people do. https://www.reddit.com/r/cpp/comments/18pioj9/annoyed_with_overuse_of_boost_in_c_discussionsrant/keosn2x/[↑]
 
 https://www.reddit.com/r/cpp/comments/18plb43/annoyed_with_fud_surrounding_boost_in_c/[Annoyed with FUD surrounding Boost in C++ discussions]
 
@@ -158,6 +286,8 @@ https://www.reddit.com/r/cpp/comments/1cpwyqj/whats_your_favorite_boost_alternat
 * https://abseil.io/[Abseil] (Google)
 * https://github.com/facebook/folly[Folly] (Facebook)
 * https://pocoproject.org/[POCO]
+
+== The Beman Project
 
 == Are We Modules Yet?
 
@@ -197,6 +327,11 @@ https://www.reddit.com/r/cpp/comments/134gaqw/can_you_link_2_binaries_compiled_w
 == New C++23 features I'm excited about, by Tomasz Wisniewski
 
 https://twdev.blog/2022/10/cpp23/[Article]
+
+== New usability improvements in GCC15
+
+* https://developers.redhat.com/articles/2025/04/10/6-usability-improvements-gcc-15[David Malcolm, RedHat]
+* https://www.reddit.com/r/cpp/comments/1jvxxgc/6_usability_improvements_in_gcc_15/[Reddit]
 
 == Revisiting Turbo C++
 
@@ -304,27 +439,15 @@ int foo(bool) = delete;
 
 Despite knowing this is a valid syntax it never occurred to me you could use it this way, and I did not realize you can do this for free functions O_o
 
-== Why CMake sucks
-
-https://twdev.blog/2021/08/cmake/[Tomasz Wisniewski]
-
-https://lobste.rs/s/i2qnqj[Lobsters]
-
-Follow-ups by Tomasz Wisniewski:
-
-* https://twdev.blog/2022/09/meson/[Intro to Meson]
-* https://twdev.blog/2023/05/cppsetup/[My setup for personal C++ projects]
-
-See also:
-
-* https://www.reddit.com/r/cpp/comments/1avpnen/cmake_is_the_perfect_build_tool_for_c/[CMake is the perfect build tool for C++ (Reddit)]
-* https://cliutils.gitlab.io/modern-cmake/[Intro to Modern CMake]
-** https://news.ycombinator.com/item?id=39784784[HackerNews]
-* https://www.reddit.com/r/cpp/comments/1b53rks/is_cmake_the_de_facto_standard_mandatory_to_use/[Is CMake the de facto standard mandatory to use? (Reddit)]
-
 == ppstep Interactive Macro Debugger
 
 https://github.com/notfoundry/ppstep
+
+If you need a macro debugger, maybe reconsider your approach and step back?
+
+== On harmful overuse of std::move
+
+https://devblogs.microsoft.com/oldnewthing/20231124-00/[Raymond Chen]
 
 == Mastodon: Debugging
 
@@ -364,14 +487,4 @@ https://mastodon.social/@programming_quotes/112572400857683147
 [quote,Oscar Godson]
 ____
 One of the best programming skills you can have is knowing when to walk away for awhile.
-____
-
-== Mastodon: Full-stack developer
-
-https://digipres.club/@foone/112412593654054471
-
-[quote,Foone]
-
-____
-I'm a "full stack developer", in that my stack is full and if you try to push any more tasks on me I'm gonna overflow it and start corrupting my own memory
 ____
