@@ -1,9 +1,11 @@
 ---
-title: 174.
+title: 174. News, reflection, safety, build systems
 author: Gleb Dolgich
-date: 2026-05-05
+date: 2026-04-19
 tags:
     - CMake
+    - Documentary
+    - AI
     - WG21
     - Committee
     - C++26
@@ -38,7 +40,7 @@ tags:
 :toc:
 :doctype: book
 
-= 174
+= 174. News, reflection, safety, build systems
 
 == Media
 
@@ -49,6 +51,70 @@ Coming soon.
 === Podcast
 
 Coming soon.
+
+== The C++ Documentary
+
+https://youtu.be/lI7tMxzSJ7w
+
+{{<youtube lI7tMxzSJ7w>}}
+
+https://herbsutter.com/2026/06/04/c-the-documentary-released-today/[Herb Sutter]
+
+== A high-frequency trading firm just hired Bjarne Stroustrup, creator of C++
+
+https://www.efinancialcareers.co.uk/news/a-high-frequency-trading-firm-just-hired-bjarne-stroustrup-creator-of-c[eFinancialCareers]
+
+____
+Bjarne Stroustrup announced via LinkedIn that he has joined Susquehanna as a technical fellow on a part time basis. A press release seen by eFinancialCareers states that Stroustrup will be "helping shape the optimization and evolution of the firm’s codebase."
+
+It's not his first role in finance; Stroustrup spent eight years in banking with Morgan Stanley where he was an MD and tech fellow working on "foundational software." He left in 2022, and has since been a full-time professor at Columbia University.
+____
+
+== Cppreference is back
+
+https://en.cppreference.com[cppreference]
+
+> 7 April 2026: It took a while, but with a lot of help from the folks at isocpp.org, we're back! Sorry for the delay, and thank you for your patience.
+
+https://en.cppreference.com/cpp/compiler_support/26[C++26 compiler support update]
+
+Compiler feature implementation status: https://cppstat.dev[cppstat.dev]
+
+== Reflection playground
+
+https://codeberg.org/glebd/reflection-playground[Gleb's Reflection Playground on Codeberg]
+
+* Clang fork by Bloomberg
+* Devcontainer based on Debian
+* Modules, including `std`
+* Xmake
+* VSCode
+
+See also:
+
+* https://llvm.org/docs/GettingStarted.html#getting-the-source-code-and-building-llvm[Building clang]
+* https://releases.llvm.org/13.0.1/projects/libcxx/docs/BuildingLibcxx.html[Buildig clang libc++]
+* https://xmake.io/examples/cpp/cxx-modules.html#c-23-standard-library-modules[C++ Modules in Xmake]
+
+* https://isocpp.org/files/papers/P2996R13.html[P2996 Reflection for C++26]
+
+== An Honest Review of AI Programming
+
+https://mropert.github.io/2026/08/04/an_honest_review_of_ai_programming/[Mathieu Ropert]
+
+[quote,pikuma.com via Twitter]
+____
+It's interesting how AI is constantly providing false information and incorrect statements about my area of expertise. Fortunately, it's very useful and always right about topics I know very little about.
+____
+
+== std::big_int
+
+https://isocpp.org/files/papers/D4444R0.html[D4444R0] by Jan Schultke <janschultke@gmail.com>, Matt Borland <matt@mattborland.com>, Christopher Kormanyos <ckormanyos@yahoo.com>.
+
+== HppProto
+
+* https://github.com/huangminghuang/hpp-proto[C++23 protobuf implementation]
+** https://www.reddit.com/r/cpp/comments/1rmrtpr/project_hppproto_a_modern_c23_protobuf/[Reddit]
 
 == Why CMake sucks
 
